@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://aninextup.redessmartonline.workers.dev/sitemap.xml
