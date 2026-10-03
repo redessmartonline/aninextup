@@ -2,6 +2,10 @@ window.ANINEXTUP_DATA={
 updated:"2026-10-03",
 site:{timezone:"America/Santo_Domingo",season:"Fall 2026"},
 anime:[
+{id:"returners-magic-s2",title:"A Returner's Magic Should Be Special Season 2",date:"2026-10-07",platform:"Crunchyroll",article:"articles/returners-magic-season-2.html",category:"Season Premiere",status:"confirmed"},
+{id:"magic-knight-rayearth",title:"Magic Knight Rayearth",date:"2026-10-07",platform:"Crunchyroll",article:"articles/magic-knight-rayearth-2026.html",category:"Premiere",status:"confirmed"},
+{id:"firefly-wedding",title:"Firefly Wedding",date:"2026-10-09",platform:"Crunchyroll",article:"articles/firefly-wedding.html",category:"Premiere",status:"confirmed"},
+{id:"my-happy-marriage-specials",title:"My Happy Marriage Season 2 Special Episodes",date:"2026-10-25",platform:"Netflix",article:"articles/my-happy-marriage-special-episodes.html",category:"Special Episodes",status:"confirmed"},
 {id:"apothecary-s3",image:"assets/images/apothecary-diaries-season-3.jpg",title:"The Apothecary Diaries Season 3",date:"2026-10-02",platform:"Crunchyroll",article:"articles/apothecary-diaries-season-3.html",category:"Season Premiere",status:"confirmed"},
 {id:"black-clover-s2",image:"assets/images/black-clover-season-2.jpg",title:"Black Clover Season 2",date:"2026-10-03",platform:"Crunchyroll",article:"articles/black-clover-season-2.html",category:"Season Premiere",status:"confirmed"},
 {id:"suikoden",image:"assets/images/suikoden-anime.jpg",title:"Suikoden: The Anime",date:"2026-10-03",platform:"By territory",article:"articles/suikoden-anime.html",category:"Premiere",status:"confirmed"},
