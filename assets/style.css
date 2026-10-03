@@ -8,3 +8,5 @@
 .visual-card{overflow:hidden;padding:0!important}.visual-card>img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#0b1020}.visual-card .visual-body{padding:20px}.platform-list .visual-card .visual-body{padding:14px 18px}.platform-list .visual-card>img{aspect-ratio:16/7}.visual-card:hover>img{transform:scale(1.025)}.visual-card>img{transition:transform .25s ease}
 
 .article-hero{margin:0 0 38px;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#0b1020}.article-hero img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
+
+.release-table{overflow-x:auto;margin:28px 0}.release-table table{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}.release-table th,.release-table td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--line)}.release-table th{color:var(--purple);font-size:12px;letter-spacing:.08em;text-transform:uppercase}.prose ul{padding-left:22px}.prose li{margin:10px 0;color:#d5dbea}
