@@ -16,10 +16,10 @@ jobs:
           mkdir -p assets/images/covers
           get(){ echo "Fetching $1"; curl -fL --retry 2 --connect-timeout 20 -A "Mozilla/5.0" "$2" -o "assets/images/covers/$1" || rm -f "assets/images/covers/$1"; }
           pageget(){ echo "Finding image for $1"; html=$(curl -fL --retry 2 -A "Mozilla/5.0" "$2" || true); url=$(printf '%s' "$html" | grep -oP '<meta[^>]+(?:property|name)="og:image"[^>]+content="\K[^"]+' | head -1); [ -n "$url" ] && get "$1" "$url" || true; }
-          pageget im-looking-for-a-zombie.jpg "https://www.crunchyroll.com/news/announcements/2026/10/2/im-looking-for-a-zombie-anime-english-dub-release-date-cast-crew"
+          pageget im-looking-for-a-zombie.jpg "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll"
           get tale-secret-saint.webp "https://i0.wp.com/finalweapon.net/wp-content/uploads/2026/03/A-Tale-of-the-Secret-Saint-anime-series.webp?resize=1068%2C601&ssl=1"
           get romelia-war-chronicle.png "https://i0.wp.com/anitrendz.net/news/wp-content/uploads/2026/09/EN_logo_Romelia-War-Chronicle_Main-Visual_2000x2831.png?resize=700%2C991&ssl=1"
-          pageget aoashi-season-2.jpg "https://www.crunchyroll.com/es/news/latest/2026/6/26/aoashi-temporada-2-parte-1-imagen-temas-musicales"
+          get aoashi-season-2.png "https://aoashi-pr.com/wp/wp-content/uploads/2026/06/aoashi_season2_KV_B2-1-724x1024.png"
           get reincarnated-goblin.jpeg "https://i0.wp.com/anitrendz.net/news/wp-content/uploads/2026/09/So-Whats-Wrong-with-Getting-Reborn-as-a-Goblin-new-visual.jpeg?resize=700%2C988&ssl=1"
           get laid-off-cheat-granting-mage.jpg "https://us.oricon-group.com/upimg/detail/8000/8809/img660/The-Laid-Off-Cheat-Granting-Mage-1.jpg"
           get sasaki-and-peeps-season-2.jpg "https://sasapi-anime.com/images/special/visual/key_visual05.jpg"
@@ -41,7 +41,7 @@ jobs:
           "im-looking-for-a-zombie":"assets/images/covers/im-looking-for-a-zombie.jpg",
           "tale-secret-saint":"assets/images/covers/tale-secret-saint.webp",
           "romelia-war-chronicle":"assets/images/covers/romelia-war-chronicle.png",
-          "aoashi-season-2":"assets/images/covers/aoashi-season-2.jpg",
+          "aoashi-season-2":"assets/images/covers/aoashi-season-2.png",
           "reincarnated-goblin":"assets/images/covers/reincarnated-goblin.jpeg",
           "laid-off-cheat-granting-mage":"assets/images/covers/laid-off-cheat-granting-mage.jpg",
           "sasaki-and-peeps-season-2":"assets/images/covers/sasaki-and-peeps-season-2.jpg",
