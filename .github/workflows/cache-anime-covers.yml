@@ -1,0 +1,66 @@
+name: Cache anime covers locally
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/cache-anime-covers.yml']
+permissions:
+  contents: write
+jobs:
+  cache:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download verified anime covers
+        shell: bash
+        run: |
+          set -e
+          mkdir -p assets/images/covers
+          get(){ curl -fL --retry 3 --connect-timeout 20 -A "Mozilla/5.0" "$2" -o "assets/images/covers/$1"; test -s "assets/images/covers/$1"; }
+          get im-looking-for-a-zombie.jpg "https://poptopic.com.au/wp-content/uploads/2026/09/zombie-anime-aki-new-world.jpg"
+          get tale-secret-saint.webp "https://i0.wp.com/finalweapon.net/wp-content/uploads/2026/03/A-Tale-of-the-Secret-Saint-anime-series.webp?resize=1068%2C601&ssl=1"
+          get romelia-war-chronicle.png "https://i0.wp.com/anitrendz.net/news/wp-content/uploads/2026/09/EN_logo_Romelia-War-Chronicle_Main-Visual_2000x2831.png?resize=700%2C991&ssl=1"
+          get aoashi-season-2.jpg "https://a.storyblok.com/f/178900/750x1061/934cdd2f6a/aoashi-season-2-key-visual.jpg"
+          get reincarnated-goblin.jpeg "https://i0.wp.com/anitrendz.net/news/wp-content/uploads/2026/09/So-Whats-Wrong-with-Getting-Reborn-as-a-Goblin-new-visual.jpeg?resize=700%2C988&ssl=1"
+          get laid-off-cheat-granting-mage.jpg "https://us.oricon-group.com/upimg/detail/8000/8809/img660/The-Laid-Off-Cheat-Granting-Mage-1.jpg"
+          get sasaki-and-peeps-season-2.jpg "https://sasapi-anime.com/images/special/visual/key_visual05.jpg"
+          get detective-is-already-dead-season-2.jpg "https://tanmoshi-anime.jp/Season2/core_sys/images/main/home/kv02.jpg"
+          get iceblade-sorcerer-ii.jpg "https://a.storyblok.com/f/178900/750x1061/95c1d58c87/iceblade-sorcerer-season-2-key-visual.jpg"
+          get ace-of-diamond-second-season.jpg "https://a.storyblok.com/f/178900/750x1061/50c5a8c8d9/ace-of-the-diamond-act-ii-second-season-key-visual.jpg"
+          get ramparts-of-ice-season-2.jpg "https://a.storyblok.com/f/178900/750x1061/2cddac28ca/the-ramparts-of-ice-season-2-key-visual.jpg"
+          get returners-magic-s2.jpeg "https://i0.wp.com/anitrendz.net/news/wp-content/uploads/2026/09/a-returners-magic-should-be-special-season-2-new-visual-1-e1789495197357.jpeg?resize=1200%2C676&ssl=1"
+          get magic-knight-rayearth.jpg "https://a.storyblok.com/f/178900/750x1061/1ca4c6688c/magic-knight-rayearth-2026-key-visual.jpg"
+          get firefly-wedding.jpg "https://i0.wp.com/anitrendz.net/news/wp-content/uploads/2026/09/Firefly-Wedding-key-visual-1-e1788687986414.jpg?fit=850%2C480&ssl=1"
+          get my-happy-marriage-specials.jpg "https://www.whats-on-netflix.com/wp-content/uploads/2026/08/new-my-happy-marriage-specials-coming-to-netflix.jpg"
+      - name: Point site to local covers
+        shell: python
+        run: |
+          from pathlib import Path
+          p=Path("assets/data.js")
+          s=p.read_text()
+          mapping={
+          "im-looking-for-a-zombie":"assets/images/covers/im-looking-for-a-zombie.jpg",
+          "tale-secret-saint":"assets/images/covers/tale-secret-saint.webp",
+          "romelia-war-chronicle":"assets/images/covers/romelia-war-chronicle.png",
+          "aoashi-season-2":"assets/images/covers/aoashi-season-2.jpg",
+          "reincarnated-goblin":"assets/images/covers/reincarnated-goblin.jpeg",
+          "laid-off-cheat-granting-mage":"assets/images/covers/laid-off-cheat-granting-mage.jpg",
+          "sasaki-and-peeps-season-2":"assets/images/covers/sasaki-and-peeps-season-2.jpg",
+          "detective-is-already-dead-season-2":"assets/images/covers/detective-is-already-dead-season-2.jpg",
+          "iceblade-sorcerer-ii":"assets/images/covers/iceblade-sorcerer-ii.jpg",
+          "ace-of-diamond-second-season":"assets/images/covers/ace-of-diamond-second-season.jpg",
+          "ramparts-of-ice-season-2":"assets/images/covers/ramparts-of-ice-season-2.jpg",
+          "returners-magic-s2":"assets/images/covers/returners-magic-s2.jpeg",
+          "magic-knight-rayearth":"assets/images/covers/magic-knight-rayearth.jpg",
+          "firefly-wedding":"assets/images/covers/firefly-wedding.jpg",
+          "my-happy-marriage-specials":"assets/images/covers/my-happy-marriage-specials.jpg"}
+          import re
+          for k,v in mapping.items():
+              s=re.sub(r'(id:"'+re.escape(k)+r'",image:)"[^"]+"',r'\1"'+v+'"',s)
+          p.write_text(s)
+      - name: Commit local covers
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/images/covers assets/data.js
+          git commit -m "Cache anime covers locally" || exit 0
+          git push
