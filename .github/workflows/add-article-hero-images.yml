@@ -43,7 +43,8 @@ jobs:
               p=Path(fn)
               if not p.exists(): continue
               s=p.read_text()
-              if 'class="article-hero-image"' in s: continue
+              s=re.sub(r'\s*<img[^>]*class="[^"]*article-hero-image[^"]*"[^>]*>','',s,flags=re.I)
+              continue
               tag='<img class="article-hero-image" src="'+src+'" alt="'+html.escape(title,quote=True)+'" loading="eager" decoding="async">'
               s,n=re.subn(r'(<main[^>]*>)',r'\1\n'+tag,s,count=1,flags=re.I)
               if not n: s,n=re.subn(r'(<article[^>]*>)',r'\1\n'+tag,s,count=1,flags=re.I)
