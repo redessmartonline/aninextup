@@ -1,0 +1,3 @@
+document.querySelectorAll('.menu').forEach(b=>b.addEventListener('click',()=>document.querySelector('nav')?.classList.toggle('open')));
+function searchSite(){const q=(document.getElementById('search')?.value||'').trim().toLowerCase();if(!q)return;const map=[['black clover','today.html'],['suikoden','today.html'],['blue box','this-week.html'],['psyren','this-week.html'],['space mercenary','this-week.html'],['apothecary','this-week.html'],['netflix','where-to-watch.html'],['crunchyroll','where-to-watch.html'],['calendar','calendar.html'],['news','news.html']];const hit=map.find(([k])=>q.includes(k)||k.includes(q));location.href=hit?hit[1]:'news.html';}
+document.getElementById('search')?.addEventListener('keydown',e=>{if(e.key==='Enter')searchSite()});
