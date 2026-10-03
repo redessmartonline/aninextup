@@ -1,0 +1,70 @@
+name: Fix anime covers
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/fix-anime-covers.yml']
+permissions:
+  contents: write
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install requests pillow beautifulsoup4
+      - name: Download real anime visuals
+        shell: python
+        run: |
+          import requests,re,io,os
+          from bs4 import BeautifulSoup
+          from PIL import Image
+          from urllib.parse import urljoin
+          os.makedirs("assets/images/covers",exist_ok=True)
+          def pick(page,out):
+              h=requests.get(page,headers={"User-Agent":"Mozilla/5.0"},timeout=30).text
+              urls=set()
+              soup=BeautifulSoup(h,"html.parser")
+              for tag in soup.find_all(["img","source"]):
+                  for a in ("src","data-src","srcset"):
+                      v=tag.get(a)
+                      if v:
+                          for z in v.split(","):
+                              urls.add(urljoin(page,z.strip().split(" ")[0]))
+              for css in [urljoin(page,x.get("href")) for x in soup.find_all("link",rel="stylesheet") if x.get("href")]:
+                  try:
+                      t=requests.get(css,headers={"User-Agent":"Mozilla/5.0"},timeout=20).text
+                      for u in re.findall(r'url\([\"\']?([^\)\"\']+)',t): urls.add(urljoin(css,u))
+                  except: pass
+              best=None
+              for u in urls:
+                  if any(x in u.lower() for x in ["logo","icon","favicon","loading","btn","arrow"]): continue
+                  try:
+                      r=requests.get(u,headers={"User-Agent":"Mozilla/5.0","Referer":page},timeout=20)
+                      if not r.ok or not r.headers.get("content-type","").startswith("image/"): continue
+                      im=Image.open(io.BytesIO(r.content)); w,h=im.size
+                      if w<600 or h<350: continue
+                      score=w*h
+                      if best is None or score>best[0]: best=(score,r.content,u,im.format)
+                  except: pass
+              if not best: raise RuntimeError("No valid visual found: "+page)
+              data=best[1]
+              Image.open(io.BytesIO(data)).verify()
+              open(out,"wb").write(data)
+              print(out,best[2],len(data))
+          pick("https://zommasu.com/","assets/images/covers/im-looking-for-a-zombie.jpg")
+          pick("https://aoashi-pr.com/","assets/images/covers/aoashi-season-2.jpg")
+      - name: Point data to local files
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+          p=Path("assets/data.js"); s=p.read_text()
+          s=re.sub(r'(id:"im-looking-for-a-zombie",image:)"[^"]+"',r'\1"assets/images/covers/im-looking-for-a-zombie.jpg"',s)
+          s=re.sub(r'(id:"aoashi-season-2",image:)"[^"]+"',r'\1"assets/images/covers/aoashi-season-2.jpg"',s)
+          p.write_text(s)
+      - name: Commit verified images
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/images/covers assets/data.js
+          git commit -m "Fix Zombie and Aoashi with real anime visuals" || exit 0
+          git push
