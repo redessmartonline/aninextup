@@ -15,19 +15,20 @@ jobs:
         run: |
           mkdir -p assets/images/covers
           get(){ echo "Fetching $1"; curl -fL --retry 2 --connect-timeout 20 -A "Mozilla/5.0" "$2" -o "assets/images/covers/$1" || rm -f "assets/images/covers/$1"; }
-          get im-looking-for-a-zombie.jpg "https://poptopic.com.au/wp-content/uploads/2026/09/zombie-anime-aki-new-world.jpg"
+          pageget(){ echo "Finding image for $1"; html=$(curl -fL --retry 2 -A "Mozilla/5.0" "$2" || true); url=$(printf '%s' "$html" | grep -oP '<meta[^>]+(?:property|name)="og:image"[^>]+content="\K[^"]+' | head -1); [ -n "$url" ] && get "$1" "$url" || true; }
+          pageget im-looking-for-a-zombie.jpg "https://www.crunchyroll.com/news/announcements/2026/10/2/im-looking-for-a-zombie-anime-english-dub-release-date-cast-crew"
           get tale-secret-saint.webp "https://i0.wp.com/finalweapon.net/wp-content/uploads/2026/03/A-Tale-of-the-Secret-Saint-anime-series.webp?resize=1068%2C601&ssl=1"
           get romelia-war-chronicle.png "https://i0.wp.com/anitrendz.net/news/wp-content/uploads/2026/09/EN_logo_Romelia-War-Chronicle_Main-Visual_2000x2831.png?resize=700%2C991&ssl=1"
-          get aoashi-season-2.jpg "https://a.storyblok.com/f/178900/750x1061/934cdd2f6a/aoashi-season-2-key-visual.jpg"
+          pageget aoashi-season-2.jpg "https://www.crunchyroll.com/es/news/latest/2026/6/26/aoashi-temporada-2-parte-1-imagen-temas-musicales"
           get reincarnated-goblin.jpeg "https://i0.wp.com/anitrendz.net/news/wp-content/uploads/2026/09/So-Whats-Wrong-with-Getting-Reborn-as-a-Goblin-new-visual.jpeg?resize=700%2C988&ssl=1"
           get laid-off-cheat-granting-mage.jpg "https://us.oricon-group.com/upimg/detail/8000/8809/img660/The-Laid-Off-Cheat-Granting-Mage-1.jpg"
           get sasaki-and-peeps-season-2.jpg "https://sasapi-anime.com/images/special/visual/key_visual05.jpg"
           get detective-is-already-dead-season-2.jpg "https://tanmoshi-anime.jp/Season2/core_sys/images/main/home/kv02.jpg"
-          get iceblade-sorcerer-ii.jpg "https://a.storyblok.com/f/178900/750x1061/95c1d58c87/iceblade-sorcerer-season-2-key-visual.jpg"
-          get ace-of-diamond-second-season.jpg "https://a.storyblok.com/f/178900/750x1061/50c5a8c8d9/ace-of-the-diamond-act-ii-second-season-key-visual.jpg"
-          get ramparts-of-ice-season-2.jpg "https://a.storyblok.com/f/178900/750x1061/2cddac28ca/the-ramparts-of-ice-season-2-key-visual.jpg"
+          pageget iceblade-sorcerer-ii.jpg "https://www.crunchyroll.com/news/latest/2026/8/20/the-iceblade-sorcerer-shall-rule-the-world-season-2-anime-october-8-release-date-key-visual-theme-songs"
+          pageget ace-of-diamond-second-season.jpg "https://www.crunchyroll.com/news/latest/2026/4/26/ace-of-the-diamond-act-ii-second-season-anime-unveils-new-visual"
+          pageget ramparts-of-ice-season-2.jpg "https://about.netflix.com/en/news/the-ramparts-of-ice-season-2"
           get returners-magic-s2.jpeg "https://i0.wp.com/anitrendz.net/news/wp-content/uploads/2026/09/a-returners-magic-should-be-special-season-2-new-visual-1-e1789495197357.jpeg?resize=1200%2C676&ssl=1"
-          get magic-knight-rayearth.jpg "https://a.storyblok.com/f/178900/750x1061/1ca4c6688c/magic-knight-rayearth-2026-key-visual.jpg"
+          pageget magic-knight-rayearth.jpg "https://www.crunchyroll.com/news/latest/2026/9/20/new-magic-knight-rayearth-anime-theme-songs-previewed-in-new-trailer"
           get firefly-wedding.jpg "https://i0.wp.com/anitrendz.net/news/wp-content/uploads/2026/09/Firefly-Wedding-key-visual-1-e1788687986414.jpg?fit=850%2C480&ssl=1"
           get my-happy-marriage-specials.jpg "https://www.whats-on-netflix.com/wp-content/uploads/2026/08/new-my-happy-marriage-specials-coming-to-netflix.jpg"
       - name: Point site to local covers
