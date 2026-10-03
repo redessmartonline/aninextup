@@ -16,5 +16,5 @@ const siteToday=new Date(new Date().toLocaleString('en-US',{timeZone:TZ}));docum
 for(const el of document.querySelectorAll('[data-anime-platform]')){
  const p=el.dataset.animePlatform;
  const list=(D.anime||[]).filter(x=>x.platform===p).sort((x,y)=>(x.date||'9999').localeCompare(y.date||'9999'));
- el.innerHTML=list.map(card).join('')||'<p class="empty">No confirmed releases yet.</p>';
+ el.innerHTML=list.map(animeCard).join('')||'<p class="empty">No confirmed releases yet.</p>';
 }
