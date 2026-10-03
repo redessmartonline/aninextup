@@ -21,3 +21,6 @@ for(const el of document.querySelectorAll('[data-anime-platform]')){
 
 // Related releases on article pages
 (()=>{const article=document.querySelector('.article');if(!article||!D.anime?.length)return;const here=location.pathname.split('/').pop();const current=D.anime.find(a=>a.article?.endsWith(here));if(!current)return;const related=D.anime.filter(a=>a.id!==current.id&&(a.platform===current.platform||a.date===current.date)).slice(0,3);if(!related.length)return;const box=document.createElement('section');box.className='related-releases';box.innerHTML='<div class="section-head"><div><span class="kicker">KEEP WATCHING</span><h2>Related releases</h2></div><a href="../calendar.html">FULL CALENDAR →</a></div><div class="grid three">'+related.map(animeCard).join('')+'</div>';article.appendChild(box)})();
+
+// Latest release guides for the News hub
+document.querySelectorAll('[data-news-releases]').forEach(el=>{const items=[...(D.anime||[])].sort((a,b)=>(b.date||'').localeCompare(a.date||'')).slice(0,9);el.innerHTML=items.map(fullCard).join('')});
