@@ -2,9 +2,9 @@ window.ANINEXTUP_DATA={
 updated:"2026-10-03",
 site:{timezone:"America/Santo_Domingo",season:"Fall 2026"},
 anime:[
-{id:"tokyo-revengers-war-three-titans",image:"",title:"Tokyo Revengers: War of the Three Titans",date:"2026-10-02",platform:"Disney+",article:"articles/tokyo-revengers-war-three-titans.html",category:"New Arc",status:"confirmed"},
-{id:"dragon-ball-super-beerus",image:"",title:"Dragon Ball Super: Beerus",date:"2026-10-11",platform:"TBA by territory",article:"articles/dragon-ball-super-beerus.html",category:"Premiere",status:"confirmed"},
-{id:"cyberpunk-edgerunners-2",image:"",title:"Cyberpunk: Edgerunners 2",date:"2026-10-20",platform:"Netflix",article:"articles/cyberpunk-edgerunners-2.html",category:"Premiere",status:"confirmed"},
+{id:"tokyo-revengers-war-three-titans",image:"https://tokyo-revengers-anime.com/img/home/visual_10.jpg",title:"Tokyo Revengers: War of the Three Titans",date:"2026-10-02",platform:"Disney+",article:"articles/tokyo-revengers-war-three-titans.html",category:"New Arc",status:"confirmed"},
+{id:"dragon-ball-super-beerus",image:"https://en.dragon-ball-official.com/dragonball/en/news/2026/09/DBSBE_SurgeKV_en.jpg?_=1791070440",title:"Dragon Ball Super: Beerus",date:"2026-10-11",platform:"TBA by territory",article:"articles/dragon-ball-super-beerus.html",category:"Premiere",status:"confirmed"},
+{id:"cyberpunk-edgerunners-2",image:"https://dnm.nflximg.net/api/v6/BvVbc2Wxr2w6QuoANoSpJKEIWjQ/AAAAQfwpQAHjA_iAFrtSYltVwjIMImcYa4Ta4HwerxcPsvomYogQBgaMTmwHQ_urjV9WN8sUUsURtF739Ro2WM1fVr5iiB8vJapY3ed6yPCzeMIn2AYpjiM2b9lUJKzNclgtGXEj1yn0JB-CGxTp9PkbynRoing.jpg?r=840",title:"Cyberpunk: Edgerunners 2",date:"2026-10-20",platform:"Netflix",article:"articles/cyberpunk-edgerunners-2.html",category:"Premiere",status:"confirmed"},
 {id:"im-looking-for-a-zombie",image:"assets/images/covers/im-looking-for-a-zombie.jpg",title:"I'm Looking For a Zombie",date:"2026-10-03",platform:"Crunchyroll",article:"articles/im-looking-for-a-zombie.html",category:"Premiere",status:"confirmed"},
 {id:"tale-secret-saint",image:"assets/images/covers/tale-secret-saint.webp",title:"A Tale of the Secret Saint",date:"2026-10-03",platform:"Crunchyroll",article:"articles/tale-secret-saint.html",category:"Premiere",status:"confirmed"},
 {id:"romelia-war-chronicle",image:"assets/images/covers/romelia-war-chronicle.png",title:"Romelia War Chronicle",date:"2026-10-03",platform:"Crunchyroll",article:"articles/romelia-war-chronicle.html",category:"Premiere",status:"confirmed"},
@@ -29,9 +29,9 @@ anime:[
 {id:"ranma-s3",image:"assets/images/ranma-season-3.jpeg",title:"Ranma 1/2 Season 3",date:null,dateLabel:"October 2026",platform:"Netflix",article:"articles/ranma-season-3.html",category:"Season Premiere",status:"month-confirmed"}
 ],
 guides:[
-{image:"",title:"Dragon Ball Super: Beerus Release Date & Streaming",tag:"DRAGON BALL",article:"articles/dragon-ball-super-beerus.html",description:"October 11 premiere, streaming updates and the latest confirmed details."},
-{image:"",title:"Cyberpunk: Edgerunners 2 Release Date & Netflix",tag:"NETFLIX",article:"articles/cyberpunk-edgerunners-2.html",description:"The new standalone 10-episode Night City story arrives October 20."},
-{image:"",title:"Tokyo Revengers: War of the Three Titans",tag:"DISNEY+",article:"articles/tokyo-revengers-war-three-titans.html",description:"Release schedule and where to watch the new Tokyo Revengers arc."},
+{image:"https://en.dragon-ball-official.com/dragonball/en/news/2026/09/DBSBE_SurgeKV_en.jpg?_=1791070440",title:"Dragon Ball Super: Beerus Release Date & Streaming",tag:"DRAGON BALL",article:"articles/dragon-ball-super-beerus.html",description:"October 11 premiere, streaming updates and the latest confirmed details."},
+{image:"https://dnm.nflximg.net/api/v6/BvVbc2Wxr2w6QuoANoSpJKEIWjQ/AAAAQfwpQAHjA_iAFrtSYltVwjIMImcYa4Ta4HwerxcPsvomYogQBgaMTmwHQ_urjV9WN8sUUsURtF739Ro2WM1fVr5iiB8vJapY3ed6yPCzeMIn2AYpjiM2b9lUJKzNclgtGXEj1yn0JB-CGxTp9PkbynRoing.jpg?r=840",title:"Cyberpunk: Edgerunners 2 Release Date & Netflix",tag:"NETFLIX",article:"articles/cyberpunk-edgerunners-2.html",description:"The new standalone 10-episode Night City story arrives October 20."},
+{image:"https://tokyo-revengers-anime.com/img/home/visual_10.jpg",title:"Tokyo Revengers: War of the Three Titans",tag:"DISNEY+",article:"articles/tokyo-revengers-war-three-titans.html",description:"Release schedule and where to watch the new Tokyo Revengers arc."},
 {image:"assets/images/anime-news-october-2026.jpeg",title:"Anime News: October 2026",tag:"NEWS",article:"articles/anime-news-october-2026.html",description:"Releases, sequels and streaming updates to keep on your radar."},
 {image:"assets/images/netflix-october-2026.jpg",title:"New Anime on Netflix in October 2026",tag:"NETFLIX",article:"articles/netflix-october-2026.html",description:"Notable anime arriving on Netflix this month."},
 {image:"assets/images/fall-2026-calendar.jpeg",title:"Fall 2026 Anime Calendar",tag:"FALL 2026",article:"articles/fall-2026-anime-calendar.html",description:"October premieres and where to watch them."}
