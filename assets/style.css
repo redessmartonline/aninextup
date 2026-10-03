@@ -18,3 +18,5 @@
 .article-hero-image{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:18px;margin:0 0 38px;border:1px solid var(--line);background:#0b1020}
 
 .related-releases{padding:58px 0 0;margin-top:58px;border-top:1px solid var(--line)}.related-releases .section-head h2{font-size:32px;margin:5px 0 0}.related-releases .mini{min-width:0}@media(max-width:780px){main{padding:0 18px}.article{padding:44px 0}.article-hero{margin-bottom:28px;border-radius:14px}.lead{font-size:18px}.prose{font-size:16px}.related-releases{padding-top:42px;margin-top:42px}.related-releases .section-head h2{font-size:28px}}
+
+.breadcrumbs{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin:0 0 26px;color:var(--muted);font-size:12px;font-weight:700}.breadcrumbs a{color:#c4b5fd}.breadcrumbs a:hover{color:var(--purple)}.breadcrumbs span:last-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:55ch}@media(max-width:780px){.breadcrumbs{margin-bottom:20px}.breadcrumbs span:last-child{max-width:28ch}}
