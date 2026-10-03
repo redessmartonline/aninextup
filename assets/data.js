@@ -29,6 +29,9 @@ anime:[
 {id:"ranma-s3",image:"assets/images/ranma-season-3.jpeg",title:"Ranma 1/2 Season 3",date:null,dateLabel:"October 2026",platform:"Netflix",article:"articles/ranma-season-3.html",category:"Season Premiere",status:"month-confirmed"}
 ],
 guides:[
+{image:"",title:"Dragon Ball Super: Beerus Release Date & Streaming",tag:"DRAGON BALL",article:"articles/dragon-ball-super-beerus.html",description:"October 11 premiere, streaming updates and the latest confirmed details."},
+{image:"",title:"Cyberpunk: Edgerunners 2 Release Date & Netflix",tag:"NETFLIX",article:"articles/cyberpunk-edgerunners-2.html",description:"The new standalone 10-episode Night City story arrives October 20."},
+{image:"",title:"Tokyo Revengers: War of the Three Titans",tag:"DISNEY+",article:"articles/tokyo-revengers-war-three-titans.html",description:"Release schedule and where to watch the new Tokyo Revengers arc."},
 {image:"assets/images/anime-news-october-2026.jpeg",title:"Anime News: October 2026",tag:"NEWS",article:"articles/anime-news-october-2026.html",description:"Releases, sequels and streaming updates to keep on your radar."},
 {image:"assets/images/netflix-october-2026.jpg",title:"New Anime on Netflix in October 2026",tag:"NETFLIX",article:"articles/netflix-october-2026.html",description:"Notable anime arriving on Netflix this month."},
 {image:"assets/images/fall-2026-calendar.jpeg",title:"Fall 2026 Anime Calendar",tag:"FALL 2026",article:"articles/fall-2026-anime-calendar.html",description:"October premieres and where to watch them."}
