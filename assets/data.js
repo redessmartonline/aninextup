@@ -2,6 +2,9 @@ window.ANINEXTUP_DATA={
 updated:"2026-10-03",
 site:{timezone:"America/Santo_Domingo",season:"Fall 2026"},
 anime:[
+{id:"tokyo-revengers-war-three-titans",image:"",title:"Tokyo Revengers: War of the Three Titans",date:"2026-10-02",platform:"Disney+",article:"articles/tokyo-revengers-war-three-titans.html",category:"New Arc",status:"confirmed"},
+{id:"dragon-ball-super-beerus",image:"",title:"Dragon Ball Super: Beerus",date:"2026-10-11",platform:"TBA by territory",article:"articles/dragon-ball-super-beerus.html",category:"Premiere",status:"confirmed"},
+{id:"cyberpunk-edgerunners-2",image:"",title:"Cyberpunk: Edgerunners 2",date:"2026-10-20",platform:"Netflix",article:"articles/cyberpunk-edgerunners-2.html",category:"Premiere",status:"confirmed"},
 {id:"im-looking-for-a-zombie",image:"assets/images/covers/im-looking-for-a-zombie.jpg",title:"I'm Looking For a Zombie",date:"2026-10-03",platform:"Crunchyroll",article:"articles/im-looking-for-a-zombie.html",category:"Premiere",status:"confirmed"},
 {id:"tale-secret-saint",image:"assets/images/covers/tale-secret-saint.webp",title:"A Tale of the Secret Saint",date:"2026-10-03",platform:"Crunchyroll",article:"articles/tale-secret-saint.html",category:"Premiere",status:"confirmed"},
 {id:"romelia-war-chronicle",image:"assets/images/covers/romelia-war-chronicle.png",title:"Romelia War Chronicle",date:"2026-10-03",platform:"Crunchyroll",article:"articles/romelia-war-chronicle.html",category:"Premiere",status:"confirmed"},
