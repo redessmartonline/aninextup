@@ -16,3 +16,5 @@
 .status{display:inline-block;margin:8px 0 0 10px;font-size:9px;font-weight:900;letter-spacing:.1em;color:#c4b5fd;vertical-align:middle}.mini .status{margin-left:8px;color:#c4b5fd}.visual-body>.tag+.status{float:right;margin-top:1px}
 
 .article-hero-image{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:18px;margin:0 0 38px;border:1px solid var(--line);background:#0b1020}
+
+.related-releases{padding:58px 0 0;margin-top:58px;border-top:1px solid var(--line)}.related-releases .section-head h2{font-size:32px;margin:5px 0 0}.related-releases .mini{min-width:0}@media(max-width:780px){main{padding:0 18px}.article{padding:44px 0}.article-hero{margin-bottom:28px;border-radius:14px}.lead{font-size:18px}.prose{font-size:16px}.related-releases{padding-top:42px;margin-top:42px}.related-releases .section-head h2{font-size:28px}}
