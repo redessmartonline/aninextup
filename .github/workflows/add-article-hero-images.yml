@@ -1,0 +1,64 @@
+name: Add article hero images
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/add-article-hero-images.yml']
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Add hero to every anime article
+        shell: python
+        run: |
+          from pathlib import Path
+          import re, html
+          items={
+            "articles/im-looking-for-a-zombie.html": ("../assets/images/covers/im-looking-for-a-zombie.jpg", "I'm Looking For a Zombie"),
+            "articles/tale-secret-saint.html": ("../assets/images/covers/tale-secret-saint.webp", "A Tale of the Secret Saint"),
+            "articles/romelia-war-chronicle.html": ("../assets/images/covers/romelia-war-chronicle.png", "Romelia War Chronicle"),
+            "articles/aoashi-season-2.html": ("../assets/images/covers/aoashi-season-2.jpg", "Aoashi Season 2"),
+            "articles/reincarnated-goblin.html": ("../assets/images/covers/reincarnated-goblin.jpeg", "So What's Wrong with Getting Reborn as a Goblin?"),
+            "articles/laid-off-cheat-granting-mage.html": ("../assets/images/covers/laid-off-cheat-granting-mage.jpg", "The Laid-Off Cheat-Granting Mage Enjoys a Second Lease on Life"),
+            "articles/sasaki-and-peeps-season-2.html": ("../assets/images/covers/sasaki-and-peeps-season-2.jpg", "Sasaki and Peeps Season 2"),
+            "articles/detective-is-already-dead-season-2.html": ("../assets/images/covers/detective-is-already-dead-season-2.jpg", "The Detective Is Already Dead Season 2"),
+            "articles/iceblade-sorcerer-ii.html": ("../assets/images/covers/iceblade-sorcerer-ii.jpg", "The Iceblade Sorcerer Shall Rule the World II"),
+            "articles/ace-of-diamond-second-season.html": ("../assets/images/covers/ace-of-diamond-second-season.jpg", "Ace of the Diamond act II -Second Season-"),
+            "articles/ramparts-of-ice-season-2.html": ("../assets/images/covers/ramparts-of-ice-season-2.jpg", "The Ramparts of Ice Season 2"),
+            "articles/returners-magic-season-2.html": ("../assets/images/covers/returners-magic-s2.jpeg", "A Returner's Magic Should Be Special Season 2"),
+            "articles/magic-knight-rayearth-2026.html": ("../assets/images/covers/magic-knight-rayearth.jpg", "Magic Knight Rayearth"),
+            "articles/firefly-wedding.html": ("../assets/images/covers/firefly-wedding.jpg", "Firefly Wedding"),
+            "articles/my-happy-marriage-special-episodes.html": ("../assets/images/covers/my-happy-marriage-specials.jpg", "My Happy Marriage Season 2 Special Episodes"),
+            "articles/apothecary-diaries-season-3.html": ("../assets/images/apothecary-diaries-season-3.jpg", "The Apothecary Diaries Season 3"),
+            "articles/black-clover-season-2.html": ("../assets/images/black-clover-season-2.jpg", "Black Clover Season 2"),
+            "articles/suikoden-anime.html": ("../assets/images/suikoden-anime.jpg", "Suikoden: The Anime"),
+            "articles/blue-box-season-2.html": ("../assets/images/blue-box-season-2.png", "Blue Box Season 2"),
+            "articles/reborn-space-mercenary.html": ("../assets/images/reborn-space-mercenary.jpeg", "Reborn as a Space Mercenary"),
+            "articles/psyren-release-date.html": ("../assets/images/psyren.jpg", "PSYREN"),
+            "articles/ranma-season-3.html": ("../assets/images/ranma-season-3.jpeg", "Ranma 1/2 Season 3"),
+          }
+          for fn,(src,title) in items.items():
+              p=Path(fn)
+              if not p.exists(): continue
+              s=p.read_text()
+              if 'class="article-hero-image"' in s: continue
+              tag='<img class="article-hero-image" src="'+src+'" alt="'+html.escape(title,quote=True)+'" loading="eager" decoding="async">'
+              s,n=re.subn(r'(<main[^>]*>)',r'\1\n'+tag,s,count=1,flags=re.I)
+              if not n: s,n=re.subn(r'(<article[^>]*>)',r'\1\n'+tag,s,count=1,flags=re.I)
+              if n: p.write_text(s)
+      - name: Add responsive hero styling
+        shell: python
+        run: |
+          from pathlib import Path
+          p=Path("assets/style.css"); s=p.read_text()
+          rule='\n.article-hero-image{display:block;width:100%;max-height:620px;object-fit:cover;border-radius:18px;margin:0 0 28px}\n'
+          if '.article-hero-image{' not in s: p.write_text(s+rule)
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add articles assets/style.css
+          git commit -m "Add hero images to anime articles" || exit 0
+          git push
