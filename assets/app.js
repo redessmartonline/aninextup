@@ -18,3 +18,6 @@ for(const el of document.querySelectorAll('[data-anime-platform]')){
  const list=(D.anime||[]).filter(x=>x.platform===p).sort((x,y)=>(x.date||'9999').localeCompare(y.date||'9999'));
  el.innerHTML=list.map(animeCard).join('')||'<p class="empty">No confirmed releases yet.</p>';
 }
+
+// Related releases on article pages
+(()=>{const article=document.querySelector('.article');if(!article||!D.anime?.length)return;const here=location.pathname.split('/').pop();const current=D.anime.find(a=>a.article?.endsWith(here));if(!current)return;const related=D.anime.filter(a=>a.id!==current.id&&(a.platform===current.platform||a.date===current.date)).slice(0,3);if(!related.length)return;const box=document.createElement('section');box.className='related-releases';box.innerHTML='<div class="section-head"><div><span class="kicker">KEEP WATCHING</span><h2>Related releases</h2></div><a href="../calendar.html">FULL CALENDAR →</a></div><div class="grid three">'+related.map(animeCard).join('')+'</div>';article.appendChild(box)})();
