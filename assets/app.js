@@ -11,3 +11,10 @@ function searchSite(){const input=document.getElementById('search'),q=(input?.va
 document.getElementById('search')?.addEventListener('keydown',e=>{if(e.key==='Enter')searchSite()});document.getElementById('search')?.addEventListener('input',e=>{if(!e.target.value.trim()){const b=document.getElementById('searchResults');if(b)b.hidden=true}});
 
 const siteToday=new Date(new Date().toLocaleString('en-US',{timeZone:TZ}));document.querySelectorAll('[data-today-label]').forEach(el=>el.textContent='TODAY · '+siteToday.toLocaleDateString('en-US',{month:'long',day:'numeric'}).toUpperCase());
+
+// Platform-specific release hubs
+for(const el of document.querySelectorAll('[data-anime-platform]')){
+ const p=el.dataset.animePlatform;
+ const list=(D.anime||[]).filter(x=>x.platform===p).sort((x,y)=>(x.date||'9999').localeCompare(y.date||'9999'));
+ el.innerHTML=list.map(card).join('')||'<p class="empty">No confirmed releases yet.</p>';
+}
