@@ -7,7 +7,7 @@ anime:[
 {id:"blue-box-s2",image:"assets/images/blue-box-season-2.png",title:"Blue Box Season 2",date:"2026-10-04",platform:"Netflix",article:"articles/blue-box-season-2.html",category:"Season Premiere"},
 {id:"space-mercenary",image:"assets/images/reborn-space-mercenary.jpeg",title:"Reborn as a Space Mercenary",date:"2026-10-04",platform:"Crunchyroll",article:"articles/reborn-space-mercenary.html",category:"Premiere"},
 {id:"psyren",image:"assets/images/psyren.jpg",title:"PSYREN",date:"2026-10-05",platform:"Crunchyroll",article:"articles/psyren-release-date.html",category:"Premiere"},
-{id:"ranma-s3",image:"assets/images/ranma-season-3.jpeg",title:"Ranma 1/2 Season 3",date:"2026-10-00",platform:"Netflix",article:"articles/ranma-season-3.html",category:"Season Premiere"}
+{id:"ranma-s3",image:"assets/images/ranma-season-3.jpeg",title:"Ranma 1/2 Season 3",date:null,dateLabel:"October 2026",platform:"Netflix",article:"articles/ranma-season-3.html",category:"Season Premiere"}
 ],
 guides:[
 {image:"assets/images/anime-news-october-2026.jpeg",title:"Anime News: October 2026",tag:"NEWS",article:"articles/anime-news-october-2026.html",description:"Releases, sequels and streaming updates to keep on your radar."},
