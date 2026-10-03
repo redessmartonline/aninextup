@@ -50,8 +50,8 @@ jobs:
               Image.open(io.BytesIO(data)).verify()
               open(out,"wb").write(data)
               print(out,best[2],len(data))
-          pick("https://zommasu.com/","assets/images/covers/im-looking-for-a-zombie.jpg")
-          pick("https://aoashi-pr.com/","assets/images/covers/aoashi-season-2.jpg")
+          pick("https://animes.com.br/materia/im-looking-for-zombie-trailer-estreia-3-outubro","assets/images/covers/im-looking-for-a-zombie.jpg")
+          pick("https://anitrendz.net/news/2026/06/25/aoashi-season-2-gets-main-visual-for-cour-1/","assets/images/covers/aoashi-season-2.jpg")
       - name: Point data to local files
         shell: python
         run: |
