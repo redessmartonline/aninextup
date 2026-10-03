@@ -1,0 +1,36 @@
+name: Import AniNextUp media
+on:
+  push:
+    paths:
+      - ".github/workflows/import-media.yml"
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download WordPress media
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p assets/images
+          curl -fL --retry 3 "https://aninextup.wordpress.com/wp-content/uploads/2026/10/09-netflix-anime-october-2026.jpg" -o assets/images/netflix-october-2026.jpg
+          curl -fL --retry 3 "https://aninextup.wordpress.com/wp-content/uploads/2026/10/black-clover-2nd-season-main-visual-1-e1782976080980.jpg" -o assets/images/black-clover-season-2.jpg
+          curl -fL --retry 3 "https://aninextup.wordpress.com/wp-content/uploads/2026/10/blue-box-season-2-main-trailer-screenshot.png" -o assets/images/blue-box-season-2.png
+          curl -fL --retry 3 "https://aninextup.wordpress.com/wp-content/uploads/2026/10/magicknightrayearth2026-scaled-e1789499505872-1.jpeg" -o assets/images/anime-news-october-2026.jpeg
+          curl -fL --retry 3 "https://aninextup.wordpress.com/wp-content/uploads/2026/10/magicknightrayearth2026-scaled-e1789499505872.jpeg" -o assets/images/fall-2026-calendar.jpeg
+          curl -fL --retry 3 "https://aninextup.wordpress.com/wp-content/uploads/2026/10/psyren-new-key-visual-1-scaled-e1789121056689.jpg" -o assets/images/psyren.jpg
+          curl -fL --retry 3 "https://aninextup.wordpress.com/wp-content/uploads/2026/10/ranma-season-3-new-visual-1-e1785001115742.jpeg" -o assets/images/ranma-season-3.jpeg
+          curl -fL --retry 3 "https://aninextup.wordpress.com/wp-content/uploads/2026/10/reborn-as-a-space-mercenary-new-visual-1-e1789493524661.jpeg" -o assets/images/reborn-space-mercenary.jpeg
+          curl -fL --retry 3 "https://aninextup.wordpress.com/wp-content/uploads/2026/10/suikoden-the-anime-key-visual-1-e1785753243816.jpg" -o assets/images/suikoden-anime.jpg
+          curl -fL --retry 3 "https://aninextup.wordpress.com/wp-content/uploads/2026/10/the-apothecary-diaries-season-3-key-visual-1-e1786796625217.jpg" -o assets/images/apothecary-diaries-season-3.jpg
+      - name: Commit imported media
+        shell: bash
+        run: |
+          git config user.name "AniNextUp Automation"
+          git config user.email "actions@users.noreply.github.com"
+          git add assets/images
+          git diff --cached --quiet && exit 0
+          git commit -m "Import AniNextUp media from WordPress"
+          git push
