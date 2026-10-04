@@ -14,6 +14,21 @@ document.getElementById('search')?.addEventListener('keydown',e=>{if(e.key==='En
 
 const siteToday=new Date(new Date().toLocaleString('en-US',{timeZone:TZ}));document.querySelectorAll('[data-today-label]').forEach(el=>el.textContent='TODAY · '+siteToday.toLocaleDateString('en-US',{month:'long',day:'numeric'}).toUpperCase());
 
+// Dynamic Today and This Week context
+const isoLocal=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+const localToday=new Date(new Date().toLocaleString('en-US',{timeZone:TZ}));
+const localTodayIso=isoLocal(localToday);
+const fmtLong=d=>d.toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'});
+document.querySelectorAll('[data-today-heading]').forEach(el=>el.textContent=fmtLong(localToday)+' Anime Releases');
+document.querySelectorAll('[data-today-description]').forEach(el=>el.textContent='Confirmed anime premieres and important releases for '+fmtLong(localToday)+'.');
+document.querySelectorAll('[data-today-next]').forEach(el=>{const items=[...(D.anime||[])].filter(a=>a.date&&a.date>localTodayIso).sort((a,b)=>a.date.localeCompare(b.date)).slice(0,6);el.innerHTML=items.map(animeCard).join('')||'<p class="empty">No upcoming confirmed releases listed yet.</p>'});
+const weekDow=(localToday.getDay()+6)%7,weekStart=new Date(localToday),weekEnd=new Date(localToday);weekStart.setDate(localToday.getDate()-weekDow);weekEnd.setDate(weekStart.getDate()+6);
+const weekRange=weekStart.getMonth()===weekEnd.getMonth()?weekStart.toLocaleDateString('en-US',{month:'long'})+' '+weekStart.getDate()+'–'+weekEnd.getDate()+', '+weekEnd.getFullYear():weekStart.toLocaleDateString('en-US',{month:'short',day:'numeric'})+'–'+weekEnd.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+document.querySelectorAll('[data-week-range]').forEach(el=>el.textContent=weekRange.toUpperCase());
+document.querySelectorAll('[data-week-heading]').forEach(el=>el.textContent=weekRange+' Anime Releases');
+document.querySelectorAll('[data-week-description]').forEach(el=>el.textContent='Track confirmed anime premieres, season returns and streaming releases scheduled for '+weekRange+'.');
+document.querySelectorAll('[data-after-week]').forEach(el=>{const endIso=isoLocal(weekEnd);const items=[...(D.anime||[])].filter(a=>a.date&&a.date>endIso).sort((a,b)=>a.date.localeCompare(b.date)).slice(0,6);el.innerHTML=items.map(animeCard).join('')||'<p class="empty">No later confirmed releases listed yet.</p>'});
+
 // Homepage discovery sections
 const homeIso=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
 const homeToday=homeIso(new Date(new Date().toLocaleString('en-US',{timeZone:TZ})));
