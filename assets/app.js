@@ -14,6 +14,12 @@ document.getElementById('search')?.addEventListener('keydown',e=>{if(e.key==='En
 
 const siteToday=new Date(new Date().toLocaleString('en-US',{timeZone:TZ}));document.querySelectorAll('[data-today-label]').forEach(el=>el.textContent='TODAY · '+siteToday.toLocaleDateString('en-US',{month:'long',day:'numeric'}).toUpperCase());
 
+// Homepage discovery sections
+const homeIso=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+const homeToday=homeIso(new Date(new Date().toLocaleString('en-US',{timeZone:TZ})));
+document.querySelectorAll('[data-home-latest]').forEach(el=>{const items=[...(D.anime||[])].filter(a=>a.date).sort((a,b)=>b.date.localeCompare(a.date)).slice(0,6);el.innerHTML=items.map(fullCard).join('')||'<p class="empty">No updates listed yet.</p>'});
+document.querySelectorAll('[data-home-next]').forEach(el=>{const items=[...(D.anime||[])].filter(a=>a.date&&a.date>homeToday).sort((a,b)=>a.date.localeCompare(b.date)).slice(0,6);el.innerHTML=items.map(animeCard).join('')||'<p class="empty">No upcoming releases listed yet.</p>'});
+
 // Platform-specific release hubs
 for(const el of document.querySelectorAll('[data-anime-platform]')){
  const p=el.dataset.animePlatform;
