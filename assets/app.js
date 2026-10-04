@@ -17,7 +17,7 @@ const siteToday=new Date(new Date().toLocaleString('en-US',{timeZone:TZ}));docum
 // Homepage discovery sections
 const homeIso=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
 const homeToday=homeIso(new Date(new Date().toLocaleString('en-US',{timeZone:TZ})));
-document.querySelectorAll('[data-home-latest]').forEach(el=>{const items=[...(D.anime||[])].filter(a=>a.date).sort((a,b)=>b.date.localeCompare(a.date)).slice(0,6);el.innerHTML=items.map(fullCard).join('')||'<p class="empty">No updates listed yet.</p>'});
+document.querySelectorAll('[data-home-latest]').forEach(el=>{const items=(D.guides||[]).slice(0,6);el.innerHTML=items.map(g=>'<a class="card story visual-card" href="'+g.article+'">'+(g.image?'<img src="'+g.image+'" alt="'+g.title+'" loading="lazy">':'')+'<div class="visual-body"><span class="tag">'+g.tag+'</span><h3>'+g.title+'</h3><p>'+g.description+'</p><span class="more">READ UPDATE →</span></div></a>').join('')||'<p class="empty">No updates listed yet.</p>'});
 document.querySelectorAll('[data-home-next]').forEach(el=>{const items=[...(D.anime||[])].filter(a=>a.date&&a.date>homeToday).sort((a,b)=>a.date.localeCompare(b.date)).slice(0,6);el.innerHTML=items.map(animeCard).join('')||'<p class="empty">No upcoming releases listed yet.</p>'});
 
 // Platform-specific release hubs
