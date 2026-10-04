@@ -2,6 +2,7 @@ window.ANINEXTUP_DATA={
 updated:"2026-10-04",
 site:{timezone:"America/Santo_Domingo",season:"Fall 2026"},
 anime:[
+{id:"bass-x-machina",image:"https://i.ytimg.com/vi/CWbZBIrEfqI/maxresdefault.jpg",title:"Bass X Machina",date:"2026-11-03",platform:"Netflix",article:"articles/bass-x-machina-release-date.html",category:"Premiere",status:"confirmed"},
 {id:"dreamland",image:"https://i.ytimg.com/vi/OBK6DLvQJvs/maxresdefault.jpg",title:"Dreamland",date:"2026-10-16",platform:"Crunchyroll",article:"articles/dreamland-release-date.html",category:"Premiere",status:"confirmed"},
 {id:"dark-machine",image:"https://i.ytimg.com/vi/P8FfvDLyMrY/maxresdefault.jpg",title:"DARK MACHINE THE ANIMATION",date:"2026-10-13",platform:"Crunchyroll",article:"articles/dark-machine-the-animation.html",category:"Premiere",status:"confirmed"},
 {id:"chitose-ramune-cour-2",image:"https://i.ytimg.com/vi/8RHh2AyKRfY/maxresdefault.jpg",title:"Chitose Is in the Ramune Bottle 2nd Cour",date:"2026-10-13",platform:"Crunchyroll",article:"articles/chitose-ramune-bottle-cour-2.html",category:"Cour 2",status:"confirmed"},
