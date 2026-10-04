@@ -2,6 +2,7 @@ window.ANINEXTUP_DATA={
 updated:"2026-10-04",
 site:{timezone:"America/Santo_Domingo",season:"Fall 2026"},
 anime:[
+{id:"apothecary-diaries-movie",image:"https://i.ytimg.com/vi/HP5wg0kTh54/maxresdefault.jpg",title:"The Apothecary Diaries: Treasure of the Late Empress",date:"2026-12-11",platform:"Japanese Theaters",article:"articles/apothecary-diaries-movie.html",category:"Anime Movie",status:"confirmed"},
 {id:"takopis-original-sin-movie",image:"https://i.ytimg.com/vi/F0pqUWNrTXI/maxresdefault.jpg",title:"Takopi's Original Sin: Thank You, See You Tomorrow",date:"2026-11-27",platform:"Japanese Theaters",article:"articles/takopis-original-sin-movie.html",category:"Anime Movie",status:"confirmed"},
 {id:"votoms-gray-witch",image:"https://i.ytimg.com/vi/urclwlt6mKM/maxresdefault.jpg",title:"Armored Trooper VOTOMS: The Gray Witch Part 1",date:"2026-11-20",platform:"Japanese Theaters",article:"articles/votoms-gray-witch-part-1.html",category:"Anime Movie",status:"confirmed"},
 {id:"witch-on-the-holy-night",image:"https://i.ytimg.com/vi/k1jyM2kSBzA/maxresdefault.jpg",title:"Witch on the Holy Night",date:"2026-11-20",platform:"Japanese Theaters",article:"articles/witch-on-the-holy-night-movie.html",category:"Anime Movie",status:"confirmed"},
