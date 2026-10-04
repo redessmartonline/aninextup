@@ -21,12 +21,14 @@ const localTodayIso=isoLocal(localToday);
 const fmtLong=d=>d.toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'});
 document.querySelectorAll('[data-today-heading]').forEach(el=>el.textContent=fmtLong(localToday)+' Anime Releases');
 document.querySelectorAll('[data-today-description]').forEach(el=>el.textContent='Confirmed anime premieres and important releases for '+fmtLong(localToday)+'.');
+if(document.querySelector('[data-today-heading]')){document.title='Anime Releasing Today: '+fmtLong(localToday)+' — AniNextUp';const m=document.querySelector('meta[name="description"]');if(m)m.content='See anime releasing today, '+fmtLong(localToday)+', plus the next confirmed premieres and where to watch them.';}
 document.querySelectorAll('[data-today-next]').forEach(el=>{const items=[...(D.anime||[])].filter(a=>a.date&&a.date>localTodayIso).sort((a,b)=>a.date.localeCompare(b.date)).slice(0,6);el.innerHTML=items.map(animeCard).join('')||'<p class="empty">No upcoming confirmed releases listed yet.</p>'});
 const weekDow=(localToday.getDay()+6)%7,weekStart=new Date(localToday),weekEnd=new Date(localToday);weekStart.setDate(localToday.getDate()-weekDow);weekEnd.setDate(weekStart.getDate()+6);
 const weekRange=weekStart.getMonth()===weekEnd.getMonth()?weekStart.toLocaleDateString('en-US',{month:'long'})+' '+weekStart.getDate()+'–'+weekEnd.getDate()+', '+weekEnd.getFullYear():weekStart.toLocaleDateString('en-US',{month:'short',day:'numeric'})+'–'+weekEnd.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
 document.querySelectorAll('[data-week-range]').forEach(el=>el.textContent=weekRange.toUpperCase());
 document.querySelectorAll('[data-week-heading]').forEach(el=>el.textContent=weekRange+' Anime Releases');
 document.querySelectorAll('[data-week-description]').forEach(el=>el.textContent='Track confirmed anime premieres, season returns and streaming releases scheduled for '+weekRange+'.');
+if(document.querySelector('[data-week-heading]')){document.title='Anime Releasing This Week: '+weekRange+' — AniNextUp';const m=document.querySelector('meta[name="description"]');if(m)m.content='Track confirmed anime releasing this week, '+weekRange+', with premiere dates, streaming platforms and detailed viewing guides.';}
 document.querySelectorAll('[data-after-week]').forEach(el=>{const endIso=isoLocal(weekEnd);const items=[...(D.anime||[])].filter(a=>a.date&&a.date>endIso).sort((a,b)=>a.date.localeCompare(b.date)).slice(0,6);el.innerHTML=items.map(animeCard).join('')||'<p class="empty">No later confirmed releases listed yet.</p>'});
 
 // Homepage discovery sections
