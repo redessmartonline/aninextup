@@ -2,6 +2,9 @@ window.ANINEXTUP_DATA={
 updated:"2026-10-04",
 site:{timezone:"America/Santo_Domingo",season:"Fall 2026"},
 anime:[
+{id:"horror-collector",image:"https://www.nhk-character.com/chara/kyoufucollector/wp-content/uploads/2026/07/0725news_img.jpg",title:"HORROR COLLECTOR",date:"2026-10-10",platform:"Crunchyroll",article:"articles/horror-collector-release-date.html",category:"Premiere",status:"confirmed"},
+{id:"a-certain-dark-item",image:"https://toaru-project.com/item/core_sys/images/main/home/kv02_thumb.jpg",title:"A Certain Dark Item",date:"2026-10-09",platform:"Crunchyroll",article:"articles/a-certain-dark-item-release-date.html",category:"Premiere",status:"confirmed"},
+{id:"dandivine",image:"https://i.ytimg.com/vi/ihJfkOT_0wU/maxresdefault.jpg",title:"Dandivine",date:"2026-10-07",platform:"Crunchyroll",article:"articles/dandivine-release-date.html",category:"Premiere",status:"confirmed"},
 {id:"worlds-strongest-witch",image:"https://i.ytimg.com/vi/0ISyxMMLVg8/maxresdefault.jpg",title:"The World\'s Strongest Witch",date:"2026-10-07",platform:"Crunchyroll",article:"articles/worlds-strongest-witch.html",category:"Premiere",status:"confirmed"},
 {id:"vermilion-mask",image:"https://i.ytimg.com/vi/Qy_BpaI0CUY/maxresdefault.jpg",title:"The Vermilion Mask",date:"2026-10-10",platform:"Crunchyroll",article:"articles/vermilion-mask-release-date.html",category:"Premiere",status:"confirmed"},
 {id:"tank-chair",image:"https://img.sunrise-inc.co.jp/images/news/24061_lxkg72iordb5_thumb.jpg",title:"TANK CHAIR",date:"2026-10-04",platform:"Prime Video (Japan first)",article:"articles/tank-chair-release-date.html",category:"Premiere",status:"confirmed"},
