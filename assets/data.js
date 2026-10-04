@@ -2,6 +2,8 @@ window.ANINEXTUP_DATA={
 updated:"2026-10-04",
 site:{timezone:"America/Santo_Domingo",season:"Fall 2026"},
 anime:[
+{id:"worlds-strongest-witch",image:"https://i.ytimg.com/vi/0ISyxMMLVg8/maxresdefault.jpg",title:"The World\'s Strongest Witch",date:"2026-10-07",platform:"Crunchyroll",article:"articles/worlds-strongest-witch.html",category:"Premiere",status:"confirmed"},
+{id:"vermilion-mask",image:"https://i.ytimg.com/vi/Qy_BpaI0CUY/maxresdefault.jpg",title:"The Vermilion Mask",date:"2026-10-10",platform:"Crunchyroll",article:"articles/vermilion-mask-release-date.html",category:"Premiere",status:"confirmed"},
 {id:"tank-chair",image:"https://img.sunrise-inc.co.jp/images/news/24061_lxkg72iordb5_thumb.jpg",title:"TANK CHAIR",date:"2026-10-04",platform:"Prime Video (Japan first)",article:"articles/tank-chair-release-date.html",category:"Premiere",status:"confirmed"},
 {id:"tokyo-revengers-war-three-titans",image:"https://tokyo-revengers-anime.com/img/home/visual_10.jpg",title:"Tokyo Revengers: War of the Three Titans",date:"2026-10-02",platform:"Disney+",article:"articles/tokyo-revengers-war-three-titans.html",category:"New Arc",status:"confirmed"},
 {id:"dragon-ball-super-beerus",image:"https://en.dragon-ball-official.com/dragonball/en/news/2026/09/DBSBE_SurgeKV_en.jpg?_=1791070440",title:"Dragon Ball Super: Beerus",date:"2026-10-11",platform:"TBA by territory",article:"articles/dragon-ball-super-beerus.html",category:"Premiere",status:"confirmed"},
