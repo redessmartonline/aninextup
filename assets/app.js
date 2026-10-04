@@ -17,9 +17,12 @@ const siteToday=new Date(new Date().toLocaleString('en-US',{timeZone:TZ}));docum
 // Platform-specific release hubs
 for(const el of document.querySelectorAll('[data-anime-platform]')){
  const p=el.dataset.animePlatform;
- const list=(D.anime||[]).filter(x=>x.platform===p).sort((x,y)=>(x.date||'9999').localeCompare(y.date||'9999'));
+ const match=x=>p==='Prime Video'?x.platform.startsWith('Prime Video'):x.platform===p;
+ const list=(D.anime||[]).filter(match).sort((x,y)=>(x.date||'9999').localeCompare(y.date||'9999'));
  el.innerHTML=list.map(animeCard).join('')||'<p class="empty">No confirmed releases yet.</p>';
 }
+
+document.querySelectorAll('[data-platform-count]').forEach(el=>{const p=el.dataset.platformCount;const n=(D.anime||[]).filter(x=>p==='Prime Video'?x.platform.startsWith('Prime Video'):x.platform===p).length;el.textContent=n?'· '+n+' TRACKED':''});
 
 // Related releases on article pages
 (()=>{const article=document.querySelector('.article');if(!article||!D.anime?.length)return;const here=location.pathname.split('/').pop();const current=D.anime.find(a=>a.article?.endsWith(here));if(!current)return;const related=D.anime.filter(a=>a.id!==current.id&&(a.platform===current.platform||a.date===current.date)).slice(0,3);if(!related.length)return;const box=document.createElement('section');box.className='related-releases';box.innerHTML='<div class="section-head"><div><span class="kicker">KEEP WATCHING</span><h2>Related releases</h2></div><a href="../calendar.html">FULL CALENDAR →</a></div><div class="grid three">'+related.map(animeCard).join('')+'</div>';article.appendChild(box)})();
