@@ -2,6 +2,7 @@ window.ANINEXTUP_DATA={
 updated:"2026-10-04",
 site:{timezone:"America/Santo_Domingo",season:"Fall 2026"},
 anime:[
+{id:"rakuen-tsuihou-resonance",image:"https://i.ytimg.com/vi/9UhNKYg6uso/maxresdefault.jpg",title:"Rakuen Tsuihou: Kokoro no Resonance",date:"2026-11-13",platform:"Japanese Theaters",article:"articles/rakuen-tsuihou-kokoro-no-resonance.html",category:"Anime Movie",status:"confirmed"},
 {id:"demons-crest",image:"https://i.ytimg.com/vi/Sj4Pu2qu43A/maxresdefault.jpg",title:"Demon's Crest",date:"2026-11-06",platform:"Prime Video",article:"articles/demons-crest-release-date.html",category:"Premiere",status:"confirmed"},
 {id:"bass-x-machina",image:"https://i.ytimg.com/vi/CWbZBIrEfqI/maxresdefault.jpg",title:"Bass X Machina",date:"2026-11-03",platform:"Netflix",article:"articles/bass-x-machina-release-date.html",category:"Premiere",status:"confirmed"},
 {id:"dreamland",image:"https://i.ytimg.com/vi/OBK6DLvQJvs/maxresdefault.jpg",title:"Dreamland",date:"2026-10-16",platform:"Crunchyroll",article:"articles/dreamland-release-date.html",category:"Premiere",status:"confirmed"},
