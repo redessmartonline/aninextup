@@ -53,3 +53,6 @@ if(document.querySelector('.article')){if(D.anime?.length)renderRelatedReleases(
 
 // News hub: upcoming confirmed releases
 document.querySelectorAll('[data-news-upcoming]').forEach(el=>{const items=[...(D.anime||[])].filter(a=>a.date&&a.date>=homeToday).sort((a,b)=>a.date.localeCompare(b.date)).slice(0,9);el.innerHTML=items.map(fullCard).join('')||'<p class="empty">No upcoming confirmed releases listed yet.</p>'});
+
+// Lightweight official trailers: YouTube loads only after a visitor clicks play.
+document.querySelectorAll('.lite-trailer[data-youtube]').forEach(box=>{const btn=box.querySelector('.trailer-play');if(!btn)return;btn.addEventListener('click',()=>{const id=box.dataset.youtube,title=box.dataset.title||'Official trailer';const iframe=document.createElement('iframe');iframe.src='https://www.youtube-nocookie.com/embed/'+encodeURIComponent(id)+'?autoplay=1';iframe.title=title;iframe.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';iframe.referrerPolicy='strict-origin-when-cross-origin';iframe.allowFullscreen=true;box.replaceChildren(iframe)},{once:true})});
