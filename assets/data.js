@@ -2,6 +2,7 @@ window.ANINEXTUP_DATA={
 updated:"2026-10-05",
 site:{timezone:"America/Santo_Domingo",season:"Fall 2026"},
 anime:[
+{id:"hello-witch-love-potion",image:"https://a.storyblok.com/f/178900/1920x1080/40f27e6b44/hello-i-am-a-witch-key-art.jpg",title:"Hello, I am a Witch and my Crush Wants me to Make a Love Potion!",date:"2026-10-05",platform:"Crunchyroll",article:"articles/hello-witch-love-potion-release-date.html",category:"Premiere",status:"confirmed"},
 {id:"apothecary-diaries-movie",image:"https://kusuriyanohitorigoto.jp/movie/assets/img/top/kv.jpg",title:"The Apothecary Diaries: Treasure of the Late Empress",date:"2026-12-11",platform:"Japanese Theaters",article:"articles/apothecary-diaries-movie.html",category:"Anime Movie",status:"confirmed"},
 {id:"takopis-original-sin-movie",image:"https://i.ytimg.com/vi/F0pqUWNrTXI/hqdefault.jpg",title:"Takopi's Original Sin: Thank You, See You Tomorrow",date:"2026-11-27",platform:"Japanese Theaters",article:"articles/takopis-original-sin-movie.html",category:"Anime Movie",status:"confirmed"},
 {id:"votoms-gray-witch",image:"https://img.sunrise-inc.co.jp/images/2026/09/202609160140471170.jpg",title:"Armored Trooper VOTOMS: The Gray Witch Part 1",date:"2026-11-20",platform:"Japanese Theaters",article:"articles/votoms-gray-witch-part-1.html",category:"Anime Movie",status:"confirmed"},
