@@ -1,5 +1,5 @@
 window.ANINEXTUP_DATA={
-updated:"2026-10-05",
+updated:"2026-10-06",
 site:{timezone:"America/Santo_Domingo",season:"Fall 2026"},
 anime:[
 {id:"hello-witch-love-potion",image:"https://horemajo-anime.com/core_sys/images/news/00000022/block/00000035/00000012.jpg?1791169761=",title:"Hello, I am a Witch and my Crush Wants me to Make a Love Potion!",date:"2026-10-05",platform:"Crunchyroll",article:"articles/hello-witch-love-potion-release-date.html",category:"Premiere",status:"confirmed"},
@@ -47,6 +47,7 @@ anime:[
 {id:"ranma-s3",image:"assets/images/ranma-season-3.jpeg",title:"Ranma 1/2 Season 3",date:null,dateLabel:"October 2026",platform:"Netflix",article:"articles/ranma-season-3.html",category:"Season Premiere",status:"month-confirmed"}
 ],
 guides:[
+{image:"https://i.ytimg.com/vi/DGPf04O404Y/maxresdefault.jpg",title:"The Otome Heroine's Fight for Survival — July 2027",tag:"NEW TODAY",article:"articles/otome-heroines-fight-for-survival-anime.html",description:"July 2027 TV anime confirmed with teaser PV, Fuka Izumi as Alia and STUDIO CLUTCH × Animation Studio Seven."},
 {image:"https://i.ytimg.com/vi/qbfo4EyFeNw/maxresdefault.jpg",title:"The Record of a Fallen Vampire Anime Announced for 2027",tag:"NEW TODAY",article:"articles/record-of-a-fallen-vampire-anime.html",description:"2027 TV anime confirmed with teaser PV, lead cast, ZERO-G and Liber, and music by Evan Call."},
 {image:"https://i.ytimg.com/vi/dRYjeN1IDcA/maxresdefault.jpg",title:"Red Riding Hood: A Detective Story — January 2027 & Crunchyroll",tag:"NEW TODAY",article:"articles/red-riding-hood-detective-story.html",description:"January 2027 premiere, new PV and key visual, additional cast and Crunchyroll streaming outside Asia."},
 {image:"https://i0.wp.com/anitrendz.net/news/wp-content/uploads/2026/10/Manchuria-Opium-SquadFirst-Anime-Adaptation-Visual-EN.jpg?ssl=1",title:"Manchuria Opium Squad Anime Announced",tag:"NEW TODAY",article:"articles/manchuria-opium-squad-anime.html",description:"Anime adaptation confirmed October 5; release date, studio, cast and streaming remain TBA."},
