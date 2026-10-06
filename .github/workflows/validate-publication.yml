@@ -1,0 +1,80 @@
+name: Validate AniNextUp publication
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'articles/**'
+      - 'assets/data.js'
+      - 'sitemap.xml'
+      - '.github/workflows/validate-publication.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate central release index
+        run: node --check assets/data.js
+
+      - name: Validate sitemap XML
+        shell: python
+        run: |
+          import xml.etree.ElementTree as ET
+          ET.parse("sitemap.xml")
+          print("sitemap.xml is valid XML")
+
+      - name: Validate article references and SEO
+        shell: python
+        run: |
+          from pathlib import Path
+          import re, sys, xml.etree.ElementTree as ET
+
+          data = Path("assets/data.js").read_text(encoding="utf-8")
+          errors = []
+
+          refs = sorted(set(re.findall(r'article:"(articles/[^"]+\.html)"', data)))
+          for ref in refs:
+              if not Path(ref).is_file():
+                  errors.append(f"data.js references missing article: {ref}")
+
+          root = ET.parse("sitemap.xml").getroot()
+          ns = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
+          sitemap_urls = {
+              (node.text or "").strip()
+              for node in root.findall("sm:url/sm:loc", ns)
+          }
+
+          for p in sorted(Path("articles").glob("*.html")):
+              html = p.read_text(encoding="utf-8")
+              url = f"https://aninextup.com/articles/{p.name}"
+              required = {
+                  "canonical": 'rel="canonical"',
+                  "meta description": 'name="description"',
+                  "Article schema": '"@type":"Article"',
+                  "BreadcrumbList": '"@type":"BreadcrumbList"',
+                  "H1": "<h1",
+              }
+              for label, needle in required.items():
+                  if needle not in html:
+                      errors.append(f"{p}: missing {label}")
+
+              if url not in sitemap_urls:
+                  errors.append(f"{p}: missing from sitemap.xml")
+
+              if "lite-trailer" in html and html.count("lite-trailer") > 1:
+                  errors.append(f"{p}: duplicate lite-trailer component")
+
+              if "<iframe" in html.lower():
+                  errors.append(f"{p}: legacy iframe found; use compact lite-trailer")
+
+          if errors:
+              print("\n".join(f"ERROR: {e}" for e in errors))
+              sys.exit(1)
+
+          print(f"Validated {len(refs)} indexed releases and all article HTML files.")
