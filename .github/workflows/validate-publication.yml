@@ -52,6 +52,17 @@ jobs:
               for node in root.findall("sm:url/sm:loc", ns)
           }
 
+          # Every canonical, indexable root HTML page must also be discoverable in the sitemap.
+          for p in sorted(Path(".").glob("*.html")):
+              if p.name == "404.html":
+                  continue
+              html = p.read_text(encoding="utf-8")
+              if 'name="robots" content="noindex' in html.lower():
+                  continue
+              canonical = re.search(r'<link[^>]+rel="canonical"[^>]+href="([^"]+)"', html, re.I)
+              if canonical and canonical.group(1) not in sitemap_urls:
+                  errors.append(f"{p}: canonical URL missing from sitemap.xml")
+
           for p in sorted(Path("articles").glob("*.html")):
               html = p.read_text(encoding="utf-8")
               url = f"https://aninextup.com/articles/{p.name}"
