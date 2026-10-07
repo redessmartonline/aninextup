@@ -47,8 +47,6 @@ jobs:
                   raise SystemExit(f"{p}: invalid aninextup-index JSON: {e}")
 
               article = p.as_posix()
-              if f'article:"{article}"' in data:
-                  continue
 
               def js(v):
                   if v is None: return "null"
@@ -70,16 +68,24 @@ jobs:
                   fields = [f'id:{js(item_id)}', f'image:{js(image)}', f'title:{js(title)}', f'date:{js(date)}']
                   if date_label: fields.append(f'dateLabel:{js(date_label)}')
                   fields += [f'platform:{js(platform)}', f'article:{js(article)}', f'category:{js(category)}', f'status:{js(status)}']
-                  line = "{" + ",".join(fields) + "},\n"
-                  data = data.replace("anime:[\n", "anime:[\n" + line, 1)
+                  line = "{" + ",".join(fields) + "},"
+                  pattern = re.compile(r'\{[^\n{}]*article:' + re.escape(js(article)) + r'[^\n{}]*\},')
+                  if pattern.search(data):
+                      data = pattern.sub(line, data, count=1)
+                  else:
+                      data = data.replace("anime:[\n", "anime:[\n" + line + "\n", 1)
               else:
                   tag = meta.get("tag", "NEW")
                   desc = meta.get("description", "")
                   line = "{" + ",".join([
                       f'image:{js(image)}', f'title:{js(title)}', f'tag:{js(tag)}',
                       f'article:{js(article)}', f'description:{js(desc)}'
-                  ]) + "},\n"
-                  data = data.replace("guides:[\n", "guides:[\n" + line, 1)
+                  ]) + "},"
+                  pattern = re.compile(r'\{[^\n{}]*article:' + re.escape(js(article)) + r'[^\n{}]*\},')
+                  if pattern.search(data):
+                      data = pattern.sub(line, data, count=1)
+                  else:
+                      data = data.replace("guides:[\n", "guides:[\n" + line + "\n", 1)
 
           data = re.sub(r'updated:"\d{4}-\d{2}-\d{2}"', f'updated:"{today}"', data, count=1)
           data_path.write_text(data, encoding="utf-8")
