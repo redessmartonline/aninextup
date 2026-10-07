@@ -4,7 +4,6 @@ on:
   push:
     branches: [main]
     paths:
-      - 'articles/**'
       - 'assets/data.js'
       - 'sitemap.xml'
       - '.github/workflows/validate-publication.yml'
