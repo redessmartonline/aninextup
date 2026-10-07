@@ -132,4 +132,22 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add assets/data.js sitemap.xml
           git commit -m "Auto-integrate AniNextUp article"
-          git push
+
+          # main can advance while this workflow is validating/generating files.
+          # Rebase onto the latest remote state before pushing; retry once on a race.
+          for attempt in 1 2; do
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort || true
+              echo "Automatic integration rebase failed on attempt $attempt."
+              if [ "$attempt" -eq 2 ]; then exit 1; fi
+              sleep 3
+              continue
+            fi
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "main advanced during push attempt $attempt; retrying with fresh remote state."
+            if [ "$attempt" -eq 2 ]; then exit 1; fi
+            sleep 3
+          done
