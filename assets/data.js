@@ -48,6 +48,7 @@ anime:[
 {id:"ranma-s3",image:"assets/images/ranma-season-3.jpeg",title:"Ranma 1/2 Season 3",date:null,dateLabel:"October 2026",platform:"Netflix",article:"articles/ranma-season-3.html",category:"Season Premiere",status:"month-confirmed"}
 ],
 guides:[
+{image:"https://yamato-r2199.jp/ogp.jpg",title:"Cosmoship Yamato √2199 Anime Film Announced",tag:"NEW TODAY",article:"articles/cosmoship-yamato-root-2199.html",description:"Hideaki Anno and Yutaka Izubuchi direct the new theatrical Yamato feature from Production I.G × Khara; release timing remains TBA."},
 {image:"https://storage.googleapis.com/dena-com-official-prod-gcp.appspot.com/upload/3U2IbhnGyD_TcnzPyuh_a.png",title:"The Fledgling Demon Lord's Starter Shop — January 2027",tag:"NEW TODAY",article:"articles/fledgling-demon-lords-starter-shop.html",description:"January 2027 TV anime confirmed with a new key visual, second teaser PV, Yōhei Azakami as Ash and project No.9."},
 {image:"https://i.ytimg.com/vi/DGPf04O404Y/maxresdefault.jpg",title:"The Otome Heroine's Fight for Survival — July 2027",tag:"NEW TODAY",article:"articles/otome-heroines-fight-for-survival-anime.html",description:"July 2027 TV anime confirmed with teaser PV, Fuka Izumi as Alia and STUDIO CLUTCH × Animation Studio Seven."},
 {image:"https://i.ytimg.com/vi/qbfo4EyFeNw/maxresdefault.jpg",title:"The Record of a Fallen Vampire Anime Announced for 2027",tag:"NEW TODAY",article:"articles/record-of-a-fallen-vampire-anime.html",description:"2027 TV anime confirmed with teaser PV, lead cast, ZERO-G and Liber, and music by Evan Call."},
