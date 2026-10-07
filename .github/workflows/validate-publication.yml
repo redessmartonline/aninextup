@@ -1,6 +1,9 @@
 name: Validate AniNextUp publication
 
 on:
+  workflow_run:
+    workflows: ["Auto-integrate AniNextUp articles"]
+    types: [completed]
   push:
     branches: [main]
     paths:
