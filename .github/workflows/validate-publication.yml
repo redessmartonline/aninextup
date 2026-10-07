@@ -83,6 +83,17 @@ jobs:
               if "lite-trailer" in html and html.count("lite-trailer") > 1:
                   errors.append(f"{p}: duplicate lite-trailer component")
 
+              trailer_ids = re.findall(r'data-youtube="([^"]+)"', html, re.I)
+              if trailer_ids:
+                  if len(trailer_ids) != 1:
+                      errors.append(f"{p}: expected exactly one lite-trailer YouTube ID")
+                  if '"@type":"VideoObject"' not in html:
+                      errors.append(f"{p}: lite-trailer requires VideoObject structured data")
+                  else:
+                      embed_ids = re.findall(r'youtube(?:-nocookie)?\\.com/embed/([A-Za-z0-9_-]+)', html, re.I)
+                      if trailer_ids[0] not in embed_ids:
+                          errors.append(f"{p}: VideoObject YouTube ID does not match lite-trailer")
+
               if "<iframe" in html.lower():
                   errors.append(f"{p}: legacy iframe found; use compact lite-trailer")
 
