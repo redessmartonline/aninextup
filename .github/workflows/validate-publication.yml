@@ -35,7 +35,7 @@ jobs:
         shell: python
         run: |
           from pathlib import Path
-          import re, sys, xml.etree.ElementTree as ET
+          import html as htmlmod, json, re, sys, xml.etree.ElementTree as ET
 
           data = Path("assets/data.js").read_text(encoding="utf-8")
           errors = []
@@ -74,6 +74,34 @@ jobs:
 
               if "<iframe" in html.lower():
                   errors.append(f"{p}: legacy iframe found; use compact lite-trailer")
+
+              meta_match = re.search(r'<script\s+type=["\']application/json["\']\s+id=["\']aninextup-index["\']>(.*?)</script>', html, re.I|re.S)
+              if meta_match:
+                  try:
+                      meta = json.loads(htmlmod.unescape(meta_match.group(1)).strip())
+                      article = p.as_posix()
+                      entry_match = re.search(r'\{[^\n{}]*article:"' + re.escape(article) + r'"[^\n{}]*\},', data)
+                      if not entry_match:
+                          errors.append(f"{p}: aninextup-index metadata is missing from assets/data.js")
+                      else:
+                          entry = entry_match.group(0)
+                          checks = {"image": meta.get("image"), "title": meta.get("title")}
+                          if meta.get("kind", "guide") == "guide":
+                              checks.update({"tag": meta.get("tag", "NEW"), "description": meta.get("description", "")})
+                          else:
+                              checks.update({
+                                  "id": meta.get("id") or p.stem,
+                                  "date": meta.get("date"),
+                                  "platform": meta.get("platform", "TBA"),
+                                  "category": meta.get("category", "Premiere"),
+                                  "status": meta.get("status", "tba"),
+                              })
+                          for field, value in checks.items():
+                              expected = "null" if value is None else json.dumps(str(value), ensure_ascii=False)
+                              if f"{field}:{expected}" not in entry:
+                                  errors.append(f"{p}: assets/data.js {field} is out of sync with aninextup-index")
+                  except Exception as e:
+                      errors.append(f"{p}: invalid aninextup-index metadata: {e}")
 
           if errors:
               print("\n".join(f"ERROR: {e}" for e in errors))
