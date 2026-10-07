@@ -2,6 +2,7 @@ window.ANINEXTUP_DATA={
 updated:"2026-10-07",
 site:{timezone:"America/Santo_Domingo",season:"Fall 2026"},
 anime:[
+{id:"walking-home-with-you",image:"https://prcdn.freetls.fastly.net/release_image/127482/212/127482-212-29a04666e172dcea5d127ae9582a014d-1460x2064.jpg",title:"Walking Home with You",date:null,dateLabel:"April 2027",platform:"Nippon TV",article:"articles/walking-home-with-you-anime.html",category:"TV Anime",status:"confirmed"},
 {id:"pokemon-horizons-season-4-wonders-ahead",image:"https://i.ytimg.com/vi/QwXy-HbEKmI/maxresdefault.jpg",title:"Pokémon Horizons: Season 4—Wonders Ahead",date:"2027-02-27",platform:"Netflix (U.S.)",article:"articles/pokemon-horizons-season-4-wonders-ahead.html",category:"Season Premiere",status:"confirmed"},
 {id:"hello-witch-love-potion",image:"https://horemajo-anime.com/core_sys/images/news/00000022/block/00000035/00000012.jpg?1791169761=",title:"Hello, I am a Witch and my Crush Wants me to Make a Love Potion!",date:"2026-10-05",platform:"Crunchyroll",article:"articles/hello-witch-love-potion-release-date.html",category:"Premiere",status:"confirmed"},
 {id:"apothecary-diaries-movie",image:"https://kusuriyanohitorigoto.jp/movie/assets/img/top/kv.jpg",title:"The Apothecary Diaries: Treasure of the Late Empress",date:"2026-12-11",platform:"Japanese Theaters",article:"articles/apothecary-diaries-movie.html",category:"Anime Movie",status:"confirmed"},
