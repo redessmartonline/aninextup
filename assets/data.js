@@ -1,7 +1,8 @@
 window.ANINEXTUP_DATA={
-updated:"2026-10-06",
+updated:"2026-10-07",
 site:{timezone:"America/Santo_Domingo",season:"Fall 2026"},
 anime:[
+{id:"pokemon-horizons-season-4-wonders-ahead",image:"https://i.ytimg.com/vi/QwXy-HbEKmI/maxresdefault.jpg",title:"Pokémon Horizons: Season 4—Wonders Ahead",date:"2027-02-27",platform:"Netflix (U.S.)",article:"articles/pokemon-horizons-season-4-wonders-ahead.html",category:"Season Premiere",status:"confirmed"},
 {id:"hello-witch-love-potion",image:"https://horemajo-anime.com/core_sys/images/news/00000022/block/00000035/00000012.jpg?1791169761=",title:"Hello, I am a Witch and my Crush Wants me to Make a Love Potion!",date:"2026-10-05",platform:"Crunchyroll",article:"articles/hello-witch-love-potion-release-date.html",category:"Premiere",status:"confirmed"},
 {id:"apothecary-diaries-movie",image:"https://kusuriyanohitorigoto.jp/movie/assets/img/top/kv.jpg",title:"The Apothecary Diaries: Treasure of the Late Empress",date:"2026-12-11",platform:"Japanese Theaters",article:"articles/apothecary-diaries-movie.html",category:"Anime Movie",status:"confirmed"},
 {id:"takopis-original-sin-movie",image:"https://i.ytimg.com/vi/F0pqUWNrTXI/hqdefault.jpg",title:"Takopi's Original Sin: Thank You, See You Tomorrow",date:"2026-11-27",platform:"Japanese Theaters",article:"articles/takopis-original-sin-movie.html",category:"Anime Movie",status:"confirmed"},
