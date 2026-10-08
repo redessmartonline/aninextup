@@ -25,7 +25,7 @@ jobs:
           ANINEXTUP_OFFICIAL_FEEDS: ${{ vars.ANINEXTUP_OFFICIAL_FEEDS }}
         run: |
           if [ -z "$ANINEXTUP_OFFICIAL_FEEDS" ]; then
-            export ANINEXTUP_OFFICIAL_FEEDS=https://www.crunchyroll.com/newsrss
+            export ANINEXTUP_OFFICIAL_FEEDS=https://cr-news-api-service.prd.crunchyrollsvc.com/v1/en-US/rss
           fi
           python scripts/auto_publish_news.py
       - name: Validate and synchronize new article
