@@ -13,8 +13,8 @@ import urllib.request
 import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
-ALLOWED = ("crunchyroll.com", "tohoanimation.com", "anime.eiga.com")
-FEEDS = [x.strip() for x in os.getenv("ANINEXTUP_OFFICIAL_FEEDS", "https://www.crunchyroll.com/newsrss").split(",") if x.strip()]
+ALLOWED = ("crunchyroll.com", "crunchyrollsvc.com", "tohoanimation.com", "anime.eiga.com")
+FEEDS = [x.strip() for x in os.getenv("ANINEXTUP_OFFICIAL_FEEDS", "https://cr-news-api-service.prd.crunchyrollsvc.com/v1/en-US/rss").split(",") if x.strip()]
 MAX_AGE_HOURS = 72
 
 def fetch(url):
