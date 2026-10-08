@@ -90,7 +90,7 @@ jobs:
                   if '"@type":"VideoObject"' not in html:
                       errors.append(f"{p}: lite-trailer requires VideoObject structured data")
                   else:
-                      embed_ids = re.findall(r'youtube(?:-nocookie)?\\.com/embed/([A-Za-z0-9_-]+)', html, re.I)
+                      embed_ids = re.findall(r'youtube(?:-nocookie)?\.com/embed/([A-Za-z0-9_-]+)', html, re.I)
                       if trailer_ids[0] not in embed_ids:
                           errors.append(f"{p}: VideoObject YouTube ID does not match lite-trailer")
 
