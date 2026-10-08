@@ -1,0 +1,95 @@
+name: AniNextUp autonomous official-news publisher
+
+on:
+  schedule:
+    - cron: '7 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: aninextup-autonomous-publisher
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Find verified official announcements
+        env:
+          ANINEXTUP_OFFICIAL_FEEDS: ${{ vars.ANINEXTUP_OFFICIAL_FEEDS }}
+        run: |
+          if [ -z "$ANINEXTUP_OFFICIAL_FEEDS" ]; then
+            export ANINEXTUP_OFFICIAL_FEEDS=https://www.crunchyroll.com/newsrss
+          fi
+          python scripts/auto_publish_news.py
+      - name: Validate and synchronize new article
+        shell: python
+        run: |
+          from pathlib import Path
+          import datetime, html, json, re, xml.etree.ElementTree as ET
+          import subprocess
+          changed = subprocess.check_output(['git','ls-files','--others','--exclude-standard','articles/'], text=True).splitlines()
+          if not changed:
+              print('Sin cambios en la página en esta ejecución')
+              raise SystemExit(0)
+          if len(changed) != 1:
+              raise SystemExit('Expected exactly one new article')
+          p = Path(changed[0])
+          body = p.read_text(encoding='utf-8')
+          assert '<h1' in body and 'rel="canonical"' in body and '"@type":"Article"' in body and '"@type":"BreadcrumbList"' in body
+          meta_match = re.search(r'<script type="application/json" id="aninextup-index">(.*?)</script>', body)
+          if not meta_match:
+              raise SystemExit('Missing index metadata')
+          meta = json.loads(html.unescape(meta_match.group(1)))
+          data_path = Path('assets/data.js')
+          data = data_path.read_text(encoding='utf-8')
+          if 'article:"' + str(p) + '"' in data:
+              raise SystemExit('Duplicate index entry')
+          def js(x): return json.dumps(str(x), ensure_ascii=False)
+          entry = '{' + ','.join([
+              'image:' + js(meta['image']),
+              'title:' + js(meta['title']),
+              'tag:' + js(meta['tag']),
+              'article:' + js(str(p)),
+              'description:' + js(meta['description'])
+          ]) + '},'
+          if 'guides:[\n' not in data:
+              raise SystemExit('Missing guides array anchor')
+          data = data.replace('guides:[\n','guides:[\n' + entry + '\n',1)
+          data_path.write_text(data, encoding='utf-8')
+          sitemap = Path('sitemap.xml')
+          root = ET.parse(sitemap).getroot()
+          ns = 'http://www.sitemaps.org/schemas/sitemap/0.9'
+          ET.register_namespace('', ns)
+          url = 'https://aninextup.com/' + str(p)
+          if url not in {(e.text or '').strip() for e in root.findall(f'{{{ns}}}url/{{{ns}}}loc')}:
+              el = ET.SubElement(root, f'{{{ns}}}url')
+              ET.SubElement(el, f'{{{ns}}}loc').text = url
+              ET.SubElement(el, f'{{{ns}}}lastmod').text = datetime.date.today().isoformat()
+          ET.indent(root, space='  ')
+          sitemap.write_text('<?xml version="1.0" encoding="UTF-8"?>\n' + ET.tostring(root, encoding='unicode') + '\n', encoding='utf-8')
+          print('Synchronized', p, url)
+      - name: Validate files
+        run: |
+          node --check assets/data.js
+          python -c "import xml.etree.ElementTree as E; E.parse('sitemap.xml')"
+          git diff --check
+      - name: Commit publication atomically
+        run: |
+          if [ -z "$(git status --porcelain -- articles/ assets/data.js sitemap.xml)" ]; then
+            echo "No verified article to publish."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add articles/ assets/data.js sitemap.xml
+          git commit -m "Publish official-source AniNextUp news"
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
