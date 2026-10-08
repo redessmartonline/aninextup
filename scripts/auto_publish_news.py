@@ -28,7 +28,7 @@ def host_allowed(url):
     return u.scheme == "https" and any(host == h or host.endswith("." + h) for h in ALLOWED)
 
 def clean(s):
-    return re.sub(r"\\s+", " ", html.unescape(re.sub(r"<[^>]*>", "", s or ""))).strip()
+    return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]*>", "", s or ""))).strip()
 
 def items_from_feed(blob):
     root = ET.fromstring(blob)
