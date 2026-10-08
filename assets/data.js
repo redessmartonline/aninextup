@@ -1,5 +1,5 @@
 window.ANINEXTUP_DATA={
-updated:"2026-10-07",
+updated:"2026-10-08",
 site:{timezone:"America/Santo_Domingo",season:"Fall 2026"},
 anime:[
 {id:"hirayasumi",image:"https://i.ytimg.com/vi/NreJuPDZWqU/maxresdefault.jpg",title:"Hirayasumi",date:null,dateLabel:"January 2027",platform:"NHK General (Japan)",article:"articles/hirayasumi-anime-release-date.html",category:"TV Anime",status:"confirmed"},
