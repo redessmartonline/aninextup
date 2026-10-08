@@ -63,26 +63,37 @@ def main():
     existing = {p.read_text(encoding="utf-8") for p in (ROOT / "articles").glob("*.html")}
     data = (ROOT / "assets/data.js").read_text(encoding="utf-8")
     candidates = []
+    stats = {"feeds":0,"entries":0,"invalid_date_or_url":0,"outside_window":0,"short_content":0,"duplicate":0}
     for feed in FEEDS:
         if not host_allowed(feed):
             print("Skipping nonofficial feed:", feed)
             continue
         try:
             entries = items_from_feed(fetch(feed))
+            stats["feeds"] += 1
+            stats["entries"] += len(entries)
+            print(f"Feed reachable: {feed}; entries={len(entries)}")
         except Exception as e:
             print("Feed unavailable; no publication:", type(e).__name__, str(e)[:200])
             continue
         for title, link, raw_date, desc in entries:
             when = date_of(raw_date)
-            if not title or not host_allowed(link) or not when or not (dt.timedelta(0) <= now - when <= dt.timedelta(hours=MAX_AGE_HOURS)):
+            if not title or not host_allowed(link) or not when:
+                stats["invalid_date_or_url"] += 1
+                continue
+            if not (dt.timedelta(0) <= now - when <= dt.timedelta(hours=MAX_AGE_HOURS)):
+                stats["outside_window"] += 1
                 continue
             # Without independent corroboration, only publish a transparent announcement
             # recap; never assert release dates, availability or plot facts from snippets.
             if len(title) < 22 or len(desc) < 90:
+                stats["short_content"] += 1
                 continue
             if any(link in page for page in existing):
+                stats["duplicate"] += 1
                 continue
             candidates.append((when, title, link, desc))
+    print("Editorial eligibility diagnostics:", json.dumps(stats, sort_keys=True), "candidates=", len(candidates))
     if not candidates:
         print("Sin cambios en la página en esta ejecución: no eligible official announcements.")
         return
