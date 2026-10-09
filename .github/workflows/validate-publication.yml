@@ -40,9 +40,9 @@ jobs:
           data = Path("assets/data.js").read_text(encoding="utf-8")
           errors = []
 
-          refs = sorted(set(re.findall(r'article:"(articles/[^"]+\.html)"', data)))
+          refs = sorted(set(re.findall(r'article:"(articles/[^"]+)"', data)))
           for ref in refs:
-              if not Path(ref).is_file():
+              if not Path(ref + ".html").is_file():
                   errors.append(f"data.js references missing article: {ref}")
 
           root = ET.parse("sitemap.xml").getroot()
@@ -65,7 +65,7 @@ jobs:
 
           for p in sorted(Path("articles").glob("*.html")):
               html = p.read_text(encoding="utf-8")
-              url = f"https://aninextup.com/articles/{p.name}"
+              url = f"https://aninextup.com/articles/{p.stem}"
               required = {
                   "canonical": 'rel="canonical"',
                   "meta description": 'name="description"',
@@ -101,7 +101,7 @@ jobs:
               if meta_match:
                   try:
                       meta = json.loads(htmlmod.unescape(meta_match.group(1)).strip())
-                      article = p.as_posix()
+                      article = p.with_suffix("").as_posix()
                       entry_match = re.search(r'\{[^\n{}]*article:"' + re.escape(article) + r'"[^\n{}]*\},', data)
                       if not entry_match:
                           errors.append(f"{p}: aninextup-index metadata is missing from assets/data.js")
