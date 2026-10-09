@@ -281,17 +281,17 @@ def main():
             if len(title) < 22:
                 stats["short_content"] += 1
                 continue
-            if len(desc) < 180 and article_fetches < MAX_ARTICLE_FETCHES:
+            if len(desc) < 700 and article_fetches < MAX_ARTICLE_FETCHES:
                 article_fetches += 1
                 try:
                     expanded = official_article_text(link)
-                    if len(expanded) >= 180:
+                    if len(expanded) >= 700:
                         desc = expanded
                         stats["expanded_from_official_article"] = stats.get("expanded_from_official_article", 0) + 1
                 except Exception as exc:
                     stats["article_fetch_failed"] = stats.get("article_fetch_failed", 0) + 1
                     print("Official article unavailable:", type(exc).__name__, str(exc)[:100])
-            if len(desc) < 180:
+            if len(desc) < 700 or not re.search(r"[.!?][\"\']?\s*$", desc):
                 stats["short_content"] += 1
                 continue
             score_parts = opportunity_score(when, title, desc, now)
@@ -322,7 +322,7 @@ def main():
             if marker not in original or source not in original or 'id="aninextup-index"' not in original:
                 print("Sin cambios: existing editorial article requires manual verification", matched_path.name)
                 continue
-            updated_desc = desc[:500].rsplit(" ", 1)[0] if len(desc) > 500 else desc
+            updated_desc = desc
             begin = original.index(marker) + len(marker)
             finish = original.find('</p>', begin)
             if finish < 0:
@@ -348,7 +348,18 @@ def main():
         ):
             print("Sin cambios: same headline already published", title)
             continue
-        # This candidate is new and meets the editorial threshold.
+        # Fail closed: require a verified, locally available cover and enough complete source text.
+        cover_map = {
+            "firefly wedding": "assets/images/covers/firefly-wedding.jpg",
+            "sasaki and peeps": "assets/images/covers/sasaki-and-peeps-season-2.jpg",
+        }
+        verified_cover = next((v for k, v in cover_map.items() if k in title.casefold()), "")
+        if not verified_cover or not (ROOT / verified_cover).is_file():
+            print("Sin publicar: falta portada verificada para", title)
+            continue
+        if len(desc) < 700 or not re.search(r"[.!?][\"\']?\s*$", desc):
+            print("Sin publicar: información insuficiente o incompleta para", title)
+            continue
         break
     else:
         print("Sin cambios: all eligible official announcements already covered.")
@@ -360,7 +371,7 @@ def main():
         print("Sin cambios: existing entry")
         return
     title_e = html.escape(title, quote=True)
-    desc = desc[:500].rsplit(" ", 1)[0] if len(desc) > 500 else desc
+    # Preserve full verified source text; never cut a sentence at a fixed character limit.
     desc_e = html.escape(desc, quote=True)
     link_e = html.escape(link, quote=True)
     canonical = "https://aninextup.com/articles/" + dest.name
@@ -371,8 +382,23 @@ def main():
     summary = f"Official announcement published by Crunchyroll on {when.date().isoformat()}. Read the original announcement for full details."
     structured = {"@context":"https://schema.org","@type":"Article","headline":headline,"description":summary,"datePublished":today,"dateModified":today,"mainEntityOfPage":canonical,"author":{"@type":"Organization","name":"AniNextUp Editorial Team"},"publisher":{"@type":"Organization","name":"AniNextUp"}}
     breadcrumb = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aninextup.com/"},{"@type":"ListItem","position":2,"name":title,"item":canonical}]}
-    index = {"kind":"guide","image":"assets/favicon.svg","title":title,"tag":"OFFICIAL NEWS","description":summary}
+    cover_map = {
+        "firefly wedding": "assets/images/covers/firefly-wedding.jpg",
+        "sasaki and peeps": "assets/images/covers/sasaki-and-peeps-season-2.jpg",
+        "pokémon horizons": "https://i.ytimg.com/vi/QwXy-HbEKmI/maxresdefault.jpg",
+        "pokemon horizons": "https://i.ytimg.com/vi/QwXy-HbEKmI/maxresdefault.jpg",
+    }
+    cover = verified_cover
+    if cover and not cover.startswith("https://") and not (ROOT / cover).is_file():
+        cover = ""
+    cover_url = ("https://aninextup.com/" + cover if cover and not cover.startswith("https://") else cover)
+    index = {"kind":"guide","image":cover or "assets/favicon.svg","title":title,"tag":"OFFICIAL NEWS","description":summary}
     page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{title_e} — AniNextUp</title><meta name="description" content="{html.escape(summary,quote=True)}"><meta name="robots" content="index,follow"><link rel="canonical" href="{canonical}"><meta property="og:type" content="article"><meta property="og:title" content="{title_e}"><meta property="og:description" content="{html.escape(summary,quote=True)}"><meta property="og:url" content="{canonical}"><link rel="stylesheet" href="../assets/style.css"><script type="application/ld+json">{json.dumps(structured,separators=(',',':'))}</script><script type="application/ld+json">{json.dumps(breadcrumb,separators=(',',':'))}</script><script type="application/json" id="aninextup-index">{json.dumps(index,separators=(',',':'))}</script></head><body><header class="site-header"><a class="brand" href="../index.html">ANI<span>NEXTUP</span></a><button class="menu">☰</button><nav><a href="../today.html">TODAY</a><a href="../this-week.html">THIS WEEK</a><a href="../calendar.html">CALENDAR</a><a href="../where-to-watch.html">WHERE TO WATCH</a><a href="../news.html">NEWS</a></nav></header><main><article class="article"><div class="article-head"><span class="kicker">OFFICIAL NEWS · {today}</span><h1>{title_e}</h1><p class="lead">{html.escape(summary)}</p><p class="byline">By <a href="../about.html">AniNextUp Editorial Team</a></p></div><div class="prose"><h2>Official announcement</h2><p>{desc_e}</p><p>Source: <a href="{link_e}" rel="noopener noreferrer">Read the original announcement on Crunchyroll</a>. Details may change; consult the original announcement for updates.</p><p>Explore the <a href="../calendar.html">anime release calendar</a> and <a href="../news.html">latest news</a>.</p></div></article></main><footer><b>ANINEXTUP</b><small>Anime releases, streaming guides, calendars and news.</small></footer><script src="../assets/app.js"></script></body></html>'''
+    if cover_url:
+        image_meta = '<meta property="og:image" content="' + html.escape(cover_url, quote=True) + '">'
+        page = page.replace('<link rel="stylesheet" href="../assets/style.css">', image_meta + '<link rel="stylesheet" href="../assets/style.css">')
+        figure = '<figure><img src="' + html.escape(cover_url, quote=True) + '" alt="' + title_e + ' — related series artwork" loading="eager"><figcaption>Related series artwork, not necessarily artwork for this announcement.</figcaption></figure>'
+        page = page.replace('<div class="prose"><h2>Official announcement</h2>', '<div class="prose">' + figure + '<h2>Official announcement</h2>')
     dest.write_text(page, encoding="utf-8")
     print("Created", dest.relative_to(ROOT), "from", link)
 
