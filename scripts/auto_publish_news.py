@@ -14,10 +14,14 @@ import urllib.request
 import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
-ALLOWED = ("crunchyroll.com", "crunchyrollsvc.com", "tohoanimation.com", "anime.eiga.com")
+ALLOWED = ("crunchyroll.com", "crunchyrollsvc.com", "tohoanimation.com", "anime.eiga.com", "sonypictures.com")
 FEEDS = [x.strip() for x in os.getenv("ANINEXTUP_OFFICIAL_FEEDS", "https://cr-news-api-service.prd.crunchyrollsvc.com/v1/en-US/rss").split(",") if x.strip()]
 MAX_AGE_HOURS = 72
 MAX_ARTICLE_FETCHES = 8
+# Additional official RSS/Atom feeds may be supplied through
+# ANINEXTUP_OFFICIAL_FEEDS, comma-separated. Unknown/unapproved hosts are rejected.
+# Sony Pictures is allowed for verified official releases; no unverified RSS URL
+# is inserted into the defaults.
 
 class OfficialArticleParser(HTMLParser):
     """Read editorial paragraphs and Article/NewsArticle JSON-LD conservatively."""
@@ -136,6 +140,9 @@ def official_article_text(url):
         "has_cloudflare_challenge": "cf-challenge" in decoded.lower()
             or "challenge-platform" in decoded.lower(),
     }, ensure_ascii=False, sort_keys=True))
+    if "cf-challenge" in decoded.lower() or "challenge-platform" in decoded.lower():
+        print("Article blocked: Cloudflare challenge detected; skipping protected page")
+        return ""
     parser = OfficialArticleParser()
     parser.feed(decoded)
     structured = []
@@ -178,7 +185,14 @@ def items_from_feed(blob):
             if guid is not None and guid.attrib.get("isPermaLink", "true").lower() != "false":
                 link = (guid.text or "").strip()
         date = (node.findtext("pubDate") or node.findtext("{http://purl.org/dc/elements/1.1/}date") or node.findtext("date") or "").strip()
-        desc = clean(node.findtext("description"))
+        # Prefer full editorial text explicitly included by the feed publisher.
+        # Do not synthesize or expand short snippets into unverified articles.
+        desc_options = [
+            node.findtext("{http://purl.org/rss/1.0/modules/content/}encoded"),
+            node.findtext("description"),
+            node.findtext("{http://search.yahoo.com/mrss/}description"),
+        ]
+        desc = max((clean(x) for x in desc_options if x), key=len, default="")
         items.append((title, link, date, desc))
     if not items:
         ns = {"a": "http://www.w3.org/2005/Atom"}
@@ -189,7 +203,11 @@ def items_from_feed(blob):
                 linknode = node.find("a:link", ns)
             link = linknode.get("href", "") if linknode is not None else ""
             date = node.findtext("a:published", namespaces=ns) or node.findtext("a:updated", namespaces=ns) or ""
-            desc = clean(node.findtext("a:summary", namespaces=ns))
+            desc_options = [
+                node.findtext("a:content", namespaces=ns),
+                node.findtext("a:summary", namespaces=ns),
+            ]
+            desc = max((clean(x) for x in desc_options if x), key=len, default="")
             items.append((title, link, date, desc))
     return items
 
