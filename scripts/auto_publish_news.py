@@ -189,7 +189,7 @@ def main():
             if len(title) < 22:
                 stats["short_content"] += 1
                 continue
-            if len(desc) < 90 and article_fetches < MAX_ARTICLE_FETCHES:
+            if len(desc) < 180 and article_fetches < MAX_ARTICLE_FETCHES:
                 article_fetches += 1
                 try:
                     expanded = official_article_text(link)
