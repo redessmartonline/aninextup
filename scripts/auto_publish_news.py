@@ -64,6 +64,16 @@ def date_of(raw):
     except (ValueError, TypeError, IndexError):
         return None
 
+def opportunity_score(when, title, desc, now):
+    """Conservative editorial heuristic; never claim measured demand or CTR."""
+    age = (now - when).total_seconds() / 3600
+    freshness = 20 if age <= 24 else 15 if age <= 48 else 10
+    intent = 20 if re.search(r"\\b(release|premiere|trailer|date|season|streaming|announced)\\b", title, re.I) else 10
+    ranking = 15 if len(title) >= 35 and len(title) <= 95 else 8
+    value = 15 if len(desc) >= 180 else 10
+    demand = 0  # No Search Console query data is available inside this workflow.
+    return {"demand": demand, "freshness": freshness, "intent": intent, "ranking": ranking, "value": value}
+
 def main():
     now = dt.datetime.now(dt.timezone.utc)
     existing = {p.read_text(encoding="utf-8") for p in (ROOT / "articles").glob("*.html")}
@@ -105,15 +115,22 @@ def main():
             if len(title) < 22 or len(desc) < 90:
                 stats["short_content"] += 1
                 continue
+            score_parts = opportunity_score(when, title, desc, now)
+            score = sum(score_parts.values())
+            if score < 60:
+                stats.setdefault("below_threshold", 0)
+                stats["below_threshold"] += 1
+                continue
             if any(link in page for page in existing):
                 stats["duplicate"] += 1
                 continue
-            candidates.append((when, title, link, desc))
+            candidates.append((score, when, title, link, desc, score_parts))
     print("Editorial eligibility diagnostics:", json.dumps(stats, sort_keys=True), "candidates=", len(candidates))
     if not candidates:
         print("Sin cambios en la página en esta ejecución: no eligible official announcements.")
         return
-    when, title, link, desc = max(candidates, key=lambda c: c[0])
+    score, when, title, link, desc, parts = max(candidates, key=lambda c: (c[0], c[1]))
+    print("Selected opportunity:", json.dumps({"score":score,"tier":"HIGH" if score >= 75 else "MEDIUM","components":parts,"source":link},sort_keys=True))
     slug = re.sub(r"[^a-z0-9]+", "-", title.lower()).strip("-")[:65].strip("-")
     slug += "-" + hashlib.sha256(link.encode()).hexdigest()[:8]
     dest = ROOT / "articles" / (slug + ".html")
