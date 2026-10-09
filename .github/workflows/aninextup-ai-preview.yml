@@ -1,0 +1,33 @@
+name: AniNextUp OpenAI editorial preview
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  editorial-preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate AI module
+        run: python -m py_compile scripts/ai_editor.py
+      - name: Prepare verified official source candidate
+        env:
+          ANINEXTUP_DRY_RUN: '1'
+          ANINEXTUP_OFFICIAL_FEEDS: https://cr-news-api-service.prd.crunchyrollsvc.com/v1/en-US/rss
+        run: python scripts/auto_publish_news.py
+      - name: Verify API key configured without revealing it
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        shell: bash
+        run: |
+          if [ -z "$OPENAI_API_KEY" ]; then
+            echo "::notice::OPENAI_API_KEY is not configured. AI preview cannot call the API yet."
+          else
+            echo "OpenAI credential is configured; no live calls are made in this workflow."
+          fi
+      - name: Assert no publication or file changes
+        shell: bash
+        run: |
+          test -z "$(git status --porcelain -- articles/ assets/images/news/ assets/data.js sitemap.xml)"
+          echo 'PASS: preview made no changes'
