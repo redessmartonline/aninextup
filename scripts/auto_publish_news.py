@@ -36,14 +36,20 @@ def items_from_feed(blob):
     for node in root.findall(".//item"):
         title = clean(node.findtext("title"))
         link = (node.findtext("link") or "").strip()
-        date = (node.findtext("pubDate") or "").strip()
+        if not link:
+            guid = node.find("guid")
+            if guid is not None and guid.attrib.get("isPermaLink", "true").lower() != "false":
+                link = (guid.text or "").strip()
+        date = (node.findtext("pubDate") or node.findtext("{http://purl.org/dc/elements/1.1/}date") or node.findtext("date") or "").strip()
         desc = clean(node.findtext("description"))
         items.append((title, link, date, desc))
     if not items:
         ns = {"a": "http://www.w3.org/2005/Atom"}
         for node in root.findall(".//a:entry", ns):
             title = clean(node.findtext("a:title", namespaces=ns))
-            linknode = node.find("a:link[@rel='alternate']", ns) or node.find("a:link", ns)
+            linknode = node.find("a:link[@rel='alternate']", ns)
+            if linknode is None:
+                linknode = node.find("a:link", ns)
             link = linknode.get("href", "") if linknode is not None else ""
             date = node.findtext("a:published", namespaces=ns) or node.findtext("a:updated", namespaces=ns) or ""
             desc = clean(node.findtext("a:summary", namespaces=ns))
@@ -63,7 +69,7 @@ def main():
     existing = {p.read_text(encoding="utf-8") for p in (ROOT / "articles").glob("*.html")}
     data = (ROOT / "assets/data.js").read_text(encoding="utf-8")
     candidates = []
-    stats = {"feeds":0,"entries":0,"invalid_date_or_url":0,"outside_window":0,"short_content":0,"duplicate":0}
+    stats = {"feeds":0,"entries":0,"missing_title":0,"invalid_url":0,"invalid_date":0,"outside_window":0,"short_content":0,"duplicate":0}
     for feed in FEEDS:
         if not host_allowed(feed):
             print("Skipping nonofficial feed:", feed)
@@ -78,8 +84,18 @@ def main():
             continue
         for title, link, raw_date, desc in entries:
             when = date_of(raw_date)
-            if not title or not host_allowed(link) or not when:
-                stats["invalid_date_or_url"] += 1
+            if not title:
+                stats["missing_title"] += 1
+                continue
+            if not host_allowed(link):
+                stats["invalid_url"] += 1
+                if stats["invalid_url"] <= 3:
+                    print("Rejected link host:", urllib.parse.urlsplit(link).hostname or "(missing)")
+                continue
+            if not when:
+                stats["invalid_date"] += 1
+                if stats["invalid_date"] <= 3:
+                    print("Rejected publication date:", repr(raw_date[:80]))
                 continue
             if not (dt.timedelta(0) <= now - when <= dt.timedelta(hours=MAX_AGE_HOURS)):
                 stats["outside_window"] += 1
