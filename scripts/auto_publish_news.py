@@ -64,7 +64,7 @@ def official_article_text(url):
         "Accept": "text/html"
     })
     with urllib.request.urlopen(req, timeout=12) as response:
-                print(
+        print(
             "Article HTTP:",
             response.status,
             "source_host:",
@@ -87,7 +87,7 @@ def official_article_text(url):
     parser.feed(body.decode(charset, errors="replace"))
     # Retain a short, attributable factual excerpt, not the complete source article.
     unique = list(dict.fromkeys(parser.parts))
-        result = " ".join(unique)[:1200]
+    result = " ".join(unique)[:1200]
     print(
         "Article extraction:",
         "paragraphs=", len(unique),
