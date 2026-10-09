@@ -11,18 +11,8 @@ jobs:
       - uses: actions/checkout@v4
       - name: Python syntax
         run: python -m py_compile scripts/auto_publish_news.py
-      - name: Validate publisher safety invariants
-        shell: python
-        run: |
-          from pathlib import Path
-          s=Path('scripts/auto_publish_news.py').read_text()
-          assert 'ANINEXTUP_DRY_RUN' in s
-          assert 'len(desc) < 700' in s
-          assert 'verified_cover' in s
-          assert 'if not verified_cover' in s
-          assert 'candidates.sort' in s
-          assert '"image":cover or "assets/favicon.svg"' not in s
-          print('PASS: safety gates present')
+      - name: Offline safety regression tests
+        run: python -m unittest discover -s tests -p test_publisher_safety.py -v
       - name: Check existing covers
         shell: python
         run: |
@@ -30,7 +20,6 @@ jobs:
           for path in ['assets/images/covers/firefly-wedding.jpg','assets/images/covers/sasaki-and-peeps-season-2.jpg']:
               p=Path(path)
               assert p.is_file() and p.stat().st_size > 1000, f'Missing/empty cover: {path}'
-              print('Verified local cover:',path)
       - name: Test official feeds without writing
         env:
           ANINEXTUP_DRY_RUN: '1'
@@ -39,5 +28,5 @@ jobs:
       - name: Confirm no tracked or untracked content changes
         shell: bash
         run: |
-          test -z "$(git status --porcelain -- articles/ assets/data.js sitemap.xml)"
-          echo 'PASS: no article, catalog or sitemap modified'
+          test -z "$(git status --porcelain -- articles/ assets/data.js sitemap.xml assets/images/news/)"
+          echo 'PASS: no article, catalog, sitemap or cover modified'
