@@ -20,6 +20,21 @@ jobs:
           for path in ['assets/images/covers/firefly-wedding.jpg','assets/images/covers/sasaki-and-peeps-season-2.jpg']:
               p=Path(path)
               assert p.is_file() and p.stat().st_size > 1000, f'Missing/empty cover: {path}'
+      - name: Verify production remains gated and covers are committed
+        shell: python
+        run: |
+          from pathlib import Path
+          workflow = Path('.github/workflows/auto-publish-news.yml').read_text()
+          required = [
+              "ANINEXTUP_ENABLE_PUBLICATION == 'true'",
+              "git add articles/ assets/images/news/ assets/data.js sitemap.xml",
+              "Article cover missing from repository",
+              "Invalid or empty article cover",
+              "Article missing matching social cover metadata",
+          ]
+          for check in required:
+              assert check in workflow, f'Missing production safeguard: {check}'
+          print('PASS: publication disabled by default and image commit/validation configured')
       - name: Test official feeds without writing
         env:
           ANINEXTUP_DRY_RUN: '1'
