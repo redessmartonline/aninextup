@@ -57,12 +57,22 @@ def items_from_feed(blob):
     return items
 
 def date_of(raw):
-    try:
-        if "T" in raw:
-            return dt.datetime.fromisoformat(raw.replace("Z", "+00:00")).astimezone(dt.timezone.utc)
-        return email.utils.parsedate_to_datetime(raw).astimezone(dt.timezone.utc)
-    except (ValueError, TypeError, IndexError):
+    """Parse RSS RFC 2822 dates and ISO 8601 dates without confusing GMT with ISO."""
+    if not raw:
         return None
+    raw = raw.strip()
+    try:
+        parsed = email.utils.parsedate_to_datetime(raw)
+        if parsed is None:
+            raise ValueError("Unrecognized RFC 2822 date")
+    except (ValueError, TypeError, IndexError):
+        try:
+            parsed = dt.datetime.fromisoformat(raw.replace("Z", "+00:00"))
+        except (ValueError, TypeError):
+            return None
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=dt.timezone.utc)
+    return parsed.astimezone(dt.timezone.utc)
 
 def opportunity_score(when, title, desc, now):
     """Conservative editorial heuristic; never claim measured demand or CTR."""
