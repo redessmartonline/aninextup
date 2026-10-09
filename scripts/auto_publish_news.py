@@ -68,7 +68,7 @@ def opportunity_score(when, title, desc, now):
     """Conservative editorial heuristic; never claim measured demand or CTR."""
     age = (now - when).total_seconds() / 3600
     freshness = 20 if age <= 24 else 15 if age <= 48 else 10
-    intent = 20 if re.search(r"\\b(release|premiere|trailer|date|season|streaming|announced)\\b", title, re.I) else 10
+    intent = 20 if re.search(r"\b(release|premiere|trailer|date|season|streaming|announced)\b", title, re.I) else 10
     ranking = 15 if len(title) >= 35 and len(title) <= 95 else 8
     value = 15 if len(desc) >= 180 else 10
     demand = 0  # No Search Console query data is available inside this workflow.
