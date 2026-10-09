@@ -50,6 +50,7 @@ anime:[
 {id:"ranma-s3",image:"assets/images/ranma-season-3.jpeg",title:"Ranma 1/2 Season 3",date:null,dateLabel:"October 2026",platform:"Netflix",article:"articles/ranma-season-3.html",category:"Season Premiere",status:"month-confirmed"}
 ],
 guides:[
+{image:"assets/favicon.svg",title:"Live-Action Firefly Wedding TV Drama Announced for 2027",tag:"OFFICIAL NEWS",article:"articles/live-action-firefly-wedding-tv-drama-announced-for-2027-a1ac1e86.html",description:"Official announcement published by Crunchyroll on 2026-10-09. Read the original announcement for full details."},
 {image:"https://img.sunrise-inc.co.jp/images/2026/09/202609160140471170.jpg",title:"Anime Releasing in November 2026: Dates & Where to Watch",tag:"NOVEMBER 2026",article:"articles/anime-releasing-november-2026.html",description:"Confirmed November 2026 anime premieres, streaming releases and theatrical dates."},
 {image:"https://kusuriyanohitorigoto.jp/movie/assets/img/top/kv.jpg",title:"Anime Releasing in December 2026: Confirmed Dates",tag:"DECEMBER 2026",article:"articles/anime-releasing-december-2026.html",description:"Confirmed December 2026 anime releases and where to watch them."},
 {image:"https://i.ytimg.com/vi/Q-W1E8Y9Jv0/maxresdefault.jpg",title:"The Moon on a Rainy Night Anime — 2027",tag:"NEW TODAY",article:"articles/the-moon-on-a-rainy-night-anime.html",description:"2027 TV anime confirmed with first official PV, Iori Saeki and Sora Amamiya leading the cast, and CompTown producing."},
