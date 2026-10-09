@@ -20,6 +20,33 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      - name: Smoke test RSS parsing and editorial scoring
+        shell: python
+        run: |
+          import datetime as dt
+          import importlib.util
+          from pathlib import Path
+          spec = importlib.util.spec_from_file_location("publisher", Path("scripts/auto_publish_news.py"))
+          publisher = importlib.util.module_from_spec(spec)
+          spec.loader.exec_module(publisher)
+          now = dt.datetime.now(dt.timezone.utc)
+          stamp = now.strftime("%a, %d %b %Y %H:%M:%S +0000")
+          rss = ('<rss><channel><item><title>Official anime season trailer announced today</title>'
+                 '<link>https://www.crunchyroll.com/news/official-test</link>'
+                 '<pubDate>' + stamp + '</pubDate>'
+                 '<description>' + 'Verified official information. ' * 10 + '</description>'
+                 '</item></channel></rss>').encode()
+          items = publisher.items_from_feed(rss)
+          assert len(items) == 1, "RSS parsing failed"
+          title, link, raw_date, desc = items[0]
+          assert publisher.host_allowed(link), "Official source rejected"
+          when = publisher.date_of(raw_date)
+          assert when is not None, "RSS date parsing failed"
+          parts = publisher.opportunity_score(when,title,desc,now)
+          assert parts["intent"] == 20, "Keyword scoring failed"
+          assert sum(parts.values()) >= 60, "Expected editorial candidate rejected"
+          assert not publisher.host_allowed("https://evil.example/news"), "Unofficial source accepted"
+          print("PASS: RSS, dates, source restrictions, editorial scoring")
       - name: Find verified official announcements
         env:
           ANINEXTUP_OFFICIAL_FEEDS: ${{ vars.ANINEXTUP_OFFICIAL_FEEDS }}
