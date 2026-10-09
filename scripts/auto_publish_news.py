@@ -64,6 +64,16 @@ def official_article_text(url):
         "Accept": "text/html"
     })
     with urllib.request.urlopen(req, timeout=12) as response:
+                print(
+            "Article HTTP:",
+            response.status,
+            "source_host:",
+            urllib.parse.urlsplit(url).hostname,
+            "final_host:",
+            urllib.parse.urlsplit(response.geturl()).hostname,
+            "content_type:",
+            response.headers.get("Content-Type", "unknown")
+        )
         if not host_allowed(response.geturl()):
             raise ValueError("Official article redirected to an unapproved host")
         content_type = response.headers.get("Content-Type", "").lower()
@@ -77,7 +87,13 @@ def official_article_text(url):
     parser.feed(body.decode(charset, errors="replace"))
     # Retain a short, attributable factual excerpt, not the complete source article.
     unique = list(dict.fromkeys(parser.parts))
-    return " ".join(unique)[:1200]
+        result = " ".join(unique)[:1200]
+    print(
+        "Article extraction:",
+        "paragraphs=", len(unique),
+        "characters=", len(result)
+    )
+    return result
 
 
 def fetch(url):
