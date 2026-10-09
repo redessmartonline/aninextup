@@ -174,6 +174,68 @@ def host_allowed(url):
 def clean(s):
     return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]*>", "", s or ""))).strip()
 
+# Candidate cover URLs are extracted only from publisher-provided RSS metadata.
+# External images are never hotlinked: validate and cache the actual image bytes.
+FEED_IMAGES = {}
+IMAGE_HOSTS = ("crunchyroll.com", "crunchyrollsvc.com", "img1.ak.crunchyroll.com", "img2.ak.crunchyroll.com")
+
+def feed_image(node):
+    candidates = []
+    for child in node.iter():
+        name = child.tag.rsplit("}", 1)[-1].lower()
+        if name in ("thumbnail", "content", "enclosure"):
+            kind = child.attrib.get("type", "").lower()
+            url = child.attrib.get("url", "")
+            if url and (name == "thumbnail" or kind.startswith("image/")):
+                candidates.append(url)
+    # Restrict to HTTPS publisher CDN; do not use arbitrary RSS image URLs.
+    for url in candidates:
+        parts = urllib.parse.urlsplit(url)
+        host = (parts.hostname or "").lower()
+        if parts.scheme == "https" and any(host == h or host.endswith("." + h) for h in IMAGE_HOSTS):
+            return url
+    return ""
+
+def verified_image_bytes(url):
+    if not url or urllib.parse.urlsplit(url).scheme != "https":
+        return None
+    host = (urllib.parse.urlsplit(url).hostname or "").lower()
+    if not any(host == h or host.endswith("." + h) for h in IMAGE_HOSTS):
+        return None
+    req = urllib.request.Request(url, headers={"User-Agent": "AniNextUpEditorial/1.0 (+https://aninextup.com/)", "Accept": "image/jpeg,image/png,image/webp"})
+    try:
+        with urllib.request.urlopen(req, timeout=10) as response:
+            final = urllib.parse.urlsplit(response.geturl())
+            final_host = (final.hostname or "").lower()
+            if final.scheme != "https" or not any(final_host == h or final_host.endswith("." + h) for h in IMAGE_HOSTS):
+                return None
+            body = response.read(2_000_001)
+            if len(body) < 2000 or len(body) > 2_000_000:
+                return None
+            if body.startswith(b"\xff\xd8\xff"):
+                return body, ".jpg"
+            if body.startswith(b"\x89PNG\r\n\x1a\n"):
+                return body, ".png"
+            if body.startswith(b"RIFF") and body[8:12] == b"WEBP":
+                return body, ".webp"
+    except (OSError, ValueError) as exc:
+        print("Image verification failed:", type(exc).__name__)
+    return None
+
+def editorial_sections(title, desc, source_url):
+    """Attribution-first presentation; never claim automatic prose is independently reported."""
+    # Require substantial text containing multiple complete sentences.
+    sentences = [x.strip() for x in re.split(r"(?<=[.!?])\s+(?=[A-Z0-9])", desc) if x.strip()]
+    if len(sentences) < 5 or len(set(sentences)) < 5:
+        return None
+    if len(desc) < 700 or len(desc) > 20000 or not re.search(r"[.!?][\"']?\s*$", desc):
+        return None
+    # Keep the source text attributed, rather than pretending it is original reporting.
+    midpoint = len(sentences) // 2
+    first = html.escape(" ".join(sentences[:midpoint]), quote=True)
+    second = html.escape(" ".join(sentences[midpoint:]), quote=True)
+    return '<h2>What the official source reports</h2><p>' + first + '</p><h2>Further details from the announcement</h2><p>' + second + '</p>'
+
 def items_from_feed(blob):
     root = ET.fromstring(blob)
     items = []
@@ -193,6 +255,7 @@ def items_from_feed(blob):
             node.findtext("{http://search.yahoo.com/mrss/}description"),
         ]
         desc = max((clean(x) for x in desc_options if x), key=len, default="")
+        FEED_IMAGES[link] = feed_image(node)
         items.append((title, link, date, desc))
     if not items:
         ns = {"a": "http://www.w3.org/2005/Atom"}
@@ -208,6 +271,7 @@ def items_from_feed(blob):
                 node.findtext("a:summary", namespaces=ns),
             ]
             desc = max((clean(x) for x in desc_options if x), key=len, default="")
+            FEED_IMAGES[link] = feed_image(node)
             items.append((title, link, date, desc))
     return items
 
@@ -325,6 +389,9 @@ def main():
             if marker not in original or source not in original or 'id="aninextup-index"' not in original:
                 print("Sin cambios: existing editorial article requires manual verification", matched_path.name)
                 continue
+            if editorial_sections(title, desc, link) is None:
+                print("Sin cambios: updated source lacks complete editorial content")
+                continue
             updated_desc = desc
             begin = original.index(marker) + len(marker)
             finish = original.find('</p>', begin)
@@ -354,17 +421,24 @@ def main():
         ):
             print("Sin cambios: same headline already published", title)
             continue
-        # Fail closed: require a verified, locally available cover and enough complete source text.
+        # A cover must be present locally or verified from official RSS media metadata.
         cover_map = {
             "firefly wedding": "assets/images/covers/firefly-wedding.jpg",
             "sasaki and peeps": "assets/images/covers/sasaki-and-peeps-season-2.jpg",
         }
         verified_cover = next((v for k, v in cover_map.items() if k in title.casefold()), "")
-        if not verified_cover or not (ROOT / verified_cover).is_file():
-            print("Sin publicar: falta portada verificada para", title)
+        if verified_cover and not (ROOT / verified_cover).is_file():
+            verified_cover = ""
+        image_payload = None
+        if not verified_cover:
+            image_payload = verified_image_bytes(FEED_IMAGES.get(link, ""))
+            if image_payload:
+                verified_cover = "assets/images/news/" + hashlib.sha256(link.encode()).hexdigest()[:20] + image_payload[1]
+        if not verified_cover:
+            print("Sin publicar: falta portada oficial verificada para", title)
             continue
-        if len(desc) < 700 or not re.search(r"[.!?][\"\']?\s*$", desc):
-            print("Sin publicar: información insuficiente o incompleta para", title)
+        if editorial_sections(title, desc, link) is None:
+            print("Sin publicar: información insuficiente o no estructurable para", title)
             continue
         break
     else:
@@ -379,6 +453,10 @@ def main():
     title_e = html.escape(title, quote=True)
     # Preserve full verified source text; never cut a sentence at a fixed character limit.
     desc_e = html.escape(desc, quote=True)
+    sections = editorial_sections(title, desc, link)
+    if sections is None:
+        print("Sin publicar: falló la validación editorial final")
+        return
     link_e = html.escape(link, quote=True)
     canonical = "https://aninextup.com/articles/" + dest.name
     today = now.date().isoformat()
@@ -388,26 +466,24 @@ def main():
     summary = f"Official announcement published by Crunchyroll on {when.date().isoformat()}. Read the original announcement for full details."
     structured = {"@context":"https://schema.org","@type":"Article","headline":headline,"description":summary,"datePublished":today,"dateModified":today,"mainEntityOfPage":canonical,"author":{"@type":"Organization","name":"AniNextUp Editorial Team"},"publisher":{"@type":"Organization","name":"AniNextUp"}}
     breadcrumb = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aninextup.com/"},{"@type":"ListItem","position":2,"name":title,"item":canonical}]}
-    cover_map = {
-        "firefly wedding": "assets/images/covers/firefly-wedding.jpg",
-        "sasaki and peeps": "assets/images/covers/sasaki-and-peeps-season-2.jpg",
-        "pokémon horizons": "https://i.ytimg.com/vi/QwXy-HbEKmI/maxresdefault.jpg",
-        "pokemon horizons": "https://i.ytimg.com/vi/QwXy-HbEKmI/maxresdefault.jpg",
-    }
     cover = verified_cover
     if cover and not cover.startswith("https://") and not (ROOT / cover).is_file():
         cover = ""
     cover_url = ("https://aninextup.com/" + cover if cover and not cover.startswith("https://") else cover)
     index = {"kind":"guide","image":cover,"title":title,"tag":"OFFICIAL NEWS","description":summary}
-    page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{title_e} — AniNextUp</title><meta name="description" content="{html.escape(summary,quote=True)}"><meta name="robots" content="index,follow"><link rel="canonical" href="{canonical}"><meta property="og:type" content="article"><meta property="og:title" content="{title_e}"><meta property="og:description" content="{html.escape(summary,quote=True)}"><meta property="og:url" content="{canonical}"><link rel="stylesheet" href="../assets/style.css"><script type="application/ld+json">{json.dumps(structured,separators=(',',':'))}</script><script type="application/ld+json">{json.dumps(breadcrumb,separators=(',',':'))}</script><script type="application/json" id="aninextup-index">{json.dumps(index,separators=(',',':'))}</script></head><body><header class="site-header"><a class="brand" href="../index.html">ANI<span>NEXTUP</span></a><button class="menu">☰</button><nav><a href="../today.html">TODAY</a><a href="../this-week.html">THIS WEEK</a><a href="../calendar.html">CALENDAR</a><a href="../where-to-watch.html">WHERE TO WATCH</a><a href="../news.html">NEWS</a></nav></header><main><article class="article"><div class="article-head"><span class="kicker">OFFICIAL NEWS · {today}</span><h1>{title_e}</h1><p class="lead">{html.escape(summary)}</p><p class="byline">By <a href="../about.html">AniNextUp Editorial Team</a></p></div><div class="prose"><h2>Official announcement</h2><p>{desc_e}</p><p>Source: <a href="{link_e}" rel="noopener noreferrer">Read the original announcement on Crunchyroll</a>. Details may change; consult the original announcement for updates.</p><p>Explore the <a href="../calendar.html">anime release calendar</a> and <a href="../news.html">latest news</a>.</p></div></article></main><footer><b>ANINEXTUP</b><small>Anime releases, streaming guides, calendars and news.</small></footer><script src="../assets/app.js"></script></body></html>'''
+    page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{title_e} — AniNextUp</title><meta name="description" content="{html.escape(summary,quote=True)}"><meta name="robots" content="index,follow"><link rel="canonical" href="{canonical}"><meta property="og:type" content="article"><meta property="og:title" content="{title_e}"><meta property="og:description" content="{html.escape(summary,quote=True)}"><meta property="og:url" content="{canonical}"><link rel="stylesheet" href="../assets/style.css"><script type="application/ld+json">{json.dumps(structured,separators=(',',':'))}</script><script type="application/ld+json">{json.dumps(breadcrumb,separators=(',',':'))}</script><script type="application/json" id="aninextup-index">{json.dumps(index,separators=(',',':'))}</script></head><body><header class="site-header"><a class="brand" href="../index.html">ANI<span>NEXTUP</span></a><button class="menu">☰</button><nav><a href="../today.html">TODAY</a><a href="../this-week.html">THIS WEEK</a><a href="../calendar.html">CALENDAR</a><a href="../where-to-watch.html">WHERE TO WATCH</a><a href="../news.html">NEWS</a></nav></header><main><article class="article"><div class="article-head"><span class="kicker">OFFICIAL NEWS · {today}</span><h1>{title_e}</h1><p class="lead">{html.escape(summary)}</p><p class="byline">By <a href="../about.html">AniNextUp Editorial Team</a></p></div><div class="prose">{sections}<p>Source: <a href="{link_e}" rel="noopener noreferrer">Read the original announcement on Crunchyroll</a>. Details may change; consult the original announcement for updates.</p><p>Explore the <a href="../calendar.html">anime release calendar</a> and <a href="../news.html">latest news</a>.</p></div></article></main><footer><b>ANINEXTUP</b><small>Anime releases, streaming guides, calendars and news.</small></footer><script src="../assets/app.js"></script></body></html>'''
     if cover_url:
         image_meta = '<meta property="og:image" content="' + html.escape(cover_url, quote=True) + '">'
         page = page.replace('<link rel="stylesheet" href="../assets/style.css">', image_meta + '<link rel="stylesheet" href="../assets/style.css">')
         figure = '<figure><img src="' + html.escape(cover_url, quote=True) + '" alt="' + title_e + ' — related series artwork" loading="eager"><figcaption>Related series artwork, not necessarily artwork for this announcement.</figcaption></figure>'
-        page = page.replace('<div class="prose"><h2>Official announcement</h2>', '<div class="prose">' + figure + '<h2>Official announcement</h2>')
+        page = page.replace('<div class="prose">', '<div class="prose">' + figure, 1)
     if dry_run:
         print("DRY RUN: would create", dest.relative_to(ROOT), "with verified cover", cover)
         return
+    if image_payload:
+        target = ROOT / cover
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_bytes(image_payload[0])
     dest.write_text(page, encoding="utf-8")
     print("Created", dest.relative_to(ROOT), "from", link)
 
