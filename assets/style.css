@@ -26,7 +26,32 @@
 
 .lite-trailer{position:relative;width:min(100%,680px);aspect-ratio:16/9;overflow:hidden;border-radius:12px;background:#000;border:1px solid var(--line);margin:18px auto 8px}.lite-trailer iframe{position:absolute;inset:0;width:100%;height:100%;border:0}.trailer-play{position:absolute;inset:0;width:100%;height:100%;padding:0;border:0;background:#000;cursor:pointer;color:#fff;text-align:left}.trailer-play img{display:block;width:100%;height:100%;object-fit:cover;opacity:.9;transition:transform .2s ease,opacity .2s ease}.trailer-play:hover img{transform:scale(1.01);opacity:.78}.trailer-overlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;background:linear-gradient(180deg,transparent 55%,#0008)}.trailer-overlay b{display:inline-flex;align-items:center;justify-content:center;padding:9px 13px;border-radius:9px;background:#7c3aed;color:#fff;font-size:10px;letter-spacing:.045em;box-shadow:0 5px 18px #0007}.trailer-overlay small{font-size:10px;font-weight:700;text-shadow:0 2px 7px #000}.trailer-play:focus-visible{outline:3px solid var(--purple);outline-offset:-4px}@media(max-width:780px){.lite-trailer{width:100%;margin:16px auto 6px;border-radius:10px}.trailer-overlay b{padding:8px 11px;font-size:9px}}
 \n.byline{margin:-10px 0 0;color:var(--muted);font-size:13px;font-weight:700}.byline a{color:#c4b5fd}.byline a:hover{color:var(--purple)}\n
-/* Cover follows the heading in article HTML; no CSS visual reordering needed. */
-.article > .article-hero{width:100%;max-width:680px;margin:16px auto 34px;border:0;background:transparent;border-radius:0;overflow:visible}
-.article > .article-hero img{display:block;width:100%;height:auto;aspect-ratio:auto;object-fit:contain}
-@media(max-width:780px){.article > .article-hero{margin:16px 0 28px}}
+/* Uniform editorial images, matching The Apothecary Diaries Season 3 article. */
+.article > .article-hero,
+.article .prose > figure,
+.article .prose > img{
+  display:block;
+  box-sizing:border-box;
+  width:100%;
+  max-width:680px;
+  margin:16px auto 34px;
+  border:0;
+  background:transparent;
+  border-radius:0;
+  overflow:visible;
+}
+.article > .article-hero img,
+.article .prose > figure img,
+.article .prose > img{
+  display:block;
+  width:100%;
+  max-width:100%;
+  height:auto;
+  aspect-ratio:auto;
+  object-fit:contain;
+}
+@media(max-width:780px){
+  .article > .article-hero,
+  .article .prose > figure,
+  .article .prose > img{margin:16px auto 28px}
+}
