@@ -113,8 +113,31 @@ def official_article_text(url):
             print("Article rejection: HTML exceeds size limit")
             return ""
         charset = response.headers.get_content_charset() or "utf-8"
+    # Safe HTML diagnostics: structure only, never dump page content, cookies or headers.
+    decoded = body.decode(charset, errors="replace")
+    title_match = re.search(r"<title\\b[^>]*>(.*?)</title\\s*>", decoded, re.I | re.S)
+    page_title = clean(title_match.group(1)) if title_match else "(missing)"
+    page_title = re.sub(r"https?://\\S+|[\\w.+-]+@[\\w.-]+", "[redacted]", page_title)[:100]
+    tag_counts = {
+        tag: len(re.findall(r"<" + tag + r"\\b", decoded, re.I))
+        for tag in ("html", "head", "body", "main", "article", "p", "script", "noscript")
+    }
+    jsonld_count = len(re.findall(
+        r"<script\\b[^>]*type\\s*=\\s*['\\\"]application/ld\\+json['\\\"]",
+        decoded, re.I
+    ))
+    print("HTML diagnostics:", json.dumps({
+        "bytes": len(body),
+        "title": page_title,
+        "tags": tag_counts,
+        "jsonld_script_tags": jsonld_count,
+        "has_next_data": "__NEXT_DATA__" in decoded,
+        "has_nuxt": "__NUXT__" in decoded,
+        "has_cloudflare_challenge": "cf-challenge" in decoded.lower()
+            or "challenge-platform" in decoded.lower(),
+    }, ensure_ascii=False, sort_keys=True))
     parser = OfficialArticleParser()
-    parser.feed(body.decode(charset, errors="replace"))
+    parser.feed(decoded)
     structured = []
     for raw in parser.jsonld:
         try:
