@@ -28,53 +28,63 @@ jobs:
             export ANINEXTUP_OFFICIAL_FEEDS=https://cr-news-api-service.prd.crunchyrollsvc.com/v1/en-US/rss
           fi
           python scripts/auto_publish_news.py
-      - name: Validate and synchronize new article
+      - name: Validate and synchronize article changes
         shell: python
         run: |
           from pathlib import Path
-          import datetime, html, json, re, xml.etree.ElementTree as ET
-          import subprocess
-          changed = subprocess.check_output(['git','ls-files','--others','--exclude-standard','articles/'], text=True).splitlines()
+          import datetime, html, json, re, subprocess
+          import xml.etree.ElementTree as ET
+          tracked = subprocess.check_output(['git','diff','--name-only','--','articles/'],text=True).splitlines()
+          new = subprocess.check_output(['git','ls-files','--others','--exclude-standard','articles/'],text=True).splitlines()
+          changed = sorted(set(tracked + new))
           if not changed:
               print('Sin cambios en la página en esta ejecución')
               raise SystemExit(0)
           if len(changed) != 1:
-              raise SystemExit('Expected exactly one new article')
+              raise SystemExit('Expected exactly one changed article')
           p = Path(changed[0])
+          if p.suffix != '.html' or not p.is_file():
+              raise SystemExit('Unexpected article path')
           body = p.read_text(encoding='utf-8')
-          assert '<h1' in body and 'rel="canonical"' in body and '"@type":"Article"' in body and '"@type":"BreadcrumbList"' in body
-          meta_match = re.search(r'<script type="application/json" id="aninextup-index">(.*?)</script>', body)
-          if not meta_match:
-              raise SystemExit('Missing index metadata')
-          meta = json.loads(html.unescape(meta_match.group(1)))
+          if not all(x in body for x in ('<h1','rel="canonical"','"@type":"Article"','"@type":"BreadcrumbList"')):
+              raise SystemExit('Missing article SEO markup')
+          match = re.search(r'<script type="application/json" id="aninextup-index">(.*?)</script>',body,re.S)
+          if not match:
+              raise SystemExit('Missing article index metadata')
+          meta = json.loads(html.unescape(match.group(1)))
           data_path = Path('assets/data.js')
           data = data_path.read_text(encoding='utf-8')
-          if 'article:"' + str(p) + '"' in data:
+          article = str(p).replace('\\','/')
+          matches = re.findall(r'article\s*:\s*["\x27]' + re.escape(article) + r'["\x27]',data)
+          if len(matches) > 1:
               raise SystemExit('Duplicate index entry')
-          def js(x): return json.dumps(str(x), ensure_ascii=False)
-          entry = '{' + ','.join([
-              'image:' + js(meta['image']),
-              'title:' + js(meta['title']),
-              'tag:' + js(meta['tag']),
-              'article:' + js(str(p)),
-              'description:' + js(meta['description'])
-          ]) + '},'
-          if 'guides:[\n' not in data:
-              raise SystemExit('Missing guides array anchor')
-          data = data.replace('guides:[\n','guides:[\n' + entry + '\n',1)
-          data_path.write_text(data, encoding='utf-8')
+          if not matches:
+              def js(x): return json.dumps(str(x),ensure_ascii=False)
+              entry = '{' + ','.join(''.join((k,':',js(meta[k]))) for k in ('image','title','tag')) + ',article:' + js(article) + ',description:' + js(meta['description']) + '},'
+              if 'guides:[\n' not in data:
+                  raise SystemExit('Missing guides array anchor')
+              data = data.replace('guides:[\n','guides:[\n' + entry + '\n',1)
+              data_path.write_text(data,encoding='utf-8')
           sitemap = Path('sitemap.xml')
           root = ET.parse(sitemap).getroot()
           ns = 'http://www.sitemaps.org/schemas/sitemap/0.9'
-          ET.register_namespace('', ns)
-          url = 'https://aninextup.com/' + str(p)
-          if url not in {(e.text or '').strip() for e in root.findall(f'{{{ns}}}url/{{{ns}}}loc')}:
-              el = ET.SubElement(root, f'{{{ns}}}url')
-              ET.SubElement(el, f'{{{ns}}}loc').text = url
-              ET.SubElement(el, f'{{{ns}}}lastmod').text = datetime.date.today().isoformat()
-          ET.indent(root, space='  ')
-          sitemap.write_text('<?xml version="1.0" encoding="UTF-8"?>\n' + ET.tostring(root, encoding='unicode') + '\n', encoding='utf-8')
-          print('Synchronized', p, url)
+          ET.register_namespace('',ns)
+          url = 'https://aninextup.com/' + article
+          entries = [el for el in root.findall(f'{{{ns}}}url') if (el.findtext(f'{{{ns}}}loc') or '').strip() == url]
+          if len(entries) > 1:
+              raise SystemExit('Duplicate sitemap URL')
+          el = entries[0] if entries else ET.SubElement(root,f'{{{ns}}}url')
+          loc = el.find(f'{{{ns}}}loc')
+          if loc is None:
+              loc = ET.SubElement(el,f'{{{ns}}}loc')
+          loc.text = url
+          mod = el.find(f'{{{ns}}}lastmod')
+          if mod is None:
+              mod = ET.SubElement(el,f'{{{ns}}}lastmod')
+          mod.text = datetime.date.today().isoformat()
+          ET.indent(root,space='  ')
+          sitemap.write_text('<?xml version="1.0" encoding="UTF-8"?>\n' + ET.tostring(root,encoding='unicode') + '\n',encoding='utf-8')
+          print('Synchronized',article,url)
       - name: Validate files
         run: |
           node --check assets/data.js
