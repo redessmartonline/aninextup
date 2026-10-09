@@ -26,14 +26,16 @@
 
 .lite-trailer{position:relative;width:min(100%,680px);aspect-ratio:16/9;overflow:hidden;border-radius:12px;background:#000;border:1px solid var(--line);margin:18px auto 8px}.lite-trailer iframe{position:absolute;inset:0;width:100%;height:100%;border:0}.trailer-play{position:absolute;inset:0;width:100%;height:100%;padding:0;border:0;background:#000;cursor:pointer;color:#fff;text-align:left}.trailer-play img{display:block;width:100%;height:100%;object-fit:cover;opacity:.9;transition:transform .2s ease,opacity .2s ease}.trailer-play:hover img{transform:scale(1.01);opacity:.78}.trailer-overlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;background:linear-gradient(180deg,transparent 55%,#0008)}.trailer-overlay b{display:inline-flex;align-items:center;justify-content:center;padding:9px 13px;border-radius:9px;background:#7c3aed;color:#fff;font-size:10px;letter-spacing:.045em;box-shadow:0 5px 18px #0007}.trailer-overlay small{font-size:10px;font-weight:700;text-shadow:0 2px 7px #000}.trailer-play:focus-visible{outline:3px solid var(--purple);outline-offset:-4px}@media(max-width:780px){.lite-trailer{width:100%;margin:16px auto 6px;border-radius:10px}.trailer-overlay b{padding:8px 11px;font-size:9px}}
 \n.byline{margin:-10px 0 0;color:var(--muted);font-size:13px;font-weight:700}.byline a{color:#c4b5fd}.byline a:hover{color:var(--purple)}\n
-/* Consistent editorial cover placement across existing articles. Keep the existing markup, media, metadata and links intact. */
+/* AniNextUp editorial layout: heading, divider, then full cover (Sasaki reference). */
 .article:has(> .article-hero){display:flex;flex-direction:column}
 .article:has(> .article-hero)>*{order:6}
 .article:has(> .article-hero)>.breadcrumbs{order:0}
 .article:has(> .article-hero)>.article-head{order:1}
-.article:has(> .article-hero)>.article-hero{order:2;margin:30px 0 34px}
+.article:has(> .article-hero)>.article-hero{order:2;margin:16px 0 34px}
 .article:has(> .article-hero)>.info{order:3}
 .article:has(> .article-hero)>.prose{order:4}
 .article:has(> .article-hero)>.related-releases{order:5}
-.article:has(> .article-hero)>.article-hero img{width:100%;aspect-ratio:16/9;object-fit:cover}
-@media(max-width:780px){.article:has(> .article-hero)>.article-hero{margin:24px 0 28px}}
+.article:has(> .article-hero)>.article-hero img{display:block;width:100%;height:auto;aspect-ratio:auto;object-fit:contain}
+.article:has(> .article-hero)>.article-head{padding-bottom:38px}
+.article:has(> .article-hero)>.article-hero{border:0;background:transparent;border-radius:0;overflow:visible}
+@media(max-width:780px){.article:has(> .article-hero)>.article-hero{margin:16px 0 28px}}
