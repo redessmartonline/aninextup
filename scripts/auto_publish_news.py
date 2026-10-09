@@ -4,6 +4,7 @@ import datetime as dt
 import email.utils
 import hashlib
 import html
+from html.parser import HTMLParser
 import json
 import os
 from pathlib import Path
@@ -16,6 +17,68 @@ ROOT = Path(__file__).resolve().parents[1]
 ALLOWED = ("crunchyroll.com", "crunchyrollsvc.com", "tohoanimation.com", "anime.eiga.com")
 FEEDS = [x.strip() for x in os.getenv("ANINEXTUP_OFFICIAL_FEEDS", "https://cr-news-api-service.prd.crunchyrollsvc.com/v1/en-US/rss").split(",") if x.strip()]
 MAX_AGE_HOURS = 72
+MAX_ARTICLE_FETCHES = 8
+
+class OfficialArticleParser(HTMLParser):
+    """Extract readable article text, excluding navigation and scripts."""
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.depth = 0
+        self.skip = 0
+        self.parts = []
+        self.buffer = []
+        self.active = 0
+
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        if tag in ("script", "style", "nav", "footer", "header", "aside"):
+            self.skip += 1
+        if tag in ("article", "main") and not self.skip:
+            self.depth += 1
+        if tag in ("p", "h2", "h3") and self.depth and not self.skip:
+            self.active += 1
+            self.buffer = []
+
+    def handle_data(self, data):
+        if self.active and not self.skip:
+            self.buffer.append(data)
+
+    def handle_endtag(self, tag):
+        if tag in ("p", "h2", "h3") and self.active:
+            part = clean(" ".join(self.buffer))
+            if len(part) >= 35:
+                self.parts.append(part)
+            self.active -= 1
+            self.buffer = []
+        if tag in ("article", "main") and self.depth:
+            self.depth -= 1
+        if tag in ("script", "style", "nav", "footer", "header", "aside") and self.skip:
+            self.skip -= 1
+
+def official_article_text(url):
+    """Fetch only approved HTTPS sources; reject redirects outside the allowlist."""
+    if not host_allowed(url):
+        return ""
+    req = urllib.request.Request(url, headers={
+        "User-Agent": "AniNextUpEditorial/1.0 (+https://aninextup.com/)",
+        "Accept": "text/html"
+    })
+    with urllib.request.urlopen(req, timeout=12) as response:
+        if not host_allowed(response.geturl()):
+            raise ValueError("Official article redirected to an unapproved host")
+        content_type = response.headers.get("Content-Type", "").lower()
+        if "text/html" not in content_type:
+            return ""
+        body = response.read(500_001)
+        if len(body) > 500_000:
+            return ""
+        charset = response.headers.get_content_charset() or "utf-8"
+    parser = OfficialArticleParser()
+    parser.feed(body.decode(charset, errors="replace"))
+    # Retain a short, attributable factual excerpt, not the complete source article.
+    unique = list(dict.fromkeys(parser.parts))
+    return " ".join(unique)[:1200]
+
 
 def fetch(url):
     req = urllib.request.Request(url, headers={"User-Agent": "AniNextUpEditorial/1.0 (+https://aninextup.com/)", "Accept": "application/rss+xml, application/atom+xml, application/xml, text/xml"})
@@ -89,6 +152,7 @@ def main():
     existing = {p: p.read_text(encoding="utf-8") for p in (ROOT / "articles").glob("*.html")}
     data = (ROOT / "assets/data.js").read_text(encoding="utf-8")
     candidates = []
+    article_fetches = 0
     stats = {"feeds":0,"entries":0,"missing_title":0,"invalid_url":0,"invalid_date":0,"outside_window":0,"short_content":0,"duplicate":0}
     for feed in FEEDS:
         if not host_allowed(feed):
@@ -122,7 +186,20 @@ def main():
                 continue
             # Without independent corroboration, only publish a transparent announcement
             # recap; never assert release dates, availability or plot facts from snippets.
-            if len(title) < 22 or len(desc) < 90:
+            if len(title) < 22:
+                stats["short_content"] += 1
+                continue
+            if len(desc) < 90 and article_fetches < MAX_ARTICLE_FETCHES:
+                article_fetches += 1
+                try:
+                    expanded = official_article_text(link)
+                    if len(expanded) >= 180:
+                        desc = expanded
+                        stats["expanded_from_official_article"] = stats.get("expanded_from_official_article", 0) + 1
+                except Exception as exc:
+                    stats["article_fetch_failed"] = stats.get("article_fetch_failed", 0) + 1
+                    print("Official article unavailable:", type(exc).__name__, str(exc)[:100])
+            if len(desc) < 180:
                 stats["short_content"] += 1
                 continue
             score_parts = opportunity_score(when, title, desc, now)
