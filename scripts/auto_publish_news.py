@@ -21,6 +21,128 @@ MAX_ARTICLE_FETCHES = 8
 
 class OfficialArticleParser(HTMLParser):
     """Extract readable article text, excluding navigation and scripts."""
+    """Drop-in replacement for OfficialArticleParser and official_article_text.
+Paste into scripts/auto_publish_news.py replacing both existing definitions.
+Uses only Python standard library; preserves host validation in the caller.
+"""
+from html.parser import HTMLParser
+import json
+import re
+import urllib.parse
+import urllib.request
+
+
+class OfficialArticleParser(HTMLParser):
+    """Read editorial paragraphs and Article/NewsArticle JSON-LD conservatively."""
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.parts = []
+        self.jsonld = []
+        self.containers = []
+        self.skip = []
+        self.paragraph_depth = 0
+        self.paragraph = []
+        self.in_jsonld = False
+        self.json_buffer = []
+
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        if tag == "script" and attrs.get("type", "").lower() == "application/ld+json":
+            self.in_jsonld = True
+            self.json_buffer = []
+            return
+        if tag in ("script", "style", "nav", "footer", "header", "aside", "form"):
+            self.skip.append(tag)
+        cls = " ".join((attrs.get("class", ""), attrs.get("id", ""))).lower()
+        editorial = tag in ("article", "main") or bool(re.search(r"(?:^|[\s_-])(article-body|article-content|news-body|post-content|story-body|entry-content|rich-text)(?:$|[\s_-])", cls))
+        self.containers.append((tag, editorial))
+        if tag == "p" and not self.skip and any(v for _, v in self.containers[:-1]):
+            self.paragraph_depth = 1
+            self.paragraph = []
+        elif self.paragraph_depth:
+            self.paragraph_depth += 1
+
+    def handle_data(self, data):
+        if self.in_jsonld:
+            self.json_buffer.append(data)
+        elif self.paragraph_depth and not self.skip:
+            self.paragraph.append(data)
+
+    def handle_endtag(self, tag):
+        if tag == "script" and self.in_jsonld:
+            self.jsonld.append("".join(self.json_buffer))
+            self.in_jsonld = False
+            self.json_buffer = []
+        if self.paragraph_depth:
+            self.paragraph_depth -= 1
+            if self.paragraph_depth == 0 and tag == "p":
+                text = clean(" ".join(self.paragraph))
+                if len(text) >= 35:
+                    self.parts.append(text)
+                self.paragraph = []
+        if self.skip and self.skip[-1] == tag:
+            self.skip.pop()
+        if self.containers and self.containers[-1][0] == tag:
+            self.containers.pop()
+
+
+def _article_bodies(value):
+    if isinstance(value, list):
+        for entry in value:
+            yield from _article_bodies(entry)
+    elif isinstance(value, dict):
+        kinds = value.get("@type", [])
+        if isinstance(kinds, str):
+            kinds = [kinds]
+        if any(str(k).rsplit("/", 1)[-1] in ("Article", "NewsArticle", "BlogPosting") for k in kinds):
+            body = value.get("articleBody")
+            if isinstance(body, str) and len(clean(body)) >= 180:
+                yield clean(body)
+        for key in ("@graph", "mainEntity"):
+            if key in value:
+                yield from _article_bodies(value[key])
+
+
+def official_article_text(url):
+    """Extract only attributable article text; no page-wide fallback."""
+    if not host_allowed(url):
+        return ""
+    req = urllib.request.Request(url, headers={
+        "User-Agent": "AniNextUpEditorial/1.0 (+https://aninextup.com/)",
+        "Accept": "text/html",
+    })
+    with urllib.request.urlopen(req, timeout=12) as response:
+        final_url = response.geturl()
+        if not host_allowed(final_url):
+            raise ValueError("Official article redirected to an unapproved host")
+        content_type = response.headers.get("Content-Type", "").lower()
+        print("Article HTTP:", response.status, "source_host:", urllib.parse.urlsplit(url).hostname,
+              "final_host:", urllib.parse.urlsplit(final_url).hostname, "content_type:", content_type)
+        if "text/html" not in content_type:
+            print("Article rejection: non-HTML response")
+            return ""
+        body = response.read(500_001)
+        if len(body) > 500_000:
+            print("Article rejection: HTML exceeds size limit")
+            return ""
+        charset = response.headers.get_content_charset() or "utf-8"
+    parser = OfficialArticleParser()
+    parser.feed(body.decode(charset, errors="replace"))
+    structured = []
+    for raw in parser.jsonld:
+        try:
+            structured.extend(_article_bodies(json.loads(raw)))
+        except (ValueError, TypeError):
+            continue
+    unique = list(dict.fromkeys(parser.parts))
+    method = "jsonld-articleBody" if structured else "editorial-paragraphs"
+    result = (structured[0] if structured else " ".join(unique))[:1200]
+    print("Article extraction:", "method=", method, "jsonld_blocks=", len(parser.jsonld),
+          "paragraphs=", len(unique), "characters=", len(result))
+    if len(result) < 180:
+        print("Article rejection: insufficient verified editorial text")
+    return result
+
     def __init__(self):
         super().__init__(convert_charrefs=True)
         self.depth = 0
