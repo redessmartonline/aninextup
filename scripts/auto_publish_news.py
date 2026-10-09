@@ -240,6 +240,9 @@ def opportunity_score(when, title, desc, now):
     return {"demand": demand, "freshness": freshness, "intent": intent, "ranking": ranking, "value": value}
 
 def main():
+    dry_run = os.environ.get("ANINEXTUP_DRY_RUN", "").strip().lower() in ("1", "true", "yes")
+    if dry_run:
+        print("DRY RUN: publication and article updates are disabled")
     now = dt.datetime.now(dt.timezone.utc)
     existing = {p: p.read_text(encoding="utf-8") for p in (ROOT / "articles").glob("*.html")}
     data = (ROOT / "assets/data.js").read_text(encoding="utf-8")
@@ -335,6 +338,9 @@ def main():
             revised, count = re.subn(r'("dateModified"\s*:\s*")[^"]+(")', lambda m: m.group(1) + now.date().isoformat() + m.group(2), revised, count=1)
             if count != 1:
                 raise ValueError("Missing structured data dateModified")
+            if dry_run:
+                print("DRY RUN: would update", matched_path.relative_to(ROOT))
+                return
             matched_path.write_text(revised, encoding="utf-8")
             print("Updated existing official recap", matched_path.relative_to(ROOT), "from", link)
             return
@@ -392,13 +398,16 @@ def main():
     if cover and not cover.startswith("https://") and not (ROOT / cover).is_file():
         cover = ""
     cover_url = ("https://aninextup.com/" + cover if cover and not cover.startswith("https://") else cover)
-    index = {"kind":"guide","image":cover or "assets/favicon.svg","title":title,"tag":"OFFICIAL NEWS","description":summary}
+    index = {"kind":"guide","image":cover,"title":title,"tag":"OFFICIAL NEWS","description":summary}
     page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{title_e} — AniNextUp</title><meta name="description" content="{html.escape(summary,quote=True)}"><meta name="robots" content="index,follow"><link rel="canonical" href="{canonical}"><meta property="og:type" content="article"><meta property="og:title" content="{title_e}"><meta property="og:description" content="{html.escape(summary,quote=True)}"><meta property="og:url" content="{canonical}"><link rel="stylesheet" href="../assets/style.css"><script type="application/ld+json">{json.dumps(structured,separators=(',',':'))}</script><script type="application/ld+json">{json.dumps(breadcrumb,separators=(',',':'))}</script><script type="application/json" id="aninextup-index">{json.dumps(index,separators=(',',':'))}</script></head><body><header class="site-header"><a class="brand" href="../index.html">ANI<span>NEXTUP</span></a><button class="menu">☰</button><nav><a href="../today.html">TODAY</a><a href="../this-week.html">THIS WEEK</a><a href="../calendar.html">CALENDAR</a><a href="../where-to-watch.html">WHERE TO WATCH</a><a href="../news.html">NEWS</a></nav></header><main><article class="article"><div class="article-head"><span class="kicker">OFFICIAL NEWS · {today}</span><h1>{title_e}</h1><p class="lead">{html.escape(summary)}</p><p class="byline">By <a href="../about.html">AniNextUp Editorial Team</a></p></div><div class="prose"><h2>Official announcement</h2><p>{desc_e}</p><p>Source: <a href="{link_e}" rel="noopener noreferrer">Read the original announcement on Crunchyroll</a>. Details may change; consult the original announcement for updates.</p><p>Explore the <a href="../calendar.html">anime release calendar</a> and <a href="../news.html">latest news</a>.</p></div></article></main><footer><b>ANINEXTUP</b><small>Anime releases, streaming guides, calendars and news.</small></footer><script src="../assets/app.js"></script></body></html>'''
     if cover_url:
         image_meta = '<meta property="og:image" content="' + html.escape(cover_url, quote=True) + '">'
         page = page.replace('<link rel="stylesheet" href="../assets/style.css">', image_meta + '<link rel="stylesheet" href="../assets/style.css">')
         figure = '<figure><img src="' + html.escape(cover_url, quote=True) + '" alt="' + title_e + ' — related series artwork" loading="eager"><figcaption>Related series artwork, not necessarily artwork for this announcement.</figcaption></figure>'
         page = page.replace('<div class="prose"><h2>Official announcement</h2>', '<div class="prose">' + figure + '<h2>Official announcement</h2>')
+    if dry_run:
+        print("DRY RUN: would create", dest.relative_to(ROOT), "with verified cover", cover)
+        return
     dest.write_text(page, encoding="utf-8")
     print("Created", dest.relative_to(ROOT), "from", link)
 
