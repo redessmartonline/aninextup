@@ -69,13 +69,15 @@ jobs:
               required = {
                   "canonical": 'rel="canonical"',
                   "meta description": 'name="description"',
-                  "Article schema": '"@type":"Article"',
                   "BreadcrumbList": '"@type":"BreadcrumbList"',
                   "H1": "<h1",
               }
               for label, needle in required.items():
                   if needle not in html:
                       errors.append(f"{p}: missing {label}")
+
+              if not any(f'"@type":"{kind}"' in html for kind in ("Article", "NewsArticle", "BlogPosting")):
+                  errors.append(f"{p}: missing Article/NewsArticle schema")
 
               if url not in sitemap_urls:
                   errors.append(f"{p}: missing from sitemap.xml")
