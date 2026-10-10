@@ -1,0 +1,16 @@
+name: AdSense Readiness Audit
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/audit_adsense_readiness.py'
+      - '.github/workflows/adsense-readiness-audit.yml'
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check links, metadata, images and sitemap
+        run: python3 scripts/audit_adsense_readiness.py
