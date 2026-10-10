@@ -222,7 +222,7 @@ def verified_image_bytes(url):
         print("Image verification failed:", type(exc).__name__)
     return None
 
-NEWS_TERMS = re.compile(r"\\b(announced|announces|revealed|reveals|confirmed|confirms|premiere|trailer|teaser|renewed|new season|release date|new cast|adaptation)\\b", re.I)
+NEWS_TERMS = re.compile(r"\\b(announc(?:e|ed|es|ement)|reveal(?:ed|s)?|confirm(?:ed|s)?|premiere|trailer|teaser|renewed|new season|release date|new cast|adaptation)\\b", re.I)
 EXPLAINERS = re.compile(r"\\b(what is|explained|everything you need|guide to|how to|recap|ranking|best of)\\b", re.I)
 TOPIC_STOP = set("the and for with from anime manga official announced announces revealed reveals confirmed confirms new latest season release date trailer teaser adaptation".split())
 
