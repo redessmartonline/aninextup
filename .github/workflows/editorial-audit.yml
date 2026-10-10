@@ -6,6 +6,7 @@ on:
       - 'assets/data.js'
       - 'articles/**'
       - 'scripts/editorial_audit.py'
+      - 'scripts/check_image_urls.py'
       - '.github/workflows/editorial-audit.yml'
 jobs:
   editorial-audit:
@@ -21,6 +22,8 @@ jobs:
         run: python -m py_compile scripts/editorial_audit.py
       - name: Audit all indexed articles
         run: python scripts/editorial_audit.py > editorial_audit.log
+      - name: Check external cover images
+        run: python scripts/check_image_urls.py
       - name: Print summary
         run: |
           python -c "import json; r=json.load(open('editorial_report.json')); print('Articles:',r['articles_found'],'/',r['entries'],'Warnings:',r['warning_count']); print(r['warnings_by_code'])"
@@ -31,3 +34,4 @@ jobs:
           path: |
             editorial_report.json
             editorial_audit.log
+            image_url_report.json
