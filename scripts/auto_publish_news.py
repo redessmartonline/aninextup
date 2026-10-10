@@ -202,7 +202,7 @@ def feed_image(node):
     return ""
 
 def official_page_image(article_url):
-    """Use only the image explicitly attached to this official article."""
+    """Extract article-bound social and JSON-LD images, never generic site images."""
     if not host_allowed(article_url):
         return ""
     try:
@@ -219,16 +219,51 @@ def official_page_image(article_url):
             if len(body) > 500_000:
                 return ""
         page = body.decode("utf-8", errors="replace")
-        for tag in re.findall(r"<meta\\b[^>]*>", page, re.I):
+        candidates = []
+        for tag in re.findall(r"<meta\b[^>]*>", page, re.I):
             props = dict((k.lower(), html.unescape(v)) for k, v in re.findall(
-                r"""([a-zA-Z:-]+)\\s*=\\s*["']([^"']*)["']""", tag))
-            if props.get("property", "").lower() not in ("og:image", "og:image:url") and props.get("name", "").lower() != "twitter:image":
+                r"""([a-zA-Z:-]+)\s*=\s*["']([^"']*)["']""", tag))
+            if props.get("property", "").lower() in ("og:image", "og:image:url") or props.get("name", "").lower() == "twitter:image":
+                candidates.append(props.get("content", ""))
+
+        def article_images(obj):
+            if isinstance(obj, list):
+                for item in obj:
+                    yield from article_images(item)
+            elif isinstance(obj, dict):
+                types = obj.get("@type", [])
+                types = [types] if isinstance(types, str) else types
+                if isinstance(types, list) and any(str(t).rsplit("/", 1)[-1] in ("Article", "NewsArticle", "BlogPosting") for t in types):
+                    image = obj.get("image", obj.get("thumbnailUrl", ""))
+                    if isinstance(image, str):
+                        yield image
+                    elif isinstance(image, list):
+                        for item in image:
+                            if isinstance(item, str):
+                                yield item
+                            elif isinstance(item, dict):
+                                yield item.get("url", item.get("contentUrl", ""))
+                    elif isinstance(image, dict):
+                        yield image.get("url", image.get("contentUrl", ""))
+                for key in ("@graph", "mainEntity"):
+                    if key in obj:
+                        yield from article_images(obj[key])
+
+        for script in re.findall(r'<script\b[^>]*type\s*=\s*["\x27]application/ld\+json["\x27][^>]*>(.*?)</script\s*>', page, re.I | re.S):
+            try:
+                candidates.extend(article_images(json.loads(script)))
+            except (ValueError, TypeError):
                 continue
-            url = urllib.parse.urljoin(article_url, props.get("content", ""))
+        for candidate in candidates:
+            if not isinstance(candidate, str) or not candidate:
+                continue
+            url = urllib.parse.urljoin(article_url, html.unescape(candidate))
             parsed = urllib.parse.urlsplit(url)
             host = (parsed.hostname or "").lower()
             if parsed.scheme == "https" and any(host == h or host.endswith("." + h) for h in IMAGE_HOSTS):
+                print("Official article image candidate host:", host)
                 return url
+        print("Official page image metadata:", "candidates=", len(candidates), "approved=", 0)
     except (OSError, ValueError) as exc:
         print("Official page cover extraction failed:", type(exc).__name__, str(exc)[:120])
     return ""
