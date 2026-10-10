@@ -1,0 +1,33 @@
+name: AniNextUp editorial audit
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'assets/data.js'
+      - 'articles/**'
+      - 'scripts/editorial_audit.py'
+      - '.github/workflows/editorial-audit.yml'
+jobs:
+  editorial-audit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate Python syntax
+        run: python -m py_compile scripts/editorial_audit.py
+      - name: Audit all indexed articles
+        run: python scripts/editorial_audit.py > editorial_audit.log
+      - name: Print summary
+        run: |
+          python -c "import json; r=json.load(open('editorial_report.json')); print('Articles:',r['articles_found'],'/',r['entries'],'Warnings:',r['warning_count']); print(r['warnings_by_code'])"
+      - name: Upload full audit report
+        uses: actions/upload-artifact@v4
+        with:
+          name: aninextup-editorial-report
+          path: |
+            editorial_report.json
+            editorial_audit.log
