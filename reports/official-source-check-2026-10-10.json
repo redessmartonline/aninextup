@@ -1,0 +1,35 @@
+{
+  "updated": "2026-10-10",
+  "scope": "Manually cross-checked official primary-source release announcements; partial coverage only",
+  "verified": [
+    {
+      "id": "cyberpunk-edgerunners-2",
+      "date": "2026-10-20",
+      "platform": "Netflix",
+      "sources": [
+        "https://www.cyberpunk.net/en/edgerunners2",
+        "https://www.netflix.com/tudum/articles/cyberpunk-edgerunners-2-release-date-news"
+      ]
+    },
+    {
+      "id": "black-clover-s2",
+      "date": "2026-10-03",
+      "platform": "Crunchyroll",
+      "sources": [
+        "https://bclover.jp/gaja.php",
+        "https://www.crunchyroll.com/es/news/seasonal-lineup/2026/9/15/otono-2026-anime-crunchyroll"
+      ]
+    },
+    {
+      "id": "apothecary-s3",
+      "date": "2026-10-02",
+      "platform": "Crunchyroll",
+      "sources": [
+        "https://kusuriyanohitorigoto.jp/news/2623/",
+        "https://www.crunchyroll.com/es/news/guides/2026/10/4/wiki-the-apothecary-diaries-3"
+      ]
+    }
+  ],
+  "unverified_remaining": 43,
+  "note": "No assumption that other dates or streaming claims are verified. Image URL results require a completed network check."
+}
