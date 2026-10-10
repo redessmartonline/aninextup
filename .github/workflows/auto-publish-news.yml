@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 concurrency:
   group: aninextup-autonomous-publisher
@@ -14,14 +15,27 @@ concurrency:
 
 jobs:
   publish:
-    if: ${{ vars.ANINEXTUP_ENABLE_PUBLICATION == 'true' }}
     runs-on: ubuntu-latest
     timeout-minutes: 8
     steps:
       - uses: actions/checkout@v5
         with:
           fetch-depth: 0
+      - name: Avoid duplicate pending editorial reviews
+        id: pending
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          count=$(gh pr list --state open --json headRefName --jq '[.[] | select(.headRefName | startswith("auto-publisher/review-"))] | length')
+          if [ "$count" -gt 0 ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "An AniNextUp editorial proposal is already awaiting approval."
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
       - name: Smoke test RSS parsing and editorial scoring
+        if: steps.pending.outputs.skip != 'true'
         shell: python
         run: |
           import datetime as dt
@@ -49,6 +63,7 @@ jobs:
           assert not publisher.host_allowed("https://evil.example/news"), "Unofficial source accepted"
           print("PASS: RSS, dates, source restrictions, editorial scoring")
       - name: Find verified official announcements
+        if: steps.pending.outputs.skip != 'true'
         env:
           ANINEXTUP_OFFICIAL_FEEDS: ${{ vars.ANINEXTUP_OFFICIAL_FEEDS }}
         run: |
@@ -57,6 +72,7 @@ jobs:
           fi
           python scripts/auto_publish_news.py
       - name: Validate and synchronize article changes
+        if: steps.pending.outputs.skip != 'true'
         shell: python
         run: |
           from pathlib import Path
@@ -126,20 +142,28 @@ jobs:
           sitemap.write_text('<?xml version="1.0" encoding="UTF-8"?>\n' + ET.tostring(root,encoding='unicode') + '\n',encoding='utf-8')
           print('Synchronized',article,url)
       - name: Validate files
+        if: steps.pending.outputs.skip != 'true'
         run: |
           node --check assets/data.js
           python -c "import xml.etree.ElementTree as E; E.parse('sitemap.xml')"
           git diff --check
-      - name: Commit publication atomically
+      - name: Open editorial approval request (never push to main)
+        if: steps.pending.outputs.skip != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
         run: |
           if [ -z "$(git status --porcelain -- articles/ assets/images/news/ assets/data.js sitemap.xml)" ]; then
-            echo "No verified article to publish."
+            echo "No new verified editorial proposal."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          branch="auto-publisher/review-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          git switch -c "$branch"
           git add articles/ assets/images/news/ assets/data.js sitemap.xml
-          git commit -m "Publish official-source AniNextUp news"
-          git fetch origin main
-          git rebase origin/main
-          git push origin HEAD:main
+          git commit -m "Editorial proposal: official-source AniNextUp news"
+          git push origin "HEAD:refs/heads/$branch"
+          gh pr create --base main --head "$branch" \
+            --title "AniNextUp Auto Publisher — Aprobación requerida" \
+            --body "Noticia propuesta por el publicador a partir de fuentes oficiales. **No se publicará en producción hasta que una persona revise y fusione este PR.** Comprueba la fuente, los hechos, la imagen, el SEO y los enlaces antes de aprobar."
