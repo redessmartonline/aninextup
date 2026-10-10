@@ -242,6 +242,53 @@ def topic_duplicate(title, existing):
                 return True
     return False
 
+def official_trailer_embed(source_url, title):
+    """Only embed a YouTube video explicitly linked in the official article.
+
+    No search guesses, third-party reuploads or autoplay. An editor must still
+    check the channel and relevance before approving the PR.
+    """
+    if not host_allowed(source_url):
+        return ""
+    try:
+        request = urllib.request.Request(source_url, headers={
+            "User-Agent": "AniNextUpEditorial/1.0 (+https://aninextup.com/)",
+            "Accept": "text/html",
+        })
+        with urllib.request.urlopen(request, timeout=10) as response:
+            if not host_allowed(response.geturl()):
+                return ""
+            if "text/html" not in response.headers.get("Content-Type", "").lower():
+                return ""
+            body = response.read(350_001)
+            if len(body) > 350_000:
+                return ""
+        page = body.decode("utf-8", errors="replace")
+    except (OSError, ValueError, UnicodeError):
+        return ""
+    # Require an explicit iframe/embed or outbound YouTube URL on the source page.
+    # Never infer an ID from unrelated page metadata or generic recommendations.
+    patterns = (
+        r'(?:youtube-nocookie\\.com|youtube\\.com)/embed/([A-Za-z0-9_-]{11})',
+        r'youtube\\.com/watch\\?v=([A-Za-z0-9_-]{11})',
+        r'youtu\\.be/([A-Za-z0-9_-]{11})',
+    )
+    for pattern in patterns:
+        match = re.search(pattern, page, re.I)
+        if match:
+            video_id = match.group(1)
+            safe_title = html.escape(title, quote=True)
+            return ('<section class="official-trailer"><h2>Official trailer</h2>'
+                    '<iframe loading="lazy" width="560" height="315" '
+                    'src="https://www.youtube-nocookie.com/embed/' + video_id + '" '
+                    'title="' + safe_title + ' — trailer linked by official source" '
+                    'referrerpolicy="strict-origin-when-cross-origin" '
+                    'allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share" '
+                    'allowfullscreen></iframe><p>Video linked from the official announcement; '
+                    'verify the publishing channel before approving.</p></section>')
+    return ""
+
+
 def editorial_sections(title, desc, source_url):
     """Short attributed review brief; never copy the source's paragraphs."""
     if not newsworthy_title(title) or not host_allowed(source_url):
@@ -482,6 +529,7 @@ def main():
     # Preserve full verified source text; never cut a sentence at a fixed character limit.
     desc_e = html.escape(desc, quote=True)
     sections = editorial_sections(title, desc, link)
+    trailer_section = official_trailer_embed(link, title) if re.search(r"\\b(trailer|teaser|promo|pv)\\b", title, re.I) else ""
     if sections is None:
         print("Sin publicar: falló la validación editorial final")
         return
@@ -501,7 +549,7 @@ def main():
         raise ValueError("A verified editorial cover is required; site logos are not news artwork")
     cover_url = ("https://aninextup.com/" + cover if cover and not cover.startswith("https://") else cover)
     index = {"kind":"guide","image":cover,"title":title,"tag":"OFFICIAL NEWS","description":summary}
-    page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{title_e} — AniNextUp</title><meta name="description" content="{html.escape(summary,quote=True)}"><meta name="robots" content="index,follow"><link rel="canonical" href="{canonical}"><meta property="og:type" content="article"><meta property="og:title" content="{title_e}"><meta property="og:description" content="{html.escape(summary,quote=True)}"><meta property="og:url" content="{canonical}"><link rel="stylesheet" href="../assets/style.css"><script type="application/ld+json">{json.dumps(structured,separators=(',',':'))}</script><script type="application/ld+json">{json.dumps(breadcrumb,separators=(',',':'))}</script><script type="application/json" id="aninextup-index">{json.dumps(index,separators=(',',':'))}</script></head><body><header class="site-header"><a class="brand" href="../">ANI<span>NEXTUP</span></a><button class="menu">☰</button><nav><a href="../today">TODAY</a><a href="../this-week">THIS WEEK</a><a href="../calendar">CALENDAR</a><a href="../where-to-watch">WHERE TO WATCH</a><a href="../news">NEWS</a></nav></header><main><article class="article"><div class="article-head"><span class="kicker">OFFICIAL NEWS · {today}</span><h1>{title_e}</h1><p class="lead">{html.escape(summary)}</p><p class="byline">By <a href="../about">AniNextUp Editorial Team</a></p></div><div class="prose">{sections}<p>Source: <a href="{link_e}" rel="noopener noreferrer">Read the original announcement on Crunchyroll</a>. Details may change; consult the original announcement for updates.</p><p>Explore the <a href="../calendar">anime release calendar</a> and <a href="../news">latest news</a>.</p></div></article></main><footer><b>ANINEXTUP</b><small>Anime releases, streaming guides, calendars and news.</small></footer><script src="../assets/app.js"></script></body></html>'''
+    page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{title_e} — AniNextUp</title><meta name="description" content="{html.escape(summary,quote=True)}"><meta name="robots" content="index,follow"><link rel="canonical" href="{canonical}"><meta property="og:type" content="article"><meta property="og:title" content="{title_e}"><meta property="og:description" content="{html.escape(summary,quote=True)}"><meta property="og:url" content="{canonical}"><link rel="stylesheet" href="../assets/style.css"><script type="application/ld+json">{json.dumps(structured,separators=(',',':'))}</script><script type="application/ld+json">{json.dumps(breadcrumb,separators=(',',':'))}</script><script type="application/json" id="aninextup-index">{json.dumps(index,separators=(',',':'))}</script></head><body><header class="site-header"><a class="brand" href="../">ANI<span>NEXTUP</span></a><button class="menu">☰</button><nav><a href="../today">TODAY</a><a href="../this-week">THIS WEEK</a><a href="../calendar">CALENDAR</a><a href="../where-to-watch">WHERE TO WATCH</a><a href="../news">NEWS</a></nav></header><main><article class="article"><div class="article-head"><span class="kicker">OFFICIAL NEWS · {today}</span><h1>{title_e}</h1><p class="lead">{html.escape(summary)}</p><p class="byline">By <a href="../about">AniNextUp Editorial Team</a></p></div><div class="prose">{trailer_section}{sections}<p>Source: <a href="{link_e}" rel="noopener noreferrer">Read the original announcement on Crunchyroll</a>. Details may change; consult the original announcement for updates.</p><p>Explore the <a href="../calendar">anime release calendar</a> and <a href="../news">latest news</a>.</p></div></article></main><footer><b>ANINEXTUP</b><small>Anime releases, streaming guides, calendars and news.</small></footer><script src="../assets/app.js"></script></body></html>'''
     if cover_url:
         image_meta = '<meta property="og:image" content="' + html.escape(cover_url, quote=True) + '">'
         page = page.replace('<link rel="stylesheet" href="../assets/style.css">', image_meta + '<link rel="stylesheet" href="../assets/style.css">')
