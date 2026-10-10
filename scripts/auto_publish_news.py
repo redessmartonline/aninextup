@@ -16,8 +16,8 @@ import xml.etree.ElementTree as ET
 ROOT = Path(__file__).resolve().parents[1]
 ALLOWED = ("crunchyroll.com", "crunchyrollsvc.com", "tohoanimation.com", "anime.eiga.com", "sonypictures.com")
 FEEDS = [x.strip() for x in os.getenv("ANINEXTUP_OFFICIAL_FEEDS", "https://cr-news-api-service.prd.crunchyrollsvc.com/v1/en-US/rss").split(",") if x.strip()]
-MAX_AGE_HOURS = 72
-MAX_ARTICLE_FETCHES = 8
+MAX_AGE_HOURS = 120
+MAX_ARTICLE_FETCHES = 24
 # Additional official RSS/Atom feeds may be supplied through
 # ANINEXTUP_OFFICIAL_FEEDS, comma-separated. Unknown/unapproved hosts are rejected.
 # Sony Pictures is allowed for verified official releases; no unverified RSS URL
@@ -188,6 +188,11 @@ def feed_image(node):
             url = child.attrib.get("url", "")
             if url and (name == "thumbnail" or kind.startswith("image/")):
                 candidates.append(url)
+    # Read publisher-provided image tags when media:thumbnail is absent.
+    for child in node.iter():
+        if child.tag.rsplit("}", 1)[-1].lower() in ("description", "encoded", "summary", "content"):
+            raw = html.unescape(child.text or "")
+            candidates.extend(re.findall(r'<img[^>]+src=["\\'](https://[^"\\']+)["\\']', raw, re.I))
     # Restrict to HTTPS publisher CDN; do not use arbitrary RSS image URLs.
     for url in candidates:
         parts = urllib.parse.urlsplit(url)
@@ -408,17 +413,17 @@ def main():
             if len(title) < 22:
                 stats["short_content"] += 1
                 continue
-            if len(desc) < 700 and article_fetches < MAX_ARTICLE_FETCHES:
+            if len(desc) < 350 and article_fetches < MAX_ARTICLE_FETCHES:
                 article_fetches += 1
                 try:
                     expanded = official_article_text(link)
-                    if len(expanded) >= 700:
+                    if len(expanded) >= 350:
                         desc = expanded
                         stats["expanded_from_official_article"] = stats.get("expanded_from_official_article", 0) + 1
                 except Exception as exc:
                     stats["article_fetch_failed"] = stats.get("article_fetch_failed", 0) + 1
                     print("Official article unavailable:", type(exc).__name__, str(exc)[:100])
-            if len(desc) < 700 or not re.search(r"[.!?][\"\']?\s*$", desc):
+            if len(desc) < 350 or not re.search(r"[.!?][\"\']?\s*$", desc):
                 stats["short_content"] += 1
                 continue
             if not newsworthy_title(title) or topic_duplicate(title, existing):
@@ -426,7 +431,7 @@ def main():
                 continue
             score_parts = opportunity_score(when, title, desc, now)
             score = sum(score_parts.values())
-            if score < 60:
+            if score < 50:
                 stats.setdefault("below_threshold", 0)
                 stats["below_threshold"] += 1
                 continue
