@@ -61,6 +61,15 @@ jobs:
           assert parts["intent"] == 20, "Keyword scoring failed"
           assert sum(parts.values()) >= 60, "Expected editorial candidate rejected"
           assert not publisher.host_allowed("https://evil.example/news"), "Unofficial source accepted"
+          assert not publisher.newsworthy_title("What is Firefly Wedding? The Historical Romance Anime, Explained")
+          assert publisher.newsworthy_title("Firefly Wedding season 2 announced")
+          existing = {"existing.html": "<h1>Firefly Wedding TV drama announced for 2027</h1>"}
+          assert publisher.topic_duplicate("Firefly Wedding season 2 announced", existing)
+          assert publisher.editorial_sections("What is Firefly Wedding? Explained", "Example text", "https://www.crunchyroll.com/news/example") is None
+          source_text = "Distinctive publisher sentence should not appear in the article body."
+          brief = publisher.editorial_sections("Firefly Wedding season 2 announced", source_text, "https://www.crunchyroll.com/news/example")
+          assert brief and source_text not in brief
+          print("PASS: editorial filtering, duplicate detection and source-copy protection")
           print("PASS: RSS, dates, source restrictions, editorial scoring")
       - name: Find verified official announcements
         if: steps.pending.outputs.skip != 'true'
