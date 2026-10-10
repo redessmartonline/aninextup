@@ -192,7 +192,7 @@ def feed_image(node):
     for child in node.iter():
         if child.tag.rsplit("}", 1)[-1].lower() in ("description", "encoded", "summary", "content"):
             raw = html.unescape(child.text or "")
-            candidates.extend(re.findall(r'<img[^>]+src=["\\'](https://[^"\\']+)["\\']', raw, re.I))
+            candidates.extend(re.findall(r"<img[^>]+src=.(https://[^ >]+)", raw, re.I))
     # Restrict to HTTPS publisher CDN; do not use arbitrary RSS image URLs.
     for url in candidates:
         parts = urllib.parse.urlsplit(url)
