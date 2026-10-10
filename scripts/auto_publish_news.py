@@ -260,6 +260,9 @@ def official_page_image(article_url):
             url = urllib.parse.urljoin(article_url, html.unescape(candidate))
             parsed = urllib.parse.urlsplit(url)
             host = (parsed.hostname or "").lower()
+            if any(term in parsed.path.lower() for term in ("/favicon", "favicon-", "/icons/", "/logo", "logo.", "/avatar", "/placeholder", "/default-image")):
+                print("Rejected generic image metadata:", parsed.path[:140])
+                continue
             if parsed.scheme == "https" and any(host == h or host.endswith("." + h) for h in IMAGE_HOSTS):
                 print("Official article image candidate:", json.dumps({"host": host, "path": parsed.path[:180], "query_keys": sorted(urllib.parse.parse_qs(parsed.query).keys())}))
                 if parsed.path.rstrip("/") == urllib.parse.urlsplit(article_url).path.rstrip("/"):
