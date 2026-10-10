@@ -201,6 +201,39 @@ def feed_image(node):
             return url
     return ""
 
+def official_page_image(article_url):
+    """Use only the image explicitly attached to this official article."""
+    if not host_allowed(article_url):
+        return ""
+    try:
+        req = urllib.request.Request(article_url, headers={
+            "User-Agent": "Mozilla/5.0 (compatible; AniNextUpEditorial/1.0)",
+            "Accept": "text/html",
+        })
+        with urllib.request.urlopen(req, timeout=12) as response:
+            if not host_allowed(response.geturl()):
+                return ""
+            if "text/html" not in response.headers.get("Content-Type", "").lower():
+                return ""
+            body = response.read(500_001)
+            if len(body) > 500_000:
+                return ""
+        page = body.decode("utf-8", errors="replace")
+        for tag in re.findall(r"<meta\\b[^>]*>", page, re.I):
+            props = dict((k.lower(), html.unescape(v)) for k, v in re.findall(
+                r"""([a-zA-Z:-]+)\\s*=\\s*["']([^"']*)["']""", tag))
+            if props.get("property", "").lower() not in ("og:image", "og:image:url") and props.get("name", "").lower() != "twitter:image":
+                continue
+            url = urllib.parse.urljoin(article_url, props.get("content", ""))
+            parsed = urllib.parse.urlsplit(url)
+            host = (parsed.hostname or "").lower()
+            if parsed.scheme == "https" and any(host == h or host.endswith("." + h) for h in IMAGE_HOSTS):
+                return url
+    except (OSError, ValueError) as exc:
+        print("Official page cover extraction failed:", type(exc).__name__)
+    return ""
+
+
 def verified_image_bytes(url):
     if not url or urllib.parse.urlsplit(url).scheme != "https":
         return None
@@ -506,6 +539,12 @@ def main():
         image_payload = None
         if not verified_cover:
             image_payload = verified_image_bytes(FEED_IMAGES.get(link, ""))
+            if not image_payload:
+                page_cover = official_page_image(link)
+                if page_cover:
+                    image_payload = verified_image_bytes(page_cover)
+                    if image_payload:
+                        print("Verified article-specific social cover:", urllib.parse.urlsplit(page_cover).hostname)
             if image_payload:
                 verified_cover = "assets/images/news/" + hashlib.sha256(link.encode()).hexdigest()[:20] + image_payload[1]
         if not verified_cover:
