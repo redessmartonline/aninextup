@@ -192,7 +192,7 @@ def feed_image(node):
     for child in node.iter():
         if child.tag.rsplit("}", 1)[-1].lower() in ("description", "encoded", "summary", "content"):
             raw = html.unescape(child.text or "")
-            candidates.extend(re.findall(r"<img[^>]+src=.(https://[^ >]+)", raw, re.I))
+            candidates.extend(re.findall(r"""<img[^>]+src\s*=\s*["\x27](https://[^"\x27\s>]+)["\x27]""", raw, re.I))
     # Restrict to HTTPS publisher CDN; do not use arbitrary RSS image URLs.
     for url in candidates:
         parts = urllib.parse.urlsplit(url)
@@ -442,6 +442,7 @@ def main():
             candidates.append((score, when, title, link, desc, score_parts, matched[0] if matched else None))
     print("Editorial eligibility diagnostics:", json.dumps(stats, sort_keys=True), "candidates=", len(candidates))
     if not candidates:
+        print("DIAGNOSTIC: No eligible candidates; inspect the per-reason counts above (feed availability, age, article length, editorial rules and score).")
         print("Sin cambios en la página en esta ejecución: no eligible official announcements.")
         return
     # Prefer unpublished opportunities. Existing source URLs remain eligible
@@ -508,9 +509,11 @@ def main():
             if image_payload:
                 verified_cover = "assets/images/news/" + hashlib.sha256(link.encode()).hexdigest()[:20] + image_payload[1]
         if not verified_cover:
+            stats["missing_verified_cover"] = stats.get("missing_verified_cover", 0) + 1
             print("Sin publicar: falta portada oficial verificada para", title)
             continue
         if editorial_sections(title, desc, link) is None:
+            stats["insufficient_editorial_info"] = stats.get("insufficient_editorial_info", 0) + 1
             print("Sin publicar: información insuficiente o no estructurable para", title)
             continue
         break
