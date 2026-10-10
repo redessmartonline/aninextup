@@ -413,17 +413,17 @@ def main():
             if len(title) < 22:
                 stats["short_content"] += 1
                 continue
-            if len(desc) < 350 and article_fetches < MAX_ARTICLE_FETCHES:
+            if len(desc) < 700 and article_fetches < MAX_ARTICLE_FETCHES:
                 article_fetches += 1
                 try:
                     expanded = official_article_text(link)
-                    if len(expanded) >= 350:
+                    if len(expanded) > len(desc):
                         desc = expanded
                         stats["expanded_from_official_article"] = stats.get("expanded_from_official_article", 0) + 1
                 except Exception as exc:
                     stats["article_fetch_failed"] = stats.get("article_fetch_failed", 0) + 1
                     print("Official article unavailable:", type(exc).__name__, str(exc)[:100])
-            if len(desc) < 350 or not re.search(r"[.!?][\"\']?\s*$", desc):
+            if len(desc) < 120:
                 stats["short_content"] += 1
                 continue
             if not newsworthy_title(title) or topic_duplicate(title, existing):
