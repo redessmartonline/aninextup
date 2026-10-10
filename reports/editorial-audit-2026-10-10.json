@@ -1,0 +1,23 @@
+{
+  "audit_date": "2026-10-10",
+  "scope": "46 entries in assets/data.js; direct GitHub file reads",
+  "method": "Checked corresponding HTML file presence, h1, meta description, canonical; compared embedded aninextup-index date/status where available",
+  "entries": 46,
+  "article_files_read": 46,
+  "article_files_missing": 0,
+  "missing_h1": 0,
+  "missing_meta_description": 0,
+  "missing_canonical": 0,
+  "embedded_index_compared": 4,
+  "embedded_index_absent_optional": 42,
+  "embedded_index_date_status_mismatches": 0,
+  "index_invalid_statuses": 0,
+  "index_confirmed_without_date": 0,
+  "findings": [],
+  "limitations": [
+    "No verification of factual claims against official sources",
+    "No external image availability or HTTP status checks",
+    "Not a GitHub Actions run; manual connector-backed audit",
+    "The historic 47 editorial warnings were not recovered"
+  ]
+}
