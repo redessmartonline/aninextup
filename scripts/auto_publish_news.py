@@ -222,19 +222,39 @@ def verified_image_bytes(url):
         print("Image verification failed:", type(exc).__name__)
     return None
 
+NEWS_TERMS = re.compile(r"\\b(announced|announces|revealed|reveals|confirmed|confirms|premiere|trailer|teaser|renewed|new season|release date|new cast|adaptation)\\b", re.I)
+EXPLAINERS = re.compile(r"\\b(what is|explained|everything you need|guide to|how to|recap|ranking|best of)\\b", re.I)
+TOPIC_STOP = set("the and for with from anime manga official announced announces revealed reveals confirmed confirms new latest season release date trailer teaser adaptation".split())
+
+def newsworthy_title(title):
+    return bool(NEWS_TERMS.search(title)) and not EXPLAINERS.search(title)
+
+def topic_duplicate(title, existing):
+    words = [w for w in re.findall(r"[a-z0-9]+", title.lower()) if len(w) > 2 and w not in TOPIC_STOP]
+    pairs = set(zip(words, words[1:]))
+    if not pairs:
+        return False
+    for page in existing.values():
+        match = re.search(r"<h1[^>]*>(.*?)</h1>", page, re.I | re.S)
+        if match:
+            old = [w for w in re.findall(r"[a-z0-9]+", clean(match.group(1)).lower()) if len(w) > 2 and w not in TOPIC_STOP]
+            if pairs.intersection(zip(old, old[1:])):
+                return True
+    return False
+
 def editorial_sections(title, desc, source_url):
-    """Attribution-first presentation; never claim automatic prose is independently reported."""
-    # Require substantial text containing multiple complete sentences.
-    sentences = [x.strip() for x in re.split(r"(?<=[.!?])\s+(?=[A-Z0-9])", desc) if x.strip()]
-    if len(sentences) < 5 or len(set(sentences)) < 5:
+    """Short attributed review brief; never copy the source's paragraphs."""
+    if not newsworthy_title(title) or not host_allowed(source_url):
         return None
-    if len(desc) < 700 or len(desc) > 20000 or not re.search(r"[.!?][\"']?\s*$", desc):
-        return None
-    # Keep the source text attributed, rather than pretending it is original reporting.
-    midpoint = len(sentences) // 2
-    first = html.escape(" ".join(sentences[:midpoint]), quote=True)
-    second = html.escape(" ".join(sentences[midpoint:]), quote=True)
-    return '<h2>What the official source reports</h2><p>' + first + '</p><h2>Further details from the announcement</h2><p>' + second + '</p>'
+    title_e = html.escape(title, quote=True)
+    source_e = html.escape(source_url, quote=True)
+    return ('<h2>Official update</h2><p>Crunchyroll published an update titled '
+            '<em>' + title_e + '</em>. This brief points readers to the official '
+            'announcement. Further release, cast and streaming details require '
+            'editorial verification before publication.</p>'
+            '<h2>Official source</h2><p>Read the '
+            '<a href="' + source_e + '" rel="noopener noreferrer">original announcement</a> '
+            'for the full context.</p>')
 
 def items_from_feed(blob):
     root = ET.fromstring(blob)
@@ -361,6 +381,9 @@ def main():
             if len(desc) < 700 or not re.search(r"[.!?][\"\']?\s*$", desc):
                 stats["short_content"] += 1
                 continue
+            if not newsworthy_title(title) or topic_duplicate(title, existing):
+                stats["editorial_rejected"] = stats.get("editorial_rejected", 0) + 1
+                continue
             score_parts = opportunity_score(when, title, desc, now)
             score = sum(score_parts.values())
             if score < 60:
@@ -401,6 +424,8 @@ def main():
             if clean(old_desc) == clean(updated_desc):
                 print("Sin cambios: official source has no substantive update", matched_path.name)
                 continue
+            print("Existing article updates require manual editorial review")
+            continue
             revised = original[:begin] + html.escape(updated_desc, quote=True) + original[finish:]
             revised, count = re.subn(r'("dateModified"\s*:\s*")[^"]+(")', lambda m: m.group(1) + now.date().isoformat() + m.group(2), revised, count=1)
             if count != 1:
@@ -411,6 +436,9 @@ def main():
             matched_path.write_text(revised, encoding="utf-8")
             print("Updated existing official recap", matched_path.relative_to(ROOT), "from", link)
             return
+        if topic_duplicate(title, existing):
+            print("Skip: overlapping existing topic", title)
+            continue
         # Avoid a second page for the same headline even if its source URL differs.
         normalized_title = clean(title).casefold()
         if any(
