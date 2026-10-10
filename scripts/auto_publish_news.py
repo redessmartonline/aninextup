@@ -177,7 +177,7 @@ def clean(s):
 # Candidate cover URLs are extracted only from publisher-provided RSS metadata.
 # External images are never hotlinked: validate and cache the actual image bytes.
 FEED_IMAGES = {}
-IMAGE_HOSTS = ("crunchyroll.com", "crunchyrollsvc.com", "img1.ak.crunchyroll.com", "img2.ak.crunchyroll.com")
+IMAGE_HOSTS = ("crunchyroll.com", "crunchyrollsvc.com", "img1.ak.crunchyroll.com", "img2.ak.crunchyroll.com", "imgsrv.crunchyroll.com")
 
 def feed_image(node):
     candidates = []
@@ -230,7 +230,7 @@ def official_page_image(article_url):
             if parsed.scheme == "https" and any(host == h or host.endswith("." + h) for h in IMAGE_HOSTS):
                 return url
     except (OSError, ValueError) as exc:
-        print("Official page cover extraction failed:", type(exc).__name__)
+        print("Official page cover extraction failed:", type(exc).__name__, str(exc)[:120])
     return ""
 
 
@@ -257,7 +257,7 @@ def verified_image_bytes(url):
             if body.startswith(b"RIFF") and body[8:12] == b"WEBP":
                 return body, ".webp"
     except (OSError, ValueError) as exc:
-        print("Image verification failed:", type(exc).__name__)
+        print("Image verification failed:", type(exc).__name__, str(exc)[:120])
     return None
 
 NEWS_TERMS = re.compile(r"\b(announc(?:e|ed|es|ement)|reveal(?:ed|s)?|confirm(?:ed|s)?|premiere|trailer|teaser|renewed|new season|release date|new cast|adaptation)\b", re.I)
@@ -537,6 +537,7 @@ def main():
         if verified_cover and not (ROOT / verified_cover).is_file():
             verified_cover = ""
         image_payload = None
+        page_cover = ""
         if not verified_cover:
             image_payload = verified_image_bytes(FEED_IMAGES.get(link, ""))
             if not image_payload:
@@ -548,6 +549,7 @@ def main():
             if image_payload:
                 verified_cover = "assets/images/news/" + hashlib.sha256(link.encode()).hexdigest()[:20] + image_payload[1]
         if not verified_cover:
+            print("Cover diagnostic:", json.dumps({"source_host": urllib.parse.urlsplit(link).hostname, "rss_image_present": bool(FEED_IMAGES.get(link, "")), "rss_image_host": urllib.parse.urlsplit(FEED_IMAGES.get(link, "")).hostname or "", "article_image_present": bool(page_cover) if not FEED_IMAGES.get(link, "") else False}, sort_keys=True))
             stats["missing_verified_cover"] = stats.get("missing_verified_cover", 0) + 1
             print("Sin publicar: falta portada oficial verificada para", title)
             continue
