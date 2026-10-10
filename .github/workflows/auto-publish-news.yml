@@ -87,14 +87,14 @@ jobs:
           if '..' in cover_path.parts or not cover_path.is_file():
               raise SystemExit('Article cover missing from repository')
           image = cover_path.read_bytes()
-          valid_image = (image.startswith(b'\\xff\\xd8\\xff') or image.startswith(b'\\x89PNG\\r\\n\\x1a\\n') or (image.startswith(b'RIFF') and image[8:12] == b'WEBP'))
+          valid_image = (image.startswith(b'\xff\xd8\xff') or image.startswith(b'\x89PNG\r\n\x1a\n') or (image.startswith(b'RIFF') and image[8:12] == b'WEBP'))
           if len(image) < 2000 or not valid_image:
               raise SystemExit('Invalid or empty article cover')
           if 'og:image' not in body or ('https://aninextup.com/' + cover) not in body:
               raise SystemExit('Article missing matching social cover metadata')
           data_path = Path('assets/data.js')
           data = data_path.read_text(encoding='utf-8')
-          article = str(p).replace('\\','/')
+          article = str(p.with_suffix('')).replace('\\','/')
           matches = re.findall(r'article\s*:\s*["\x27]' + re.escape(article) + r'["\x27]',data)
           if len(matches) > 1:
               raise SystemExit('Duplicate index entry')

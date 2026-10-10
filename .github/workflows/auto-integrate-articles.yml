@@ -46,7 +46,7 @@ jobs:
               except Exception as e:
                   raise SystemExit(f"{p}: invalid aninextup-index JSON: {e}")
 
-              article = p.as_posix()
+              article = p.with_suffix("").as_posix()
 
               def js(v):
                   if v is None: return "null"
@@ -102,7 +102,7 @@ jobs:
                   existing.add(loc.text.strip())
 
           for p in sorted(Path("articles").glob("*.html")):
-              url = f"https://aninextup.com/articles/{p.name}"
+              url = f"https://aninextup.com/articles/{p.stem}"
               if url in existing:
                   continue
               node = ET.SubElement(root, f"{{{ns}}}url")

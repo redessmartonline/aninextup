@@ -1,0 +1,6 @@
+# Prevent search indexing of Cloudflare preview hosts only.
+# Production https://aninextup.com is intentionally not matched.
+https://:version.:subdomain.workers.dev/*
+  X-Robots-Tag: noindex, nofollow
+https://test-seo-clean-urls-2026-10-09-aninextup.redessmartonline.workers.dev/*
+  X-Robots-Tag: noindex, nofollow
