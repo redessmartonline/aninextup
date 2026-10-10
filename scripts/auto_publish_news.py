@@ -261,7 +261,10 @@ def official_page_image(article_url):
             parsed = urllib.parse.urlsplit(url)
             host = (parsed.hostname or "").lower()
             if parsed.scheme == "https" and any(host == h or host.endswith("." + h) for h in IMAGE_HOSTS):
-                print("Official article image candidate host:", host)
+                print("Official article image candidate:", json.dumps({"host": host, "path": parsed.path[:180], "query_keys": sorted(urllib.parse.parse_qs(parsed.query).keys())}))
+                if parsed.path.rstrip("/") == urllib.parse.urlsplit(article_url).path.rstrip("/"):
+                    print("Rejected cover: image metadata resolves to article page, not image")
+                    continue
                 return url
         print("Official page image metadata:", "candidates=", len(candidates), "approved=", 0)
     except (OSError, ValueError) as exc:
@@ -282,7 +285,9 @@ def verified_image_bytes(url):
             final_host = (final.hostname or "").lower()
             if final.scheme != "https" or not any(final_host == h or final_host.endswith("." + h) for h in IMAGE_HOSTS):
                 return None
+            print("Image response:", json.dumps({"status": response.status, "final_host": final_host, "final_path": final.path[:150], "content_type": response.headers.get("Content-Type", "")[:90], "content_length": response.headers.get("Content-Length", "")[:30]}))
             body = response.read(2_000_001)
+            print("Image payload:", json.dumps({"bytes": len(body), "signature": body[:12].hex()}))
             if len(body) < 2000 or len(body) > 2_000_000:
                 return None
             if body.startswith(b"\xff\xd8\xff"):
