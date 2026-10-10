@@ -119,15 +119,15 @@ def official_article_text(url):
         charset = response.headers.get_content_charset() or "utf-8"
     # Safe HTML diagnostics: structure only, never dump page content, cookies or headers.
     decoded = body.decode(charset, errors="replace")
-    title_match = re.search(r"<title\\b[^>]*>(.*?)</title\\s*>", decoded, re.I | re.S)
+    title_match = re.search(r"<title\b[^>]*>(.*?)</title\\s*>", decoded, re.I | re.S)
     page_title = clean(title_match.group(1)) if title_match else "(missing)"
     page_title = re.sub(r"https?://\\S+|[\\w.+-]+@[\\w.-]+", "[redacted]", page_title)[:100]
     tag_counts = {
-        tag: len(re.findall(r"<" + tag + r"\\b", decoded, re.I))
+        tag: len(re.findall(r"<" + tag + r"\b", decoded, re.I))
         for tag in ("html", "head", "body", "main", "article", "p", "script", "noscript")
     }
     jsonld_count = len(re.findall(
-        r"<script\\b[^>]*type\\s*=\\s*['\\\"]application/ld\\+json['\\\"]",
+        r"<script\b[^>]*type\\s*=\\s*['\\\"]application/ld\\+json['\\\"]",
         decoded, re.I
     ))
     print("HTML diagnostics:", json.dumps({
@@ -222,8 +222,8 @@ def verified_image_bytes(url):
         print("Image verification failed:", type(exc).__name__)
     return None
 
-NEWS_TERMS = re.compile(r"\\b(announced|announces|revealed|reveals|confirmed|confirms|premiere|trailer|teaser|renewed|new season|release date|new cast|adaptation)\\b", re.I)
-EXPLAINERS = re.compile(r"\\b(what is|explained|everything you need|guide to|how to|recap|ranking|best of)\\b", re.I)
+NEWS_TERMS = re.compile(r"\b(announc(?:e|ed|es|ement)|reveal(?:ed|s)?|confirm(?:ed|s)?|premiere|trailer|teaser|renewed|new season|release date|new cast|adaptation)\b", re.I)
+EXPLAINERS = re.compile(r"\b(what is|explained|everything you need|guide to|how to|recap|ranking|best of)\b", re.I)
 TOPIC_STOP = set("the and for with from anime manga official announced announces revealed reveals confirmed confirms new latest season release date trailer teaser adaptation".split())
 
 def newsworthy_title(title):
