@@ -47,7 +47,7 @@ anime:[
 {id:"blue-box-s2",image:"assets/images/blue-box-season-2.png",title:"Blue Box Season 2",date:"2026-10-04",platform:"Netflix",article:"articles/blue-box-season-2",category:"Season Premiere",status:"confirmed"},
 {id:"space-mercenary",image:"assets/images/reborn-space-mercenary.jpeg",title:"Reborn as a Space Mercenary",date:"2026-10-04",platform:"Crunchyroll",article:"articles/reborn-space-mercenary",category:"Premiere",status:"confirmed"},
 {id:"psyren",image:"assets/images/psyren.jpg",title:"PSYREN",date:"2026-10-05",platform:"Crunchyroll",article:"articles/psyren-release-date",category:"Premiere",status:"confirmed"},
-{id:"ranma-s3",image:"assets/images/ranma-season-3.jpeg",title:"Ranma 1/2 Season 3",date:null,dateLabel:"October 2026",platform:"Netflix",article:"articles/ranma-season-3",category:"Season Premiere",status:"month-confirmed"}
+{id:"ranma-s3",image:"assets/images/ranma-season-3.jpeg",title:"Ranma 1/2 Season 3",date:"2026-10-03",platform:"Netflix",article:"articles/ranma-season-3",category:"Season Premiere",status:"confirmed"}
 ],
 guides:[
 {image:"assets/images/covers/sasaki-and-peeps-season-2.jpg",title:"Sasaki and Peeps Season 2 Anime Shares Creditless Opening and Ending Videos",tag:"OFFICIAL NEWS",article:"articles/sasaki-and-peeps-season-2-anime-shares-creditless-opening-and-end-a03f04c7",description:"Sasaki and Peeps Season 2 has released creditless opening and ending videos, featuring MADKID's Unbroken and nonfic!'s Sukipi no Okage!."},
