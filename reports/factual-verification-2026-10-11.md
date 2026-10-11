@@ -181,3 +181,40 @@ Se leyeron íntegramente las secciones informativas de otros seis artículos. Es
 | [The Otome Heroine's Fight for Survival](../articles/otome-heroines-fight-for-survival-anime.html) | Julio 2027; Fuka Izumi; Noriyoshi Sasaki; STUDIO CLUTCH y Animation Studio Seven; sin streaming internacional | https://prtimes.jp/main/html/rd/p/000000211.000174060.html | Leído; contraste externo pendiente |
 
 **Recuento de trabajo:** 22 de 63 artículos han sido inspeccionados individualmente en las pasadas documentadas; 41 aún no han sido inspeccionados de este modo. Este número refleja lectura y clasificación de afirmaciones, **no** 22 artículos íntegramente certificados.
+
+
+## Cotejo documental directo — lote 5 (11 octubre 2026)
+
+Este lote vuelve sobre dos artículos del lote 4 y **sí compara el texto original de los comunicados** con las afirmaciones publicadas, en lugar de limitarse a registrar URLs.
+
+### Cosmoship Yamato √2199
+Fuente primaria leída: https://www.production-ig.co.jp/hotnews/2026/100601/ (6 octubre 2026). Corroboración independiente de coproductora: https://www.khara.co.jp/2026/10/06/261005-1/
+
+| Afirmación del artículo | Resultado |
+|---|---|
+| Anuncio el 6 de octubre de 2026, aniversario 52 de Yamato | Respaldada |
+| Nuevo largometraje de animación para salas, no temporada televisiva | Respaldada |
+| Hideaki Anno: planificación, producción ejecutiva, dirección y diseño | Respaldada |
+| Yutaka Izubuchi: dirección y diseño | Respaldada |
+| Mitsuhisa Ishikawa: planificación; Yoshinobu Nishizaki: obra original | Respaldada |
+| Production I.G y Studio Khara: primera coproducción de animación | Respaldada |
+| No hay fecha de estreno ni distribución internacional en el anuncio | Respaldada como ausencia de datos en el comunicado; revisar nuevos anuncios antes de actualizar |
+| No es continuación convencional de Yamato 2199 | El artículo **no lo afirma**: indica correctamente que la continuidad argumental sigue sin aclararse |
+
+**Conclusión:** las afirmaciones principales del artículo quedan respaldadas por dos comunicados de los propios estudios. Las ausencias de información son válidas únicamente a fecha del anuncio.
+
+### Manchuria Opium Squad
+Fuente primaria leída: https://news.ponycanyon.co.jp/2026/10/126491 (publicación de 5 octubre de 2026).
+
+| Afirmación del artículo | Resultado |
+|---|---|
+| Adaptación al anime anunciada el 5 octubre 2026 | Respaldada |
+| Primera imagen promocional de la adaptación | Respaldada |
+| Sin estudio, elenco, fecha ni formato anunciados inicialmente | Respaldada como estado del anuncio inicial |
+| Manchuria, 1937; Isamu Higata busca ayudar a su madre enferma | Respaldada por sinopsis del comunicado |
+| Historia original de Tsukasa Monma; dibujo actual de Tsurushima; arte original de Shikako | Respaldada |
+| Ningún servicio de streaming confirmado en el comunicado inicial | Respaldada como ausencia de anuncio, no prueba de indisponibilidad futura |
+
+**Conclusión:** las afirmaciones centrales son consistentes con el comunicado de Pony Canyon. No se detectó contradicción que exigiera modificar estos dos artículos. El cotejo no incluye todas las frases editoriales ni noticias publicadas posteriormente.
+
+**Control de alcance:** estos son 2 artículos del lote previamente inspeccionado, no 2 artículos nuevos; el total de artículos individualmente inspeccionados sigue en **22 de 63**. Se eleva el nivel de evidencia de estos dos, pero **no** se declara completada la auditoría exhaustiva de los 63.
