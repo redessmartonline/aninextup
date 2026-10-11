@@ -25,7 +25,10 @@ for row in rows:
    req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0 (compatible; AniNextUpLinkAudit/1.0)','Accept':'image/avif,image/webp,image/*,*/*;q=0.8','Range':'bytes=0-2047'})
    with urllib.request.urlopen(req,timeout=12) as resp:
     typ=resp.headers.get('Content-Type','').split(';')[0].lower()
-    item.update(http_status=resp.status,content_type=typ,result='ok' if typ.startswith('image/') else 'not_image')
+    signature=resp.read(32)
+    image_bytes=(signature.startswith((b'\xff\xd8\xff',b'\x89PNG\r\n\x1a\n',b'GIF87a',b'GIF89a',b'RIFF')) or signature[4:12] in (b'ftypavif',b'ftypavis') or b'<svg' in signature.lower())
+    item.update(http_status=resp.status,content_type=typ,result='ok' if typ.startswith('image/') or image_bytes else 'not_image')
+    if image_bytes and not typ.startswith('image/'):item['note']='Image signature recognized despite incorrect Content-Type'
   except urllib.error.HTTPError as e:item.update(http_status=e.code,result='http_error')
   except Exception as e:item.update(result='network_error',detail=str(e)[:180])
  results.append(item)
