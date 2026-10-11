@@ -1,0 +1,438 @@
+{
+  "scope": "Article-level factual verification; structural validation is separate",
+  "checked_on": "2026-10-10",
+  "total": 46,
+  "partially_verified": 2,
+  "fully_verified": 0,
+  "pending": 44,
+  "warning": "Partial verification does not validate every assertion in the article.",
+  "articles": [
+    {
+      "id": "hirayasumi",
+      "title": "Hirayasumi",
+      "article": "articles/hirayasumi-anime-release-date",
+      "date": null,
+      "status": "pending_manual_fact_check",
+      "checked_claims": [],
+      "source_urls": []
+    },
+    {
+      "id": "walking-home-with-you",
+      "title": "Walking Home with You",
+      "article": "articles/walking-home-with-you-anime",
+      "date": null,
+      "status": "pending_manual_fact_check",
+      "checked_claims": [],
+      "source_urls": []
+    },
+    {
+      "id": "pokemon-horizons-season-4-wonders-ahead",
+      "title": "Pokémon Horizons: Season 4—Wonders Ahead",
+      "article": "articles/pokemon-horizons-season-4-wonders-ahead",
+      "date": "2027-02-27",
+      "status": "pending_manual_fact_check",
+      "checked_claims": [],
+      "source_urls": []
+    },
+    {
+      "id": "hello-witch-love-potion",
+      "title": "Hello, I am a Witch and my Crush Wants me to Make a Love Potion!",
+      "article": "articles/hello-witch-love-potion-release-date",
+      "date": "2026-10-05",
+      "status": "partially_verified_official_source",
+      "checked_claims": [
+        "Japan broadcast and streaming start 2026-10-05",
+        "Rose and Harij premise"
+      ],
+      "source_urls": [
+        "https://horemajo-anime.com/news/",
+        "https://horemajo-anime.com/story/"
+      ]
+    },
+    {
+      "id": "apothecary-diaries-movie",
+      "title": "The Apothecary Diaries: Treasure of the Late Empress",
+      "article": "articles/apothecary-diaries-movie",
+      "date": "2026-12-11",
+      "status": "pending_manual_fact_check",
+      "checked_claims": [],
+      "source_urls": []
+    },
+    {
+      "id": "takopis-original-sin-movie",
+      "title": "Takopi's Original Sin: Thank You, See You Tomorrow",
+      "article": "articles/takopis-original-sin-movie",
+      "date": "2026-11-27",
+      "status": "pending_manual_fact_check",
+      "checked_claims": [],
+      "source_urls": []
+    },
+    {
+      "id": "votoms-gray-witch",
+      "title": "Armored Trooper VOTOMS: The Gray Witch Part 1",
+      "article": "articles/votoms-gray-witch-part-1",
+      "date": "2026-11-20",
+      "status": "pending_manual_fact_check",
+      "checked_claims": [],
+      "source_urls": []
+    },
+    {
+      "id": "witch-on-the-holy-night",
+      "title": "Witch on the Holy Night",
+      "article": "articles/witch-on-the-holy-night-movie",
+      "date": "2026-11-20",
+      "status": "pending_manual_fact_check",
+      "checked_claims": [],
+      "source_urls": []
+    },
+    {
+      "id": "rakuen-tsuihou-resonance",
+      "title": "Rakuen Tsuihou: Kokoro no Resonance",
+      "article": "articles/rakuen-tsuihou-kokoro-no-resonance",
+      "date": "2026-11-13",
+      "status": "pending_manual_fact_check",
+      "checked_claims": [],
+      "source_urls": []
+    },
+    {
+      "id": "demons-crest",
+      "title": "Demon's Crest",
+      "article": "articles/demons-crest-release-date",
+      "date": "2026-11-06",
+      "status": "partially_verified_official_source",
+      "checked_claims": [
+        "worldwide Prime Video release 2026-11-06",
+        "Production I.G",
+        "Ado opening Shinka"
+      ],
+      "source_urls": [
+        "https://demonscrest-anime.com/news/index00050000.html",
+        "https://demonscrest-anime.com/news/index00020000.html"
+      ]
+    },
+    {
+      "id": "bass-x-machina",
+      "title": "Bass X Machina",
+      "article": "articles/bass-x-machina-release-date",
+      "date": "2026-11-03",
+      "status": "pending_manual_fact_check",
+      "checked_claims": [],
+      "source_urls": []
+    },
+    {
+      "id": "dreamland",
+      "title": "Dreamland",
+      "article": "articles/dreamland-release-date",
+      "date": "2026-10-16",
+      "status": "pending_manual_fact_check",
+      "checked_claims": [],
+      "source_urls": []
+    },
+    {
+      "id": "dark-machine",
+      "title": "DARK MACHINE THE ANIMATION",
+      "article": "articles/dark-machine-the-animation",
+      "date": "2026-10-13",
+      "status": "pending_manual_fact_check",
+      "checked_claims": [],
+      "source_urls": []
+    },
+    {
+      "id": "chitose-ramune-cour-2",
+      "title": "Chitose Is in the Ramune Bottle 2nd Cour",
+      "article": "articles/chitose-ramune-bottle-cour-2",
+      "date": "2026-10-13",
+      "status": "pending_manual_fact_check",
+      "checked_claims": [],
+      "source_urls": []
+    },
+    {
+      "id": "horror-collector",
+      "title": "HORROR COLLECTOR",
+      "article": "articles/horror-collector-release-date",
+      "date": "2026-10-10",
+      "status": "pending_manual_fact_check",
+      "checked_claims": [],
+      "source_urls": []
+    },
+    {
+      "id": "a-certain-dark-item",
+      "title": "A Certain Dark Item",
+      "article": "articles/a-certain-dark-item-release-date",
+      "date": "2026-10-09",
+      "status": "pending_manual_fact_check",
+      "checked_claims": [],
+      "source_urls": []
+    },
+    {
+      "id": "dandivine",
+      "title": "Dandivine",
+      "article": "articles/dandivine-release-date",
+      "date": "2026-10-07",
+      "status": "pending_manual_fact_check",
+      "checked_claims": [],
+      "source_urls": []
+    },
+    {
+      "id": "worlds-strongest-witch",
+      "title": "The World\\'s Strongest Witch",
+      "article": "articles/worlds-strongest-witch",
+      "date": "2026-10-07",
+      "status": "pending_manual_fact_check",
+      "checked_claims": [],
+      "source_urls": []
+    },
+    {
+      "id": "vermilion-mask",
+      "title": "The Vermilion Mask",
+      "article": "articles/vermilion-mask-release-date",
+      "date": "2026-10-10",
+      "status": "pending_manual_fact_check",
+      "checked_claims": [],
+      "source_urls": []
+    },
+    {
+      "id": "tank-chair",
+      "title": "TANK CHAIR",
+      "article": "articles/tank-chair-release-date",
+      "date": "2026-10-04",
+      "status": "pending_manual_fact_check",
+      "checked_claims": [],
+      "source_urls": []
+    },
+    {
+      "id": "tokyo-revengers-war-three-titans",
+      "title": "Tokyo Revengers: War of the Three Titans",
+      "article": "articles/tokyo-revengers-war-three-titans",
+      "date": "2026-10-02",
+      "status": "pending_manual_fact_check",
+      "checked_claims": [],
+      "source_urls": []
+    },
+    {
+      "id": "dragon-ball-super-beerus",
+      "title": "Dragon Ball Super: Beerus",
+      "article": "articles/dragon-ball-super-beerus",
+      "date": "2026-10-11",
+      "status": "pending_manual_fact_check",
+      "checked_claims": [],
+      "source_urls": []
+    },
+    {
+      "id": "cyberpunk-edgerunners-2",
+      "title": "Cyberpunk: Edgerunners 2",
+      "article": "articles/cyberpunk-edgerunners-2",
+      "date": "2026-10-20",
+      "status": "pending_manual_fact_check",
+      "checked_claims": [],
+      "source_urls": []
+    },
+    {
+      "id": "im-looking-for-a-zombie",
+      "title": "I'm Looking For a Zombie",
+      "article": "articles/im-looking-for-a-zombie",
+      "date": "2026-10-03",
+      "status": "pending_manual_fact_check",
+      "checked_claims": [],
+      "source_urls": []
+    },
+    {
+      "id": "tale-secret-saint",
+      "title": "A Tale of the Secret Saint",
+      "article": "articles/tale-secret-saint",
+      "date": "2026-10-03",
+      "status": "pending_manual_fact_check",
+      "checked_claims": [],
+      "source_urls": []
+    },
+    {
+      "id": "romelia-war-chronicle",
+      "title": "Romelia War Chronicle",
+      "article": "articles/romelia-war-chronicle",
+      "date": "2026-10-03",
+      "status": "pending_manual_fact_check",
+      "checked_claims": [],
+      "source_urls": []
+    },
+    {
+      "id": "aoashi-season-2",
+      "title": "Aoashi Season 2",
+      "article": "articles/aoashi-season-2",
+      "date": "2026-10-04",
+      "status": "pending_manual_fact_check",
+      "checked_claims": [],
+      "source_urls": []
+    },
+    {
+      "id": "reincarnated-goblin",
+      "title": "So What's Wrong with Getting Reborn as a Goblin?",
+      "article": "articles/reincarnated-goblin",
+      "date": "2026-10-05",
+      "status": "pending_manual_fact_check",
+      "checked_claims": [],
+      "source_urls": []
+    },
+    {
+      "id": "nia-liston",
+      "title": "Nia Liston: The Merciless Maiden",
+      "article": "articles/nia-liston-release-date",
+      "date": "2026-10-06",
+      "status": "pending_manual_fact_check",
+      "checked_claims": [],
+      "source_urls": []
+    },
+    {
+      "id": "laid-off-cheat-granting-mage",
+      "title": "The Laid-Off Cheat-Granting Mage Enjoys a Second Lease on Life",
+      "article": "articles/laid-off-cheat-granting-mage",
+      "date": "2026-10-06",
+      "status": "pending_manual_fact_check",
+      "checked_claims": [],
+      "source_urls": []
+    },
+    {
+      "id": "sasaki-and-peeps-season-2",
+      "title": "Sasaki and Peeps Season 2",
+      "article": "articles/sasaki-and-peeps-season-2",
+      "date": "2026-10-07",
+      "status": "pending_manual_fact_check",
+      "checked_claims": [],
+      "source_urls": []
+    },
+    {
+      "id": "detective-is-already-dead-season-2",
+      "title": "The Detective Is Already Dead Season 2",
+      "article": "articles/detective-is-already-dead-season-2",
+      "date": "2026-10-07",
+      "status": "pending_manual_fact_check",
+      "checked_claims": [],
+      "source_urls": []
+    },
+    {
+      "id": "iceblade-sorcerer-ii",
+      "title": "The Iceblade Sorcerer Shall Rule the World II",
+      "article": "articles/iceblade-sorcerer-ii",
+      "date": "2026-10-08",
+      "status": "pending_manual_fact_check",
+      "checked_claims": [],
+      "source_urls": []
+    },
+    {
+      "id": "ace-of-diamond-second-season",
+      "title": "Ace of the Diamond act II -Second Season- Cour 2",
+      "article": "articles/ace-of-diamond-second-season",
+      "date": "2026-10-11",
+      "status": "pending_manual_fact_check",
+      "checked_claims": [],
+      "source_urls": []
+    },
+    {
+      "id": "ramparts-of-ice-season-2",
+      "title": "The Ramparts of Ice Season 2",
+      "article": "articles/ramparts-of-ice-season-2",
+      "date": "2026-10-01",
+      "status": "pending_manual_fact_check",
+      "checked_claims": [],
+      "source_urls": []
+    },
+    {
+      "id": "returners-magic-s2",
+      "title": "A Returner's Magic Should Be Special Season 2",
+      "article": "articles/returners-magic-season-2",
+      "date": "2026-10-07",
+      "status": "pending_manual_fact_check",
+      "checked_claims": [],
+      "source_urls": []
+    },
+    {
+      "id": "magic-knight-rayearth-2026",
+      "title": "Magic Knight Rayearth 2026",
+      "article": "articles/magic-knight-rayearth-2026",
+      "date": "2026-10-07",
+      "status": "pending_manual_fact_check",
+      "checked_claims": [],
+      "source_urls": []
+    },
+    {
+      "id": "firefly-wedding",
+      "title": "Firefly Wedding",
+      "article": "articles/firefly-wedding",
+      "date": "2026-10-09",
+      "status": "pending_manual_fact_check",
+      "checked_claims": [],
+      "source_urls": []
+    },
+    {
+      "id": "my-happy-marriage-specials",
+      "title": "My Happy Marriage Season 2 Special Episodes",
+      "article": "articles/my-happy-marriage-special-episodes",
+      "date": "2026-10-25",
+      "status": "pending_manual_fact_check",
+      "checked_claims": [],
+      "source_urls": []
+    },
+    {
+      "id": "apothecary-s3",
+      "title": "The Apothecary Diaries Season 3",
+      "article": "articles/apothecary-diaries-season-3",
+      "date": "2026-10-02",
+      "status": "pending_manual_fact_check",
+      "checked_claims": [],
+      "source_urls": []
+    },
+    {
+      "id": "black-clover-s2",
+      "title": "Black Clover Season 2",
+      "article": "articles/black-clover-season-2",
+      "date": "2026-10-03",
+      "status": "pending_manual_fact_check",
+      "checked_claims": [],
+      "source_urls": []
+    },
+    {
+      "id": "suikoden",
+      "title": "Suikoden: The Anime",
+      "article": "articles/suikoden-anime",
+      "date": "2026-10-03",
+      "status": "pending_manual_fact_check",
+      "checked_claims": [],
+      "source_urls": []
+    },
+    {
+      "id": "blue-box-s2",
+      "title": "Blue Box Season 2",
+      "article": "articles/blue-box-season-2",
+      "date": "2026-10-04",
+      "status": "pending_manual_fact_check",
+      "checked_claims": [],
+      "source_urls": []
+    },
+    {
+      "id": "space-mercenary",
+      "title": "Reborn as a Space Mercenary",
+      "article": "articles/reborn-space-mercenary",
+      "date": "2026-10-04",
+      "status": "pending_manual_fact_check",
+      "checked_claims": [],
+      "source_urls": []
+    },
+    {
+      "id": "psyren",
+      "title": "PSYREN",
+      "article": "articles/psyren-release-date",
+      "date": "2026-10-05",
+      "status": "pending_manual_fact_check",
+      "checked_claims": [],
+      "source_urls": []
+    },
+    {
+      "id": "ranma-s3",
+      "title": "Ranma 1/2 Season 3",
+      "article": "articles/ranma-season-3",
+      "date": "2026-10-03",
+      "status": "pending_manual_fact_check",
+      "checked_claims": [],
+      "source_urls": []
+    }
+  ]
+}
