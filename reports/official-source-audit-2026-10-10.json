@@ -1,0 +1,98 @@
+{
+  "date": "2026-10-10",
+  "scope": "Evidence-based date and platform spot checks against official publisher and streaming sources; not a complete article-level factual audit",
+  "confirmed": [
+    {
+      "id": "cyberpunk-edgerunners-2",
+      "date": "2026-10-20",
+      "platform": "Netflix",
+      "source": "https://press.cdprojektred.com/en/news/1837/cyberpunk-edgerunners-2-premiere-date-announced-alongside-new-trailer",
+      "verification": "date_and_platform"
+    },
+    {
+      "id": "black-clover-s2",
+      "date": "2026-10-03",
+      "platform": "Crunchyroll",
+      "source": "https://www.tv-tokyo.co.jp/anime/bclover/news/",
+      "verification": "date_and_platform"
+    },
+    {
+      "id": "apothecary-s3",
+      "date": "2026-10-02",
+      "platform": "Crunchyroll",
+      "source": "https://www.crunchyroll.com/es/news/latest/2026/10/2/the-apothecary-diaries-3-anime-opening",
+      "verification": "date_and_platform"
+    },
+    {
+      "id": "magic-knight-rayearth-2026",
+      "date": "2026-10-07",
+      "platform": "Crunchyroll",
+      "source": "https://www.crunchyroll.com/news/latest/2026/9/20/new-magic-knight-rayearth-anime-theme-songs-previewed-in-new-trailer",
+      "verification": "date_and_platform"
+    },
+    {
+      "id": "firefly-wedding",
+      "date": "2026-10-09",
+      "platform": "Crunchyroll",
+      "source": "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+      "verification": "date_and_platform"
+    },
+    {
+      "id": "dragon-ball-super-beerus",
+      "date": "2026-10-11",
+      "platform": "Crunchyroll (supported territories)",
+      "source": "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+      "verification": "date_and_platform"
+    },
+    {
+      "id": "ace-of-diamond-second-season",
+      "date": "2026-10-11",
+      "platform": "Crunchyroll",
+      "source": "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+      "verification": "date_and_platform"
+    },
+    {
+      "id": "chitose-ramune-cour-2",
+      "date": "2026-10-13",
+      "platform": "Crunchyroll",
+      "source": "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+      "verification": "date_and_platform"
+    },
+    {
+      "id": "a-certain-dark-item",
+      "date": "2026-10-09",
+      "platform": "Crunchyroll",
+      "source": "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+      "verification": "date_and_platform"
+    },
+    {
+      "id": "returners-magic-s2",
+      "date": "2026-10-07",
+      "platform": "Crunchyroll",
+      "source": "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+      "verification": "date_and_platform"
+    },
+    {
+      "id": "detective-is-already-dead-season-2",
+      "date": "2026-10-07",
+      "platform": "Crunchyroll",
+      "source": "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+      "verification": "date_and_platform"
+    },
+    {
+      "id": "iceblade-sorcerer-ii",
+      "date": "2026-10-08",
+      "platform": "Crunchyroll",
+      "source": "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+      "verification": "date_and_platform"
+    }
+  ],
+  "count_confirmed": 12,
+  "total_indexed": 46,
+  "remaining_unverified": 34,
+  "notes": [
+    "Crunchyroll's schedule uses weekly weekday and time for some shows; those specific calendar dates are inferred from the first week and should not be considered independently verified exact dates.",
+    "The verified platform is not necessarily exclusive; distribution territories vary.",
+    "The wording and all claims inside each article have not been individually fact-checked."
+  ]
+}
