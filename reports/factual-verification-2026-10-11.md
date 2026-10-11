@@ -350,3 +350,23 @@ Se consultaron https://aninextup.com/calendar y https://aninextup.com/this-week 
 - Una ejecución previa `38161632541` sí figuraba como **completed/success** para `040ce6720dd81bc7956ab79bea0f3bfd3098f507`, pero corresponde a un commit anterior y no certifica los últimos cambios.
 
 **Pendiente:** confirmar éxito y resultados de la nueva auditoría, verificar publicación real sin caché, comprobar exhaustivamente enlaces/imágenes externos y cerrar afirmaciones editoriales todavía abiertas.
+
+
+## Resultado del artefacto de auditoría pública recibido (11 octubre 2026)
+
+Se inspeccionó el archivo aportado por el propietario `aninextup-public-audit(4).zip`, cuyo único contenido es `audit-results.json` (190763 bytes). Fecha de ejecución declarada por el informe: **2026-10-11 17:58:34 UTC**.
+
+| Indicador | Resultado del artefacto |
+|---|---:|
+| URL en sitemap | 76 |
+| Artículos HTML | 63 |
+| URL únicas comprobadas | 314 |
+| Respuestas evaluadas OK | 314 |
+| Requieren comprobación manual según validador HTTP | 0 |
+| Fallidas o no verificadas | 0 |
+| Recursos de imagen entre URL comprobadas | 94 |
+| Posibles artículos casi duplicados | 0 |
+| Artículos sin dominios de fuente externa | 0 |
+| Artículos con menos de 150 palabras | 0 |
+
+**Alcance:** el validador comprobó respuestas HTTP y presencia de fuentes; no demuestra exactitud factual, derechos de uso de imágenes, calidad de atribución ni elegibilidad/aprobación de AdSense. El propio JSON señala: `Manual official-source comparison still required; HTTP success is not factual verification.` Este artefacto **no certifica** la publicación de metadatos SEO actualizados ni reemplaza una inspección de HTML crudo sin caché.
