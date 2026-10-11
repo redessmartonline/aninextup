@@ -370,3 +370,17 @@ Se inspeccionó el archivo aportado por el propietario `aninextup-public-audit(4
 | Artículos con menos de 150 palabras | 0 |
 
 **Alcance:** el validador comprobó respuestas HTTP y presencia de fuentes; no demuestra exactitud factual, derechos de uso de imágenes, calidad de atribución ni elegibilidad/aprobación de AdSense. El propio JSON señala: `Manual official-source comparison still required; HTTP success is not factual verification.` Este artefacto **no certifica** la publicación de metadatos SEO actualizados ni reemplaza una inspección de HTML crudo sin caché.
+
+
+## Verificación de fuentes oficiales y publicación (11 octubre 2026, revisión posterior)
+
+**Publicación confirmada parcialmente.** La URL pública https://aninextup.com/this-week devuelve el título `This Week’s Anime Releases — Current Schedule & Where to Watch | AniNextUp`, correspondiente a la corrección SEO de `fc8b7e374bedbc0074f12a8d980d293c36fb51ca`. La representación sin JavaScript muestra marcadores de secciones sin fechas dinámicas; esto no confirma el renderizado en navegador, pero sí la publicación del título actualizado. La URL https://aninextup.com/articles/horror-collector-release-date no fue accesible mediante el lector web en esta revisión; no se afirma su despliegue individual.
+
+**Cotejos primarios realizados:**
+
+1. `witch-on-the-holy-night-movie`: https://mahoyo-movie.com/ confirma estreno japonés 20 noviembre 2026, ufotable, dirección de Masaru Takeuchi, dirección general de Hikaru Kondo, personajes principales y tema `Yoru to Ao` de supercell. **Confirmadas esas afirmaciones**; fechas teatrales internacionales de enero de 2027 siguen pendientes de contrastar con distribuidores de cada territorio.
+2. `rakuen-tsuihou-kokoro-no-resonance`: https://rakuen-tsuiho-r.com/news/?article_id=69150 confirma estreno cinematográfico japonés **13 noviembre 2026**. **Confirmada fecha**; argumento y créditos completos aún requieren cotejo separado.
+3. `sasaki-and-peeps-season-2-anime-shares-creditless-opening-and-end-a03f04c7`: https://sasapi-anime.com/music/opening_2nd.html confirma tema de apertura `Unbroken`, MADKID y single el 14 octubre 2026. https://sasapi-anime.com/music/ending_2nd.html confirma tema de cierre `Sukipi no Okage!`, nonfic!; lanzamiento comercial de cierre el 8 diciembre 2026, distinto del single de apertura. **Confirmadas estas afirmaciones**; publicación de los vídeos sin créditos y detalles de equipo aún requieren cotejo independiente.
+4. `horror-collector-release-date`: https://www.nhk-character.com/chara/kyoufucollector/news/20261009_89.html confirma NHK 10 octubre y streaming japonés episodio 1 el 15 octubre a las 12:00 JST. **Confirmada fuente**; despliegue del artículo individual no comprobado con el lector público.
+
+**Criterio:** ninguna de estas comprobaciones acredita por sí sola la verificación factual exhaustiva de las 63 noticias. Los lotes anteriores documentan fuentes pendientes; evitar cerrar el informe global hasta comparar cada afirmación material con la evidencia original. No se efectuaron cambios de contenido sin contradicción comprobada.
