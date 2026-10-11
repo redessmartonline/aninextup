@@ -943,3 +943,44 @@ El bloque nominal oficial indexado de la cartelera Crunchyroll confirma premisa 
 **Faltan:** hora internacional actual, confirmación accesible de streaming japonés anticipado y metadatos/identidad/canal del video inglés, con uploadDate declarado 15 septiembre. Fuente musical añadida, sin reemplazar un video por otro sin prueba; commit `c37a184f2295a8baf5664543f9a853e113b6d195`.
 
 **Balance: cinco pendientes examinados, cero cierres nuevos. Acumulado: 44/63 cerrados y 19/63 pendientes.** Cinco artículos actualizados: dos precisiones de alcance/actualidad y referencias oficiales adicionales. Se recuperaron los cinco HTML publicados y coinciden íntegramente con el contenido enviado. No se certifican fechas de subida usando fechas de comunicados ni se suman de nuevo artículos cerrados.
+
+
+## Continuación — cinco pendientes: fuentes editoriales y PV exactos (11 octubre 2026)
+
+Base recuperada del informe y de los últimos commits de main, HEAD `4f730d8e432ecbaaf70d8484d246a3cf6fdbdbae`: **44 cerrados / 19 pendientes**. Se leyeron íntegros los cinco HTML siguientes, incluidos sus metadatos. No se repiten cierres anteriores. Las pruebas indexadas del distribuidor se distinguen de las fuentes leídas directamente.
+
+### CERRADO — `hello-witch-love-potion-release-date.html`
+
+Lecturas directas https://horemajo-anime.com/onair/index.html, https://horemajo-anime.com/staffcast/index.html y https://horemajo-anime.com/story/index.html respaldan estreno japonés 5 octubre, Diomedéa, Kusakawa, Watari, Ishikawa, reparto y premisa. La nota oficial indexada https://www.crunchyroll.com/news/latest/2026/6/20/hello-i-am-a-witch-and-my-crush-wants-me-to-make-a-love-potion-anime-october-2026-premiere-teaser-trailer respalda la romanización Satoshi Matsumura.
+
+La editorial licenciada https://www.crossinfworld.com/Hello-I-am-a-Witch-and-my-Crush-Wants-me-to-Make-a-Love-Potion.html confirma Eiko Mutsuhana, género, cuatro años de enamoramiento de Rose y demora deliberada de los ingredientes para prolongar los encuentros con Harij. https://www.tristone.co.jp/artists/reini/ enlaza el **main PV exacto hGRtocAh3iw**. No hay uploadDate ni atribución de canal por certificar.
+
+El bloque nominal indexado de https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll?lid=0ojihzvhs258, actualizado 10 octubre, respalda lunes 05:30 PT y distribución internacional. La apertura directa no devuelve cuerpo: no se presenta como lectura directa del calendario. Se corrigió esa atribución a la cartelera de otoño, se atribuyó el género a la adaptación y se añadieron las pruebas editoriales/PV. Commit `8401a730e768c304c358180b1e94dce367f4bed9`. Las afirmaciones materiales de la versión publicada quedan respaldadas.
+
+### PENDIENTE — `horror-collector-release-date.html`
+
+Lecturas directas https://www.nhk-character.com/chara/kyoufucollector/, https://www.nhk-character.com/chara/kyoufucollector/news/20261009_89.html, https://www.nhk-character.com/chara/kyoufucollector/news/20260725_48.html y https://www.nhk-character.com/chara/kyoufucollector/staffcast confirman premisa/personajes, estreno TV 10 octubre, streaming doméstico 15 octubre a las 12:00 JST, Palette y aportación musical de Shikao Suga. El bloque nominal oficial indexado de Crunchyroll confirma incorporación internacional.
+
+**Falta prueba primaria de los 12 episodios afirmados en el texto y la descripción estructurada.** Resultados secundarios no bastan. No se elimina ese número como si se hubiera probado falso y no se certifica la ficha completa. No fue necesario repetir referencias ya publicadas.
+
+### PENDIENTE, VIDEO Y ACTUALIDAD PRECISADOS — `iceblade-sorcerer-ii.html`
+
+https://hyouken-anime.com/ leído directamente confirma ZERO-G, continuación, franja TBS 8 octubre de madrugada (fecha civil 9 octubre 01:28 JST), BS11 9 octubre 23:00 y streaming japonés 8 octubre 25:58 (9 octubre 01:58 JST). La cartelera oficial indexada de Crunchyroll respalda distribución, regiones y premisa.
+
+https://hyouken-anime.com/33/ identifica expresamente el **teaser oficial 30rSarCHpmA**. Se sustituyó sVrK70TP8tQ, cuya identidad no se pudo cotejar, por esa alternativa documentada en todos los enlaces y metadatos. No se declara falso el video anterior. La etiqueta ahora identifica el teaser, sin atribuir un canal no comprobado. No se declara fecha de subida.
+
+La versión actual indexada de Crunchyroll muestra jueves 10:00 PT, mientras una versión anterior conserva estreno 8 octubre/TBA. Se sustituyó la afirmación de TBA vigente por remisión a la cartelera actual y al episodio local. **Se mantiene pendiente hasta obtener un horario internacional actual inequívoco**, siguiendo el mismo criterio aplicado a Ace of Diamond en el lote anterior. Commit `ffbb5e246e528cfdb130c50b815d47094b829727`.
+
+### PENDIENTE — `reborn-space-mercenary.html`
+
+Texto oficial indexado de https://www.crunchyroll.com/news/announcements/2026/10/2/reborn-as-a-space-mercenary-i-woke-up-piloting-the-strongest-starship-anime-english-dub-release-date-cast-crew confirma lanzamiento japonés/inglés el 4 octubre y voces Kyle Phillips/Hiro, Kelsey Cruz/Elma, Emily Neves/Mimi y Jaclyn Thomas/Serena. https://www.crunchyroll.com/news/latest/2026/10/6/reborn-as-a-space-mercenary-anime-opening-song-music-video-flow respalda estreno y territorios. La cartelera nominal indexada confirma domingos 07:00 PT y versiones subtitulada/doblada. La apertura directa de esas notas no devolvió cuerpo legible; se registra el acceso indexado.
+
+**Faltan identidad y atribución de canal del trailer ov_3-6JOAkk**, presentado como Official Trailer 2/Crunchyroll. YouTube no devolvió contenido recuperable. No hay uploadDate en esta ficha. No se certifica el video por resultados de foros ni se repiten fuentes ya incluidas.
+
+### CERRADO, IDENTIFICACIÓN DEL PV PRECISADA — `vermilion-mask-release-date.html`
+
+Lectura directa del comunicado emitido por Yomiuri Telecasting Corporation https://www.prnewswire.com/news-releases/the-mask-comes-off-in-october-the-vermilion-mask-reveals-second-main-pv-key-visual-theme-songs-and-new-cast-302875686.html identifica **exactamente iX4N-Z5Hbxw como segundo main PV** y confirma argumento y equipo. Es un comunicado del emisor original distribuido por PR Newswire. https://prtimes.jp/main/html/rd/p/000000815.000051825.html confirma 10 octubre 17:30, red Yomiuri/Nippon TV y excepciones regionales. https://the-vermilion-mask.com/en/staff/ confirma Watanabe, Hazako, Ohigashi, Higashijima, Alisa Okehazama y 100studio.
+
+El bloque nominal oficial indexado de la cartelera Crunchyroll respalda estreno 10 octubre, sábados 02:30 PT y los territorios publicados. Se añadió el comunicado que prueba el PV exacto y se precisó la etiqueta como segundo main PV del anuncio Yomiuri, sin afirmar que se haya comprobado el nombre del canal de YouTube. No hay fecha de subida por certificar. Commit `7bde050710bdd3b590f19cdc86149e1ea6b324e8`. Las afirmaciones materiales de la versión publicada quedan respaldadas.
+
+**Balance: cinco pendientes examinados, dos cierres nuevos y tres aún pendientes. Acumulado vigente: 46/63 cerrados y 17/63 pendientes.** Tres artículos actualizados y recuperados de GitHub: coincidencia íntegra con el contenido enviado. Los cierres se limitan a las afirmaciones publicadas y pruebas descritas; la programación puede cambiar.
