@@ -218,3 +218,18 @@ Fuente primaria leída: https://news.ponycanyon.co.jp/2026/10/126491 (publicaci�
 **Conclusión:** las afirmaciones centrales son consistentes con el comunicado de Pony Canyon. No se detectó contradicción que exigiera modificar estos dos artículos. El cotejo no incluye todas las frases editoriales ni noticias publicadas posteriormente.
 
 **Control de alcance:** estos son 2 artículos del lote previamente inspeccionado, no 2 artículos nuevos; el total de artículos individualmente inspeccionados sigue en **22 de 63**. Se eleva el nivel de evidencia de estos dos, pero **no** se declara completada la auditoría exhaustiva de los 63.
+
+
+## Cotejo individual — lote 6 (11 octubre 2026): cinco artículos adicionales
+
+Se leyeron cinco artículos completos y se cotejaron los datos accesibles con anuncios oficiales. La clasificación diferencia evidencia textual de una fuente meramente enlazada.
+
+| Artículo | Comprobación contra fuente | Pendientes concretos |
+|---|---|---|
+| [Suikoden: The Anime](../articles/suikoden-anime.html) | **Confirmado directamente** por https://suikoden-anime.com/: estreno japonés 3/10/2026, 32 emisoras, primer episodio de 60 minutos, 24 plataformas japonesas y cierre musical de Koji Nakamura con Honoka Takahashi. | Confirmar adaptación exacta de Suikoden II en ficha de producción y disponibilidad internacional; la cifra 24 se refiere a Japón. |
+| [VOTOMS: The Gray Witch Part 1](../articles/votoms-gray-witch-part-1.html) | **Confirmado directamente** por https://www.votoms-gh.com/news/detail.php?id=23579 y https://www.votoms-gh.com/: primera película 20/11/2026, proyecto de dos partes, Mamoru Oshii, Sunrise, Production I.G como colaborador y Bandai Namco Filmworks distribuidor; la sinopsis oficial describe a Ash Vamps y el fin de la guerra. | Fecha de parte 2 y distribución internacional no anunciadas en las fuentes cotejadas. |
+| [Firefly Wedding](../articles/firefly-wedding.html) | **Confirmado directamente** por https://www.crunchyroll.com/hi/news/announcements/2026/10/6/firefly-wedding-anime-release-date-crunchyroll : simulcast 9/10/2026 09:00 PT, territorios Crunchyroll, Satoko/Shinpei, director Takahiro Kamei, estudio david production, Yuko Kakihara, Yukiko Aikei y NOGRID. | Comprobar por separado la emisión Fuji TV/Noitamina a 23:30 JST; no inferirla del anuncio Crunchyroll. |
+| [So What's Wrong with Getting Reborn as a Goblin?](../articles/reincarnated-goblin.html) | **Confirmación parcial**: Crunchyroll incluye la serie en la programación de otoño de 2026 y el artículo enlaza la ficha del episodio 1: https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll . | Contrastar directamente fecha 5/10, estudio BAKKKA, argumento y lista completa de territorios con ficha oficial individual. |
+| [Sasaki and Peeps Season 2](../articles/sasaki-and-peeps-season-2.html) | **Confirmación parcial**: programación de otoño de Crunchyroll https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll . | Contrastar 7/10/2026, AT-X 22:00 JST, episodio de una hora, SILVER LINK y territorios con https://www.kadokawa.co.jp/product/video2720/ y programación oficial. |
+
+**Estado acumulado:** 27/63 artículos leídos individualmente, **36 pendientes de lectura individual**. Este recuento no representa certificación integral de 27 artículos; en este lote hay tres con varias afirmaciones confirmadas directamente y dos con confirmación parcial. Ningún cambio en el contenido de estos cinco artículos se justifica por una contradicción demostrada en este cotejo.
