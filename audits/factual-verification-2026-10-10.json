@@ -1266,6 +1266,38 @@
       ],
       "notes": "Some URLs were already checked in earlier batches; do not add all six to unique URL checked totals. No proven broken link and no article edits.",
       "pending": "Complete live checks for remaining unique URLs, image resources and embedded video playback; avoid counting repeat checks as new."
+    },
+    "live_url_batch_3_2026_10_11": {
+      "method": "Direct public webpage retrieval; not full browser validation",
+      "attempted": 4,
+      "readable_content": 3,
+      "indeterminate": 1,
+      "checks": [
+        {
+          "url": "https://hirayasumi-anime.jp/en/",
+          "result": "readable",
+          "evidence": "Official site has 2027 broadcast, cast and staff details"
+        },
+        {
+          "url": "https://hokabiyo.com/",
+          "result": "indeterminate_retrieval_error",
+          "evidence": "Web retrieval internal error; not proof of broken URL"
+        },
+        {
+          "url": "https://media.netflix.com/en/only-on-netflix/81696980",
+          "result": "readable",
+          "evidence": "Netflix Media Center Pokémon Horizons title and synopsis"
+        },
+        {
+          "url": "https://horemajo-anime.com/news/",
+          "result": "readable",
+          "evidence": "Official news index with October 2026 announcements"
+        }
+      ],
+      "unique_urls_attempted_in_batches_1_to_3": 26,
+      "remaining_unique_urls_not_attempted": 104,
+      "notes": "All four distinct from previous 22. Earlier rechecks do not count as new. Content extraction is not an HTTP status or video playback certification.",
+      "complete": false
     }
   }
 }
