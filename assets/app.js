@@ -26,6 +26,7 @@ document.querySelectorAll('[data-today-next]').forEach(el=>{const items=[...(D.a
 const weekDow=(localToday.getDay()+6)%7,weekStart=new Date(localToday),weekEnd=new Date(localToday);weekStart.setDate(localToday.getDate()-weekDow);weekEnd.setDate(weekStart.getDate()+6);
 const weekRange=weekStart.getMonth()===weekEnd.getMonth()?weekStart.toLocaleDateString('en-US',{month:'long'})+' '+weekStart.getDate()+'–'+weekEnd.getDate()+', '+weekEnd.getFullYear():weekStart.toLocaleDateString('en-US',{month:'short',day:'numeric'})+'–'+weekEnd.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
 document.querySelectorAll('[data-week-range]').forEach(el=>el.textContent=weekRange.toUpperCase());
+document.querySelectorAll('[data-week-title]').forEach(el=>el.textContent='This Week’s Anime Releases — '+weekRange);
 document.querySelectorAll('[data-week-heading]').forEach(el=>el.textContent=weekRange+' Anime Releases');
 document.querySelectorAll('[data-week-description]').forEach(el=>el.textContent='Track confirmed anime premieres, season returns and streaming releases scheduled for '+weekRange+'.');
 if(document.querySelector('[data-week-heading]')){document.title='Anime Releasing This Week: '+weekRange+' — AniNextUp';const m=document.querySelector('meta[name="description"]');if(m)m.content='Track confirmed anime releasing this week, '+weekRange+', with premiere dates, streaming platforms and detailed viewing guides.';}
