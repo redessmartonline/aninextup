@@ -1,0 +1,21 @@
+name: AniNextUp Public Resource Audit
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  external-resources:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check external links, images and YouTube metadata (read-only)
+        run: python3 scripts/audit_public_resources.py
+      - name: Upload audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: aninextup-public-resource-audit
+          path: audits/runtime-external/
+          if-no-files-found: error
+          retention-days: 30
