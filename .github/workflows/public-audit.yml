@@ -5,6 +5,8 @@ on:
       - 'scripts/audit_public.py'
       - '.github/workflows/public-audit.yml'
       - 'articles/**'
+      - 'assets/**'
+      - '*.html'
       - 'sitemap.xml'
   workflow_dispatch:
   schedule:
