@@ -627,3 +627,12 @@ Se cotejó la totalidad de las afirmaciones fácticas materiales del artículo c
 **5. PENDIENTE: `my-happy-marriage-special-episodes.html`.** Netflix fuente primaria https://about.netflix.com/en/news/romance-anime-lineup-october confirma especiales **25 oct 2026** y elenco principal, director y Kinema Citrus, pero **no confirma** tres episodios ni emisión TOKYO MX 19:00–20:30 JST, distribución japonesa desde 20:30 y catálogo de plataformas; falta anuncio del comité para estos detalles.
 
 **Balance: cinco trabajados, dos cierres nuevos, tres pendientes. Acumulado: 15/63 cerrados, 48/63 pendientes.** No se alteraron datos editoriales no contradichos. Los dos enlaces oficiales se precisaron y quedan registrados los bloqueos de verificación.
+
+
+## Cierre de tres pendientes — 11 octubre 2026
+
+- CERRADO `red-riding-hood-detective-story.html`: web oficial https://akazukin-anime.com/ confirma enero 2027, emisoras, elenco, equipo y argumento. Crunchyroll confirma estreno mundial excepto Asia: https://www.crunchyroll.com/news/latest/2026/10/5/red-riding-hood-a-detective-story-anime-main-trailer-key-visual-january-2027-release-date.
+- CERRADO `record-of-a-fallen-vampire-anime.html`: comunicado original https://news.ponycanyon.co.jp/2026/10/126515 confirma estreno 2027, voces, Mankyu, ZERO-G/Liber, Evan Call y sinopsis. Fuente actualizada en el artículo.
+- CERRADO `my-happy-marriage-special-episodes.html`: https://watakon-anime.com/onair/ y https://watakon-anime.com/news/post-90 confirman 3 especiales, TOKYO MX 25 oct 19:00–20:30 JST y streaming japonés desde 20:30, con plataformas listadas. Fuente actualizada en artículo.
+
+Acumulado: 18 de 63 cerrados, 45 pendientes.
