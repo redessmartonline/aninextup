@@ -1,0 +1,78 @@
+name: Verify and repair local anime covers
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/repair-local-covers.yml'
+permissions:
+  contents: write
+jobs:
+  covers:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Pillow
+        run: python -m pip install Pillow
+      - name: Verify both local images and fix only the JPEG extension
+        shell: python
+        run: |
+          import io, json, pathlib, re
+          from PIL import Image
+          root=pathlib.Path('.')
+          report={}
+          for ident, rel in [('tale-secret-saint','assets/images/covers/tale-secret-saint.webp'),('aoashi-season-2','assets/images/covers/aoashi-season-2.jpg')]:
+              p=root/rel
+              data=p.read_bytes()
+              with Image.open(io.BytesIO(data)) as img:
+                  report[ident]={'bytes':len(data),'format':img.format,'dimensions':list(img.size)}
+                  img.verify()
+          old=root/'assets/images/covers/tale-secret-saint.webp'
+          if report['tale-secret-saint']['format']!='JPEG':
+              raise RuntimeError('Expected JPEG content; do not rename unexpected image format')
+          if report['aoashi-season-2']['format'] not in ('JPEG','PNG','WEBP','AVIF'):
+              raise RuntimeError('Aoashi image could not be identified as supported image')
+          new=old.with_suffix('.jpg')
+          if new.exists():
+              if new.read_bytes()!=old.read_bytes():
+                  raise RuntimeError('Destination exists with different content; refusing overwrite')
+          else:
+              new.write_bytes(old.read_bytes())
+          source=root/'assets/data.js'
+          content=source.read_text(encoding='utf-8')
+          oldref='assets/images/covers/tale-secret-saint.webp'
+          newref='assets/images/covers/tale-secret-saint.jpg'
+          if oldref not in content and newref not in content:
+              raise RuntimeError('Missing original reference in data.js')
+          content=content.replace(oldref,newref)
+          source.write_text(content,encoding='utf-8')
+          old.unlink()
+          report['tale-secret-saint']['new_path']=str(new)
+          report['aoashi-season-2']['verified']=True
+          pathlib.Path('local_covers_report.json').write_text(json.dumps(report,indent=2))
+          print(json.dumps(report,indent=2))
+      - name: Validate site index syntax and editorial structure
+        run: |
+          node --check assets/data.js
+          python scripts/editorial_audit.py > editorial_audit.log
+      - name: Commit verified local cover fix
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/data.js assets/images/covers/tale-secret-saint.webp assets/images/covers/tale-secret-saint.jpg
+          if ! git diff --cached --quiet; then
+            git commit -m "fix: correct Secret Saint JPEG cover extension after image validation"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - name: Upload validation evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: aninextup-local-covers-and-editorial
+          path: |
+            local_covers_report.json
+            editorial_report.json
+            editorial_audit.log
+          if-no-files-found: warn
