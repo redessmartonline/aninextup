@@ -16,10 +16,10 @@ root = pathlib.Path(__file__).resolve().parents[1]
 source = (root / "assets/data.js").read_text(encoding="utf-8")
 rows = []
 for line in source.splitlines():
-    if not re.search(r'\\bid:"', line):
+    if not re.search(r'\bid:"', line):
         continue
     def field(name):
-        m = re.search(r'\\b' + name + r':("(?:\\\\.|[^"\\\\])*"|null)', line)
+        m = re.search(r'\b' + name + r':("(?:\\.|[^"\\])*"|null)', line)
         return ast.literal_eval(m.group(1)) if m and m.group(1) != "null" else None
     ident, url = field("id"), field("image")
     if ident and url and url.startswith(("https://", "http://")):
