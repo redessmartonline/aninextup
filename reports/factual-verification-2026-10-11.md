@@ -81,3 +81,57 @@ Fecha: 2026-10-11. Cobertura: **63 artículos HTML**. Este registro **no equival
 ## Actualización del 11 de octubre — cierre de cobertura inicial
 
 Los 63 artículos tienen ahora una afirmación asociada a una URL de respaldo en la tabla. **Esto no demuestra que cada afirmación sea verdadera**: la correspondencia entre texto y contenido de cada URL, así como el resto de las afirmaciones de cada página, aún requiere comprobación individual. No se certifica ninguna página íntegramente por el mero hecho de disponer de fuente. Las 14 filas finales se basan en las URLs ya enlazadas en sus respectivos artículos.
+
+
+## Revisión de afirmaciones — lote 1 (11 octubre 2026)
+
+A diferencia de la cobertura inicial, esta sección compara **afirmaciones individuales** de cuatro artículos con comunicados originales. Los puntos no respaldados se dejan explícitamente pendientes; no se consideran falsos sin evidencia contradictoria.
+
+### Blue Box Season 2
+Fuente: https://about.netflix.com/en/news/romance-anime-lineup-october
+
+| Afirmación publicada | Resultado | Evidencia / límite |
+|---|---|---|
+| Estreno en Netflix el 4 octubre 2026 | Confirmada | Comunicado Netflix 15 septiembre 2026 |
+| Episodios nuevos semanales | Confirmada | Netflix dice “new episodes weekly” |
+| Yumeka aparece en la segunda temporada | Confirmada | Netflix menciona a Yumeka |
+| Taiki practica bádminton y Chinatsu baloncesto | Confirmada | Sinopsis de Netflix |
+| Estreno a una hora concreta en todos los países | No afirmado por el artículo | El artículo correctamente advierte de horarios regionales |
+| Conviene ver la primera temporada antes | Opinión editorial | No es un hecho de producción |
+
+### The Ramparts of Ice Season 2
+Fuentes: https://about.netflix.com/en/news/romance-anime-lineup-october y https://about.netflix.com/en/news/the-ramparts-of-ice-season-2
+
+| Afirmación publicada | Resultado | Evidencia / límite |
+|---|---|---|
+| Estreno mundial 1 octubre PT / 2 octubre JST | Confirmada | Comunicado Netflix 27 agosto 2026 |
+| Episodios semanales | Confirmada | Netflix |
+| Adaptación del manga de Kocha Agasawa | Confirmada | Netflix |
+| Estudio STUDIO KAI | Confirmada | Créditos oficiales de Netflix |
+| Koyuki, Miki, Minato y Yota protagonizan la historia | Confirmada | Sinopsis y reparto Netflix |
+| Forma parte de “Kocha Agasawa Anime Year” | Pendiente | No acreditado por los dos comunicados cotejados; requiere fuente específica |
+
+### My Happy Marriage special episodes
+Fuente: https://about.netflix.com/en/news/romance-anime-lineup-october
+
+| Afirmación publicada | Resultado | Evidencia / límite |
+|---|---|---|
+| Tres episodios especiales el 25 octubre 2026 | Confirmada | Netflix anuncia especiales y fecha; número de episodios requiere además anuncio japonés |
+| Netflix distribuirá los especiales | Confirmada | Comunicado Netflix |
+| Dirige Takehiro Kubota y anima Kinema Citrus | Confirmada | Créditos Netflix |
+| TOKYO MX emite 19:00–20:30 JST | Pendiente | No está en el comunicado Netflix; verificar programación japonesa |
+| Streaming en Japón desde 20:30 JST en múltiples plataformas | Pendiente | Verificar tabla oficial de plataformas y horarios |
+| La trama incluye clase de cocina y antiguo compañero | Pendiente | No detallado en comunicado Netflix cotejado |
+
+### Demon's Crest
+Fuentes: https://demonscrest-anime.com/ y https://demonscrest-anime.com/news/index00050000.html
+
+| Afirmación publicada | Resultado | Evidencia / límite |
+|---|---|---|
+| Estreno mundial exclusivo Prime Video 6 noviembre 2026 | Confirmada | Web oficial y noticia de producción |
+| El videojuego se llama Actual Magic; Yuuma y sus compañeros lo prueban | Confirmada | Sinopsis oficial |
+| Ado canta apertura “Shinka” | Confirmada | Comunicado oficial |
+| Soala canta cierre “ReaL” | Pendiente | Requiere comprobar comunicado del 2 octubre, distinto del cotejado |
+| Estudio Production I.G | Pendiente | Requiere cotejar créditos de producción en web oficial |
+
+**Balance de este lote:** 4 artículos con revisión individual de afirmaciones; 17 afirmaciones confirmadas por fuentes cotejadas, 6 pendientes de corroboración adicional, 2 afirmaciones editoriales o sin hora concreta que no requieren una confirmación de estreno. **No se certifican los 63 artículos**. La tabla general anterior indica únicamente cobertura inicial y no debe confundirse con este lote exhaustivo.
