@@ -4,6 +4,7 @@ import concurrent.futures
 import datetime
 import html.parser
 import ipaddress
+import re
 import json
 import pathlib
 import socket
@@ -20,6 +21,12 @@ class Extract(html.parser.HTMLParser):
         super().__init__()
         self.refs = []
         self.video_ids = []
+    def handle_data(self, data):
+        # VideoObject JSON-LD and JS data may contain embed URLs without iframe tags.
+        for video in re.findall(r"(?:youtube(?:-nocookie)?\\.com/embed/|youtube\\.com/watch\\?v=|youtu\\.be/)([A-Za-z0-9_-]{11})", data):
+            self.video_ids.append(video)
+        for video in re.findall(r"i\\.ytimg\\.com/vi/([A-Za-z0-9_-]{11})/", data):
+            self.video_ids.append(video)
     def handle_starttag(self, tag, attrs):
         a = dict(attrs)
         for key in (("href",) if tag == "a" else ("src", "data-src") if tag in ("img", "iframe", "source") else ()):
@@ -83,7 +90,8 @@ def main():
             key = (url, kind)
             refs.setdefault(key, set()).add(rel)
         for video in parser.video_ids:
-            videos.setdefault(video, set()).add(rel)
+            if re.fullmatch(r"[A-Za-z0-9_-]{11}", video):
+                videos.setdefault(video, set()).add(rel)
     jobs = [(u, k, p) for (u, k), p in refs.items()]
     with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
         results = list(pool.map(check, jobs))
@@ -101,7 +109,8 @@ def main():
       "limitations": ["HTTP 403/429 and timeouts are indeterminate, not broken.",
        "YouTube oEmbed availability does not prove playback or embed permission.",
        "HTTP 200 for an image does not guarantee correct licensing or editorial use.",
-       "Only references explicitly present in HTML attributes are covered."],
+       "Image and link inventory covers HTML attributes; video IDs also include embedded JSON-LD and script text.",
+       "YouTube metadata requests may be blocked even when a video is public."],
       "resources": results, "videos": video_results,
       "summary": {"external_references": len(results), "image_references": sum(r["kind"]=="image" for r in results),
         "youtube_ids": len(video_results),
