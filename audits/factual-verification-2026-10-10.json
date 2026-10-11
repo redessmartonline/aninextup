@@ -957,6 +957,43 @@
         }
       ],
       "pending": "Remaining six articles require fresh official-source confirmation; all ten still require live video ownership/playback and comprehensive link testing. No article promoted to fully verified."
+    },
+    "followup_2026_10_11_verified_sources": {
+      "status": "partial_official_source_checks_only",
+      "checked_articles": [
+        "vermilion-mask",
+        "dragon-ball-super-beerus",
+        "cyberpunk-edgerunners-2",
+        "im-looking-for-a-zombie",
+        "tale-secret-saint",
+        "romelia-war-chronicle",
+        "aoashi-season-2"
+      ],
+      "source_urls": [
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+        "https://dragonball-super.com/en/updates/20260903-1.html",
+        "https://www.cyberpunk.net/index.php/en/edgerunners2",
+        "https://www.netflix.com/tudum/articles/cyberpunk-edgerunners-2-release-date-news",
+        "https://www.crunchyroll.com/news/announcements/2026/10/2/im-looking-for-a-zombie-anime-english-dub-release-date-cast-crew",
+        "https://romelia-senki.com/onair/",
+        "https://aoashi-pr.com/onair/",
+        "https://aoashi-pr.com/news/572/"
+      ],
+      "findings": [
+        "Vermilion Mask Oct 10 02:30 PT Crunchyroll lineup; 100Studio listed",
+        "Dragon Ball Super Beerus Oct 11 23:15 JST official; international release times not inferred",
+        "Cyberpunk Edgerunners 2 Oct 20 Netflix and 10-episode standalone confirmed by producer and Netflix",
+        "I'm Looking For a Zombie Oct 3 and same-day English dub cast confirmed by Crunchyroll",
+        "A Tale of the Secret Saint Saturday 06:00 PT and FelixFilm confirmed in Crunchyroll lineup",
+        "Romelia Oct 3 international Crunchyroll, Oct 5 Japanese TV and Oct 3 Japan early streaming confirmed",
+        "Aoashi Season 2 Oct 4 NHK E-Tele and Japan streaming from 23:00 confirmed"
+      ],
+      "limitations": [
+        "Source page accessible does not establish all links or images work in every territory",
+        "Embedded YouTube video publisher ownership, live playback and thumbnails not independently tested",
+        "No additional articles promoted to fully verified",
+        "The original 46 article factual audit status is unchanged; 26 article structural screenings recorded separately"
+      ]
     }
   }
 }
