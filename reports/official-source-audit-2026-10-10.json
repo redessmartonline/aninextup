@@ -85,14 +85,37 @@
       "platform": "Crunchyroll",
       "source": "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
       "verification": "date_and_platform"
+    },
+    {
+      "id": "blue-box-s2",
+      "date": "2026-10-04",
+      "platform": "Netflix",
+      "source": "https://about.netflix.com/en/news/romance-anime-lineup-october",
+      "verification": "exact_date_platform_weekly_release_and_article_story_premise"
+    },
+    {
+      "id": "ramparts-of-ice-season-2",
+      "date": "2026-10-01",
+      "platform": "Netflix",
+      "source": "https://about.netflix.com/en/news/romance-anime-lineup-october",
+      "verification": "date_in_PT_timezone_platform_weekly_release"
+    },
+    {
+      "id": "my-happy-marriage-specials",
+      "date": "2026-10-25",
+      "platform": "Netflix",
+      "source": "https://about.netflix.com/en/news/romance-anime-lineup-october",
+      "verification": "exact_date_platform_special_episodes"
     }
   ],
-  "count_confirmed": 12,
+  "count_confirmed": 15,
   "total_indexed": 46,
-  "remaining_unverified": 34,
+  "remaining_unverified": 31,
   "notes": [
     "Crunchyroll's schedule uses weekly weekday and time for some shows; those specific calendar dates are inferred from the first week and should not be considered independently verified exact dates.",
     "The verified platform is not necessarily exclusive; distribution territories vary.",
-    "The wording and all claims inside each article have not been individually fact-checked."
+    "The wording and all claims inside each article have not been individually fact-checked.",
+    "Netflix September 15, 2026 official release confirms Blue Box S2 October 4 weekly; an earlier correction that downgraded it to October-only was reverted.",
+    "Ramparts of Ice Netflix October 1 is Pacific Time; October 2 in Japan. Distinguish time zones in article text."
   ]
 }
