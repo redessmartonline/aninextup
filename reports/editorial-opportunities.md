@@ -23,3 +23,11 @@ Estados: detectada, propuesta, aprobada, publicada, descartada o pendiente de da
 ## Seguimiento
 
 Sin artículos nuevos publicados por esta búsqueda todavía. Para cada artículo aprobado y publicado registrar fecha, URL, commit, consultas objetivo y métricas verificables de impresiones, clics, CTR y posición a los 7 y 28 días, indicando periodo y fecha de madurez. No atribuir causalidad ni prometer resultados por una simple variación de métricas.
+
+## Desarrollo y originalidad
+
+Los artículos deben ser bien desarrollados, con redacción y estructura propias en el inglés vigente de AniNextUp. No copiar, traducir ni parafrasear línea por línea otros textos. Sintetizar hechos de fuentes primarias, atribuir anuncios y aportar contexto documentado y análisis claramente identificado.
+
+Cada propuesta incluirá un esquema y el valor propio que aportará: qué cambió, fechas y disponibilidad regional, contexto relevante y datos aún no confirmados cuando proceda. Cada sección debe aportar información sustantiva. No imponer una longitud fija, repetir información para alargar, inventar hechos ni usar párrafos genéricos. Si faltan datos para desarrollar una noticia, ampliar una guía existente o esperar.
+
+Antes de considerar listo un borrador, revisar coherencia, redundancias, semejanza con las fuentes, atribuciones y respaldo factual. No prometer exclusivas, ausencia absoluta de coincidencias ni una comprobación con detector de plagio que no se haya realizado. Publicar continúa requiriendo aprobación del usuario para el artículo concreto.
