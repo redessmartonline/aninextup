@@ -1167,3 +1167,15 @@ Commit: `ae8f96eae0b66c9cfb4ed8ad68a00470af02b561`.
 **63/63 artículos cerrados; 0/63 pendientes.** Dos cierres nuevos con pruebas descritas. Los dos HTML publicados se recuperaron desde GitHub y coinciden íntegramente con el contenido enviado; sus bloques JSON y JSON-LD se analizaron correctamente.
 
 El cierre corresponde a **las versiones publicadas, con sus afirmaciones delimitadas y respaldadas**. En Dreamland se conserva la distinción de plataforma/región y la nota documental sobre versiones discrepantes, sin afirmar que todas las fuentes históricas hayan sido rectificadas. Una programación futura puede cambiar: el cierre no garantiza inmutabilidad de horarios ni equivalencia mundial de catálogos. Las tablas iniciales y balances anteriores son historia del proceso y no el estado vigente.
+
+## Comprobación posterior en la web pública — 11 octubre 2026
+
+Se comprobaron las **63 URLs de artículos en https://aninextup.com/** mediante navegador, usando las rutas públicas sin extensión. Todas renderizan un artículo y los bloques JSON-LD presentes en el DOM coinciden con sus archivos actuales de GitHub (comparación del JSON analizado, conservando orden de los bloques).
+
+En los **17 artículos corregidos más recientemente**, además se compararon todos los párrafos con la versión del repositorio, normalizando etiquetas, entidades HTML y espacios: **17/17 coincidencias**. Incluye Dreamland, noticia Pokémon, World's Strongest Witch, Horror Collector, Iceblade II, Rayearth, Demon's Crest, Witch on the Holy Night, Black Clover, Ace of Diamond, Dandivine, Rakuen, Chitose, Bass X Machina, Moon, Reborn y ITEM. En los otros 46 artículos se comprobó renderizado y JSON-LD; no se declara comparación íntegra del texto de esos 46 ni igualdad byte a byte del HTML, que el navegador puede transformar.
+
+La portada renderiza sus tarjetas dinámicas: **Dreamland OCT 16 / Crunchyroll**, enlace a la noticia de Pokémon actualizada y los demás enlaces de navegación visibles. No se observaron versiones antiguas en las correcciones examinadas.
+
+Las consultas raw recibieron 403 en este entorno; el navegador accedió correctamente. La miniatura externa de Dreamland no cargó en una observación de este navegador (i.ytimg.com); esto no demuestra un fallo general del sitio y no se certifica la disponibilidad de todas las imágenes externas ni reproducción de todos los vídeos. La comprobación cubre publicación de contenido, metadatos y navegación de artículos, no rendimiento, todos los recursos ni accesibilidad exhaustiva.
+
+**Resultado: publicación de las correcciones confirmada. La auditoría factual mantiene 63 cerrados / 0 pendientes.**
