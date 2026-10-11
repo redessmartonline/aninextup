@@ -709,3 +709,14 @@ Acumulado: 31/63 cerrados, 32 pendientes.
 5. **PENDIENTE** `anime-news-october-2026.html`: corregida afirmación obsoleta de streaming de Nia Liston: HIDIVE distribuye desde 6 octubre en territorios elegibles; contrastado con informes de lanzamiento y cartelera. Aún quedan otras menciones del resumen por cotejar. Commits `7336df555ea38cb41ea9c5e0f26ea402e018f2e6` y `94799aca9f86fe339faa3589b73125b85973ebc7`.
 
 **Balance del lote: 5 revisados, 4 cierres nuevos, 1 pendiente. Acumulado: 38/63 cerrados, 25/63 pendientes.**
+
+
+## Cinco artículos auditados — 11 octubre 2026
+
+1. **PENDIENTE** `anime-news-october-2026.html`: se corrigió la afirmación de que Nia Liston no tenía streaming internacional: HIDIVE confirma simulcast desde martes 6 octubre https://news.hidive.com/2026/9/30/heres-the-anime-coming-to-and-leaving-hidive-in-october-2026 . Cambios `7336df555ea38cb41ea9c5e0f26ea402e018f2e6` y fuente definitiva `d469c451543b2c26aa6f375acd920164b5df9be8`. Quedan otras afirmaciones del resumen por cotejar.
+2. **PENDIENTE** `black-clover-season-2.html`: la página cita Crunchyroll para distribución, pero falta cotejo primario de horario TV Tokyo 3 octubre 23:00 JST y datos del nuevo arco. No se certifica sin ello.
+3. **CERRADO** `aoashi-season-2.html`: producción https://aoashi-pr.com/onair/ confirma NHK E-Tele 4 octubre 17:00 JST y plataformas japonesas desde 23:00; distribuidor Crunchyroll https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll confirma disponibilidad internacional y territorios. El artículo diferencia ventanas japonesas de simulcast.
+4. **CERRADO** `dark-machine-the-animation.html`: https://www.fujitv.co.jp/darkmachine_anime/onair/ confirma Fuji TV 13 octubre 25:45 JST, Kansai TV 15 octubre 26:45, BS Fuji 20 octubre 24:30, y streaming japonés desde 14 octubre 12:00 JST; https://www.fujitv.com/animation/darkmachinetheanimation/ confirma Kairi, Rudra, Golden Valley y Senki. Hora Crunchyroll permanece TBA en el artículo.
+5. **CERRADO** `detective-is-already-dead-season-2.html`: distribuidor https://www.crunchyroll.com/news/latest/2026/10/5/the-detective-is-already-dead-season-2-anime-key-visual confirma 7 octubre y Crunchyroll; https://www.crunchyroll.com/es/news/latest/2026/9/4/the-detective-is-already-dead-temporada-2-anime-7-de-octubre-temas-musicales confirma ENGI, Manabu Kurihara, Deko Akao, Yosuke Ito, Koume y Kagura Nana. El artículo no inventa hora internacional.
+
+Balance del lote: 3 cerrados, 2 pendientes. Acumulado **37/63 cerrados, 26/63 pendientes**.
