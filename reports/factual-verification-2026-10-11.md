@@ -903,3 +903,43 @@ https://www.tv-tokyo.co.jp/anime/bclover/news/ leído directamente contiene anun
 El bloque nominal indexado de https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll?lid=0ojihzvhs258, actualizado 10 octubre, respalda Studio Pierrot, sábados 08:00 PT, argumento y regiones enumeradas; no se afirma lectura directa del cuerpo inaccesible. **Faltan identidad/canal del trailer ZRrFCX47cJc y respaldo específico del nuevo material de personajes descrito**. No se demostró un error que justificase editar el artículo y no se suma de nuevo su antiguo cierre.
 
 **Balance: seis pendientes examinados, dos cierres nuevos y cuatro aún pendientes. Acumulado vigente: 44/63 cerrados y 19/63 pendientes.** Se publicaron cambios en cuatro artículos, incluida precisión de fecha civil de Ranma; los cuatro archivos se recuperaron de GitHub y coinciden íntegramente con el contenido enviado. Los cierres se limitan a afirmaciones publicadas y pruebas descritas, sujetos a posteriores cambios de programación.
+
+
+## Continuación — cinco pendientes con bloqueos específicos (11 octubre 2026)
+
+Base recuperada del informe y del commit de main `9691c5e29a3755f59177b7e5c4a4baf956daa8dd`: **44 cerrados / 19 pendientes**. Se leyeron completos cinco artículos aún pendientes; se busca resolver sus bloqueos, sin repetir cierres. La evidencia indexada se distingue de las páginas leídas directamente.
+
+### PENDIENTE — `a-certain-dark-item-release-date.html`
+Lecturas directas de https://toaru-project.com/item/onair/, https://toaru-project.com/item/staffcast/index.html, https://toaru-project.com/item/story/index.html y https://toaru-project.com/item/story/01.html corroboran horarios japoneses, equipo, voces, temas, cuatro integrantes, quinta chica y misión contra el NPO. El bloque nominal oficial indexado https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll confirma incorporación internacional; se añadió esa referencia, antes ausente junto a la afirmación de distribución.
+
+**Falta:** identidad/canal/uploadDate del teaser bf6XcU3uL9I y correspondencia del main PV NNHxQJgZdbQ. https://toaru-project.com/item/movie/index.html ofrece etiquetas de ambos PV pero la extracción no expone sus IDs. YouTube devolvió throttling. La fecha de anuncio no certifica subida. Commit `c387bdd833e3ad32edb5038f99212feeff058e58`.
+
+### PENDIENTE, AFIRMACIÓN DE HORA PRECISADA — `ace-of-diamond-second-season.html`
+Nueva lectura primaria https://www.tv-tokyo.co.jp/information/202603/5560.html confirma **5 abril 2026 17:30**, OLM Team Yoshioka y origen de la serie. https://www.tv-tokyo.co.jp/anime/diaace2_2nd/news/index.html confirma segundo cour **11 octubre 17:30**, seis emisoras. Se resuelven las dudas anteriores sobre día inicial y estudio.
+
+El bloque oficial indexado de la cartelera Crunchyroll respalda sinopsis Sawamura/Seido/Koshien y lista territorial. Búsquedas posteriores devuelven domingo **08:15 PT**, mientras otra versión mantiene 11 octubre TBA. El cuerpo directo no es recuperable. Se sustituyó «Crunchyroll currently lists TBA» y la promesa de actualizarlo por remisión a cartelera actual/episodio local: no se impone una hora por extractos de versiones diferentes.
+
+**Falta:** calendario internacional actual inequívoco para cerrar la guía. Fuentes del broadcaster añadidas; commit `aaa9a4fc178206ea353869a8e87f8da2dc0a1054`. No se declara falso el estreno de abril ni se presenta su confirmación como corrección.
+
+### PENDIENTE, ALCANCE DE STREAMING CORREGIDO — `chitose-ramune-bottle-cour-2.html`
+Lecturas directas https://chiramune.com/onair/index.html y https://chiramune.com/news/index00630000.html confirman 13 octubre, recap 13.5 anterior, horarios TV y arcos Asuka/Haru. https://chiramune.com/staffcast/index.html confirma feel. La noticia identifica el segundo PV de Cour 2; su iframe fue documentado en la pasada anterior.
+
+La página ON AIR conserva en su sección del primer cour la distribución de **2025** (ABEMA/d Anime Store y servicios posteriores). El artículo la presentaba sin distinción como guía del segundo cour. Se explicitó que esa lista corresponde al primero y que no establece horarios del segundo. No se afirma que esas plataformas hayan cancelado la serie. El bloque oficial indexado https://www.crunchyroll.com/es/news/seasonal-lineup/2026/9/15/otono-2026-anime-crunchyroll corrobora distribución internacional de la Parte 2.
+
+**Faltan:** streaming doméstico específico del segundo cour y canal/fecha real de subida del PV 8RHh2AyKRfY (JSON-LD: 11 septiembre). YouTube no devolvió contenido. Referencias de staff/PV/distribuidor añadidas; commit `21b02abb5ea1c5aa6d928f2ac14f3d32d9b7cb95`.
+
+### PENDIENTE — `dandivine-release-date.html`
+Lecturas directas https://www.aniplex.co.jp/lineup/dandivine/ y https://gattaishin.com/dandivine/ respaldan emisión regular, streaming japonés, ambos estudios, historia veinte años después y proyecto de robots combinables. Bloque oficial indexado de Crunchyroll respalda inclusión internacional, resolviendo ese bloqueo anterior.
+
+Nueva fuente primaria https://www.sonymusic.co.jp/artist/takanorinishikawa/info/586805 enlaza **exactamente ihJfkOT_0wU como main PV**. Confirma identidad, no canal de subida ni uploadDate. Sus horarios difieren del calendario de producción, por lo que se utiliza solo para el PV y no para sustituir los horarios.
+
+**Faltan:** canal/uploadDate real (JSON-LD: 12 septiembre) y detalle de excepción del primer episodio. La producción enlaza aviso de 6 octubre https://gattaishin.com/dandivine/news/?id=758 sobre cambios en algunas emisoras; al abrir solo se recupera estructura sin cuerpo. No se inventa horario de sustitución. Se mantienen las horas del calendario regular, no se certifica la guía completa. Commit `24480150793770a56dfea242e23e01a41d8d3a21`.
+
+### PENDIENTE — `worlds-strongest-witch.html`
+El sitio de producción continúa inaccesible (403). Nueva lectura primaria del artista https://honeyworks.jp/news/11670/ confirma 7 octubre, TOKYO MX 22:00, BS11 24:00, otras emisoras y **Furuta/Yonemura/Morimoto/Bridge/AISLE**. Permite cotejar directamente esos datos, antes solo indexados.
+
+El bloque nominal oficial indexado de la cartelera Crunchyroll confirma premisa y regiones, incluidas India/Sudeste Asiático/Corea. La versión actual indexada da miércoles 06:00 PT, pero no se obtiene calendario directo ni se certifica «Time TBA». La fuente musical enlaza otro main PV snJZD9vxfHY: eso no prueba que el trailer inglés 0ISyxMMLVg8 sea incorrecto.
+
+**Faltan:** hora internacional actual, confirmación accesible de streaming japonés anticipado y metadatos/identidad/canal del video inglés, con uploadDate declarado 15 septiembre. Fuente musical añadida, sin reemplazar un video por otro sin prueba; commit `c37a184f2295a8baf5664543f9a853e113b6d195`.
+
+**Balance: cinco pendientes examinados, cero cierres nuevos. Acumulado: 44/63 cerrados y 19/63 pendientes.** Cinco artículos actualizados: dos precisiones de alcance/actualidad y referencias oficiales adicionales. Se recuperaron los cinco HTML publicados y coinciden íntegramente con el contenido enviado. No se certifican fechas de subida usando fechas de comunicados ni se suman de nuevo artículos cerrados.
