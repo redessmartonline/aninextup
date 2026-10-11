@@ -1492,6 +1492,43 @@
         "No broken link or article correction established"
       ],
       "complete": false
+    },
+    "html_direct_url_reconciliation_2026_10_11": {
+      "source": "HTML external_references inventory extracted from all 46 article files in uploaded ZIP snapshot",
+      "unique_urls": 130,
+      "unique_anchor_urls": 70,
+      "unique_image_urls": 60,
+      "interpretation": "The 130 total comprises 70 external hyperlinks and 60 externally hosted image URLs, not 130 editorial hyperlink destinations",
+      "confirmed_new_live_checks": [
+        {
+          "url": "https://animation.konami.net/en/news_2026_001.html",
+          "result": "readable_official_page",
+          "finding": "Konami Animation announcement for Nia Liston"
+        },
+        {
+          "url": "https://license.kadokawa.co.jp/anime/2026fall/entry-33204.html",
+          "result": "readable_official_page",
+          "finding": "Kadokawa licensing listing for The Detective Is Already Dead Season 2"
+        }
+      ],
+      "indeterminate_checks": [
+        {
+          "url": "https://toaru-project.com/item/staffcast/index",
+          "result": "retriever_error_not_proof_broken"
+        },
+        {
+          "url": "https://toaru-project.com/item/story/01",
+          "result": "retriever_error_not_proof_broken"
+        }
+      ],
+      "method_limitations": [
+        "Snapshot differs potentially from current GitHub HEAD; compare before edits",
+        "No direct outbound HTTP/DNS from local runtime",
+        "Text web retrieval not equivalent to status-code or browser resource testing",
+        "Earlier 67 of 130 attempts count included report source URLs, not all from HTML; require URL-by-URL reconciliation against this inventory"
+      ],
+      "pending": "Check remaining unique URLs with deduplication; verify all 60 image responses and video playback separately; preserve indeterminate states",
+      "complete": false
     }
   }
 }
