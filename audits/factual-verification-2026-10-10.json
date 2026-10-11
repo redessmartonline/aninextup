@@ -133,11 +133,15 @@
       "date": "2026-11-20",
       "status": "partially_verified_official_source",
       "checked_claims": [
-        "Part 1 Japanese theatrical premiere November 20 2026",
-        "Two-part theatrical project; Rysuke Takahashi supervises"
+        "Official November 20 2026 Japan theatrical Part 1 release",
+        "Two-part theatrical project; director Mamoru Oshii; Sunrise animation, Production I.G cooperation",
+        "Premise: Ash Vamps and Hundred Year War military science fiction"
       ],
       "source_urls": [
         "https://www.votoms-gh.com/news/detail.php?id=23579"
+      ],
+      "remaining_checks": [
+        "Confirm official trailer video ID vh6wwh6SxN8 and Part 2 date remains unannounced"
       ]
     },
     {
@@ -147,13 +151,16 @@
       "date": "2026-11-20",
       "status": "partially_verified_official_source",
       "checked_claims": [
-        "November 20 2026 Japanese theatrical release",
-        "ufotable studio; Masaru Takeuchi director; Moe Tsuzuki character designer; Hikaru Kondo chief director",
-        "supercell theme Yoru to Ao; Haruka Tomatsu, Kana Hanazawa, Yusuke Kobayashi main cast"
+        "November 20 2026 Japanese theatrical release; ufotable studio",
+        "TYPE-MOON Kinoko Nasu original; Masaru Takeuchi director, Moe Tsuzuki designs, Hikaru Kondo chief director",
+        "supercell Yoru to Ao theme; Haruka Tomatsu, Kana Hanazawa, Yusuke Kobayashi main cast"
       ],
       "source_urls": [
         "https://mahoyo-movie.com/",
         "https://www.ufotable.com/news/article/3055/"
+      ],
+      "remaining_checks": [
+        "Verify January 2027 international theatrical dates by territory and official trailer QNap_AYExWQ"
       ]
     },
     {
@@ -163,12 +170,16 @@
       "date": "2026-11-13",
       "status": "partially_verified_official_source",
       "checked_claims": [
-        "November 13 2026 Japanese theatrical release",
-        "Seiji Mizushima director; Gen Urobuchi screenplay; NARASAKI music; Toei Animation studio"
+        "November 13 2026 Japanese theatrical date",
+        "Seiji Mizushima director, Gen Urobuchi screenplay, Masatsugu Saito character design, NARASAKI music, Toei Animation studio",
+        "Sequel to 2014 Expelled from Paradise; Gabriel and Fallen synopsis"
       ],
       "source_urls": [
         "https://rakuen-tsuiho-r.com/",
         "https://www.aniplex.co.jp/lineup/rakuen-tsuiho-r/news/detail/?id=69150"
+      ],
+      "remaining_checks": [
+        "Verify video ID 9UhNKYg6uso and unannounced international streaming"
       ]
     },
     {
@@ -178,13 +189,16 @@
       "date": "2026-11-06",
       "status": "partially_verified_official_source",
       "checked_claims": [
-        "worldwide Prime Video release 2026-11-06",
-        "Production I.G",
-        "Ado opening Shinka"
+        "November 6 2026 worldwide Prime Video exclusive streaming announcement",
+        "Production I.G animation; Reki Kawahara light novel source",
+        "Yuuma Ashihara, Actual Magic VRMMO premise; Ado Shinka opening and Soala ReaL ending"
       ],
       "source_urls": [
         "https://demonscrest-anime.com/news/index00050000.html",
         "https://demonscrest-anime.com/news/index00020000.html"
+      ],
+      "remaining_checks": [
+        "Check video Sj4Pu2qu43A and Prime Video actual territory availability"
       ]
     },
     {
@@ -194,10 +208,16 @@
       "date": "2026-11-03",
       "status": "partially_verified_official_source",
       "checked_claims": [
-        "Netflix November 3 2026; Studio Mir animation"
+        "Netflix November 3 2026 US listing and Netflix animated slate announcement",
+        "Creator LeSean Thomas, Studio Mir animation, Brian Tyree Henry executive producer and lead",
+        "Steampunk western father-and-family synopsis; Tati Gabrielle and Cree Summer cast"
       ],
       "source_urls": [
-        "https://about.netflix.com/en/news/netflix-unveils-upcoming-anime-slate-out-of-annecy-festival"
+        "https://about.netflix.com/en/news/netflix-unveils-upcoming-anime-slate-out-of-annecy-festival",
+        "https://media.netflix.com/en/only-on-netflix/81088875"
+      ],
+      "remaining_checks": [
+        "Verify Netflix teaser video CWbZBIrEfqI and geographic catalog availability"
       ]
     },
     {
