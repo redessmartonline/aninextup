@@ -1229,6 +1229,43 @@
       ],
       "note": "Live retrieval checks do not prove full browser rendering, status 200 for every request, or resource playback. The 403 may be bot restriction; do not mark broken.",
       "complete": false
+    },
+    "live_url_followup_2026_10_11": {
+      "method": "Public page retrieval; not a full HTTP or browser playback test",
+      "checks": [
+        {
+          "url": "https://demonscrest-anime.com/news/index00050000.html",
+          "result": "readable",
+          "finding": "Official page announces Prime Video worldwide streaming on November 6, 2026"
+        },
+        {
+          "url": "https://www.crunchyroll.com/news/latest/2026/9/18/dreamland-animated-series-shares-trailer-2-japanese-opening-ending-theme-songs",
+          "result": "html_retrieved_no_readable_article_body",
+          "finding": "Cannot establish link validity or article claims"
+        },
+        {
+          "url": "https://rakuen-tsuiho-r.com/news/SYS/CONTENTS/25617b4b-b50d-449f-8a72-ccb209dada47/w707",
+          "result": "image_rendered",
+          "finding": "Image resource displayed"
+        },
+        {
+          "url": "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+          "result": "html_retrieved_no_readable_article_body",
+          "finding": "Cannot establish article contents"
+        },
+        {
+          "url": "https://www.votoms-gh.com/news/detail.php?id=23579",
+          "result": "readable_recheck",
+          "finding": "Official page confirms November 20 2026 film opening"
+        },
+        {
+          "url": "https://media.netflix.com/en/only-on-netflix/81088875",
+          "result": "readable_recheck",
+          "finding": "Official page confirms series synopsis, not date"
+        }
+      ],
+      "notes": "Some URLs were already checked in earlier batches; do not add all six to unique URL checked totals. No proven broken link and no article edits.",
+      "pending": "Complete live checks for remaining unique URLs, image resources and embedded video playback; avoid counting repeat checks as new."
     }
   }
 }
