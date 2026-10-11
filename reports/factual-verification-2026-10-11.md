@@ -248,3 +248,18 @@ Se leyeron los cinco artículos y se cotejaron afirmaciones concretas con págin
 | [Magic Knight Rayearth 2026](../articles/magic-knight-rayearth-2026.html) | Estreno 7 octubre, miércoles 23:45 TV Asahi IMAnimation W; dos cours consecutivos; E&H production, personajes Hikaru/Umi/Fuu; plataformas japonesas desde jueves 00:15. https://rayearth-anime.com/onair/ y https://rayearth-anime.com/staffcast/ | Derechos territoriales de Crunchyroll y alcance exacto de la nueva adaptación requieren fuente distribuidora y sinopsis. |
 
 **Recuento de lectura individual: 32/63; quedan 31 artículos por examinar.** Los cinco tienen varias afirmaciones contrastadas con fuentes oficiales, pero no se certifica cada frase de los artículos ni sus horarios internacionales.
+
+
+## Cotejo individual — lote 8 (11 octubre 2026): cinco artículos adicionales
+
+Se leyeron los cinco artículos y se contrastaron los puntos detallados con fuentes oficiales. Las afirmaciones sin prueba suficiente se mantienen abiertas.
+
+| Artículo | Evidencia directa | Límites pendientes |
+|---|---|---|
+| [A Certain Dark Item](../articles/a-certain-dark-item-release-date.html) | https://toaru-project.com/item/onair/ confirma estreno japonés 9/10/2026, AT-X 22:30 JST y TOKYO MX/BS11 24:30; distribución japonesa ABEMA/otros servicios. | Equipo, elenco, sinopsis del episodio y temas musicales requieren cotejo separado con https://toaru-project.com/item/staffcast/index.html y https://toaru-project.com/item/story/01.html; Crunchyroll por territorio. |
+| [Ace of Diamond act II – Second Season](../articles/ace-of-diamond-second-season.html) | https://diaace.com/onair/ confirma inicio del segundo cour 11/10/2026, TV Tokyo 17:30, AT-X 21:00 y Netflix Japón como servicio de adelanto. | Estreno original de abril, estudio OLM y regiones de Crunchyroll requieren prueba individual adicional. |
+| [Chitose Is in the Ramune Bottle Cour 2](../articles/chitose-ramune-bottle-cour-2.html) | Artículo inspeccionado; enlaza https://chiramune.com/ como fuente de producción. | **Sin cotejo directo suficiente** para confirmar 13/10, episodio 13.5, franjas AT-X/TOKYO MX ni arco de Haru Aomi. Mantener como pendiente hasta consultar anuncio y calendario oficiales. |
+| [Dandivine](../articles/dandivine-release-date.html) | https://www.aniplex.co.jp/lineup/dandivine/ confirma estreno 7/10/2026, TOKYO MX/BS11/Gunma/Tochigi 24:30, streaming d Anime Store, historia de Aposdoll y Gekiha, proyecto de robots combinables y estudios LIDENFILMS/KAYAC ANIMATION. | Derechos y territorios de Crunchyroll requieren fuente internacional separada. |
+| [Dark Machine: The Animation](../articles/dark-machine-the-animation.html) | https://www.fujitv.co.jp/darkmachine_anime/onair/ y https://www.fujitv.co.jp/fujitv/news/20260949.html confirman 13/10/2026 Fuji TV 25:45, Kansai TV 15/10 26:45, BS Fuji 20/10 24:30, plataformas japonesas desde 14/10 12:00 y sinopsis de Kairi, Rudra y Golden Valley. | Crunchyroll internacional y Production +h. requieren contraste con distribuidor y créditos oficiales. |
+
+**Recuento de inspección individual: 37 de 63; quedan 26 artículos sin inspección individual.** El cotejo exhaustivo de todas las afirmaciones de los 37 aún no se ha completado. No se modificaron los cinco artículos porque los puntos no confirmados no constituyen por sí solos errores demostrados.
