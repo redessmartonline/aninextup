@@ -1435,10 +1435,63 @@
       ]
     },
     "live_url_progress_2026_10_11": {
-      "unique_urls_attempted": 49,
+      "unique_urls_attempted": 57,
       "unique_urls_inventory": 130,
-      "remaining_unique_urls": 81,
-      "notes": "Prior 34 + batch 5 seven + batch 6 eight; repeat checks excluded; indeterminate outcomes remain pending."
+      "remaining_unique_urls": 73,
+      "notes": "Previous 49 plus 8 distinct URLs; indeterminate earlier results still need rechecks."
+    },
+    "live_url_batch_7_2026_10_11": {
+      "method": "Public webpage retrieval of eight exact inventory URLs",
+      "attempted": 8,
+      "readable_content": 8,
+      "checks": [
+        {
+          "url": "https://www.dreamland-anime.com/",
+          "result": "readable_official_page"
+        },
+        {
+          "url": "https://bclover.jp/?lang=en",
+          "result": "readable_official_page"
+        },
+        {
+          "url": "https://www.suikoden-anime.com/",
+          "result": "readable_official_page"
+        },
+        {
+          "url": "https://www.konami.com/games/suikoden/en/",
+          "result": "readable_official_page"
+        },
+        {
+          "url": "https://psyren-anime.com/",
+          "result": "readable_official_page"
+        },
+        {
+          "url": "https://ranma-pr.com/news/2397/",
+          "result": "readable_official_page"
+        },
+        {
+          "url": "https://ranma-pr.com/en/news/",
+          "result": "readable_official_page"
+        },
+        {
+          "url": "https://kusuriyanohitorigoto.jp/news/2623/",
+          "result": "readable_official_page"
+        }
+      ],
+      "observations": [
+        "Dreamland official site has trailer links and news",
+        "Black Clover second season official site lists October 3 2026 broadcast",
+        "Suikoden anime official site lists October 3 2026 Japanese broadcast; Konami portal links to anime",
+        "Psyren official site lists October 5 2026 broadcast",
+        "Ranma 1/2 third season official announcement and English news index accessible",
+        "Apothecary Diaries official announcement lists October 2 2026 season three broadcast"
+      ],
+      "limitations": [
+        "Text retrieval does not guarantee browser or media playback",
+        "No direct HTTP response codes measured",
+        "No broken link or article correction established"
+      ],
+      "complete": false
     }
   }
 }
