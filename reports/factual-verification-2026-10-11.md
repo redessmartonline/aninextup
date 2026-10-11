@@ -984,3 +984,44 @@ Lectura directa del comunicado emitido por Yomiuri Telecasting Corporation https
 El bloque nominal oficial indexado de la cartelera Crunchyroll respalda estreno 10 octubre, sábados 02:30 PT y los territorios publicados. Se añadió el comunicado que prueba el PV exacto y se precisó la etiqueta como segundo main PV del anuncio Yomiuri, sin afirmar que se haya comprobado el nombre del canal de YouTube. No hay fecha de subida por certificar. Commit `7bde050710bdd3b590f19cdc86149e1ea6b324e8`. Las afirmaciones materiales de la versión publicada quedan respaldadas.
 
 **Balance: cinco pendientes examinados, dos cierres nuevos y tres aún pendientes. Acumulado vigente: 46/63 cerrados y 17/63 pendientes.** Tres artículos actualizados y recuperados de GitHub: coincidencia íntegra con el contenido enviado. Los cierres se limitan a las afirmaciones publicadas y pruebas descritas; la programación puede cambiar.
+
+
+## Continuación — cinco pendientes: reparto, tipos y fechas discrepantes (11 octubre 2026)
+
+Base recuperada del informe y de los últimos commits, HEAD `0ad8b2ff138b30dcbcad07338abd5e90397d7856`: **46 cerrados / 17 pendientes**. Se revisaron completos cinco HTML aún pendientes, con metadatos. No se examinan como nuevos los dos cierres del lote anterior. Se distingue lectura directa, texto oficial indexado y reproducción secundaria.
+
+### PENDIENTE, REPARTO DOCUMENTADO — `bass-x-machina-release-date.html`
+
+Nueva lectura directa https://www.netflix.com/ca/title/81088875 confirma **Brian Tyree Henry, Tati Gabrielle y Cree Summer**, creador LeSean Thomas y sinopsis. Se resuelve el bloqueo del reparto y se añade la ficha como referencia específica. Esa página conserva una etiqueta de año 2025: no se utiliza como calendario actual. Lectura directa de las notas editoriales de https://about.netflix.com/en/news/netflix-unveils-upcoming-anime-slate-out-of-annecy-festival confirma 3 noviembre 2026, Studio Mir, Thomas y los cuatro productores; https://about.netflix.com/ja/news/anime-nyc-2026 confirma lanzamiento mundial exclusivo 3 noviembre. Se precisa «worldwide exclusive launch» en lugar de extrapolar garantías individuales para cada catálogo.
+
+**Faltan identidad/canal y fecha de subida real de CWbZBIrEfqI** (JSON-LD: 20 agosto). YouTube devolvió throttling; el comunicado japonés enlaza otra versión, no prueba la identidad del ID inglés. No se certifica ni se sustituye sin prueba. Commit `5b102a99658bd73cc1f83760a122f39c9e70829b`.
+
+### PENDIENTE, SINOPSIS PRECISADA — `the-moon-on-a-rainy-night-anime.html`
+
+Lecturas directas https://amayonotsuki.jp/ y https://amayonotsuki.jp/news/post-36 corroboran 2027, CompTown, Makino, Yasukawa, Nishihata, jizue y Saeki/Amamiya, además del primer PV exacto Q-W1E8Y9Jv0. https://prtimes.jp/main/html/rd/p/000006620.000001719.html, comunicado original de Kodansha, describe encuentro **camino de una clase de piano antes del inicio del instituto** y reencuentro como compañeras. Se reemplazó la concreción no respaldada de «rainy night» por ese encuentro documentado. No se afirma haber demostrado que nunca lloviera; se ajusta la narración a la sinopsis primaria. Se eliminó además la valoración factual innecesaria «most substantial reveal so far».
+
+**Falta uploadDate real del PV**, cuyo JSON-LD conserva 7 octubre. La fecha del anuncio confirma publicación del comunicado, no sustituye metadatos de YouTube, que no fueron recuperables. No se cierra por haber resuelto solo la sinopsis. Commit `e5c9bfaab6375af6d7fb9f77a69c02c0ef6446d8`.
+
+### PENDIENTE, CUATRO TIPOS DOCUMENTADOS — `pok-mon-horizons-anime-unseals-treasures-of-ruin-in-latest-wonder-a6b9d2d5.html`
+
+Nuevas lecturas directas de la **Pokédex oficial de Singapur**: https://sg.portal-pokemon.com/pokedex/1001/ confirma Wo-Chien Dark/Grass; https://sg.portal-pokemon.com/pokedex/1002/ confirma Chien-Pao Dark/Ice; https://sg.portal-pokemon.com/pokedex/1003/ confirma Ting-Lu Dark/Ground; https://sg.portal-pokemon.com/pokedex/1004/ confirma Chi-Yu Dark/Fire. Se añadieron las cuatro referencias: se resuelve ese bloqueo. Las fichas estadounidense y japonesa no devolvieron sus valores en la extracción, por lo que no se presentan como prueba de tipos.
+
+https://www.tv-tokyo.co.jp/anime/pocketmonster2023/ leído directamente confirma episodio 153 el 16 octubre y fenómenos junto a los santuarios de Paldea. El texto oficial indexado de https://www.crunchyroll.com/news/latest/2026/10/9/pokemon-horizons-anime-treasures-of-ruin-wonder-voyage-arc-trailer confirma cobertura del 9 octubre y nombres del cuarteto; su apertura directa no devuelve cuerpo.
+
+**Falta cotejo primario del contenido del nuevo PV**, incluido el desencadenante de los sellos. Yahoo reproduce un mensaje atribuido a Pokémon_cojp con n6VZjxUNAww; esa reproducción es secundaria y no equivale a haber leído el mensaje primario ni visto el PV. YouTube no fue recuperable. No se añade un player ni se cierra la noticia por haber confirmado los tipos. Commit `27bc7e87dcf72330b6f494af0678d26c98e80943`.
+
+### PENDIENTE, TEXTO DE PROGRAMACIÓN ACTUALIZADO — `magic-knight-rayearth-2026.html`
+
+Nueva lectura directa https://rayearth-anime.com/onair/ confirma TV Asahi desde 7 octubre 23:45 JST y distribución doméstica jueves 00:15, con variación por servicio. https://www.universal-music.co.jp/toaka/news/2026-09-20/ confirma estudio, adaptación y **main PV 2 exacto 67GqhfLw3ys**. El bloque nominal oficial indexado de la cartelera Crunchyroll respalda retelling y territorios; no se atribuye al título una hora extraída junto a otra serie.
+
+Se añadieron horas domésticas con alcance explícito y se sustituyó la promesa de esperar futuros horarios anunciados por remisión a cartelera actual/listado local. **Faltan uploadDate real (JSON-LD: 20 septiembre) y horario internacional actual inequívoco**, sin extrapolar de la emisión japonesa. YouTube devolvió throttling. Commit `712592bc611b3017a0c6a5b938d24094ca84da57`.
+
+### PENDIENTE, DISCREPANCIA DE FECHA EXPLICITADA — `dreamland-release-date.html`
+
+https://www.dreamland-anime.com/ y https://www.tv-asahi.co.jp/pr/contents/20261017_04387.html leídos directamente confirman premisa, autores/créditos, música y episodio 1 japonés **18 octubre 02:00 JST** (franja 17 octubre 26:00). Se corrigió el resumen Open Graph que aún decía comienzo japonés 17 octubre sin explicar fecha civil.
+
+Texto oficial indexado de https://www.crunchyroll.com/news/latest/2026/9/18/dreamland-animated-series-shares-trailer-2-japanese-opening-ending-theme-songs confirma que el distribuidor anunció **16 octubre** en septiembre. El bloque nominal de https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll?lid=0ojihzvhs258, actualizado 10 octubre, muestra **17 octubre/TBA** y todos los territorios enumerados en el artículo. Se resuelve prueba territorial. La apertura directa de Crunchyroll no devuelve cuerpo: se documenta como evidencia indexada.
+
+Se dejó visible la discrepancia en cabecera, tarjeta, descripción y texto, en lugar de presentar el 16 como fecha internacional actual inequívoca o declarar una reprogramación no demostrada. **Faltan aclaración del calendario internacional e identidad/canal/uploadDate del teaser OBK6DLvQJvs** (JSON-LD: 12 julio). YouTube no devolvió contenido. Commit `0dbfc8bbfbdd48d45256fd4221a5a983d69d852a`.
+
+**Balance: cinco pendientes examinados y actualizados; cero cierres nuevos. Acumulado vigente: 46/63 cerrados y 17/63 pendientes.** Se resolvieron pruebas de reparto, cuatro tipos y territorios; se precisaron sinopsis y programación. Los cinco HTML publicados se recuperaron de GitHub y coinciden íntegramente con el contenido enviado. No se certifica ninguna ficha completa mientras mantenga los bloqueos indicados.
