@@ -658,3 +658,17 @@ Acumulado: 18 de 63 cerrados, 45 pendientes.
 - **PENDIENTE** `anime-releasing-november-2026.html`: falta cotejar individualmente seis fechas y territorios de streaming/cine; no se cierra solo por haber confirmado el resumen de diciembre.
 
 Balance del lote: cinco examinados, cuatro cierres y un pendiente. **Acumulado 27/63 cerrados y 36/63 pendientes.** No se identificaron errores demostrados en estos cuatro artículos, por lo que no se alteró el texto editorial.
+
+
+## Auditoría de calendario noviembre — 11 octubre 2026
+
+**CERRADO `anime-releasing-november-2026.html`**: se verificaron las seis entradas de su tabla, separando plataformas y estrenos en salas japonesas:
+
+1. Bass X Machina, Netflix 3 noviembre: anuncio oficial https://about.netflix.com/en/news/netflix-unveils-upcoming-anime-slate-out-of-annecy-festival . La nota de AniNextUp limita la disponibilidad estadounidense.
+2. Demon's Crest, Prime Video exclusivo mundial 6 noviembre: https://demonscrest-anime.com/ y comunicado de Amazon https://prtimes.jp/main/html/rd/p/000002152.000004612.html .
+3. Rakuen Tsuihou: Kokoro no Resonance, estreno en cines japoneses 13 noviembre: https://rakuen-tsuiho-r.com/ .
+4. Witch on the Holy Night, cines japoneses 20 noviembre: https://mahoyo-movie.com/ ; comunicado distribuidor https://www.crunchyroll.com/es/news/latest/2026/9/30/witch-on-the-holy-night-anime-film-trailer-imagen-equipo .
+5. VOTOMS: Die Graue Hexe primera parte, cines japoneses 20 noviembre: comunicado primario https://www.votoms-gh.com/news/detail.php?id=23579 .
+6. Takopi's Original Sin Movie, cines japoneses 27 noviembre: comunicado TBS https://www.tbs.co.jp/anime/takopi_project/news/news20260818.html . **Importante**: se trata de reedición para salas de los seis episodios con nuevas escenas, no historia totalmente nueva. Se añadió esta precisión al calendario.
+
+Se incorporaron referencias oficiales adicionales al artículo, commit `4ea023fa9c58f868c6036a88c3849422d2de8029`. **Nuevo balance: 28/63 cerrados y 35/63 pendientes.** En este turno se verificó una guía con seis estrenos; no se afirma haber revisado cinco artículos distintos.
