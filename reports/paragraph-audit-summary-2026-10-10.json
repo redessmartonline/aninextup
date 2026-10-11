@@ -1,0 +1,23 @@
+{
+  "audit_date": "2026-10-10",
+  "articles_in_repository": 46,
+  "articles_paragraph_inventory_completed": 46,
+  "paragraphs_inventoried": 305,
+  "inventory_files": [
+    "reports/paragraph-claim-audit-2026-10-10.json",
+    "reports/paragraph-audit-batch-2.json",
+    "reports/paragraph-audit-batch-3.json",
+    "reports/paragraph-audit-batch-4.json",
+    "reports/paragraph-audit-batch-5.json"
+  ],
+  "primary_reference_for_crunchyroll": "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+  "coverage_note": "Paragraph counts reflect paragraphs longer than 60-70 characters in article HTML; they are not a count of atomic factual assertions. Other text and metadata may contain claims.",
+  "verification_status": "claim_by_claim_verification_incomplete",
+  "next_actions": [
+    "Separate each paragraph into atomic verifiable claims.",
+    "Match each claim to a precise primary source passage and record a citation.",
+    "Flag unsupported, contradictory, future-dated or region-dependent assertions.",
+    "Correct article HTML and metadata only when evidence warrants.",
+    "Rerun editorial and URL tests."
+  ]
+}
