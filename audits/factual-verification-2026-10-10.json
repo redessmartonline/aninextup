@@ -762,7 +762,7 @@
     }
   ],
   "external_link_video_audit_2026_10_11": {
-    "scope": "16 of 46 article HTML files inspected for source URLs, video references, and thumbnail identifiers; public source verification limited to explicitly listed URLs",
+    "scope": "24 of 46 article HTML files screened for external source URLs and embedded YouTube ID/thumbnail coherence",
     "article_ids": [
       "hirayasumi",
       "walking-home-with-you",
@@ -797,7 +797,7 @@
         "description": "Clarified production announcement scope, avoiding use as evidence of 2027 premiere date."
       }
     ],
-    "status": "16 article HTML files screened in batches; 30 remaining; do not claim all URLs returned HTTP 200",
+    "status": "24/46 structurally screened; 22 articles remain; not all outbound links tested for HTTP status or YouTube playback",
     "additional_article_paths": [
       "articles/rakuen-tsuihou-kokoro-no-resonance.html",
       "articles/demons-crest-release-date.html",
@@ -828,6 +828,48 @@
         "article": "rakuen-tsuihou-resonance"
       }
     ],
-    "video_note": "A Certain Dark Item includes VideoObject JSON-LD for teaser bf6XcU3uL9I and a separate link to main trailer NNHxQJgZdbQ; different IDs are not in themselves proof of a broken link. No live YouTube playback/ownership verification completed."
+    "video_note": "A Certain Dark Item includes VideoObject JSON-LD for teaser bf6XcU3uL9I and a separate link to main trailer NNHxQJgZdbQ; different IDs are not in themselves proof of a broken link. No live YouTube playback/ownership verification completed.",
+    "third_batch_article_paths": [
+      "articles/dandivine-release-date.html",
+      "articles/worlds-strongest-witch.html",
+      "articles/vermilion-mask-release-date.html",
+      "articles/tank-chair-release-date.html",
+      "articles/tokyo-revengers-war-three-titans.html",
+      "articles/dragon-ball-super-beerus.html",
+      "articles/cyberpunk-edgerunners-2.html",
+      "articles/im-looking-for-a-zombie.html"
+    ],
+    "third_batch_embedded_videos": 7,
+    "third_batch_thumbnail_id_mismatches": 0,
+    "third_batch_confirmed_public_sources": [
+      {
+        "url": "https://www.aniplex.co.jp/lineup/dandivine/",
+        "finding": "Accessible; Aniplex lists October 7 Japanese TV start and production details"
+      },
+      {
+        "url": "https://www.tankchair-anime.com/news-single.php?id=25725",
+        "finding": "Accessible; official October 4 Japan Prime Video 23:30 JST streaming announcement"
+      },
+      {
+        "url": "https://www.tankchair-anime.com/news-single.php?id=24061&offset=10",
+        "finding": "Accessible; official October 4 TV premiere and main PV"
+      },
+      {
+        "url": "https://www.netflix.com/tudum/articles/cyberpunk-edgerunners-2-release-date-news",
+        "finding": "Accessible; Netflix Tudum confirms October 20 premiere and standalone ten-episode story"
+      }
+    ],
+    "third_batch_corrections": [
+      {
+        "article": "dandivine",
+        "commit": "b9e0293a",
+        "finding": "Removed duplicate adjacent official trailer heading"
+      },
+      {
+        "article": "vermilion-mask",
+        "commit": "784dd7e6",
+        "finding": "Removed duplicate adjacent official trailer heading"
+      }
+    ]
   }
 }
