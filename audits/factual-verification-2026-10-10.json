@@ -728,5 +728,22 @@
     ],
     "status": "Structural screening recorded; complete live-link audit and article-by-article qualitative assessment still pending",
     "design_changes": false
-  }
+  },
+  "editorial_corrections_2026_10_11": [
+    {
+      "article": "bass-x-machina",
+      "commit": "5bb9b615",
+      "change": "Corrected claim that public Netflix media-center page visibly supplies a dated US premiere; date itself not changed; regional caveat added."
+    },
+    {
+      "article": "takopis-original-sin-movie",
+      "commit": "2a2c978f",
+      "change": "Added original editorial comparison of theatrical six-episode re-edit with a sequel or second season; no new unverified release claims."
+    },
+    {
+      "article": "pokemon-horizons-season-4-wonders-ahead",
+      "commit": "ff9a1f62",
+      "change": "Clarified secondary report versus already-linked Pokémon Company International primary press release."
+    }
+  ]
 }
