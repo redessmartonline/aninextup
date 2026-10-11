@@ -135,3 +135,17 @@ Fuentes: https://demonscrest-anime.com/ y https://demonscrest-anime.com/news/ind
 | Estudio Production I.G | Pendiente | Requiere cotejar créditos de producción en web oficial |
 
 **Balance de este lote:** 4 artículos con revisión individual de afirmaciones; 17 afirmaciones confirmadas por fuentes cotejadas, 6 pendientes de corroboración adicional, 2 afirmaciones editoriales o sin hora concreta que no requieren una confirmación de estreno. **No se certifican los 63 artículos**. La tabla general anterior indica únicamente cobertura inicial y no debe confundirse con este lote exhaustivo.
+
+
+## Actualización de pruebas oficiales — 11 octubre 2026 (lote 2)
+
+Se resolvieron cuatro afirmaciones antes marcadas pendientes:
+
+| Artículo | Afirmación | Estado | Evidencia oficial |
+|---|---|---|---|
+| My Happy Marriage special episodes | TOKYO MX: 25 octubre 2026, 19:00–20:30 JST | Confirmada | https://watakon-anime.com/onair/ |
+| My Happy Marriage special episodes | Streaming progresivo desde 20:30 JST, Netflix y otras plataformas japonesas | Confirmada | https://watakon-anime.com/onair/ |
+| Demon's Crest | Soala interpreta el tema final «ReaL» | Confirmada | https://demonscrest-anime.com/music/ |
+| Demon's Crest | Production I.G figura como estudio de animación | Confirmada | https://demonscrest-anime.com/staffcast/ |
+
+**Quedan pendientes del lote 1:** la referencia específica a «Kocha Agasawa Anime Year» en The Ramparts of Ice (corroborada por prensa secundaria, no aún por comunicado primario localizado) y los detalles narrativos de la clase de cocina en My Happy Marriage (no comprobados en anuncio primario). Los artículos restantes requieren cotejo exhaustivo de sus afirmaciones; no se declaran aprobados por este avance.
