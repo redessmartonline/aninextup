@@ -1298,6 +1298,59 @@
       "remaining_unique_urls_not_attempted": 104,
       "notes": "All four distinct from previous 22. Earlier rechecks do not count as new. Content extraction is not an HTTP status or video playback certification.",
       "complete": false
+    },
+    "live_url_batch_4_2026_10_11": {
+      "method": "Public web retrieval of exact URLs with readable primary-source content",
+      "attempted": 8,
+      "readable_content": 8,
+      "checks": [
+        {
+          "url": "https://horemajo-anime.com/story/",
+          "result": "readable_official_page"
+        },
+        {
+          "url": "https://horemajo-anime.com/staffcast/",
+          "result": "readable_official_page"
+        },
+        {
+          "url": "https://kusuriyanohitorigoto.jp/movie/introduction/",
+          "result": "readable_official_page"
+        },
+        {
+          "url": "https://www.tbs.co.jp/anime/takopi_project/news/news20260818.html",
+          "result": "readable_official_page"
+        },
+        {
+          "url": "https://www.tbs.co.jp/anime/takopi_project/staffcast/",
+          "result": "readable_official_page"
+        },
+        {
+          "url": "https://www.ufotable.com/news/article/3055/",
+          "result": "readable_official_page"
+        },
+        {
+          "url": "https://demonscrest-anime.com/news/index00020000.html",
+          "result": "readable_official_page"
+        },
+        {
+          "url": "https://about.netflix.com/en/news/netflix-unveils-upcoming-anime-slate-out-of-annecy-festival",
+          "result": "readable_official_page"
+        }
+      ],
+      "observations": [
+        "Horemajo official story and staff pages readable; Diomedéa credited for animation",
+        "Apothecary Diaries film official introduction readable",
+        "Takopi official TBS release and staff pages readable; theatrical edit Nov 27 2026",
+        "ufotable official Witch on the Holy Night page readable; Nov 20 2026 theatrical date and trailer linked",
+        "Demon's Crest official teaser and Production I.G staff announcement readable",
+        "Netflix official anime slate readable; Bass X Machina image announcement, not a release-date confirmation"
+      ],
+      "limitations": [
+        "Text extraction does not verify browser playback or all images",
+        "No HTTP status code measured",
+        "No article correction justified solely by page accessibility"
+      ],
+      "complete": false
     }
   }
 }
