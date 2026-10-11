@@ -2,9 +2,9 @@
   "scope": "Article-level factual verification; structural validation is separate",
   "checked_on": "2026-10-10",
   "total": 46,
-  "partially_verified": 31,
+  "partially_verified": 34,
   "fully_verified": 0,
-  "pending": 15,
+  "pending": 12,
   "warning": "Partial verification does not validate every assertion in the article.",
   "articles": [
     {
@@ -383,18 +383,26 @@
       "title": "Sasaki and Peeps Season 2",
       "article": "articles/sasaki-and-peeps-season-2",
       "date": "2026-10-07",
-      "status": "pending_manual_fact_check",
-      "checked_claims": [],
-      "source_urls": []
+      "status": "partially_verified_official_source",
+      "checked_claims": [
+        "Japanese premiere 2026-10-07; one-hour first episode; Prime Video Japan fastest streaming at 22:30 JST"
+      ],
+      "source_urls": [
+        "https://sasapi-anime.com/onair.html"
+      ]
     },
     {
       "id": "detective-is-already-dead-season-2",
       "title": "The Detective Is Already Dead Season 2",
       "article": "articles/detective-is-already-dead-season-2",
       "date": "2026-10-07",
-      "status": "pending_manual_fact_check",
-      "checked_claims": [],
-      "source_urls": []
+      "status": "partially_verified_official_source",
+      "checked_claims": [
+        "Official premiere 2026-10-07; ENGI studio"
+      ],
+      "source_urls": [
+        "https://tanmoshi-anime.jp/Season2/"
+      ]
     },
     {
       "id": "iceblade-sorcerer-ii",
@@ -467,9 +475,13 @@
       "title": "My Happy Marriage Season 2 Special Episodes",
       "article": "articles/my-happy-marriage-special-episodes",
       "date": "2026-10-25",
-      "status": "pending_manual_fact_check",
-      "checked_claims": [],
-      "source_urls": []
+      "status": "partially_verified_official_source",
+      "checked_claims": [
+        "Three specials 2026-10-25; Japanese TV 19:00 JST; Netflix and other platforms from 20:30 JST"
+      ],
+      "source_urls": [
+        "https://watakon-anime.com/news/post-90"
+      ]
     },
     {
       "id": "apothecary-s3",
