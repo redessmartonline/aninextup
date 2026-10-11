@@ -705,5 +705,28 @@
   "notes": [
     "Japanese dates/times do not automatically prove international streaming dates or territory availability.",
     "Each partial verification applies only to checked_claims; studio/cast details remain pending unless explicitly listed."
-  ]
+  ],
+  "link_and_editorial_review_2026_10_11": {
+    "scope": "46 article HTML files listed in this audit",
+    "review_type": "Repository HTML structural and editorial screening; not a complete live HTTP crawl",
+    "reviewed_articles": 46,
+    "internal_link_findings": "All five distinct out-of-set relative article targets identified by the screening were found as HTML files in repository; no broken internal target proven in that subset.",
+    "verified_extra_targets": [
+      "articles/anime-releasing-november-2026.html",
+      "articles/anime-releasing-december-2026.html",
+      "articles/the-moon-on-a-rainy-night-anime.html",
+      "articles/red-riding-hood-detective-story.html",
+      "articles/fledgling-demon-lords-starter-shop.html"
+    ],
+    "external_links": "All 46 articles' external href values were extracted and screened; not every external URL was fetched or confirmed HTTP 200. Official TBS Takopi links and VOTOMS source and Netflix Bass X Machina media center were opened successfully.",
+    "editorial_findings": [
+      "Repeated guide structures across many articles; recommend distinct added editorial value and sourcing for each title, not just templated schedule text.",
+      "Several citations link to general seasonal lineup or broad portal rather than specific claim; prioritize primary announcement links.",
+      "Pokémon press release URL could not be fetched with verification browser; do not classify as HTTP 404 without independent check.",
+      "Netflix Bass X Machina media center source accessible but page as rendered did not show a release date; corroborate November 3 via dated Netflix announcement.",
+      "Trailer playback and video ownership not exhaustively tested; do not certify video availability."
+    ],
+    "status": "Structural screening recorded; complete live-link audit and article-by-article qualitative assessment still pending",
+    "design_changes": false
+  }
 }
