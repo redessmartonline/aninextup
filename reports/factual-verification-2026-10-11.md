@@ -149,3 +149,19 @@ Se resolvieron cuatro afirmaciones antes marcadas pendientes:
 | Demon's Crest | Production I.G figura como estudio de animación | Confirmada | https://demonscrest-anime.com/staffcast/ |
 
 **Quedan pendientes del lote 1:** la referencia específica a «Kocha Agasawa Anime Year» en The Ramparts of Ice (corroborada por prensa secundaria, no aún por comunicado primario localizado) y los detalles narrativos de la clase de cocina en My Happy Marriage (no comprobados en anuncio primario). Los artículos restantes requieren cotejo exhaustivo de sus afirmaciones; no se declaran aprobados por este avance.
+
+
+## Cotejo individual — lote 3 (11 octubre 2026)
+
+Se leyó el cuerpo de seis artículos y se contrastaron directamente tres fuentes originales accesibles. **No se marca una afirmación como verificada solo porque exista un enlace.**
+
+| Artículo | Afirmaciones verificadas con texto original | Por verificar |
+|---|---|---|
+| [Takopi's Original Sin Movie](../articles/takopis-original-sin-movie.html) | TBS confirma estreno japonés 27/11/2026, montaje de seis episodios, escenas nuevas y participación de ENISHIYA. https://www.tbs.co.jp/anime/takopi_project/series/news/news20260817.html | Disponibilidad fuera de Japón; la ausencia de anuncio no demuestra imposibilidad de estreno |
+| [Walking Home with You](../articles/walking-home-with-you-anime.html) | Comunicado de ADK Emotions confirma abril 2027, Nippon TV, autora Mai Matsuda, teaser visual, personajes Shun y Naoki, Hyper Going-Home Club y reparto aún no anunciado. https://prtimes.jp/main/html/rd/p/000000212.000127482.html | Lesión deportiva y algunos detalles narrativos: requieren manga o sinopsis primaria adicional; plataformas internacionales |
+| [Nia Liston](../articles/nia-liston-release-date.html) | KONAMI confirma adaptación TV, octubre 2026 y producción de KONAMI animation. https://animation.konami.net/en/news_2026_001.html | **6 de octubre, dos cours, horarios 21:25/21:55 JST, elenco y equipo** no están acreditados por ese comunicado; contrastar https://kyoranreijo-pr.com/ y su sección ON AIR |
+| [TANK CHAIR](../articles/tank-chair-release-date.html) | Artículo leído y enlaces oficiales identificados: https://www.tankchair-anime.com/news-single.php?id=25725 | Contrastar horarios, territorios y sinopsis directamente con los comunicados; no se ha cotejado su contenido íntegro |
+| [Tokyo Revengers: War of the Three Titans](../articles/tokyo-revengers-war-three-titans.html) | Artículo leído y fuente oficial identificada: https://tokyo-revengers-anime.com/onair/ | Contrastar horario japonés 25:23, streaming Disney+/Hulu y temas musicales en comunicados correspondientes |
+| [Pokémon Horizons Season 4](../articles/pokemon-horizons-season-4-wonders-ahead.html) | Artículo leído; URL oficial localizada: https://www.pokemon.com/us/news/pokemon-horizons-season-4-wonders-ahead-coming-to-netflix | El sitio oficial devuelve contenido mediante iframe en el lector: fecha estadounidense 27/02/2027, exclusividad y distribución por partes **no corroboradas directamente** en esta revisión |
+
+**Alcance:** 6 artículos inspeccionados; 3 con comprobación directa de al menos parte de las afirmaciones contra texto original, 3 con verificación documental pendiente. Esta sección no constituye certificación exhaustiva de seis artículos.
