@@ -760,5 +760,43 @@
       "commit": "96309fdd",
       "change": "Explained first-season episode count versus premiere-day episode availability and regional catalog limitations."
     }
-  ]
+  ],
+  "external_link_video_audit_2026_10_11": {
+    "scope": "First 8 of 46 article HTML files; complete external HTTP/video audit remains in progress",
+    "article_ids": [
+      "hirayasumi",
+      "walking-home-with-you",
+      "pokemon-horizons-season-4-wonders-ahead",
+      "hello-witch-love-potion",
+      "apothecary-diaries-movie",
+      "takopis-original-sin-movie",
+      "votoms-gray-witch",
+      "witch-on-the-holy-night"
+    ],
+    "html_video_ids_checked": 7,
+    "html_video_thumbnail_id_mismatches": 0,
+    "html_video_note": "Compared each data-youtube value with i.ytimg.com thumbnail ID. No mismatches; this is not video playback or publisher ownership validation.",
+    "http_checks": [
+      {
+        "url": "https://www.viz.com/press-releases/v/1006748",
+        "result": "Accessible; official VIZ 2025 production announcement, no January 2027 premiere date"
+      },
+      {
+        "url": "https://press.pokemon.com/en/releases/Pokemon-Horizons-Season-4-Wonders-Ahead-to-Premiere-February-27-2027",
+        "result": "Could not retrieve using available browser; do not infer HTTP 404"
+      },
+      {
+        "url": "https://www.ufotable.com/news/article/3055/",
+        "result": "Browser retrieval not confirmed; do not infer HTTP 404"
+      }
+    ],
+    "corrections": [
+      {
+        "article": "hirayasumi",
+        "commit": "dab3c3b9",
+        "description": "Clarified production announcement scope, avoiding use as evidence of 2027 premiere date."
+      }
+    ],
+    "status": "In progress; no blanket claims of 46 URL HTTP verification or trailer playback"
+  }
 }
