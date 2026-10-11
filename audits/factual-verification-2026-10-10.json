@@ -1694,6 +1694,42 @@
       ],
       "reconciliation": "May overlap prior source-url checks; not added to unique attempted count without set comparison",
       "article_changes": "none; no demonstrated discrepancy"
+    },
+    "video_structural_audit_2026_10_11": {
+      "source": "All 46 article HTML files in uploaded ZIP snapshot",
+      "video_occurrences": 36,
+      "unique_youtube_ids": 36,
+      "invalid_video_id_syntax": 0,
+      "videos_without_thumbnail_reference": 0,
+      "verification": "structural_only",
+      "youtube_playback_verified": 0,
+      "limitations": [
+        "YouTube ID syntax and thumbnails in HTML do not prove videos are public, playable or embeddable",
+        "Current runtime cannot resolve outbound DNS",
+        "Public text retrieval of eight i.ytimg.com thumbnails returned tool-internal inaccessible errors, not authoritative 404 statuses",
+        "Snapshot may lag GitHub HEAD"
+      ],
+      "next_actions": [
+        "Run public browser/HTTP checks from a network-enabled CI runner against all 60 image URLs",
+        "Check all 36 YouTube embed URLs and video availability in a browser",
+        "Reconcile any confirmed errors against current GitHub HEAD before modifying content"
+      ],
+      "complete": false
+    },
+    "image_followup_2026_10_11": {
+      "attempted_youtube_thumbnail_urls": [
+        "https://i.ytimg.com/vi/0ISyxMMLVg8/hqdefault.jpg",
+        "https://i.ytimg.com/vi/0ISyxMMLVg8/maxresdefault.jpg",
+        "https://i.ytimg.com/vi/67GqhfLw3ys/maxresdefault.jpg",
+        "https://i.ytimg.com/vi/8RHh2AyKRfY/maxresdefault.jpg",
+        "https://i.ytimg.com/vi/9UhNKYg6uso/hqdefault.jpg",
+        "https://i.ytimg.com/vi/9rProUQlD-I/maxresdefault.jpg",
+        "https://i.ytimg.com/vi/CWbZBIrEfqI/hqdefault.jpg",
+        "https://i.ytimg.com/vi/CeUZpSuOuS4/maxresdefault.jpg"
+      ],
+      "result": "all_8_tool_inaccessible_indeterminate",
+      "note": "Not treated as broken; some overlap previously attempted URLs; no new success claims",
+      "complete": false
     }
   }
 }
