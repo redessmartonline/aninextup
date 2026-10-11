@@ -23,9 +23,9 @@ class Extract(html.parser.HTMLParser):
         self.video_ids = []
     def handle_data(self, data):
         # VideoObject JSON-LD and JS data may contain embed URLs without iframe tags.
-        for video in re.findall(r"(?:youtube(?:-nocookie)?\\.com/embed/|youtube\\.com/watch\\?v=|youtu\\.be/)([A-Za-z0-9_-]{11})", data):
+        for video in re.findall(r"(?:youtube(?:-nocookie)?\.com/embed/|youtube\.com/watch\?v=|youtu\.be/)([A-Za-z0-9_-]{11})", data):
             self.video_ids.append(video)
-        for video in re.findall(r"i\\.ytimg\\.com/vi/([A-Za-z0-9_-]{11})/", data):
+        for video in re.findall(r"i\.ytimg\.com/vi/([A-Za-z0-9_-]{11})/", data):
             self.video_ids.append(video)
     def handle_starttag(self, tag, attrs):
         a = dict(attrs)
