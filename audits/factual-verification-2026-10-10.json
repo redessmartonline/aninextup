@@ -1632,6 +1632,68 @@
         "Remaining image/video checks pending"
       ],
       "article_status_promotion": false
+    },
+    "html_images_first_batch_2026_10_11": {
+      "inventory_external_image_urls": 60,
+      "attempted": 5,
+      "rendered": 1,
+      "indeterminate": 4,
+      "checks": [
+        {
+          "url": "https://rayearth-anime.com/assets/img/kv_04.webp",
+          "result": "public_retriever_rendered_image"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/0ISyxMMLVg8/maxresdefault.jpg",
+          "result": "retriever_not_accessible_indeterminate"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/67GqhfLw3ys/maxresdefault.jpg",
+          "result": "retriever_not_accessible_indeterminate"
+        },
+        {
+          "url": "https://chiramune.com/core_sys/images/main/home/kv04.jpg",
+          "result": "retriever_not_accessible_indeterminate"
+        },
+        {
+          "url": "https://toaru-project.com/item/core_sys/images/main/home/kv02_thumb.jpg",
+          "result": "retriever_not_accessible_indeterminate"
+        }
+      ],
+      "remaining_unattempted": 55,
+      "network_limitation": "Container outbound DNS unavailable; web retrieval may fail on valid binary assets; no raw HTTP codes; video playback not tested",
+      "complete": false
+    },
+    "html_links_batch_2026_10_11_c": {
+      "checks": [
+        {
+          "url": "https://demonscrest-anime.com/news/index00050000.html",
+          "result": "readable_official",
+          "finding": "Nov 6 2026 worldwide Prime Video"
+        },
+        {
+          "url": "https://hirayasumi-anime.jp/",
+          "result": "readable_official",
+          "finding": "Jan 2027 NHK General"
+        },
+        {
+          "url": "https://www.votoms-gh.com/news/detail.php?id=23579",
+          "result": "readable_official",
+          "finding": "Nov 20 2026 Japanese theatrical first film"
+        },
+        {
+          "url": "https://www.fujitv.co.jp/darkmachine_anime/onair/",
+          "result": "readable_official",
+          "finding": "October 2026 Fuji TV"
+        },
+        {
+          "url": "https://www.aniplex.co.jp/lineup/dandivine/",
+          "result": "readable_official",
+          "finding": "Oct 7 2026 TV broadcast"
+        }
+      ],
+      "reconciliation": "May overlap prior source-url checks; not added to unique attempted count without set comparison",
+      "article_changes": "none; no demonstrated discrepancy"
     }
   }
 }
