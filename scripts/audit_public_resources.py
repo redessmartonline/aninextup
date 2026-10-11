@@ -114,6 +114,9 @@ def main():
       "resources": results, "videos": video_results,
       "summary": {"external_references": len(results), "image_references": sum(r["kind"]=="image" for r in results),
         "youtube_ids": len(video_results),
+        "youtube_metadata_accessible": sum(v["status"]=="accessible" for v in video_results),
+        "youtube_metadata_broken": sum(v["status"]=="broken" for v in video_results),
+        "youtube_metadata_indeterminate": sum(v["status"]=="indeterminate" for v in video_results),
         "accessible": sum(r["status"]=="accessible" for r in results),
         "broken": sum(r["status"]=="broken" for r in results),
         "indeterminate": sum(r["status"]=="indeterminate" for r in results)}}
@@ -122,6 +125,12 @@ def main():
     lines.extend(f"- {key}: {result['summary'][key]}" for key in ("accessible","broken","indeterminate"))
     lines += ["", "## Broken (HTTP 404/410)", ""]
     lines.extend(f"- {r['http_code']} {r['url']} ({', '.join(r['articles'])})" for r in results if r["status"]=="broken")
+    lines += ["", "## Indeterminate resources", ""]
+    lines.extend(f"- {r.get('http_code', 'n/a')} {r['url']} ({r.get('reason', 'unknown')}) — {', '.join(r['articles'])}" for r in results if r["status"]=="indeterminate")
+    lines += ["", "## YouTube metadata (not playback)", ""]
+    lines.extend(f"- {key}: {result['summary'][key]}" for key in ("youtube_metadata_accessible","youtube_metadata_broken","youtube_metadata_indeterminate"))
+    lines += ["", "## YouTube videos requiring manual verification", ""]
+    lines.extend(f"- {v['video_id']}: metadata {v['status']} (HTTP {v.get('http_code', 'n/a')}) — {', '.join(v['articles'])}" for v in video_results if v["status"]!="accessible")
     lines += ["", "## Limitations", ""]
     lines.extend("- " + s for s in result["limitations"])
     (OUT / "summary.md").write_text("\n".join(lines)+"\n", encoding="utf-8")
