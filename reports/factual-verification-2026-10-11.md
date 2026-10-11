@@ -1,6 +1,6 @@
 # Registro de verificación factual — AniNextUp
 
-**Estado vigente tras la última continuación: 52/63 cerrados y 11/63 pendientes.** Las tablas y balances anteriores se conservan como historial; el detalle vigente está en la última sección.
+**Estado vigente tras la última continuación: 61/63 cerrados y 2/63 pendientes.** Las tablas y balances anteriores se conservan como historial; el detalle vigente está en la última sección.
 
 Fecha: 2026-10-11. Cobertura: **63 artículos HTML**. Este registro **no equivale a la aprobación factual completa de cada artículo**. «Confirmación parcial» significa que se contrastó al menos un dato con la fuente primaria indicada; el resto de las afirmaciones aún debe revisarse. «Pendiente» no significa que el artículo sea incorrecto.
 
@@ -1083,3 +1083,49 @@ Se añadieron referencias directas a esos uploads y se precisaron los uploadDate
 | `dandivine-release-date.html` | ihJfkOT_0wU es main PV de GOOD SMILE CHANNEL; descripción corrobora premisa, estudios y calendario regular. Falta cuerpo del aviso oficial https://gattaishin.com/dandivine/news/?id=758 sobre excepción del primer episodio; no se certifica la guía completa con el calendario regular. |
 
 **Balance vigente: 52/63 cerrados y 11/63 pendientes.** Se revisaron los 17 pendientes, se completaron seis cierres y se actualizaron 13 artículos. Ningún artículo previamente cerrado se cuenta de nuevo. Los 13 archivos publicados se recuperaron de GitHub y coinciden íntegramente con el contenido enviado. Los datos que siguen sin prueba se enumeran arriba; no se dan por verificados por haber resuelto otros campos.
+
+
+## Continuación — los 11 pendientes, nueve cierres con pruebas adicionales (11 octubre 2026)
+
+Base recuperada del informe y del último commit `b1e54859019d3fbdc70aeb9b1f3c1b89a59d1c2b`: **52 cerrados / 11 pendientes**. Se recuperaron y leyeron los once HTML completos. Se revisaron sus bloqueos concretos, sin volver a contar ninguno de los 52 cierres anteriores.
+
+### CERRADOS — nueve versiones publicadas con las afirmaciones materiales respaldadas
+
+| Artículo | Prueba nueva y acción |
+|---|---|
+| `worlds-strongest-witch.html` | Lectura directa de https://www.yte.co.jp/program/list/sekamajo/ confirma TV japonesa y **ABEMA / d Anime Store desde 7 octubre, miércoles 22:00 JST**. La ficha de ABEMA https://abema.tv/channels/abema-anime/slots/9CHRCytKMxgdT5 corrobora el primer estreno. El bloque nominal oficial indexado de Crunchyroll, versión con parámetro lid y actualización de 10 octubre, identifica expresamente **miércoles 06:00 PT** bajo este título, junto a Bridge/AISLE, premisa y regiones. Se reemplaza Time TBA y se añade YTE. |
+| `horror-collector-release-date.html` | **Prueba primaria visual recuperada e inspeccionada:** https://www.nhk-character.com/chara/kyoufucollector/wp-content/themes/kyoufucollector/assets/img/top/fv_onair.webp muestra 10 octubre, NHK General, sábados 23:45 y **全12話 (12 episodios)**. El número estaba en una imagen y no aparecía en el texto extraído. Se añade el gráfico como referencia; no se altera un número ahora corroborado. Completa los créditos, sinopsis, música y streaming ya documentados. |
+| `iceblade-sorcerer-ii.html` | Bloque nominal oficial indexado de Crunchyroll actualizado 10 octubre identifica **jueves 10:00 PT**, ZERO-G, premisa y regiones bajo The Iceblade Sorcerer Shall Rule the World II. Se añade ese horario, con alcance subtitulado y regional, y referencia. Completa los horarios civiles japoneses y el teaser primarios previos. |
+| `magic-knight-rayearth-2026.html` | Bloque nominal oficial indexado de Crunchyroll actualizado identifica explícitamente **miércoles 08:15 PT** bajo Magic Knight Rayearth, E&H production, retelling y territorios. Se publica como horario subtitulado del distribuidor; no se confunde con el domingo de otro título ni con TV japonesa. Las pruebas de producción, PV y uploadDate ya estaban documentadas. |
+| `demons-crest-release-date.html` | Lectura directa de https://yenpress.com/titles/9781975393526-demons-crest-vol-1-light-novel confirma **Yuuma alumno de sexto curso** y fusión de Actual Magic con realidad. https://demonscrest-anime.com/news/index00050000.html, leído directamente mediante extracción web pese al 403 del acceso raw, describe **test, grupo de compañeros, victoria contra boss e intento de logout**. https://demonscrest-anime.com/news/index00110000.html confirma logout forzado hacia realidad invadida; https://demonscrest-anime.com/story/index.html corrobora fusión y full-sensory VRMMO. Se añaden fuentes precisas de premisa, completando fecha/plataforma/estudio/temas/PV anteriores. |
+| `witch-on-the-holy-night-movie.html` | Texto **oficial indexado** de https://www.crunchyroll.com/it/news/announcements/2026/9/10/witch-on-the-holy-night-anime-uscita-mondiale-gennaio-2027 contiene la lista completa: **28 enero 2027 México, Brasil, Chile, Centroamérica, Ecuador, Colombia, Bolivia y Perú**, entre otros; **29 enero EEUU y Canadá**, entre otros. La apertura directa no devuelve cuerpo: no se presenta como lectura directa. Los uploads oficiales h0csZYaV-k0 (Crunchyroll) y QNap_AYExWQ (Crunchyroll en Español) confirman respectivos anuncios 29 y 28 enero; sus descripciones no se utilizan solas para inferir países. Se añade el anuncio italiano específico. |
+| `black-clover-season-2.html` | Lecturas raw directas de https://bclover.jp/news/detail.php?id=1134592 y https://bclover.jp/character/ respaldan material de personajes de Season 2: anuncio **13 julio 2026, diseños de Asta en Devil Union por Itsuko Takeda**. Se añaden las referencias; identidad/canal de PV, estreno y simulcast ya estaban probados. No se declara que ese material sea una corrección de argumento. |
+| `ace-of-diamond-second-season.html` | Nueva extracción del bloque nominal oficial de Crunchyroll respalda **11 octubre**, OLM Team Yoshioka, Sawamura/Seido/Koshien y todos los territorios publicados. **El domingo 08:15 PT mostrado en extractos cercanos pertenece a HOTEL INHUMANS, no se asigna a Ace.** La versión publicada no afirma un reloj internacional ni un TBA vigente: remite al episodio regional, mientras TV Tokyo ya prueba abril y 11 octubre 17:30 JST. Se añade referencia. Se corrige el criterio de bloqueo de la pasada anterior: exigir certificar una hora que la guía no afirma impediría cerrar incluso una versión delimitada y respaldada. Se cierra solo esa versión, **sin declarar obtenido un horario internacional**. |
+| `dandivine-release-date.html` | Se leyó el JavaScript público https://gattaishin.com/dandivine/wp-content/themes/dandivine/assets/js/news.js: resuelve el artículo desde el endpoint de lectura `news/758/`. Lectura directa https://gattaishin.com/dandivine/news/758/ devuelve JSON oficial del aviso **6 octubre**: primer episodio MBS cambia **10 octubre 26:08 → 26:58, 50 minutos de demora**. Se incorpora excepción y fecha civil **11 octubre 02:58 JST**, conservando el calendario regular para capítulos posteriores. Los restantes datos y metadatos de PV ya estaban probados. |
+
+Cartelera internacional utilizada: https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll?lid=0ojihzvhs258. Se distingue la versión indexada actualizada de la versión sin parámetro, que conserva campos TBA antiguos. Los horarios asignados a Witch, Iceblade y Rayearth proceden de **bloques con su encabezado, estudio y sinopsis**, no de snippets con títulos adyacentes. El cierre se limita a las afirmaciones publicadas respaldadas; la programación puede cambiar.
+
+### PENDIENTES — dos, con investigación y precisión publicadas
+
+- **`dreamland-release-date.html`:** nuevas extracciones oficiales devuelven **16 octubre** en una versión de la cartelera y **17 octubre** en otra. El anuncio de septiembre y la descripción original del teaser mantienen el 16; Japón sigue documentado como 18 octubre 02:00 JST. No se obtuvo confirmación primaria inequívoca de cuál fecha internacional está vigente. Se cambia «updated lineup lists October 17» por **versiones recuperadas que muestran ambos días**, evitando presentar un extracto de caché como programación actual indiscutible. No se inventa reprogramación ni se cierra la ficha.
+- **`pok-mon-horizons-anime-unseals-treasures-of-ruin-in-latest-wonder-a6b9d2d5.html`:** n6VZjxUNAww vuelve a corroborarse por metadatos originales como PV oficial Wonder Voyage. Se publica su enlace y se elimina el texto desactualizado que decía no haber comprobado la URL. https://www.tv-tokyo.co.jp/broad_tvtokyo/program/detail/202610/27491_202610161855.html confirma episodio 16 octubre 18:55 y fenómenos cerca de santuarios. Nueva extracción completa de la cobertura Crunchyroll https://www.crunchyroll.com/news/latest/2026/10/9/pokemon-horizons-anime-treasures-of-ruin-wonder-voyage-arc-trailer afirma que los cuatro fueron liberados, pero **esa cobertura es fuente editorial secundaria respecto al contenido del anime**. No sustituye el cotejo primario pedido. Se intentó recuperar las hojas storyboard indicadas en el player oficial; el servidor devolvió HTML «Site Unavailable», no imágenes. No se afirma visionado ni inspección audiovisual. Sigue faltando cotejo primario de liberación de los sellos / contenido del PV.
+
+### Publicación y verificación
+
+| Artículo actualizado | Commit |
+|---|---|
+| `worlds-strongest-witch.html` | `277c998ad7b8e2d434c35f92f08fed7063a26b3c` |
+| `horror-collector-release-date.html` | `28cc44469e02a58e6346aca64e741d2cce0dedab` |
+| `iceblade-sorcerer-ii.html` | `8e32bc509ae31c571e4fd7f7ff0061c65982b46b` |
+| `magic-knight-rayearth-2026.html` | `f6431b50800a44343f2a7994a46220f9df95cf4b` |
+| `demons-crest-release-date.html` | `1d88e0f4524b6ecc85241a47e96c0e6e86769750` |
+| `witch-on-the-holy-night-movie.html` | `1527a08e31cf3589cfc25c92fc4d104fdbbe657d` |
+| `black-clover-season-2.html` | `5676142755ba392461b171980a7566be8baebbef` |
+| `ace-of-diamond-second-season.html` | `63bfe947803e1e956b7cf13f2db4fbcdc27923f4` |
+| `dandivine-release-date.html` | `219c6b846dae04474b160e8e96f220cb832215cc` |
+| `dreamland-release-date.html` | `d53fa6f210ad9c9d06eb7ffe95979ef46175d710` |
+| `pok-mon-horizons-anime-unseals-treasures-of-ruin-in-latest-wonder-a6b9d2d5.html` | `78d02c04b95b5f71649f43cecfac0abe671fb33f` |
+
+Los **once HTML publicados** se recuperaron desde GitHub y coinciden íntegramente con el contenido enviado. Los JSON-LD modificados se analizaron como JSON válido.
+
+**Balance vigente: nueve cierres nuevos; 61/63 cerrados y 2/63 pendientes.** Los dos pendientes son exclusivamente Dreamland y la noticia de Pokémon indicada arriba. No se cuenta de nuevo ningún cierre anterior ni se considera verificada una afirmación por ausencia de prueba contraria.
