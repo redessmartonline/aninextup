@@ -41,3 +41,25 @@ For each CSV row, isolate a single factual claim and inspect the cited primary s
 Editorial correction: TANK CHAIR section heading was changed from "Official trailer" to "Official character teaser" to match the embedded video metadata (commit 6d40447f5f8cefe5709d7fd3dac243058cd1fd44).
 
 **Scope limitation:** This review covers only the claims listed above. The remaining 61 articles have not been individually fact-checked here; neither the CSV nor the link-status audit proves factual accuracy, permission to use images, or video playback.
+
+## Inventory execution received — 2026-10-11
+
+The corrected GitHub Actions artifact contains **63 articles and 352 candidate claims**. The coverage CSV labels all 63 NOT_FACT_CHECKED because it is a generated baseline; this does not override the documented manual reviews above. Article-level source links in the inventory are leads, not claim-level proof.
+
+### A Certain Dark Item — official broadcast schedule
+
+| Claim | Result | Evidence |
+|---|---|---|
+| Japanese broadcasting starts Friday October 9, 2026 | VERIFIED | https://toaru-project.com/item/onair/ |
+| TOKYO MX and BS11 show Friday October 9 at 24:30 (Saturday October 10 at 00:30 JST) | VERIFIED | https://toaru-project.com/item/onair/ |
+| AT-X broadcasts Friday October 9 at 22:30 JST | VERIFIED | https://toaru-project.com/item/onair/ |
+| ABEMA live distribution and other services have different release windows | VERIFIED: consult per-service schedule; do not generalize one release date to all services | https://toaru-project.com/item/onair/ |
+
+This is a **partial factual review** of this article, not a declaration that every claim in the article has been verified. No editorial content correction was warranted by the checked broadcast schedule.
+
+### Completion criteria
+
+- Review every candidate factual statement against its specific primary source and document source URLs and dates.
+- Resolve contradictions in the published HTML and recheck the resulting page.
+- Record source-access failures as insufficient evidence, not verified.
+- Review rights/permissions for externally hosted images separately.
