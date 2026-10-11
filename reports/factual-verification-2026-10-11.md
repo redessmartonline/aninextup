@@ -263,3 +263,18 @@ Se leyeron los cinco artículos y se contrastaron los puntos detallados con fuen
 | [Dark Machine: The Animation](../articles/dark-machine-the-animation.html) | https://www.fujitv.co.jp/darkmachine_anime/onair/ y https://www.fujitv.co.jp/fujitv/news/20260949.html confirman 13/10/2026 Fuji TV 25:45, Kansai TV 15/10 26:45, BS Fuji 20/10 24:30, plataformas japonesas desde 14/10 12:00 y sinopsis de Kairi, Rudra y Golden Valley. | Crunchyroll internacional y Production +h. requieren contraste con distribuidor y créditos oficiales. |
 
 **Recuento de inspección individual: 37 de 63; quedan 26 artículos sin inspección individual.** El cotejo exhaustivo de todas las afirmaciones de los 37 aún no se ha completado. No se modificaron los cinco artículos porque los puntos no confirmados no constituyen por sí solos errores demostrados.
+
+
+## Cotejo individual — lote 9 (11 octubre 2026): cinco artículos adicionales
+
+Se inspeccionó el cuerpo completo de cinco artículos antes no incluidos en los lotes anteriores. Se distinguieron hechos verificados en fuentes consultadas de afirmaciones aún sin cotejar.
+
+| Artículo | Evidencia contrastada | Pendientes |
+|---|---|---|
+| [The Detective Is Already Dead Season 2](../articles/detective-is-already-dead-season-2.html) | Artículo leído; referencia oficial de KADOKAWA https://license.kadokawa.co.jp/anime/2026fall/entry-33204.html y listado de Crunchyroll identificados. | Verificar directamente estreno 7/10, ENGI, Manabu Kurihara, Deko Akao, Yosuke Ito, temas musicales y territorios. **No declarar verificado por tener enlaces.** |
+| [Dreamland](../articles/dreamland-release-date.html) | Artículo leído; fuentes de Crunchyroll de temporada y anuncio del 18/9 identificadas. | Contrastar lanzamiento 16/10, TV japonesa 17/10, estudios, equipo, canciones y territorios en fuente original. |
+| [HORROR COLLECTOR](../articles/horror-collector-release-date.html) | https://www.nhk-character.com/chara/kyoufucollector/news/20261009_89.html confirma estreno televisivo japonés 10/10 y primera distribución en plataformas japonesas **15/10 a las 12:00**, dato útil que no figuraba en el cuerpo del artículo. | Confirmar 12 episodios, Shikao Suga, Studio Palette y distribución Crunchyroll con fuentes respectivas. No confundir TV del 10/10 con streaming japonés del 15/10. |
+| [The Iceblade Sorcerer Shall Rule the World II](../articles/iceblade-sorcerer-ii.html) | https://hyouken-anime.com/ confirma estreno TBS 8/10 a 01:28 JST, BS11 9/10 23:00, estudio ZERO-G y plataformas japonesas d Anime Store/U-NEXT/Anime Hodai desde 8/10 25:58. | Territorios de Crunchyroll y hora de simulcast internacional. La hora 25:58 equivale al 9/10 01:58 en fecha civil; no confundir con la emisión TBS. |
+| [I'm Looking For a Zombie](../articles/im-looking-for-a-zombie.html) | https://www.crunchyroll.com/es/watch/GE00384049JAJP/im-looking-for-my-dad confirma episodio 1 publicado el 3/10/2026, doblaje inglés y japonés, protagonista Aki buscando a su padre. https://www.crunchyroll.com/news/announcements/2026/10/2/im-looking-for-a-zombie-anime-english-dub-release-date-cast-crew identifica anuncio del doblaje. | Confirmar elenco de doblaje completo, estudio COMET y lista de territorios en anuncio detallado. |
+
+**Recuento acumulado: 42/63 artículos inspeccionados individualmente; quedan 21 artículos sin inspección individual.** Esto no equivale a 42 artículos íntegramente certificados; tres tienen contrastes puntuales demostrados y dos siguen pendientes de cotejo externo en profundidad. No se modificaron los artículos en esta pasada, ya que no se demostró ninguna afirmación falsa. Se recomienda incorporar al artículo de HORROR COLLECTOR la fecha de streaming japonés (15/10) en una futura actualización específica.
