@@ -1,0 +1,26 @@
+name: AniNextUp Editorial Claims Inventory
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'articles/**'
+      - 'scripts/build_editorial_claims_inventory.py'
+      - '.github/workflows/editorial-claims-inventory.yml'
+permissions:
+  contents: read
+jobs:
+  claims-inventory:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Extract editorial claims from every article
+        run: python3 scripts/build_editorial_claims_inventory.py
+      - name: Upload reviewable CSV
+        uses: actions/upload-artifact@v4
+        with:
+          name: aninextup-editorial-claims-inventory
+          path: audits/editorial-claims-inventory.csv
+          if-no-files-found: error
+          retention-days: 30
