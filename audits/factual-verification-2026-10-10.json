@@ -762,7 +762,7 @@
     }
   ],
   "external_link_video_audit_2026_10_11": {
-    "scope": "24 of 46 article HTML files screened for external source URLs and embedded YouTube ID/thumbnail coherence",
+    "scope": "26 of 46 article HTML files structurally inspected; live verification of all external links and video playback remains incomplete",
     "article_ids": [
       "hirayasumi",
       "walking-home-with-you",
@@ -797,7 +797,7 @@
         "description": "Clarified production announcement scope, avoiding use as evidence of 2027 premiere date."
       }
     ],
-    "status": "24/46 structurally screened; 22 articles remain; not all outbound links tested for HTTP status or YouTube playback",
+    "status": "26 of 46 inspected; 20 remain for repository HTML structural review; all external HTTP destinations and video playback remain open",
     "additional_article_paths": [
       "articles/rakuen-tsuihou-kokoro-no-resonance.html",
       "articles/demons-crest-release-date.html",
@@ -861,14 +861,41 @@
     ],
     "third_batch_corrections": [
       {
-        "article": "dandivine",
-        "commit": "b9e0293a",
-        "finding": "Removed duplicate adjacent official trailer heading"
+        "article": "tank-chair",
+        "commit": "c2a46d23",
+        "change": "Clarified additional Japanese streaming platforms begin October 7 after Prime Video's October 4 first window."
+      }
+    ],
+    "third_batch_article_ids": [
+      "dandivine",
+      "worlds-strongest-witch",
+      "vermilion-mask",
+      "tank-chair",
+      "tokyo-revengers-war-three-titans",
+      "dragon-ball-super-beerus",
+      "cyberpunk-edgerunners-2",
+      "im-looking-for-a-zombie",
+      "tale-secret-saint",
+      "romelia-war-chronicle"
+    ],
+    "third_batch_embedded_video_count": 7,
+    "third_batch_embed_thumbnail_id_mismatches": 0,
+    "third_batch_source_checks": [
+      {
+        "url": "https://www.tankchair-anime.com/news-single.php?id=24061&offset=10",
+        "result": "Official Japanese Oct 4 premiere notice accessible"
       },
       {
-        "article": "vermilion-mask",
-        "commit": "784dd7e6",
-        "finding": "Removed duplicate adjacent official trailer heading"
+        "url": "https://www.tankchair-anime.com/news-single.php?id=25725",
+        "result": "Official Prime Video Japan Oct 4 and additional Japan streaming services Oct 7 notice accessible"
+      },
+      {
+        "url": "https://en.dragon-ball-official.com/news/01_4487.html",
+        "result": "Official Oct 11 Japan 23:15 JST and Japanese Prime Video/U-NEXT streaming notice accessible"
+      },
+      {
+        "url": "https://en.dragon-ball-official.com/news/01_4509.html",
+        "result": "Official North American streaming platforms and timing announced separately; do not infer Japan streaming services apply worldwide"
       }
     ]
   }
