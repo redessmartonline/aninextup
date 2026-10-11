@@ -2,9 +2,9 @@
   "scope": "Article-level factual verification; structural validation is separate",
   "checked_on": "2026-10-10",
   "total": 46,
-  "partially_verified": 34,
+  "partially_verified": 39,
   "fully_verified": 0,
-  "pending": 12,
+  "pending": 7,
   "warning": "Partial verification does not validate every assertion in the article.",
   "articles": [
     {
@@ -12,18 +12,26 @@
       "title": "Hirayasumi",
       "article": "articles/hirayasumi-anime-release-date",
       "date": null,
-      "status": "pending_manual_fact_check",
-      "checked_claims": [],
-      "source_urls": []
+      "status": "partially_verified_official_source",
+      "checked_claims": [
+        "January 2027 NHK General; official staff and cast"
+      ],
+      "source_urls": [
+        "https://hirayasumi-anime.jp/en/"
+      ]
     },
     {
       "id": "walking-home-with-you",
       "title": "Walking Home with You",
       "article": "articles/walking-home-with-you-anime",
       "date": null,
-      "status": "pending_manual_fact_check",
-      "checked_claims": [],
-      "source_urls": []
+      "status": "partially_verified_official_source",
+      "checked_claims": [
+        "April 2027 Nippon TV; cast and staff not announced"
+      ],
+      "source_urls": [
+        "https://prtimes.jp/main/html/rd/p/000000212.000127482.html"
+      ]
     },
     {
       "id": "pokemon-horizons-season-4-wonders-ahead",
@@ -137,18 +145,26 @@
       "title": "Bass X Machina",
       "article": "articles/bass-x-machina-release-date",
       "date": "2026-11-03",
-      "status": "pending_manual_fact_check",
-      "checked_claims": [],
-      "source_urls": []
+      "status": "partially_verified_official_source",
+      "checked_claims": [
+        "Netflix November 3 2026; Studio Mir animation"
+      ],
+      "source_urls": [
+        "https://about.netflix.com/en/news/netflix-unveils-upcoming-anime-slate-out-of-annecy-festival"
+      ]
     },
     {
       "id": "dreamland",
       "title": "Dreamland",
       "article": "articles/dreamland-release-date",
       "date": "2026-10-16",
-      "status": "pending_manual_fact_check",
-      "checked_claims": [],
-      "source_urls": []
+      "status": "partially_verified_official_source",
+      "checked_claims": [
+        "Japanese TV October 17 2026; separate international schedule"
+      ],
+      "source_urls": [
+        "https://www.dreamland-anime.com/"
+      ]
     },
     {
       "id": "dark-machine",
@@ -431,9 +447,13 @@
       "title": "The Ramparts of Ice Season 2",
       "article": "articles/ramparts-of-ice-season-2",
       "date": "2026-10-01",
-      "status": "pending_manual_fact_check",
-      "checked_claims": [],
-      "source_urls": []
+      "status": "partially_verified_official_source",
+      "checked_claims": [
+        "Netflix October 1 Pacific Time or October 2 Japan; weekly"
+      ],
+      "source_urls": [
+        "https://about.netflix.com/en/news/the-ramparts-of-ice-season-2"
+      ]
     },
     {
       "id": "returners-magic-s2",
