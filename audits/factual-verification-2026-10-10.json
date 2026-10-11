@@ -1574,6 +1574,35 @@
         "No article status promoted"
       ],
       "status": "partial"
+    },
+    "html_direct_followup_2026_10_11_b": {
+      "method": "Official-site indexed public retrieval; source URL matched to exact HTML anchor inventory",
+      "checked": [
+        {
+          "url": "https://aoashi-pr.com/onair/",
+          "result": "indexed_readable",
+          "finding": "Official streaming schedule: Oct 4 23:00 JST Hulu, Netflix, U-NEXT, Anime Times; Oct 8 other Japanese services"
+        },
+        {
+          "url": "https://aoashi-pr.com/",
+          "result": "indexed_readable",
+          "finding": "Official season 2 site confirms Oct 4 NHK E-Tele 17:00 JST and TMS Entertainment"
+        },
+        {
+          "url": "https://demonscrest-anime.com/",
+          "result": "indexed_readable",
+          "finding": "Official site confirms Nov 6 Prime Video worldwide"
+        },
+        {
+          "url": "https://dragonball-super.com/en/",
+          "result": "indexed_readable_via_index_html",
+          "finding": "Official site confirms October 2026 broadcast; detailed official news confirms Oct 11 23:15 JST"
+        }
+      ],
+      "verification_level": "Indexed page content retrieved; not measured HTTP response status, browser images, or playback",
+      "recheck_status": "Aoashi home had previously timed out; search-indexed official page now readable; still no browser HTTP status measurement",
+      "article_changes": "none; no demonstrated factual contradictions",
+      "remaining": "Reconcile remaining distinct HTML anchors and all 60 external image URLs; independently verify 36 video embeds"
     }
   }
 }
