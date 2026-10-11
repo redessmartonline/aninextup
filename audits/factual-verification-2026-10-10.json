@@ -1115,6 +1115,63 @@
       ],
       "status": "static_checks_passed_live_resource_checks_partial_not_complete",
       "no_status_promotion": true
+    },
+    "live_url_batch_2026_10_11": {
+      "scope": "First 10 manually opened inventory URLs via public web retrieval, not exhaustive HTTP status validation",
+      "total_inventory_unique_urls": 130,
+      "attempted": 10,
+      "readable_content": 8,
+      "ambiguous": 2,
+      "checks": [
+        {
+          "url": "https://www.viz.com/blog/posts/a-first-look-at-the-hirayasumi-anime",
+          "result": "readable"
+        },
+        {
+          "url": "https://www.viz.com/press-releases/v/1006748",
+          "result": "readable"
+        },
+        {
+          "url": "https://hirayasumi-anime.jp/",
+          "result": "readable"
+        },
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000212.000127482.html",
+          "result": "readable"
+        },
+        {
+          "url": "https://press.pokemon.com/en/releases/Pokemon-Horizons-Season-4-Wonders-Ahead-to-Premiere-February-27-2027",
+          "result": "ambiguous_tool_internal_error"
+        },
+        {
+          "url": "https://pocketmonsters.net/index.php/news/9602",
+          "result": "readable"
+        },
+        {
+          "url": "https://www.crunchyroll.com/es/news/seasonal-lineup/2026/9/15/otono-2026-anime-crunchyroll",
+          "result": "ambiguous_zero_extracted_lines"
+        },
+        {
+          "url": "https://www.toho.co.jp/movie/lineup/",
+          "result": "readable_redirect_trailing_slash"
+        },
+        {
+          "url": "https://kusuriyanohitorigoto.jp/movie/staffcast/",
+          "result": "readable_redirect_trailing_slash"
+        },
+        {
+          "url": "https://www.tbs.co.jp/anime/takopi_project/series/news/news20260817.html",
+          "result": "readable"
+        }
+      ],
+      "remaining_not_checked": 120,
+      "limitations": [
+        "Browser text retrieval does not guarantee HTTP 200 or load all image/video resources",
+        "Ambiguous responses do not prove broken links",
+        "Network in container cannot resolve external domains; cannot bulk validate remaining URLs from local runtime",
+        "No corrections justified by this batch alone"
+      ],
+      "complete": false
     }
   }
 }
