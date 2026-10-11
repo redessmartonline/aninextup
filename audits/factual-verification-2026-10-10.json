@@ -762,7 +762,7 @@
     }
   ],
   "external_link_video_audit_2026_10_11": {
-    "scope": "First 8 of 46 article HTML files; complete external HTTP/video audit remains in progress",
+    "scope": "16 of 46 article HTML files inspected for source URLs, video references, and thumbnail identifiers; public source verification limited to explicitly listed URLs",
     "article_ids": [
       "hirayasumi",
       "walking-home-with-you",
@@ -797,6 +797,37 @@
         "description": "Clarified production announcement scope, avoiding use as evidence of 2027 premiere date."
       }
     ],
-    "status": "In progress; no blanket claims of 46 URL HTTP verification or trailer playback"
+    "status": "16 article HTML files screened in batches; 30 remaining; do not claim all URLs returned HTTP 200",
+    "additional_article_paths": [
+      "articles/rakuen-tsuihou-kokoro-no-resonance.html",
+      "articles/demons-crest-release-date.html",
+      "articles/bass-x-machina-release-date.html",
+      "articles/dreamland-release-date.html",
+      "articles/dark-machine-the-animation.html",
+      "articles/chitose-ramune-bottle-cour-2.html",
+      "articles/horror-collector-release-date.html",
+      "articles/a-certain-dark-item-release-date.html"
+    ],
+    "additional_html_embed_count": 6,
+    "additional_embed_thumbnail_mismatches": 0,
+    "source_confirmations": [
+      {
+        "url": "https://media.netflix.com/en/only-on-netflix/81088875",
+        "finding": "Public Netflix Media Center explicitly displays November 3 2026 release date for United States; earlier contrary editorial caveat corrected",
+        "article": "bass-x-machina",
+        "commit": "92ab73eb"
+      },
+      {
+        "url": "https://demonscrest-anime.com/news/index00050000.html",
+        "finding": "Official anime announcement confirms worldwide exclusive Prime Video November 6 2026",
+        "article": "demons-crest"
+      },
+      {
+        "url": "https://rakuen-tsuiho-r.com/",
+        "finding": "Official site confirms Japan theatrical November 13 2026",
+        "article": "rakuen-tsuihou-resonance"
+      }
+    ],
+    "video_note": "A Certain Dark Item includes VideoObject JSON-LD for teaser bf6XcU3uL9I and a separate link to main trailer NNHxQJgZdbQ; different IDs are not in themselves proof of a broken link. No live YouTube playback/ownership verification completed."
   }
 }
