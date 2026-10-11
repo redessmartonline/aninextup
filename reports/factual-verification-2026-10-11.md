@@ -739,3 +739,54 @@ Se leyeron los cinco artículos completos en GitHub. Ninguno de los siguientes t
 **Bloqueo común:** https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll y su versión española devolvieron cero líneas de cuerpo. Las búsquedas complementarias no proporcionaron pruebas oficiales suficientes para los datos internacionales restantes. No se reutiliza una afirmación histórica del informe como nueva prueba directa ni se considera falsa una afirmación por no poder acceder a su fuente.
 
 **Balance: cinco pendientes examinados, tres precisiones publicadas, cero cierres nuevos. Quedan 26 de 63 pendientes; se mantiene el estado registrado de 37 cerrados.** Las próximas pasadas deben escoger otros pendientes sin cierre o resolver los bloqueos específicos de esta tabla; no volver a contar cierres existentes.
+
+
+## Continuación — segundo lote de cinco pendientes (11 octubre 2026)
+
+Se leyeron íntegramente cinco artículos distintos de los del lote anterior y sin cierre previo: Romelia, The World's Strongest Witch, Hello I am a Witch, HORROR COLLECTOR e Iceblade II. Base de recuento: 37 cerrados / 26 pendientes.
+
+### CERRADO — `romelia-war-chronicle.html`
+
+Pruebas primarias recuperadas directamente:
+- https://romelia-senki.com/onair/ : dos cours, televisión desde 5 octubre 2026 (TOKYO MX/BS11/Sun TV 23:30 JST), streaming doméstico Anime Times/U-NEXT/Netflix desde 3 octubre 21:00; apartado internacional confirma Crunchyroll desde 3 octubre, global salvo Japón, China continental y Corea del Sur. No se infiere un estreno mundial de la ventana japonesa.
+- https://romelia-senki.com/staff/ : Atra; director de serie Koji Saito (齊藤浩二); composición/guion Aya Satsuki (皐月彩); música KOHTA YAMAMOTO; Yuna Nemoto (根本優奈) como Romelia.
+- https://romelia-senki.com/ : Henri rompe el compromiso tras derrotar a Zelgis; reconstrucción del país, ejército, economía y conspiraciones. Los párrafos interpretativos del artículo no prometen desenlaces.
+
+Las afirmaciones materiales del cuerpo quedan respaldadas. Se añadieron referencias directas de créditos y argumento: commit `b2c32ef7620a98695870badecc0527375bd88a40`. Cierre sujeto a cambios posteriores de programación.
+
+### PENDIENTE — `worlds-strongest-witch.html`
+
+El índice del buscador devolvió texto de fuentes oficiales https://sekamajo-anime.com/ y https://sekamajo-anime.com/wiki/ que coincide con Furuta, Yonemura, Morimoto, Bridge/AISLE, estreno 7 octubre, TOKYO MX 22:00, BS11 24:00 y ABEMA/d Anime Store 22:00. Sin embargo, las aperturas directas de la web, ON AIR, wiki y comunicado https://sekamajo-anime.com/news/information/61/ respondieron 403. Se registra como evidencia indexada, no como lectura directa. Faltan cotejo accesible de territorios Crunchyroll, condición TBA actual y correspondencia/fecha/canal del video 0ISyxMMLVg8. No se altera el artículo sin contradicción demostrada ni se cierra por coincidencia de extractos.
+
+### PENDIENTE — `hello-witch-love-potion-release-date.html`
+
+Fuentes primarias directamente leídas:
+- https://horemajo-anime.com/onair/index.html : estreno 5 octubre, AT-X 21:30, TOKYO MX 22:30, BS NTV 23:00; d Anime Store/U-NEXT/Anime Hodai 22:00; otros servicios desde 10 octubre.
+- https://horemajo-anime.com/staffcast/index.html : Eiko Mutsuhana, Kusakawa, Watari, Ishikawa, Matsumura, Diomedéa, Mikako Komatsu y Yohei Azakami.
+- https://horemajo-anime.com/story/index.html y https://horemajo-anime.com/chara/index.html : Rose, lago, amor no correspondido y encargo de Harij.
+
+Texto indexado del distribuidor https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll confirma lunes 05:30 PT, diomedea y disponibilidad mundial salvo Japón/China; al abrir, el cuerpo no fue legible. Faltan verificación independiente de los **cuatro años** de enamoramiento, detalle concreto de retrasar ingredientes, correspondencia del PV hGRtocAh3iw y comprobación actual del calendario internacional. Se añadieron las tres referencias de producción, commit `7d4acf209e01484003f94243938dff90349ec8ea`; no se declara falso lo aún no corroborado.
+
+### PENDIENTE — `horror-collector-release-date.html`
+
+Pruebas leídas:
+- https://www.nhk-character.com/chara/kyoufucollector/news/20261009_89.html : TV desde 10 octubre y primer streaming doméstico 15 octubre 12:00, plataformas que el artículo enumera. **El artículo ya contenía esa distinción**; no se presenta como adición nueva de este lote.
+- https://www.nhk-character.com/chara/kyoufucollector/staffcast : studio Palette.
+- https://www.nhk-character.com/chara/kyoufucollector/ : Fushigi, leyendas materializadas, Himitsu y Jimmy.
+- https://www.nhk-character.com/chara/kyoufucollector/news/20260725_48.html : Shikao Suga escribe ambos temas y comenta afición al J-horror.
+
+Falta fuente primaria recuperable del número **12 episodios**. NHK japonés está bloqueado por robots. Dos versiones indexadas del anuncio Crunchyroll difieren entre 10 octubre TBA y sábados 10:15 PT; no se actualiza hora internacional ni se certifica calendario por ese conflicto. Se añadieron referencias de estudio y sinopsis, commit `273c9f23cba024cf5ce4199dc1fb83e92d08d40f`.
+
+### PENDIENTE, ERROR CORREGIDO — `iceblade-sorcerer-ii.html`
+
+https://hyouken-anime.com/ devuelve directamente:
+- TBS desde **jueves 8 octubre, 深夜1:28** (franja nocturna del jueves: **viernes 9 octubre 01:28 JST** en fecha civil).
+- BS11 viernes 9 octubre 23:00.
+- streaming adelantado d Anime Store/U-NEXT/Anime Hodai **8 octubre 25:58 = 9 octubre 01:58 JST**, descrito como posterior al broadcast.
+- estudio ゼロジー (ZERO-G) y sinopsis de Magicks War y amenaza sobre Ray y compañeros.
+
+El artículo convertía la franja TBS en **8 octubre 01:28**, un día antes. Se corrigieron las dos menciones y se añadió la equivalencia doméstica de streaming; dateModified pasa a 11 octubre. Commit `cd2c2dce667ce6948b290c51735bbaba1835e200`. La fecha civil corregida es una conversión del horario japonés, no un cambio anunciado por la producción.
+
+La fuente indexada de Crunchyroll respalda estudio, argumento y lista de territorios, pero dos versiones difieren TBA / jueves 10:00 PT. Faltan lectura actual de cartelera o episodio y verificación del trailer sVrK70TP8tQ; se conserva pendiente y no se elimina TBA por un extracto contradictorio.
+
+**Balance: cinco artículos examinados, un cierre nuevo, cuatro pendientes. Acumulado: 38/63 cerrados y 25/63 pendientes.** Una corrección factual de fecha y tres incorporaciones de fuentes publicadas. No se vuelve a contar ningún artículo previamente cerrado.
