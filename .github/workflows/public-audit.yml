@@ -1,5 +1,11 @@
 name: AniNextUp public quality audit
 on:
+  push:
+    paths:
+      - 'scripts/audit_public.py'
+      - '.github/workflows/public-audit.yml'
+      - 'articles/**'
+      - 'sitemap.xml'
   workflow_dispatch:
   schedule:
     - cron: '20 10 * * 1'
