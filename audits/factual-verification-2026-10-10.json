@@ -2,9 +2,9 @@
   "scope": "Article-level factual verification; structural validation is separate",
   "checked_on": "2026-10-10",
   "total": 46,
-  "partially_verified": 39,
+  "partially_verified": 40,
   "fully_verified": 0,
-  "pending": 7,
+  "pending": 6,
   "warning": "Partial verification does not validate every assertion in the article.",
   "articles": [
     {
@@ -38,9 +38,15 @@
       "title": "Pokémon Horizons: Season 4—Wonders Ahead",
       "article": "articles/pokemon-horizons-season-4-wonders-ahead",
       "date": "2027-02-27",
-      "status": "pending_manual_fact_check",
-      "checked_claims": [],
-      "source_urls": []
+      "status": "partially_verified_official_source",
+      "checked_claims": [
+        "The Pokémon Company International October 6 2026 announcement identifies February 27 2027 Netflix US premiere of Season 4 Part 1",
+        "Netflix media center confirms season 4 upcoming in United States; other territory dates not inferred"
+      ],
+      "source_urls": [
+        "https://www.pokemon.com/us/pokemon-news?articleTopic=animation&articleType=news",
+        "https://media.netflix.com/en/only-on-netflix/81696980"
+      ]
     },
     {
       "id": "hello-witch-love-potion",
