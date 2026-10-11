@@ -75,7 +75,21 @@ def check(item):
                 record.update(status="indeterminate", reason="not_image_content_type_or_signature")
             else: record["status"] = "accessible"
     except urllib.error.HTTPError as e:
-        record.update(http_code=e.code, status="broken" if e.code in (404, 410) else "indeterminate", reason="http_error")
+        # A single 404 can be transient on official sites or edge caches.
+        # Recheck once before declaring the resource definitively broken.
+        if e.code in (404, 410):
+            try:
+                retry = request(url, "GET")
+                record.update(retry)
+                ct = retry.get("content_type", "").lower()
+                record["status"] = "accessible" if kind != "image" or ct.startswith("image/") or retry.get("image_signature_valid") else "indeterminate"
+                record["reason"] = "recovered_after_http_error"
+            except urllib.error.HTTPError as retry_error:
+                record.update(http_code=retry_error.code, status="broken" if retry_error.code in (404, 410) else "indeterminate", reason="http_error_confirmed_on_retry")
+            except Exception as retry_error:
+                record.update(http_code=e.code, status="indeterminate", reason="retry_" + type(retry_error).__name__)
+        else:
+            record.update(http_code=e.code, status="indeterminate", reason="http_error")
     except Exception as e:
         record.update(status="indeterminate", reason=type(e).__name__)
     return record
