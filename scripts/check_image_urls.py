@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Check external images from assets/data.js with HTTP GET (HEAD often blocked)."""
-import json,re,urllib.request,urllib.error,collections,pathlib,time
+import json,re,urllib.request,urllib.error,collections,pathlib,time,ast
 root=pathlib.Path(__file__).resolve().parents[1]
 data=(root/'assets/data.js').read_text(encoding='utf8')
 rows=[x for x in data.splitlines() if re.search(r'\{id:"',x)]
@@ -8,7 +8,7 @@ results=[]
 for row in rows:
  def field(k):
   m=re.search(r'\b'+re.escape(k)+r':("(?:\\.|[^"\\])*"|null)',row)
-  return json.loads(m.group(1)) if m else None
+  return (ast.literal_eval(m.group(1)) if m.group(1)!='null' else None) if m else None
  ident,url=field('id'),field('image')
  item={'id':ident,'url':url,'result':'unverified'}
  if not url or not url.startswith('https://'):item['result']='invalid_url'
