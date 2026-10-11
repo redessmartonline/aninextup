@@ -2,8 +2,8 @@
   "scope": "Article-level factual verification; structural validation is separate",
   "checked_on": "2026-10-10",
   "total": 46,
-  "partially_verified": 46,
-  "fully_verified": 0,
+  "partially_verified": 45,
+  "fully_verified": 1,
   "pending": 0,
   "warning": "Partial verification does not validate every assertion in the article.",
   "articles": [
@@ -68,12 +68,21 @@
       "title": "The Apothecary Diaries: Treasure of the Late Empress",
       "article": "articles/apothecary-diaries-movie",
       "date": "2026-12-11",
-      "status": "partially_verified_official_source",
+      "status": "fully_verified_official_source",
       "checked_claims": [
-        "December 11 2026 Japanese theatrical date and original story by Natsu Hyuuga"
+        "Japan theatrical premiere December 11 2026 confirmed by TOHO and official film announcement",
+        "Original Natsu Hyuuga story and synopsis confirmed by official movie introduction",
+        "Director Norihiro Naganuma, writer Yuko Kakihara, studio TOHO animation STUDIO, lead cast confirmed by official movie staff/cast",
+        "No international streaming date asserted; Crunchyroll theatrical rights announcement checked",
+        "Embedded trailer YouTube ID HP5wg0kTh54 matches official film announcement embed",
+        "Broken TOHO PDF link replaced with working official film staff/cast source (commit f00aeb16)"
       ],
       "source_urls": [
-        "https://kusuriyanohitorigoto.jp/news/2520/"
+        "https://kusuriyanohitorigoto.jp/news/2520/",
+        "https://kusuriyanohitorigoto.jp/movie/staffcast/",
+        "https://kusuriyanohitorigoto.jp/movie/introduction/",
+        "https://www.toho.co.jp/movie/lineup/",
+        "https://www.crunchyroll.com/news/announcements/2026/10/8/the-apothecary-diaries-the-late-ladys-treasure-anime-film-crunchyroll-worldwide-release/"
       ]
     },
     {
