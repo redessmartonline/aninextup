@@ -647,3 +647,14 @@ Acumulado: 18 de 63 cerrados, 45 pendientes.
 5. **CERRADO — `reincarnated-goblin.html`.** Fuente de distribuidor Crunchyroll https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll confirma BAKKKA, lunes 06:00 PT, regiones y sinopsis del oficinista reencarnado en goblin; episodio https://www.crunchyroll.com/watch/GE00384315JAJP/so-whats-wrong-with-getting-reborn-as-a-goblin confirma fecha 5 oct. El enlace Prime Video del artículo se presenta como regional, no estreno mundial.
 
 **Balance: 5 artículos contrastados y cerrados; acumulado 23/63 cerrados y 40/63 pendientes.** Se editaron dos artículos para incorporar horarios publicados por Crunchyroll. Cierre factual sujeto a cambios de programación posteriores.
+
+
+## Lote de cinco — 11 octubre 2026 (comprobaciones independientes)
+
+- **CERRADO** `psyren-release-date.html`: https://psyren-anime.com/ confirma TV japonesa 5 octubre 2026 23:00 JST; https://psyren-anime.com/news/776 confirma streaming japonés desde 23:30, con advertencia de excepciones. Crunchyroll ya citado en el artículo para horario internacional.
+- **CERRADO** `blue-box-season-2.html`: comunicado Netflix 15 septiembre https://about.netflix.com/en/news/romance-anime-lineup-october confirma 4 octubre 2026, episodios semanales, Taiki, Chinatsu y Yumeka.
+- **CERRADO** `full-clearing-another-world-zero-believers-premiere.html`: https://www.bs-asahi.co.jp/zero-believers-anime/ y https://zero-believers-anime.com/ confirman 11 octubre 2026 23:30 JST BS Asahi, TOKYO MX 12 octubre, AT-X 13 octubre, sinopsis de Makoto y Noah y distribución japonesa.
+- **CERRADO** `anime-releasing-december-2026.html`: https://kusuriyanohitorigoto.jp/news/2520/ confirma película 11 diciembre 2026 en cines japoneses, historia original de Natsu Hyuuga, Maomao/Jinshi y tesoro; la guía distingue cine japonés de streaming mundial.
+- **PENDIENTE** `anime-releasing-november-2026.html`: falta cotejar individualmente seis fechas y territorios de streaming/cine; no se cierra solo por haber confirmado el resumen de diciembre.
+
+Balance del lote: cinco examinados, cuatro cierres y un pendiente. **Acumulado 27/63 cerrados y 36/63 pendientes.** No se identificaron errores demostrados en estos cuatro artículos, por lo que no se alteró el texto editorial.
