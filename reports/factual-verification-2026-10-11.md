@@ -319,3 +319,16 @@ Se leyeron los textos principales de los 16 artículos pendientes. Esta tabla **
 | [witch-on-the-holy-night-movie](../articles/witch-on-the-holy-night-movie.html) | https://mahoyo-movie.com/ ; https://www.ufotable.com/news/article/3055/ | Nov 20 Japanese cinema, January international dates, director/cast/theme require direct primary comparison |
 
 **Cierre de primera pasada:** 63/63 artículos inspeccionados individualmente, 0 artículos pendientes de primera lectura. **No equivale a verificación factual completa**: siguen abiertos contrastes de fuentes originales, horarios, territorios y afirmaciones específicas documentadas en los lotes 1–11. Las páginas recopilatorias requieren además comprobar consistencia con sus artículos enlazados. No se declara aprobación de AdSense ni certificación de enlaces/imágenes en esta actualización.
+
+
+## Corrección documental y comprobación cruzada (11 octubre 2026)
+
+### Corrección aplicada al artículo HORROR COLLECTOR
+
+Se verificó **directamente** el comunicado oficial https://www.nhk-character.com/chara/kyoufucollector/news/20261009_89.html (publicado 9 octubre): estreno televisivo 10 octubre y **episodio 1 en streaming japonés el 15 octubre de 2026 a las 12:00 JST**, con ABEMA Premium, DMM TV, Hulu, U-NEXT, d Anime Store, FOD Premium y otras plataformas listadas. Se actualizó `articles/horror-collector-release-date.html` para distinguir el estreno televisivo japonés, el streaming japonés y el horario internacional no confirmado. Commit: `808150e683b416a59267cec47eecac3ae9d1094b`.
+
+### Coherencia de páginas públicas
+
+Se consultaron https://aninextup.com/calendar y https://aninextup.com/this-week y se compararon los listados visibles. La página semanal muestra 18 entradas para el intervalo 5–11 octubre, mientras el calendario de otoño contiene además estrenos de todo octubre, noviembre y diciembre; son alcances diferentes, no una contradicción por sí mismos. La página principal pública https://aninextup.com/ se mostró con la sección **“TODAY · OCTOBER 8”** en el rastreo disponible, aunque la fecha de esta revisión es 11 octubre. **Pendiente reproducir en una visita sin caché** y comprobar si se trata de contenido generado estáticamente, caché de CDN o fecha no actualizada antes de editar la portada.
+
+**Estado:** primera inspección 63/63 completada; auditoría factual exhaustiva y validación pública final de recursos aún pendientes. Esta actualización incluye una corrección factual verificable; no equivale a certificación total ni aprobación de AdSense.
