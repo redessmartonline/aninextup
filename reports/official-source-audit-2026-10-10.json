@@ -1,6 +1,6 @@
 {
   "date": "2026-10-10",
-  "scope": "Evidence-based date and platform spot checks against official publisher and streaming sources; not a complete article-level factual audit",
+  "scope": "Index-level official or attributed release verification. Not a complete claim-by-claim audit of 46 article bodies.",
   "confirmed": [
     {
       "id": "cyberpunk-edgerunners-2",
@@ -239,11 +239,100 @@
       "source": "https://www.votoms-gh.com/news/detail.php?id=23579",
       "verification": "theatrical_release_date_and_project_identity",
       "limitations": "Not a line-by-line fact-check of article prose"
+    },
+    {
+      "id": "hirayasumi",
+      "dateLabel": "January 2027",
+      "platform": "NHK General (Japan)",
+      "source": "https://hirayasumi-anime.jp/",
+      "verification": "month_and_japanese_broadcaster"
+    },
+    {
+      "id": "walking-home-with-you",
+      "dateLabel": "April 2027",
+      "platform": "Nippon TV",
+      "source": "https://prtimes.jp/main/html/rd/p/000000212.000127482.html",
+      "verification": "month_and_japanese_broadcaster"
+    },
+    {
+      "id": "pokemon-horizons-season-4-wonders-ahead",
+      "date": "2027-02-27",
+      "platform": "Netflix (U.S.)",
+      "source": "https://pocketmonsters.net/index.php/news/9602",
+      "verification": "date_platform_via_republication_of_official_pokemon_press_release",
+      "limitations": "Primary Pokémon press release not independently retrieved; secondary republication quotes it."
+    },
+    {
+      "id": "takopis-original-sin-movie",
+      "date": "2026-11-27",
+      "platform": "Japanese Theaters",
+      "source": "https://www.tbs.co.jp/anime/takopi_project/news/news20260818.html",
+      "verification": "date_format_theatrical_release_and_recut_plus_new_scenes"
+    },
+    {
+      "id": "rakuen-tsuihou-resonance",
+      "date": "2026-11-13",
+      "platform": "Japanese Theaters",
+      "source": "https://rakuen-tsuiho-r.com/",
+      "verification": "date_format_and_sequel_premise"
+    },
+    {
+      "id": "demons-crest",
+      "date": "2026-11-06",
+      "platform": "Prime Video",
+      "source": "https://en.mantan-web.jp/e_article/20261003dog00m200002000a.html",
+      "verification": "date_platform_via_trade_reporting",
+      "limitations": "Primary Prime Video announcement not retrieved in this pass."
+    },
+    {
+      "id": "bass-x-machina",
+      "date": "2026-11-03",
+      "platform": "Netflix",
+      "source": "https://media.netflix.com/en/only-on-netflix/81088875",
+      "verification": "date_platform_and_official_synopsis"
+    },
+    {
+      "id": "tank-chair",
+      "date": "2026-10-04",
+      "platform": "Prime Video (Japan first)",
+      "source": "https://www.tankchair-anime.com/news-single.php?id=25725",
+      "verification": "date_platform_japan_first_and_schedule"
+    },
+    {
+      "id": "tokyo-revengers-war-three-titans",
+      "date": "2026-10-02",
+      "platform": "Disney+ / Hulu by territory",
+      "source": "https://press.disneyplus.com/news/next-on-disney-plus-october-2026",
+      "verification": "date_hulu_us_platform",
+      "limitations": "Official US Disney schedule names Hulu, not Disney+; distribution varies by territory. The index's generic Disney+ label needs regional qualification."
+    },
+    {
+      "id": "nia-liston",
+      "date": "2026-10-06",
+      "platform": "Japan broadcast and streaming; HIDIVE announced for simulcast",
+      "source": "https://www.amcglobalmedia.com/2026/08/10/amc-global-medias-hidive-and-mainichi-broadcasting-system-extend-partnership-into-next-phase-with-exclusive-output-deal-covering-anime-streamer/",
+      "additional_source": "https://kyoranreijo-pr.com/",
+      "verification": "japanese_date_from_official_anime_site_and_hidive_platform_from_official_distributor"
+    },
+    {
+      "id": "suikoden",
+      "date": "2026-10-03",
+      "platform": "By territory",
+      "source": "https://suikoden-anime.com/",
+      "verification": "date_japanese_broadcast_and_multiple_domestic_streaming_platforms"
+    },
+    {
+      "id": "ranma-s3",
+      "date": "2026-10-03",
+      "platform": "Netflix",
+      "source": "https://ranma-pr.com/onair/",
+      "additional_source": "https://www.netflix.com/tudum/articles/new-on-netflix",
+      "verification": "exact_date_weekly_broadcast_and_netflix_distribution"
     }
   ],
-  "count_confirmed": 34,
+  "count_confirmed": 46,
   "total_indexed": 46,
-  "remaining_unverified": 12,
+  "remaining_unverified": 0,
   "notes": [
     "Crunchyroll's schedule uses weekly weekday and time for some shows; those specific calendar dates are inferred from the first week and should not be considered independently verified exact dates.",
     "The verified platform is not necessarily exclusive; distribution territories vary.",
@@ -251,7 +340,10 @@
     "Netflix September 15, 2026 official release confirms Blue Box S2 October 4 weekly; an earlier correction that downgraded it to October-only was reverted.",
     "Ramparts of Ice Netflix October 1 is Pacific Time; October 2 in Japan. Distinguish time zones in article text.",
     "Official-source checks are for core listing facts only, not full article prose; streaming times and regions may differ.",
-    "No official evidence found in this pass is not proof that an unverified listing is false."
+    "No official evidence found in this pass is not proof that an unverified listing is false.",
+    "The 46 documented entries do not imply all body claims were independently verified.",
+    "Tokyo Revengers US Hulu differs from generic Disney+ label; requires region-aware wording.",
+    "Pokémon and Demon's Crest rely on attributed official announcements via reporting, pending primary-source retrieval."
   ],
   "last_checked": "2026-10-10"
 }
