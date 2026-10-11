@@ -153,7 +153,8 @@
       "checked_claims": [
         "November 20 2026 Japanese theatrical release; ufotable studio",
         "TYPE-MOON Kinoko Nasu original; Masaru Takeuchi director, Moe Tsuzuki designs, Hikaru Kondo chief director",
-        "supercell Yoru to Ao theme; Haruka Tomatsu, Kana Hanazawa, Yusuke Kobayashi main cast"
+        "supercell Yoru to Ao theme; Haruka Tomatsu, Kana Hanazawa, Yusuke Kobayashi main cast",
+        "Embedded trailer ID corrected against ufotable official September 30 announcement"
       ],
       "source_urls": [
         "https://mahoyo-movie.com/",
@@ -161,9 +162,8 @@
         "https://www.crunchyroll.com/it/news/announcements/2026/9/10/witch-on-the-holy-night-anime-uscita-mondiale-gennaio-2027"
       ],
       "remaining_checks": [
-        "Embedded trailer currently QNap_AYExWQ; ufotable officially links final trailer k1jyM2kSBzA. Replace embed before closing.",
-        "Live YouTube watch URL could not be fetched by verification browser; do not certify playback.",
-        "Country theatrical dates verified by Crunchyroll; January 28 Latin American territories and January 29 US/Canada, not streaming."
+        "Trailer corrected to ufotable official final PV k1jyM2kSBzA (commit 9991c59f); actual playback and country-specific live cinema listings not independently tested.",
+        "Japan November 20 2026 theatrical release; January 2027 international dates refer to cinemas, not streaming."
       ]
     },
     {
