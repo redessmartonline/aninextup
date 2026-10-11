@@ -165,3 +165,19 @@ Se leyó el cuerpo de seis artículos y se contrastaron directamente tres fuente
 | [Pokémon Horizons Season 4](../articles/pokemon-horizons-season-4-wonders-ahead.html) | Artículo leído; URL oficial localizada: https://www.pokemon.com/us/news/pokemon-horizons-season-4-wonders-ahead-coming-to-netflix | El sitio oficial devuelve contenido mediante iframe en el lector: fecha estadounidense 27/02/2027, exclusividad y distribución por partes **no corroboradas directamente** en esta revisión |
 
 **Alcance:** 6 artículos inspeccionados; 3 con comprobación directa de al menos parte de las afirmaciones contra texto original, 3 con verificación documental pendiente. Esta sección no constituye certificación exhaustiva de seis artículos.
+
+
+## Cotejo individual — lote 4 (11 octubre 2026)
+
+Se leyeron íntegramente las secciones informativas de otros seis artículos. Este lote identifica las afirmaciones a contrastar y la fuente más pertinente, **sin declarar verificación directa del texto de esas fuentes** cuando solo se conoce su enlace. La etiqueta «confirmación parcial» de la tabla general no implica certificación.
+
+| Artículo | Afirmaciones concretas que requieren cotejo | Fuente de contraste | Estado |
+|---|---|---|---|
+| [Red Riding Hood: A Detective Story](../articles/red-riding-hood-detective-story.html) | Enero 2027; TOKYO MX/BS NTV/Yomiuri TV; Crunchyroll fuera de Asia; reparto y equipo BENTEN Film | https://akazukin-anime.com/ | Leído; contraste externo pendiente |
+| [The Record of a Fallen Vampire](../articles/record-of-a-fallen-vampire-anime.html) | Estreno 2027; Mankyu; ZERO-G y Liber; Evan Call; Yuma Uchida y Aino Shimada | https://www.crunchyroll.com/news/latest/2026/10/5/the-record-of-a-fallen-vampire-anime-announced-2027-release | Leído; contraste externo pendiente |
+| [The Fledgling Demon Lord's Starter Shop](../articles/fledgling-demon-lords-starter-shop.html) | Enero 2027; canales TOKYO MX/MBS/BS11; project No.9; elenco; Ash interpretado por Yōhei Azakami | https://www.crunchyroll.com/ko/news/latest/2026/10/6/the-fledgling-demon-lords-starter-shop-anime-teaser-trailer-key-visual-ash-cast | Leído; contraste externo pendiente |
+| [Manchuria Opium Squad](../articles/manchuria-opium-squad-anime.html) | Anuncio 5 octubre; adaptación sin formato/fecha confirmados; sin estudio ni elenco; ambientación Manchuria 1937 | https://news.ponycanyon.co.jp/2026/10/126491 | Leído; contraste externo pendiente |
+| [Cosmoship Yamato √2199](../articles/cosmoship-yamato-root-2199.html) | Anuncio 6 octubre; película; Hideaki Anno y Yutaka Izubuchi; coproducción Production I.G/Khara; sin fecha | https://www.production-ig.co.jp/hotnews/2026/100601/ y https://www.khara.co.jp/2026/10/06/261005-1/ | Leído; contraste externo pendiente |
+| [The Otome Heroine's Fight for Survival](../articles/otome-heroines-fight-for-survival-anime.html) | Julio 2027; Fuka Izumi; Noriyoshi Sasaki; STUDIO CLUTCH y Animation Studio Seven; sin streaming internacional | https://prtimes.jp/main/html/rd/p/000000211.000174060.html | Leído; contraste externo pendiente |
+
+**Recuento de trabajo:** 22 de 63 artículos han sido inspeccionados individualmente en las pasadas documentadas; 41 aún no han sido inspeccionados de este modo. Este número refleja lectura y clasificación de afirmaciones, **no** 22 artículos íntegramente certificados.
