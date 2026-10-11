@@ -687,3 +687,14 @@ PENDIENTE: `anime-news-october-2026.html`. Revisada, pero quedan varias fechas y
 PENDIENTE: `fall-2026-anime-calendar.html`. Requiere comprobación exhaustiva de todas las filas.
 
 Acumulado: 31/63 cerrados, 32 pendientes.
+
+
+## Cinco artículos revisados — 11 octubre 2026
+
+1. **CERRADO** `dragon-ball-super-beerus.html`: Crunchyroll publica Episodio 1 el 11 octubre 2026, con audio japonés y subtítulos: https://www.crunchyroll.com/es/watch/GE00389313JAJP/episode-1 . Se corrigió la advertencia anterior de que no estaba confirmada la disponibilidad en Crunchyroll, sin generalizar la disponibilidad a todos los territorios. Commits `73624ac211f3816612cb67baf39a121a4969c1d2` y `f9cc0116f802a8b97a43b574d3328536b003b1fd`.
+2. **CERRADO** `firefly-wedding.html`: distribuidor confirma estreno 9 octubre, david production y territorios: https://www.crunchyroll.com/es/news/seasonal-lineup/2026/9/15/otono-2026-anime-crunchyroll . La hora específica 09:00 PT se atribuye a anuncio del distribuidor del 6 octubre citado en el artículo.
+3. **CERRADO** `cyberpunk-edgerunners-2.html`: Netflix Tudum https://www.netflix.com/tudum/articles/cyberpunk-edgerunners-2-release-date-news confirma estreno global 20 octubre, diez episodios, TRIGGER, nueva historia independiente, personajes y equipo. No se afirma calendario de capítulos sin evidencia.
+4. **PENDIENTE** `anime-news-october-2026.html`: resumen con numerosos estrenos. Dragon Ball Super: Beerus confirmado para 11 octubre en Crunchyroll; aún falta comprobación exhaustiva de otras afirmaciones, incluidos estrenos de KONAMI animation y Disney+.
+5. **PENDIENTE** `fall-2026-anime-calendar.html`: calendario contiene 26 filas de octubre. No se marca cerrado sin revisar todas, aunque varias series ya están verificadas individualmente.
+
+**Balance: 3 cierres nuevos, 2 pendientes; acumulado 34/63 cerrados y 29/63 pendientes.**
