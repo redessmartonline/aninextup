@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-import json,re,datetime,pathlib,collections
+import json,re,datetime,pathlib,collections,ast
 root=pathlib.Path(__file__).resolve().parents[1]
 data=(root/'assets/data.js').read_text(encoding='utf8')
 rows=[x for x in data.splitlines() if re.search(r'\{id:"',x)]
 issues=[];seen=set();found=0
 def field(row,k):
  m=re.search(r'\b'+re.escape(k)+r':("(?:\\.|[^"\\])*"|null)',row)
- return json.loads(m.group(1)) if m else None
+ return (ast.literal_eval(m.group(1)) if m.group(1)!='null' else None) if m else None
 def warn(id,code,detail):issues.append(dict(id=id,code=code,detail=detail))
 for row in rows:
  e={k:field(row,k) for k in ('id','title','date','dateLabel','platform','article','category','status','image')}
