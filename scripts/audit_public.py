@@ -46,7 +46,7 @@ def main():
             opening_end = s.find('>', start) + 1
             depth = 1
             end = opening_end
-            for tag in re.finditer(r'<(/?)div\\b[^>]*>', s[opening_end:], re.I):
+            for tag in re.finditer(r'<(/?)div\b[^>]*>', s[opening_end:], re.I):
                 depth += -1 if tag.group(1) else 1
                 if depth == 0:
                     end = opening_end + tag.start()
@@ -54,9 +54,9 @@ def main():
             body_html = s[opening_end:end]
         else:
             body_html = s
-        body_html = re.sub(r'<(?:script|style)\\b[^>]*>.*?</(?:script|style)>', ' ', body_html, flags=re.I | re.S)
+        body_html = re.sub(r'<(?:script|style)\b[^>]*>.*?</(?:script|style)>', ' ', body_html, flags=re.I | re.S)
         text = html.unescape(re.sub(r"<[^>]+>", " ", body_html))
-        text = re.sub(r"\\s+", " ", text).strip()
+        text = re.sub(r"\s+", " ", text).strip()
         articles[p.stem] = {"word_count": len(text.split()), "text": text}
         for value in re.findall(r'(?:href|src|poster|data-src)="([^"]+)"', s):
             value = html.unescape(value).strip()
