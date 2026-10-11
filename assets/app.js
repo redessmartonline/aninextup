@@ -48,9 +48,43 @@ for(const el of document.querySelectorAll('[data-anime-platform]')){
 
 document.querySelectorAll('[data-platform-count]').forEach(el=>{const p=el.dataset.platformCount;const n=(D.anime||[]).filter(x=>p==='Prime Video'?x.platform.startsWith('Prime Video'):x.platform===p).length;el.textContent=n?'· '+n+' TRACKED':''});
 
-// Related releases on article pages. Article templates do not need to preload data.js.
-const renderRelatedReleases=data=>{const article=document.querySelector('.article');if(!article||!data?.anime?.length||article.querySelector('.related-releases[data-auto-related]'))return;const here=location.pathname.split('/').pop();const current=data.anime.find(a=>a.article?.endsWith(here));if(!current)return;const related=data.anime.filter(a=>a.id!==current.id&&(a.platform===current.platform||a.date===current.date)).slice(0,3);if(!related.length)return;const card=a=>'<a class="mini data-card visual-card" href="'+a.article.split('/').pop()+'">'+(a.image?'<img src="'+(a.image.startsWith('assets/')?'../'+a.image:a.image)+'" alt="'+a.title+'" loading="lazy">':'')+'<div class="visual-body"><b>'+prettyDate(a.date,a.dateLabel)+'</b><small class="status">'+releaseState(a)+'</small><h3>'+a.title+'</h3><span>'+a.platform+'</span></div></a>';const box=document.createElement('section');box.className='related-releases';box.dataset.autoRelated='';box.innerHTML='<div class="section-head"><div><span class="kicker">KEEP WATCHING</span><h2>Related releases</h2></div><a href="../calendar.html">FULL CALENDAR →</a></div><div class="grid three">'+related.map(card).join('')+'</div>';article.appendChild(box)};
-if(document.querySelector('.article')){if(D.anime?.length)renderRelatedReleases(D);else{const s=document.createElement('script');s.src='../assets/data.js';s.onload=()=>renderRelatedReleases(window.ANINEXTUP_DATA);document.head.appendChild(s)}}
+// Consistent, accessible related releases for every article page.
+const renderRelatedReleases=data=>{
+  const article=document.querySelector('article.article');
+  if(!article)return;
+  const slug=location.pathname.split('/').pop().replace(/\.html$/,'');
+  const items=(data?.anime||[]).filter(a=>a.article&&a.title);
+  const current=items.find(a=>a.article.split('/').pop().replace(/\.html$/,'')===slug);
+  const ranked=items.filter(a=>a!==current).sort((a,b)=>{
+    const score=x=>(current&&x.category===current.category?4:0)+(current&&x.platform===current.platform?2:0)+(current&&x.date&&x.date===current.date?1:0);
+    return score(b)-score(a);
+  }).slice(0,3);
+  if(!ranked.length)return;
+  const section=article.querySelector('.related-releases')||document.createElement('section');
+  section.className='related-releases';
+  section.dataset.autoRelated='true';
+  const head=document.createElement('div');head.className='section-head';
+  const title=document.createElement('div');
+  const kicker=document.createElement('span');kicker.className='kicker';kicker.textContent='KEEP WATCHING';
+  const h=document.createElement('h2');h.textContent='Related releases';
+  title.append(kicker,h);
+  const calendar=document.createElement('a');calendar.href='../calendar';calendar.textContent='FULL CALENDAR →';
+  head.append(title,calendar);
+  const grid=document.createElement('div');grid.className='grid three';
+  ranked.forEach(a=>{
+    const link=document.createElement('a');link.className='mini data-card';link.href='../'+a.article.replace(/^\//,'');
+    const label=document.createElement('b');label.textContent=a.category||'ANIME RELEASE';
+    const heading=document.createElement('h3');heading.textContent=a.title;
+    const detail=document.createElement('span');detail.textContent=(a.dateLabel||a.date||'DATE TBA')+' · '+(a.platform||'Release updates')+' →';
+    link.append(label,heading,detail);grid.append(link);
+  });
+  section.replaceChildren(head,grid);
+  article.appendChild(section);
+};
+if(document.querySelector('article.article')){
+  if(D.anime?.length)renderRelatedReleases(D);
+  else{const script=document.createElement('script');script.src='../assets/data.js';script.onload=()=>renderRelatedReleases(window.ANINEXTUP_DATA);document.head.appendChild(script);}
+}
 
 // News hub: upcoming confirmed releases
 document.querySelectorAll('[data-news-upcoming]').forEach(el=>{const items=[...(D.anime||[])].filter(a=>a.date&&a.date>=homeToday).sort((a,b)=>a.date.localeCompare(b.date)).slice(0,9);el.innerHTML=items.map(fullCard).join('')||'<p class="empty">No upcoming confirmed releases listed yet.</p>'});
