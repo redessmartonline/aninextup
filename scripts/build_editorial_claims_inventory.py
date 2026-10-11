@@ -21,15 +21,33 @@ class Reader(HTMLParser):
         self.in_anchor = False
         self.anchor = []
         self.href = ""
+        self.in_main = False
+        self.in_article = False
+        self.in_prose = False
+        self.main_depth = 0
+        self.article_depth = 0
+        self.prose_depth = 0
+        self.claim_blocks = []
+        self.current_block = None
     def handle_starttag(self, tag, attrs):
         a = dict(attrs)
-        if tag in ("script", "style"): self.skip += 1
+        if tag in ("script", "style", "nav", "header", "footer"): self.skip += 1
+        if tag == "main": self.in_main = True
+        if tag == "article": self.in_article = True
+        if tag in ("p", "li") and self.in_main and self.in_article and not self.skip:
+            self.current_block = []
         if tag == "a":
             self.in_anchor = True
             self.anchor = []
             self.href = a.get("href", "")
     def handle_endtag(self, tag):
-        if tag in ("script", "style"): self.skip = max(0, self.skip - 1)
+        if tag in ("p", "li") and self.current_block is not None:
+            block = re.sub(r"\\s+", " ", " ".join(self.current_block)).strip()
+            if block: self.claim_blocks.append(block)
+            self.current_block = None
+        if tag in ("script", "style", "nav", "header", "footer"): self.skip = max(0, self.skip - 1)
+        if tag == "article": self.in_article = False
+        if tag == "main": self.in_main = False
         if tag == "a" and self.in_anchor:
             if self.href.startswith(("https://", "http://")):
                 self.links.append((self.href, " ".join(self.anchor)))
@@ -39,6 +57,7 @@ class Reader(HTMLParser):
         data = html.unescape(data).strip()
         if not data: return
         self.parts.append(data)
+        if self.current_block is not None: self.current_block.append(data)
         if self.in_anchor: self.anchor.append(data)
 
 def main():
