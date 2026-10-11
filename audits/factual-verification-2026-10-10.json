@@ -1031,6 +1031,26 @@
         "Cross-check all factual claims against primary sources"
       ],
       "note": "This closes only the remaining structural inventory, not the factual or live-resource audit. No article status promoted."
+    },
+    "full_46_article_offline_inventory": {
+      "source": "Uploaded aninextup-main(1).zip snapshot; not verified against latest GitHub HEAD",
+      "article_count": 46,
+      "external_url_occurrences": 170,
+      "unique_external_urls": 130,
+      "youtube_embed_occurrences": 36,
+      "verification_status": "inventory_only_not_live_checked",
+      "method": "Parsed HTML anchors/images/iframes and data-youtube attributes for all 46 articles",
+      "limitations": [
+        "Container outbound HTTP unavailable, so live link response status, image retrieval and YouTube playback/channel ownership remain unverified",
+        "Repeated source URL references are not by themselves factual errors; no article edits justified from this inventory",
+        "No article promoted to fully verified"
+      ],
+      "next_steps": [
+        "Check all 130 distinct external URLs live with response status and redirects",
+        "Check all 36 embedded video IDs against official publisher and live playback",
+        "Compare live GitHub HEAD before correcting confirmed errors",
+        "Verify individual factual claims against primary sources"
+      ]
     }
   }
 }
