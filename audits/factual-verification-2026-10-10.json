@@ -762,7 +762,7 @@
     }
   ],
   "external_link_video_audit_2026_10_11": {
-    "scope": "26 of 46 article HTML files structurally inspected; live verification of all external links and video playback remains incomplete",
+    "scope": "26 of 46 article HTML files inspected for external URL references and video/thumbnail ID consistency; not all URLs fetched live",
     "article_ids": [
       "hirayasumi",
       "walking-home-with-you",
@@ -797,7 +797,7 @@
         "description": "Clarified production announcement scope, avoiding use as evidence of 2027 premiere date."
       }
     ],
-    "status": "26 of 46 inspected; 20 remain for repository HTML structural review; all external HTTP destinations and video playback remain open",
+    "status": "26/46 structural article screenings; 20 remain; complete live URL HTTP and video playback verification still pending",
     "additional_article_paths": [
       "articles/rakuen-tsuihou-kokoro-no-resonance.html",
       "articles/demons-crest-release-date.html",
@@ -897,6 +897,37 @@
         "url": "https://en.dragon-ball-official.com/news/01_4509.html",
         "result": "Official North American streaming platforms and timing announced separately; do not infer Japan streaming services apply worldwide"
       }
-    ]
+    ],
+    "third_batch_public_source_checks": [
+      {
+        "url": "https://tokyo-revengers-anime.com/onair/",
+        "status": "publicly accessible, schedule and Disney+ mainland China exclusion confirmed"
+      },
+      {
+        "url": "https://en.dragon-ball-official.com/news/01_4487.html",
+        "status": "publicly accessible, Japan Oct 11 2026 23:15 broadcast confirmed"
+      },
+      {
+        "url": "https://dragonball-super.com/en/",
+        "status": "publicly accessible, regional streaming partners listed"
+      },
+      {
+        "url": "https://prensa.disney.es/noticias/dragon-ball-super%3A-beerus-llega-el-14-de-octubre-a-disney%2B",
+        "status": "publicly accessible, Spain Disney+ Oct 14 announcement"
+      }
+    ],
+    "third_batch_changes": [
+      {
+        "article": "tokyo-revengers-war-three-titans",
+        "commit": "4dd1a5a4",
+        "detail": "Corrected late-night Japanese broadcast day interpretation and mainland China streaming exception"
+      },
+      {
+        "article": "dragon-ball-super-beerus",
+        "commit": "51f8780d",
+        "detail": "Added region-specific official platform list and Spain Disney+ date with primary source links"
+      }
+    ],
+    "remaining_article_count": 20
   }
 }
