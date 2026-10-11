@@ -1603,6 +1603,35 @@
       "recheck_status": "Aoashi home had previously timed out; search-indexed official page now readable; still no browser HTTP status measurement",
       "article_changes": "none; no demonstrated factual contradictions",
       "remaining": "Reconcile remaining distinct HTML anchors and all 60 external image URLs; independently verify 36 video embeds"
+    },
+    "html_link_correction_2026_10_11": {
+      "article": "articles/a-certain-dark-item-release-date.html",
+      "commit": "6b38f844837a32cc6997ca988ecdfbebba6950d5",
+      "fixes": [
+        {
+          "old": "https://toaru-project.com/item/story/01",
+          "new": "https://toaru-project.com/item/story/01.html",
+          "occurrences": 2,
+          "verification": "Exact old URL unavailable to web retriever; canonical .html returns official episode synopsis"
+        },
+        {
+          "old": "https://toaru-project.com/item/staffcast/index",
+          "new": "https://toaru-project.com/item/staffcast/index.html",
+          "occurrences": 2,
+          "verification": "Exact old URL unavailable to web retriever; canonical .html returns official staff and cast"
+        }
+      ],
+      "additional_recheck": {
+        "url": "https://sekamajo-anime.com/onair/",
+        "result": "official_content_retrievable_via_public_search_index",
+        "note": "Earlier HTTP 403 to retrieval tool not evidence of broken link"
+      },
+      "limitations": [
+        "No browser HTTP status code measured for every external resource",
+        "Do not count as all 130 URLs verified",
+        "Remaining image/video checks pending"
+      ],
+      "article_status_promotion": false
     }
   }
 }
