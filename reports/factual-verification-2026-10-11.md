@@ -1,6 +1,6 @@
 # Registro de verificación factual — AniNextUp
 
-**Estado vigente tras la última continuación: 61/63 cerrados y 2/63 pendientes.** Las tablas y balances anteriores se conservan como historial; el detalle vigente está en la última sección.
+**Estado vigente tras la última continuación: 63/63 cerrados y 0/63 pendientes.** Las tablas y balances anteriores se conservan como historial; el detalle vigente está en la última sección.
 
 Fecha: 2026-10-11. Cobertura: **63 artículos HTML**. Este registro **no equivale a la aprobación factual completa de cada artículo**. «Confirmación parcial» significa que se contrastó al menos un dato con la fuente primaria indicada; el resto de las afirmaciones aún debe revisarse. «Pendiente» no significa que el artículo sea incorrecto.
 
@@ -1129,3 +1129,41 @@ Cartelera internacional utilizada: https://www.crunchyroll.com/news/seasonal-lin
 Los **once HTML publicados** se recuperaron desde GitHub y coinciden íntegramente con el contenido enviado. Los JSON-LD modificados se analizaron como JSON válido.
 
 **Balance vigente: nueve cierres nuevos; 61/63 cerrados y 2/63 pendientes.** Los dos pendientes son exclusivamente Dreamland y la noticia de Pokémon indicada arriba. No se cuenta de nuevo ningún cierre anterior ni se considera verificada una afirmación por ausencia de prueba contraria.
+
+## Cierre de los dos últimos pendientes — 11 octubre 2026
+
+Base recuperada del informe publicado en `4de699f89f77062c34d08d6ce01db796824c15a1`: **61 cerrados / 2 pendientes**. Se recuperaron y leyeron completos exclusivamente los HTML de Dreamland y la noticia de Pokémon. Se resuelven los bloqueos con pruebas adicionales; no se repiten cierres anteriores.
+
+### CERRADO — `dreamland-release-date.html`
+
+**Nueva prueba oficial más reciente:** https://www.crunchyroll.com/es/news/seasonal-lineup/2026/10/11/crunchyroll-calendario-semanal-otono-2026, publicado **11 octubre 2026 14:30 UTC**, semana 12–18 octubre. Su bloque indexado completo contiene **Viernes / 16 de octubre de 2026 / Dreamland / EPISODIO 1 (Edición japonesa y francesa)**. La apertura directa sigue devolviendo estructura sin cuerpo: se registra honestamente como **texto oficial indexado**, no lectura directa del HTML del calendario. El bloque nominal de esa publicación posterior permite fundamentar la fecha publicada del 16 con alcance al calendario en español, junto al anuncio del 18 septiembre y la descripción del teaser ya verificados.
+
+**Lectura directa independiente:** https://news.animationdigitalnetwork.com/fr/2026/08/27/dreamland-ou-et-quand-regarder-lanime/ confirma **17 octubre para ADN**, episodio 1, frecuencia semanal, Ellipse/La Chouette, Machado, Cano/Maurel y premisa. Ese lanzamiento de otra plataforma no prueba por sí solo el motivo de la discrepancia entre versiones de Crunchyroll; **no se afirma que ADN la explique ni que haya habido una reprogramación**.
+
+Se actualizan descripción, Open Graph, cabecera, tarjeta y cuerpo: **16 octubre según calendario semanal de Crunchyroll fechado 11 octubre; 17 octubre ADN; 18 octubre 02:00 JST televisión japonesa**. Se conserva una nota sobre la versión inglesa recuperada con 17 y se remite al catálogo regional. No se proclama una fecha simultánea mundial ni se publica una hora deducida de filas con banderas no recuperadas. Las restantes afirmaciones y metadatos estaban respaldados en las pasadas anteriores.
+
+Commit: `1ce0b78e8d58ea4a5697d1c099f7c18558ff11af`.
+
+### CERRADO — `pok-mon-horizons-anime-unseals-treasures-of-ruin-in-latest-wonder-a6b9d2d5.html`
+
+Se localizó el ID del mensaje original y **se leyó desde proveedores oficiales de X**, no desde su reproducción de Yahoo:
+- Mensaje canónico https://x.com/anipoke_PR/status/2108506510271889739.
+- Respuesta de sindicación https://cdn.syndication.twimg.com/tweet-result?id=2108506510271889739&lang=en&token=0 devuelve usuario **anipoke_PR**, ID exacto, fecha **2026-10-09T10:35:00.000Z**, texto y metadatos del vídeo adjunto.
+- El endpoint público https://publish.twitter.com/oembed?url=https://twitter.com/anipoke_PR/status/2108506510271889739 corrobora autor y texto. El mensaje anuncia **tres semanas de “災厄のパルデア” desde 16 octubre** y nombra al cuarteto.
+
+**Prueba audiovisual primaria recuperada:** se descargó el MP4 enlazado por los metadatos oficiales del mensaje (dominio video.twimg.com, media ID `2108181202154975233`, duración 45,045 segundos). Se extrajeron fotogramas cada segundo y se inspeccionaron visualmente los intervalos 0–31 segundos, con ampliación del rótulo en torno a 10 segundos:
+- Aproximadamente **10–12 segundos: “解かれた封印—”**, referido a sellos liberados/deshechos.
+- Aproximadamente **13–15 segundos: los cuatro Pokémon y el rótulo de retorno de los Pokémon calamidad**.
+- Aproximadamente **17–23 segundos: nombres japoneses de Ting-Lu, Wo-Chien, Chi-Yu y Chien-Pao** en las imágenes correspondientes.
+
+Esto prueba el foco del trailer y los sellos liberados que afirma la noticia. **No se declara visionado íntegro, escucha o transcripción de audio ni se identifica quién rompe los sellos**, dato que la versión publicada no afirma. No se presupone que el montaje de X sea idéntico segundo a segundo al upload de YouTube; ambas publicaciones oficiales tienen identidad comprobada y el vídeo adjunto al mensaje primario respalda el contenido de la noticia. Se reemplaza la nota de bloqueo por esas pruebas y se añade el mensaje original.
+
+Se releyó directamente https://www.pokemon.co.jp/info/2026/05/260508_a01.html: confirma nuevo arco **22 mayo**, protagonistas y Rising Volt Tacklers. Además, acceso raw directo a https://press.pokemon.com/en/releases/Pokemon-Horizons-The-Series-to-Return-for-Fourth-Season devuelve el comunicado original **6 octubre 2026** de The Pokémon Company International: **27 febrero 2027, Part 1 de Season 4—Wonders Ahead, Netflix exclusivo EEUU**. Se añade esta prueba específica para el contraste regional de la noticia; el 401 del extractor web no se interpreta como falta del documento cuando el HTML original es legible. Los tipos estaban probados con las cuatro fichas de Pokédex oficial en pasadas anteriores.
+
+Commit: `ae8f96eae0b66c9cfb4ed8ad68a00470af02b561`.
+
+### Balance final y alcance
+
+**63/63 artículos cerrados; 0/63 pendientes.** Dos cierres nuevos con pruebas descritas. Los dos HTML publicados se recuperaron desde GitHub y coinciden íntegramente con el contenido enviado; sus bloques JSON y JSON-LD se analizaron correctamente.
+
+El cierre corresponde a **las versiones publicadas, con sus afirmaciones delimitadas y respaldadas**. En Dreamland se conserva la distinción de plataforma/región y la nota documental sobre versiones discrepantes, sin afirmar que todas las fuentes históricas hayan sido rectificadas. Una programación futura puede cambiar: el cierre no garantiza inmutabilidad de horarios ni equivalencia mundial de catálogos. Las tablas iniciales y balances anteriores son historia del proceso y no el estado vigente.
