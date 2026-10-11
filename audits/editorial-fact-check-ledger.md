@@ -25,3 +25,19 @@ Last reviewed: 2026-10-11. This is a **partial, evidence-based review**, not a c
 ## Review procedure
 
 For each CSV row, isolate a single factual claim and inspect the cited primary source. Record the precise supporting URL, the publication/update date, and one of VERIFIED, CONTRADICTED, INSUFFICIENT_EVIDENCE, or NEEDS_RECHECK. Only correct published articles where a contradiction is established. Do not convert all rows to VERIFIED automatically.
+
+## Additional primary-source review — 2026-10-11
+
+| Article | Claim | Status | Primary evidence |
+|---|---|---|---|
+| articles/tank-chair-release-date.html | Japanese TV premiere October 4, 2026, TOKYO MX Sunday 23:00 | VERIFIED | https://www.tankchair-anime.com/news-single.php?id=24061&offset=10 |
+| articles/tank-chair-release-date.html | BS11 Sunday 24:30; CBC Monday 25:37; MBS Tuesday 27:00 | VERIFIED (Japanese late-night broadcast notation) | https://www.tankchair-anime.com/news-single.php?id=24061&offset=10 |
+| articles/tank-chair-release-date.html | Prime Video Japan October 4, 2026 at 23:30 JST, subsequent weekly Sundays | VERIFIED | https://www.tankchair-anime.com/news-single.php?id=25725 |
+| articles/tank-chair-release-date.html | Other Japanese subscription services start sequentially Wednesday October 7 at 23:30 JST | VERIFIED | https://www.tankchair-anime.com/news-single.php?id=25725 |
+| articles/tank-chair-release-date.html | Nagi and Shizuka premise | VERIFIED | https://www.tankchair-anime.com/ |
+| articles/pokemon-horizons-season-4-wonders-ahead.html | Official Pokémon news identifies season 4 as Wonders Ahead and Netflix distribution | VERIFIED | https://www.pokemon.com/us/pokemon-news?articleTopic=animation&articleType=news |
+| articles/pokemon-horizons-season-4-wonders-ahead.html | February 27, 2027 U.S. Netflix Part 1; exclusivity and later episode details | NEEDS_RECHECK: official article linked, but full article text not independently retrievable in this review | https://www.pokemon.com/us/news/pokemon-horizons-season-4-wonders-ahead-coming-to-netflix |
+
+Editorial correction: TANK CHAIR section heading was changed from "Official trailer" to "Official character teaser" to match the embedded video metadata (commit 6d40447f5f8cefe5709d7fd3dac243058cd1fd44).
+
+**Scope limitation:** This review covers only the claims listed above. The remaining 61 articles have not been individually fact-checked here; neither the CSV nor the link-status audit proves factual accuracy, permission to use images, or video playback.
