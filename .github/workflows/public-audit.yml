@@ -1,0 +1,25 @@
+name: AniNextUp public quality audit
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '20 10 * * 1'
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Audit public URLs, images, trailers, and duplicates
+        run: python scripts/audit_public.py
+      - name: Upload audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: aninextup-public-audit
+          path: audit-results.json
+          if-no-files-found: warn
