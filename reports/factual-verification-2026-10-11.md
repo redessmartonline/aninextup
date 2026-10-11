@@ -698,3 +698,14 @@ Acumulado: 31/63 cerrados, 32 pendientes.
 5. **PENDIENTE** `fall-2026-anime-calendar.html`: calendario contiene 26 filas de octubre. No se marca cerrado sin revisar todas, aunque varias series ya están verificadas individualmente.
 
 **Balance: 3 cierres nuevos, 2 pendientes; acumulado 34/63 cerrados y 29/63 pendientes.**
+
+
+## Cinco artículos — auditoría 11 octubre 2026
+
+1. **CERRADO** `black-clover-season-2.html`: TV Tokyo https://www.tv-tokyo.co.jp/anime/bclover/news/ confirma 3 octubre 23:00 JST, sábados; Crunchyroll https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll confirma Studio Pierrot, distribución internacional y sábados 08:00 PT. Se agregó fuente primaria y hora. Commit `bd86acd509e751fe43d6ba310251f43a4f7266f4`.
+2. **CERRADO** `aoashi-season-2.html`: https://aoashi-pr.com/onair/ confirma estreno NHK 4 octubre y distribución japonesa Hulu, Netflix, U-NEXT y Anime Times desde 23:00 JST; Crunchyroll confirma TMS Entertainment, domingos 02:00 PT y territorios. Se agregó referencia de hora. Commit `62db71cb82819d73955c63b8d1da35b6c71c11e5`.
+3. **CERRADO** `detective-is-already-dead-season-2.html`: KADOKAWA https://www.kadokawa.co.jp/product/video2730/ confirma 7 octubre, ENGI, Kurihara, Akao, Ito, temas, TV japonesa y d Anime Store 22:00 JST. Crunchyroll confirma subtítulos miércoles 06:30 PT y regiones. Se corrigió hora TBA. Commit `7e6deac8dc5b6dfb7732e014204d17af174f60d6`.
+4. **CERRADO** `dark-machine-the-animation.html`: Fuji TV https://www.fujitv.co.jp/darkmachine_anime/onair/ y https://www.fujitv.com/animation/darkmachinetheanimation/ confirman emisión 13 octubre 25:45 JST, otras cadenas, plataformas japonesas 14 octubre 12:00 JST, sinopsis. Crunchyroll anuncia territorios y 13 octubre pero no hora exacta. Fuente añadida. Commit `a6a7daf0f4134900a2d8b7284545bff342a311c7`.
+5. **PENDIENTE** `anime-news-october-2026.html`: corregida afirmación obsoleta de streaming de Nia Liston: HIDIVE distribuye desde 6 octubre en territorios elegibles; contrastado con informes de lanzamiento y cartelera. Aún quedan otras menciones del resumen por cotejar. Commits `7336df555ea38cb41ea9c5e0f26ea402e018f2e6` y `94799aca9f86fe339faa3589b73125b85973ebc7`.
+
+**Balance del lote: 5 revisados, 4 cierres nuevos, 1 pendiente. Acumulado: 38/63 cerrados, 25/63 pendientes.**
