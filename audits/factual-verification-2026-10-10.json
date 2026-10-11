@@ -2,9 +2,9 @@
   "scope": "Article-level factual verification; structural validation is separate",
   "checked_on": "2026-10-10",
   "total": 46,
-  "partially_verified": 40,
+  "partially_verified": 46,
   "fully_verified": 0,
-  "pending": 6,
+  "pending": 0,
   "warning": "Partial verification does not validate every assertion in the article.",
   "articles": [
     {
@@ -68,9 +68,13 @@
       "title": "The Apothecary Diaries: Treasure of the Late Empress",
       "article": "articles/apothecary-diaries-movie",
       "date": "2026-12-11",
-      "status": "pending_manual_fact_check",
-      "checked_claims": [],
-      "source_urls": []
+      "status": "partially_verified_official_source",
+      "checked_claims": [
+        "December 11 2026 Japanese theatrical date and original story by Natsu Hyuuga"
+      ],
+      "source_urls": [
+        "https://kusuriyanohitorigoto.jp/news/2520/"
+      ]
     },
     {
       "id": "takopis-original-sin-movie",
@@ -281,9 +285,13 @@
       "title": "Tokyo Revengers: War of the Three Titans",
       "article": "articles/tokyo-revengers-war-three-titans",
       "date": "2026-10-02",
-      "status": "pending_manual_fact_check",
-      "checked_claims": [],
-      "source_urls": []
+      "status": "partially_verified_official_source",
+      "checked_claims": [
+        "October 2 2026 Japanese TV debut; Disney+ global subscription distribution excluding mainland China"
+      ],
+      "source_urls": [
+        "https://tokyo-revengers-anime.com/news/archives/5045"
+      ]
     },
     {
       "id": "dragon-ball-super-beerus",
@@ -374,9 +382,13 @@
       "title": "So What's Wrong with Getting Reborn as a Goblin?",
       "article": "articles/reincarnated-goblin",
       "date": "2026-10-05",
-      "status": "pending_manual_fact_check",
-      "checked_claims": [],
-      "source_urls": []
+      "status": "partially_verified_official_source",
+      "checked_claims": [
+        "October 5 2026 Japanese premiere; BAKKKA studio"
+      ],
+      "source_urls": [
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll"
+      ]
     },
     {
       "id": "nia-liston",
@@ -396,9 +408,13 @@
       "title": "The Laid-Off Cheat-Granting Mage Enjoys a Second Lease on Life",
       "article": "articles/laid-off-cheat-granting-mage",
       "date": "2026-10-06",
-      "status": "pending_manual_fact_check",
-      "checked_claims": [],
-      "source_urls": []
+      "status": "partially_verified_official_source",
+      "checked_claims": [
+        "October 6 2026 premiere listed in Crunchyroll Fall 2026 lineup"
+      ],
+      "source_urls": [
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll"
+      ]
     },
     {
       "id": "sasaki-and-peeps-season-2",
@@ -431,9 +447,13 @@
       "title": "The Iceblade Sorcerer Shall Rule the World II",
       "article": "articles/iceblade-sorcerer-ii",
       "date": "2026-10-08",
-      "status": "pending_manual_fact_check",
-      "checked_claims": [],
-      "source_urls": []
+      "status": "partially_verified_official_source",
+      "checked_claims": [
+        "October 8 2026 premiere in Crunchyroll Fall 2026 lineup"
+      ],
+      "source_urls": [
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll"
+      ]
     },
     {
       "id": "ace-of-diamond-second-season",
@@ -466,9 +486,13 @@
       "title": "A Returner's Magic Should Be Special Season 2",
       "article": "articles/returners-magic-season-2",
       "date": "2026-10-07",
-      "status": "pending_manual_fact_check",
-      "checked_claims": [],
-      "source_urls": []
+      "status": "partially_verified_official_source",
+      "checked_claims": [
+        "October 7 2026 premiere; Arvo Animation studio"
+      ],
+      "source_urls": [
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll"
+      ]
     },
     {
       "id": "magic-knight-rayearth-2026",
