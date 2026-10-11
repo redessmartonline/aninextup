@@ -21,6 +21,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: aninextup-editorial-claims-inventory
-          path: audits/editorial-claims-inventory.csv
+          path: |
+            audits/editorial-claims-inventory.csv
+            audits/editorial-article-coverage.csv
           if-no-files-found: error
           retention-days: 30
