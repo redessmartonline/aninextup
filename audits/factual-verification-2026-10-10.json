@@ -744,6 +744,21 @@
       "article": "pokemon-horizons-season-4-wonders-ahead",
       "commit": "ff9a1f62",
       "change": "Clarified secondary report versus already-linked Pokémon Company International primary press release."
+    },
+    {
+      "article": "dark-machine",
+      "commit": "aa1dd0f0",
+      "change": "Removed duplicate empty trailer heading; retained official trailer section."
+    },
+    {
+      "article": "chitose-ramune-cour-2",
+      "commit": "043de952",
+      "change": "Added editorial explanation of recap episode 13.5 and Japanese 24:30 schedule notation."
+    },
+    {
+      "article": "horror-collector",
+      "commit": "96309fdd",
+      "change": "Explained first-season episode count versus premiere-day episode availability and regional catalog limitations."
     }
   ]
 }
