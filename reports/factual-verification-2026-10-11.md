@@ -612,3 +612,18 @@ Se cotejó la totalidad de las afirmaciones fácticas materiales del artículo c
 | `otome-heroines-fight-for-survival-anime.html` | Referencia a comunicado https://prtimes.jp/main/html/rd/p/000000211.000174060.html; en este intento la página devuelve error y no se pudo recuperar el texto primario. No se considera suficiente repetir créditos del propio artículo ni una nota secundaria. | **PENDIENTE**: cotejar en fuente oficial accesible fecha julio 2027, voz Fuka Izumi, Noriyoshi Sasaki, Toko Machida, Hiroyuki Miseki, música y estudio. |
 
 **Balance del lote: cinco examinados, tres cierres nuevos, dos pendientes. Acumulado: 13/63 cerrados y 50/63 pendientes.** No se han editado artículos en este lote porque no se identificó contradicción demostrada; sí se registraron las pruebas, límites de acceso y estados en este informe.
+
+
+## Segunda fase — lote de cinco, 11 octubre 2026
+
+**1. CERRADO: `suikoden-anime.html`.** Fuente primaria del comité https://suikoden-anime.com/onair/ : 32 emisoras, estreno 3 oct 2026, primer episodio especial de 60 minutos, **24 plataformas de streaming enumeradas nominalmente** (Amazon Prime Video, U-NEXT, Anime Hodai, FOD, ABEMA, Lemino, Hulu, WOWOW On Demand, d Anime Store y sus tres variantes, Bandai Channel, J:COM STREAM, TELASA, milplus, NicoNico, DMM TV, AnimeFesta, TVer, Video Market, music.jp, Kansai TV Doga y HAPPY! Doga). Web https://suikoden-anime.com/ confirma tema de cierre Koji Nakamura y PV. Se cambió enlace de referencia a página directa de horarios, commit `bdd1c20393e1fb8b9e7b1ae85a689c05b5e21b1b`.
+
+**2. CERRADO: `otome-heroines-fight-for-survival-anime.html`.** Comunicados primarios https://www.furyu.jp/news/2026/10/otosaba_anime/ y https://otosaba-anime.com/ : emisión TV julio 2027, Fuka Izumi como Alia, director Noriyoshi Sasaki, guion/serie Toko Machida, diseño Hiroyuki Miseki, música KOHTA YAMAMOTO/Shun Narita/Yuki Furuhashi, estudios STUDIO CLUTCH y Animation Studio Seven, teaser PV y sinopsis. No se publica día exacto ni plataforma extranjera. Sustituido enlace de comunicado inaccesible por comunicado corporativo accesible, commit `7bbd851f3d58546089262f04fc04e412b478ad0f`.
+
+**3. PENDIENTE: `red-riding-hood-detective-story.html`.** Web de producción https://akazukin-anime.com/ respondió HTTP 403; Crunchyroll https://www.crunchyroll.com/news/latest/2026/10/5/red-riding-hood-a-detective-story-anime-main-trailer-key-visual-january-2027-release-date no devolvió cuerpo legible en este intento. No certificar elenco, territorios ni equipo sin fuente directa accesible.
+
+**4. PENDIENTE: `record-of-a-fallen-vampire-anime.html`.** La única fuente citada es nota periodística de Crunchyroll https://www.crunchyroll.com/news/latest/2026/10/5/the-record-of-a-fallen-vampire-anime-announced-2027-release; faltan comunicado de comité o web oficial para corroborar elenco, estudio y 2027.
+
+**5. PENDIENTE: `my-happy-marriage-special-episodes.html`.** Netflix fuente primaria https://about.netflix.com/en/news/romance-anime-lineup-october confirma especiales **25 oct 2026** y elenco principal, director y Kinema Citrus, pero **no confirma** tres episodios ni emisión TOKYO MX 19:00–20:30 JST, distribución japonesa desde 20:30 y catálogo de plataformas; falta anuncio del comité para estos detalles.
+
+**Balance: cinco trabajados, dos cierres nuevos, tres pendientes. Acumulado: 15/63 cerrados, 48/63 pendientes.** No se alteraron datos editoriales no contradichos. Los dos enlaces oficiales se precisaron y quedan registrados los bloqueos de verificación.
