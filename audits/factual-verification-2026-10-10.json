@@ -14,10 +14,16 @@
       "date": null,
       "status": "partially_verified_official_source",
       "checked_claims": [
-        "January 2027 NHK General; official staff and cast"
+        "NHK General January 2027 broadcast; exact date unannounced",
+        "Official staff: Kei Suezawa director/series composition/scripts, Naoyuki Asano characters, Mika Nishimura art, Kaori Sawada music, Production +h.",
+        "Official cast: Yuma Uchida, Mayu Takahashi, Rikako Aikawa",
+        "Official synopsis: Hiroto inherits a bungalow from elderly neighbor Hanae"
       ],
       "source_urls": [
         "https://hirayasumi-anime.jp/en/"
+      ],
+      "remaining_checks": [
+        "Confirm VIZ October 7 New York screening and embedded YouTube teaser against original upload"
       ]
     },
     {
@@ -27,10 +33,16 @@
       "date": null,
       "status": "partially_verified_official_source",
       "checked_claims": [
-        "April 2027 Nippon TV; cast and staff not announced"
+        "ADK Emotions October 7 2026 announcement: April 2027 Nippon TV TV anime",
+        "Mai Matsuda original manga; Shun Sato and Naoki Sato Hyper Going-Home Club premise",
+        "Announcement shows teaser visual; cast and production staff not announced there"
       ],
       "source_urls": [
-        "https://prtimes.jp/main/html/rd/p/000000212.000127482.html"
+        "https://prtimes.jp/main/html/rd/p/000000212.000127482.html",
+        "https://hokabiyo.com/"
+      ],
+      "remaining_checks": [
+        "Check other newer official announcements and exact absence of trailer"
       ]
     },
     {
@@ -40,12 +52,15 @@
       "date": "2027-02-27",
       "status": "partially_verified_official_source",
       "checked_claims": [
-        "The Pokémon Company International October 6 2026 announcement identifies February 27 2027 Netflix US premiere of Season 4 Part 1",
-        "Netflix media center confirms season 4 upcoming in United States; other territory dates not inferred"
+        "Previously recorded US Netflix February 27 2027 Part 1 date; official Pokemon news archive URL is not a direct article citation"
       ],
       "source_urls": [
         "https://www.pokemon.com/us/pokemon-news?articleTopic=animation&articleType=news",
         "https://media.netflix.com/en/only-on-netflix/81696980"
+      ],
+      "remaining_checks": [
+        "Locate and verify direct official October 6 Pokemon announcement",
+        "Validate Navie/Ditto story detail and trailer ID QwXy-HbEKmI"
       ]
     },
     {
@@ -55,12 +70,18 @@
       "date": "2026-10-05",
       "status": "partially_verified_official_source",
       "checked_claims": [
-        "Japan broadcast and streaming start 2026-10-05",
-        "Rose and Harij premise"
+        "October 5 2026 Japanese broadcast and streaming start from official news",
+        "Rose and Harij premise matches official synopsis",
+        "Official staff: Keizo Kusakawa, Wataru Watari, Masakazu Ishikawa, Satoshi Matsumura, Diomedea",
+        "Official cast: Mikako Komatsu as Rose and Yohei Azakami as Harij"
       ],
       "source_urls": [
         "https://horemajo-anime.com/news/",
-        "https://horemajo-anime.com/story/"
+        "https://horemajo-anime.com/story/",
+        "https://horemajo-anime.com/staffcast/"
+      ],
+      "remaining_checks": [
+        "Check Crunchyroll 5:30am PT time and embedded trailer hGRtocAh3iw"
       ]
     },
     {
@@ -92,10 +113,17 @@
       "date": "2026-11-27",
       "status": "partially_verified_official_source",
       "checked_claims": [
-        "2026-11-27 Japanese theatrical premiere; re-edit of six episodes with new scenes; Shinya Iino directs"
+        "November 27 2026 Japanese cinema premiere from official TBS August 18 news",
+        "Film re-edits all six anime episodes and adds new scenes",
+        "Director Shinya Iino, animation ENISHIYA, original manga Taizan 5",
+        "Official cast: Kurumi Mamiya, Reina Ueda, Konomi Kohara, Anna Nagase, Ryota Osaka"
       ],
       "source_urls": [
-        "https://www.tbs.co.jp/anime/takopi_project/news/news20260818.html"
+        "https://www.tbs.co.jp/anime/takopi_project/news/news20260818.html",
+        "https://www.tbs.co.jp/anime/takopi_project/staffcast/"
+      ],
+      "remaining_checks": [
+        "Check actual page trailer and any additional film-specific assertions"
       ]
     },
     {
