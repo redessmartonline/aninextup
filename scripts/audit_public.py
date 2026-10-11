@@ -98,6 +98,11 @@ def main():
     path.write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"Checked {len(results)} URLs: {report['ok']} OK, {report['needs_manual_check']} blocked/rate-limited, {report['failed_or_unverified']} failed/unverified")
     print(f"Near-duplicate candidates: {len(near_duplicates)}. Report: {path}")
+    for item in results:
+        if item["assessment"] != "ok":
+            print(f"CHECK {item['assessment']} HTTP={item.get('status')} URL={item['url']} ERROR={item.get('error', '')}")
+    for item in report["short_articles_under_150_words"]:
+        print(f"SHORT ARTICLE {item['words']} words: {item['article']}")
     # Fail only on verified broken URLs, not blocked or DNS/timeouts.
     hard_fail = [x for x in results if x.get("status") in (404, 410) and x["url"].startswith(BASE)]
     if hard_fail:
