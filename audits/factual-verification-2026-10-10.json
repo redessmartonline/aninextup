@@ -994,6 +994,43 @@
         "No additional articles promoted to fully verified",
         "The original 46 article factual audit status is unchanged; 26 article structural screenings recorded separately"
       ]
+    },
+    "remaining_20_structural_screening": {
+      "method": "Offline inspection of uploaded aninextup-main(1).zip HTML snapshot; not live HTTP checks; not a verification of current GitHub HEAD",
+      "article_ids": [
+        "aoashi-season-2",
+        "reincarnated-goblin",
+        "nia-liston",
+        "laid-off-cheat-granting-mage",
+        "sasaki-and-peeps-season-2",
+        "detective-is-already-dead-season-2",
+        "iceblade-sorcerer-ii",
+        "ace-of-diamond-second-season",
+        "ramparts-of-ice-season-2",
+        "returners-magic-s2",
+        "magic-knight-rayearth-2026",
+        "firefly-wedding",
+        "my-happy-marriage-specials",
+        "apothecary-s3",
+        "black-clover-s2",
+        "suikoden",
+        "blue-box-s2",
+        "space-mercenary",
+        "psyren",
+        "ranma-s3"
+      ],
+      "article_count": 20,
+      "embedded_video_count": 16,
+      "obvious_placeholder_url_count": 0,
+      "video_thumbnail_observation": "My Happy Marriage Specials contains an additional image/video thumbnail ID kJBEVvPd9Z0 but its data-youtube SZc3Lp1_iS4 matches its trailer thumbnail; no confirmed embed mismatch.",
+      "status": "static_screened_not_live_verified",
+      "remaining_checks": [
+        "Re-fetch current GitHub HEAD for each article before applying any corrections",
+        "Test external HTTP URLs, redirects and image responses",
+        "Confirm YouTube video IDs against original official channel and playback",
+        "Cross-check all factual claims against primary sources"
+      ],
+      "note": "This closes only the remaining structural inventory, not the factual or live-resource audit. No article status promoted."
     }
   }
 }
