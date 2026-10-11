@@ -392,3 +392,10 @@ Se inspeccionó el archivo aportado por el propietario `aninextup-public-audit(4
 - También aparece como `completed/success` la ejecución `38162232928` del publicador autónomo de noticias; este éxito operativo **no prueba** veracidad de noticias ni ausencia de nuevas publicaciones que necesiten revisión.
 - En el repositorio, `articles/horror-collector-release-date.html` conserva el texto de streaming japonés 15 octubre y `this-week.html` conserva el título SEO sin fecha semanal fija. Los rastreos del buscador pueden estar desfasados; no sustituyen una inspección de respuesta pública sin caché.
 - **Estado:** se cierra el seguimiento de la ejecución técnica pendiente. La verificación factual exhaustiva de cada afirmación de las noticias y la confirmación del HTML público más reciente siguen abiertas, no certificadas.
+
+
+## Normalización de título y límite de certificación (11 octubre 2026)
+
+**Hallazgo factual verificable:** el mismo largometraje aparecía con tres subtítulos ingleses incompatibles: `The Late Consort's Secret Treasure`, `Treasure of the Late Empress` y `The Late Lady's Treasure`. La fuente primaria japonesa https://kusuriyanohitorigoto.jp/news/2520/ confirma `劇場版 薬屋のひとりごと 亡妃の秘宝`, el **11 diciembre 2026** en cines japoneses y argumento original de Natsu Hyuuga, pero no fundamenta tratar las tres variantes inglesas como denominación única. Se normalizó al nombre inequívoco `The Apothecary Diaries Movie` en `articles/apothecary-diaries-movie.html`, `articles/anime-releasing-december-2026.html` y `assets/data.js`. Commits: `7a6d8a816555131fc879509c04bf341af0187bd2`, `4443b0b9e942e9056c2e433a35cef1bb5e4d41be`, `cdf2442edeb48684b7747b189fd9465cf0f9aec5`.
+
+**Criterio de cierre:** haber leído 63/63 y verificar enlaces HTTP no permite marcar 63/63 como plenamente contrastados. Mantener el estado `en revisión factual` para las afirmaciones que carecen de cotejo primario explícito; la próxima pasada debe producir evidencia por artículo y por afirmación, no solamente otra comprobación técnica.
