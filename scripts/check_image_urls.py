@@ -11,7 +11,15 @@ for row in rows:
   return (ast.literal_eval(m.group(1)) if m.group(1)!='null' else None) if m else None
  ident,url=field('id'),field('image')
  item={'id':ident,'url':url,'result':'unverified'}
- if not url or not url.startswith('https://'):item['result']='invalid_url'
+ if not url:item['result']='invalid_url'
+ elif not url.startswith(('https://','http://')):
+  local=(root/url.lstrip('/')).resolve()
+  if not local.is_relative_to(root):item['result']='invalid_url'
+  elif not local.is_file():item['result']='missing_local_file'
+  else:
+   suffix=local.suffix.lower()
+   item['result']='ok_local' if suffix in ('.jpg','.jpeg','.png','.webp','.gif','.avif','.svg') else 'invalid_local_type'
+   item['size_bytes']=local.stat().st_size
  else:
   try:
    req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0 (compatible; AniNextUpLinkAudit/1.0)','Accept':'image/avif,image/webp,image/*,*/*;q=0.8','Range':'bytes=0-2047'})
