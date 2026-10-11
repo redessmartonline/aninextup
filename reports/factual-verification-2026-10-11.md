@@ -529,3 +529,20 @@ Se inspeccionaron **11 archivos que no aparecían en los cinco lotes previos**. 
 | `the-moon-on-a-rainy-night-anime.html` | Fuente oficial https://www.amayonotsuki.jp/; noticia presenta 2027, voces Iori Saeki/Sora Amamiya, CompTown, Tomoe Makino, Shogo Yasukawa, Ayumi Nishihata y jizue. | Cotejar directamente PV del 7 oct y créditos en sitio oficial para cierre. |
 
 **Cobertura de la primera pasada:** **63/63 artículos únicos** de la lista editorial han sido abiertos e inspeccionados en estos lotes. **0 artículos restantes sin inspección de esta fase**; **NO significa 63/63 certificados íntegramente**. Persisten comprobaciones de hechos, reparto, horarios, territorios y fuentes originales. Una corrección editorial verificable fue aplicada al calendario estacional en este lote.
+
+
+## Segunda fase — cierre de artículo con cotejo primario exhaustivo (11 octubre 2026)
+
+### CERRADO: `articles/cosmoship-yamato-root-2199.html`
+
+Se cotejó la totalidad de las afirmaciones fácticas materiales del artículo con tres fuentes oficiales:
+
+1. Production I.G, 6 octubre 2026: https://www.production-ig.co.jp/hotnews/2026/100601/ y **también** https://production-ig.co.jp/hotnews/2026/100601.html (ambas direcciones resuelven correctamente al comunicado).
+2. Khara, 6 octubre 2026: https://www.khara.co.jp/2026/10/06/261005-1/?lang=en
+3. Web del propio proyecto: https://yamato-r2199.jp/ y https://yamato-r2199.jp/news/
+
+**Afirmaciones verificadas:** anuncio 6 oct coincidente con 52.º aniversario de emisión original (1974); largometraje animado y no temporada TV; Hideaki Anno planificación, producción ejecutiva, dirección y diseño; Yutaka Izubuchi dirección y diseño; Mitsuhisa Ishikawa planificación; Yoshinobu Nishizaki autor original; Production I.G y Studio Khara primera coproducción de animación; teaser visual; ausencia de fecha de estreno y de anuncio de reparto, duración o distribución internacional en las fuentes examinadas. El artículo formula prudentemente la continuidad narrativa como aún no confirmada. **No se encontró afirmación material contradicha** y el artículo queda **cerrado a fecha de esta auditoría**, sujeto a futuras noticias.
+
+**Rectificación del informe anterior:** el tercer lote calificó `https://www.production-ig.co.jp/hotnews/2026/100601/` como URL errónea. **Esa calificación fue incorrecta**: ambas URLs de Production I.G funcionan y muestran el mismo comunicado. El cambio previo al enlace alternativo no dañó la referencia, pero **no fue la reparación de un enlace roto**. Se conserva la URL actual válida y se registra la rectificación para evitar atribuir una corrección inexistente.
+
+**Estado actualizado:** **1/63 artículo cerrado por cotejo factual integral**, **62/63 por cerrar**. Las 63 páginas tienen primera inspección, pero el resto no se certifica con el solo informe de inspección.
