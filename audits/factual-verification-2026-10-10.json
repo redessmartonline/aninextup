@@ -2,9 +2,9 @@
   "scope": "Article-level factual verification; structural validation is separate",
   "checked_on": "2026-10-10",
   "total": 46,
-  "partially_verified": 22,
+  "partially_verified": 31,
   "fully_verified": 0,
-  "pending": 24,
+  "pending": 15,
   "warning": "Partial verification does not validate every assertion in the article.",
   "articles": [
     {
@@ -155,72 +155,104 @@
       "title": "DARK MACHINE THE ANIMATION",
       "article": "articles/dark-machine-the-animation",
       "date": "2026-10-13",
-      "status": "pending_manual_fact_check",
-      "checked_claims": [],
-      "source_urls": []
+      "status": "partially_verified_official_source",
+      "checked_claims": [
+        "Crunchyroll Fall 2026 lineup October 13; Production +h"
+      ],
+      "source_urls": [
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll"
+      ]
     },
     {
       "id": "chitose-ramune-cour-2",
       "title": "Chitose Is in the Ramune Bottle 2nd Cour",
       "article": "articles/chitose-ramune-bottle-cour-2",
       "date": "2026-10-13",
-      "status": "pending_manual_fact_check",
-      "checked_claims": [],
-      "source_urls": []
+      "status": "partially_verified_official_source",
+      "checked_claims": [
+        "Japanese second-cour premiere October 13 2026; official broadcaster schedule"
+      ],
+      "source_urls": [
+        "https://chiramune.com/"
+      ]
     },
     {
       "id": "horror-collector",
       "title": "HORROR COLLECTOR",
       "article": "articles/horror-collector-release-date",
       "date": "2026-10-10",
-      "status": "pending_manual_fact_check",
-      "checked_claims": [],
-      "source_urls": []
+      "status": "partially_verified_official_source",
+      "checked_claims": [
+        "Crunchyroll Fall 2026 lineup October 10"
+      ],
+      "source_urls": [
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll"
+      ]
     },
     {
       "id": "a-certain-dark-item",
       "title": "A Certain Dark Item",
       "article": "articles/a-certain-dark-item-release-date",
       "date": "2026-10-09",
-      "status": "pending_manual_fact_check",
-      "checked_claims": [],
-      "source_urls": []
+      "status": "partially_verified_official_source",
+      "checked_claims": [
+        "Japanese premiere October 9 2026; J.C.STAFF; Crunchyroll fall lineup"
+      ],
+      "source_urls": [
+        "https://www.crunchyroll.com/es/news/seasonal-lineup/2026/9/15/otono-2026-anime-crunchyroll"
+      ]
     },
     {
       "id": "dandivine",
       "title": "Dandivine",
       "article": "articles/dandivine-release-date",
       "date": "2026-10-07",
-      "status": "pending_manual_fact_check",
-      "checked_claims": [],
-      "source_urls": []
+      "status": "partially_verified_official_source",
+      "checked_claims": [
+        "Japanese premiere October 7 2026 at 24:30 JST; d Anime Store; LIDEN FILMS and Kayak Animation"
+      ],
+      "source_urls": [
+        "https://www.aniplex.co.jp/lineup/dandivine/"
+      ]
     },
     {
       "id": "worlds-strongest-witch",
       "title": "The World\\'s Strongest Witch",
       "article": "articles/worlds-strongest-witch",
       "date": "2026-10-07",
-      "status": "pending_manual_fact_check",
-      "checked_claims": [],
-      "source_urls": []
+      "status": "partially_verified_official_source",
+      "checked_claims": [
+        "Japanese TV premiere October 7 2026 at 22:00 JST; ABEMA and d Anime Store streaming"
+      ],
+      "source_urls": [
+        "https://sekamajo-anime.com/onair/"
+      ]
     },
     {
       "id": "vermilion-mask",
       "title": "The Vermilion Mask",
       "article": "articles/vermilion-mask-release-date",
       "date": "2026-10-10",
-      "status": "pending_manual_fact_check",
-      "checked_claims": [],
-      "source_urls": []
+      "status": "partially_verified_official_source",
+      "checked_claims": [
+        "Crunchyroll Fall 2026 lineup October 10"
+      ],
+      "source_urls": [
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll"
+      ]
     },
     {
       "id": "tank-chair",
       "title": "TANK CHAIR",
       "article": "articles/tank-chair-release-date",
       "date": "2026-10-04",
-      "status": "pending_manual_fact_check",
-      "checked_claims": [],
-      "source_urls": []
+      "status": "partially_verified_official_source",
+      "checked_claims": [
+        "Japanese premiere October 4 2026; Prime Video Japan advance streaming"
+      ],
+      "source_urls": [
+        "https://www.tankchair-anime.com/en/news.php"
+      ]
     },
     {
       "id": "tokyo-revengers-war-three-titans",
@@ -267,9 +299,13 @@
       "title": "I'm Looking For a Zombie",
       "article": "articles/im-looking-for-a-zombie",
       "date": "2026-10-03",
-      "status": "pending_manual_fact_check",
-      "checked_claims": [],
-      "source_urls": []
+      "status": "partially_verified_official_source",
+      "checked_claims": [
+        "Crunchyroll fall 2026 lineup October 3; studio COMET"
+      ],
+      "source_urls": [
+        "https://www.crunchyroll.com/es/news/seasonal-lineup/2026/9/15/otono-2026-anime-crunchyroll"
+      ]
     },
     {
       "id": "tale-secret-saint",
