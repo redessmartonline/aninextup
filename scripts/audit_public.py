@@ -20,15 +20,25 @@ UA = "AniNextUpQualityAudit/1.0 (+https://aninextup.com/contact)"
 TIMEOUT = 15
 
 def request(url):
-    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "*/*"})
-    try:
-        with urllib.request.urlopen(req, timeout=TIMEOUT) as resp:
-            data = resp.read(200000)
-            return {"status": resp.status, "final_url": resp.url, "content_type": resp.headers.get("Content-Type", ""), "bytes_sampled": len(data)}
-    except urllib.error.HTTPError as exc:
-        return {"status": exc.code, "error": str(exc), "final_url": exc.url}
-    except Exception as exc:
-        return {"status": None, "error": str(exc)[:240]}
+    # Retry transient timeouts and server errors before classifying a resource.
+    last = None
+    for attempt in range(3):
+        req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "*/*"})
+        try:
+            with urllib.request.urlopen(req, timeout=TIMEOUT + attempt * 10) as resp:
+                data = resp.read(200000)
+                return {"status": resp.status, "final_url": resp.url,
+                        "content_type": resp.headers.get("Content-Type", ""),
+                        "bytes_sampled": len(data), "attempts": attempt + 1}
+        except urllib.error.HTTPError as exc:
+            last = {"status": exc.code, "error": str(exc), "final_url": exc.url}
+            if exc.code not in (500, 502, 503, 504):
+                return last
+        except Exception as exc:
+            last = {"status": None, "error": str(exc)[:240]}
+        if attempt < 2:
+            time.sleep(attempt + 1)
+    return {**last, "attempts": 3}
 
 def main():
     sitemap = ET.parse(ROOT / "sitemap.xml")
