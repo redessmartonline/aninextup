@@ -39,9 +39,24 @@ def main():
     for p in article_paths:
         s = p.read_text(encoding="utf-8")
         article_url = BASE + "/articles/" + p.stem
-        body = re.search(r'<div class="prose"[^>]*>(.*?)</div>', s, re.S)
-        text = html.unescape(re.sub(r"<[^>]+>", " ", body.group(1) if body else s))
-        text = re.sub(r"\s+", " ", text).strip()
+        # Count all editorial prose, including nested sections and paragraphs.
+        # The former regex stopped at the first nested </div>, undercounting pages.
+        start = s.find('<div class="prose"')
+        if start >= 0:
+            opening_end = s.find('>', start) + 1
+            depth = 1
+            end = opening_end
+            for tag in re.finditer(r'<(/?)div\\b[^>]*>', s[opening_end:], re.I):
+                depth += -1 if tag.group(1) else 1
+                if depth == 0:
+                    end = opening_end + tag.start()
+                    break
+            body_html = s[opening_end:end]
+        else:
+            body_html = s
+        body_html = re.sub(r'<(?:script|style)\\b[^>]*>.*?</(?:script|style)>', ' ', body_html, flags=re.I | re.S)
+        text = html.unescape(re.sub(r"<[^>]+>", " ", body_html))
+        text = re.sub(r"\\s+", " ", text).strip()
         articles[p.stem] = {"word_count": len(text.split()), "text": text}
         for value in re.findall(r'(?:href|src|poster|data-src)="([^"]+)"', s):
             value = html.unescape(value).strip()
