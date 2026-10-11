@@ -790,3 +790,52 @@ El artículo convertía la franja TBS en **8 octubre 01:28**, un día antes. Se 
 La fuente indexada de Crunchyroll respalda estudio, argumento y lista de territorios, pero dos versiones difieren TBA / jueves 10:00 PT. Faltan lectura actual de cartelera o episodio y verificación del trailer sVrK70TP8tQ; se conserva pendiente y no se elimina TBA por un extracto contradictorio.
 
 **Balance: cinco artículos examinados, un cierre nuevo, cuatro pendientes. Acumulado: 38/63 cerrados y 25/63 pendientes.** Una corrección factual de fecha y tres incorporaciones de fuentes publicadas. No se vuelve a contar ningún artículo previamente cerrado.
+
+
+## Continuación — tercer lote de cinco pendientes (11 octubre 2026, desde 20:47 UTC)
+
+Base recuperada directamente de GitHub: **38 cerrados / 25 pendientes**. Los cinco artículos siguientes se leyeron completos y no tenían cierre previo. No se suma de nuevo ninguna inspección histórica.
+
+**Método de recuperación:** las aperturas de noticias de Crunchyroll devolvieron cero líneas, pero búsquedas dirigidas recuperaron texto indexado de los comunicados originales, incluidos párrafos concretos y listas nominales. Se utiliza solamente ese texto visible y atribuible a la URL oficial para las afirmaciones descritas; no se afirma haber leído directamente el cuerpo de la página al abrirla. Las fuentes japonesas y de estudios señaladas como leídas devolvieron texto directamente.
+
+### CERRADO — `im-looking-for-a-zombie.html`
+
+- https://zommasu.com/ (lectura directa) confirma estreno japonés 3 octubre, studio COMET, Aki buscando a su padre con Natsuki/Haru y encuentros con Yu/Sakura.
+- https://www.crunchyroll.com/news/announcements/2026/10/2/im-looking-for-a-zombie-anime-english-dub-release-date-cast-crew (texto oficial indexado recuperado) confirma estreno inglés simultáneo con japonés el sábado 3 octubre y los cinco nombres del artículo: Madeline Dorroh/Aki, Arianna Contardo/Natsuki, Blythe Melin/Haru, Giselle Fernandez/Yu, Anairis Quiñones/Sakura.
+- https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll (bloque nominal indexado) confirma studio COMET, argumento y Norte/Centro/Sudamérica, Europa, África, Oceanía, Oriente Medio, CIS e India. No se confunde la emisión de BS Asahi en otra franja con un estreno internacional.
+
+Todas las afirmaciones materiales publicadas quedan respaldadas; las interpretaciones sobre la búsqueda no anticipan el destino del padre. Referencia japonesa añadida, commit `25ba55db591ad36e0a67baa66806daf7b4b821a0`.
+
+### CERRADO — `laid-off-cheat-granting-mage.html`
+
+- https://corporate.goodsmile.com/ja/news/4381/ (lectura directa) confirma franja TV Tokyo 6 octubre 24:00 y P.A.WORKS.
+- https://sh-anime.shochiku.co.jp/chiifuyo-anime/ y https://abema.tv/channels/abema-anime/slots/9RFi5x2of5vCUF (lectura directa) acreditan Rein, equipo encantado, puntos de refuerzo y expulsión.
+- https://www.crunchyroll.com/news/announcements/2026/10/5/the-laid-off-cheat-granting-mage-enjoys-a-second-lease-on-life-anime-english-dub-release-date-cast-crew (texto indexado) confirma martes 6 octubre con doblaje inglés simultáneo, recuperación de los puntos de las armas de sus compañeros y ropa simple/espada de cobre.
+- La fila nominal indexada del anuncio de otoño acredita la lista internacional del artículo. El resultado oficial YouTube https://www.youtube.com/watch?v=GyWstaOY6qk identifica el teaser exacto como publicado por Crunchyroll; abrir el video falló, pero el resultado identifica título y canal, sin atribuir escenas no vistas.
+
+Se añaden referencias de producción y personaje, commit `33c0340b7affcc42fdb35147218bf69e0c0009ff`. El cierre cubre las afirmaciones publicadas, no inventa equivalencia entre la fecha internacional del 6 y la emisión japonesa en fecha civil del 7.
+
+### PENDIENTE, ERROR CORREGIDO — `dreamland-release-date.html`
+
+https://www.dreamland-anime.com/ confirma directamente argumento, Reno Lemaire, Machado, Cano/Maurel, Ellipse/La Chouette y temas Faulieu. «movin'on» / Ai Tomioka «dream catcher».
+https://www.ellipseanimation.com/production/dreamland/ corrobora estudios, obra y sinopsis; además lista a Johanna Celse junto a Machado. El artículo no decía que Machado fuese el único director, por lo que no se trata esa omisión como dato falso.
+
+El comunicado oficial https://www.dreamland-anime.com/2026%E5%B9%B410%E6%9C%8817%E6%97%A5%E3%82%88%E3%82%8A%E6%94%BE%E9%80%81%E9%96%8B%E5%A7%8B%EF%BC%81/ dice **17 octubre 26:00**, y TV Asahi https://www.tv-asahi.co.jp/pr/contents/20261017_04387.html enumera **18 octubre 2026 02:00–02:30**. El artículo daba 17 octubre a las 02:00: se corrigió fecha civil en tarjeta y texto, preservando la explicación de la franja japonesa. Commit `5885eac4a9a8ab36a3994d3056f871163495a8ba`.
+
+**Falta:** resolver discrepancia entre versiones indexadas de cartelera Crunchyroll (16 / 17 octubre), corroborar lista completa de territorios y fecha/canal del teaser OBK6DLvQJvs. No se cambia el 16 internacional sin comunicado actual inequívoco. Nuevas referencias oficiales añadidas.
+
+### PENDIENTE — `reborn-space-mercenary.html`
+
+Texto oficial indexado de https://www.crunchyroll.com/news/announcements/2026/10/2/reborn-as-a-space-mercenary-i-woke-up-piloting-the-strongest-starship-anime-english-dub-release-date-cast-crew confirma domingo 4 octubre, lanzamiento inglés simultáneo y cuatro voces: Kyle Phillips/Hiro, Kelsey Cruz/Elma, Emily Neves/Mimi, Jaclyn Thomas/Serena. Sus extractos narrativos respaldan Satou Takahiro y universo del videojuego.
+https://www.crunchyroll.com/news/latest/2026/10/6/reborn-as-a-space-mercenary-anime-opening-song-music-video-flow (texto oficial indexado) confirma estreno japonés 4 octubre y exclusiones Japón/China/Corea/Mongolia.
+**Falta:** identidad, título y canal del video ov_3-6JOAkk presentado como trailer 2 oficial. El ID solo apareció en fuentes no oficiales; no se utiliza eso como acreditación. No se encontró contradicción demostrada que requiriera editar este artículo.
+
+### PENDIENTE — `magic-knight-rayearth-2026.html`
+
+Lecturas directas: https://rayearth-anime.com/onair/ confirma 7 octubre 23:45 TV Asahi, dos cours y streaming japonés jueves 00:15; https://rayearth-anime.com/staffcast/ confirma E&H production; https://rayearth-anime.com/introduction/ confirma Hikaru/Umi/Fuu y Cephiro.
+https://www.universal-music.co.jp/toaka/news/2026-09-20/ (lectura directa) identifica explícitamente el mismo video **67GqhfLw3ys** como **main PV 2**, revelado 20 septiembre. Se sustituyó la atribución no acreditada «published by Crunchyroll» por esa identificación comprobada y se añadieron referencias de horarios/créditos/PV. Esto es una precisión de atribución, no una afirmación de que Crunchyroll nunca publicara otra versión. Commit `370dd8a00235d9f67132302ece41ab092d6bfa21`.
+
+La cartelera indexada respalda retelling y territorios incluyendo CIS con exclusiones Rusia/Bielorrusia; «parts of CIS» del artículo no los generaliza.
+**Falta:** comprobar fecha real de subida del video que JSON-LD etiqueta uploadDate 20 septiembre (anunciarlo ese día no demuestra por sí solo la subida) y confirmar calendario internacional actual antes de certificar la guía completa.
+
+**Balance: cinco examinados, dos cierres nuevos, tres pendientes. Acumulado: 40/63 cerrados y 23/63 pendientes.** Una fecha japonesa corregida, una atribución de trailer precisada y fuentes adicionales publicadas. Se mantiene la distinción entre evidencia directa, texto oficial indexado y datos aún sin prueba.
