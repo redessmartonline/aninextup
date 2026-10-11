@@ -2,9 +2,9 @@
   "scope": "Article-level factual verification; structural validation is separate",
   "checked_on": "2026-10-10",
   "total": 46,
-  "partially_verified": 15,
+  "partially_verified": 18,
   "fully_verified": 0,
-  "pending": 31,
+  "pending": 28,
   "warning": "Partial verification does not validate every assertion in the article.",
   "articles": [
     {
@@ -63,9 +63,13 @@
       "title": "Takopi's Original Sin: Thank You, See You Tomorrow",
       "article": "articles/takopis-original-sin-movie",
       "date": "2026-11-27",
-      "status": "pending_manual_fact_check",
-      "checked_claims": [],
-      "source_urls": []
+      "status": "partially_verified_official_source",
+      "checked_claims": [
+        "2026-11-27 Japanese theatrical premiere; re-edit of six episodes with new scenes; Shinya Iino directs"
+      ],
+      "source_urls": [
+        "https://www.tbs.co.jp/anime/takopi_project/news/news20260818.html"
+      ]
     },
     {
       "id": "votoms-gray-witch",
@@ -376,18 +380,26 @@
       "title": "Magic Knight Rayearth 2026",
       "article": "articles/magic-knight-rayearth-2026",
       "date": "2026-10-07",
-      "status": "pending_manual_fact_check",
-      "checked_claims": [],
-      "source_urls": []
+      "status": "partially_verified_official_source",
+      "checked_claims": [
+        "October 2026 Japanese Wednesday 23:45 broadcast; E&H production; Yui Miura directs; Crunchyroll lists October 7"
+      ],
+      "source_urls": [
+        "https://rayearth-anime.com/news/37/"
+      ]
     },
     {
       "id": "firefly-wedding",
       "title": "Firefly Wedding",
       "article": "articles/firefly-wedding",
       "date": "2026-10-09",
-      "status": "pending_manual_fact_check",
-      "checked_claims": [],
-      "source_urls": []
+      "status": "partially_verified_official_source",
+      "checked_claims": [
+        "October 9 Crunchyroll 09:00 PT; david production; Takahiro Kamei directs; Yuko Kakihara scripts"
+      ],
+      "source_urls": [
+        "https://www.crunchyroll.com/es-es/news/announcements/2026/10/6/firefly-wedding-anime-fecha-crunchyroll"
+      ]
     },
     {
       "id": "my-happy-marriage-specials",
