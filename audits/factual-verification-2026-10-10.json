@@ -1351,6 +1351,94 @@
         "No article correction justified solely by page accessibility"
       ],
       "complete": false
+    },
+    "live_url_batch_5_2026_10_11": {
+      "attempted": 7,
+      "checks": [
+        {
+          "url": "https://www.aniplex.co.jp/lineup/rakuen-tsuiho-r/news/detail/?id=69150",
+          "result": "readable"
+        },
+        {
+          "url": "https://www.tankchair-anime.com/en/news.php",
+          "result": "readable"
+        },
+        {
+          "url": "https://tokyo-revengers-anime.com/news/archives/5045",
+          "result": "readable"
+        },
+        {
+          "url": "https://dragonball-super.com/en/updates/20260903-1.html",
+          "result": "readable"
+        },
+        {
+          "url": "https://www.cyberpunk.net/index.php/en/edgerunners2",
+          "result": "readable"
+        },
+        {
+          "url": "https://press.cdprojektred.com/en/news/1837/cyberpunk-edgerunners-2-premiere-date-announced-alongside-new-trailer",
+          "result": "readable"
+        },
+        {
+          "url": "https://romelia-senki.com/onair/",
+          "result": "readable"
+        }
+      ],
+      "method": "Public web text retrieval; GitHub write previously blocked, now recording historical checked results",
+      "limitations": [
+        "Readable text is not a full HTTP response or media check"
+      ]
+    },
+    "live_url_batch_6_2026_10_11": {
+      "attempted": 8,
+      "checks": [
+        {
+          "url": "https://aoashi-pr.com/",
+          "result": "timeout_indeterminate"
+        },
+        {
+          "url": "https://kyoranreijo-pr.com/",
+          "result": "readable"
+        },
+        {
+          "url": "https://sasapi-anime.com/onair.html",
+          "result": "readable"
+        },
+        {
+          "url": "https://tanmoshi-anime.jp/Season2/",
+          "result": "readable"
+        },
+        {
+          "url": "https://rayearth-anime.com/news/37/",
+          "result": "readable"
+        },
+        {
+          "url": "https://rayearth-anime.com/staffcast/",
+          "result": "readable"
+        },
+        {
+          "url": "https://watakon-anime.com/news/post-90",
+          "result": "readable"
+        },
+        {
+          "url": "https://kusuriyanohitorigoto.jp/season3/onair/",
+          "result": "readable"
+        }
+      ],
+      "readable": 7,
+      "indeterminate": 1,
+      "method": "Public web retrieval",
+      "notes": "Aoashi timed out; do not mark as broken. Official page facts for Sasaki and Peeps, Rayearth, My Happy Marriage and Apothecary Diaries compared to snapshot articles. No verified article correction.",
+      "limitations": [
+        "Not full browser/HTTP status testing",
+        "No video playback verified"
+      ]
+    },
+    "live_url_progress_2026_10_11": {
+      "unique_urls_attempted": 49,
+      "unique_urls_inventory": 130,
+      "remaining_unique_urls": 81,
+      "notes": "Prior 34 + batch 5 seven + batch 6 eight; repeat checks excluded; indeterminate outcomes remain pending."
     }
   }
 }
