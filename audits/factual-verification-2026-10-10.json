@@ -1051,6 +1051,70 @@
         "Compare live GitHub HEAD before correcting confirmed errors",
         "Verify individual factual claims against primary sources"
       ]
+    },
+    "validation_and_fixes_2026_10_11": {
+      "validation": {
+        "source": "Offline ZIP snapshot with exact article fixes reapplied",
+        "editorial_audit": {
+          "articles": 46,
+          "warnings": 0
+        },
+        "adsense_readiness": {
+          "html_pages": 76,
+          "errors": 0,
+          "manual_warnings": 0
+        },
+        "limits": "Static validation only; does not test deployed site, live links, official video ownership or playback"
+      },
+      "confirmed_live_source_pages": [
+        {
+          "url": "https://www.nhk-character.com/chara/kyoufucollector/news/20261009_89.html",
+          "finding": "NHK Enterprises official October 10 broadcast and October 15 streaming notice accessible"
+        },
+        {
+          "url": "https://www.nhk-character.com/chara/kyoufucollector/news/20260725_48.html",
+          "finding": "Official opening and ending theme announcement accessible"
+        },
+        {
+          "url": "https://media.netflix.com/en/only-on-netflix/81088875",
+          "finding": "Netflix Media Center page accessible; page text did not independently expose claimed U.S. release date"
+        },
+        {
+          "url": "https://www.tbs.co.jp/anime/takopi_project/series/news/news20260817.html",
+          "finding": "TBS official November 27 theatrical release and re-edit with new scenes accessible"
+        }
+      ],
+      "fixes": [
+        {
+          "path": "articles/tale-secret-saint.html",
+          "commit": "1a6fcd275d4df84f27816f4a1f03d6a3d18f574e",
+          "reason": "Referenced local webp absent; local jpg exists; updated three occurrences"
+        },
+        {
+          "path": "articles/bass-x-machina-release-date.html",
+          "commit": "5b6c2fd72f16719e9e49bf5bba0ee325df509146",
+          "reason": "Removed redundant Netflix source citation; kept descriptive citation"
+        },
+        {
+          "path": "articles/horror-collector-release-date.html",
+          "commit": "5931223cfd86692ee7fbcb8022ba02e9655cc801",
+          "reason": "Removed redundant broadcast citation; kept consolidated references to broadcast and themes"
+        },
+        {
+          "path": "articles/takopis-original-sin-movie.html",
+          "commit": "b8f14bf7c4b7593534d2126252ad82cb3da4f14b",
+          "reason": "Removed redundant TBS citation; retained descriptive citation"
+        }
+      ],
+      "pending": [
+        "Live HTTP validation of all 130 distinct external URLs",
+        "Live loading and attribution/playback of 36 video embeds",
+        "Live external image availability",
+        "Article-by-article primary-source claim verification",
+        "Production deployment recheck"
+      ],
+      "status": "static_checks_passed_live_resource_checks_partial_not_complete",
+      "no_status_promotion": true
     }
   }
 }
