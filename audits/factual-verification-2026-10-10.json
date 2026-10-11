@@ -1172,6 +1172,63 @@
         "No corrections justified by this batch alone"
       ],
       "complete": false
+    },
+    "live_url_batch_2_2026_10_11": {
+      "attempted": 12,
+      "readable_content": 11,
+      "access_restricted": 1,
+      "checks": [
+        {
+          "url": "https://www.crunchyroll.com/simulcastcalendar?filter=premium",
+          "result": "readable_html_content"
+        },
+        {
+          "url": "https://kusuriyanohitorigoto.jp/news/2520/",
+          "result": "readable_html_content"
+        },
+        {
+          "url": "https://www.votoms-gh.com/news/detail.php?id=23579",
+          "result": "readable_html_content"
+        },
+        {
+          "url": "https://mahoyo-movie.com/",
+          "result": "readable_html_content"
+        },
+        {
+          "url": "https://www.ufotable.com/news/article/3055",
+          "result": "readable_html_content"
+        },
+        {
+          "url": "https://rakuen-tsuiho-r.com/",
+          "result": "readable_html_content"
+        },
+        {
+          "url": "https://demonscrest-anime.com/news/index00050000.html",
+          "result": "readable_html_content"
+        },
+        {
+          "url": "https://www.fujitv.co.jp/darkmachine_anime/onair/",
+          "result": "readable_html_content"
+        },
+        {
+          "url": "https://chiramune.com/",
+          "result": "readable_html_content"
+        },
+        {
+          "url": "https://toaru-project.com/item/onair/",
+          "result": "readable_html_content"
+        },
+        {
+          "url": "https://www.aniplex.co.jp/lineup/dandivine/",
+          "result": "readable_html_content"
+        },
+        {
+          "url": "https://sekamajo-anime.com/onair/",
+          "result": "403_forbidden_to_web_retriever_not_confirmed_broken"
+        }
+      ],
+      "note": "Live retrieval checks do not prove full browser rendering, status 200 for every request, or resource playback. The 403 may be bot restriction; do not mark broken.",
+      "complete": false
     }
   }
 }
