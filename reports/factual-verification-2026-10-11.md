@@ -672,3 +672,18 @@ Balance del lote: cinco examinados, cuatro cierres y un pendiente. **Acumulado 2
 6. Takopi's Original Sin Movie, cines japoneses 27 noviembre: comunicado TBS https://www.tbs.co.jp/anime/takopi_project/news/news20260818.html . **Importante**: se trata de reedición para salas de los seis episodios con nuevas escenas, no historia totalmente nueva. Se añadió esta precisión al calendario.
 
 Se incorporaron referencias oficiales adicionales al artículo, commit `4ea023fa9c58f868c6036a88c3849422d2de8029`. **Nuevo balance: 28/63 cerrados y 35/63 pendientes.** En este turno se verificó una guía con seis estrenos; no se afirma haber revisado cinco artículos distintos.
+
+
+## Lote adicional de cinco — 11 octubre 2026
+
+CERRADO: `ascendance-of-a-bookworm-part-4.html`. WIT Studio confirma continuación del arco Royal Academy: https://www.witstudio.co.jp/news/post-45 . Enlace oficial añadido al artículo.
+
+CERRADO: `fledgling-demon-lords-starter-shop.html`. DeNA confirma enero 2027, emisoras, reparto y estudio: https://dena.com/jp/news/5447/ . Enlace oficial añadido al artículo.
+
+CERRADO: `manchuria-opium-squad-anime.html`. Pony Canyon confirma adaptación y visual, pero no fecha, estudio ni reparto: https://news.ponycanyon.co.jp/2026/10/126491 .
+
+PENDIENTE: `anime-news-october-2026.html`. Revisada, pero quedan varias fechas y plataformas por cotejar individualmente.
+
+PENDIENTE: `fall-2026-anime-calendar.html`. Requiere comprobación exhaustiva de todas las filas.
+
+Acumulado: 31/63 cerrados, 32 pendientes.
