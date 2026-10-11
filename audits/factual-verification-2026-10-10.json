@@ -2,9 +2,9 @@
   "scope": "Article-level factual verification; structural validation is separate",
   "checked_on": "2026-10-10",
   "total": 46,
-  "partially_verified": 18,
+  "partially_verified": 22,
   "fully_verified": 0,
-  "pending": 28,
+  "pending": 24,
   "warning": "Partial verification does not validate every assertion in the article.",
   "articles": [
     {
@@ -76,27 +76,45 @@
       "title": "Armored Trooper VOTOMS: The Gray Witch Part 1",
       "article": "articles/votoms-gray-witch-part-1",
       "date": "2026-11-20",
-      "status": "pending_manual_fact_check",
-      "checked_claims": [],
-      "source_urls": []
+      "status": "partially_verified_official_source",
+      "checked_claims": [
+        "Part 1 Japanese theatrical premiere November 20 2026",
+        "Two-part theatrical project; Rysuke Takahashi supervises"
+      ],
+      "source_urls": [
+        "https://www.votoms-gh.com/news/detail.php?id=23579"
+      ]
     },
     {
       "id": "witch-on-the-holy-night",
       "title": "Witch on the Holy Night",
       "article": "articles/witch-on-the-holy-night-movie",
       "date": "2026-11-20",
-      "status": "pending_manual_fact_check",
-      "checked_claims": [],
-      "source_urls": []
+      "status": "partially_verified_official_source",
+      "checked_claims": [
+        "November 20 2026 Japanese theatrical release",
+        "ufotable studio; Masaru Takeuchi director; Moe Tsuzuki character designer; Hikaru Kondo chief director",
+        "supercell theme Yoru to Ao; Haruka Tomatsu, Kana Hanazawa, Yusuke Kobayashi main cast"
+      ],
+      "source_urls": [
+        "https://mahoyo-movie.com/",
+        "https://www.ufotable.com/news/article/3055/"
+      ]
     },
     {
       "id": "rakuen-tsuihou-resonance",
       "title": "Rakuen Tsuihou: Kokoro no Resonance",
       "article": "articles/rakuen-tsuihou-kokoro-no-resonance",
       "date": "2026-11-13",
-      "status": "pending_manual_fact_check",
-      "checked_claims": [],
-      "source_urls": []
+      "status": "partially_verified_official_source",
+      "checked_claims": [
+        "November 13 2026 Japanese theatrical release",
+        "Seiji Mizushima director; Gen Urobuchi screenplay; NARASAKI music; Toei Animation studio"
+      ],
+      "source_urls": [
+        "https://rakuen-tsuiho-r.com/",
+        "https://www.aniplex.co.jp/lineup/rakuen-tsuiho-r/news/detail/?id=69150"
+      ]
     },
     {
       "id": "demons-crest",
@@ -233,9 +251,16 @@
       "title": "Cyberpunk: Edgerunners 2",
       "article": "articles/cyberpunk-edgerunners-2",
       "date": "2026-10-20",
-      "status": "pending_manual_fact_check",
-      "checked_claims": [],
-      "source_urls": []
+      "status": "partially_verified_official_source",
+      "checked_claims": [
+        "October 20 2026 exclusive Netflix premiere",
+        "10-episode standalone story",
+        "TRIGGER studio; Kai Ikarashi director; Kanno Ichigo character designer"
+      ],
+      "source_urls": [
+        "https://www.cyberpunk.net/index.php/en/edgerunners2",
+        "https://press.cdprojektred.com/en/news/1837/cyberpunk-edgerunners-2-premiere-date-announced-alongside-new-trailer"
+      ]
     },
     {
       "id": "im-looking-for-a-zombie",
