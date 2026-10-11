@@ -1529,6 +1529,51 @@
       ],
       "pending": "Check remaining unique URLs with deduplication; verify all 60 image responses and video playback separately; preserve indeterminate states",
       "complete": false
+    },
+    "html_inventory_followup_2026_10_11": {
+      "scope": "Direct HTML anchor inventory, not just article source_urls",
+      "checks": [
+        {
+          "url": "https://about.netflix.com/en/news/romance-anime-lineup-october",
+          "result": "readable",
+          "facts": "Netflix Oct 1 PT / Oct 2 JST Ramparts of Ice S2, Oct 4 Blue Box S2, Oct 25 My Happy Marriage specials"
+        },
+        {
+          "url": "https://about.netflix.com/en/news/netflix-anime-titles-revealed-mappa-15th-anniversary",
+          "result": "readable",
+          "facts": "Netflix June 19 press release confirms Ranma 1/2 season 3 October 2026 and MAPPA"
+        },
+        {
+          "url": "https://www.tankchair-anime.com/news-single.php?id=25725",
+          "result": "readable",
+          "facts": "Official Oct 4 Prime Video 23:30 JST early stream; other services from Oct 7"
+        }
+      ],
+      "rechecks_not_counted": [
+        {
+          "url": "https://animation.konami.net/en/news_2026_001.html",
+          "result": "readable_again"
+        },
+        {
+          "url": "https://www.tbs.co.jp/anime/takopi_project/series/news/news20260817.html",
+          "result": "readable_again"
+        },
+        {
+          "url": "https://www.nhk-character.com/chara/kyoufucollector/news/20261009_89.html",
+          "result": "readable_again"
+        },
+        {
+          "url": "https://dragonball-super.com/en/updates/20260903-1.html",
+          "result": "readable_again"
+        }
+      ],
+      "invalid_test_attempts": "Some browser requests accidentally included an invisible U+200F suffix; discarded rather than counted as failures of original URLs",
+      "limitations": [
+        "No direct HTTP status measurement or image loading confirmation",
+        "Remaining HTML image URLs and other anchors not exhaustively checked",
+        "No article status promoted"
+      ],
+      "status": "partial"
     }
   }
 }
