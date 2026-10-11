@@ -1,6 +1,12 @@
 name: AniNextUp Public Resource Audit
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'articles/**'
+      - 'scripts/audit_public_resources.py'
+      - '.github/workflows/public-resource-audit.yml'
 permissions:
   contents: read
 jobs:
