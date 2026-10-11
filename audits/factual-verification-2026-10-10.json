@@ -928,6 +928,35 @@
         "detail": "Added region-specific official platform list and Spain Disney+ date with primary source links"
       }
     ],
-    "remaining_article_count": 20
+    "remaining_article_count": 20,
+    "followup_2026_10_11": {
+      "scope": "Third batch partial follow-up; does not certify complete external links or video playback",
+      "article_ids": [
+        "dandivine",
+        "worlds-strongest-witch",
+        "tank-chair",
+        "tokyo-revengers-war-three-titans"
+      ],
+      "confirmed_official_sources": [
+        "https://www.aniplex.co.jp/lineup/dandivine/",
+        "https://sekamajo-anime.com/onair/",
+        "https://www.tankchair-anime.com/news-single.php?id=24061&offset=10",
+        "https://tokyo-revengers-anime.com/news/archives/category/news"
+      ],
+      "confirmed_claims": [
+        "Dandivine October 7 2026 Japanese TV schedule and production details",
+        "World's Strongest Witch October 7 2026 Japanese TV schedule and ABEMA/d Anime Store first streaming",
+        "Tank Chair October 4 2026 Japan broadcast and Prime Video first streaming window",
+        "Tokyo Revengers War of the Three Titans October 2 2026 Japanese broadcast announcement"
+      ],
+      "corrections": [
+        {
+          "article": "dandivine",
+          "commit": "dc308cb70be66bebf6bfde8c24b94cc15f990879",
+          "change": "Removed duplicate identical Aniplex official reference; kept original source citation"
+        }
+      ],
+      "pending": "Remaining six articles require fresh official-source confirmation; all ten still require live video ownership/playback and comprehensive link testing. No article promoted to fully verified."
+    }
   }
 }
