@@ -22,33 +22,34 @@ jobs:
           from PIL import Image
           root=pathlib.Path('.')
           report={}
-          for ident, rel in [('tale-secret-saint','assets/images/covers/tale-secret-saint.webp'),('aoashi-season-2','assets/images/covers/aoashi-season-2.jpg')]:
-              p=root/rel
+          saint_old=root/'assets/images/covers/tale-secret-saint.webp'
+          saint_new=root/'assets/images/covers/tale-secret-saint.jpg'
+          ao=root/'assets/images/covers/aoashi-season-2.jpg'
+          source=root/'assets/data.js'
+          content=source.read_text(encoding='utf-8')
+          for ident, p in [('tale-secret-saint', saint_new if saint_new.exists() else saint_old), ('aoashi-season-2',ao)]:
+              if not p.exists():
+                  raise FileNotFoundError(f'Missing local cover: {p}')
               data=p.read_bytes()
               with Image.open(io.BytesIO(data)) as img:
                   report[ident]={'bytes':len(data),'format':img.format,'dimensions':list(img.size)}
                   img.verify()
-          old=root/'assets/images/covers/tale-secret-saint.webp'
           if report['tale-secret-saint']['format']!='JPEG':
-              raise RuntimeError('Expected JPEG content; do not rename unexpected image format')
+              raise RuntimeError('Secret Saint image must be JPEG')
           if report['aoashi-season-2']['format'] not in ('JPEG','PNG','WEBP','AVIF'):
-              raise RuntimeError('Aoashi image could not be identified as supported image')
-          new=old.with_suffix('.jpg')
-          if new.exists():
-              if new.read_bytes()!=old.read_bytes():
-                  raise RuntimeError('Destination exists with different content; refusing overwrite')
-          else:
-              new.write_bytes(old.read_bytes())
-          source=root/'assets/data.js'
-          content=source.read_text(encoding='utf-8')
+              raise RuntimeError('Aoashi image is not a supported image')
           oldref='assets/images/covers/tale-secret-saint.webp'
           newref='assets/images/covers/tale-secret-saint.jpg'
-          if oldref not in content and newref not in content:
-              raise RuntimeError('Missing original reference in data.js')
-          content=content.replace(oldref,newref)
-          source.write_text(content,encoding='utf-8')
-          old.unlink()
-          report['tale-secret-saint']['new_path']=str(new)
+          if saint_old.exists():
+              if saint_new.exists() and saint_new.read_bytes()!=saint_old.read_bytes():
+                  raise RuntimeError('Both cover files exist with different contents')
+              if not saint_new.exists():
+                  saint_new.write_bytes(saint_old.read_bytes())
+              saint_old.unlink()
+          if newref not in content and oldref not in content:
+              raise RuntimeError('Secret Saint reference missing from index')
+          source.write_text(content.replace(oldref,newref),encoding='utf-8')
+          report['tale-secret-saint']['new_path']=str(saint_new)
           report['aoashi-season-2']['verified']=True
           pathlib.Path('local_covers_report.json').write_text(json.dumps(report,indent=2))
           print(json.dumps(report,indent=2))
