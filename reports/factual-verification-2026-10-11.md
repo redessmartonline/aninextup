@@ -340,3 +340,13 @@ Se consultaron https://aninextup.com/calendar y https://aninextup.com/this-week 
 - Se inspeccionó `this-week.html` y se encontró un defecto verificable: `<title>` y `meta description` estáticos con «October 5–11, 2026» que permanecían visibles para buscadores sin JavaScript. **Corregido** a textos semanales sin fecha fija en el commit `fc8b7e374bedbc0074f12a8d980d293c36fb51ca`. El script sigue actualizando título y descripción con el intervalo de la semana para navegadores que ejecutan JS.
 - Se revisó `assets/app.js`: las tarjetas de `week`, `upcoming-week`, `calendar` y `home-next` se filtran y ordenan por fecha. Una visualización de resultados de rastreo con tarjetas fuera de orden no es prueba suficiente para modificar esa lógica sin reproducir el error en navegador.
 - Estado de verificación pública: se debe confirmar el despliegue de los cambios y comprobar la versión pública sin caché. Las fuentes e imágenes externas no se han certificado integralmente en este paso.
+
+
+## Validación de despliegue y automatización (11 octubre 2026)
+
+- Los commits `fc8b7e374bedbc0074f12a8d980d293c36fb51ca` (metadatos de This Week) y `808150e683b416a59267cec47eecac3ae9d1094b` (streaming HORROR COLLECTOR) están en el historial de la rama principal de GitHub. La representación pública de https://aninextup.com/this-week seguía mostrando la semana 5–11 octubre, que es correcta para el domingo 11, pero esta consulta no permite verificar el `<title>` crudo servido ni confirmar ausencia de caché. La comprobación del despliegue sigue abierta.
+- Se revisó `.github/workflows/public-audit.yml`: antes el disparador `push` solo incluía `scripts/audit_public.py`, el propio workflow, `articles/**` y `sitemap.xml`; excluía modificaciones de HTML de raíz y `assets/**`. **Corregido** añadiendo `'*.html'` y `'assets/**'` en el commit `3afd63843d57f3695f0c6fd91e7cd5b62fff5fcf`.
+- La API de GitHub Actions mostró una nueva ejecución `38161829001` en estado **queued** para ese commit: https://github.com/redessmartonline/aninextup/actions/runs/38161829001 . No se declara éxito hasta que su estado pase a completed/success.
+- Una ejecución previa `38161632541` sí figuraba como **completed/success** para `040ce6720dd81bc7956ab79bea0f3bfd3098f507`, pero corresponde a un commit anterior y no certifica los últimos cambios.
+
+**Pendiente:** confirmar éxito y resultados de la nueva auditoría, verificar publicación real sin caché, comprobar exhaustivamente enlaces/imágenes externos y cerrar afirmaciones editoriales todavía abiertas.
