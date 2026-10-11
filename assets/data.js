@@ -44,7 +44,7 @@ anime:[
 {id:"apothecary-s3",image:"assets/images/apothecary-diaries-season-3.jpg",title:"The Apothecary Diaries Season 3",date:"2026-10-02",platform:"Crunchyroll",article:"articles/apothecary-diaries-season-3",category:"Season Premiere",status:"confirmed"},
 {id:"black-clover-s2",image:"assets/images/black-clover-season-2.jpg",title:"Black Clover Season 2",date:"2026-10-03",platform:"Crunchyroll",article:"articles/black-clover-season-2",category:"Season Premiere",status:"confirmed"},
 {id:"suikoden",image:"assets/images/suikoden-anime.jpg",title:"Suikoden: The Anime",date:"2026-10-03",platform:"By territory",article:"articles/suikoden-anime",category:"Premiere",status:"confirmed"},
-{id:"blue-box-s2",image:"assets/images/blue-box-season-2.png",title:"Blue Box Season 2",date:"2026-10-04",platform:"Netflix",article:"articles/blue-box-season-2",category:"Season Premiere",status:"confirmed"},
+{id:"blue-box-s2",image:"assets/images/blue-box-season-2.png",title:"Blue Box Season 2",date:null,dateLabel:"October 2026",platform:"Netflix",article:"articles/blue-box-season-2",category:"Season Premiere",status:"month-confirmed"},
 {id:"space-mercenary",image:"assets/images/reborn-space-mercenary.jpeg",title:"Reborn as a Space Mercenary",date:"2026-10-04",platform:"Crunchyroll",article:"articles/reborn-space-mercenary",category:"Premiere",status:"confirmed"},
 {id:"psyren",image:"assets/images/psyren.jpg",title:"PSYREN",date:"2026-10-05",platform:"Crunchyroll",article:"articles/psyren-release-date",category:"Premiere",status:"confirmed"},
 {id:"ranma-s3",image:"assets/images/ranma-season-3.jpeg",title:"Ranma 1/2 Season 3",date:null,dateLabel:"October 2026",platform:"Netflix",article:"articles/ranma-season-3",category:"Season Premiere",status:"month-confirmed"}
