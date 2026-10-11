@@ -57,8 +57,8 @@ def request(url, method="GET"):
     with urllib.request.urlopen(req, timeout=12) as res:
         final = res.geturl()
         if not safe_url(final): return {"status": "indeterminate", "reason": "unsafe_redirect"}
-        if method == "GET": res.read(1024)
-        return {"http_code": res.status, "final_url": final, "content_type": res.headers.get("Content-Type", "")}
+        sample = res.read(1024) if method == "GET" else b""
+        return {"http_code": res.status, "final_url": final, "content_type": res.headers.get("Content-Type", ""), "image_signature_valid": sample.startswith((b"\x89PNG\r\n\x1a\n", b"\xff\xd8\xff", b"GIF87a", b"GIF89a")) or (sample[:4] == b"RIFF" and sample[8:12] == b"WEBP") or sample.lstrip().startswith(b"<svg") or sample.lstrip().startswith(b"<?xml") and b"<svg" in sample[:512]}
 def check(item):
     url, kind, pages = item
     record = {"url": url, "kind": kind, "articles": sorted(pages)}
@@ -68,10 +68,11 @@ def check(item):
     try:
         data = request(url, "GET")
         record.update(data)
+        if kind != "image": record.pop("image_signature_valid", None)
         if "status" not in record:
             ct = data.get("content_type", "").lower()
-            if kind == "image" and not ct.startswith("image/"):
-                record.update(status="indeterminate", reason="not_image_content_type")
+            if kind == "image" and not ct.startswith("image/") and not data.get("image_signature_valid"):
+                record.update(status="indeterminate", reason="not_image_content_type_or_signature")
             else: record["status"] = "accessible"
     except urllib.error.HTTPError as e:
         record.update(http_code=e.code, status="broken" if e.code in (404, 410) else "indeterminate", reason="http_error")
