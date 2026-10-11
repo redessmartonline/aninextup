@@ -106,16 +106,152 @@
       "platform": "Netflix",
       "source": "https://about.netflix.com/en/news/romance-anime-lineup-october",
       "verification": "exact_date_platform_special_episodes"
+    },
+    {
+      "id": "hello-witch-love-potion",
+      "date": "2026-10-05",
+      "source": "https://www.crunchyroll.com/es/news/seasonal-lineup/2026/9/15/otono-2026-anime-crunchyroll",
+      "verification": "release_date_streaming_platform_and_official_series_synopsis",
+      "limitations": "Not a line-by-line fact-check of article prose"
+    },
+    {
+      "id": "dreamland",
+      "date": "2026-10-16",
+      "source": "https://www.crunchyroll.com/es/news/seasonal-lineup/2026/9/15/otono-2026-anime-crunchyroll",
+      "verification": "release_date_streaming_platform_and_official_series_synopsis",
+      "limitations": "Not a line-by-line fact-check of article prose"
+    },
+    {
+      "id": "dark-machine",
+      "date": "2026-10-13",
+      "source": "https://www.crunchyroll.com/es/news/seasonal-lineup/2026/9/15/otono-2026-anime-crunchyroll",
+      "verification": "release_date_streaming_platform_and_official_series_synopsis",
+      "limitations": "Not a line-by-line fact-check of article prose"
+    },
+    {
+      "id": "horror-collector",
+      "date": "2026-10-10",
+      "source": "https://www.crunchyroll.com/es/news/seasonal-lineup/2026/9/15/otono-2026-anime-crunchyroll",
+      "verification": "release_date_streaming_platform_and_official_series_synopsis",
+      "limitations": "Not a line-by-line fact-check of article prose"
+    },
+    {
+      "id": "dandivine",
+      "date": "2026-10-07",
+      "source": "https://www.crunchyroll.com/es/news/seasonal-lineup/2026/9/15/otono-2026-anime-crunchyroll",
+      "verification": "release_date_streaming_platform_and_official_series_synopsis",
+      "limitations": "Not a line-by-line fact-check of article prose"
+    },
+    {
+      "id": "worlds-strongest-witch",
+      "date": "2026-10-07",
+      "source": "https://www.crunchyroll.com/es/news/seasonal-lineup/2026/9/15/otono-2026-anime-crunchyroll",
+      "verification": "release_date_streaming_platform_and_official_series_synopsis",
+      "limitations": "Not a line-by-line fact-check of article prose"
+    },
+    {
+      "id": "vermilion-mask",
+      "date": "2026-10-10",
+      "source": "https://www.crunchyroll.com/es/news/seasonal-lineup/2026/9/15/otono-2026-anime-crunchyroll",
+      "verification": "release_date_streaming_platform_and_official_series_synopsis",
+      "limitations": "Not a line-by-line fact-check of article prose"
+    },
+    {
+      "id": "im-looking-for-a-zombie",
+      "date": "2026-10-03",
+      "source": "https://www.crunchyroll.com/es/news/seasonal-lineup/2026/9/15/otono-2026-anime-crunchyroll",
+      "verification": "release_date_streaming_platform_and_official_series_synopsis",
+      "limitations": "Not a line-by-line fact-check of article prose"
+    },
+    {
+      "id": "tale-secret-saint",
+      "date": "2026-10-03",
+      "source": "https://www.crunchyroll.com/es/news/seasonal-lineup/2026/9/15/otono-2026-anime-crunchyroll",
+      "verification": "release_date_streaming_platform_and_official_series_synopsis",
+      "limitations": "Not a line-by-line fact-check of article prose"
+    },
+    {
+      "id": "romelia-war-chronicle",
+      "date": "2026-10-03",
+      "source": "https://www.crunchyroll.com/es/news/seasonal-lineup/2026/9/15/otono-2026-anime-crunchyroll",
+      "verification": "release_date_streaming_platform_and_official_series_synopsis",
+      "limitations": "Not a line-by-line fact-check of article prose"
+    },
+    {
+      "id": "aoashi-season-2",
+      "date": "2026-10-04",
+      "source": "https://www.crunchyroll.com/es/news/seasonal-lineup/2026/9/15/otono-2026-anime-crunchyroll",
+      "verification": "release_date_streaming_platform_and_official_series_synopsis",
+      "limitations": "Not a line-by-line fact-check of article prose"
+    },
+    {
+      "id": "reincarnated-goblin",
+      "date": "2026-10-05",
+      "source": "https://www.crunchyroll.com/es/news/seasonal-lineup/2026/9/15/otono-2026-anime-crunchyroll",
+      "verification": "release_date_streaming_platform_and_official_series_synopsis",
+      "limitations": "Not a line-by-line fact-check of article prose"
+    },
+    {
+      "id": "laid-off-cheat-granting-mage",
+      "date": "2026-10-06",
+      "source": "https://www.crunchyroll.com/es/news/seasonal-lineup/2026/9/15/otono-2026-anime-crunchyroll",
+      "verification": "release_date_streaming_platform_and_official_series_synopsis",
+      "limitations": "Not a line-by-line fact-check of article prose"
+    },
+    {
+      "id": "sasaki-and-peeps-season-2",
+      "date": "2026-10-07",
+      "source": "https://www.crunchyroll.com/es/news/seasonal-lineup/2026/9/15/otono-2026-anime-crunchyroll",
+      "verification": "release_date_streaming_platform_and_official_series_synopsis",
+      "limitations": "Not a line-by-line fact-check of article prose"
+    },
+    {
+      "id": "space-mercenary",
+      "date": "2026-10-04",
+      "source": "https://www.crunchyroll.com/es/news/seasonal-lineup/2026/9/15/otono-2026-anime-crunchyroll",
+      "verification": "release_date_streaming_platform_and_official_series_synopsis",
+      "limitations": "Not a line-by-line fact-check of article prose"
+    },
+    {
+      "id": "psyren",
+      "date": "2026-10-05",
+      "source": "https://www.crunchyroll.com/es/news/seasonal-lineup/2026/9/15/otono-2026-anime-crunchyroll",
+      "verification": "release_date_streaming_platform_and_official_series_synopsis",
+      "limitations": "Not a line-by-line fact-check of article prose"
+    },
+    {
+      "id": "apothecary-diaries-movie",
+      "date": "2026-12-11",
+      "source": "https://kusuriyanohitorigoto.jp/news/2520/",
+      "verification": "theatrical_release_date_and_project_identity",
+      "limitations": "Not a line-by-line fact-check of article prose"
+    },
+    {
+      "id": "witch-on-the-holy-night",
+      "date": "2026-11-20",
+      "source": "https://mahoyo-movie.com/",
+      "verification": "theatrical_release_date_and_project_identity",
+      "limitations": "Not a line-by-line fact-check of article prose"
+    },
+    {
+      "id": "votoms-gray-witch",
+      "date": "2026-11-20",
+      "source": "https://www.votoms-gh.com/news/detail.php?id=23579",
+      "verification": "theatrical_release_date_and_project_identity",
+      "limitations": "Not a line-by-line fact-check of article prose"
     }
   ],
-  "count_confirmed": 15,
+  "count_confirmed": 34,
   "total_indexed": 46,
-  "remaining_unverified": 31,
+  "remaining_unverified": 12,
   "notes": [
     "Crunchyroll's schedule uses weekly weekday and time for some shows; those specific calendar dates are inferred from the first week and should not be considered independently verified exact dates.",
     "The verified platform is not necessarily exclusive; distribution territories vary.",
     "The wording and all claims inside each article have not been individually fact-checked.",
     "Netflix September 15, 2026 official release confirms Blue Box S2 October 4 weekly; an earlier correction that downgraded it to October-only was reverted.",
-    "Ramparts of Ice Netflix October 1 is Pacific Time; October 2 in Japan. Distinguish time zones in article text."
-  ]
+    "Ramparts of Ice Netflix October 1 is Pacific Time; October 2 in Japan. Distinguish time zones in article text.",
+    "Official-source checks are for core listing facts only, not full article prose; streaming times and regions may differ.",
+    "No official evidence found in this pass is not proof that an unverified listing is false."
+  ],
+  "last_checked": "2026-10-10"
 }
