@@ -46,6 +46,7 @@ def main():
     article_paths = sorted((ROOT / "articles").glob("*.html"))
     refs = defaultdict(set)
     articles = {}
+    source_coverage = []
     for p in article_paths:
         s = p.read_text(encoding="utf-8")
         article_url = BASE + "/articles/" + p.stem
@@ -68,6 +69,14 @@ def main():
         text = html.unescape(re.sub(r"<[^>]+>", " ", body_html))
         text = re.sub(r"\s+", " ", text).strip()
         articles[p.stem] = {"word_count": len(text.split()), "text": text}
+        external_sources = sorted(set(
+            urllib.parse.urlparse(html.unescape(u)).netloc.lower()
+            for u in re.findall(r'href="(https?://[^"]+)"', s)
+            if not any(blocked in urllib.parse.urlparse(html.unescape(u)).netloc.lower()
+                       for blocked in ("aninextup.com", "youtube.com", "youtu.be", "facebook.com", "instagram.com", "twitter.com"))
+        ))
+        source_coverage.append({"article": p.stem, "external_source_domains": external_sources})
+
         for value in re.findall(r'(?:href|src|poster|data-src)="([^"]+)"', s):
             value = html.unescape(value).strip()
             if value.startswith(("http://", "https://")):
@@ -117,6 +126,8 @@ def main():
               "failed_or_unverified": sum(x["assessment"] == "failed_or_unverified" for x in results),
               "url_results": results,
               "near_duplicate_candidates": near_duplicates,
+              "editorial_source_coverage": source_coverage,
+              "articles_without_external_sources": [x["article"] for x in source_coverage if not x["external_source_domains"]],
               "short_articles_under_150_words": [{"article": n, "words": e["word_count"]} for n,e in articles.items() if e["word_count"] < 150],
               "editorial_fact_check": "Manual official-source comparison still required; HTTP success is not factual verification."}
     path = ROOT / "audit-results.json"
@@ -126,6 +137,9 @@ def main():
     for item in results:
         if item["assessment"] != "ok":
             print(f"CHECK {item['assessment']} HTTP={item.get('status')} URL={item['url']} ERROR={item.get('error', '')}")
+    print("Editorial source coverage:", len(source_coverage) - len(report["articles_without_external_sources"]), "/", len(source_coverage))
+    for name in report["articles_without_external_sources"]:
+        print("NO EXTERNAL SOURCE:", name)
     for item in report["short_articles_under_150_words"]:
         print(f"SHORT ARTICLE {item['words']} words: {item['article']}")
     # Fail only on verified broken URLs, not blocked or DNS/timeouts.
