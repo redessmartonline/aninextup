@@ -2,9 +2,9 @@
   "scope": "Article-level factual verification; structural validation is separate",
   "checked_on": "2026-10-10",
   "total": 46,
-  "partially_verified": 2,
+  "partially_verified": 6,
   "fully_verified": 0,
-  "pending": 44,
+  "pending": 40,
   "warning": "Partial verification does not validate every assertion in the article.",
   "articles": [
     {
@@ -214,9 +214,15 @@
       "title": "Dragon Ball Super: Beerus",
       "article": "articles/dragon-ball-super-beerus",
       "date": "2026-10-11",
-      "status": "pending_manual_fact_check",
-      "checked_claims": [],
-      "source_urls": []
+      "status": "partially_verified_official_source",
+      "checked_claims": [
+        "Japanese premiere 2026-10-11",
+        "Crunchyroll streaming announced for 2026-10-11 in listed territories"
+      ],
+      "source_urls": [
+        "https://dragonball-super.com/en/updates/20260903-1.html",
+        "https://www.crunchyroll.com/es/news/announcements/2026/10/5/dragon-ball-super-beerus-anime-crunchyroll"
+      ]
     },
     {
       "id": "cyberpunk-edgerunners-2",
@@ -376,18 +382,29 @@
       "title": "The Apothecary Diaries Season 3",
       "article": "articles/apothecary-diaries-season-3",
       "date": "2026-10-02",
-      "status": "pending_manual_fact_check",
-      "checked_claims": [],
-      "source_urls": []
+      "status": "partially_verified_official_source",
+      "checked_claims": [
+        "Japanese TV premiere 2026-10-02",
+        "Japanese streaming begins 2026-10-03"
+      ],
+      "source_urls": [
+        "https://kusuriyanohitorigoto.jp/season3/onair/",
+        "https://kusuriyanohitorigoto.jp/news/2623/"
+      ]
     },
     {
       "id": "black-clover-s2",
       "title": "Black Clover Season 2",
       "article": "articles/black-clover-season-2",
       "date": "2026-10-03",
-      "status": "pending_manual_fact_check",
-      "checked_claims": [],
-      "source_urls": []
+      "status": "partially_verified_official_source",
+      "checked_claims": [
+        "Japanese TV premiere 2026-10-03 at 23:00",
+        "Studio Pierrot"
+      ],
+      "source_urls": [
+        "https://bclover.jp/?lang=en"
+      ]
     },
     {
       "id": "suikoden",
@@ -403,9 +420,13 @@
       "title": "Blue Box Season 2",
       "article": "articles/blue-box-season-2",
       "date": "2026-10-04",
-      "status": "pending_manual_fact_check",
-      "checked_claims": [],
-      "source_urls": []
+      "status": "partially_verified_official_source",
+      "checked_claims": [
+        "TV and Netflix weekly premiere 2026-10-04"
+      ],
+      "source_urls": [
+        "https://media.netflix.com/en/only-on-netflix/81663323"
+      ]
     },
     {
       "id": "space-mercenary",
@@ -434,5 +455,6 @@
       "checked_claims": [],
       "source_urls": []
     }
-  ]
+  ],
+  "note": "Claims listed are verified; unlisted statements, cast and streaming regions remain unchecked. Do not infer full article verification."
 }
