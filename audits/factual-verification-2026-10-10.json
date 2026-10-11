@@ -2,9 +2,9 @@
   "scope": "Article-level factual verification; structural validation is separate",
   "checked_on": "2026-10-10",
   "total": 46,
-  "partially_verified": 10,
+  "partially_verified": 15,
   "fully_verified": 0,
-  "pending": 36,
+  "pending": 31,
   "warning": "Partial verification does not validate every assertion in the article.",
   "articles": [
     {
@@ -247,18 +247,26 @@
       "title": "A Tale of the Secret Saint",
       "article": "articles/tale-secret-saint",
       "date": "2026-10-03",
-      "status": "pending_manual_fact_check",
-      "checked_claims": [],
-      "source_urls": []
+      "status": "partially_verified_official_source",
+      "checked_claims": [
+        "October 3 Crunchyroll; FelixFilm studio"
+      ],
+      "source_urls": [
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll"
+      ]
     },
     {
       "id": "romelia-war-chronicle",
       "title": "Romelia War Chronicle",
       "article": "articles/romelia-war-chronicle",
       "date": "2026-10-03",
-      "status": "pending_manual_fact_check",
-      "checked_claims": [],
-      "source_urls": []
+      "status": "partially_verified_official_source",
+      "checked_claims": [
+        "October 3 international Crunchyroll streaming; Japan TV October 5"
+      ],
+      "source_urls": [
+        "https://romelia-senki.com/onair/"
+      ]
     },
     {
       "id": "aoashi-season-2",
@@ -288,9 +296,13 @@
       "title": "Nia Liston: The Merciless Maiden",
       "article": "articles/nia-liston-release-date",
       "date": "2026-10-06",
-      "status": "pending_manual_fact_check",
-      "checked_claims": [],
-      "source_urls": []
+      "status": "partially_verified_official_source",
+      "checked_claims": [
+        "October 6 Japan TV premiere; KONAMI animation studio"
+      ],
+      "source_urls": [
+        "https://kyoranreijo-pr.com/"
+      ]
     },
     {
       "id": "laid-off-cheat-granting-mage",
@@ -333,9 +345,13 @@
       "title": "Ace of the Diamond act II -Second Season- Cour 2",
       "article": "articles/ace-of-diamond-second-season",
       "date": "2026-10-11",
-      "status": "pending_manual_fact_check",
-      "checked_claims": [],
-      "source_urls": []
+      "status": "partially_verified_official_source",
+      "checked_claims": [
+        "October 11 Crunchyroll planned; OLM Team Yoshioka studio"
+      ],
+      "source_urls": [
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll"
+      ]
     },
     {
       "id": "ramparts-of-ice-season-2",
@@ -445,9 +461,13 @@
       "title": "Reborn as a Space Mercenary",
       "article": "articles/reborn-space-mercenary",
       "date": "2026-10-04",
-      "status": "pending_manual_fact_check",
-      "checked_claims": [],
-      "source_urls": []
+      "status": "partially_verified_official_source",
+      "checked_claims": [
+        "Crunchyroll fall 2026 lineup; studio A-CAT"
+      ],
+      "source_urls": [
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll"
+      ]
     },
     {
       "id": "psyren",
