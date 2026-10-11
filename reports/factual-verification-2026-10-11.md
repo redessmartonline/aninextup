@@ -384,3 +384,11 @@ Se inspeccionó el archivo aportado por el propietario `aninextup-public-audit(4
 4. `horror-collector-release-date`: https://www.nhk-character.com/chara/kyoufucollector/news/20261009_89.html confirma NHK 10 octubre y streaming japonés episodio 1 el 15 octubre a las 12:00 JST. **Confirmada fuente**; despliegue del artículo individual no comprobado con el lector público.
 
 **Criterio:** ninguna de estas comprobaciones acredita por sí sola la verificación factual exhaustiva de las 63 noticias. Los lotes anteriores documentan fuentes pendientes; evitar cerrar el informe global hasta comparar cada afirmación material con la evidencia original. No se efectuaron cambios de contenido sin contradicción comprobada.
+
+
+## Cierre de la ejecución pendiente de GitHub Actions (11 octubre 2026)
+
+- Ejecución `38161829001` del flujo **AniNextUp public quality audit**, commit `3afd63843d57f3695f0c6fd91e7cd5b62fff5fcf`: estado `completed`, conclusión `success`. URL: https://github.com/redessmartonline/aninextup/actions/runs/38161829001 . El job `audit` y sus pasos de prueba de URL, imágenes, tráileres y duplicados y subida de artefacto terminaron en `success`.
+- También aparece como `completed/success` la ejecución `38162232928` del publicador autónomo de noticias; este éxito operativo **no prueba** veracidad de noticias ni ausencia de nuevas publicaciones que necesiten revisión.
+- En el repositorio, `articles/horror-collector-release-date.html` conserva el texto de streaming japonés 15 octubre y `this-week.html` conserva el título SEO sin fecha semanal fija. Los rastreos del buscador pueden estar desfasados; no sustituyen una inspección de respuesta pública sin caché.
+- **Estado:** se cierra el seguimiento de la ejecución técnica pendiente. La verificación factual exhaustiva de cada afirmación de las noticias y la confirmación del HTML público más reciente siguen abiertas, no certificadas.
