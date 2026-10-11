@@ -66,8 +66,7 @@ def main():
     for file in sorted((ROOT / "articles").rglob("*.html")):
         reader = Reader()
         reader.feed(file.read_text(encoding="utf-8", errors="replace"))
-        text = re.sub(r"\s+", " ", " ".join(reader.parts))
-        claims = re.split(r"(?<=[.!?])\s+(?=[A-Z0-9])", text)
+        claims = [sentence for block in reader.claim_blocks for sentence in re.split(r"(?<=[.!?])\s+(?=[A-Z0-9])", block)]
         sources = [url for url, _ in reader.links if "aninextup.com" not in urllib.parse.urlsplit(url).netloc]
         for claim in claims:
             if not KEYWORDS.search(claim): continue
@@ -81,6 +80,17 @@ def main():
         writer.writeheader()
         writer.writerows(rows)
     print(f"Articles scanned: {len(list((ROOT / 'articles').rglob('*.html')))}")
+    article_paths = sorted(p.relative_to(ROOT).as_posix() for p in (ROOT / "articles").rglob("*.html"))
+    by_article = {p: 0 for p in article_paths}
+    for row in rows:
+        by_article[row["article"]] += 1
+    coverage = ROOT / "audits" / "editorial-article-coverage.csv"
+    with coverage.open("w", encoding="utf-8", newline="") as stream:
+        writer = csv.writer(stream)
+        writer.writerow(["article", "candidate_claims", "factual_review_status"])
+        for article, count in by_article.items():
+            writer.writerow([article, count, "NOT_FACT_CHECKED"])
+    print(f"Per-article coverage: {coverage.relative_to(ROOT)}")
     print(f"Candidate claims: {len(rows)}")
     print(f"Inventory: {OUT.relative_to(ROOT)}")
     print("All extracted claims are unverified; inspect official sources individually.")
