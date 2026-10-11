@@ -1,8 +1,10 @@
 # Registro de verificación factual — AniNextUp
 
+**Estado vigente tras la última continuación: 52/63 cerrados y 11/63 pendientes.** Las tablas y balances anteriores se conservan como historial; el detalle vigente está en la última sección.
+
 Fecha: 2026-10-11. Cobertura: **63 artículos HTML**. Este registro **no equivale a la aprobación factual completa de cada artículo**. «Confirmación parcial» significa que se contrastó al menos un dato con la fuente primaria indicada; el resto de las afirmaciones aún debe revisarse. «Pendiente» no significa que el artículo sea incorrecto.
 
-**Resultados:** 63 artículos con al menos una afirmación vinculada a una fuente identificada (confirmación parcial; no todas las fuentes son comunicados primarios); 0 sin fuente identificada en este registro; 0 artículos certificados íntegramente. No se identifican errores confirmados en este registro. La programación y disponibilidad pueden cambiar.
+**Resultados del registro inicial (histórico):** 63 artículos con al menos una afirmación vinculada a una fuente identificada (confirmación parcial; no todas las fuentes son comunicados primarios); 0 sin fuente identificada en este registro; 0 artículos certificados íntegramente. No se identifican errores confirmados en este registro. La programación y disponibilidad pueden cambiar.
 
 | Artículo | Estado | Afirmación contrastada | Fuente | Acción pendiente |
 |---|---|---|---|---|
@@ -1025,3 +1027,59 @@ Texto oficial indexado de https://www.crunchyroll.com/news/latest/2026/9/18/drea
 Se dejó visible la discrepancia en cabecera, tarjeta, descripción y texto, en lugar de presentar el 16 como fecha internacional actual inequívoca o declarar una reprogramación no demostrada. **Faltan aclaración del calendario internacional e identidad/canal/uploadDate del teaser OBK6DLvQJvs** (JSON-LD: 12 julio). YouTube no devolvió contenido. Commit `0dbfc8bbfbdd48d45256fd4221a5a983d69d852a`.
 
 **Balance: cinco pendientes examinados y actualizados; cero cierres nuevos. Acumulado vigente: 46/63 cerrados y 17/63 pendientes.** Se resolvieron pruebas de reparto, cuatro tipos y territorios; se precisaron sinopsis y programación. Los cinco HTML publicados se recuperaron de GitHub y coinciden íntegramente con el contenido enviado. No se certifica ninguna ficha completa mientras mantenga los bloqueos indicados.
+
+
+## Continuación — revisión de los 17 pendientes y recuperación de metadatos originales (11 octubre 2026)
+
+Base: HEAD `ec5d5b9d21dfe13439e37ed192ebf4df172b76b3`, **46 cerrados / 17 pendientes**. Se recuperaron los 17 HTML y el informe; se trabajó únicamente sobre pendientes. La lectura del HTML original de YouTube permitió recuperar `ytInitialPlayerResponse.videoDetails` (título, canal, descripción) y `microformat.playerMicroformatRenderer.uploadDate`, antes inaccesibles. Esto verifica identidad, atribución y fecha del video; **no equivale a haber visionado su contenido audiovisual**. Los comunicados y pruebas anteriores conservan el alcance documentado, incluidas las fuentes de Crunchyroll accesibles solo por texto oficial indexado.
+
+### Seis cierres nuevos
+
+| Artículo | Prueba que resuelve el bloqueo |
+|---|---|
+| `the-moon-on-a-rainy-night-anime.html` | Q-W1E8Y9Jv0: primer PV en It's Anime powered by REMOW, timestamp original abajo; descripción corrobora 2027, reparto, equipo y encuentro camino de la clase de piano. Completa las pruebas de producción y Kodansha de la pasada anterior. |
+| `bass-x-machina-release-date.html` | CWbZBIrEfqI: teaser oficial de Netflix, descripción anuncia 3 noviembre. Identidad/canal/subida complementan las pruebas previas de Netflix sobre lanzamiento mundial, Studio Mir, productores y reparto. |
+| `rakuen-tsuihou-kokoro-no-resonance.html` | El HTML original de https://rakuen-tsuiho-r.com/ enlaza exactamente 9UhNKYg6uso. YouTube lo identifica como tercer teaser de Aniplex; descripción confirma fecha japonesa, premisa y equipo. Se corrige uploadDate erróneo de 17 noviembre a **22 noviembre 2025**, con hora y zona originales. |
+| `reborn-space-mercenary.html` | ov_3-6JOAkk es efectivamente Official Trailer 2 del canal Crunchyroll; su descripción confirma 4 octubre y premisa. Se completa el único bloqueo restante, junto a las pruebas oficiales indexadas previamente de doblaje/reparto/territorios. No se añade uploadDate donde no se declaraba. |
+| `a-certain-dark-item-release-date.html` | bf6XcU3uL9I es teaser del canal oficial toaru.project. El main PV NNHxQJgZdbQ está enlazado en https://toaru-project.com/item/movie/index.html y su ficha original confirma 9 octubre, reparto y temas. Subida del main PV: 2026-07-03T03:00:00-07:00. Completa ON AIR, staff y sinopsis primarios anteriores. |
+| `chitose-ramune-bottle-cour-2.html` | 8RHh2AyKRfY: segundo PV del segundo cour, canal KADOKAWAanime; descripción confirma 13 octubre, recap 13.5, arcos Asuka/Haru, horarios y feel. La versión ya corregida **no afirma horarios domésticos del segundo cour** basándose en la lista del primero: esa información no anunciada queda expresamente delimitada. Se cierra por las afirmaciones publicadas respaldadas, sin fingir que se obtuvo esa programación ausente. |
+
+### Metadatos de los 13 videos, referencias y commits
+
+Las fechas con offset evitan confundir fecha local de subida con fecha civil japonesa del anuncio. Por ejemplo, Moon figura el 6 octubre en -07:00 y el 7 octubre en UTC/Japón; no se presenta esa diferencia de zona como un error editorial de día.
+
+| Artículo | Video oficial / canal | uploadDate original | Commit |
+|---|---|---|---|
+| `worlds-strongest-witch.html` | [0ISyxMMLVg8](https://www.youtube.com/watch?v=0ISyxMMLVg8) · Crunchyroll | `2026-09-15T08:59:51-07:00` | `d4b1ed5ec1b3fb6ab45ef7eaae7518c8204dbe83` |
+| `dreamland-release-date.html` | [OBK6DLvQJvs](https://www.youtube.com/watch?v=OBK6DLvQJvs) · Crunchyroll | `2026-07-12T05:15:15-07:00` | `82b83c8af3c4a90c3a029ef4093817a64c58bfcb` |
+| `reborn-space-mercenary.html` | [ov_3-6JOAkk](https://www.youtube.com/watch?v=ov_3-6JOAkk) · Crunchyroll | `2026-07-06T04:00:31-07:00` | `76833597834e8cc6f6cd0ee938eee863375e1b9d` |
+| `magic-knight-rayearth-2026.html` | [67GqhfLw3ys](https://www.youtube.com/watch?v=67GqhfLw3ys) · TMSアニメ公式チャンネル | `2026-09-19T21:30:28-07:00` | `fbb80903927f9a8e00a04bb59a2253ddbf02c663` |
+| `the-moon-on-a-rainy-night-anime.html` | [Q-W1E8Y9Jv0](https://www.youtube.com/watch?v=Q-W1E8Y9Jv0) · It's Anime powered by REMOW | `2026-10-06T23:00:29-07:00` | `c5a783831f5875501c2dbb13f28cc478a1a1994b` |
+| `bass-x-machina-release-date.html` | [CWbZBIrEfqI](https://www.youtube.com/watch?v=CWbZBIrEfqI) · Netflix | `2026-08-20T16:30:00-07:00` | `08b9bde6c17c0ecee956e6cf64e43fddb4581344` |
+| `demons-crest-release-date.html` | [Sj4Pu2qu43A](https://www.youtube.com/watch?v=Sj4Pu2qu43A) · Prime Video JP - プライムビデオ | `2026-07-04T15:00:27-07:00` | `cf8c0fa724ac5b09e4c87c919e5f470610ba5837` |
+| `rakuen-tsuihou-kokoro-no-resonance.html` | [9UhNKYg6uso](https://www.youtube.com/watch?v=9UhNKYg6uso) · アニプレックス チャンネル | `2025-11-22T03:30:08-08:00` | `4383b3a11c771a8d46c87bc266f593627251a141` |
+| `witch-on-the-holy-night-movie.html` | [k1jyM2kSBzA](https://www.youtube.com/watch?v=k1jyM2kSBzA) · アニプレックス チャンネル | `2026-09-30T03:05:47-07:00` | `037b2aeceae52e5619c795a46f7f3b106926feb7` |
+| `black-clover-season-2.html` | [ZRrFCX47cJc](https://www.youtube.com/watch?v=ZRrFCX47cJc) · Crunchyroll en Español | `2026-08-07T12:00:37-07:00` | `e3c249f66d5883ae6558f6056baa0c4049cac228` |
+| `a-certain-dark-item-release-date.html` | [bf6XcU3uL9I](https://www.youtube.com/watch?v=bf6XcU3uL9I) · とあるプロジェクト公式toaru.project | `2026-03-26T17:56:54-07:00` | `5da0f049d74883f6acf26db40940fe11d94eb15f` |
+| `chitose-ramune-bottle-cour-2.html` | [8RHh2AyKRfY](https://www.youtube.com/watch?v=8RHh2AyKRfY) · KADOKAWAanime | `2026-09-11T03:00:39-07:00` | `e48312f835913d724672fd271c0db9ae6241ad81` |
+| `dandivine-release-date.html` | [ihJfkOT_0wU](https://www.youtube.com/watch?v=ihJfkOT_0wU) · GOOD SMILE CHANNEL | `2026-09-12T03:20:18-07:00` | `65379b45c32ffda19c7aa27b77e7d5a5a89d621b` |
+
+Se añadieron referencias directas a esos uploads y se precisaron los uploadDate ya declarados. **Witch on the Holy Night:** el rótulo del reproductor decía Crunchyroll aunque k1jyM2kSBzA pertenece a Aniplex; se corrigió a Aniplex. Rakuen identifica ahora el tercer teaser. Los metadatos JSON-LD de los 13 HTML editados se analizaron como JSON válido.
+
+### Once artículos que siguen pendientes
+
+| Artículo | Bloqueo restante / resultado |
+|---|---|
+| `worlds-strongest-witch.html` | Video inglés, canal, subida y estreno 7 octubre confirmados. Sigue faltando prueba accesible del streaming doméstico anticipado y calendario internacional actual inequívoco; no se certifica TBA por una versión antigua. |
+| `horror-collector-release-date.html` | El teaser 1igV7pmH8fA de NHK ENTERPRISES Animation confirma sinopsis, Palette y Shikao Suga, pero **no los 12 episodios** afirmados. Sigue pendiente ese número; no se elimina como si se hubiese probado falso. |
+| `iceblade-sorcerer-ii.html` | Continúa pendiente horario internacional actual inequívoco. Se conserva el teaser documentado y la precisión de fecha civil ya publicada. |
+| `dreamland-release-date.html` | Teaser/canal/subida confirmados; su descripción dice 16 octubre, mientras la cartelera oficial indexada de la pasada anterior muestra 17. Se conserva visible la discrepancia, sin certificar una reprogramación. |
+| `magic-knight-rayearth-2026.html` | 67GqhfLw3ys es main PV 2 de TMS; timestamp y descripción respaldan 7 octubre y dos cours. Sigue pendiente calendario internacional actual inequívoco; no se extrapola del horario japonés. |
+| `pok-mon-horizons-anime-unseals-treasures-of-ruin-in-latest-wonder-a6b9d2d5.html` | n6VZjxUNAww existe en el canal oficial Pokémon, título de nuevo PV Wonder Voyage, subida 2026-10-09T03:25:19-07:00. Su descripción **no explica el desencadenante de los sellos**: recuperar metadatos no prueba ese contenido. Mantiene ese bloqueo, con los cuatro tipos ya respaldados en la pasada anterior. |
+| `demons-crest-release-date.html` | Sj4Pu2qu43A es trailer de Prime Video JP; fecha original abajo y descripción respaldan 6 noviembre, exclusividad mundial y Production I.G. Sigue faltando prueba primaria específica de sexto curso/boss/desconexión según el texto publicado. |
+| `witch-on-the-holy-night-movie.html` | Tráiler final de Aniplex, subida y estreno japonés confirmados; rótulo corregido. Falta respaldo primario recuperable de fechas específicas **28 enero en mercados latinoamericanos / 29 enero en EEUU y Canadá**. Un titular oficial de enero 2027 y reproducciones secundarias no bastan para esos días. |
+| `black-clover-season-2.html` | ZRrFCX47cJc es tráiler oficial de Crunchyroll en Español. Se resuelve identidad/canal; falta respaldo específico del material actualizado de personajes descrito. |
+| `ace-of-diamond-second-season.html` | Continúa pendiente calendario internacional actual inequívoco; las fechas japonesas y OLM ya están documentadas. |
+| `dandivine-release-date.html` | ihJfkOT_0wU es main PV de GOOD SMILE CHANNEL; descripción corrobora premisa, estudios y calendario regular. Falta cuerpo del aviso oficial https://gattaishin.com/dandivine/news/?id=758 sobre excepción del primer episodio; no se certifica la guía completa con el calendario regular. |
+
+**Balance vigente: 52/63 cerrados y 11/63 pendientes.** Se revisaron los 17 pendientes, se completaron seis cierres y se actualizaron 13 artículos. Ningún artículo previamente cerrado se cuenta de nuevo. Los 13 archivos publicados se recuperaron de GitHub y coinciden íntegramente con el contenido enviado. Los datos que siguen sin prueba se enumeran arriba; no se dan por verificados por haber resuelto otros campos.
