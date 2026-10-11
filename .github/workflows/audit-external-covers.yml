@@ -1,0 +1,29 @@
+name: Audit external cover HTTP and decoding
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/audit_external_covers.py'
+      - '.github/workflows/audit-external-covers.yml'
+permissions:
+  contents: read
+jobs:
+  covers:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install image decoder
+        run: python -m pip install Pillow
+      - name: Check image HTTP responses and decode
+        run: python scripts/audit_external_covers.py
+      - name: Upload detailed results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: aninextup-external-cover-audit
+          path: |
+            cover_http_audit.json
+            cover_http_audit.md
+          if-no-files-found: warn
