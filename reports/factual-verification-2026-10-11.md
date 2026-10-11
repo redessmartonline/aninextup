@@ -864,3 +864,42 @@ Lectura directa https://www.pokemon.co.jp/info/2026/05/260508_a01.html confirma 
 Lectura directa https://about.netflix.com/ja/news/anime-nyc-2026 confirma estreno mundial 3 noviembre 2026 y Brian Tyree Henry; https://about.netflix.com/en/news/netflix-unveils-upcoming-anime-slate-out-of-annecy-festival confirma fecha, creador, Studio Mir y cuatro productores ejecutivos. https://media.netflix.com/en/only-on-netflix/81088875 devuelve la sinopsis **sin fecha visible** en este intento. Se atribuyó la fecha al comunicado Annecy donde sí es legible y se precisó el enlace del Media Center como fuente de sinopsis. **Faltan Tati Gabrielle/Cree Summer y metadatos del teaser CWbZBIrEfqI, incluida subida 20 agosto**. El comunicado japonés enlaza otra versión yS8NeJbFR_I: esto no demuestra que el video inglés sea falso, por lo que no se reemplaza sin prueba. Commit `8af34efbffbbc3fb9eb81c7ff6e6ae98a78accdb`.
 
 **Balance: seis pendientes examinados, dos cierres nuevos y cuatro aún pendientes. Acumulado: 42/63 cerrados y 21/63 pendientes.** Se publicaron referencias en los seis artículos y una precisión de atribución de fecha. No se demostró un error en las fechas de estreno de este lote. Se volvió a obtener cada archivo de GitHub y se comprobó coincidencia íntegra con el contenido enviado. Los cierres se limitan a las afirmaciones publicadas y a las pruebas descritas; los bloqueos de acceso se conservan explícitos.
+
+
+## Continuación — segundo lote de seis pendientes (11 octubre 2026)
+
+Base recuperada del informe y de los últimos commits de main: **42 cerrados / 21 pendientes**. Se leyeron íntegramente los seis artículos siguientes. Black Clover estaba reabierto en el estado vigente: su cierre histórico no se vuelve a contabilizar.
+
+### CERRADO — `ramparts-of-ice-season-2.html`
+
+Lectura directa de https://about.netflix.com/en/news/romance-anime-lineup-october confirma estreno global 1 octubre PT / 2 octubre JST, episodios semanales, Studio KAI y autora Kocha Agasawa. https://about.netflix.com/en/news/the-ramparts-of-ice-season-2 confirma además Koyuki, Miki, Minato, Yota y la premisa; su iframe identifica exactamente el PV sWvfeHOkAOU usado en el artículo. No hay uploadDate por certificar en esta ficha. Se añadió la segunda fuente y se eliminó una frase duplicada sobre la adaptación: commit `696107c20f91f3c05028cb038d9eb51d5df2542b`. Las afirmaciones materiales publicadas quedan respaldadas.
+
+### CERRADO, HORARIO PRECISADO — `ranma-season-3.html`
+
+https://ranma-pr.com/onair/ contiene varios calendarios: se cotejó específicamente el bloque de tercera temporada, no el de 2024. https://ranma-pr.com/news/2467/ confirma tercera temporada desde 3 octubre 2026, sábado 24:55 en Nippon TV, Netflix después de la emisión y nueva imagen con los personajes. Se explicitó que esa franja corresponde a **4 octubre 00:55 JST en fecha civil**, evitando la ambigüedad de «estreno en Japón el 3». No se anuncia un cambio de programación.
+
+https://about.netflix.com/en/news/netflix-anime-titles-revealed-mappa-15th-anniversary confirma continuación del remake, estreno mundial en octubre, premisa y personajes; el iframe oficial corresponde al video exacto CeUZpSuOuS4. https://ranma-pr.com/news/2397/ respalda el anuncio de temporada y continuidad de producción. El artículo no declara fecha de subida del video. Fuente japonesa específica añadida: commit `e46015ec77a19eea8c4904e506fe14f9e36c18db`.
+
+### PENDIENTE — `demons-crest-release-date.html`
+
+Lecturas directas: https://demonscrest-anime.com/ confirma 6 noviembre 2026 y Prime Video; https://demonscrest-anime.com/staffcast/index.html y https://demonscrest-anime.com/music/index.html confirman Production I.G, Reki Kawahara, Ado/Shinka y Soala/ReaL. https://demonscrest-anime.com/story/index.html respalda Actual Magic y fusión de juego/realidad; https://demonscrest-anime.com/news/index00110000.html describe desconexión forzada.
+
+Comunicado original de Amazon Japón https://prtimes.jp/main/html/rd/p/000002152.000004612.html confirma estreno mundial exclusivo, autor, estudio y enlaza el primer PV exacto Sj4Pu2qu43A. **Faltan fecha real de subida (JSON-LD: 5 julio) y detalles concretos de sexto curso/boss/desconexión en la premisa**. La fecha del comunicado no prueba uploadDate. No se declara falsa una descripción que todavía no tiene prueba suficiente. Referencias añadidas: commit `6113a8d4ed8d58db1053ccedf48b7f93fcdf8bce`.
+
+### PENDIENTE — `rakuen-tsuihou-kokoro-no-resonance.html`
+
+https://rakuen-tsuiho-r.com/ leído directamente confirma estreno japonés 13 noviembre 2026, secuela de la película de 2014, DEVA, Angela, agentes Fallen, Gabriel y créditos Seiji Mizushima, Gen Urobuchi, Masatsugu Saito, NARASAKI y Toei Animation. **Faltan identidad/canal y fecha real de subida del PV 9UhNKYg6uso**, cuyo JSON-LD declara 17 noviembre 2025. Los resultados secundarios no sustituyen la identificación oficial. No se editó sin contradicción demostrada. La ausencia de anuncio internacional en las fuentes consultadas no demuestra que nunca exista.
+
+### PENDIENTE — `witch-on-the-holy-night-movie.html`
+
+Lectura directa https://mahoyo-movie.com/ confirma Japón 20 noviembre 2026, ufotable, TYPE-MOON/Nasu, créditos, voces y supercell/Yoru to Ao. https://mahoyo-movie.com/news/?article_id=71368 confirma sinopsis Aoko/Alice/Soujuurou y enlaza exactamente el PV k1jyM2kSBzA.
+
+El anuncio del distribuidor https://www.crunchyroll.com/news/announcements/2026/9/10/witch-on-the-holy-night-anime-movie-worldwide-release-january-2027 fue identificado, pero su apertura no devolvió cuerpo legible. Una reproducción atribuida a ese comunicado en https://www.imdb.com/news/ni66009845/ corrobora enero 2027; se registra como evidencia secundaria, no lectura primaria. **Faltan calendario internacional recuperable del distribuidor, canal y uploadDate real del video (JSON-LD: 30 septiembre)**. El anuncio del PV en esa fecha no certifica su subida. Se añadieron las referencias de producción/distribución sin cambiar fechas ni atribuir un canal no demostrado: commit `043c45b8f628a81ed96b50e820a5574fc613d598`.
+
+### PENDIENTE REABIERTO — `black-clover-season-2.html`
+
+https://www.tv-tokyo.co.jp/anime/bclover/news/ leído directamente contiene anuncio de 7 septiembre 2026: estreno sábado 3 octubre a las 23:00. Se resuelve esa prueba de fecha que faltaba en la revisión anterior.
+
+El bloque nominal indexado de https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll?lid=0ojihzvhs258, actualizado 10 octubre, respalda Studio Pierrot, sábados 08:00 PT, argumento y regiones enumeradas; no se afirma lectura directa del cuerpo inaccesible. **Faltan identidad/canal del trailer ZRrFCX47cJc y respaldo específico del nuevo material de personajes descrito**. No se demostró un error que justificase editar el artículo y no se suma de nuevo su antiguo cierre.
+
+**Balance: seis pendientes examinados, dos cierres nuevos y cuatro aún pendientes. Acumulado vigente: 44/63 cerrados y 19/63 pendientes.** Se publicaron cambios en cuatro artículos, incluida precisión de fecha civil de Ranma; los cuatro archivos se recuperaron de GitHub y coinciden íntegramente con el contenido enviado. Los cierres se limitan a afirmaciones publicadas y pruebas descritas, sujetos a posteriores cambios de programación.
