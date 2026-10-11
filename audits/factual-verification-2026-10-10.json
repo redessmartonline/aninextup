@@ -2,9 +2,9 @@
   "scope": "Article-level factual verification; structural validation is separate",
   "checked_on": "2026-10-10",
   "total": 46,
-  "partially_verified": 6,
+  "partially_verified": 10,
   "fully_verified": 0,
-  "pending": 40,
+  "pending": 36,
   "warning": "Partial verification does not validate every assertion in the article.",
   "articles": [
     {
@@ -265,9 +265,14 @@
       "title": "Aoashi Season 2",
       "article": "articles/aoashi-season-2",
       "date": "2026-10-04",
-      "status": "pending_manual_fact_check",
-      "checked_claims": [],
-      "source_urls": []
+      "status": "partially_verified_official_source",
+      "checked_claims": [
+        "Japan NHK E-Tele Season 2 premiere 2026-10-04 at 17:00 JST",
+        "12 episodes in first cour of 24"
+      ],
+      "source_urls": [
+        "https://aoashi-pr.com/"
+      ]
     },
     {
       "id": "reincarnated-goblin",
@@ -411,9 +416,16 @@
       "title": "Suikoden: The Anime",
       "article": "articles/suikoden-anime",
       "date": "2026-10-03",
-      "status": "pending_manual_fact_check",
-      "checked_claims": [],
-      "source_urls": []
+      "status": "partially_verified_official_source",
+      "checked_claims": [
+        "Japan broadcast begins 2026-10-03",
+        "First episode extended to 60 minutes",
+        "Japan broadcast on 32 stations"
+      ],
+      "source_urls": [
+        "https://www.suikoden-anime.com/",
+        "https://www.konami.com/games/suikoden/en/"
+      ]
     },
     {
       "id": "blue-box-s2",
@@ -442,19 +454,35 @@
       "title": "PSYREN",
       "article": "articles/psyren-release-date",
       "date": "2026-10-05",
-      "status": "pending_manual_fact_check",
-      "checked_claims": [],
-      "source_urls": []
+      "status": "partially_verified_official_source",
+      "checked_claims": [
+        "Japanese TV premiere 2026-10-05 at 23:00 on TOKYO MX",
+        "Streaming starts from 23:30 JST on announced services"
+      ],
+      "source_urls": [
+        "https://psyren-anime.com/"
+      ]
     },
     {
       "id": "ranma-s3",
       "title": "Ranma 1/2 Season 3",
       "article": "articles/ranma-season-3",
       "date": "2026-10-03",
-      "status": "pending_manual_fact_check",
-      "checked_claims": [],
-      "source_urls": []
+      "status": "partially_verified_official_source",
+      "checked_claims": [
+        "Japan NTV Season 3 premiere 2026-10-03 at 24:55 JST (technically Oct 4 00:55)",
+        "Netflix exclusive distribution immediately after Japanese broadcast",
+        "MAPPA animation production"
+      ],
+      "source_urls": [
+        "https://ranma-pr.com/en/news/2400/",
+        "https://prtimes.jp/main/html/rd/p/000001961.000002610.html"
+      ]
     }
   ],
-  "note": "Claims listed are verified; unlisted statements, cast and streaming regions remain unchecked. Do not infer full article verification."
+  "note": "Claims listed are verified; unlisted statements, cast and streaming regions remain unchecked. Do not infer full article verification.",
+  "notes": [
+    "Japanese dates/times do not automatically prove international streaming dates or territory availability.",
+    "Each partial verification applies only to checked_claims; studio/cast details remain pending unless explicitly listed."
+  ]
 }
