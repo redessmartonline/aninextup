@@ -73,8 +73,9 @@
 .related-releases .grid.three{align-items:stretch}
 .related-releases .mini.related-card{display:flex;flex-direction:column;align-items:stretch;gap:0;min-width:0;min-height:0;padding:0;overflow:hidden}
 .related-releases .related-card-media{position:relative;display:block;width:100%;height:0;padding-bottom:56.25%;overflow:hidden;background:#080d1a}
+.related-releases .related-card-media.has-portrait-cover:before{content:"";position:absolute;inset:-12px;background:inherit;background-size:cover;background-position:center;filter:blur(12px);opacity:.5;transform:scale(1.08)}
 .related-releases .related-card-media .related-card-image{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:center}
-.related-releases .related-card-media .related-card-image.is-portrait{object-fit:contain;background:#080d1a}
+.related-releases .related-card-media .related-card-image.is-portrait{z-index:1;object-fit:contain;background:transparent}
 /* Support cached article scripts while a new page bundle propagates. */
 .related-releases .mini.related-card>img.related-card-image{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:center}
 .related-releases .mini.related-card>img.related-card-image.is-portrait{object-fit:contain;background:#080d1a}
