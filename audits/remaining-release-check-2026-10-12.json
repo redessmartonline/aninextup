@@ -1,0 +1,737 @@
+{
+  "reviewedOn": "2026-10-12",
+  "scope": "57 remaining existing articles inventoried. VERIFIED_CORE applies only to stated claims; PARTIAL is not a completed fact certification. The 15 featured/upcoming checks remain in a separate ledger.",
+  "articles": [
+    {
+      "slug": "a-certain-dark-item-release-date",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "VERIFIED_CORE",
+      "pending": "International/local catalog timing not inferred from Japan announcements",
+      "articleSources": [
+        "https://toaru-project.com/item/onair/",
+        "https://toaru-project.com/item/story/01.html",
+        "https://toaru-project.com/item/staffcast/index.html",
+        "https://toaru-project.com/item/",
+        "https://www.youtube.com/watch?v=NNHxQJgZdbQ",
+        "https://toaru-project.com/item/news/",
+        "https://s.mxtv.jp/anime/toaru-item/",
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+        "https://www.youtube.com/watch?v=bf6XcU3uL9I"
+      ],
+      "source": "https://toaru-project.com/item/onair/",
+      "verified": "Japan television October 9; ABEMA advance October 3; international times separately"
+    },
+    {
+      "slug": "ace-of-diamond-second-season",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "VERIFIED_CORE",
+      "pending": "International/local catalog timing not inferred from Japan announcements",
+      "articleSources": [
+        "https://diaace.com/",
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+        "https://www.tv-tokyo.co.jp/anime/diaace2_2nd/",
+        "https://www.tv-tokyo.co.jp/information/202603/5560.html",
+        "https://www.tv-tokyo.co.jp/anime/diaace2_2nd/news/index.html",
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll?lid=0ojihzvhs258"
+      ],
+      "source": "https://www.tv-tokyo.co.jp/anime/diaace2_2nd/",
+      "verified": "Second cour Japan October 11"
+    },
+    {
+      "slug": "anime-news-october-2026",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "PARTIAL",
+      "pending": "Fresh primary-source corroboration of the exact date and regional platform remains open",
+      "articleSources": [
+        "https://news.hidive.com/2026/9/30/heres-the-anime-coming-to-and-leaving-hidive-in-october-2026",
+        "https://about.netflix.com/en/news/romance-anime-lineup-october",
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll"
+      ]
+    },
+    {
+      "slug": "anime-releasing-december-2026",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "VERIFIED_CORE",
+      "pending": "International cinema dates and local streaming hours remain title-specific",
+      "articleSources": [
+        "https://kusuriyanohitorigoto.jp/news/2520/"
+      ],
+      "verified": "Listed release dates checked against distributor/production announcements; November expanded to seven launches"
+    },
+    {
+      "slug": "anime-releasing-november-2026",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "VERIFIED_CORE",
+      "pending": "International cinema dates and local streaming hours remain title-specific",
+      "articleSources": [
+        "https://www.tbs.co.jp/anime/takopi_project/series/news/news20260817.html",
+        "https://www.votoms-gh.com/news/detail.php?id=23579",
+        "https://about.netflix.com/ja/news/anime-nyc-2026",
+        "https://mahoyo-movie.com/",
+        "https://demonscrest-anime.com/",
+        "https://rakuen-tsuiho-r.com/"
+      ],
+      "verified": "Listed release dates checked against distributor/production announcements; November expanded to seven launches"
+    },
+    {
+      "slug": "aoashi-season-2",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "VERIFIED_CORE",
+      "pending": "International/local catalog timing not inferred from Japan announcements",
+      "articleSources": [
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+        "https://aoashi-pr.com/",
+        "https://aoashi-pr.com/onair/"
+      ],
+      "source": "https://aoashi-pr.com/onair/",
+      "verified": "Japan streaming October 4; some Japan services October 8"
+    },
+    {
+      "slug": "apothecary-diaries-movie",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "VERIFIED_CORE",
+      "pending": "International/local catalog timing not inferred from Japan announcements",
+      "articleSources": [
+        "https://kusuriyanohitorigoto.jp/news/3082/",
+        "https://kusuriyanohitorigoto.jp/news/3085/",
+        "https://kusuriyanohitorigoto.jp/news/movie-version/",
+        "https://www.toho.co.jp/movie/lineup/",
+        "https://kusuriyanohitorigoto.jp/movie/staffcast/",
+        "https://www.crunchyroll.com/es/news/announcements/2026/10/8/crunchyroll-apothecary-diaries-the-late-ladys-cines",
+        "https://kusuriyanohitorigoto.jp/news/2520/"
+      ],
+      "source": "https://kusuriyanohitorigoto.jp/news/2520/",
+      "verified": "December 11 Japan cinema; global streaming not announced"
+    },
+    {
+      "slug": "apothecary-diaries-season-3",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "VERIFIED_CORE",
+      "pending": "International/local catalog timing not inferred from Japan announcements",
+      "articleSources": [
+        "https://kusuriyanohitorigoto.jp/calendar/",
+        "https://kusuriyanohitorigoto.jp/season3/onair/",
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll"
+      ],
+      "source": "https://kusuriyanohitorigoto.jp/season3/onair/",
+      "verified": "Japan October 2; second cour April 2027"
+    },
+    {
+      "slug": "ascendance-of-a-bookworm-part-4",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "VERIFIED_CORE",
+      "pending": "International/local catalog timing not inferred from Japan announcements",
+      "articleSources": [
+        "https://www.crunchyroll.com/es/news/latest/2026/10/3/ascendance-of-a-bookworm-parte-4-anime-anuncio",
+        "https://www.witstudio.co.jp/news/post-45"
+      ],
+      "source": "https://www.witstudio.co.jp/news/post-45",
+      "verified": "TV adaptation confirmed; date pending"
+    },
+    {
+      "slug": "black-clover-season-2",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "PARTIAL",
+      "pending": "Fresh primary-source corroboration of the exact date and regional platform remains open",
+      "articleSources": [
+        "https://www.tv-tokyo.co.jp/anime/bclover/news/",
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+        "https://www.youtube.com/watch?v=ZRrFCX47cJc",
+        "https://bclover.jp/news/detail.php?id=1134592",
+        "https://bclover.jp/character/"
+      ]
+    },
+    {
+      "slug": "blue-box-season-2",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "PARTIAL",
+      "pending": "Fresh primary-source corroboration of the exact date and regional platform remains open",
+      "articleSources": [
+        "https://about.netflix.com/en/news/romance-anime-lineup-october",
+        "https://media.netflix.com/en/only-on-netflix/81663323"
+      ]
+    },
+    {
+      "slug": "cosmoship-yamato-root-2199",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "VERIFIED_CORE",
+      "pending": "International/local catalog timing not inferred from Japan announcements",
+      "articleSources": [
+        "https://production-ig.co.jp/hotnews/2026/100601.html",
+        "https://www.khara.co.jp/2026/10/06/261005-1/"
+      ],
+      "source": "https://www.khara.co.jp/2026/10/06/261005-1/",
+      "verified": "Feature film announced; release date pending"
+    },
+    {
+      "slug": "dandivine-release-date",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "PARTIAL",
+      "pending": "Fresh primary-source corroboration of the exact date and regional platform remains open",
+      "articleSources": [
+        "https://www.aniplex.co.jp/lineup/dandivine/",
+        "https://gattaishin.com/dandivine/",
+        "https://www.sonymusic.co.jp/artist/takanorinishikawa/info/586805",
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+        "https://www.youtube.com/watch?v=ihJfkOT_0wU",
+        "https://gattaishin.com/dandivine/news/?id=758"
+      ]
+    },
+    {
+      "slug": "detective-is-already-dead-season-2",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "PARTIAL",
+      "pending": "Fresh primary-source corroboration of the exact date and regional platform remains open",
+      "articleSources": [
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+        "https://www.kadokawa.co.jp/product/video2730/",
+        "https://license.kadokawa.co.jp/anime/2026fall/entry-33204.html"
+      ]
+    },
+    {
+      "slug": "dr-stone-terraforming-anime",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "VERIFIED_CORE",
+      "pending": "International/local catalog timing not inferred from Japan announcements",
+      "articleSources": [
+        "https://www.youtube.com/watch?v=-Vk8vSnnmnY",
+        "https://dr-stone.jp/movie/terraforming/",
+        "https://dr-stone.jp/news/6340/",
+        "https://www.crunchyroll.com/news/latest/2026/10/10/dr-stone-terraforming-anime-announced"
+      ],
+      "source": "https://dr-stone.jp/news/6340/",
+      "verified": "Epilogue adaptation announced; release date pending"
+    },
+    {
+      "slug": "dragon-ball-super-beerus",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "CONFLICT_FLAGGED",
+      "pending": "Crunchyroll October 11 availability report conflicts with October 18 Episode 1 calendar; resolve per territory",
+      "articleSources": [
+        "https://en.dragon-ball-official.com/news/01_4487.html",
+        "https://en.dragon-ball-official.com/news/01_4509.html",
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+        "https://www.crunchyroll.com/es-es/news/latest/2026/10/11/dragon-ball-super-beerus-opening-ending-sin-creditos",
+        "https://www.crunchyroll.com/es/news/seasonal-lineup/2026/10/11/crunchyroll-calendario-semanal-otono-2026",
+        "https://dragonball-super.com/en/",
+        "https://prensa.disney.es/noticias/dragon-ball-super%3A-beerus-llega-el-14-de-octubre-a-disney%2B"
+      ],
+      "verified": "Japan television October 11; Japan streaming October 12",
+      "source": "https://en.dragon-ball-official.com/news/01_4487.html"
+    },
+    {
+      "slug": "fall-2026-anime-calendar",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "PARTIAL",
+      "pending": "Fresh primary-source corroboration of the exact date and regional platform remains open",
+      "articleSources": [
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+        "https://media.netflix.com/en/only-on-netflix/81088875"
+      ]
+    },
+    {
+      "slug": "firefly-wedding",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "VERIFIED_CORE",
+      "pending": "International/local catalog timing not inferred from Japan announcements",
+      "articleSources": [
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+        "https://www.crunchyroll.com/es-es/news/announcements/2026/10/6/firefly-wedding-anime-fecha-crunchyroll"
+      ],
+      "source": "https://www.fujitv.co.jp/fujitv/news/20261113.html",
+      "verified": "October 9 Japan television"
+    },
+    {
+      "slug": "fledgling-demon-lords-starter-shop",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "VERIFIED_CORE",
+      "pending": "International/local catalog timing not inferred from Japan announcements",
+      "articleSources": [
+        "https://www.crunchyroll.com/ko/news/latest/2026/10/6/the-fledgling-demon-lords-starter-shop-anime-teaser-trailer-key-visual-ash-cast",
+        "https://dena.com/jp/news/5447/"
+      ],
+      "source": "https://dena.com/jp/news/5447/",
+      "verified": "January 2027 Japan; exact day and international platform pending"
+    },
+    {
+      "slug": "full-clearing-another-world-zero-believers-premiere",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "PARTIAL",
+      "pending": "Fresh primary-source corroboration of the exact date and regional platform remains open",
+      "articleSources": [
+        "https://www.crunchyroll.com/news/latest/2026/9/30/full-clearing-another-world-under-a-goddess-with-zero-believers-anime-releases-1st-full-trailer",
+        "https://zero-believers-anime.com/movie/",
+        "https://zero-believers-anime.com/",
+        "https://www.crunchyroll.com/news/latest/2026/9/4/full-clearing-another-world-under-a-goddess-with-zero-believers-anime-october-11-release-date-key-visual-theme-songs-cast"
+      ]
+    },
+    {
+      "slug": "hello-witch-love-potion-release-date",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "VERIFIED_CORE",
+      "pending": "International/local catalog timing not inferred from Japan announcements",
+      "articleSources": [
+        "https://www.crunchyroll.com/es/news/seasonal-lineup/2026/9/15/otono-2026-anime-crunchyroll",
+        "https://www.crunchyroll.com/simulcastcalendar?filter=premium",
+        "https://horemajo-anime.com/onair/index.html",
+        "https://horemajo-anime.com/staffcast/index.html",
+        "https://horemajo-anime.com/story/index.html",
+        "https://www.crossinfworld.com/Hello-I-am-a-Witch-and-my-Crush-Wants-me-to-Make-a-Love-Potion.html",
+        "https://www.tristone.co.jp/artists/reini/",
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll"
+      ],
+      "source": "https://horemajo-anime.com/onair/index.html",
+      "verified": "Japan television and first streaming October 5; other Japan services October 10"
+    },
+    {
+      "slug": "hirayasumi-anime-release-date",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "VERIFIED_CORE",
+      "pending": "International/local catalog timing not inferred from Japan announcements",
+      "articleSources": [
+        "https://hirayasumi-anime.jp/en/",
+        "https://www.viz.com/blog/posts/a-first-look-at-the-hirayasumi-anime",
+        "https://www.viz.com/press-releases/v/1006748",
+        "https://hirayasumi-anime.jp/"
+      ],
+      "source": "https://hirayasumi-anime.jp/en/",
+      "verified": "January 2027 NHK General; exact day pending"
+    },
+    {
+      "slug": "horror-collector-release-date",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "VERIFIED_CORE",
+      "pending": "International/local catalog timing not inferred from Japan announcements",
+      "articleSources": [
+        "https://www.nhk-character.com/chara/kyoufucollector/news/20261009_89.html",
+        "https://www.nhk-character.com/chara/kyoufucollector/news/20260725_48.html",
+        "https://www.nhk-character.com/chara/kyoufucollector/staffcast",
+        "https://www.nhk-character.com/chara/kyoufucollector/",
+        "https://www.nhk-character.com/chara/kyoufucollector/wp-content/themes/kyoufucollector/assets/img/top/fv_onair.webp"
+      ],
+      "source": "https://www.nhk-character.com/chara/kyoufucollector/news/20261009_89.html",
+      "verified": "Japan television October 10; Japan streaming October 15; international times separate"
+    },
+    {
+      "slug": "iceblade-sorcerer-ii",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "PARTIAL",
+      "pending": "Fresh primary-source corroboration of the exact date and regional platform remains open",
+      "articleSources": [
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+        "https://hyouken-anime.com/",
+        "https://hyouken-anime.com/33/",
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll?lid=0ojihzvhs258"
+      ]
+    },
+    {
+      "slug": "im-looking-for-a-zombie",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "PARTIAL",
+      "pending": "Fresh primary-source corroboration of the exact date and regional platform remains open",
+      "articleSources": [
+        "https://www.crunchyroll.com/news/announcements/2026/10/2/im-looking-for-a-zombie-anime-english-dub-release-date-cast-crew",
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+        "https://zommasu.com/"
+      ]
+    },
+    {
+      "slug": "laid-off-cheat-granting-mage",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "PARTIAL",
+      "pending": "Fresh primary-source corroboration of the exact date and regional platform remains open",
+      "articleSources": [
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+        "https://www.crunchyroll.com/news/announcements/2026/10/5/the-laid-off-cheat-granting-mage-enjoys-a-second-lease-on-life-anime-english-dub-release-date-cast-crew",
+        "https://corporate.goodsmile.com/ja/news/4381/",
+        "https://sh-anime.shochiku.co.jp/chiifuyo-anime/"
+      ]
+    },
+    {
+      "slug": "live-action-firefly-wedding-tv-drama-announced-for-2027-a1ac1e86",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "VERIFIED_CORE",
+      "pending": "International/local catalog timing not inferred from Japan announcements",
+      "articleSources": [
+        "https://www.crunchyroll.com/news/latest/2026/10/9/live-action-firefly-wedding-tv-drama-announced-for-2027",
+        "https://us.oricon-group.com/news/9367/",
+        "https://www.fujitv.co.jp/fujitv/news/20261113.html"
+      ],
+      "source": "https://www.fujitv.co.jp/fujitv/news/20261113.html",
+      "verified": "2027 live-action drama; exact date pending"
+    },
+    {
+      "slug": "magic-knight-rayearth-2026",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "VERIFIED_CORE",
+      "pending": "International/local catalog timing not inferred from Japan announcements",
+      "articleSources": [
+        "https://rayearth-anime.com/",
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+        "https://rayearth-anime.com/onair/",
+        "https://rayearth-anime.com/staffcast/",
+        "https://www.universal-music.co.jp/toaka/news/2026-09-20/",
+        "https://www.youtube.com/watch?v=67GqhfLw3ys",
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll?lid=0ojihzvhs258"
+      ],
+      "source": "https://rayearth-anime.com/onair/",
+      "verified": "Japan television October 7; Japan streaming after midnight October 8"
+    },
+    {
+      "slug": "manchuria-opium-squad-anime",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "VERIFIED_CORE",
+      "pending": "International/local catalog timing not inferred from Japan announcements",
+      "articleSources": [
+        "https://news.ponycanyon.co.jp/2026/10/126491",
+        "https://www.crunchyroll.com/news/latest/2026/10/4/manchuria-opium-squad-anime-adaptation"
+      ],
+      "source": "https://news.ponycanyon.co.jp/2026/10/126491",
+      "verified": "Adaptation announced; date pending"
+    },
+    {
+      "slug": "naruto-ninku-anime",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "VERIFIED_CORE",
+      "pending": "International/local catalog timing not inferred from Japan announcements",
+      "articleSources": [
+        "https://www.viz.com/press-releases/v/1006772",
+        "https://naruto-official.com/en/special/naruto-ninku?nolangsuggestion=1",
+        "https://www.youtube.com/watch?v=hCZi_R0MnvE",
+        "https://prtimes.jp/main/html/rd/p/000002385.000002734.html",
+        "https://naruto-official.com/en/news/01_2696"
+      ],
+      "source": "https://naruto-official.com/en/news/01_2696",
+      "verified": "Four episodes announced; date pending"
+    },
+    {
+      "slug": "netflix-october-2026",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "PARTIAL",
+      "pending": "Fresh primary-source corroboration of the exact date and regional platform remains open",
+      "articleSources": [
+        "https://about.netflix.com/en/news/romance-anime-lineup-october",
+        "https://about.netflix.com/en/news/netflix-anime-titles-revealed-mappa-15th-anniversary"
+      ]
+    },
+    {
+      "slug": "nia-liston-release-date",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "VERIFIED_CORE",
+      "pending": "International/local catalog timing not inferred from Japan announcements",
+      "articleSources": [
+        "https://kyoranreijo-pr.com/"
+      ],
+      "source": "https://kyoranreijo-pr.com/",
+      "verified": "Japan October 6; international platform not established"
+    },
+    {
+      "slug": "nues-exorcist-anime-summer-2027",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "PARTIAL",
+      "pending": "Production site inaccessible; exact day remains unannounced",
+      "articleSources": [
+        "https://www.nues-exorcist.com/",
+        "https://www.youtube.com/@jumpchannel/",
+        "https://www.youtube.com/watch?v=OZx5W4o4KT8",
+        "https://www.crunchyroll.com/news/latest/2026/10/12/nues-exorcist-anime-adaptation-announced-summer-2027",
+        "https://www.animatetimes.com/news/details.php?id=1791798239"
+      ],
+      "verified": "Crunchyroll reports third quarter 2027",
+      "supportingSource": "https://www.crunchyroll.com/pt-br/news/latest/2026/10/12/nues-exorcist-anime-anuncio-2027"
+    },
+    {
+      "slug": "otome-heroines-fight-for-survival-anime",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "VERIFIED_CORE",
+      "pending": "International/local catalog timing not inferred from Japan announcements",
+      "articleSources": [
+        "https://www.furyu.jp/news/2026/10/otosaba_anime/",
+        "https://www.anime.com/news/otome-heroines-fight-for-survival-anime-july-2027"
+      ],
+      "source": "https://www.furyu.jp/news/2026/10/otosaba_anime/",
+      "verified": "July 2027 Japan; exact day pending"
+    },
+    {
+      "slug": "pok-mon-horizons-anime-unseals-treasures-of-ruin-in-latest-wonder-a6b9d2d5",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "PARTIAL",
+      "pending": "Fresh primary-source corroboration of the exact date and regional platform remains open",
+      "articleSources": [
+        "https://www.crunchyroll.com/news/latest/2026/10/9/pokemon-horizons-anime-treasures-of-ruin-wonder-voyage-arc-trailer",
+        "https://www.pokemon.co.jp/info/2026/05/260508_a01.html",
+        "https://www.youtube.com/watch?v=n6VZjxUNAww",
+        "https://x.com/anipoke_PR/status/2108506510271889739",
+        "https://www.tv-tokyo.co.jp/anime/pocketmonster2023/",
+        "https://sg.portal-pokemon.com/pokedex/1001/",
+        "https://sg.portal-pokemon.com/pokedex/1002/",
+        "https://sg.portal-pokemon.com/pokedex/1003/",
+        "https://sg.portal-pokemon.com/pokedex/1004/",
+        "https://press.pokemon.com/en/releases/Pokemon-Horizons-The-Series-to-Return-for-Fourth-Season"
+      ]
+    },
+    {
+      "slug": "pokemon-horizons-season-4-wonders-ahead",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "PARTIAL",
+      "pending": "Official announcement body inaccessible; exact date requires another primary-source check",
+      "articleSources": [
+        "https://pocketmonsters.net/index.php/news/9602",
+        "https://www.pokemon.com/us/news/pokemon-horizons-season-4-wonders-ahead-coming-to-netflix"
+      ],
+      "verified": "Official Pokémon index confirms Season 4 Wonders Ahead and Netflix; February 27 U.S. date not freshly corroborated"
+    },
+    {
+      "slug": "psyren-release-date",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "PARTIAL",
+      "pending": "Fresh primary-source corroboration of the exact date and regional platform remains open",
+      "articleSources": [
+        "https://www.crunchyroll.com/news/announcements/2026/10/2/psyren-anime-release-date-crunchyroll"
+      ]
+    },
+    {
+      "slug": "ramparts-of-ice-season-2",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "PARTIAL",
+      "pending": "Fresh primary-source corroboration of the exact date and regional platform remains open",
+      "articleSources": [
+        "https://about.netflix.com/en/news/romance-anime-lineup-october",
+        "https://about.netflix.com/en/news/the-ramparts-of-ice-season-2"
+      ]
+    },
+    {
+      "slug": "ranma-season-3",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "PARTIAL",
+      "pending": "Fresh primary-source corroboration of the exact date and regional platform remains open",
+      "articleSources": [
+        "https://about.netflix.com/en/news/netflix-anime-titles-revealed-mappa-15th-anniversary",
+        "https://ranma-pr.com/news/2397/",
+        "https://ranma-pr.com/onair/",
+        "https://ranma-pr.com/news/2467/"
+      ]
+    },
+    {
+      "slug": "reborn-space-mercenary",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "PARTIAL",
+      "pending": "Fresh primary-source corroboration of the exact date and regional platform remains open",
+      "articleSources": [
+        "https://www.crunchyroll.com/news/announcements/2026/10/2/reborn-as-a-space-mercenary-i-woke-up-piloting-the-strongest-starship-anime-english-dub-release-date-cast-crew",
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+        "https://www.youtube.com/watch?v=ov_3-6JOAkk"
+      ]
+    },
+    {
+      "slug": "record-of-a-fallen-vampire-anime",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "VERIFIED_CORE",
+      "pending": "International/local catalog timing not inferred from Japan announcements",
+      "articleSources": [
+        "https://news.ponycanyon.co.jp/2026/10/126515"
+      ],
+      "source": "https://news.ponycanyon.co.jp/2026/10/126515",
+      "verified": "2027 television; exact date pending"
+    },
+    {
+      "slug": "red-riding-hood-detective-story",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "PARTIAL",
+      "pending": "Fresh primary-source corroboration of the exact date and regional platform remains open",
+      "articleSources": [
+        "https://akazukin-anime.com/",
+        "https://www.crunchyroll.com/news/latest/2026/10/5/red-riding-hood-a-detective-story-anime-main-trailer-key-visual-january-2027-release-date"
+      ]
+    },
+    {
+      "slug": "reincarnated-goblin",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "PARTIAL",
+      "pending": "Fresh primary-source corroboration of the exact date and regional platform remains open",
+      "articleSources": [
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+        "https://www.crunchyroll.com/watch/GE00384315JAJP/so-whats-wrong-with-getting-reborn-as-a-goblin",
+        "https://www.primevideo.com/-/es/detail/0FSWRYW6VE99Y46Q6QXONEVZA4"
+      ]
+    },
+    {
+      "slug": "returners-magic-season-2",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "PARTIAL",
+      "pending": "Fresh primary-source corroboration of the exact date and regional platform remains open",
+      "articleSources": [
+        "https://www.fujitv.com/animation/areturnersmagicshouldbespecialseason2/",
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll"
+      ]
+    },
+    {
+      "slug": "romelia-war-chronicle",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "VERIFIED_CORE",
+      "pending": "International/local catalog timing not inferred from Japan announcements",
+      "articleSources": [
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+        "https://romelia-senki.com/onair/",
+        "https://romelia-senki.com/staff/",
+        "https://romelia-senki.com/"
+      ],
+      "source": "https://romelia-senki.com/onair/",
+      "verified": "Japan advance streaming October 3; Japan television October 5"
+    },
+    {
+      "slug": "sasaki-and-peeps-season-2-anime-shares-creditless-opening-and-end-a03f04c7",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "PARTIAL",
+      "pending": "Fresh primary-source corroboration of the exact date and regional platform remains open",
+      "articleSources": [
+        "https://www.crunchyroll.com/news/latest/2026/10/9/sasaki-and-peeps-season-2-anime-creditless-opening-ending",
+        "https://sasapi-anime.com/index.html",
+        "https://sasapi-anime.com/music/opening_2nd.html",
+        "https://sasapi-anime.com/music/ending_2nd.html",
+        "https://sasapi-anime.com/staff.html",
+        "https://sasapi-anime.com/onair.html",
+        "https://sasapi-anime.com/intro.html"
+      ]
+    },
+    {
+      "slug": "sasaki-and-peeps-season-2",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "VERIFIED_CORE",
+      "pending": "International/local catalog timing not inferred from Japan announcements",
+      "articleSources": [
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+        "https://www.kadokawa.co.jp/product/video2720/"
+      ],
+      "source": "https://sasapi-anime.com/onair.html",
+      "verified": "Japan television October 7; Prime Japan October 7; other Japan services October 12"
+    },
+    {
+      "slug": "suikoden-anime",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "VERIFIED_CORE",
+      "pending": "International/local catalog timing not inferred from Japan announcements",
+      "articleSources": [
+        "https://suikoden-anime.com/onair/"
+      ],
+      "source": "https://suikoden-anime.com/?lang=en",
+      "verified": "Japan October 3; international platform depends on territory"
+    },
+    {
+      "slug": "takopis-original-sin-movie",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "VERIFIED_CORE",
+      "pending": "International/local catalog timing not inferred from Japan announcements",
+      "articleSources": [
+        "https://www.tbs.co.jp/anime/takopi_project/series/news/news20260817.html"
+      ],
+      "source": "https://www.tbs.co.jp/anime/takopi_project/series/news/news20260817.html",
+      "verified": "November 27 Japan cinema"
+    },
+    {
+      "slug": "tale-secret-saint",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "PARTIAL",
+      "pending": "Fresh primary-source corroboration of the exact date and regional platform remains open",
+      "articleSources": [
+        "https://www.crunchyroll.com/news/latest/2026/10/5/a-tale-of-the-secret-saint-anime-creditless-opening-ending-videos",
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll"
+      ]
+    },
+    {
+      "slug": "tank-chair-release-date",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "PARTIAL",
+      "pending": "Fresh primary-source corroboration of the exact date and regional platform remains open",
+      "articleSources": [
+        "https://www.tankchair-anime.com/news-single.php?id=24061&amp;offset=10",
+        "https://www.tankchair-anime.com/news-single.php?id=25725"
+      ]
+    },
+    {
+      "slug": "the-moon-on-a-rainy-night-anime",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "VERIFIED_CORE",
+      "pending": "International/local catalog timing not inferred from Japan announcements",
+      "articleSources": [
+        "https://www.amayonotsuki.jp/",
+        "https://amayonotsuki.jp/",
+        "https://amayonotsuki.jp/news/post-36",
+        "https://prtimes.jp/main/html/rd/p/000006620.000001719.html",
+        "https://www.youtube.com/watch?v=Q-W1E8Y9Jv0"
+      ],
+      "source": "https://www.amayonotsuki.jp/",
+      "verified": "2027 television; exact date pending"
+    },
+    {
+      "slug": "tokyo-revengers-war-three-titans",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "PARTIAL",
+      "pending": "Fresh primary-source corroboration of the exact date and regional platform remains open",
+      "articleSources": [
+        "https://press.disneyplus.com/news/next-on-disney-plus-october-2026",
+        "https://tokyo-revengers-anime.com/onair/"
+      ]
+    },
+    {
+      "slug": "vermilion-mask-release-date",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "PARTIAL",
+      "pending": "Fresh primary-source corroboration of the exact date and regional platform remains open",
+      "articleSources": [
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+        "https://prtimes.jp/main/html/rd/p/000000815.000051825.html",
+        "https://the-vermilion-mask.com/en/staff/",
+        "https://the-vermilion-mask.com/",
+        "https://www.prnewswire.com/news-releases/the-mask-comes-off-in-october-the-vermilion-mask-reveals-second-main-pv-key-visual-theme-songs-and-new-cast-302875686.html"
+      ]
+    },
+    {
+      "slug": "walking-home-with-you-anime",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "VERIFIED_CORE",
+      "pending": "International/local catalog timing not inferred from Japan announcements",
+      "articleSources": [
+        "https://prtimes.jp/main/html/rd/p/000000212.000127482.html"
+      ],
+      "source": "https://prtimes.jp/main/html/rd/p/000000212.000127482.html",
+      "verified": "April 2027 Nippon TV; exact day pending"
+    },
+    {
+      "slug": "witch-on-the-holy-night-movie",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "VERIFIED_CORE",
+      "pending": "International/local catalog timing not inferred from Japan announcements",
+      "articleSources": [
+        "https://mahoyo-movie.com/",
+        "https://www.ufotable.com/news/article/3055/",
+        "https://mahoyo-movie.com/news/?article_id=71368",
+        "https://www.crunchyroll.com/news/announcements/2026/9/10/witch-on-the-holy-night-anime-movie-worldwide-release-january-2027",
+        "https://www.youtube.com/watch?v=k1jyM2kSBzA",
+        "https://www.crunchyroll.com/it/news/announcements/2026/9/10/witch-on-the-holy-night-anime-uscita-mondiale-gennaio-2027"
+      ],
+      "source": "https://mahoyo-movie.com/",
+      "verified": "November 20 Japan cinema"
+    },
+    {
+      "slug": "worlds-strongest-witch",
+      "scope": "Core release/date/platform review only; cast, staff, plot and image rights are outside this audit",
+      "status": "PARTIAL",
+      "pending": "Fresh primary-source corroboration of the exact date and regional platform remains open",
+      "articleSources": [
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+        "https://sekamajo-anime.com/onair/",
+        "https://honeyworks.jp/news/11670/",
+        "https://www.youtube.com/watch?v=0ISyxMMLVg8",
+        "https://www.yte.co.jp/program/list/sekamajo/",
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll?lid=0ojihzvhs258"
+      ]
+    }
+  ],
+  "newRelease": {
+    "slug": "fool-night-release-date",
+    "status": "VERIFIED_CORE",
+    "release": "November 26, 2026; all episodes; Netflix worldwide",
+    "source": "https://about.netflix.com/ja/news/anime-nyc-2026"
+  }
+}

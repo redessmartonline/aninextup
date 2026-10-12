@@ -2,6 +2,7 @@ window.ANINEXTUP_DATA={
 updated:"2026-10-12",
 site:{timezone:"America/Santo_Domingo",season:"Fall 2026"},
 anime:[
+{id:"fool-night",image:"https://i.ytimg.com/vi/V3ibS5Xa6cM/hqdefault.jpg",title:"Fool Night",date:"2026-11-26",platform:"Netflix",article:"articles/fool-night-release-date",category:"Premiere",status:"confirmed"},
 {id:"hirayasumi",image:"https://i.ytimg.com/vi/NreJuPDZWqU/maxresdefault.jpg",title:"Hirayasumi",date:null,dateLabel:"January 2027",platform:"NHK General (Japan)",article:"articles/hirayasumi-anime-release-date",category:"TV Anime",status:"month-confirmed"},
 {id:"walking-home-with-you",image:"https://prcdn.freetls.fastly.net/release_image/127482/212/127482-212-29a04666e172dcea5d127ae9582a014d-1460x2064.jpg",title:"Walking Home with You",date:null,dateLabel:"April 2027",platform:"Nippon TV",article:"articles/walking-home-with-you-anime",category:"TV Anime",status:"month-confirmed"},
 {id:"pokemon-horizons-season-4-wonders-ahead",image:"https://i.ytimg.com/vi/QwXy-HbEKmI/maxresdefault.jpg",title:"Pokémon Horizons: Season 4—Wonders Ahead",date:"2027-02-27",platform:"Netflix (U.S.)",article:"articles/pokemon-horizons-season-4-wonders-ahead",category:"Season Premiere",status:"confirmed"},
