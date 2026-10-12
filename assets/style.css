@@ -76,3 +76,6 @@
 .related-releases .related-card-copy h3{margin:0 0 8px;font-size:18px;line-height:1.3}
 .related-releases .related-card-copy span{display:block;line-height:1.5}
 @media(max-width:420px){.related-releases .mini.related-card{gap:14px;min-height:112px}.related-releases .related-card-image{flex-basis:96px;width:96px;height:54px}}
+
+/* Three-column related grids keep thumbnails compact above the text. */
+@media(min-width:781px){.related-releases .grid.three .mini.related-card{flex-direction:column;align-items:flex-start}.related-releases .grid.three .related-card-image{flex-basis:auto}}

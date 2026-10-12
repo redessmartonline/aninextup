@@ -72,11 +72,21 @@ const renderRelatedReleases=data=>{
   head.append(title,calendar);
   const grid=document.createElement('div');grid.className='grid three';
   ranked.forEach(a=>{
-    const link=document.createElement('a');link.className='mini data-card';link.href='../'+a.article.replace(/^\//,'');
+    const link=document.createElement('a');link.className='mini data-card related-card';link.href='../'+a.article.replace(/^\//,'');
+    if(a.image){
+      try{
+        const source=new URL(a.image,location.origin+'/');
+        if((source.protocol==='https:'||source.origin===location.origin)&&!/(?:favicon|\.svg(?:$|\?))/i.test(source.href)){
+          const image=document.createElement('img');image.className='related-card-image';image.src=source.href;image.alt='';image.width=160;image.height=90;image.loading='lazy';image.decoding='async';
+          image.addEventListener('error',()=>image.remove(),{once:true});link.append(image);
+        }
+      }catch{/* An invalid cover must not prevent the related link from rendering. */}
+    }
+    const copy=document.createElement('div');copy.className='related-card-copy';
     const label=document.createElement('b');label.textContent=a.category||'ANIME RELEASE';
     const heading=document.createElement('h3');heading.textContent=a.title;
     const detail=document.createElement('span');detail.textContent=(a.dateLabel||a.date||'DATE TBA')+' · '+(a.platform||'Release updates')+' →';
-    link.append(label,heading,detail);grid.append(link);
+    copy.append(label,heading,detail);link.append(copy);grid.append(link);
   });
   section.replaceChildren(head,grid);
   article.appendChild(section);
