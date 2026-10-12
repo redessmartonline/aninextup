@@ -444,6 +444,69 @@ def opportunity_score(when, title, desc, now):
     demand = 0  # No Search Console query data is available inside this workflow.
     return {"demand": demand, "freshness": freshness, "intent": intent, "ranking": ranking, "value": value}
 
+def related_release_section(title, data, article_slug):
+    """Link to existing related articles; use release hubs when no match exists."""
+    stopwords = set(
+        "a an and as at by for from in is its of on or the to with x "
+        "anime season release date where watch official announcement announced "
+        "new latest first second third trailer teaser pv tv episode episodes "
+        "premiere streaming opening ending shares reveals revealed film movie "
+        "manga update updates".split()
+    )
+
+    def tokens(value):
+        return {
+            word for word in re.findall(r"[a-z0-9]+", value.lower())
+            if len(word) > 2 and word not in stopwords and not word.isdigit()
+        }
+
+    current_tokens = tokens(title)
+    candidates = []
+    hubs = []
+    seen = set()
+    for entry in re.findall(r"\{[^\n{}]*\}", data):
+        fields = {}
+        for key in ("title", "article"):
+            match = re.search(key + r':("(?:\\.|[^"\\])*")', entry)
+            if match:
+                fields[key] = json.loads(match.group(1))
+        path = fields.get("article", "")
+        label = fields.get("title", "")
+        if not re.fullmatch(r"articles/[a-z0-9-]+", path) or not label:
+            continue
+        if path == "articles/" + article_slug or path in seen:
+            continue
+        if not (ROOT / (path + ".html")).is_file():
+            continue
+        seen.add(path)
+        score = len(current_tokens & tokens(label))
+        item = (score, label, path.removeprefix("articles/"))
+        if score:
+            candidates.append(item)
+        elif re.search(r"anime calendar|^anime releasing in", label, re.I):
+            hubs.append(item)
+
+    candidates.sort(key=lambda item: (-item[0], item[1]))
+    selected = (candidates + hubs)[:2]
+    if not selected:
+        selected = [
+            (0, "Anime release calendar", "../calendar"),
+            (0, "Where to watch anime", "../where-to-watch"),
+        ]
+    cards = "".join(
+        '<a class="mini" href="' + html.escape(href, quote=True) + '">'
+        '<h3>' + html.escape(label) + '</h3>'
+        '<span>Read the guide →</span></a>'
+        for _, label, href in selected
+    )
+    return (
+        '<section class="related-releases" aria-labelledby="related-releases-heading">'
+        '<div class="section-head"><div><span class="kicker">KEEP WATCHING</span>'
+        '<h2 id="related-releases-heading">Related releases</h2></div></div>'
+        '<div class="grid two">' + cards + '</div></section>'
+    )
+
+
 def main():
     dry_run = os.environ.get("ANINEXTUP_DRY_RUN", "").strip().lower() in ("1", "true", "yes")
     if dry_run:
@@ -634,7 +697,8 @@ def main():
         raise ValueError("A verified editorial cover is required; site logos are not news artwork")
     cover_url = ("https://aninextup.com/" + cover if cover and not cover.startswith("https://") else cover)
     index = {"kind":"guide","image":cover,"title":title,"tag":"OFFICIAL NEWS","description":summary}
-    page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{title_e} — AniNextUp</title><meta name="description" content="{html.escape(summary,quote=True)}"><meta name="robots" content="index,follow"><link rel="canonical" href="{canonical}"><meta property="og:type" content="article"><meta property="og:site_name" content="AniNextUp"><meta property="og:title" content="{title_e}"><meta property="og:description" content="{html.escape(summary,quote=True)}"><meta property="og:url" content="{canonical}"><meta property="og:image" content="{html.escape(cover_url,quote=True)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{title_e}"><meta name="twitter:description" content="{html.escape(summary,quote=True)}"><meta name="twitter:image" content="{html.escape(cover_url,quote=True)}"><link rel="stylesheet" href="../assets/style.css"><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><script type="application/ld+json">{json.dumps(structured,separators=(',',':'))}</script><script type="application/ld+json">{json.dumps(breadcrumb,separators=(',',':'))}</script><script type="application/json" id="aninextup-index">{json.dumps(index,separators=(',',':'))}</script></head><body><header class="site-header"><a class="brand" href="../">ANI<span>NEXTUP</span></a><button class="menu" aria-label="Open navigation" aria-expanded="false">☰</button><nav><a href="../today">TODAY</a><a href="../this-week">THIS WEEK</a><a href="../calendar">CALENDAR</a><a href="../where-to-watch">WHERE TO WATCH</a><a href="../news">NEWS</a></nav></header><main><article class="article"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../">Home</a><span>›</span><a href="../news">News</a><span>›</span><span>{title_e}</span></nav><header class="article-head"><span class="kicker">OFFICIAL NEWS · {today}</span><h1>{title_e}</h1><p class="lead">{html.escape(summary)}</p><p class="byline">By <a href="../about">AniNextUp Editorial Team</a> · <a href="../editorial-policy">How we verify releases</a></p></header><div class="article-hero"><img src="{html.escape(cover_url,quote=True)}" alt="{title_e} — official announcement artwork" loading="eager" decoding="async"></div><div class="info"><div><span>ANNOUNCED</span><strong>{when.date().isoformat()}</strong></div><div><span>SOURCE</span><strong>Crunchyroll</strong></div></div><div class="prose">{trailer_section}{sections}<p>Source: <a href="{link_e}" rel="noopener noreferrer">Read the original announcement on Crunchyroll</a>. Details may change; consult the original announcement for updates.</p><p>Explore the <a href="../calendar">anime release calendar</a> and <a href="../news">latest news</a>.</p></div></article></main><footer><b>ANINEXTUP</b><small>Anime releases, streaming guides, calendars and news.</small></footer><script src="../assets/app.js"></script></body></html>'''
+    related_section = related_release_section(title, data, dest.stem)
+    page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{title_e} — AniNextUp</title><meta name="description" content="{html.escape(summary,quote=True)}"><meta name="robots" content="index,follow"><link rel="canonical" href="{canonical}"><meta property="og:type" content="article"><meta property="og:site_name" content="AniNextUp"><meta property="og:title" content="{title_e}"><meta property="og:description" content="{html.escape(summary,quote=True)}"><meta property="og:url" content="{canonical}"><meta property="og:image" content="{html.escape(cover_url,quote=True)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{title_e}"><meta name="twitter:description" content="{html.escape(summary,quote=True)}"><meta name="twitter:image" content="{html.escape(cover_url,quote=True)}"><link rel="stylesheet" href="../assets/style.css"><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><script type="application/ld+json">{json.dumps(structured,separators=(',',':'))}</script><script type="application/ld+json">{json.dumps(breadcrumb,separators=(',',':'))}</script><script type="application/json" id="aninextup-index">{json.dumps(index,separators=(',',':'))}</script></head><body><header class="site-header"><a class="brand" href="../">ANI<span>NEXTUP</span></a><button class="menu" aria-label="Open navigation" aria-expanded="false">☰</button><nav><a href="../today">TODAY</a><a href="../this-week">THIS WEEK</a><a href="../calendar">CALENDAR</a><a href="../where-to-watch">WHERE TO WATCH</a><a href="../news">NEWS</a></nav></header><main><article class="article"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../">Home</a><span>›</span><a href="../news">News</a><span>›</span><span>{title_e}</span></nav><header class="article-head"><span class="kicker">OFFICIAL NEWS · {today}</span><h1>{title_e}</h1><p class="lead">{html.escape(summary)}</p><p class="byline">By <a href="../about">AniNextUp Editorial Team</a> · <a href="../editorial-policy">How we verify releases</a></p></header><div class="article-hero"><img src="{html.escape(cover_url,quote=True)}" alt="{title_e} — official announcement artwork" loading="eager" decoding="async"></div><div class="info"><div><span>ANNOUNCED</span><strong>{when.date().isoformat()}</strong></div><div><span>SOURCE</span><strong>Crunchyroll</strong></div></div><div class="prose">{trailer_section}{sections}<p>Source: <a href="{link_e}" rel="noopener noreferrer">Read the original announcement on Crunchyroll</a>. Details may change; consult the original announcement for updates.</p><p>Explore the <a href="../calendar">anime release calendar</a> and <a href="../news">latest news</a>.</p></div>{related_section}</article></main><footer><b>ANINEXTUP</b><small>Anime releases, streaming guides, calendars and news.</small></footer><script src="../assets/app.js"></script></body></html>'''
 
     if dry_run:
         print("DRY RUN: would create", dest.relative_to(ROOT), "with verified cover", cover)
