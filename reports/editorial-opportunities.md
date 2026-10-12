@@ -31,3 +31,9 @@ Los artículos deben ser bien desarrollados, con redacción y estructura propias
 Cada propuesta incluirá un esquema y el valor propio que aportará: qué cambió, fechas y disponibilidad regional, contexto relevante y datos aún no confirmados cuando proceda. Cada sección debe aportar información sustantiva. No imponer una longitud fija, repetir información para alargar, inventar hechos ni usar párrafos genéricos. Si faltan datos para desarrollar una noticia, ampliar una guía existente o esperar.
 
 Antes de considerar listo un borrador, revisar coherencia, redundancias, semejanza con las fuentes, atribuciones y respaldo factual. No prometer exclusivas, ausencia absoluta de coincidencias ni una comprobación con detector de plagio que no se haya realizado. Publicar continúa requiriendo aprobación del usuario para el artículo concreto.
+
+## Portada y tráiler obligatorios
+
+Todo artículo nuevo listo para publicar debe incluir portada oficial pertinente y tráiler, teaser o PV oficial verificado. Comprobar anime, temporada/película, identidad del arte, carga, dimensiones, condiciones de uso, ID del vídeo, canal autorizado, pertinencia e inserción. Integrar el vídeo con el componente lite-trailer y enlace alternativo, sin autoplay. Mantener portada coherente en imagen principal, og:image, metadatos e índice.
+
+No usar material de otra obra, favicons, imágenes genéricas, fan edits ni vídeos no cotejados. Las fechas de subida de VideoObject requieren prueba del vídeo; no inferirlas del comunicado. Si falta cualquiera de los dos materiales, registrar pendiente de material y no considerar listo ni publicar el artículo. Tras una publicación aprobada, comprobar que ambos aparecen en la web y distinguir bloqueos del entorno de fallos reales.
