@@ -37,3 +37,10 @@ Antes de considerar listo un borrador, revisar coherencia, redundancias, semejan
 Todo artículo nuevo listo para publicar debe incluir portada oficial pertinente y tráiler, teaser o PV oficial verificado. Comprobar anime, temporada/película, identidad del arte, carga, dimensiones, condiciones de uso, ID del vídeo, canal autorizado, pertinencia e inserción. Integrar el vídeo con el componente lite-trailer y enlace alternativo, sin autoplay. Mantener portada coherente en imagen principal, og:image, metadatos e índice.
 
 No usar material de otra obra, favicons, imágenes genéricas, fan edits ni vídeos no cotejados. Las fechas de subida de VideoObject requieren prueba del vídeo; no inferirlas del comunicado. Si falta cualquiera de los dos materiales, registrar pendiente de material y no considerar listo ni publicar el artículo. Tras una publicación aprobada, comprobar que ambos aparecen en la web y distinguir bloqueos del entorno de fallos reales.
+
+## Dos rutas de descubrimiento
+
+1. Novedades oficiales recientes.
+2. Animes y franquicias con mayor interés relativo comprobable o crecimiento en Google, aunque no tengan un anuncio nuevo. Esta ruta puede proponer guías de obras ya estrenadas: dónde ver, orden de visionado, temporadas y películas, episodios, continuaciones confirmadas o presentación sustantiva, según consultas reales y vacíos de cobertura.
+
+El límite de 24 horas no restringe la edad del anime en la ruta de demanda. Una guía no se presenta como noticia nueva. Registrar ruta, intención, datos comparables por país y periodo, fuentes, valor propio y decisión de actualizar o crear. Máximo tres propuestas en total entre ambas rutas; no prometer que una obra es la más buscada de todo Google. Mantener portada, tráiler oficial, originalidad, desarrollo y aprobación previa para publicación.
