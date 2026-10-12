@@ -84,3 +84,16 @@
 .related-releases .mini.related-card{min-height:0}
 .related-releases .related-card-copy{padding:16px 18px 18px}
 }
+
+/* Verified release facts, readable on narrow screens. */
+.release-summary{padding:22px 24px;margin:24px 0;background:var(--panel);border:1px solid var(--line);border-radius:14px}
+.release-summary h2{font-size:24px;margin:0 0 16px}
+.release-summary dl{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:0}
+.release-summary dl>div{min-width:0}
+.release-summary dt{color:var(--purple);font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.release-summary dd{margin:5px 0 0;overflow-wrap:anywhere}
+.release-summary p{color:var(--muted);font-size:13px;margin:18px 0 0}
+.release-summary a{color:var(--purple);text-decoration:underline}
+.search input{min-width:0}
+.article-head h1,.visual-body h3,.prose a{overflow-wrap:anywhere}
+@media(max-width:780px){.release-summary{padding:18px}.release-summary dl{grid-template-columns:1fr}.search button{padding:0 14px}.article-head h1{font-size:clamp(30px,8vw,43px)}}
