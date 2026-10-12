@@ -1,5 +1,5 @@
 window.ANINEXTUP_DATA={
-updated:"2026-10-11",
+updated:"2026-10-12",
 site:{timezone:"America/Santo_Domingo",season:"Fall 2026"},
 anime:[
 {id:"hirayasumi",image:"https://i.ytimg.com/vi/NreJuPDZWqU/maxresdefault.jpg",title:"Hirayasumi",date:null,dateLabel:"January 2027",platform:"NHK General (Japan)",article:"articles/hirayasumi-anime-release-date",category:"TV Anime",status:"month-confirmed"},
@@ -50,6 +50,7 @@ anime:[
 {id:"ranma-s3",image:"assets/images/ranma-season-3.jpeg",title:"Ranma 1/2 Season 3",date:"2026-10-03",platform:"Netflix",article:"articles/ranma-season-3",category:"Season Premiere",status:"confirmed"}
 ],
 guides:[
+{image:"https://prcdn.freetls.fastly.net/release_image/2734/2385/2734-2385-340b549ebe02035d391e83e4acbb775a-1920x1080.png?auto=webp&bg-color=fff&fit=bounds&format=jpeg&height=1350&quality=85%2C65&width=1950",title:"Naruto × Ninkū Anime: Four Episodes, Official Teaser and Release Status",tag:"OFFICIAL NEWS",article:"articles/naruto-ninku-anime",description:"Naruto × Ninkū is a four-episode crossover supervised by both creators. Explore its story, staff and official teaser, with release and streaming status."},
 {image:"assets/images/covers/sasaki-and-peeps-season-2.jpg",title:"Sasaki and Peeps Season 2 Anime Shares Creditless Opening and Ending Videos",tag:"OFFICIAL NEWS",article:"articles/sasaki-and-peeps-season-2-anime-shares-creditless-opening-and-end-a03f04c7",description:"Sasaki and Peeps Season 2 has released creditless opening and ending videos, featuring MADKID's Unbroken and nonfic!'s Sukipi no Okage!."},
 {image:"https://a.storyblok.com/f/178900/1460x821/0f0acf9126/pokemon-horizons-new-visual.png/m/filters%3Aquality%2895%29format%28webp%29",title:"Pokémon Horizons Anime Unseals Treasures of Ruin in Latest Wonder Voyage Arc Trailer",tag:"OFFICIAL NEWS",article:"articles/pok-mon-horizons-anime-unseals-treasures-of-ruin-in-latest-wonder-a6b9d2d5",description:"A new Pokémon Horizons: Wonder Voyage trailer highlights the Treasures of Ruin—Wo-Chien, Chien-Pao, Ting-Lu and Chi-Yu—as the anime's Paldea storyline continues."},
 {image:"assets/images/covers/firefly-wedding.jpg",title:"Live-Action Firefly Wedding TV Drama Announced for 2027",tag:"OFFICIAL NEWS",article:"articles/live-action-firefly-wedding-tv-drama-announced-for-2027-a1ac1e86",description:"Firefly Wedding, the historical romance manga by Oreco Tachibana, will receive a live-action Fuji TV drama in Japan in 2027; casting and a precise premiere date remain unannounced."},
