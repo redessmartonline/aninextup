@@ -469,7 +469,9 @@ def related_release_section(title, data, article_slug):
         for key in ("title", "article", "image"):
             match = re.search(key + r':("(?:\\.|[^"\\])*")', entry)
             if match:
-                fields[key] = json.loads(match.group(1))
+                # data.js permits escaped apostrophes inside double-quoted JS
+                # strings; JSON does not recognize that optional JS escape.
+                fields[key] = json.loads(match.group(1).replace("\\'", "'"))
         path = fields.get("article", "")
         label = fields.get("title", "")
         if not re.fullmatch(r"articles/[a-z0-9-]+", path) or not label:

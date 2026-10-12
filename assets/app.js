@@ -1,57 +1,62 @@
 document.querySelectorAll('.menu').forEach(b=>b.addEventListener('click',()=>{const n=b.closest('.site-header')?.querySelector('nav');if(!n)return;n.classList.toggle('open');b.setAttribute('aria-expanded',n.classList.contains('open')?'true':'false')}));
 const D=window.ANINEXTUP_DATA||{anime:[],guides:[]};
+// Keep the pre-rendered lists when the central index fails to load.
+const discoveryNodes=selector=>window.ANINEXTUP_DATA?document.querySelectorAll(selector):[];
 const TZ=D.site?.timezone||'America/Santo_Domingo';
+const releaseContext=window.ANINEXTUP_RELEASES?.context(new Date(),TZ);
 const prettyDate=(s,label)=>{if(!s)return (label||'DATE TBA').toUpperCase();const d=new Date(s+'T12:00:00');return d.toLocaleDateString('en-US',{month:'short',day:'2-digit'}).toUpperCase()};
 const releaseState=a=>a.status==='month-confirmed'?'MONTH CONFIRMED':a.status==='tba'?'DATE TBA':'CONFIRMED';
 const animeCard=a=>'<a class="mini data-card visual-card" href="'+a.article+'">'+(a.image?'<img src="'+a.image+'" alt="'+a.title+'" loading="lazy">':'')+'<div class="visual-body"><b>'+prettyDate(a.date,a.dateLabel)+'</b><small class="status">'+releaseState(a)+'</small><h3>'+a.title+'</h3><span>'+a.platform+'</span></div></a>';
 const fullCard=a=>'<a class="card story data-card visual-card" href="'+a.article+'">'+(a.image?'<img src="'+a.image+'" alt="'+a.title+'" loading="lazy">':'')+'<div class="visual-body"><span class="tag">'+a.platform.toUpperCase()+'</span><span class="status">'+releaseState(a)+'</span><div class="date">'+prettyDate(a.date,a.dateLabel)+'</div><h3>'+a.title+'</h3><p>'+a.category+' · '+a.platform+'</p><span class="more">READ GUIDE →</span></div></a>';
-document.querySelectorAll('[data-anime-list]').forEach(el=>{let items=[...D.anime];const mode=el.dataset.animeList;if(mode==='today'){const day=el.dataset.date||(()=>{const parts=new Intl.DateTimeFormat('en-US',{timeZone:TZ,year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());const value=t=>parts.find(p=>p.type===t)?.value;return value('year')+'-'+value('month')+'-'+value('day')})();items=items.filter(a=>a.date===day)}if(mode==='week'){const now=new Date(),day=new Date(now.toLocaleString('en-US',{timeZone:TZ})),dow=(day.getDay()+6)%7,start=new Date(day);start.setDate(day.getDate()-dow);const end=new Date(start);end.setDate(start.getDate()+6);const iso=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');items=items.filter(a=>a.date&&a.date>=iso(start)&&a.date<=iso(end)).sort((a,b)=>a.date.localeCompare(b.date))}if(mode==='upcoming-week'){const now=new Date(),day=new Date(now.toLocaleString('en-US',{timeZone:TZ})),dow=(day.getDay()+6)%7,end=new Date(day);end.setDate(day.getDate()+(6-dow));const iso=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'),today=iso(day);items=items.filter(a=>a.date&&a.date>=today&&a.date<=iso(end)).sort((a,b)=>a.date.localeCompare(b.date))}if(mode==='calendar')items=items.filter(a=>a.date).sort((a,b)=>a.date.localeCompare(b.date));if(mode==='netflix')items=items.filter(a=>a.platform==='Netflix');if(mode==='crunchyroll')items=items.filter(a=>a.platform==='Crunchyroll');el.innerHTML=items.map(mode==='today'?fullCard:animeCard).join('')||'<p class="empty">No premieres confirmed for this date. Explore the upcoming releases below.</p>'});
-document.querySelectorAll('[data-anime-month]').forEach(el=>{const month=el.dataset.animeMonth;const items=(D.anime||[]).filter(a=>a.date&&a.date.startsWith(month)).sort((a,b)=>a.date.localeCompare(b.date));el.innerHTML=items.map(animeCard).join('')||'<p class="empty">No confirmed releases yet.</p>'});
-document.querySelectorAll('[data-month-count]').forEach(el=>{const month=el.dataset.monthCount;const n=(D.anime||[]).filter(a=>a.date&&a.date.startsWith(month)).length;el.textContent=n?'· '+n+' CONFIRMED':''});
-document.querySelectorAll('[data-guides]').forEach(el=>el.innerHTML=D.guides.map(g=>'<a class="card story visual-card" href="'+g.article+'">'+(g.image?'<img src="'+g.image+'" alt="'+g.title+'" loading="lazy">':'')+'<div class="visual-body"><span class="tag">'+g.tag+'</span><h3>'+g.title+'</h3><p>'+g.description+'</p><span class="more">READ MORE →</span></div></a>').join(''));
+discoveryNodes('[data-anime-list]').forEach(el=>{let items=[...D.anime];const mode=el.dataset.animeList;if(mode==='today'){const day=el.dataset.date||(()=>{const parts=new Intl.DateTimeFormat('en-US',{timeZone:TZ,year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());const value=t=>parts.find(p=>p.type===t)?.value;return value('year')+'-'+value('month')+'-'+value('day')})();items=items.filter(a=>a.date===day)}if(mode==='week'){const now=new Date(),day=new Date(now.toLocaleString('en-US',{timeZone:TZ})),dow=(day.getDay()+6)%7,start=new Date(day);start.setDate(day.getDate()-dow);const end=new Date(start);end.setDate(start.getDate()+6);const iso=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');items=items.filter(a=>a.date&&a.date>=iso(start)&&a.date<=iso(end)).sort((a,b)=>a.date.localeCompare(b.date))}if(mode==='upcoming-week'){const now=new Date(),day=new Date(now.toLocaleString('en-US',{timeZone:TZ})),dow=(day.getDay()+6)%7,end=new Date(day);end.setDate(day.getDate()+(6-dow));const iso=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'),today=iso(day);items=items.filter(a=>a.date&&a.date>=today&&a.date<=iso(end)).sort((a,b)=>a.date.localeCompare(b.date))}if(mode==='calendar')items=items.filter(a=>a.date).sort((a,b)=>a.date.localeCompare(b.date));if(mode==='netflix')items=items.filter(a=>a.platform==='Netflix');if(mode==='crunchyroll')items=items.filter(a=>a.platform==='Crunchyroll');el.innerHTML=items.map(mode==='today'?fullCard:animeCard).join('')||'<p class="empty">No premieres confirmed for this date. Explore the upcoming releases below.</p>'});
+discoveryNodes('[data-anime-month]').forEach(el=>{const month=el.dataset.animeMonth;const items=(D.anime||[]).filter(a=>a.date&&a.date.startsWith(month)).sort((a,b)=>a.date.localeCompare(b.date));el.innerHTML=items.map(animeCard).join('')||'<p class="empty">No confirmed releases yet.</p>'});
+discoveryNodes('[data-month-count]').forEach(el=>{const month=el.dataset.monthCount;const n=(D.anime||[]).filter(a=>a.date&&a.date.startsWith(month)).length;el.textContent=n?'· '+n+' CONFIRMED':''});
+discoveryNodes('[data-guides]').forEach(el=>el.innerHTML=D.guides.map(g=>'<a class="card story visual-card" href="'+g.article+'">'+(g.image?'<img src="'+g.image+'" alt="'+g.title+'" loading="lazy">':'')+'<div class="visual-body"><span class="tag">'+g.tag+'</span><h3>'+g.title+'</h3><p>'+g.description+'</p><span class="more">READ MORE →</span></div></a>').join(''));
 function searchSite(){const input=document.getElementById('search'),q=(input?.value||'').trim().toLowerCase();if(!q)return;const results=[...D.anime.map(a=>({title:a.title,meta:a.platform,url:a.article})),...D.guides.map(g=>({title:g.title,meta:g.tag,url:g.article}))].filter(x=>(x.title+' '+x.meta).toLowerCase().includes(q));const box=document.getElementById('searchResults');if(box){box.innerHTML=results.length?results.map(x=>'<a href="'+x.url+'"><strong>'+x.title+'</strong><span>'+x.meta+'</span></a>').join(''):'<div class="no-result">No matching anime or guide found.</div>';box.hidden=false}else if(results[0])location.href=results[0].url}
 document.getElementById('search')?.addEventListener('keydown',e=>{if(e.key==='Enter')searchSite()});document.getElementById('search')?.addEventListener('input',e=>{if(!e.target.value.trim()){const b=document.getElementById('searchResults');if(b)b.hidden=true}});
 
-const siteToday=new Date(new Date().toLocaleString('en-US',{timeZone:TZ}));document.querySelectorAll('[data-today-label]').forEach(el=>el.textContent='TODAY · '+siteToday.toLocaleDateString('en-US',{month:'long',day:'numeric'}).toUpperCase());
+const siteToday=new Date(new Date().toLocaleString('en-US',{timeZone:TZ}));discoveryNodes('[data-today-label]').forEach(el=>el.textContent='TODAY · '+siteToday.toLocaleDateString('en-US',{month:'long',day:'numeric'}).toUpperCase());
 
 // Dynamic Today and This Week context
 const isoLocal=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
 const localToday=new Date(new Date().toLocaleString('en-US',{timeZone:TZ}));
 const localTodayIso=isoLocal(localToday);
 const fmtLong=d=>d.toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'});
-document.querySelectorAll('[data-today-heading]').forEach(el=>el.textContent=fmtLong(localToday)+' Anime Releases');
-document.querySelectorAll('[data-today-description]').forEach(el=>el.textContent='Confirmed anime premieres and important releases for '+fmtLong(localToday)+'.');
+discoveryNodes('[data-today-heading]').forEach(el=>el.textContent=fmtLong(localToday)+' Anime Releases');
+discoveryNodes('[data-today-description]').forEach(el=>el.textContent='Confirmed anime premieres and important releases for '+fmtLong(localToday)+'.');
 if(document.querySelector('[data-today-heading]')){document.title='Anime Releasing Today: '+fmtLong(localToday)+' — AniNextUp';const m=document.querySelector('meta[name="description"]');if(m)m.content='See anime releasing today, '+fmtLong(localToday)+', plus the next confirmed premieres and where to watch them.';}
-document.querySelectorAll('[data-today-next]').forEach(el=>{const items=[...(D.anime||[])].filter(a=>a.date&&a.date>localTodayIso).sort((a,b)=>a.date.localeCompare(b.date)).slice(0,6);el.innerHTML=items.map(animeCard).join('')||'<p class="empty">No upcoming confirmed releases listed yet.</p>'});
+discoveryNodes('[data-today-next]').forEach(el=>{const items=[...(D.anime||[])].filter(a=>a.date&&a.date>localTodayIso).sort((a,b)=>a.date.localeCompare(b.date)).slice(0,6);el.innerHTML=items.map(animeCard).join('')||'<p class="empty">No upcoming confirmed releases listed yet.</p>'});
 const weekDow=(localToday.getDay()+6)%7,weekStart=new Date(localToday),weekEnd=new Date(localToday);weekStart.setDate(localToday.getDate()-weekDow);weekEnd.setDate(weekStart.getDate()+6);
 const weekRange=weekStart.getMonth()===weekEnd.getMonth()?weekStart.toLocaleDateString('en-US',{month:'long'})+' '+weekStart.getDate()+'–'+weekEnd.getDate()+', '+weekEnd.getFullYear():weekStart.toLocaleDateString('en-US',{month:'short',day:'numeric'})+'–'+weekEnd.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
-document.querySelectorAll('[data-week-range]').forEach(el=>el.textContent=weekRange.toUpperCase());
-document.querySelectorAll('[data-week-title]').forEach(el=>el.textContent='This Week’s Anime Releases — '+weekRange);
-document.querySelectorAll('[data-week-heading]').forEach(el=>el.textContent=weekRange+' Anime Releases');
-document.querySelectorAll('[data-week-description]').forEach(el=>el.textContent='Track confirmed anime premieres, season returns and streaming releases scheduled for '+weekRange+'.');
+discoveryNodes('[data-week-range]').forEach(el=>el.textContent=weekRange.toUpperCase());
+discoveryNodes('[data-week-title]').forEach(el=>el.textContent='This Week’s Anime Releases — '+weekRange);
+discoveryNodes('[data-week-heading]').forEach(el=>el.textContent=weekRange+' Anime Releases');
+discoveryNodes('[data-week-description]').forEach(el=>el.textContent='Track confirmed anime premieres, season returns and streaming releases scheduled for '+weekRange+'.');
 if(document.querySelector('[data-week-heading]')){document.title='Anime Releasing This Week: '+weekRange+' — AniNextUp';const m=document.querySelector('meta[name="description"]');if(m)m.content='Track confirmed anime releasing this week, '+weekRange+', with premiere dates, streaming platforms and detailed viewing guides.';}
-document.querySelectorAll('[data-after-week]').forEach(el=>{const endIso=isoLocal(weekEnd);const items=[...(D.anime||[])].filter(a=>a.date&&a.date>endIso).sort((a,b)=>a.date.localeCompare(b.date)).slice(0,6);el.innerHTML=items.map(animeCard).join('')||'<p class="empty">No later confirmed releases listed yet.</p>'});
+discoveryNodes('[data-after-week]').forEach(el=>{const endIso=isoLocal(weekEnd);const items=[...(D.anime||[])].filter(a=>a.date&&a.date>endIso).sort((a,b)=>a.date.localeCompare(b.date)).slice(0,6);el.innerHTML=items.map(animeCard).join('')||'<p class="empty">No later confirmed releases listed yet.</p>'});
 
 // Homepage discovery sections
 const homeIso=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
 const homeToday=homeIso(new Date(new Date().toLocaleString('en-US',{timeZone:TZ})));
-document.querySelectorAll('[data-home-latest]').forEach(el=>{const items=(D.guides||[]).slice(0,6);el.innerHTML=items.map(g=>'<a class="card story visual-card" href="'+g.article+'">'+(g.image?'<img src="'+g.image+'" alt="'+g.title+'" loading="lazy">':'')+'<div class="visual-body"><span class="tag">'+g.tag+'</span><h3>'+g.title+'</h3><p>'+g.description+'</p><span class="more">READ UPDATE →</span></div></a>').join('')||'<p class="empty">No updates listed yet.</p>'});
-document.querySelectorAll('[data-home-next]').forEach(el=>{const items=[...(D.anime||[])].filter(a=>a.date&&a.date>homeToday).sort((a,b)=>a.date.localeCompare(b.date)).slice(0,6);el.innerHTML=items.map(animeCard).join('')||'<p class="empty">No upcoming releases listed yet.</p>'});
+discoveryNodes('[data-home-latest]').forEach(el=>{const items=(D.guides||[]).slice(0,6);el.innerHTML=items.map(g=>'<a class="card story visual-card" href="'+g.article+'">'+(g.image?'<img src="'+g.image+'" alt="'+g.title+'" loading="lazy">':'')+'<div class="visual-body"><span class="tag">'+g.tag+'</span><h3>'+g.title+'</h3><p>'+g.description+'</p><span class="more">READ UPDATE →</span></div></a>').join('')||'<p class="empty">No updates listed yet.</p>'});
+discoveryNodes('[data-home-next]').forEach(el=>{const items=window.ANINEXTUP_RELEASES.select(D.anime||[],'after-week',releaseContext).slice(0,6);el.innerHTML=items.map(animeCard).join('')||'<p class="empty">No upcoming releases listed yet.</p>'});
 
 // Platform-specific release hubs
-for(const el of document.querySelectorAll('[data-anime-platform]')){
+for(const el of discoveryNodes('[data-anime-platform]')){
  const p=el.dataset.animePlatform;
- const match=x=>p==='Prime Video'?x.platform.startsWith('Prime Video'):x.platform===p;
+ const match=x=>window.ANINEXTUP_RELEASES.matchesPlatform(x,p);
  const list=(D.anime||[]).filter(match).sort((x,y)=>(x.date||'9999').localeCompare(y.date||'9999'));
  el.innerHTML=list.map(animeCard).join('')||'<p class="empty">No confirmed releases yet.</p>';
 }
 
-document.querySelectorAll('[data-platform-count]').forEach(el=>{const p=el.dataset.platformCount;const n=(D.anime||[]).filter(x=>p==='Prime Video'?x.platform.startsWith('Prime Video'):x.platform===p).length;el.textContent=n?'· '+n+' TRACKED':''});
+discoveryNodes('[data-platform-count]').forEach(el=>{const p=el.dataset.platformCount;const n=(D.anime||[]).filter(x=>window.ANINEXTUP_RELEASES.matchesPlatform(x,p)).length;el.textContent=n?'· '+n+' TRACKED':''});
 
 // Consistent, accessible related releases for every article page.
 const renderRelatedReleases=data=>{
   const article=document.querySelector('article.article');
   if(!article)return;
+  // Keep the editor's related links; fill only pages without a section.
+  if(article.querySelector('.related-releases'))return;
   const slug=location.pathname.split('/').pop().replace(/\.html$/,'');
   const items=(data?.anime||[]).filter(a=>a.article&&a.title);
   const current=items.find(a=>a.article.split('/').pop().replace(/\.html$/,'')===slug);
@@ -99,7 +104,7 @@ if(document.querySelector('article.article')){
 }
 
 // News hub: upcoming confirmed releases
-document.querySelectorAll('[data-news-upcoming]').forEach(el=>{const items=[...(D.anime||[])].filter(a=>a.date&&a.date>=homeToday).sort((a,b)=>a.date.localeCompare(b.date)).slice(0,9);el.innerHTML=items.map(fullCard).join('')||'<p class="empty">No upcoming confirmed releases listed yet.</p>'});
+discoveryNodes('[data-news-upcoming]').forEach(el=>{const items=[...(D.anime||[])].filter(a=>a.date&&a.date>=homeToday).sort((a,b)=>a.date.localeCompare(b.date)).slice(0,9);el.innerHTML=items.map(fullCard).join('')||'<p class="empty">No upcoming confirmed releases listed yet.</p>'});
 
 // Lightweight official trailers: YouTube loads only after a visitor clicks play.
 document.querySelectorAll('.lite-trailer[data-youtube]').forEach(box=>{const btn=box.querySelector('.trailer-play');if(!btn)return;btn.addEventListener('click',()=>{const id=box.dataset.youtube,title=box.dataset.title||'Official trailer';const iframe=document.createElement('iframe');iframe.src='https://www.youtube-nocookie.com/embed/'+encodeURIComponent(id)+'?autoplay=1';iframe.title=title;iframe.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';iframe.referrerPolicy='strict-origin-when-cross-origin';iframe.allowFullscreen=true;box.replaceChildren(iframe)},{once:true})});

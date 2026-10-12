@@ -8,6 +8,11 @@ publisher=importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(publisher)
 
 class PublisherSafety(unittest.TestCase):
+    def test_related_releases_parse_live_index(self):
+        data=(ROOT/'assets/data.js').read_text()
+        section=publisher.related_release_section('The World\'s Strongest Witch',data,'worlds-strongest-witch')
+        self.assertIn('KEEP WATCHING',section)
+        self.assertNotIn('href="worlds-strongest-witch"',section)
     def test_feed_media(self):
         import xml.etree.ElementTree as ET
         node=ET.fromstring('<item xmlns:media="http://search.yahoo.com/mrss/"><media:thumbnail url="https://img1.ak.crunchyroll.com/cover.jpg" /></item>')
