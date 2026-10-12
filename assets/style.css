@@ -68,3 +68,11 @@
   .article .prose > figure,
   .article .prose > img{margin:16px auto 28px}
 }
+
+/* Compact, optional covers for related article cards. */
+.related-releases .mini.related-card{display:flex;align-items:center;gap:18px;padding:18px;min-height:130px}
+.related-releases .related-card-image{display:block;flex:0 0 128px;width:128px;height:72px;aspect-ratio:16/9;object-fit:cover;object-position:center;border-radius:9px}
+.related-releases .related-card-copy{min-width:0}
+.related-releases .related-card-copy h3{margin:0 0 8px;font-size:18px;line-height:1.3}
+.related-releases .related-card-copy span{display:block;line-height:1.5}
+@media(max-width:420px){.related-releases .mini.related-card{gap:14px;min-height:112px}.related-releases .related-card-image{flex-basis:96px;width:96px;height:54px}}

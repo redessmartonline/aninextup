@@ -466,7 +466,7 @@ def related_release_section(title, data, article_slug):
     seen = set()
     for entry in re.findall(r"\{[^\n{}]*\}", data):
         fields = {}
-        for key in ("title", "article"):
+        for key in ("title", "article", "image"):
             match = re.search(key + r':("(?:\\.|[^"\\])*")', entry)
             if match:
                 fields[key] = json.loads(match.group(1))
@@ -480,7 +480,14 @@ def related_release_section(title, data, article_slug):
             continue
         seen.add(path)
         score = len(current_tokens & tokens(label))
-        item = (score, label, path.removeprefix("articles/"))
+        image = fields.get("image", "")
+        if image.startswith("assets/") and (ROOT / image).is_file():
+            image = "../" + image
+        elif not (image.startswith("https://") and urllib.parse.urlsplit(image).hostname):
+            image = ""
+        if "favicon" in image.lower() or image.endswith(".svg"):
+            image = ""
+        item = (score, label, path.removeprefix("articles/"), image)
         if score:
             candidates.append(item)
         elif re.search(r"anime calendar|^anime releasing in", label, re.I):
@@ -490,15 +497,22 @@ def related_release_section(title, data, article_slug):
     selected = (candidates + hubs)[:2]
     if not selected:
         selected = [
-            (0, "Anime release calendar", "../calendar"),
-            (0, "Where to watch anime", "../where-to-watch"),
+            (0, "Anime release calendar", "../calendar", ""),
+            (0, "Where to watch anime", "../where-to-watch", ""),
         ]
-    cards = "".join(
-        '<a class="mini" href="' + html.escape(href, quote=True) + '">'
-        '<h3>' + html.escape(label) + '</h3>'
-        '<span>Read the guide →</span></a>'
-        for _, label, href in selected
-    )
+    def card(label, href, image):
+        thumbnail = (
+            '<img class="related-card-image" src="' + html.escape(image, quote=True)
+            + '" alt="" width="160" height="90" loading="lazy" decoding="async" '
+            'onerror="this.remove()">'
+        ) if image else ""
+        return (
+            '<a class="mini related-card" href="' + html.escape(href, quote=True) + '">'
+            + thumbnail + '<div class="related-card-copy"><h3>'
+            + html.escape(label) + '</h3><span>Read the guide →</span></div></a>'
+        )
+
+    cards = "".join(card(label, href, image) for _, label, href, image in selected)
     return (
         '<section class="related-releases" aria-labelledby="related-releases-heading">'
         '<div class="section-head"><div><span class="kicker">KEEP WATCHING</span>'
