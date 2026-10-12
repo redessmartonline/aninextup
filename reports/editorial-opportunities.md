@@ -2,7 +2,7 @@
 
 Creado: 2026-10-11. Zona horaria: America/Santo_Domingo.
 
-La búsqueda programada propone noticias cada dos horas. Los artículos y sus actualizaciones requieren aprobación explícita antes de publicarse. Este registro puede actualizarse automáticamente para evitar propuestas repetidas y medir resultados; no publica artículos.
+La búsqueda programada propone oportunidades cada hora en punto. Los artículos y sus actualizaciones requieren aprobación explícita antes de publicarse. Este registro puede actualizarse automáticamente para evitar propuestas repetidas y medir resultados; no publica artículos.
 
 ## Criterios
 
@@ -44,3 +44,12 @@ No usar material de otra obra, favicons, imágenes genéricas, fan edits ni víd
 2. Animes y franquicias con mayor interés relativo comprobable o crecimiento en Google, aunque no tengan un anuncio nuevo. Esta ruta puede proponer guías de obras ya estrenadas: dónde ver, orden de visionado, temporadas y películas, episodios, continuaciones confirmadas o presentación sustantiva, según consultas reales y vacíos de cobertura.
 
 El límite de 24 horas no restringe la edad del anime en la ruta de demanda. Una guía no se presenta como noticia nueva. Registrar ruta, intención, datos comparables por país y periodo, fuentes, valor propio y decisión de actualizar o crear. Máximo tres propuestas en total entre ambas rutas; no prometer que una obra es la más buscada de todo Google. Mantener portada, tráiler oficial, originalidad, desarrollo y aprobación previa para publicación.
+
+## Borradores, equilibrio y avisos
+
+- Equilibrar noticias recientes y guías duraderas cuando las oportunidades tengan valor comparable; sin cuotas ni proporciones obligatorias.
+- Preparar la recomendación principal como borrador completo antes de pedir aprobación: título, entradilla, desarrollo original, portada, tráiler, fuentes, enlaces internos y metadatos previstos. Preparar vista previa con el diseño actual cuando sea posible; señalar si falta. Para actualizaciones, presentar la versión final propuesta y resumen de cambios.
+- Preparar borradores no autoriza escribir artículos ni abrir PR en GitHub. Solo este registro se actualiza automáticamente; la publicación requiere aprobación específica.
+- Revisar cambios oficiales de fechas, retrasos, plataformas y territorios en artículos existentes, priorizando estrenos próximos y rotando la cobertura; registrar alcance y evidencia, sin afirmar revisión de todo el catálogo si no se realizó.
+- Enviar una recomendación principal concreta y revisable, con hasta dos alternativas resumidas. Evitar avisos repetidos y pedir aprobación después de completar el borrador y sus comprobaciones.
+- Mantener idioma y ámbitos de medición actuales; no definir ni modificar el público objetivo o países como parte de estas mejoras.
