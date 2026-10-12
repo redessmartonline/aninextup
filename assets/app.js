@@ -80,7 +80,6 @@ const renderRelatedReleases=data=>{
         if((source.protocol==='https:'||source.origin===location.origin)&&source.pathname!=='/assets/images/covers/aoashi-season-2.jpg'&&!/(?:favicon|\.svg(?:$|\?))/i.test(source.href)){
           const media=document.createElement('span');media.className='related-card-media';
           const image=document.createElement('img');image.className='related-card-image';image.alt='';image.width=160;image.height=90;image.loading='lazy';image.decoding='async';
-          image.addEventListener('load',()=>{if(image.naturalHeight>0&&image.naturalWidth/image.naturalHeight<1.35){image.classList.add('is-portrait');media.classList.add('has-portrait-cover');media.style.backgroundImage='url("'+source.href+'")'}},{once:true});
           image.addEventListener('error',()=>media.remove(),{once:true});image.src=source.href;media.append(image);link.append(media);
         }
       }catch{/* An invalid cover must not prevent the related link from rendering. */}
