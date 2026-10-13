@@ -4,7 +4,7 @@ Applies to **every** new or updated article, whether manually authored or genera
 
 ## Mandatory two-stage publication approval
 
-**STAGE 1 — PREPARE:** Research, write and validate the complete article. It may be saved only as an unpublished draft or editorial pull request. Present the draft and quality-check results to the owner. Preparing, reviewing, or approving the *topic* is **not** permission to publish.
+**STAGE 1 — PREPARE AND REVIEW (ONE COMBINED STAGE):** Research, write, check, fix and revalidate the complete article within the same stage until all mandatory checks pass. It may be saved only as an unpublished draft or editorial pull request. Present the fully prepared and reviewed draft, with quality-check results, to the owner. Preparing, reviewing, or approving the *topic* is **not** permission to publish.
 
 **STAGE 2 — PUBLISH:** Publish or merge into the production `main` branch **only after the owner explicitly says "PUBLÍCALO" (or an equally unambiguous instruction to publish that specific article)**. No automatic merging, no scheduled article publication, and no treating passing tests as publishing approval. If approval is absent, keep the draft pending. After explicit approval, publish and verify the live URL.
 
