@@ -144,15 +144,15 @@ async function ensureRelatedReleaseCovers(){
       img.removeAttribute('onerror');
       if(img.complete&&!img.naturalWidth)useCardImageFallback(img);
       const known=coverBySlug.get(slug);
-      if(known&&img.src.endsWith('/anime-image-fallback.svg'))img.src=new URL(known,location.origin+'/').href;
-      if(!known&&img.src.endsWith('/anime-image-fallback.svg')&&destination.origin===location.origin&&destination.pathname.startsWith('/articles/')){
+      if(known){\n        try{const expected=new URL(known,location.origin+'/').href;if(img.src!==expected)img.src=expected;}catch{useCardImageFallback(img);}\n      }
+      if(!known&&destination.origin===location.origin&&destination.pathname.startsWith('/articles/')){
         try{
           const response=await fetch(destination.href,{credentials:'omit'});
           if(!response.ok)continue;
           const html=await response.text();
           const parsed=new DOMParser().parseFromString(html,'text/html');
           const cover=parsed.querySelector('meta[property="og:image"]')?.content;
-          if(cover&&/^https?:\/\//.test(cover))img.src=cover;
+          if(cover&&/^https?:\/\//.test(cover)&&img.src!==cover)img.src=cover;
         }catch{/* Keep the branded fallback when destination metadata is unavailable. */}
       }
     }
