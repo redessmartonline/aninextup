@@ -107,14 +107,17 @@
       "title_en": "Inherit the Winds",
       "score": 67,
       "action": "CREAR",
-      "status": "PENDING_REVIEW",
+      "status": "PUBLISHED",
       "priority": "MEDIUM",
       "first_detected_at": "2026-10-13",
-      "official_source_url": null,
+      "official_source_url": "https://www.aniplex.co.jp/lineup/kaze-tusgu/news/detail/?id=71461",
       "official_cover_url": null,
       "official_trailer_url": null,
-      "editorial_note": "Recovered from earlier reported opportunity list. Source, announcement, scoring and eligibility require fresh verification before preparation. Not ready for publication.",
-      "needs_reverification": true
+      "editorial_note": "User approved publication; PR #12 merged to main at 1c77788a17fe642dacc7d920def42cc3090fe41e. Official cover direct image URL still pending; article currently uses fallback. Public deployment not yet verified.",
+      "needs_reverification": false,
+      "approval_at": "2026-10-13",
+      "publication_url": "https://aninextup.com/articles/inherit-the-winds-anime-january-2027",
+      "existing_article_url": "https://aninextup.com/articles/inherit-the-winds-anime-january-2027"
     }
   ],
   "statuses": [
