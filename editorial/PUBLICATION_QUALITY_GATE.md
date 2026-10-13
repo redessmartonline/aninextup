@@ -8,6 +8,10 @@ Applies to **every** new or updated article, whether manually authored or genera
 
 **STAGE 2 — PUBLISH:** Publish or merge into the production `main` branch **only after the owner explicitly says "PUBLÍCALO" (or an equally unambiguous instruction to publish that specific article)**. No automatic merging, no scheduled article publication, and no treating passing tests as publishing approval. If approval is absent, keep the draft pending. After explicit approval, publish and verify the live URL.
 
+## Mandatory FIRST action: search for duplicates BEFORE writing
+
+Before creating any article draft, search the entire existing `articles/` directory, `assets/data.js`, `sitemap.xml`, and open editorial PRs using the anime's canonical title, aliases, romanizations, franchise name, and topic keywords. If a page already covers the same series or announcement, UPDATE that existing canonical page and preserve its URL; never create a second article. Distinguish new facts worthy of updating from truly independent subjects. If uncertain, flag for manual editorial review and do not create a new page. The automated workflow also runs `python scripts/check_article_duplicates.py` before synchronizing article metadata or opening an approval PR. A passing automatic check does not replace the manual pre-draft search.
+
 ## Block publication until all required checks pass
 
 - [ ] Original English article; accurate official source links, broadcast dates/time zones, cast/staff, streaming, and clearly distinguished unknowns. Never infer a specific day from a month-only announcement.
