@@ -2,7 +2,10 @@ document.querySelectorAll('.menu').forEach(b=>b.addEventListener('click',()=>{co
 const cardImageFallback='/assets/images/anime-image-fallback.svg';
 const cardImageSelector='.visual-card > img, .news-featured > img, .news-side-card img, .week-release img, .calendar-day-items img, .related-releases img';
 function useCardImageFallback(image){
-  if(!(image instanceof HTMLImageElement)||image.dataset.fallbackApplied)return;
+  if(!(image instanceof HTMLImageElement))return;
+  // Only stop when the current request already is the fallback.
+  // A later external request must still be able to recover.
+  if(image.src===new URL(cardImageFallback,location.origin).href)return;
   image.dataset.fallbackApplied='true';
   image.classList.add('image-fallback');
   image.src=cardImageFallback;
