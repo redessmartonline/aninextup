@@ -1,5 +1,5 @@
 window.ANINEXTUP_DATA={
-updated:"2026-10-12",
+updated:"2026-10-13",
 site:{timezone:"America/Santo_Domingo",season:"Fall 2026"},
 anime:[
 {id:"fool-night",image:"assets/images/fool-night-release-guide.svg",title:"Fool Night",date:"2026-11-26",platform:"Netflix",article:"articles/fool-night-release-date",category:"Premiere",status:"confirmed"},
