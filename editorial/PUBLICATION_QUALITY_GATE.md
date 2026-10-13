@@ -27,3 +27,16 @@ Before creating any article draft, search the entire existing `articles/` direct
 - [ ] Verify deployed public URL and actual visual rendering. If deployment or public verification fails, report **NOT VERIFIED**, never "fully published".
 
 **Failure handling:** If any required check fails, leave the article in preparation/review rather than claiming successful publication. Log the specific missing element, fix it, and rerun the checks. An official trailer is conditional on existence; never fabricate one. Explicit user approval is required before publishing articles.
+
+## Non-negotiable artwork protection (homepage and articles)
+
+A generic site placeholder is **not** a publishable anime image. Before an article enters `main`, check all of the following and record the results in the editorial PR:
+
+1. `assets/data.js` news entry `image` must point to a genuine image for the named anime. Reject `anime-image-fallback.svg`, empty URLs, unrelated stock images and unrelated YouTube thumbnails.
+2. The article hero `img[src]`, `og:image`, `aninextup-index.image` and `NewsArticle.image` must resolve to the correct artwork; avoid mixing a verified article image with a generic homepage image.
+3. Test HTTP status, image MIME type, nonzero dimensions, and visual subject identity. A URL string or a 200 response alone does not establish that an image depicts the right anime.
+4. Inspect the homepage news card, article hero and both related-release cards in real desktop and mobile browser layouts. Confirm they visibly display topic-matched artwork, not the fallback, and that related links resolve to the intended articles.
+5. On any failed or unverified check, leave the article **BLOCKED: IMAGE UNVERIFIED** and unpublished. Fix and rerun the checks; never silently substitute site branding and call the result complete.
+6. When a publisher explicitly authorizes publication, still report any missing public-browser verification truthfully. Do not claim the visual gate passed without evidence.
+
+The generic fallback may remain an emergency runtime safeguard for unexpected network errors, but it must **never** be configured as the primary editorial artwork.
