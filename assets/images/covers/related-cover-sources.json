@@ -1,0 +1,24 @@
+{
+  "assets/images/covers/record-of-a-fallen-vampire-teaser.webp": {
+    "work": "The Record of a Fallen Vampire",
+    "kind": "2027 anime teaser visual",
+    "source_page": "https://anitrendz.net/news/2026/10/05/the-record-of-a-fallen-vampire-receives-2027-tv-anime-adaptation/",
+    "credit": "©城平京・木村有里／SQUARE ENIX・「ヴァンパイア十字界」製作委員会",
+    "format": "WEBP",
+    "dimensions": [
+      696,
+      940
+    ]
+  },
+  "assets/images/covers/nues-exorcist-official.png": {
+    "work": "Nue’s Exorcist",
+    "kind": "official anime teaser visual",
+    "source_page": "https://www.nues-exorcist.com/news/post-1/",
+    "asset_url": "https://www.nues-exorcist.com/assets/images/common/news/post-1/img_news-teaser.png",
+    "format": "PNG",
+    "dimensions": [
+      1920,
+      1080
+    ]
+  }
+}
