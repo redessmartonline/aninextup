@@ -125,7 +125,7 @@
     {
       "id": "2026-10-13-gundam-seed-freedom-zero",
       "title_en": "Gundam SEED FREEDOM ZERO: January 2027 Release Date, Trailer and Cast",
-      "status": "APPROVED",
+      "status": "PUBLISHED",
       "priority": "MEDIUM",
       "first_detected_at": "2026-10-13",
       "announcement_at": "2026-10-09",
@@ -137,7 +137,7 @@
       "action": "CREAR",
       "approval_at": "2026-10-13",
       "publication_url": "https://aninextup.com/articles/mobile-suit-gundam-seed-freedom-zero-release-date",
-      "editorial_note": "User explicitly approved publication. HTML content and SEO assembled; desktop/mobile visual and image HTTP validation remain unverified."
+      "editorial_note": "User explicitly approved publication. PR #13 squash-merged to main, commit 6be872d43f02da512fe4beb14e0ac67274011261. Public deployment and desktop/mobile visual image checks remain unverified."
     }
   ],
   "statuses": [
