@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "site": "https://aninextup.com",
+  "purpose": "Editorial SEO opportunity approval queue; never auto-publish",
+  "updated_at": "2026-10-13",
+  "opportunities": [],
+  "statuses": [
+    "PENDING_APPROVAL",
+    "APPROVED",
+    "PUBLISHED",
+    "DISCARDED"
+  ],
+  "scoring": {
+    "recency": 30,
+    "search_intent": 25,
+    "competition_gap": 20,
+    "editorial_value": 15,
+    "official_verification": 10
+  },
+  "rules": {
+    "minimum_score": 80,
+    "conditional_score_range": "60-79 only for exceptionally strong opportunity",
+    "official_sources_only": true,
+    "require_explicit_approval_before_publishing": true,
+    "require_related_releases_section": true,
+    "do_not_repeat_without_material_update": true,
+    "store_source_time_and_timezone": true
+  },
+  "record_fields": [
+    "id",
+    "title_en",
+    "status",
+    "first_detected_at",
+    "announcement_at",
+    "announcement_timezone",
+    "official_source_url",
+    "official_cover_url",
+    "official_trailer_url",
+    "score",
+    "score_breakdown",
+    "seo_rationale",
+    "keywords",
+    "competition",
+    "action",
+    "existing_article_url",
+    "last_substantive_update_at",
+    "approval_at",
+    "publication_url"
+  ]
+}
