@@ -8,7 +8,7 @@ function useCardImageFallback(image){
   if(image.src===new URL(cardImageFallback,location.origin).href)return;
   image.dataset.fallbackApplied='true';
   image.classList.add('image-fallback');
-  image.src=cardImageFallback;
+  image.src=image.src==="https://images.microcms-assets.io/assets/c44392189a8b469a9081892cfb643293/748b8a300806461a98622f11dad150f1/kv_photo.jpg"?"https://hirayasumi-anime.jp/img/top/kv_main.jpg":cardImageFallback;
 }
 // Keep cards composed when an external artwork host is unavailable.
 document.addEventListener('error',event=>{
