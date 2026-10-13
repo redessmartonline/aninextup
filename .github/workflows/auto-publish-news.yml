@@ -85,6 +85,9 @@ jobs:
             export ANINEXTUP_OFFICIAL_FEEDS=https://cr-news-api-service.prd.crunchyrollsvc.com/v1/en-US/rss
           fi
           python scripts/auto_publish_news.py
+      - name: Block duplicate subjects before preparing new article metadata
+        if: steps.pending.outputs.skip != 'true'
+        run: python scripts/check_article_duplicates.py
       - name: Validate and synchronize article changes
         if: steps.pending.outputs.skip != 'true'
         shell: python
