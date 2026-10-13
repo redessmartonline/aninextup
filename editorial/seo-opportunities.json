@@ -90,14 +90,17 @@
       "title_en": "The Boxer",
       "score": 68,
       "action": "CREAR",
-      "status": "PENDING_REVIEW",
+      "status": "PUBLISHED",
       "priority": "MEDIUM",
       "first_detected_at": "2026-10-13",
-      "official_source_url": null,
+      "official_source_url": "https://prtimes.jp/main/html/rd/p/000000531.000063705.html",
       "official_cover_url": null,
-      "official_trailer_url": null,
-      "editorial_note": "Recovered from earlier reported opportunity list. Source, announcement, scoring and eligibility require fresh verification before preparation. Not ready for publication.",
-      "needs_reverification": true
+      "official_trailer_url": "https://www.youtube.com/watch?v=Y6pedL99rcY",
+      "editorial_note": "User approved publication. PR #11 merged to main, commit 99600fd1780eb8fc9817436f92fa008a3dac85c8. Public deployment and visual artwork still require independent verification.",
+      "needs_reverification": false,
+      "approval_at": "2026-10-13",
+      "publication_url": "https://aninextup.com/articles/the-boxer-anime-announcement",
+      "existing_article_url": "https://aninextup.com/articles/the-boxer-anime-announcement"
     },
     {
       "id": "2026-10-13-inherit-the-winds",
