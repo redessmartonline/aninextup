@@ -1,6 +1,6 @@
 document.querySelectorAll('.menu').forEach(b=>b.addEventListener('click',()=>{const n=b.closest('.site-header')?.querySelector('nav');if(!n)return;n.classList.toggle('open');b.setAttribute('aria-expanded',n.classList.contains('open')?'true':'false')}));
 const cardImageFallback='/assets/images/anime-image-fallback.svg';
-const cardImageSelector='.visual-card > img, .news-featured > img, .news-side-card img, .week-release img, .calendar-day-items img';
+const cardImageSelector='.visual-card > img, .news-featured > img, .news-side-card img, .week-release img, .calendar-day-items img, .related-releases img';
 function useCardImageFallback(image){
   if(!(image instanceof HTMLImageElement)||image.dataset.fallbackApplied)return;
   image.dataset.fallbackApplied='true';
@@ -100,7 +100,7 @@ const renderRelatedReleases=data=>{
         if((source.protocol==='https:'||source.origin===location.origin)&&source.pathname!=='/assets/images/covers/aoashi-season-2.jpg'&&!/(?:favicon|\.svg(?:$|\?))/i.test(source.href)){
           const media=document.createElement('span');media.className='related-card-media';
           const image=document.createElement('img');image.className='related-card-image';image.alt='';image.width=160;image.height=90;image.loading='lazy';image.decoding='async';
-          image.addEventListener('error',()=>media.remove(),{once:true});image.src=source.href;media.append(image);link.append(media);
+          image.src=source.href;media.append(image);link.append(media);
         }
       }catch{/* An invalid cover must not prevent the related link from rendering. */}
     }
@@ -116,6 +116,52 @@ const renderRelatedReleases=data=>{
 if(document.querySelector('article.article')){
   if(D.anime?.length)renderRelatedReleases(D);
   else{const script=document.createElement('script');script.src='../assets/data.js';script.onload=()=>renderRelatedReleases(window.ANINEXTUP_DATA);document.head.appendChild(script);}
+}
+
+
+// Every KEEP WATCHING card gets artwork, including legacy hand-authored sections.
+// Prefer the destination article's cover, never reuse the current article's image.
+async function ensureRelatedReleaseCovers(){
+  const sections=document.querySelectorAll('article.article .related-releases');
+  if(!sections.length)return;
+  const entries=(window.ANINEXTUP_DATA?.anime||[]).concat(window.ANINEXTUP_DATA?.guides||[]);
+  const coverBySlug=new Map(entries.filter(x=>x.article&&x.image).map(x=>[x.article.split('/').pop().replace(/\.html$/,''),x.image]));
+  for(const section of sections){
+    for(const link of section.querySelectorAll('a.mini')){
+      const destination=new URL(link.getAttribute('href'),location.href);
+      const slug=destination.pathname.split('/').pop().replace(/\.html$/,'');
+      let img=link.querySelector('img');
+      if(!img){
+        img=document.createElement('img');
+        img.className='related-card-image';
+        img.alt='';
+        img.width=160;img.height=90;
+        img.loading='lazy';img.decoding='async';
+        const media=link.querySelector('.related-card-media');
+        if(media)media.append(img);else link.prepend(img);
+        img.src=cardImageFallback;
+      }
+      img.removeAttribute('onerror');
+      if(img.complete&&!img.naturalWidth)useCardImageFallback(img);
+      const known=coverBySlug.get(slug);
+      if(known&&img.src.endsWith('/anime-image-fallback.svg'))img.src=new URL(known,location.origin+'/').href;
+      if(!known&&img.src.endsWith('/anime-image-fallback.svg')&&destination.origin===location.origin&&destination.pathname.startsWith('/articles/')){
+        try{
+          const response=await fetch(destination.href,{credentials:'omit'});
+          if(!response.ok)continue;
+          const html=await response.text();
+          const parsed=new DOMParser().parseFromString(html,'text/html');
+          const cover=parsed.querySelector('meta[property="og:image"]')?.content;
+          if(cover&&/^https?:\/\//.test(cover))img.src=cover;
+        }catch{/* Keep the branded fallback when destination metadata is unavailable. */}
+      }
+    }
+  }
+}
+if(document.querySelector('article.article')){
+  const startRelatedCovers=()=>ensureRelatedReleaseCovers().catch(()=>{});
+  if(window.ANINEXTUP_DATA)startRelatedCovers();
+  else window.addEventListener('load',startRelatedCovers,{once:true});
 }
 
 // News hub: upcoming confirmed releases
