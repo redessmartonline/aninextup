@@ -1,4 +1,19 @@
 document.querySelectorAll('.menu').forEach(b=>b.addEventListener('click',()=>{const n=b.closest('.site-header')?.querySelector('nav');if(!n)return;n.classList.toggle('open');b.setAttribute('aria-expanded',n.classList.contains('open')?'true':'false')}));
+const cardImageFallback='/assets/images/anime-image-fallback.svg';
+const cardImageSelector='.visual-card > img, .news-featured > img, .news-side-card img, .week-release img, .calendar-day-items img';
+function useCardImageFallback(image){
+  if(!(image instanceof HTMLImageElement)||image.dataset.fallbackApplied)return;
+  image.dataset.fallbackApplied='true';
+  image.classList.add('image-fallback');
+  image.src=cardImageFallback;
+}
+// Keep cards composed when an external artwork host is unavailable.
+document.addEventListener('error',event=>{
+  if(event.target instanceof HTMLImageElement&&event.target.matches(cardImageSelector))useCardImageFallback(event.target);
+},true);
+document.querySelectorAll(cardImageSelector).forEach(image=>{
+  if(image.complete&&!image.naturalWidth)useCardImageFallback(image);
+});
 const D=window.ANINEXTUP_DATA||{anime:[],guides:[]};
 // Keep the pre-rendered lists when the central index fails to load.
 const discoveryNodes=selector=>window.ANINEXTUP_DATA?document.querySelectorAll(selector):[];
