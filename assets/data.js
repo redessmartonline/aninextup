@@ -2,6 +2,7 @@ window.ANINEXTUP_DATA={
 updated:"2026-10-13",
 site:{timezone:"America/Santo_Domingo",season:"Fall 2026"},
 anime:[
+{id:"the-boxer",image:"https://i.ytimg.com/vi/Y6pedL99rcY/hqdefault.jpg",title:"The Boxer Anime Announced: Trailer, Cast, Staff and Release Date Status",tag:"OFFICIAL NEWS",article:"articles/the-boxer-anime-announcement",date:null,dateLabel:"TBA",platform:"Crunchyroll (territories TBA)",category:"TV Anime",status:"tba",description:"The Boxer TV anime announced; cast, staff and teaser confirmed, release date pending."},
 {image:"https://www.vap.co.jp/the-fable-anime/assets-v2/images/meta/ogp.webp",title:"The Fable Season 2 Confirmed for January 2027",tag:"OFFICIAL NEWS",article:"articles/the-fable-season-2-january-2027",description:"Japanese broadcast confirmed for January 2027; exact date and international streaming pending."},
 {id:"fool-night",image:"assets/images/fool-night-release-guide.svg",title:"Fool Night",date:"2026-11-26",platform:"Netflix",article:"articles/fool-night-release-date",category:"Premiere",status:"confirmed"},
 {id:"hirayasumi",image:"https://i.ytimg.com/vi/ZoVtjJsdyB4/maxresdefault.jpg",title:"Hirayasumi",date:null,dateLabel:"January 2027",platform:"NHK General (Japan)",article:"articles/hirayasumi-anime-release-date",category:"TV Anime",status:"month-confirmed"},
