@@ -1,20 +1,12 @@
 name: AniNextUp public quality audit
+# Disabled at owner's request: no automatic triggers and audit job is skipped.
 on:
-  push:
-    paths:
-      - 'scripts/audit_public.py'
-      - '.github/workflows/public-audit.yml'
-      - 'articles/**'
-      - 'assets/**'
-      - '*.html'
-      - 'sitemap.xml'
   workflow_dispatch:
-  schedule:
-    - cron: '20 10 * * 1'
 permissions:
   contents: read
 jobs:
   audit:
+    if: ${{ false }}
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
