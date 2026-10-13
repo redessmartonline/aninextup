@@ -2,7 +2,7 @@ window.ANINEXTUP_DATA={
 updated:"2026-10-13",
 site:{timezone:"America/Santo_Domingo",season:"Fall 2026"},
 anime:[
-{id:"the-fable-season-2",image:"",title:"The Fable Season 2",date:null,dateLabel:"January 2027",platform:"Nippon TV (Japan)",article:"articles/the-fable-season-2-january-2027",category:"Season Premiere",status:"month-confirmed"},
+{image:"https://www.vap.co.jp/the-fable-anime/assets-v2/images/meta/ogp.webp",title:"The Fable Season 2 Confirmed for January 2027",tag:"OFFICIAL NEWS",article:"articles/the-fable-season-2-january-2027",description:"Japanese broadcast confirmed for January 2027; exact date and international streaming pending."},
 {id:"fool-night",image:"assets/images/fool-night-release-guide.svg",title:"Fool Night",date:"2026-11-26",platform:"Netflix",article:"articles/fool-night-release-date",category:"Premiere",status:"confirmed"},
 {id:"hirayasumi",image:"https://i.ytimg.com/vi/NreJuPDZWqU/maxresdefault.jpg",title:"Hirayasumi",date:null,dateLabel:"January 2027",platform:"NHK General (Japan)",article:"articles/hirayasumi-anime-release-date",category:"TV Anime",status:"month-confirmed"},
 {id:"walking-home-with-you",image:"https://prcdn.freetls.fastly.net/release_image/127482/212/127482-212-29a04666e172dcea5d127ae9582a014d-1460x2064.jpg",title:"Walking Home with You",date:null,dateLabel:"April 2027",platform:"Nippon TV",article:"articles/walking-home-with-you-anime",category:"TV Anime",status:"month-confirmed"},
