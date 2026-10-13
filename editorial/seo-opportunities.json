@@ -40,7 +40,7 @@
     },
     {
       "id": "2026-10-13-the-fable-season-2",
-      "title_en": "The Fable Season 2: January 2027 Premiere and New Cast",
+      "title_en": "The Fable Season 2 Confirmed for January 2027: Cast, Staff and Teaser",
       "status": "PUBLISHED",
       "priority": "HIGH",
       "first_detected_at": "2026-10-13",
@@ -68,7 +68,8 @@
       "existing_article_url": null,
       "approval_at": "2026-10-13",
       "publication_url": "https://aninextup.com/articles/the-fable-season-2-january-2027",
-      "editorial_note": "User explicitly approved publication. Article committed to main; sitemap and assets/data.js updated. Public deployment pending verification."
+      "editorial_note": "Article updated in GitHub to match standard editorial sections, metadata, official-source-only facts and corrected January 2027 month-only broadcast. Official image direct URL and public deployment remain unverified.",
+      "last_substantive_update_at": "2026-10-13"
     }
   ],
   "statuses": [
