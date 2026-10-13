@@ -76,14 +76,17 @@
       "title_en": "Hirayasumi",
       "score": 74,
       "action": "ACTUALIZAR",
-      "status": "PENDING_REVIEW",
+      "status": "PUBLISHED",
       "priority": "MEDIUM",
       "first_detected_at": "2026-10-13",
-      "official_source_url": null,
+      "official_source_url": "https://hirayasumi-anime.jp/",
       "official_cover_url": null,
       "official_trailer_url": null,
-      "editorial_note": "Recovered from earlier reported opportunity list. Source, announcement, scoring and eligibility require fresh verification before preparation. Not ready for publication.",
-      "needs_reverification": true
+      "editorial_note": "October 13 update already merged into main with five additional cast members, January 2027 broadcast, SEO and official teaser. Existing article, not a new duplicate. Public deployment and cover image loading still require independent verification.",
+      "needs_reverification": false,
+      "approval_at": "2026-10-13",
+      "publication_url": "https://aninextup.com/articles/hirayasumi-anime-release-date",
+      "existing_article_url": "https://aninextup.com/articles/hirayasumi-anime-release-date"
     },
     {
       "id": "2026-10-13-the-boxer",
