@@ -7,7 +7,7 @@
     {
       "id": "2026-10-13-apothecary-movie-character-pv-kensho-ono",
       "title_en": "The Apothecary Diaries Movie Reveals New Character Trailer and Kensho Ono Casting",
-      "status": "PENDING_APPROVAL",
+      "status": "PUBLISHED",
       "priority": "MEDIUM",
       "first_detected_at": "2026-10-13",
       "announcement_at": "2026-10-13",
@@ -34,8 +34,9 @@
       "action": "ACTUALIZAR",
       "existing_article_url": "https://aninextup.com/articles/apothecary-diaries-movie",
       "last_substantive_update_at": "2026-10-13",
-      "approval_at": null,
-      "publication_url": null
+      "approval_at": "2026-10-13",
+      "publication_url": "https://aninextup.com/articles/apothecary-diaries-movie",
+      "editorial_note": "Approved by user. GitHub article already contains October 13 Kaja-dan PV and cast update, VideoObject, official sources, and related releases; no duplicate edit needed."
     }
   ],
   "statuses": [
