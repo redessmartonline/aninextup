@@ -70,6 +70,48 @@
       "publication_url": "https://aninextup.com/articles/the-fable-season-2-january-2027",
       "editorial_note": "Article updated in GitHub to match standard editorial sections, metadata, official-source-only facts and corrected January 2027 month-only broadcast. Official image direct URL and public deployment remain unverified.",
       "last_substantive_update_at": "2026-10-13"
+    },
+    {
+      "id": "2026-10-13-hirayasumi",
+      "title_en": "Hirayasumi",
+      "score": 74,
+      "action": "ACTUALIZAR",
+      "status": "PENDING_REVIEW",
+      "priority": "MEDIUM",
+      "first_detected_at": "2026-10-13",
+      "official_source_url": null,
+      "official_cover_url": null,
+      "official_trailer_url": null,
+      "editorial_note": "Recovered from earlier reported opportunity list. Source, announcement, scoring and eligibility require fresh verification before preparation. Not ready for publication.",
+      "needs_reverification": true
+    },
+    {
+      "id": "2026-10-13-the-boxer",
+      "title_en": "The Boxer",
+      "score": 68,
+      "action": "CREAR",
+      "status": "PENDING_REVIEW",
+      "priority": "MEDIUM",
+      "first_detected_at": "2026-10-13",
+      "official_source_url": null,
+      "official_cover_url": null,
+      "official_trailer_url": null,
+      "editorial_note": "Recovered from earlier reported opportunity list. Source, announcement, scoring and eligibility require fresh verification before preparation. Not ready for publication.",
+      "needs_reverification": true
+    },
+    {
+      "id": "2026-10-13-inherit-the-winds",
+      "title_en": "Inherit the Winds",
+      "score": 67,
+      "action": "CREAR",
+      "status": "PENDING_REVIEW",
+      "priority": "MEDIUM",
+      "first_detected_at": "2026-10-13",
+      "official_source_url": null,
+      "official_cover_url": null,
+      "official_trailer_url": null,
+      "editorial_note": "Recovered from earlier reported opportunity list. Source, announcement, scoring and eligibility require fresh verification before preparation. Not ready for publication.",
+      "needs_reverification": true
     }
   ],
   "statuses": [
@@ -92,7 +134,11 @@
     "require_explicit_approval_before_publishing": true,
     "require_related_releases_section": true,
     "do_not_repeat_without_material_update": true,
-    "store_source_time_and_timezone": true
+    "store_source_time_and_timezone": true,
+    "preserve_unpublished_opportunities": true,
+    "require_reconciliation_before_reporting_counts": true,
+    "distinguish_opportunities_from_prepared_articles": true,
+    "never_drop_missing_records_without_explicit_disposition": true
   },
   "record_fields": [
     "id",
