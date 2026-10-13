@@ -3,7 +3,41 @@
   "site": "https://aninextup.com",
   "purpose": "Editorial SEO opportunity approval queue; never auto-publish",
   "updated_at": "2026-10-13",
-  "opportunities": [],
+  "opportunities": [
+    {
+      "id": "2026-10-13-apothecary-movie-character-pv-kensho-ono",
+      "title_en": "The Apothecary Diaries Movie Reveals New Character Trailer and Kensho Ono Casting",
+      "status": "PENDING_APPROVAL",
+      "priority": "MEDIUM",
+      "first_detected_at": "2026-10-13",
+      "announcement_at": "2026-10-13",
+      "announcement_timezone": "Asia/Tokyo (official site date; exact time not displayed)",
+      "official_source_url": "https://kusuriyanohitorigoto.jp/news/",
+      "official_cover_url": null,
+      "official_trailer_url": null,
+      "score": 73,
+      "score_breakdown": {
+        "recency": 30,
+        "search_intent": 19,
+        "competition_gap": 9,
+        "editorial_value": 8,
+        "official_verification": 7
+      },
+      "seo_rationale": "Same-day official movie character promotional video and casting update; update existing movie article rather than duplicate.",
+      "keywords": [
+        "The Apothecary Diaries movie",
+        "Kensho Ono",
+        "The Apothecary Diaries movie trailer",
+        "Suija"
+      ],
+      "competition": "Not quantified in this limited manual test",
+      "action": "ACTUALIZAR",
+      "existing_article_url": "https://aninextup.com/articles/apothecary-diaries-movie",
+      "last_substantive_update_at": "2026-10-13",
+      "approval_at": null,
+      "publication_url": null
+    }
+  ],
   "statuses": [
     "PENDING_APPROVAL",
     "APPROVED",
@@ -46,5 +80,16 @@
     "last_substantive_update_at",
     "approval_at",
     "publication_url"
+  ],
+  "run_history": [
+    {
+      "date": "2026-10-13",
+      "mode": "manual_chat_test",
+      "official_sources_reviewed": 3,
+      "articles_checked_in_repository": 1,
+      "opportunities_saved": 1,
+      "discarded": 0,
+      "note": "Limited sample, not a full hourly run; official sites Naruto, Apothecary Diaries and My Hero Academia reviewed; existing Naruto coverage confirmed in assets/data.js."
+    }
   ]
 }
