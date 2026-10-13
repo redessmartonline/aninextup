@@ -37,6 +37,38 @@
       "approval_at": "2026-10-13",
       "publication_url": "https://aninextup.com/articles/apothecary-diaries-movie",
       "editorial_note": "Approved by user. GitHub article already contains October 13 Kaja-dan PV and cast update, VideoObject, official sources, and related releases; no duplicate edit needed."
+    },
+    {
+      "id": "2026-10-13-the-fable-season-2",
+      "title_en": "The Fable Season 2: January 2027 Premiere and New Cast",
+      "status": "PUBLISHED",
+      "priority": "HIGH",
+      "first_detected_at": "2026-10-13",
+      "announcement_at": "2026-10-13",
+      "announcement_timezone": "Asia/Tokyo; exact announcement time not independently verified",
+      "official_source_url": "https://www.vap.co.jp/the-fable-anime/",
+      "official_cover_url": null,
+      "official_trailer_url": null,
+      "score": 85,
+      "score_breakdown": {
+        "recency": 30,
+        "search_intent": 22,
+        "competition_gap": 16,
+        "editorial_value": 10,
+        "official_verification": 7
+      },
+      "seo_rationale": "Confirmed January 2027 premiere and cast additions",
+      "keywords": [
+        "The Fable season 2",
+        "The Fable January 2027",
+        "Yamaoka arc"
+      ],
+      "competition": "Not independently quantified",
+      "action": "CREAR",
+      "existing_article_url": null,
+      "approval_at": "2026-10-13",
+      "publication_url": "https://aninextup.com/articles/the-fable-season-2-january-2027",
+      "editorial_note": "User explicitly approved publication. Article committed to main; sitemap and assets/data.js updated. Public deployment pending verification."
     }
   ],
   "statuses": [
