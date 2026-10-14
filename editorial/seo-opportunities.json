@@ -154,7 +154,22 @@
       "seo_rationale": "Fresh October 13 official final trailer for October 31 French premiere; moderate qualitative English-language search opportunity, competition and Search Console data not verified.",
       "action": "CREAR",
       "draft_path": "articles/le-college-noir-season-2-trailer-october-2026.html",
-      "editorial_note": "Official ADN cover verified: HTTP 200 image/png, 1024x576, season-two identity confirmed in real desktop browser; cached locally. Toei final trailer WjbH4XnNJh4 verified in official source; prior ADN video cH1hGkmJlXQ is country-blocked in QA browser. Reproduction and mobile gate still pending. No publication approval."
+      "editorial_note": "Preparation corrected and real-browser QA recorded in audits/le-college-noir-qa.md. Official ADN artwork verified HTTP 200 image/png 1024x576 and cached locally. Hero, trailer poster, home/news card and both related artworks render correctly in desktop and mobile-width Chrome documents (360/390 CSS px). All 17 distinct article links return HTTP 200; both related links clicked in browser. Toei official final trailer WjbH4XnNJh4 correct; player opens, but actual media remains at currentTime=0 readyState=0 in embed and direct YouTube watch. Cause not established, so playback is NOT VERIFIED. Native mobile hardware/Safari/touch not tested. Keep BLOCKED_QA_PENDING and draft; explicit PUBLÍCALO required, no publication approval.",
+      "qa": {
+        "article_structure": "PASS",
+        "official_artwork": "PASS",
+        "desktop_render": "PASS",
+        "mobile_width_render": "PASS_360_390_CSS_PX",
+        "native_mobile_device": "NOT_TESTED",
+        "article_links": "PASS_17_HTTP_200",
+        "related_card_navigation": "PASS",
+        "home_news_cards": "PASS",
+        "seo_jsonld_sitemap": "PASS_STATIC_AND_PREVIEW",
+        "trailer_identity_and_embed": "PASS",
+        "trailer_media_playback": "NOT_VERIFIED_TIME_0_READY_STATE_0",
+        "ready_to_publish": false,
+        "report": "audits/le-college-noir-qa.md"
+      }
     }
   ],
   "statuses": [
