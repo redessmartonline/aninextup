@@ -177,6 +177,20 @@ async function ensureRelatedReleaseCovers(){
   const coverBySlug=new Map(entries.filter(x=>x.article&&x.image).map(x=>[x.article.split('/').pop().replace(/\.html$/,''),x.image]));
   for(const section of sections){
     for(const link of section.querySelectorAll('a.mini')){
+      // Normalize legacy editorial cards to the shared full-width cover layout.
+      // Keep their original links, labels and descriptions intact.
+      if(!link.classList.contains('related-card')){
+        const media=document.createElement('span');
+        media.className='related-card-media';
+        const copy=document.createElement('span');
+        copy.className='related-card-copy';
+        for(const child of Array.from(link.childNodes)){
+          if(child.nodeType===1&&child.matches('img,.related-card-media'))media.append(child);
+          else copy.append(child);
+        }
+        link.append(media,copy);
+        link.classList.add('related-card');
+      }
       const destination=new URL(link.getAttribute('href'),location.href);
       const slug=destination.pathname.split('/').pop().replace(/\.html$/,'');
       let img=link.querySelector('img');
