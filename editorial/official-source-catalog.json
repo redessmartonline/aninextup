@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-14T10:55:37-04:00",
+  "updated_at": "2026-10-14T11:57:46-04:00",
   "target_verified_sources": 200,
   "stretch_target_verified_sources": 500,
   "counts": {
-    "total_entries": 209,
-    "verified": 158,
-    "pending_or_inaccessible": 51
+    "total_entries": 221,
+    "verified": 162,
+    "pending_or_inaccessible": 59
   },
   "counting_policy": "Only entries with verified=true count toward the verified-source target. Direct-fetch failures are recorded but excluded until a later successful verification.",
   "sources": [
@@ -2527,6 +2527,150 @@
       "priority": "low",
       "evidence": "Official NAGOMI animation studio site loaded successfully.",
       "verified_at": "2026-10-14T10:55:37-04:00"
+    },
+    {
+      "id": "210",
+      "name": "Studio Signpost",
+      "url": "https://www.st-signpost.co.jp/",
+      "category": "animation studio",
+      "country_language": "Japan / Japanese",
+      "accessibility": "direct_fetch_failed",
+      "verified": false,
+      "priority": "medium",
+      "evidence": "Official-looking Studio Signpost endpoint could not be fetched during this run; excluded from verified count.",
+      "verified_at": "2026-10-14T11:57:46-04:00"
+    },
+    {
+      "id": "211",
+      "name": "CompTown",
+      "url": "https://comptown.co.jp/",
+      "category": "animation studio",
+      "country_language": "Japan / Japanese",
+      "accessibility": "direct_fetch_failed",
+      "verified": false,
+      "priority": "low",
+      "evidence": "Candidate official CompTown endpoint could not be fetched during this run; excluded from verified count.",
+      "verified_at": "2026-10-14T11:57:46-04:00"
+    },
+    {
+      "id": "212",
+      "name": "Studio Massket",
+      "url": "https://studiomassket.com/",
+      "category": "animation studio",
+      "country_language": "Japan / Japanese",
+      "accessibility": "direct_fetch_failed",
+      "verified": false,
+      "priority": "low",
+      "evidence": "Candidate official Studio Massket endpoint could not be fetched during this run; excluded from verified count.",
+      "verified_at": "2026-10-14T11:57:46-04:00"
+    },
+    {
+      "id": "213",
+      "name": "CygamesPictures",
+      "url": "https://cygamespictures.co.jp/",
+      "category": "animation studio",
+      "country_language": "Japan / Japanese",
+      "accessibility": "http_502",
+      "verified": false,
+      "priority": "high",
+      "evidence": "Candidate official CygamesPictures endpoint returned HTTP 502 during this run; excluded from verified count.",
+      "verified_at": "2026-10-14T11:57:46-04:00"
+    },
+    {
+      "id": "214",
+      "name": "TROYCA",
+      "url": "https://troyca.co.jp/",
+      "category": "animation studio",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible_redirect",
+      "verified": true,
+      "priority": "medium",
+      "evidence": "Official TROYCA site loaded after redirect, with company identity, works and dated production news.",
+      "verified_at": "2026-10-14T11:57:46-04:00"
+    },
+    {
+      "id": "215",
+      "name": "Lapin Track",
+      "url": "https://lapintrack.com/",
+      "category": "animation studio",
+      "country_language": "Japan / Japanese",
+      "accessibility": "direct_fetch_timeout",
+      "verified": false,
+      "priority": "medium",
+      "evidence": "Candidate official Lapin Track endpoint timed out during this run; excluded from verified count.",
+      "verified_at": "2026-10-14T11:57:46-04:00"
+    },
+    {
+      "id": "216",
+      "name": "Studio Durian",
+      "url": "https://studio-durian.jp/",
+      "category": "animation studio",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "medium",
+      "evidence": "Official Studio Durian site loaded with works, news, company profile and corporate copyright.",
+      "verified_at": "2026-10-14T11:57:46-04:00"
+    },
+    {
+      "id": "217",
+      "name": "NAMU Animation",
+      "url": "https://www.namuanimation.com/",
+      "category": "animation studio",
+      "country_language": "South Korea / Korean-English",
+      "accessibility": "direct_fetch_timeout",
+      "verified": false,
+      "priority": "low",
+      "evidence": "Candidate official NAMU Animation endpoint timed out during this run; excluded from verified count.",
+      "verified_at": "2026-10-14T11:57:46-04:00"
+    },
+    {
+      "id": "218",
+      "name": "Studio M2",
+      "url": "https://studiom2.jp/",
+      "category": "animation studio",
+      "country_language": "Japan / Japanese",
+      "accessibility": "direct_fetch_failed",
+      "verified": false,
+      "priority": "medium",
+      "evidence": "Candidate official Studio M2 endpoint could not be fetched during this run; excluded from verified count.",
+      "verified_at": "2026-10-14T11:57:46-04:00"
+    },
+    {
+      "id": "219",
+      "name": "Contrail",
+      "url": "https://contrail.tokyo/",
+      "category": "animation studio",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "medium",
+      "evidence": "Official Contrail site loaded with company identity, works and dated animation-production information.",
+      "verified_at": "2026-10-14T11:57:46-04:00"
+    },
+    {
+      "id": "220",
+      "name": "EOTA",
+      "url": "https://eota.co.jp/",
+      "category": "animation production network",
+      "country_language": "Japan / Japanese",
+      "accessibility": "direct_fetch_failed",
+      "verified": false,
+      "priority": "low",
+      "evidence": "Candidate official EOTA endpoint could not be fetched during this run; excluded from verified count.",
+      "verified_at": "2026-10-14T11:57:46-04:00"
+    },
+    {
+      "id": "221",
+      "name": "Signal.MD",
+      "url": "https://www.signal-md.co.jp/",
+      "category": "animation studio",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible_minimal",
+      "verified": true,
+      "priority": "medium",
+      "evidence": "Official Signal.MD endpoint loaded with the Signal MD page identity; page body exposed no crawlable text.",
+      "verified_at": "2026-10-14T11:57:46-04:00"
     }
   ]
 }
