@@ -170,20 +170,33 @@ if(document.querySelector('article.article')){
 
 // Enforce the three-column layout even when a page retains cached legacy CSS.
 // Run immediately, independently of image fetching or editorial data loading.
+function normalizeRelatedReleaseGrid(section){
+  const grids=Array.from(section.querySelectorAll('.grid'));
+  if(!grids.length)return null;
+
+  // Older editorial markup sometimes split one related list across several grids.
+  // Move the first three cards, in document order, into one shared grid.
+  const cards=grids.flatMap(grid=>Array.from(grid.querySelectorAll(':scope > a.mini')));
+  cards.slice(3).forEach(card=>card.remove());
+  const visibleCards=cards.slice(0,3);
+  const grid=grids[0];
+  visibleCards.forEach(card=>grid.append(card));
+  grids.slice(1).forEach(extra=>extra.remove());
+
+  grid.classList.toggle('three',visibleCards.length===3);
+  grid.style.setProperty('display','grid','important');
+  grid.style.setProperty('grid-template-columns','repeat(3,minmax(0,1fr))','important');
+  grid.style.setProperty('gap','12px','important');
+  grid.style.setProperty('align-items','stretch','important');
+  visibleCards.forEach(card=>{
+    card.style.setProperty('min-width','0');
+    card.style.setProperty('width','100%');
+  });
+  return grid;
+}
 function enforceRelatedReleaseRow(){
   document.querySelectorAll('article.article .related-releases').forEach(section=>{
-    const grid=section.querySelector('.grid');
-    if(!grid)return;
-    const cards=Array.from(grid.querySelectorAll(':scope > a.mini'));
-    cards.slice(3).forEach(card=>card.remove());
-    grid.style.setProperty('display','grid','important');
-    grid.style.setProperty('grid-template-columns','repeat(3,minmax(0,1fr))','important');
-    grid.style.setProperty('gap','12px','important');
-    grid.style.setProperty('align-items','stretch','important');
-    cards.slice(0,3).forEach(card=>{
-      card.style.setProperty('min-width','0');
-      card.style.setProperty('width','100%');
-    });
+    normalizeRelatedReleaseGrid(section);
   });
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',enforceRelatedReleaseRow,{once:true});
@@ -196,10 +209,7 @@ async function ensureRelatedReleaseCovers(){
   if(!sections.length)return;
   // Show at most three related articles on every article page, including legacy sections.
   for(const section of sections){
-    const cards=section.querySelectorAll('a.mini');
-    cards.forEach((card,index)=>{if(index>=3)card.remove();});
-    const grid=section.querySelector('.grid');
-    if(grid)grid.classList.toggle('three',grid.querySelectorAll('a.mini').length===3);
+    normalizeRelatedReleaseGrid(section);
   }
   const entries=(window.ANINEXTUP_DATA?.anime||[]).concat(window.ANINEXTUP_DATA?.guides||[]);
   const coverBySlug=new Map(entries.filter(x=>x.article&&x.image).map(x=>[x.article.split('/').pop().replace(/\.html$/,''),x.image]));
