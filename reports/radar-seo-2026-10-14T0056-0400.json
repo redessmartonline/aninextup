@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "run_started_at": "2026-10-14T00:56:45-04:00",
+  "timezone": "America/Santo_Domingo",
+  "prior_report": "reports/radar-seo-2026-10-13T2358-0400.json",
+  "summary": {
+    "news_found_this_search": 3,
+    "new_announcements_since_prior_report": 0,
+    "known_items_rechecked": 3,
+    "verified_primary": 3,
+    "not_verified_primary": 0,
+    "in_preparation": 3,
+    "ready_for_approval": 0,
+    "published_this_run": 0,
+    "literal_status": "Sin noticias nuevas en esta búsqueda",
+    "material_change": "Yumeneko Connect primary official source was located and verified; a separate draft article and PR were prepared."
+  },
+  "news": [
+    {
+      "rank": 1,
+      "title": "The Apothecary Diaries third-anniversary special",
+      "official_url": "https://kusuriyanohitorigoto.jp/news/3108/",
+      "official_date": "2026-10-14",
+      "event_time": "2026-10-22T20:00:00+09:00",
+      "score": {
+        "total": 92,
+        "demand": 32,
+        "freshness": 30,
+        "opportunity": 15,
+        "authority": 15
+      },
+      "status": "KNOWN_VERIFIED_CANONICAL_UPDATE_IN_DRAFT_PR_17",
+      "duplicate_result": "Existing canonical article; only the later official update was prepared.",
+      "current_run_accessibility": "direct_fetch_error; prior primary verification retained"
+    },
+    {
+      "rank": 2,
+      "title": "Yumeneko Connect TV anime announcement",
+      "official_url": "https://sh-anime.shochiku.co.jp/yumeconne-anime/",
+      "official_date": "2026-10-14",
+      "official_time": "not displayed on primary page; secondary reports timestamp 12:00 JST",
+      "score": {
+        "total": 89,
+        "demand": 24,
+        "freshness": 30,
+        "opportunity": 20,
+        "authority": 15
+      },
+      "status": "KNOWN_NOW_PRIMARY_VERIFIED_NEW_DRAFT_PR_18_BLOCKED_QA",
+      "duplicate_result": "No matches by title, aliases, Japanese title, franchise, official slug, source URL, data.js, sitemap, SEO opportunities or open PRs.",
+      "evidence": {
+        "cast": [
+          "Yusuke Kobayashi",
+          "Yu Shinohara"
+        ],
+        "studio": "STUDIO MASSKET",
+        "trailer": "https://www.youtube.com/watch?v=LCAL2iL5vLc"
+      }
+    },
+    {
+      "rank": 3,
+      "title": "The Fable Season 2 Yamaoka arc cast",
+      "official_url": "https://www.vap.co.jp/the-fable-anime/staffcast/",
+      "official_date": "2026-10-14",
+      "secondary_timestamp": "2026-10-14T00:00:00+09:00",
+      "score": {
+        "total": 88,
+        "demand": 30,
+        "freshness": 28,
+        "opportunity": 15,
+        "authority": 15
+      },
+      "status": "KNOWN_VERIFIED_CANONICAL_UPDATE_IN_DRAFT_PR_17",
+      "duplicate_result": "Existing canonical article; only the later official cast update was prepared."
+    }
+  ],
+  "source_catalog": {
+    "path": "editorial/official-source-catalog.json",
+    "total_entries": 56,
+    "verified": 52,
+    "pending_or_inaccessible": 4,
+    "consulted_for_catalog_this_run": 24,
+    "new_entries_added": 21,
+    "new_entries_verified": 18,
+    "previously_pending_upgraded": 2,
+    "net_newly_verified": 20,
+    "progress_to_200_percent": 26,
+    "inaccessible": [
+      "NHK Anime",
+      "Hakusensha",
+      "Shinchosha",
+      "Takeshobo"
+    ],
+    "added_verified": [
+      "Square Enix Manga & Books",
+      "Akita Shoten",
+      "Futabasha",
+      "Houbunsha",
+      "Zenon Plus / Coamix",
+      "Monthly Shonen Gangan",
+      "Monthly Comic Alive",
+      "Dengeki Bunko",
+      "Studio Pierrot",
+      "Madhouse",
+      "Production I.G",
+      "WIT Studio",
+      "CloverWorks",
+      "A-1 Pictures",
+      "Studio Trigger",
+      "David Production",
+      "Science SARU",
+      "Yumeneko Connect Anime Official Website"
+    ],
+    "upgraded_verified": [
+      "Young Magazine Web",
+      "Nippon TV Anime"
+    ]
+  },
+  "search_console": {
+    "site": "sc-domain:aninextup.com",
+    "range": {
+      "start": "2026-09-14",
+      "end": "2026-10-11"
+    },
+    "data_source": "api",
+    "candidate_specific_queries_found": [],
+    "note": "No candidate-specific impressions or clicks were returned; no metrics were invented.",
+    "top_general_opportunities": [
+      {
+        "query": "anime releasing today",
+        "impressions": 147,
+        "clicks": 0,
+        "position": 10.0816
+      },
+      {
+        "query": "today anime release",
+        "impressions": 110,
+        "clicks": 0,
+        "position": 9.5636
+      },
+      {
+        "query": "anime release today",
+        "impressions": 34,
+        "clicks": 0,
+        "position": 10.0882
+      }
+    ]
+  },
+  "preparation": {
+    "duplicate_checks": [
+      "repository code search",
+      "assets/data.js",
+      "sitemap.xml",
+      "editorial/seo-opportunities.json",
+      "open pull requests"
+    ],
+    "pr17": {
+      "url": "https://github.com/redessmartonline/aninextup/pull/17",
+      "status": "BLOCKED_QA_PENDING",
+      "head_sha": "00dc4df5e1eefbed8ae0536f524f537d9a2d2c68",
+      "workflow_runs": 0
+    },
+    "pr18": {
+      "url": "https://github.com/redessmartonline/aninextup/pull/18",
+      "status": "BLOCKED_QA_PENDING",
+      "head_sha": "b98538051d9d235eec7594d58352f45dedadd11f",
+      "workflow_runs": 0,
+      "structural_checks": {
+        "json_ld_syntax": true,
+        "NewsArticle": true,
+        "BreadcrumbList": true,
+        "VideoObject": true,
+        "release_at_a_glance": true,
+        "byline": true,
+        "related_cards": 2,
+        "canonical_count": 1
+      }
+    },
+    "blockers": [
+      "Required repository validation scripts not executed on PR branches",
+      "Final official image HTTP/dimensions and trailer playback not verified",
+      "Desktop and mobile visual QA incomplete",
+      "No successful CI workflow runs were returned"
+    ],
+    "publish_authorized": false
+  },
+  "writes": [
+    {
+      "type": "catalog",
+      "commit": "9c4559e09e846e17bbd6e80549158922bc9715e7",
+      "verified": true
+    },
+    {
+      "type": "catalog_yumeneko_source",
+      "commit": "07f74d509519965bc24442c75ceeb9179cba6186",
+      "verified": true
+    },
+    {
+      "type": "yumeneko_article",
+      "commit": "41c9fc06d1c1c3c08c953acf8de23d3f3ee026c2",
+      "verified_via_branch_fetch": true
+    },
+    {
+      "type": "yumeneko_discovery",
+      "commit": "91d33ee93b46c087bdff8eaeda2aeebd5006c63d",
+      "verified_via_branch_fetch": true
+    },
+    {
+      "type": "yumeneko_sitemap",
+      "commit": "b98538051d9d235eec7594d58352f45dedadd11f",
+      "verified_via_branch_fetch": true
+    }
+  ]
+}
