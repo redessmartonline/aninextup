@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-14T02:03:15-04:00",
+  "updated_at": "2026-10-14T03:04:28-04:00",
   "target_verified_sources": 200,
   "stretch_target_verified_sources": 500,
   "counts": {
-    "total_entries": 76,
-    "verified": 71,
-    "pending_or_inaccessible": 5
+    "total_entries": 96,
+    "verified": 92,
+    "pending_or_inaccessible": 4
   },
   "counting_policy": "Only entries with verified=true count toward the verified-source target. Direct-fetch failures are recorded but excluded until a later successful verification.",
   "sources": [
@@ -514,11 +514,12 @@
       "url": "https://www.takeshobo.co.jp/",
       "category": "publisher",
       "country_language": "Japan / Japanese",
-      "accessibility": "direct_fetch_error",
-      "verified": false,
+      "accessibility": "accessible_via_official_alternate",
+      "verified": true,
       "priority": "medium",
-      "evidence": "Official endpoint could not be rendered during this run; excluded from verified count.",
-      "verified_at": "2026-10-14T00:56:45-04:00"
+      "evidence": "Official Takeshobo BL portal loaded with publisher copyright, editorial accounts and dated release notices.",
+      "verified_at": "2026-10-14T03:04:28-04:00",
+      "alternate_verified_url": "https://bl.takeshobo.co.jp/"
     },
     {
       "id": "043",
@@ -706,11 +707,12 @@
       "url": "https://www.ponican.jp/",
       "category": "anime producer / distributor",
       "country_language": "Japan / Japanese",
-      "accessibility": "http_403",
-      "verified": false,
+      "accessibility": "accessible_via_official_anime_news",
+      "verified": true,
       "priority": "high",
-      "evidence": "Official endpoint returned HTTP 403 in this verifier; excluded from verified count.",
-      "verified_at": "2026-10-14T02:03:15-04:00"
+      "evidence": "Official Pony Canyon anime-news portal loaded; corporate and international anime licensing pages corroborate ownership.",
+      "verified_at": "2026-10-14T03:04:28-04:00",
+      "alternate_verified_url": "https://news.ponycanyon.co.jp/anime"
     },
     {
       "id": "059",
@@ -874,11 +876,12 @@
       "url": "https://comic.webnewtype.com/",
       "category": "official manga platform",
       "country_language": "Japan / Japanese",
-      "accessibility": "direct_fetch_error",
-      "verified": false,
+      "accessibility": "accessible_via_current_kadocomi_label",
+      "verified": true,
       "priority": "medium",
-      "evidence": "Official endpoint could not be rendered during this run; excluded from verified count.",
-      "verified_at": "2026-10-14T02:03:15-04:00"
+      "evidence": "Official KADOKAWA Comic Newtype label and 10th-anniversary notice resolved on the current Kadocomi/ComicWalker platform.",
+      "verified_at": "2026-10-14T03:04:28-04:00",
+      "alternate_verified_url": "https://comic-walker.com/label/comicnewtype/"
     },
     {
       "id": "073",
@@ -910,11 +913,12 @@
       "url": "https://over-lap.co.jp/",
       "category": "publisher / light novel imprint",
       "country_language": "Japan / Japanese",
-      "accessibility": "direct_fetch_error",
-      "verified": false,
+      "accessibility": "accessible",
+      "verified": true,
       "priority": "medium",
-      "evidence": "Official endpoint could not be rendered during this run; excluded from verified count.",
-      "verified_at": "2026-10-14T02:03:15-04:00"
+      "evidence": "Official Overlap publisher portal loaded with current light-novel, manga and media-mix catalog.",
+      "verified_at": "2026-10-14T03:04:28-04:00",
+      "alternate_verified_url": "https://www.over-lap.co.jp/"
     },
     {
       "id": "076",
@@ -927,6 +931,246 @@
       "priority": "high",
       "evidence": "Official SB Creative GA Bunko site loaded successfully.",
       "verified_at": "2026-10-14T02:03:15-04:00"
+    },
+    {
+      "id": "077",
+      "name": "ufotable",
+      "url": "https://www.ufotable.com/",
+      "category": "animation studio",
+      "country_language": "Japan / Japanese and English",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "high",
+      "evidence": "Official studio site loaded with dated news and works including Demon Slayer and Witch on the Holy Night.",
+      "verified_at": "2026-10-14T03:04:28-04:00"
+    },
+    {
+      "id": "078",
+      "name": "J.C.STAFF",
+      "url": "https://www.jcstaff.co.jp/",
+      "category": "animation studio",
+      "country_language": "Japan / Japanese",
+      "accessibility": "direct_fetch_error",
+      "verified": false,
+      "priority": "high",
+      "evidence": "Official endpoint returned 502 during this run; excluded from verified count.",
+      "verified_at": "2026-10-14T03:04:28-04:00"
+    },
+    {
+      "id": "079",
+      "name": "P.A.WORKS",
+      "url": "https://www.pa-works.jp/",
+      "category": "animation studio",
+      "country_language": "Japan / Japanese and English",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "high",
+      "evidence": "Official studio site loaded with works, company information and dated news.",
+      "verified_at": "2026-10-14T03:04:28-04:00"
+    },
+    {
+      "id": "080",
+      "name": "SHAFT",
+      "url": "https://www.shaft-web.co.jp/",
+      "category": "animation studio",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "high",
+      "evidence": "Official studio site loaded with portfolio, company information and dated notices.",
+      "verified_at": "2026-10-14T03:04:28-04:00"
+    },
+    {
+      "id": "081",
+      "name": "LIDENFILMS",
+      "url": "https://lidenfilms.jp/",
+      "category": "animation studio",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "high",
+      "evidence": "Official studio site loaded with dated production news and works catalog.",
+      "verified_at": "2026-10-14T03:04:28-04:00"
+    },
+    {
+      "id": "082",
+      "name": "ENGI",
+      "url": "https://engi-st.net/",
+      "category": "animation studio",
+      "country_language": "Japan / Japanese and English",
+      "accessibility": "accessible_redirect",
+      "verified": true,
+      "priority": "high",
+      "evidence": "Official ENGI site loaded after redirect with studio identity, works and news.",
+      "verified_at": "2026-10-14T03:04:28-04:00"
+    },
+    {
+      "id": "083",
+      "name": "Kinema Citrus",
+      "url": "https://kinemacitrus.biz/",
+      "category": "animation studio",
+      "country_language": "Japan / Japanese and English",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "high",
+      "evidence": "Official studio site loaded with works, news and corporate links.",
+      "verified_at": "2026-10-14T03:04:28-04:00"
+    },
+    {
+      "id": "084",
+      "name": "Orange",
+      "url": "https://orange-cg.com/",
+      "category": "CG animation studio",
+      "country_language": "Japan / Japanese and English",
+      "accessibility": "direct_fetch_error",
+      "verified": false,
+      "priority": "high",
+      "evidence": "Official endpoint was inaccessible to this verifier; excluded from verified count.",
+      "verified_at": "2026-10-14T03:04:28-04:00"
+    },
+    {
+      "id": "085",
+      "name": "STUDIO4°C",
+      "url": "https://www.studio4c.co.jp/",
+      "category": "animation studio",
+      "country_language": "Japan / Japanese and English",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "high",
+      "evidence": "Official studio site loaded with topics, works and company information.",
+      "verified_at": "2026-10-14T03:04:28-04:00"
+    },
+    {
+      "id": "086",
+      "name": "Polygon Pictures",
+      "url": "https://www.ppi.co.jp/",
+      "category": "CG animation studio",
+      "country_language": "Japan / Japanese and English",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "high",
+      "evidence": "Official studio site loaded with works and dated press releases.",
+      "verified_at": "2026-10-14T03:04:28-04:00"
+    },
+    {
+      "id": "087",
+      "name": "Telecom Animation Film",
+      "url": "https://www.telecom-anime.com/",
+      "category": "animation studio",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "medium",
+      "evidence": "Official studio site loaded with production news and corporate information.",
+      "verified_at": "2026-10-14T03:04:28-04:00"
+    },
+    {
+      "id": "088",
+      "name": "Sanzigen",
+      "url": "https://www.sanzigen.co.jp/",
+      "category": "CG animation studio",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "high",
+      "evidence": "Official studio site resolved with company and production content.",
+      "verified_at": "2026-10-14T03:04:28-04:00"
+    },
+    {
+      "id": "089",
+      "name": "Graphinica",
+      "url": "https://www.graphinica.com/",
+      "category": "CG animation studio",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "high",
+      "evidence": "Official studio site resolved with company and production content.",
+      "verified_at": "2026-10-14T03:04:28-04:00"
+    },
+    {
+      "id": "090",
+      "name": "Studio Deen",
+      "url": "https://www.deen.co.jp/",
+      "category": "animation studio",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "high",
+      "evidence": "Official studio site resolved with works, news and company information.",
+      "verified_at": "2026-10-14T03:04:28-04:00"
+    },
+    {
+      "id": "091",
+      "name": "Nippon Animation",
+      "url": "https://www.nippon-animation.co.jp/",
+      "category": "animation studio / producer",
+      "country_language": "Japan / Japanese",
+      "accessibility": "direct_fetch_error",
+      "verified": false,
+      "priority": "high",
+      "evidence": "Direct verification failed this run; excluded from verified count.",
+      "verified_at": "2026-10-14T03:04:28-04:00"
+    },
+    {
+      "id": "092",
+      "name": "Tatsunoko Production",
+      "url": "https://tatsunoko.co.jp/",
+      "category": "animation studio / producer",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "high",
+      "evidence": "Official Tatsunoko site loaded successfully.",
+      "verified_at": "2026-10-14T03:04:28-04:00"
+    },
+    {
+      "id": "093",
+      "name": "Satelight",
+      "url": "https://www.satelight.co.jp/",
+      "category": "animation studio",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "high",
+      "evidence": "Official Satelight site loaded with works and company information.",
+      "verified_at": "2026-10-14T03:04:28-04:00"
+    },
+    {
+      "id": "094",
+      "name": "8bit",
+      "url": "https://8bit-studio.co.jp/",
+      "category": "animation studio",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "high",
+      "evidence": "Official 8bit studio site loaded successfully.",
+      "verified_at": "2026-10-14T03:04:28-04:00"
+    },
+    {
+      "id": "095",
+      "name": "WHITE FOX",
+      "url": "https://w-fox.co.jp/",
+      "category": "animation studio",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible_redirect",
+      "verified": true,
+      "priority": "high",
+      "evidence": "Official WHITE FOX site loaded after redirect.",
+      "verified_at": "2026-10-14T03:04:28-04:00"
+    },
+    {
+      "id": "096",
+      "name": "AT-X",
+      "url": "https://www.at-x.com/",
+      "category": "anime broadcaster",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "high",
+      "evidence": "Official anime channel site loaded with current programming and schedules.",
+      "verified_at": "2026-10-14T03:04:28-04:00"
     }
   ]
 }
