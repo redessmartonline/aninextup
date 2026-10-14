@@ -36,7 +36,7 @@ for(const name of fs.readdirSync(root).filter(n=>n.endsWith('.html'))){
   html=fill(html,'data-month-count',month=>{const n=data.anime.filter(a=>a.date?.startsWith(month)).length;return n?'· '+n+' CONFIRMED':'';});
   html=fill(html,'data-anime-platform',platform=>list(model.select(data.anime.filter(a=>model.matchesPlatform(a,platform)),'all',ctx)));
   html=fill(html,'data-platform-count',platform=>{const n=data.anime.filter(a=>model.matchesPlatform(a,platform)).length;return n?'· '+n+' TRACKED':'';});
-  html=fill(html,'data-home-latest',()=>data.guides.slice(0,6).map(guide).join(''));
+  html=fill(html,'data-home-latest',()=>{const seen=new Set();return [...data.anime.filter(a=>a.tag&&a.article),...data.guides].filter(g=>{if(seen.has(g.article))return false;seen.add(g.article);return true;}).slice(0,6).map(guide).join('');});
   html=fill(html,'data-guides',()=>data.guides.map(guide).join(''));
   // All discovery pages load shared selectors before client-side refresh.
   if(html.includes('assets/data.js')&&!html.includes('src="assets/release-model.js'))html=html.replace(/<script src="assets\/app\.js[^\"]*"><\/script>/,'<script src="assets/release-model.js?v=discovery1"></script><script src="assets/app.js?v=discovery1"></script>');
