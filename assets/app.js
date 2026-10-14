@@ -173,6 +173,13 @@ if(document.querySelector('article.article')){
 async function ensureRelatedReleaseCovers(){
   const sections=document.querySelectorAll('article.article .related-releases');
   if(!sections.length)return;
+  // Show at most three related articles on every article page, including legacy sections.
+  for(const section of sections){
+    const cards=section.querySelectorAll('a.mini');
+    cards.forEach((card,index)=>{if(index>=3)card.remove();});
+    const grid=section.querySelector('.grid');
+    if(grid)grid.classList.toggle('three',grid.querySelectorAll('a.mini').length===3);
+  }
   const entries=(window.ANINEXTUP_DATA?.anime||[]).concat(window.ANINEXTUP_DATA?.guides||[]);
   const coverBySlug=new Map(entries.filter(x=>x.article&&x.image).map(x=>[x.article.split('/').pop().replace(/\.html$/,''),x.image]));
   for(const section of sections){
