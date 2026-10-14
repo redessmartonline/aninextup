@@ -185,6 +185,7 @@
   "writes": {
     "catalog_write_confirmed": true,
     "pr_18_image_correction_confirmed": true,
-    "report_write_confirmed": false
+    "report_write_confirmed": true,
+    "initial_report_commit": "dfb602b7eedfb2062eec69a910b226ed18a76e74"
   }
 }
