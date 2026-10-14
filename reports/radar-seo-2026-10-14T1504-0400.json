@@ -1,0 +1,204 @@
+{
+  "generated_at": "2026-10-14T15:04:39-04:00",
+  "timezone": "America/Santo_Domingo",
+  "gsc": {
+    "property": "sc-domain:aninextup.com",
+    "period": {
+      "start": "2026-09-14",
+      "end": "2026-10-11",
+      "settled_through": "2026-10-11"
+    },
+    "aggregate": {
+      "clicks": 21,
+      "impressions": 991,
+      "ctr_percent": 2.119071644803229,
+      "position": 13.98183652875883
+    },
+    "focus_groups": [
+      {
+        "group": "anime releasing today variants",
+        "clicks": 0,
+        "impressions": 432,
+        "position": 11.7153,
+        "score": 96,
+        "status": "existing-page optimization"
+      },
+      {
+        "group": "anime november 2026 variants",
+        "clicks": 1,
+        "impressions": 79,
+        "ctr_percent": 1.2658,
+        "position": 7.1139,
+        "score": 86,
+        "status": "existing-page optimization"
+      },
+      {
+        "group": "demon crest anime release date variants",
+        "clicks": 0,
+        "impressions": 16,
+        "position": 4.1875,
+        "score": 82,
+        "status": "existing-page optimization"
+      }
+    ],
+    "exact_queries": [
+      {
+        "query": "anime releasing today",
+        "clicks": 0,
+        "impressions": 147,
+        "ctr_percent": 0,
+        "position": 10.0816
+      },
+      {
+        "query": "today anime release",
+        "clicks": 0,
+        "impressions": 110,
+        "ctr_percent": 0,
+        "position": 9.5636
+      },
+      {
+        "query": "anime release today",
+        "clicks": 0,
+        "impressions": 34,
+        "ctr_percent": 0,
+        "position": 10.0882
+      },
+      {
+        "query": "anime november 2026",
+        "clicks": 0,
+        "impressions": 20,
+        "ctr_percent": 0,
+        "position": 7.05
+      },
+      {
+        "query": "anime coming out in november 2026",
+        "clicks": 1,
+        "impressions": 7,
+        "ctr_percent": 14.2857,
+        "position": 9.2857
+      },
+      {
+        "query": "demon crest anime release date",
+        "clicks": 0,
+        "impressions": 6,
+        "ctr_percent": 0,
+        "position": 4.6667
+      }
+    ],
+    "focus_pages": [
+      {
+        "page": "https://aninextup.com/releases/2026/november.html",
+        "clicks": 7,
+        "impressions": 245,
+        "ctr_percent": 2.8571,
+        "position": 7.1061
+      },
+      {
+        "page": "http://aninextup.com/today",
+        "clicks": 0,
+        "impressions": 447,
+        "ctr_percent": 0,
+        "position": 13.5213
+      },
+      {
+        "page": "https://aninextup.com/anime/demons-crest.html",
+        "clicks": 0,
+        "impressions": 39,
+        "ctr_percent": 0,
+        "position": 6.0513
+      },
+      {
+        "page": "https://aninextup.com/today.html",
+        "clicks": 0,
+        "impressions": 63,
+        "ctr_percent": 0,
+        "position": 24.4444
+      }
+    ],
+    "note": "Metrics are measured Search Console data; grouped variants are not unique users."
+  },
+  "new_anime_announcements": [],
+  "news_statement": "Sin noticias nuevas en esta búsqueda",
+  "upcoming_releases": {
+    "within_7_days": [
+      "Dreamland — 2026-10-17",
+      "Cyberpunk: Edgerunners 2 — 2026-10-20"
+    ],
+    "within_30_days": [
+      "My Happy Marriage specials — 2026-10-25",
+      "Bass X Machina — 2026-11-03",
+      "Demon’s Crest — 2026-11-06",
+      "Rakuen — 2026-11-13"
+    ],
+    "within_90_days": [
+      "Witch on the Holy Night / VOTOMS — 2026-11-20",
+      "Fool Night — 2026-11-26",
+      "Takopi’s Original Sin — 2026-11-27",
+      "The Apothecary Diaries Movie — 2026-12-11",
+      "Hirayasumi — 2027-01 (month only)"
+    ]
+  },
+  "editorial": {
+    "duplicate_checks": [
+      "public site",
+      "assets/data.js",
+      "sitemap.xml",
+      "editorial/seo-opportunities.json",
+      "open pull requests"
+    ],
+    "open_prs": [
+      14,
+      17,
+      18
+    ],
+    "pr18": {
+      "status": "BLOCKED",
+      "new_head_commit": "7ed91183341c4f132772780764e341c07a4f5d9c",
+      "correction": "Replaced incorrect Yu Shinohara romanization with Yu Sasahara (2 occurrences).",
+      "remaining_blockers": [
+        "official image endpoint not verified in this run",
+        "official trailer/player not reverified",
+        "desktop/mobile visual QA pending",
+        "duplicate and publication validators pending"
+      ]
+    }
+  },
+  "sources": {
+    "catalog_total": 244,
+    "catalog_verified": 179,
+    "catalog_pending": 65,
+    "consulted_this_run": 2,
+    "inaccessible_this_run": 1,
+    "newly_added": 0,
+    "consulted": [
+      {
+        "name": "Magazine Pocket — Yumeneko Connect",
+        "url": "https://pocket.shonenmagazine.com/episode/2550922966336078300",
+        "accessibility": "accessible",
+        "result": "official manga page; no new anime announcement"
+      },
+      {
+        "name": "Yumeneko Connect official anime site",
+        "url": "https://sh-anime.shochiku.co.jp/yumeconne-anime/",
+        "accessibility": "inaccessible to verifier",
+        "result": "image/news endpoints could not be revalidated"
+      }
+    ]
+  },
+  "actions": [
+    "Prioritize title/meta/canonical/structured-data and internal-link improvements on existing today and November pages.",
+    "Keep PR #18 blocked until every publication-quality gate is evidenced.",
+    "Do not publish or merge without explicit authorization."
+  ],
+  "totals": {
+    "new": 0,
+    "known": 1,
+    "verified": 0,
+    "in_preparation": 0,
+    "ready_for_approval": 0,
+    "published": 0
+  },
+  "writes": {
+    "article_commit": "7ed91183341c4f132772780764e341c07a4f5d9c"
+  }
+}
