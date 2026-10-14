@@ -134,6 +134,7 @@ async function ensureRelatedReleaseCovers(){
       const destination=new URL(link.getAttribute('href'),location.href);
       const slug=destination.pathname.split('/').pop().replace(/\.html$/,'');
       let img=link.querySelector('img');
+      if(img?.dataset.verifiedArtwork==='true'&&img.getAttribute('src'))continue;
       if(!img){
         img=document.createElement('img');
         img.className='related-card-image';
