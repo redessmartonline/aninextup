@@ -7,12 +7,12 @@
     "target_verified": 200,
     "stretch_target_verified": 500,
     "total_entries": 15,
-    "verified_entries": 11,
+    "verified_entries": 12,
     "consulted_this_run": 15,
-    "inaccessible_or_pending_this_run": 4,
+    "inaccessible_or_pending_this_run": 3,
     "new_entries_added": 15,
-    "new_verified_entries_added": 11,
-    "new_pending_entries_added": 4,
+    "new_verified_entries_added": 12,
+    "new_pending_entries_added": 3,
     "catalog_commit": "5d5477c07a4436770d6d430293d9ab71afc7fb50"
   },
   "repository_checks": {
