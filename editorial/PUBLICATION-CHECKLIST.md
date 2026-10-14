@@ -27,3 +27,9 @@ Each publication PR should record the cover source, direct cover URL, duplicate 
 - Verify the actual video ID and that playback works on the published article.
 - Do not merge or publish when these checks fail; keep the story as a draft.
 - Existing Paw & Palaces publication is an exception requiring follow-up: high-resolution YouTube thumbnail availability and live playback have NOT been verified.
+
+## Mandatory trailer/ending presentation standard
+- For any verified embeddable YouTube trailer, opening, or ending, use the existing `.lite-trailer[data-youtube]` component with a `.trailer-play` button containing an image thumbnail and `.trailer-overlay` with the visible play label and video title.
+- Never use a plain text-only `.trailer-play` button. The thumbnail, centered play overlay, 16:9 container, and click-to-load player must match other AniNextUp articles.
+- Check the exact official video ID, thumbnail loading, and playback before publication. If no verified embeddable video exists, link to the official source instead of inventing an embed.
+- Verify mobile and desktop presentation and do not mark the media QA gate complete without checking the published page.
