@@ -2,7 +2,7 @@
   "schema_version": 1,
   "site": "https://aninextup.com",
   "purpose": "Editorial SEO opportunity approval queue; never auto-publish",
-  "updated_at": "2026-10-14T01:28:04.569Z",
+  "updated_at": "2026-10-14T01:40:36.120Z",
   "opportunities": [
     {
       "id": "2026-10-13-apothecary-movie-character-pv-kensho-ono",
@@ -162,7 +162,16 @@
         "freshness": 28,
         "ranking_opportunity": 15,
         "importance_official": 15
-      }
+      },
+      "duplicate_check": {
+        "checked_at": "2026-10-14T01:40:36.120Z",
+        "base_commit": "3d6392a870ef30091b561094ff50643871ac0970",
+        "status": "UPDATE_EXISTING_CANONICAL",
+        "exact_announcement_already_covered": false,
+        "existing_article_url": "https://aninextup.com/articles/apothecary-diaries-movie",
+        "notes": "Same franchise and movie canonical exists; the four new source IDs, names and October 22 announcement are absent from all article text and open PR changes. Combine into one canonical update; never four new pages."
+      },
+      "canonical_update_group": "apothecary-diaries-movie-2026-10-14"
     },
     {
       "id": "2026-10-13-radar-apothecary-special-oct22",
@@ -187,7 +196,16 @@
         "freshness": 28,
         "ranking_opportunity": 15,
         "importance_official": 15
-      }
+      },
+      "duplicate_check": {
+        "checked_at": "2026-10-14T01:40:36.120Z",
+        "base_commit": "3d6392a870ef30091b561094ff50643871ac0970",
+        "status": "UPDATE_EXISTING_CANONICAL",
+        "exact_announcement_already_covered": false,
+        "existing_article_url": "https://aninextup.com/articles/apothecary-diaries-movie",
+        "notes": "Same franchise and movie canonical exists; the four new source IDs, names and October 22 announcement are absent from all article text and open PR changes. Combine into one canonical update; never four new pages."
+      },
+      "canonical_update_group": "apothecary-diaries-movie-2026-10-14"
     },
     {
       "id": "2026-10-13-radar-apothecary-sawashiro",
@@ -212,7 +230,16 @@
         "freshness": 28,
         "ranking_opportunity": 15,
         "importance_official": 15
-      }
+      },
+      "duplicate_check": {
+        "checked_at": "2026-10-14T01:40:36.120Z",
+        "base_commit": "3d6392a870ef30091b561094ff50643871ac0970",
+        "status": "UPDATE_EXISTING_CANONICAL",
+        "exact_announcement_already_covered": false,
+        "existing_article_url": "https://aninextup.com/articles/apothecary-diaries-movie",
+        "notes": "Same franchise and movie canonical exists; the four new source IDs, names and October 22 announcement are absent from all article text and open PR changes. Combine into one canonical update; never four new pages."
+      },
+      "canonical_update_group": "apothecary-diaries-movie-2026-10-14"
     },
     {
       "id": "2026-10-13-radar-apothecary-mikami",
@@ -237,7 +264,16 @@
         "freshness": 28,
         "ranking_opportunity": 15,
         "importance_official": 15
-      }
+      },
+      "duplicate_check": {
+        "checked_at": "2026-10-14T01:40:36.120Z",
+        "base_commit": "3d6392a870ef30091b561094ff50643871ac0970",
+        "status": "UPDATE_EXISTING_CANONICAL",
+        "exact_announcement_already_covered": false,
+        "existing_article_url": "https://aninextup.com/articles/apothecary-diaries-movie",
+        "notes": "Same franchise and movie canonical exists; the four new source IDs, names and October 22 announcement are absent from all article text and open PR changes. Combine into one canonical update; never four new pages."
+      },
+      "canonical_update_group": "apothecary-diaries-movie-2026-10-14"
     },
     {
       "id": "2026-10-13-radar-danime-81",
@@ -262,6 +298,14 @@
         "freshness": 25,
         "ranking_opportunity": 15,
         "importance_official": 15
+      },
+      "duplicate_check": {
+        "checked_at": "2026-10-14T01:40:36.120Z",
+        "base_commit": "3d6392a870ef30091b561094ff50643871ac0970",
+        "status": "NO_EXISTING_ARTICLE_OR_OPEN_PR_MATCH",
+        "exact_announcement_already_covered": false,
+        "existing_article_url": null,
+        "notes": "d Anime Store appears as broadcaster/platform in nine series guides; no 81-title roundup or exact release URL in articles/data/sitemap/PR. It overlaps seasonal guide intent; consider updating fall-2026-anime-calendar before creating a standalone story."
       }
     },
     {
@@ -287,6 +331,14 @@
         "freshness": 25,
         "ranking_opportunity": 10,
         "importance_official": 5
+      },
+      "duplicate_check": {
+        "checked_at": "2026-10-14T01:40:36.120Z",
+        "base_commit": "3d6392a870ef30091b561094ff50643871ac0970",
+        "status": "NO_EXISTING_ARTICLE_OR_OPEN_PR_MATCH",
+        "exact_announcement_already_covered": false,
+        "existing_article_url": null,
+        "notes": "No matching title, alias, franchise or exact source found in article contents, data.js, sitemap or open PR. Current queue references are the records created by the preceding search, not independent older opportunities."
       }
     },
     {
@@ -312,6 +364,14 @@
         "freshness": 25,
         "ranking_opportunity": 10,
         "importance_official": 5
+      },
+      "duplicate_check": {
+        "checked_at": "2026-10-14T01:40:36.120Z",
+        "base_commit": "3d6392a870ef30091b561094ff50643871ac0970",
+        "status": "NO_EXISTING_ARTICLE_OR_OPEN_PR_MATCH",
+        "exact_announcement_already_covered": false,
+        "existing_article_url": null,
+        "notes": "No matching title, alias, franchise or exact source found in article contents, data.js, sitemap or open PR. Current queue references are the records created by the preceding search, not independent older opportunities."
       }
     },
     {
@@ -337,6 +397,14 @@
         "freshness": 25,
         "ranking_opportunity": 10,
         "importance_official": 5
+      },
+      "duplicate_check": {
+        "checked_at": "2026-10-14T01:40:36.120Z",
+        "base_commit": "3d6392a870ef30091b561094ff50643871ac0970",
+        "status": "NO_EXISTING_ARTICLE_OR_OPEN_PR_MATCH",
+        "exact_announcement_already_covered": false,
+        "existing_article_url": null,
+        "notes": "No matching title, alias, franchise or exact source found in article contents, data.js, sitemap or open PR. Current queue references are the records created by the preceding search, not independent older opportunities."
       }
     }
   ],
@@ -436,7 +504,16 @@
             "freshness": 28,
             "ranking_opportunity": 15,
             "importance_official": 15
-          }
+          },
+          "duplicate_check": {
+            "checked_at": "2026-10-14T01:40:36.120Z",
+            "base_commit": "3d6392a870ef30091b561094ff50643871ac0970",
+            "status": "UPDATE_EXISTING_CANONICAL",
+            "exact_announcement_already_covered": false,
+            "existing_article_url": "https://aninextup.com/articles/apothecary-diaries-movie",
+            "notes": "Same franchise and movie canonical exists; the four new source IDs, names and October 22 announcement are absent from all article text and open PR changes. Combine into one canonical update; never four new pages."
+          },
+          "canonical_update_group": "apothecary-diaries-movie-2026-10-14"
         },
         {
           "id": "2026-10-13-radar-apothecary-special-oct22",
@@ -461,7 +538,16 @@
             "freshness": 28,
             "ranking_opportunity": 15,
             "importance_official": 15
-          }
+          },
+          "duplicate_check": {
+            "checked_at": "2026-10-14T01:40:36.120Z",
+            "base_commit": "3d6392a870ef30091b561094ff50643871ac0970",
+            "status": "UPDATE_EXISTING_CANONICAL",
+            "exact_announcement_already_covered": false,
+            "existing_article_url": "https://aninextup.com/articles/apothecary-diaries-movie",
+            "notes": "Same franchise and movie canonical exists; the four new source IDs, names and October 22 announcement are absent from all article text and open PR changes. Combine into one canonical update; never four new pages."
+          },
+          "canonical_update_group": "apothecary-diaries-movie-2026-10-14"
         },
         {
           "id": "2026-10-13-radar-apothecary-sawashiro",
@@ -486,7 +572,16 @@
             "freshness": 28,
             "ranking_opportunity": 15,
             "importance_official": 15
-          }
+          },
+          "duplicate_check": {
+            "checked_at": "2026-10-14T01:40:36.120Z",
+            "base_commit": "3d6392a870ef30091b561094ff50643871ac0970",
+            "status": "UPDATE_EXISTING_CANONICAL",
+            "exact_announcement_already_covered": false,
+            "existing_article_url": "https://aninextup.com/articles/apothecary-diaries-movie",
+            "notes": "Same franchise and movie canonical exists; the four new source IDs, names and October 22 announcement are absent from all article text and open PR changes. Combine into one canonical update; never four new pages."
+          },
+          "canonical_update_group": "apothecary-diaries-movie-2026-10-14"
         },
         {
           "id": "2026-10-13-radar-apothecary-mikami",
@@ -511,7 +606,16 @@
             "freshness": 28,
             "ranking_opportunity": 15,
             "importance_official": 15
-          }
+          },
+          "duplicate_check": {
+            "checked_at": "2026-10-14T01:40:36.120Z",
+            "base_commit": "3d6392a870ef30091b561094ff50643871ac0970",
+            "status": "UPDATE_EXISTING_CANONICAL",
+            "exact_announcement_already_covered": false,
+            "existing_article_url": "https://aninextup.com/articles/apothecary-diaries-movie",
+            "notes": "Same franchise and movie canonical exists; the four new source IDs, names and October 22 announcement are absent from all article text and open PR changes. Combine into one canonical update; never four new pages."
+          },
+          "canonical_update_group": "apothecary-diaries-movie-2026-10-14"
         },
         {
           "id": "2026-10-13-radar-naruto-new-manga",
@@ -736,6 +840,14 @@
             "freshness": 25,
             "ranking_opportunity": 15,
             "importance_official": 15
+          },
+          "duplicate_check": {
+            "checked_at": "2026-10-14T01:40:36.120Z",
+            "base_commit": "3d6392a870ef30091b561094ff50643871ac0970",
+            "status": "NO_EXISTING_ARTICLE_OR_OPEN_PR_MATCH",
+            "exact_announcement_already_covered": false,
+            "existing_article_url": null,
+            "notes": "d Anime Store appears as broadcaster/platform in nine series guides; no 81-title roundup or exact release URL in articles/data/sitemap/PR. It overlaps seasonal guide intent; consider updating fall-2026-anime-calendar before creating a standalone story."
           }
         },
         {
@@ -761,6 +873,14 @@
             "freshness": 25,
             "ranking_opportunity": 10,
             "importance_official": 5
+          },
+          "duplicate_check": {
+            "checked_at": "2026-10-14T01:40:36.120Z",
+            "base_commit": "3d6392a870ef30091b561094ff50643871ac0970",
+            "status": "NO_EXISTING_ARTICLE_OR_OPEN_PR_MATCH",
+            "exact_announcement_already_covered": false,
+            "existing_article_url": null,
+            "notes": "No matching title, alias, franchise or exact source found in article contents, data.js, sitemap or open PR. Current queue references are the records created by the preceding search, not independent older opportunities."
           }
         },
         {
@@ -786,6 +906,14 @@
             "freshness": 25,
             "ranking_opportunity": 10,
             "importance_official": 5
+          },
+          "duplicate_check": {
+            "checked_at": "2026-10-14T01:40:36.120Z",
+            "base_commit": "3d6392a870ef30091b561094ff50643871ac0970",
+            "status": "NO_EXISTING_ARTICLE_OR_OPEN_PR_MATCH",
+            "exact_announcement_already_covered": false,
+            "existing_article_url": null,
+            "notes": "No matching title, alias, franchise or exact source found in article contents, data.js, sitemap or open PR. Current queue references are the records created by the preceding search, not independent older opportunities."
           }
         },
         {
@@ -811,6 +939,14 @@
             "freshness": 25,
             "ranking_opportunity": 10,
             "importance_official": 5
+          },
+          "duplicate_check": {
+            "checked_at": "2026-10-14T01:40:36.120Z",
+            "base_commit": "3d6392a870ef30091b561094ff50643871ac0970",
+            "status": "NO_EXISTING_ARTICLE_OR_OPEN_PR_MATCH",
+            "exact_announcement_already_covered": false,
+            "existing_article_url": null,
+            "notes": "No matching title, alias, franchise or exact source found in article contents, data.js, sitemap or open PR. Current queue references are the records created by the preceding search, not independent older opportunities."
           }
         }
       ],
@@ -828,5 +964,157 @@
     "ranking_opportunity": 20,
     "importance_official": 15
   },
-  "scoring_current_note": "Retain legacy score breakdowns; new run scores use requested weights with qualitative estimates."
+  "scoring_current_note": "Retain legacy score breakdowns; new run scores use requested weights with qualitative estimates.",
+  "duplicate_check_history": [
+    {
+      "checked_at": "2026-10-14T01:40:36.120Z",
+      "base_commit": "3d6392a870ef30091b561094ff50643871ac0970",
+      "article_files_read": 77,
+      "required_files": [
+        "assets/data.js",
+        "sitemap.xml",
+        "editorial/seo-opportunities.json"
+      ],
+      "open_prs": [
+        {
+          "number": 14,
+          "head_commit": "d2388345c25912d70d2c33d4ede31f446930b831",
+          "text_files_read": [
+            "articles/le-college-noir-season-2-trailer-october-2026.html",
+            "assets/data.js",
+            "audits/le-college-noir-qa.md",
+            "editorial/previews/le-college-noir-responsive-qa.html",
+            "editorial/seo-opportunities.json",
+            "index.html",
+            "news.html",
+            "scripts/prerender_discovery.js",
+            "sitemap.xml"
+          ]
+        }
+      ],
+      "method": "Read all article contents at pinned commit; case-insensitive literal searches with English/Japanese/romanized aliases and source URL IDs; review exact-news versus franchise-only mentions; read full changed text files in open PR rather than trusting GitHub code search.",
+      "aliases_searched": {
+        "apothecary": [
+          "apothecary",
+          "kusuriya",
+          "薬屋",
+          "luoqing",
+          "ruoqing",
+          "yinshan",
+          "inshan",
+          "sawashiro",
+          "mikami",
+          "3125",
+          "3108",
+          "3114",
+          "3119"
+        ],
+        "danime": [
+          "d anime store",
+          "d-anime store",
+          "dアニメ",
+          "docomo",
+          "animestore",
+          "000000792.000005738"
+        ],
+        "paw": [
+          "paw & palaces",
+          "paw and palaces",
+          "paw-palaces",
+          "紫禁",
+          "御猫房",
+          "forbidden city",
+          "cat guard",
+          "zijin",
+          "yumaofang",
+          "yu mao fang"
+        ],
+        "far": [
+          "from far away",
+          "from-far-away",
+          "kanata kara",
+          "kanata-kara",
+          "彼方から",
+          "kanata"
+        ],
+        "netsuai": [
+          "netsuai",
+          "netsuai-prince",
+          "熱愛プリンス",
+          "お兄ちゃんはキミが好き",
+          "000000243.000066676",
+          "netsuai purinsu",
+          "brother is in love"
+        ]
+      },
+      "script_result": "PASS: checked 0 new article(s) against 77 existing article(s)",
+      "script_limit": "No new article files created; script pass is a baseline only. Full manual corpus search supplies these eight duplicate decisions.",
+      "results": [
+        {
+          "opportunity_id": "2026-10-13-radar-apothecary-luoqing-yinshan-pv",
+          "duplicate_status": "UPDATE_EXISTING_CANONICAL",
+          "exact_announcement_already_covered": false,
+          "existing_article_url": "https://aninextup.com/articles/apothecary-diaries-movie",
+          "notes": "Same franchise and movie canonical exists; the four new source IDs, names and October 22 announcement are absent from all article text and open PR changes. Combine into one canonical update; never four new pages.",
+          "source_verification_unchanged": true
+        },
+        {
+          "opportunity_id": "2026-10-13-radar-apothecary-special-oct22",
+          "duplicate_status": "UPDATE_EXISTING_CANONICAL",
+          "exact_announcement_already_covered": false,
+          "existing_article_url": "https://aninextup.com/articles/apothecary-diaries-movie",
+          "notes": "Same franchise and movie canonical exists; the four new source IDs, names and October 22 announcement are absent from all article text and open PR changes. Combine into one canonical update; never four new pages.",
+          "source_verification_unchanged": true
+        },
+        {
+          "opportunity_id": "2026-10-13-radar-apothecary-sawashiro",
+          "duplicate_status": "UPDATE_EXISTING_CANONICAL",
+          "exact_announcement_already_covered": false,
+          "existing_article_url": "https://aninextup.com/articles/apothecary-diaries-movie",
+          "notes": "Same franchise and movie canonical exists; the four new source IDs, names and October 22 announcement are absent from all article text and open PR changes. Combine into one canonical update; never four new pages.",
+          "source_verification_unchanged": true
+        },
+        {
+          "opportunity_id": "2026-10-13-radar-apothecary-mikami",
+          "duplicate_status": "UPDATE_EXISTING_CANONICAL",
+          "exact_announcement_already_covered": false,
+          "existing_article_url": "https://aninextup.com/articles/apothecary-diaries-movie",
+          "notes": "Same franchise and movie canonical exists; the four new source IDs, names and October 22 announcement are absent from all article text and open PR changes. Combine into one canonical update; never four new pages.",
+          "source_verification_unchanged": true
+        },
+        {
+          "opportunity_id": "2026-10-13-radar-danime-81",
+          "duplicate_status": "NO_EXISTING_ARTICLE_OR_OPEN_PR_MATCH",
+          "exact_announcement_already_covered": false,
+          "existing_article_url": null,
+          "notes": "d Anime Store appears as broadcaster/platform in nine series guides; no 81-title roundup or exact release URL in articles/data/sitemap/PR. It overlaps seasonal guide intent; consider updating fall-2026-anime-calendar before creating a standalone story.",
+          "source_verification_unchanged": true
+        },
+        {
+          "opportunity_id": "2026-10-13-radar-paw-ending",
+          "duplicate_status": "NO_EXISTING_ARTICLE_OR_OPEN_PR_MATCH",
+          "exact_announcement_already_covered": false,
+          "existing_article_url": null,
+          "notes": "No matching title, alias, franchise or exact source found in article contents, data.js, sitemap or open PR. Current queue references are the records created by the preceding search, not independent older opportunities.",
+          "source_verification_unchanged": true
+        },
+        {
+          "opportunity_id": "2026-10-13-radar-far-opening",
+          "duplicate_status": "NO_EXISTING_ARTICLE_OR_OPEN_PR_MATCH",
+          "exact_announcement_already_covered": false,
+          "existing_article_url": null,
+          "notes": "No matching title, alias, franchise or exact source found in article contents, data.js, sitemap or open PR. Current queue references are the records created by the preceding search, not independent older opportunities.",
+          "source_verification_unchanged": true
+        },
+        {
+          "opportunity_id": "2026-10-13-radar-netsuai25",
+          "duplicate_status": "NO_EXISTING_ARTICLE_OR_OPEN_PR_MATCH",
+          "exact_announcement_already_covered": false,
+          "existing_article_url": null,
+          "notes": "No matching title, alias, franchise or exact source found in article contents, data.js, sitemap or open PR. Current queue references are the records created by the preceding search, not independent older opportunities.",
+          "source_verification_unchanged": true
+        }
+      ]
+    }
+  ]
 }
