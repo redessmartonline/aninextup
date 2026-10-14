@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-14T08:02:11-04:00",
+  "updated_at": "2026-10-14T10:55:37-04:00",
   "target_verified_sources": 200,
   "stretch_target_verified_sources": 500,
   "counts": {
-    "total_entries": 200,
-    "verified": 150,
-    "pending_or_inaccessible": 50
+    "total_entries": 209,
+    "verified": 158,
+    "pending_or_inaccessible": 51
   },
   "counting_policy": "Only entries with verified=true count toward the verified-source target. Direct-fetch failures are recorded but excluded until a later successful verification.",
   "sources": [
@@ -2419,6 +2419,114 @@
       "priority": "medium",
       "evidence": "Official endpoint could not be rendered during this run; excluded from verified count.",
       "verified_at": "2026-10-14T08:02:11-04:00"
+    },
+    {
+      "id": "201",
+      "name": "Geno Studio",
+      "url": "https://genostudio.co.jp/",
+      "category": "animation studio",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "medium",
+      "evidence": "Official Geno Studio site loaded with company identity, animation production business, news and works.",
+      "verified_at": "2026-10-14T10:55:37-04:00"
+    },
+    {
+      "id": "202",
+      "name": "Studio Kafka",
+      "url": "https://www.studio-kafka.jp/",
+      "category": "animation studio",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible_minimal",
+      "verified": true,
+      "priority": "medium",
+      "evidence": "Official Studio Kafka endpoint loaded and displayed the company identity.",
+      "verified_at": "2026-10-14T10:55:37-04:00"
+    },
+    {
+      "id": "203",
+      "name": "BUG FILMS",
+      "url": "https://www.bugfilms.jp/",
+      "category": "animation studio",
+      "country_language": "Japan / Japanese",
+      "accessibility": "direct_fetch_timeout",
+      "verified": false,
+      "priority": "medium",
+      "evidence": "Official endpoint timed out during this run; excluded from verified count.",
+      "verified_at": "2026-10-14T10:55:37-04:00"
+    },
+    {
+      "id": "204",
+      "name": "Scooter Films",
+      "url": "https://www.scooterfilms.jp/",
+      "category": "animation studio",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible_redirect",
+      "verified": true,
+      "priority": "medium",
+      "evidence": "Official Scooter Films site loaded in English and identifies the company as an anime studio.",
+      "verified_at": "2026-10-14T10:55:37-04:00"
+    },
+    {
+      "id": "205",
+      "name": "Studio Chromato",
+      "url": "https://chromato.jp/",
+      "category": "animation studio",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "medium",
+      "evidence": "Official Studio Chromato site loaded with company and animation-production identity.",
+      "verified_at": "2026-10-14T10:55:37-04:00"
+    },
+    {
+      "id": "206",
+      "name": "Peakys",
+      "url": "https://www.peakys.jp/",
+      "category": "3DCG animation studio",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "low",
+      "evidence": "Official Peakys site loaded with company identity and anime production works.",
+      "verified_at": "2026-10-14T10:55:37-04:00"
+    },
+    {
+      "id": "207",
+      "name": "OUTLINE",
+      "url": "https://www.st-outline.jp/",
+      "category": "animation studio",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "medium",
+      "evidence": "Official OUTLINE animation studio site loaded successfully.",
+      "verified_at": "2026-10-14T10:55:37-04:00"
+    },
+    {
+      "id": "208",
+      "name": "QUUN PLANT",
+      "url": "https://www.quunplant.com/",
+      "category": "anime and game 3D background studio",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "low",
+      "evidence": "Official QUUN PLANT site loaded and identifies its anime and game 3D background production business.",
+      "verified_at": "2026-10-14T10:55:37-04:00"
+    },
+    {
+      "id": "209",
+      "name": "NAGOMI",
+      "url": "https://www.as-nagomi.jp/",
+      "category": "animation studio",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "low",
+      "evidence": "Official NAGOMI animation studio site loaded successfully.",
+      "verified_at": "2026-10-14T10:55:37-04:00"
     }
   ]
 }
