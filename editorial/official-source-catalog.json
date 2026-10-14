@@ -4,8 +4,8 @@
   "target_verified_sources": 200,
   "stretch_target_verified_sources": 500,
   "counts": {
-    "total_entries": 55,
-    "verified": 51,
+    "total_entries": 56,
+    "verified": 52,
     "pending_or_inaccessible": 4
   },
   "counting_policy": "Only entries with verified=true count toward the verified-source target. Direct-fetch failures are recorded but excluded until a later successful verification.",
@@ -673,6 +673,18 @@
       "verified": true,
       "priority": "high",
       "evidence": "Official Science SARU domain resolved successfully; page body was not exposed by this verifier.",
+      "verified_at": "2026-10-14T00:56:45-04:00"
+    },
+    {
+      "id": "056",
+      "name": "Yumeneko Connect Anime Official Website",
+      "url": "https://sh-anime.shochiku.co.jp/yumeconne-anime/",
+      "category": "franchise official website",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "high",
+      "evidence": "Official Shochiku anime site loaded with TV-anime status, cast, staff, studio, character information and production-committee copyright.",
       "verified_at": "2026-10-14T00:56:45-04:00"
     }
   ]
