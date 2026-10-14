@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-14T13:04:08-04:00",
+  "updated_at": "2026-10-14T14:03:32-04:00",
   "target_verified_sources": 200,
   "stretch_target_verified_sources": 500,
   "counts": {
-    "total_entries": 234,
-    "verified": 170,
-    "pending_or_inaccessible": 64
+    "total_entries": 244,
+    "verified": 179,
+    "pending_or_inaccessible": 65
   },
   "counting_policy": "Only entries with verified=true count toward the verified-source target. Direct-fetch failures are recorded but excluded until a later successful verification.",
   "sources": [
@@ -2827,6 +2827,126 @@
       "priority": "low",
       "evidence": "Candidate official Hayakawa Publishing endpoint timed out during this run; excluded from verified count.",
       "verified_at": "2026-10-14T13:04:08-04:00"
+    },
+    {
+      "id": "235",
+      "name": "BOOK☆WALKER Japan",
+      "url": "https://bookwalker.jp/",
+      "category": "official digital manga and light novel platform",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "medium",
+      "evidence": "Official BOOK☆WALKER Japan storefront loaded with manga, manga magazines, light novels, new releases and media-adaptation categories.",
+      "verified_at": "2026-10-14T14:03:32-04:00"
+    },
+    {
+      "id": "236",
+      "name": "Renta! Japan",
+      "url": "https://renta.papy.co.jp/",
+      "category": "official digital manga and anime platform",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "medium",
+      "evidence": "Official Renta! Japan platform loaded with manga, short drama, anime and novel service identity.",
+      "verified_at": "2026-10-14T14:03:32-04:00"
+    },
+    {
+      "id": "237",
+      "name": "Manga Kingdom",
+      "url": "https://comic.k-manga.jp/",
+      "category": "official digital manga platform",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "medium",
+      "evidence": "Official Manga Kingdom digital comics platform loaded successfully with manga catalog identity.",
+      "verified_at": "2026-10-14T14:03:32-04:00"
+    },
+    {
+      "id": "238",
+      "name": "BookLive",
+      "url": "https://booklive.jp/",
+      "category": "official digital manga and ebook platform",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "medium",
+      "evidence": "Official BookLive electronic books and manga platform loaded successfully.",
+      "verified_at": "2026-10-14T14:03:32-04:00"
+    },
+    {
+      "id": "239",
+      "name": "ebookjapan",
+      "url": "https://ebookjapan.yahoo.co.jp/",
+      "category": "official digital manga and ebook platform",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "medium",
+      "evidence": "Official ebookjapan service on Yahoo Japan loaded with digital manga and ebook identity.",
+      "verified_at": "2026-10-14T14:03:32-04:00"
+    },
+    {
+      "id": "240",
+      "name": "Comic Seymour",
+      "url": "https://www.cmoa.jp/",
+      "category": "official digital manga platform",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "medium",
+      "evidence": "Official Comic Seymour digital manga platform loaded with service identity and catalog.",
+      "verified_at": "2026-10-14T14:03:32-04:00"
+    },
+    {
+      "id": "241",
+      "name": "Sukima",
+      "url": "https://sukima.me/",
+      "category": "digital manga platform",
+      "country_language": "Japan / Japanese",
+      "accessibility": "direct_fetch_failed",
+      "verified": false,
+      "priority": "low",
+      "evidence": "Candidate official Sukima endpoint returned no usable page during this run; excluded from verified count.",
+      "verified_at": "2026-10-14T14:03:32-04:00"
+    },
+    {
+      "id": "242",
+      "name": "Manga BANG!",
+      "url": "https://manga-bang.com/",
+      "category": "official digital manga platform",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible_minimal",
+      "verified": true,
+      "priority": "low",
+      "evidence": "Official Manga BANG! Books endpoint loaded with the service identity; crawlable body content was minimal.",
+      "verified_at": "2026-10-14T14:03:32-04:00"
+    },
+    {
+      "id": "243",
+      "name": "Palcy",
+      "url": "https://palcy.jp/",
+      "category": "official manga platform / app",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "medium",
+      "evidence": "Official Palcy site loaded and identifies the Kodansha and pixiv women's manga application.",
+      "verified_at": "2026-10-14T14:03:32-04:00"
+    },
+    {
+      "id": "244",
+      "name": "Manga Mee",
+      "url": "https://manga-mee.jp/",
+      "category": "official manga platform / app",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "medium",
+      "evidence": "Official Manga Mee platform loaded with manga catalog and media-adaptation service identity.",
+      "verified_at": "2026-10-14T14:03:32-04:00"
     }
   ]
 }
