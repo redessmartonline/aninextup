@@ -1,0 +1,211 @@
+{
+  "schema_version": "1.0",
+  "run": {
+    "started_at": "2026-10-14T03:04:28-04:00",
+    "completed_at": "2026-10-14T03:14:00-04:00",
+    "timezone": "America/Santo_Domingo",
+    "status": "COMPLETED_WITH_BLOCKED_DRAFTS_AND_ONE_UNVERIFIED_RESULT"
+  },
+  "news": {
+    "relevant_results_reviewed": 5,
+    "newly_discovered_in_radar": 2,
+    "known_rechecked": 2,
+    "verified_primary_source": 4,
+    "unverified": 1,
+    "newly_prepared_this_run": 0,
+    "currently_in_preparation": 3,
+    "ready_for_approval": 0,
+    "approved": 0,
+    "published_this_run": 0,
+    "items": [
+      {
+        "title": "BLEACH: Thousand-Year Blood War × Graniph collaboration",
+        "official_url": "https://bleach-anime.com/news/?id=71436",
+        "official_date": "2026-10-14",
+        "verifiable_time": "2026-10-14T00:00:00+09:00 reservation opening; official article publication time not exposed",
+        "seo_score": 78,
+        "score_components": {
+          "demand": 30,
+          "freshness": 25,
+          "opportunity": 8,
+          "authority": 15
+        },
+        "status": "NEW_VERIFIED_NO_ARTICLE_LOW_EDITORIAL_OPPORTUNITY",
+        "duplicate_check": "No matches in repository search, assets/data.js, sitemap.xml, editorial/seo-opportunities.json or open PRs.",
+        "decision": "Not prepared: merchandise collaboration rather than a release, cast, trailer or production announcement."
+      },
+      {
+        "title": "GROTESQQQUE / Eriyiyans insert song TERASE released; collaboration video scheduled",
+        "official_url": "https://www.aniplex.co.jp/news/detail/?id=71468",
+        "official_date": "2026-10-14",
+        "verifiable_time": "2026-10-14T17:00:00+09:00 official video premiere; article publication time not exposed",
+        "seo_score": 67,
+        "score_components": {
+          "demand": 12,
+          "freshness": 30,
+          "opportunity": 10,
+          "authority": 15
+        },
+        "status": "NEW_VERIFIED_NO_ARTICLE_LOW_DEMAND",
+        "duplicate_check": "No matches in repository search, assets/data.js, sitemap.xml, editorial/seo-opportunities.json or open PRs.",
+        "decision": "Not prepared: soundtrack/video promotion with insufficient standalone search opportunity."
+      },
+      {
+        "title": "Solo Leveling official-news endpoint dated October 14",
+        "official_url": "https://sololeveling-anime.net/news/?id=66734",
+        "official_date": "2026-10-14",
+        "verifiable_time": "date only",
+        "seo_score": 65,
+        "score_components": {
+          "demand": 30,
+          "freshness": 20,
+          "opportunity": 0,
+          "authority": 15
+        },
+        "status": "NO_VERIFICADO_BLOQUEADO",
+        "duplicate_check": "No URL/title match found, but the event itself cannot be identified.",
+        "evidence": "Search retrieval and live DOM expose only the date; title, body, description and Open Graph description are blank.",
+        "decision": "No article or update prepared."
+      },
+      {
+        "title": "The Apothecary Diaries anniversary special and film updates",
+        "official_url": "https://kusuriyanohitorigoto.jp/news/",
+        "official_date": "2026-10-14",
+        "verifiable_time": "date only",
+        "seo_score": 92,
+        "score_components": {
+          "demand": 32,
+          "freshness": 30,
+          "opportunity": 15,
+          "authority": 15
+        },
+        "status": "KNOWN_CANONICAL_UPDATE_IN_DRAFT_PR_17_BLOCKED_QA"
+      },
+      {
+        "title": "Yumeneko Connect TV anime announcement",
+        "official_url": "https://sh-anime.shochiku.co.jp/yumeconne-anime/",
+        "official_date": "2026-10-14",
+        "verifiable_time": "date only",
+        "seo_score": 89,
+        "score_components": {
+          "demand": 29,
+          "freshness": 30,
+          "opportunity": 15,
+          "authority": 15
+        },
+        "status": "KNOWN_NEW_ARTICLE_IN_DRAFT_PR_18_BLOCKED_QA"
+      }
+    ]
+  },
+  "source_catalog": {
+    "url": "https://github.com/redessmartonline/aninextup/blob/main/editorial/official-source-catalog.json",
+    "total_cataloged": 96,
+    "verified_accessible": 92,
+    "pending_or_inaccessible": 4,
+    "consulted_this_run": 24,
+    "new_entries_added": 20,
+    "new_entries_verified": 17,
+    "prior_pending_upgraded_to_verified": 4,
+    "net_new_verified": 21,
+    "target": 200,
+    "progress_percent": 46,
+    "remaining_to_target": 108,
+    "pending": [
+      "NHK Anime",
+      "J.C.STAFF",
+      "Orange",
+      "Nippon Animation"
+    ],
+    "new_verified": [
+      "ufotable",
+      "P.A.WORKS",
+      "SHAFT",
+      "LIDENFILMS",
+      "ENGI",
+      "Kinema Citrus",
+      "STUDIO4°C",
+      "Polygon Pictures",
+      "Telecom Animation Film",
+      "Sanzigen",
+      "Graphinica",
+      "Studio Deen",
+      "Tatsunoko Production",
+      "Satelight",
+      "8bit",
+      "WHITE FOX",
+      "AT-X"
+    ],
+    "upgraded": [
+      "Takeshobo",
+      "Pony Canyon",
+      "Comic Newtype",
+      "Overlap"
+    ],
+    "commit": {
+      "sha": "3ff1593e6b86dbc5a4b40d43b335855dcd302e3b",
+      "url": "https://github.com/redessmartonline/aninextup/commit/3ff1593e6b86dbc5a4b40d43b335855dcd302e3b",
+      "final_blob_sha": "19f42a7a2e4f386a303146214cd97117c53f41f9",
+      "verified_after_write": true
+    }
+  },
+  "search_console": {
+    "site": "sc-domain:aninextup.com",
+    "range": {
+      "start_date": "2026-09-14",
+      "end_date": "2026-10-11"
+    },
+    "data_source": "Google Search Console API via GSC Wizard",
+    "candidate_specific_queries_found": false,
+    "top_opportunities": [
+      {
+        "query": "anime releasing today",
+        "clicks": 0,
+        "impressions": 147,
+        "ctr_percent": 0,
+        "average_position": 10.081632653061224
+      },
+      {
+        "query": "today anime release",
+        "clicks": 0,
+        "impressions": 110,
+        "ctr_percent": 0,
+        "average_position": 9.563636363636364
+      },
+      {
+        "query": "anime release today",
+        "clicks": 0,
+        "impressions": 34,
+        "ctr_percent": 0,
+        "average_position": 10.088235294117647
+      }
+    ],
+    "note": "No candidate-specific Search Console metrics were found or invented."
+  },
+  "qa": {
+    "pr_17": {
+      "url": "https://github.com/redessmartonline/aninextup/pull/17",
+      "head_sha": "00dc4df5e1eefbed8ae0536f524f537d9a2d2c68",
+      "deployment": "success",
+      "status": "BLOCKED_QA_PENDING"
+    },
+    "pr_18": {
+      "url": "https://github.com/redessmartonline/aninextup/pull/18",
+      "head_sha": "bdc9ba8cd564a883e263c83888f135e67e21500b",
+      "deployment": "success",
+      "official_image_verified": true,
+      "status": "BLOCKED_QA_PENDING"
+    },
+    "pending_for_both": [
+      "scripts/check_article_duplicates.py",
+      "scripts/validate_publication.py",
+      "complete final desktop/mobile review as applicable"
+    ],
+    "publication_action": "NONE",
+    "merge_action": "NONE",
+    "explicit_publish_authorization_received": false
+  },
+  "writes": {
+    "catalog_write_confirmed": true,
+    "report_write_confirmed": true
+  }
+}

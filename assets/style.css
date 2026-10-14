@@ -97,3 +97,100 @@
 .search input{min-width:0}
 .article-head h1,.visual-body h3,.prose a{overflow-wrap:anywhere}
 @media(max-width:780px){.release-summary{padding:18px}.release-summary dl{grid-template-columns:1fr}.search button{padding:0 14px}.article-head h1{font-size:clamp(30px,8vw,43px)}}
+
+/* Nested editorial sections should not inherit full-page section spacing. */
+.article .prose > section{padding:0;margin:0 0 28px}
+.article .prose > section > h2:first-child{margin-top:30px}
+.article .prose > section > h3{margin-top:24px}
+@media(max-width:780px){.article .prose > section{padding:0;margin-bottom:22px}}
+
+/* Sitewide article lead covers: one consistent centered 16:9 presentation. */
+.article > .article-head + figure:not(.related-card),
+.article > .article-head + img,
+.article > .article-head + .article-hero,
+.article > .article-head + .official-hero{
+  box-sizing:border-box!important;
+  display:block;
+  width:100%!important;
+  max-width:680px!important;
+  margin:16px auto 34px!important;
+  border:0;
+  border-radius:12px;
+  overflow:hidden;
+  background:var(--panel);
+}
+.article > .article-head + figure > img,
+.article > .article-head + img,
+.article > .article-head + .article-hero > img,
+.article > .article-head + .official-hero > img{
+  display:block!important;
+  width:100%!important;
+  max-width:100%!important;
+  height:auto!important;
+  aspect-ratio:16/9!important;
+  object-fit:cover!important;
+  object-position:center;
+  border-radius:12px 12px 0 0;
+}
+.article > .article-head + figure > figcaption{padding:10px 12px;font-size:.85rem}
+@media(max-width:780px){.article > .article-head + figure,.article > .article-head + img,.article > .article-head + .article-hero,.article > .article-head + .official-hero{margin:16px auto 28px!important}}
+
+/* KEEP WATCHING: always keep up to three cards in a single horizontal row.
+   Overrides older mobile .grid.two/.grid.three rules that wrapped the third card. */
+.article .related-releases .grid,
+.article .related-releases .grid.two,
+.article .related-releases .grid.three{
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:16px;
+  align-items:stretch;
+}
+.article .related-releases .mini.related-card{
+  box-sizing:border-box;
+  width:100%;
+  min-width:0;
+}
+.article .related-releases .related-card-copy{min-width:0}
+.article .related-releases .related-card-copy h3{overflow-wrap:anywhere}
+@media(max-width:780px){
+  .article .related-releases .grid,
+  .article .related-releases .grid.two,
+  .article .related-releases .grid.three{
+    gap:10px;
+  }
+  .article .related-releases .related-card-copy{padding:12px 10px}
+  .article .related-releases .related-card-copy h3{font-size:14px}
+  .article .related-releases .related-card-copy span{font-size:12px}
+}
+
+
+/* Keep fact cards padded even when nested in editorial prose sections. */
+.article .prose > section.release-summary{
+  box-sizing:border-box;
+  width:100%;
+  margin:28px 0 36px;
+  padding:26px 28px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:var(--panel);
+}
+.article .prose > section.release-summary > h2:first-child{
+  margin:0 0 22px;
+  font-size:24px;
+  line-height:1.3;
+}
+.article .prose > section.release-summary dl{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  column-gap:30px;
+  row-gap:22px;
+  margin:0;
+}
+.article .prose > section.release-summary dl > div{min-width:0}
+.article .prose > section.release-summary dt{line-height:1.45}
+.article .prose > section.release-summary dd{margin:7px 0 0;line-height:1.55;overflow-wrap:break-word}
+@media(max-width:640px){
+  .article .prose > section.release-summary{padding:20px 18px;margin:24px 0 30px}
+  .article .prose > section.release-summary > h2:first-child{font-size:22px;margin-bottom:18px}
+  .article .prose > section.release-summary dl{grid-template-columns:1fr;row-gap:18px}
+}

@@ -30,8 +30,54 @@ discoveryNodes('[data-anime-list]').forEach(el=>{let items=[...D.anime];const mo
 discoveryNodes('[data-anime-month]').forEach(el=>{const month=el.dataset.animeMonth;const items=(D.anime||[]).filter(a=>a.date&&a.date.startsWith(month)).sort((a,b)=>a.date.localeCompare(b.date));el.innerHTML=items.map(animeCard).join('')||'<p class="empty">No confirmed releases yet.</p>'});
 discoveryNodes('[data-month-count]').forEach(el=>{const month=el.dataset.monthCount;const n=(D.anime||[]).filter(a=>a.date&&a.date.startsWith(month)).length;el.textContent=n?'· '+n+' CONFIRMED':''});
 discoveryNodes('[data-guides]').forEach(el=>{const seen=new Set();const stories=[...(D.anime||[]).filter(a=>a.tag&&a.article),...(D.guides||[])].filter(g=>{if(!g.article||seen.has(g.article))return false;seen.add(g.article);return true});el.innerHTML=stories.map(g=>'<a class="card story visual-card" href="'+g.article+'">'+(g.image?'<img src="'+g.image+'" alt="'+g.title+'" loading="lazy">':'')+'<div class="visual-body"><span class="tag">'+g.tag+'</span><h3>'+g.title+'</h3><p>'+g.description+'</p><span class="more">READ MORE →</span></div></a>').join('');});
-function searchSite(){const input=document.getElementById('search'),q=(input?.value||'').trim().toLowerCase();if(!q)return;const results=[...D.anime.map(a=>({title:a.title,meta:a.platform,url:a.article})),...D.guides.map(g=>({title:g.title,meta:g.tag,url:g.article}))].filter(x=>(x.title+' '+x.meta).toLowerCase().includes(q));const box=document.getElementById('searchResults');if(box){box.innerHTML=results.length?results.map(x=>'<a href="'+x.url+'"><strong>'+x.title+'</strong><span>'+x.meta+'</span></a>').join(''):'<div class="no-result">No matching anime or guide found.</div>';box.hidden=false}else if(results[0])location.href=results[0].url}
-document.getElementById('search')?.addEventListener('keydown',e=>{if(e.key==='Enter')searchSite()});document.getElementById('search')?.addEventListener('input',e=>{if(!e.target.value.trim()){const b=document.getElementById('searchResults');if(b)b.hidden=true}});
+// Search every indexed public page, including articles not featured on the homepage.
+let siteSearchIndexPromise=null,siteSearchRequest=0;
+const normalizeSiteSearch=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
+function loadSiteSearchIndex(){
+ if(siteSearchIndexPromise)return siteSearchIndexPromise;
+ siteSearchIndexPromise=(async()=>{
+  const response=await fetch('/sitemap.xml');
+  if(!response.ok)throw new Error('Sitemap unavailable');
+  const xml=new DOMParser().parseFromString(await response.text(),'application/xml');
+  const urls=[...xml.getElementsByTagName('loc')].map(el=>el.textContent.trim()).filter(url=>{try{const parsed=new URL(url);return parsed.origin===location.origin&&parsed.pathname.startsWith('/articles/')&&parsed.pathname.length>'/articles/'.length}catch{return false}});
+  const entries=[];let cursor=0;
+  async function worker(){
+   while(cursor<urls.length){
+    const url=urls[cursor++];
+    try{
+     const res=await fetch(url);if(!res.ok)continue;
+     const doc=new DOMParser().parseFromString(await res.text(),'text/html');
+     doc.querySelectorAll('script,style,nav,footer,header.site-header').forEach(n=>n.remove());
+     const title=doc.querySelector('h1')?.textContent?.trim()||doc.title.replace(/ — AniNextUp$/,'');
+     const description=doc.querySelector('meta[name="description"]')?.content||'';
+     const content=(doc.querySelector('article')||doc.querySelector('main')||doc.body)?.textContent||'';
+     entries.push({title,description,url:new URL(url).pathname,search:normalizeSiteSearch(title+' '+description+' '+content)});
+    }catch(e){/* Ignore an individual unavailable page. */}
+   }
+  }
+  await Promise.all(Array.from({length:8},()=>worker()));
+  return entries;
+ })().catch(e=>{siteSearchIndexPromise=null;throw e});
+ return siteSearchIndexPromise;
+}
+async function searchSite(){
+ const input=document.getElementById('search'),box=document.getElementById('searchResults');
+ const raw=(input?.value||'').trim(),request=++siteSearchRequest;
+ if(!raw){if(box)box.hidden=true;return}
+ const words=normalizeSiteSearch(raw).split(/\s+/).filter(Boolean);
+ if(box){box.innerHTML='<div class="no-result">Searching all articles…</div>';box.hidden=false}
+ try{
+  const entries=await loadSiteSearchIndex();
+  if(request!==siteSearchRequest)return;
+  const results=entries.map(x=>{
+   const title=normalizeSiteSearch(x.title);
+   return {...x,score:words.every(w=>x.search.includes(w))?words.reduce((n,w)=>n+(title.includes(w)?5:1),0):-1};
+  }).filter(x=>x.score>=0).sort((a,b)=>b.score-a.score||a.title.localeCompare(b.title)).slice(0,40);
+  if(box){box.innerHTML=results.length?results.map(x=>{const a=document.createElement('a');a.href=x.url;const strong=document.createElement('strong');strong.textContent=x.title;const span=document.createElement('span');span.textContent=x.description||'AniNextUp article';a.append(strong,span);return a.outerHTML}).join(''):'<div class="no-result">No matching articles found.</div>';box.hidden=false}
+  else if(results[0])location.href=results[0].url;
+ }catch(e){if(request===siteSearchRequest&&box){box.innerHTML='<div class="no-result">Search is temporarily unavailable. Please try again.</div>';box.hidden=false}}
+}
+document.getElementById('search')?.addEventListener('keydown',e=>{if(e.key==='Enter')searchSite()});document.getElementById('search')?.addEventListener('input',e=>{if(!e.target.value.trim()){const b=document.getElementById('searchResults');if(b)b.hidden=true;siteSearchRequest++}});
 
 const siteToday=new Date(new Date().toLocaleString('en-US',{timeZone:TZ}));discoveryNodes('[data-today-label]').forEach(el=>el.textContent='TODAY · '+siteToday.toLocaleDateString('en-US',{month:'long',day:'numeric'}).toUpperCase());
 
@@ -122,15 +168,67 @@ if(document.querySelector('article.article')){
 }
 
 
+// Enforce the three-column layout even when a page retains cached legacy CSS.
+// Run immediately, independently of image fetching or editorial data loading.
+function normalizeRelatedReleaseGrid(section){
+  const grids=Array.from(section.querySelectorAll('.grid'));
+  if(!grids.length)return null;
+
+  // Older editorial markup sometimes split one related list across several grids.
+  // Move the first three cards, in document order, into one shared grid.
+  const cards=grids.flatMap(grid=>Array.from(grid.querySelectorAll(':scope > a.mini')));
+  cards.slice(3).forEach(card=>card.remove());
+  const visibleCards=cards.slice(0,3);
+  const grid=grids[0];
+  visibleCards.forEach(card=>grid.append(card));
+  grids.slice(1).forEach(extra=>extra.remove());
+
+  grid.classList.toggle('three',visibleCards.length===3);
+  grid.style.setProperty('display','grid','important');
+  grid.style.setProperty('grid-template-columns','repeat(3,minmax(0,1fr))','important');
+  grid.style.setProperty('gap','12px','important');
+  grid.style.setProperty('align-items','stretch','important');
+  visibleCards.forEach(card=>{
+    card.style.setProperty('min-width','0');
+    card.style.setProperty('width','100%');
+  });
+  return grid;
+}
+function enforceRelatedReleaseRow(){
+  document.querySelectorAll('article.article .related-releases').forEach(section=>{
+    normalizeRelatedReleaseGrid(section);
+  });
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',enforceRelatedReleaseRow,{once:true});
+else enforceRelatedReleaseRow();
+
 // Every KEEP WATCHING card gets artwork, including legacy hand-authored sections.
 // Prefer the destination article's cover, never reuse the current article's image.
 async function ensureRelatedReleaseCovers(){
   const sections=document.querySelectorAll('article.article .related-releases');
   if(!sections.length)return;
+  // Show at most three related articles on every article page, including legacy sections.
+  for(const section of sections){
+    normalizeRelatedReleaseGrid(section);
+  }
   const entries=(window.ANINEXTUP_DATA?.anime||[]).concat(window.ANINEXTUP_DATA?.guides||[]);
   const coverBySlug=new Map(entries.filter(x=>x.article&&x.image).map(x=>[x.article.split('/').pop().replace(/\.html$/,''),x.image]));
   for(const section of sections){
     for(const link of section.querySelectorAll('a.mini')){
+      // Normalize legacy editorial cards to the shared full-width cover layout.
+      // Keep their original links, labels and descriptions intact.
+      if(!link.classList.contains('related-card')){
+        const media=document.createElement('span');
+        media.className='related-card-media';
+        const copy=document.createElement('span');
+        copy.className='related-card-copy';
+        for(const child of Array.from(link.childNodes)){
+          if(child.nodeType===1&&child.matches('img,.related-card-media'))media.append(child);
+          else copy.append(child);
+        }
+        link.append(media,copy);
+        link.classList.add('related-card');
+      }
       const destination=new URL(link.getAttribute('href'),location.href);
       const slug=destination.pathname.split('/').pop().replace(/\.html$/,'');
       let img=link.querySelector('img');
@@ -176,3 +274,18 @@ discoveryNodes('[data-news-upcoming]').forEach(el=>{const items=[...(D.anime||[]
 // Lightweight official trailers: YouTube loads only after a visitor clicks play.
 document.querySelectorAll('.lite-trailer[data-youtube]').forEach(box=>{const btn=box.querySelector('.trailer-play');if(!btn)return;btn.addEventListener('click',()=>{const id=box.dataset.youtube,title=box.dataset.title||'Official trailer';const iframe=document.createElement('iframe');iframe.src='https://www.youtube-nocookie.com/embed/'+encodeURIComponent(id)+'?autoplay=1';iframe.title=title;iframe.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';iframe.referrerPolicy='strict-origin-when-cross-origin';iframe.allowFullscreen=true;box.replaceChildren(iframe)},{once:true})});
 
+
+// Lead cover artwork is illustrative, not a navigation link.
+// Keep caption/source links, related article cards and trailer play controls working.
+if(document.querySelector('article.article')){
+ const article=document.querySelector('article.article');
+ const head=article.querySelector(':scope > .article-head');
+ const cover=head?.nextElementSibling;
+ if(cover&&(cover.matches('figure,.article-hero,.official-hero,img'))){
+  const image=cover.matches('img')?cover:cover.querySelector('img');
+  const anchor=image?.closest('a');
+  if(anchor&&cover.contains(anchor)&&anchor.querySelector('img')===image){
+   anchor.replaceWith(...anchor.childNodes);
+  }
+ }
+}

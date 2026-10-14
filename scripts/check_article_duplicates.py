@@ -44,8 +44,10 @@ def check(new_path, existing_paths):
 
 def main():
     base = set(subprocess.check_output(["git", "ls-tree", "-r", "--name-only", "HEAD", "articles/"], text=True).splitlines())
-    new = [Path(p) for p in subprocess.check_output(["git", "ls-files", "--others", "--exclude-standard", "articles/"], text=True).splitlines() if p.endswith(".html")]
-    # Also handle files staged or modified in a branch relative to the current base.
+    untracked = subprocess.check_output(["git", "ls-files", "--others", "--exclude-standard", "articles/"], text=True).splitlines()
+    changed = subprocess.check_output(["git", "diff", "--name-only", "--diff-filter=ACMRT", "HEAD", "--", "articles/"], text=True).splitlines()
+    # Check added, untracked, and modified article files while comparing each against the other tracked articles.
+    new = [Path(p) for p in sorted(set(untracked + changed)) if p.endswith(".html")]
     existing = [Path(p) for p in base if p.endswith(".html") and Path(p).is_file()]
     errors = []
     for path in new:

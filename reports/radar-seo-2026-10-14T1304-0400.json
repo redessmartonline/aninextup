@@ -1,0 +1,433 @@
+{
+  "schema_version": 1,
+  "run_at": "2026-10-14T13:04:08-04:00",
+  "timezone": "America/Santo_Domingo",
+  "gsc": {
+    "property": "sc-domain:aninextup.com",
+    "period": {
+      "start": "2026-09-14",
+      "end": "2026-10-11",
+      "settled_through": "2026-10-11"
+    },
+    "aggregate_measured": {
+      "keys": [],
+      "clicks": 21,
+      "impressions": 991,
+      "ctr": 2.119071644803229,
+      "position": 13.98183652875883
+    },
+    "prior_period": {
+      "start": "2026-08-17",
+      "end": "2026-09-13",
+      "status": "NO_ROWS",
+      "comparison_available": false
+    },
+    "note": "Aggregate totals include anonymized query data; visible query rows do not sum to the site total.",
+    "semantic_groups": [
+      {
+        "name": "anime today",
+        "metrics_measured": {
+          "query_rows": 29,
+          "impressions": 432,
+          "clicks": 0,
+          "ctr_percent": 0,
+          "weighted_position": 11.715277777777779
+        },
+        "score_inferred": 96,
+        "status": "CHANGES_LIVE_AWAITING_GOOGLE_RECRAWL"
+      },
+      {
+        "name": "November 2026 anime",
+        "metrics_measured": {
+          "query_rows": 11,
+          "impressions": 79,
+          "clicks": 1,
+          "ctr_percent": 1.2658227848101267,
+          "weighted_position": 7.113924050632911
+        },
+        "score_inferred": 91,
+        "status": "OPTIMIZED_AND_LIVE"
+      },
+      {
+        "name": "Demon's Crest release intent",
+        "metrics_measured": {
+          "query_rows": 6,
+          "impressions": 16,
+          "clicks": 0,
+          "ctr_percent": 0,
+          "weighted_position": 4.1875
+        },
+        "score_inferred": 88,
+        "status": "OPTIMIZED_AND_LIVE_BUT_CLEAN_URL_NOT_INDEXED"
+      }
+    ],
+    "exact_queries_measured": [
+      {
+        "keys": [
+          "anime coming out in november 2026"
+        ],
+        "clicks": 1,
+        "impressions": 7,
+        "ctr": 14.285714285714285,
+        "position": 9.285714285714286
+      },
+      {
+        "keys": [
+          "anime november 2026"
+        ],
+        "clicks": 0,
+        "impressions": 20,
+        "ctr": 0,
+        "position": 7.05
+      },
+      {
+        "keys": [
+          "anime release today"
+        ],
+        "clicks": 0,
+        "impressions": 34,
+        "ctr": 0,
+        "position": 10.088235294117647
+      },
+      {
+        "keys": [
+          "anime releasing today"
+        ],
+        "clicks": 0,
+        "impressions": 147,
+        "ctr": 0,
+        "position": 10.081632653061224
+      },
+      {
+        "keys": [
+          "demon crest anime release date"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 4.666666666666666
+      },
+      {
+        "keys": [
+          "today anime release"
+        ],
+        "clicks": 0,
+        "impressions": 110,
+        "ctr": 0,
+        "position": 9.563636363636364
+      }
+    ],
+    "focus_pages_measured": [
+      {
+        "keys": [
+          "https://aninextup.com/articles/anime-releasing-november-2026.html"
+        ],
+        "clicks": 7,
+        "impressions": 245,
+        "ctr": 2.857142857142857,
+        "position": 7.106122448979592
+      },
+      {
+        "keys": [
+          "http://aninextup.com/today"
+        ],
+        "clicks": 0,
+        "impressions": 447,
+        "ctr": 0,
+        "position": 13.521252796420582
+      },
+      {
+        "keys": [
+          "https://aninextup.com/articles/demons-crest-release-date.html"
+        ],
+        "clicks": 0,
+        "impressions": 39,
+        "ctr": 0,
+        "position": 6.051282051282051
+      },
+      {
+        "keys": [
+          "https://aninextup.com/today.html"
+        ],
+        "clicks": 0,
+        "impressions": 63,
+        "ctr": 0,
+        "position": 24.444444444444443
+      }
+    ],
+    "url_inspections": [
+      {
+        "siteUrl": "sc-domain:aninextup.com",
+        "inspectionUrl": "https://aninextup.com/today",
+        "verdict": "NEUTRAL",
+        "coverageState": "Alternate page with proper canonical tag",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-10-09T08:50:29Z",
+        "pageFetchState": "SUCCESSFUL",
+        "crawledAs": "MOBILE",
+        "referringUrls": [
+          "https://aninextup.com/today.html"
+        ],
+        "googleCanonical": "https://aninextup.com/today.html",
+        "userCanonical": "https://aninextup.com/today.html",
+        "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:aninextup.com&id=3fTyC85QVDte5aaxSxwPPQ&utm_medium=link&utm_source=api"
+      },
+      {
+        "siteUrl": "sc-domain:aninextup.com",
+        "inspectionUrl": "https://aninextup.com/this-week",
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-10-14T14:36:45Z",
+        "pageFetchState": "SUCCESSFUL",
+        "crawledAs": "MOBILE",
+        "referringUrls": [],
+        "googleCanonical": "https://aninextup.com/this-week",
+        "userCanonical": "https://aninextup.com/this-week",
+        "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:aninextup.com&id=QM5HoD0aHy4MUk59_2Oxbg&utm_medium=link&utm_source=api"
+      },
+      {
+        "siteUrl": "sc-domain:aninextup.com",
+        "inspectionUrl": "https://aninextup.com/articles/anime-releasing-november-2026",
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-10-13T08:58:02Z",
+        "pageFetchState": "SUCCESSFUL",
+        "crawledAs": "MOBILE",
+        "referringUrls": [
+          "https://aninextup.com/articles/anime-releasing-november-2026.html"
+        ],
+        "googleCanonical": "https://aninextup.com/articles/anime-releasing-november-2026",
+        "userCanonical": "https://aninextup.com/articles/anime-releasing-november-2026",
+        "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:aninextup.com&id=Is0hzxAGuWZ2dv1Wh627Ew&utm_medium=link&utm_source=api"
+      },
+      {
+        "siteUrl": "sc-domain:aninextup.com",
+        "inspectionUrl": "https://aninextup.com/articles/demons-crest-release-date",
+        "verdict": "NEUTRAL",
+        "coverageState": "Crawled - currently not indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-10-13T08:20:28Z",
+        "pageFetchState": "SUCCESSFUL",
+        "crawledAs": "MOBILE",
+        "referringUrls": [],
+        "googleCanonical": "https://aninextup.com/articles/demons-crest-release-date",
+        "userCanonical": "https://aninextup.com/articles/demons-crest-release-date",
+        "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:aninextup.com&id=03x3rUhR3QIxneWcKIyT4g&utm_medium=link&utm_source=api"
+      },
+      {
+        "siteUrl": "sc-domain:aninextup.com",
+        "inspectionUrl": "https://aninextup.com/today.html",
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-10-08T19:24:13Z",
+        "pageFetchState": "SUCCESSFUL",
+        "crawledAs": "MOBILE",
+        "referringUrls": [
+          "http://aninextup.com/today",
+          "https://aninextup.com/articles/apothecary-diaries-season-3.html"
+        ],
+        "googleCanonical": "https://aninextup.com/today.html",
+        "userCanonical": "https://aninextup.com/today.html",
+        "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:aninextup.com&id=5f1fhHhFc6ER4cb-uOtKvQ&utm_medium=link&utm_source=api"
+      },
+      {
+        "siteUrl": "sc-domain:aninextup.com",
+        "inspectionUrl": "https://aninextup.com/articles/demons-crest-release-date.html",
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-10-05T22:30:22Z",
+        "pageFetchState": "SUCCESSFUL",
+        "crawledAs": "MOBILE",
+        "referringUrls": [
+          "https://aninextup.com/articles/anime-releasing-november-2026.html"
+        ],
+        "googleCanonical": "https://aninextup.com/articles/demons-crest-release-date.html",
+        "userCanonical": "https://aninextup.com/articles/demons-crest-release-date",
+        "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:aninextup.com&id=6IpEuSMsIKOj9yEahOSRKA&utm_medium=link&utm_source=api"
+      }
+    ]
+  },
+  "repository_updates_verified": [
+    {
+      "commit": "82247ab50e42374bca838670020a1ef752d33b2e",
+      "file": "articles/anime-releasing-november-2026.html",
+      "result": "SEO intent and verified schedule copy improved"
+    },
+    {
+      "commit": "7b542c86d9c4829b15cefeaf56e43fcb76c0b205",
+      "file": "articles/demons-crest-release-date.html",
+      "result": "Release date and Prime Video intent clarified"
+    },
+    {
+      "commit": "222df803f0a9bb2fdf4028f6e9f495e311df487c",
+      "file": "today.html",
+      "result": "November guide internal link added"
+    },
+    {
+      "commit": "335d02c30e4ecff7893ef990e67eada4fb500bbf",
+      "file": "this-week.html",
+      "result": "November guide internal link added"
+    },
+    {
+      "commit": "4d38c923dcf4e687238009fa0289080c1c999a99",
+      "file": "_redirects",
+      "result": "Legacy .html aliases configured as 301 redirects"
+    }
+  ],
+  "public_verification": {
+    "today": {
+      "clean_url": "LIVE_UPDATED",
+      "legacy_html": "REDIRECTED_TO_CLEAN",
+      "http_variant": "RESOLVED_TO_HTTPS_CLEAN"
+    },
+    "this_week": {
+      "clean_url": "LIVE_UPDATED",
+      "legacy_html": "REDIRECTED_TO_CLEAN"
+    },
+    "november_guide": {
+      "clean_url": "LIVE_UPDATED",
+      "legacy_html": "REDIRECTED_TO_CLEAN"
+    },
+    "demons_crest": {
+      "clean_url": "LIVE_UPDATED",
+      "legacy_html": "FETCH_TOOL_INACCESSIBLE_THIS_RUN"
+    },
+    "caution": "Search tool confirms final redirect destinations but not the raw status code. Repository _redirects declares 301. Demon's Crest .html public fetch could not be independently completed."
+  },
+  "new_anime_announced": {
+    "result": "Sin noticias nuevas en esta búsqueda",
+    "new": 0,
+    "known": 0,
+    "verified": 0,
+    "preparation": 0,
+    "approval": 0,
+    "published": 0
+  },
+  "upcoming_releases": {
+    "next_7_days": [
+      {
+        "date": "2026-10-17",
+        "title": "Dreamland",
+        "platform": "Crunchyroll"
+      },
+      {
+        "date": "2026-10-20",
+        "title": "Cyberpunk: Edgerunners 2",
+        "platform": "Netflix"
+      }
+    ],
+    "next_30_days_additional": [
+      {
+        "date": "2026-10-25",
+        "title": "My Happy Marriage Season 2 Special Episodes",
+        "platform": "Netflix"
+      },
+      {
+        "date": "2026-11-03",
+        "title": "Bass X Machina",
+        "platform": "Netflix"
+      },
+      {
+        "date": "2026-11-06",
+        "title": "Demon's Crest",
+        "platform": "Prime Video"
+      },
+      {
+        "date": "2026-11-13",
+        "title": "Rakuen Tsuihou: Kokoro no Resonance",
+        "platform": "Japanese theaters"
+      }
+    ],
+    "next_90_days_additional": [
+      {
+        "date": "2026-11-20",
+        "title": "Witch on the Holy Night",
+        "platform": "Japanese theaters"
+      },
+      {
+        "date": "2026-11-20",
+        "title": "Armored Trooper VOTOMS: The Gray Witch Part 1",
+        "platform": "Japanese theaters"
+      },
+      {
+        "date": "2026-11-26",
+        "title": "Fool Night",
+        "platform": "Netflix"
+      },
+      {
+        "date": "2026-11-27",
+        "title": "Takopi's Original Sin: Thank You, See You Tomorrow",
+        "platform": "Japanese theaters"
+      },
+      {
+        "date": "2026-12-11",
+        "title": "The Apothecary Diaries Movie",
+        "platform": "Japanese theaters"
+      },
+      {
+        "date_label": "January 2027",
+        "title": "Hirayasumi",
+        "platform": "NHK General (Japan)",
+        "precision": "month-confirmed"
+      }
+    ]
+  },
+  "duplication_and_editorial": {
+    "no_new_article_prepared": true,
+    "open_prs": [
+      18,
+      17,
+      14
+    ],
+    "note": "No discarded opportunity was reopened and no new canonical URL was created."
+  },
+  "source_catalog": {
+    "total_entries": 234,
+    "verified": 170,
+    "pending_or_inaccessible": 64,
+    "consulted_this_run": 13,
+    "new_entries": 13,
+    "new_verified": 8,
+    "new_pending": 5,
+    "verified_new": [
+      "Shonengahosha",
+      "LEED Publishing",
+      "Libre",
+      "Ohzora Publishing",
+      "Anime Tourism Association",
+      "JAniCA",
+      "Tokuma Shoten",
+      "Seikaisha"
+    ],
+    "pending_new": [
+      "Mag Garden",
+      "Bushiroad Works",
+      "Nihon Bungeisha",
+      "Bunkasha",
+      "Hayakawa Publishing"
+    ]
+  },
+  "actions_recommended": [
+    "Do not rewrite the three optimized pages again before Google recrawls them.",
+    "Monitor /today: Google last crawled the clean URL on October 9 and still reports /today.html as canonical; the new 301 deployment postdates that crawl.",
+    "Monitor Demon's Crest: the clean URL was crawled October 13 but is currently not indexed, while the legacy .html URL remains indexed from an October 5 crawl.",
+    "Keep the November clean URL unchanged; it is submitted, indexed and canonicalized correctly.",
+    "Retest the Demon's Crest legacy redirect with raw HTTP headers when a suitable network path is available."
+  ],
+  "writes": {
+    "source_catalog_commit": "373826b06dc505f170eeff34639ce7124bfcf9df",
+    "articles_changed_this_run": 0,
+    "articles_published": 0,
+    "prs_merged": 0
+  }
+}

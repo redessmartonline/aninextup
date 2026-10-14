@@ -1,0 +1,187 @@
+{
+  "schema_version": "1.0",
+  "run": {
+    "started_at": "2026-10-14T05:04:44-04:00",
+    "completed_at": "2026-10-14T05:18:00-04:00",
+    "timezone": "America/Santo_Domingo",
+    "status": "COMPLETED_WITH_ONE_NEW_LOW_OPPORTUNITY_RESULT_AND_BLOCKED_DRAFTS"
+  },
+  "news": {
+    "relevant_results_reviewed": 3,
+    "newly_discovered_in_radar": 1,
+    "known_rechecked": 2,
+    "verified_primary_source": 3,
+    "unverified": 0,
+    "newly_prepared_this_run": 0,
+    "currently_in_preparation": 2,
+    "ready_for_approval": 0,
+    "approved": 0,
+    "published_this_run": 0,
+    "items": [
+      {
+        "title": "The Apothecary Diaries movie — Luoqing and Yinshan character PV, cast and anniversary special",
+        "official_url": "https://kusuriyanohitorigoto.jp/news/movie-version/",
+        "official_date": "2026-10-14",
+        "verifiable_time": "Date only; publication hour not exposed",
+        "seo_score": 92,
+        "score_components": {
+          "demand": 32,
+          "freshness": 30,
+          "opportunity": 15,
+          "authority": 15
+        },
+        "status": "KNOWN_CANONICAL_UPDATE_IN_DRAFT_PR_17_BLOCKED_QA",
+        "decision": "No separate article; preserve canonical URL."
+      },
+      {
+        "title": "BLEACH: Thousand-Year Blood War × Graniph collaboration",
+        "official_url": "https://bleach-anime.com/news/?id=71436",
+        "official_date": "2026-10-14",
+        "verifiable_time": "Reservations opened 2026-10-14T00:00:00+09:00; publication hour not exposed",
+        "seo_score": 78,
+        "score_components": {
+          "demand": 30,
+          "freshness": 25,
+          "opportunity": 8,
+          "authority": 15
+        },
+        "status": "KNOWN_VERIFIED_NO_ARTICLE_LOW_EDITORIAL_OPPORTUNITY",
+        "decision": "No article prepared."
+      },
+      {
+        "title": "The Apothecary Diaries × REJURAN COSMETICS collaboration and Tokyo pop-up",
+        "official_url": "https://kusuriyanohitorigoto.jp/news/3130/",
+        "official_date": "2026-10-14",
+        "verifiable_time": "Event begins 2026-10-14T11:00:00+09:00; publication hour not exposed",
+        "seo_score": 67,
+        "score_components": {
+          "demand": 20,
+          "freshness": 30,
+          "opportunity": 2,
+          "authority": 15
+        },
+        "status": "NEW_VERIFIED_EXISTING_CANONICAL_NO_UPDATE_LOW_EDITORIAL_OPPORTUNITY",
+        "duplicate_check": {
+          "title_alias_franchise_event_url": "No exact REJURAN, リジュラン or /3130/ match in repository search, assets/data.js, sitemap.xml, editorial/seo-opportunities.json or open PRs.",
+          "canonical_found": "https://aninextup.com/articles/apothecary-diaries-movie",
+          "decision": "EXISTING_CANONICAL; NO UPDATE PREPARED"
+        },
+        "decision": "Commercial cosmetics campaign; does not add release, cast, trailer or production information."
+      }
+    ]
+  },
+  "source_catalog": {
+    "url": "https://github.com/redessmartonline/aninextup/blob/main/editorial/official-source-catalog.json",
+    "total_cataloged": 141,
+    "verified_accessible": 120,
+    "pending_or_inaccessible": 21,
+    "consulted_this_run": 26,
+    "inaccessible_this_run": 11,
+    "new_entries_added": 20,
+    "new_entries_verified": 13,
+    "prior_pending_upgraded_to_verified": 0,
+    "net_new_verified": 13,
+    "target": 200,
+    "progress_percent": 60,
+    "remaining_to_target": 80,
+    "new_verified": [
+      "Coamix",
+      "Hobby Japan",
+      "Micro Magazine",
+      "Earth Star Entertainment",
+      "TO Books",
+      "Starts Publishing",
+      "Seven Seas Entertainment",
+      "Yen Press",
+      "VIZ Media Manga & Anime News",
+      "Kodansha US",
+      "Square Enix Manga & Books North America",
+      "Manga UP! Global",
+      "Comikey"
+    ],
+    "new_pending": [
+      "Alphapolis",
+      "Hero's",
+      "Shufunotomo",
+      "J-Novel Club",
+      "Azuki",
+      "Denpa",
+      "Irodori Comics"
+    ],
+    "previous_pending_rechecked_without_upgrade": [
+      "Orange",
+      "Nippon Animation",
+      "NHK Anime"
+    ],
+    "commit": {
+      "sha": "2f50c3f05873ec0e83ac27bb1b74351c271052eb",
+      "url": "https://github.com/redessmartonline/aninextup/commit/2f50c3f05873ec0e83ac27bb1b74351c271052eb",
+      "final_blob_sha": "c3ded00ca839b56f520df07b84d1239296de587e",
+      "verified_after_write": true
+    }
+  },
+  "search_console": {
+    "site": "sc-domain:aninextup.com",
+    "range": {
+      "start_date": "2026-09-14",
+      "end_date": "2026-10-11"
+    },
+    "data_source": "Google Search Console API via GSC Wizard",
+    "candidate_specific_queries_found": false,
+    "top_opportunities": [
+      {
+        "query": "anime releasing today",
+        "clicks": 0,
+        "impressions": 147,
+        "ctr_percent": 0,
+        "average_position": 10.081632653061224,
+        "opportunity_score": 118,
+        "potential_clicks": 37
+      },
+      {
+        "query": "today anime release",
+        "clicks": 0,
+        "impressions": 110,
+        "ctr_percent": 0,
+        "average_position": 9.563636363636364,
+        "opportunity_score": 110,
+        "potential_clicks": 28
+      },
+      {
+        "query": "anime release today",
+        "clicks": 0,
+        "impressions": 34,
+        "ctr_percent": 0,
+        "average_position": 10.088235294117647,
+        "opportunity_score": 27,
+        "potential_clicks": 9
+      }
+    ],
+    "note": "No candidate-specific Search Console metrics were returned or invented."
+  },
+  "qa": {
+    "pr_17": {
+      "url": "https://github.com/redessmartonline/aninextup/pull/17",
+      "head_sha": "00dc4df5e1eefbed8ae0536f524f537d9a2d2c68",
+      "status": "BLOCKED_QA_PENDING"
+    },
+    "pr_18": {
+      "url": "https://github.com/redessmartonline/aninextup/pull/18",
+      "head_sha": "bdc9ba8cd564a883e263c83888f135e67e21500b",
+      "status": "BLOCKED_QA_PENDING"
+    },
+    "pending_for_both": [
+      "scripts/check_article_duplicates.py",
+      "scripts/validate_publication.py",
+      "complete final desktop/mobile review as applicable"
+    ],
+    "publication_action": "NONE",
+    "merge_action": "NONE",
+    "explicit_publish_authorization_received": false
+  },
+  "writes": {
+    "catalog_write_confirmed": true,
+    "report_write_confirmed": true,
+    "initial_report_commit_sha": "e58dcb7510042d6042cafb12d341c6176fc9190f"
+  }
+}

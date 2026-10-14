@@ -2,7 +2,7 @@
   "schema_version": 1,
   "site": "https://aninextup.com",
   "purpose": "Editorial SEO opportunity approval queue; never auto-publish",
-  "updated_at": "2026-10-14T01:55:58.401Z",
+  "updated_at": "2026-10-14T00:00:00.000Z",
   "opportunities": [
     {
       "id": "2026-10-13-apothecary-movie-character-pv-kensho-ono",
@@ -149,7 +149,7 @@
       "announcement_timezone": "Exact announcement hour and timezone not exposed/verified; Japanese site date where applicable",
       "new_in_run": true,
       "verification_status": "VERIFIED_FACTS",
-      "status": "BLOCKED_QA_PENDING",
+      "status": "PUBLISHED",
       "score": 77,
       "score_basis": "Qualitative editorial estimate; not search volume or traffic prediction",
       "seo_rationale": "Update canonical movie article; new character footage",
@@ -179,8 +179,11 @@
       "official_trailer_url": "https://www.youtube.com/watch?v=dipjaCmYris",
       "prepared_at": "2026-10-14T01:55:58.401Z",
       "blocking_checks": [
-        "Actual video playback not verified: media time remains 0, readyState 0 in cloud Chrome; cause not established."
-      ]
+        "Real-browser video playback not independently verified; keep as post-publication QA."
+      ],
+      "publication_url": "https://aninextup.com/articles/apothecary-diaries-movie",
+      "merge_commit_sha": "0521904e55a2cd365132c0110277f2be25a615be",
+      "editorial_note": "Consolidated into the existing canonical article via merged PR #15; confirmed content in main includes character PV, October 22 special, Miyuki Sawashiro and Ai Mikami. Playback on a real browser/device remains unverified; publication status does not imply completed media QA."
     },
     {
       "id": "2026-10-13-radar-apothecary-special-oct22",
@@ -192,7 +195,7 @@
       "announcement_timezone": "Exact announcement hour and timezone not exposed/verified; Japanese site date where applicable",
       "new_in_run": true,
       "verification_status": "VERIFIED_FACTS",
-      "status": "VERIFIED",
+      "status": "PUBLISHED",
       "score": 75,
       "score_basis": "Qualitative editorial estimate; not search volume or traffic prediction",
       "seo_rationale": "Future trailer reveal creates follow-up search intent; event at 20:00 Japan time, announcement hour unknown",
@@ -214,7 +217,13 @@
         "existing_article_url": "https://aninextup.com/articles/apothecary-diaries-movie",
         "notes": "Same franchise and movie canonical exists; the four new source IDs, names and October 22 announcement are absent from all article text and open PR changes. Combine into one canonical update; never four new pages."
       },
-      "canonical_update_group": "apothecary-diaries-movie-2026-10-14"
+      "canonical_update_group": "apothecary-diaries-movie-2026-10-14",
+      "publication_url": "https://aninextup.com/articles/apothecary-diaries-movie",
+      "merge_commit_sha": "0521904e55a2cd365132c0110277f2be25a615be",
+      "editorial_note": "Consolidated into the existing canonical article via merged PR #15; confirmed content in main includes character PV, October 22 special, Miyuki Sawashiro and Ai Mikami. Playback on a real browser/device remains unverified; publication status does not imply completed media QA.",
+      "blocking_checks": [
+        "Real-browser video playback and mobile visual QA not independently verified."
+      ]
     },
     {
       "id": "2026-10-13-radar-apothecary-sawashiro",
@@ -226,7 +235,7 @@
       "announcement_timezone": "Exact announcement hour and timezone not exposed/verified; Japanese site date where applicable",
       "new_in_run": true,
       "verification_status": "VERIFIED_FACTS",
-      "status": "VERIFIED",
+      "status": "PUBLISHED",
       "score": 70,
       "score_basis": "Qualitative editorial estimate; not search volume or traffic prediction",
       "seo_rationale": "Cast update for established movie canonical",
@@ -248,7 +257,13 @@
         "existing_article_url": "https://aninextup.com/articles/apothecary-diaries-movie",
         "notes": "Same franchise and movie canonical exists; the four new source IDs, names and October 22 announcement are absent from all article text and open PR changes. Combine into one canonical update; never four new pages."
       },
-      "canonical_update_group": "apothecary-diaries-movie-2026-10-14"
+      "canonical_update_group": "apothecary-diaries-movie-2026-10-14",
+      "publication_url": "https://aninextup.com/articles/apothecary-diaries-movie",
+      "merge_commit_sha": "0521904e55a2cd365132c0110277f2be25a615be",
+      "editorial_note": "Consolidated into the existing canonical article via merged PR #15; confirmed content in main includes character PV, October 22 special, Miyuki Sawashiro and Ai Mikami. Playback on a real browser/device remains unverified; publication status does not imply completed media QA.",
+      "blocking_checks": [
+        "Real-browser video playback and mobile visual QA not independently verified."
+      ]
     },
     {
       "id": "2026-10-13-radar-apothecary-mikami",
@@ -260,7 +275,7 @@
       "announcement_timezone": "Exact announcement hour and timezone not exposed/verified; Japanese site date where applicable",
       "new_in_run": true,
       "verification_status": "VERIFIED_FACTS",
-      "status": "VERIFIED",
+      "status": "PUBLISHED",
       "score": 69,
       "score_basis": "Qualitative editorial estimate; not search volume or traffic prediction",
       "seo_rationale": "Cast update; qualitative cross-audience interest",
@@ -282,7 +297,13 @@
         "existing_article_url": "https://aninextup.com/articles/apothecary-diaries-movie",
         "notes": "Same franchise and movie canonical exists; the four new source IDs, names and October 22 announcement are absent from all article text and open PR changes. Combine into one canonical update; never four new pages."
       },
-      "canonical_update_group": "apothecary-diaries-movie-2026-10-14"
+      "canonical_update_group": "apothecary-diaries-movie-2026-10-14",
+      "publication_url": "https://aninextup.com/articles/apothecary-diaries-movie",
+      "merge_commit_sha": "0521904e55a2cd365132c0110277f2be25a615be",
+      "editorial_note": "Consolidated into the existing canonical article via merged PR #15; confirmed content in main includes character PV, October 22 special, Miyuki Sawashiro and Ai Mikami. Playback on a real browser/device remains unverified; publication status does not imply completed media QA.",
+      "blocking_checks": [
+        "Real-browser video playback and mobile visual QA not independently verified."
+      ]
     },
     {
       "id": "2026-10-13-radar-danime-81",
@@ -294,11 +315,11 @@
       "announcement_timezone": "Asia/Tokyo (JST)",
       "new_in_run": true,
       "verification_status": "VERIFIED_FACTS",
-      "status": "VERIFIED",
+      "status": "PUBLISHED",
       "score": 48,
       "score_basis": "Qualitative editorial estimate; not search volume or traffic prediction",
       "seo_rationale": "Where-to-watch intent, Japan-only relevance limits English site opportunity",
-      "action": "REVIEW",
+      "action": "CREAR",
       "existing_article_url": null,
       "first_detected_at": "2026-10-13T21:24:54-04:00",
       "quality_gate_passed": false,
@@ -315,7 +336,10 @@
         "exact_announcement_already_covered": false,
         "existing_article_url": null,
         "notes": "d Anime Store appears as broadcaster/platform in nine series guides; no 81-title roundup or exact release URL in articles/data/sitemap/PR. It overlaps seasonal guide intent; consider updating fall-2026-anime-calendar before creating a standalone story."
-      }
+      },
+      "publication_url": "https://aninextup.com/articles/d-anime-store-81-fall-2026-anime",
+      "approval_at": "2026-10-14",
+      "editorial_note": "User requested publication; article merged to main in PR #23. Public deployment not independently verified."
     },
     {
       "id": "2026-10-13-radar-paw-ending",

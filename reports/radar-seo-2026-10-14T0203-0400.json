@@ -1,0 +1,191 @@
+{
+  "schema_version": "1.0",
+  "run": {
+    "started_at": "2026-10-14T02:03:15-04:00",
+    "completed_at": "2026-10-14T02:12:30-04:00",
+    "timezone": "America/Santo_Domingo",
+    "status": "COMPLETED_WITH_BLOCKED_DRAFTS",
+    "summary": "Sin noticias nuevas en esta búsqueda"
+  },
+  "news": {
+    "searched_and_rechecked": 3,
+    "new": 0,
+    "known": 3,
+    "primary_source_verified": 3,
+    "in_preparation": 3,
+    "ready_for_approval": 0,
+    "approved": 0,
+    "published": 0,
+    "items": [
+      {
+        "title": "The Apothecary Diaries anniversary special",
+        "franchise": "The Apothecary Diaries",
+        "official_url": "https://kusuriyanohitorigoto.jp/",
+        "official_date": "2026-10-14",
+        "time_precision": "date_only",
+        "seo_score": 92,
+        "score_components": {
+          "demand": 32,
+          "freshness": 30,
+          "opportunity": 15,
+          "authority": 15
+        },
+        "status": "KNOWN_UPDATE_IN_DRAFT_PR_17_BLOCKED_QA"
+      },
+      {
+        "title": "Yumeneko Connect TV anime announced",
+        "franchise": "Yumeneko Connect",
+        "official_url": "https://sh-anime.shochiku.co.jp/yumeconne-anime/",
+        "official_date": "2026-10-14",
+        "time_precision": "date_only",
+        "seo_score": 89,
+        "score_components": {
+          "demand": 29,
+          "freshness": 30,
+          "opportunity": 15,
+          "authority": 15
+        },
+        "status": "KNOWN_NEW_ARTICLE_IN_DRAFT_PR_18_BLOCKED_QA"
+      },
+      {
+        "title": "The Fable Season 2 adds Yamaoka cast information",
+        "franchise": "The Fable",
+        "official_url": "https://www.vap.co.jp/the-fable-anime/",
+        "official_date": "2026-10-14",
+        "time_precision": "date_only",
+        "seo_score": 88,
+        "score_components": {
+          "demand": 28,
+          "freshness": 30,
+          "opportunity": 15,
+          "authority": 15
+        },
+        "status": "KNOWN_UPDATE_IN_DRAFT_PR_17_BLOCKED_QA"
+      }
+    ],
+    "duplicate_checks": {
+      "performed_before_preparation": true,
+      "surfaces": [
+        "site/repository article titles, aliases, franchises, events and URLs",
+        "assets/data.js",
+        "sitemap.xml",
+        "editorial/seo-opportunities.json",
+        "open pull requests"
+      ],
+      "outcome": "No additional article was prepared in this run; existing canonical updates and PRs were preserved."
+    }
+  },
+  "source_catalog": {
+    "url": "https://github.com/redessmartonline/aninextup/blob/main/editorial/official-source-catalog.json",
+    "total_cataloged": 76,
+    "verified_accessible": 71,
+    "pending_or_inaccessible": 5,
+    "consulted_this_run": 24,
+    "new_entries_added": 20,
+    "new_entries_verified": 17,
+    "prior_pending_upgraded_to_verified": 2,
+    "net_new_verified": 19,
+    "target": 200,
+    "progress_percent": 35.5,
+    "inaccessible_or_pending": [
+      "NHK Anime",
+      "Takeshobo",
+      "Pony Canyon",
+      "Comic Newtype",
+      "Overlap"
+    ],
+    "commit": {
+      "sha": "4442a9c5b06e3e7f8ad95d7273f6a19b4272808d",
+      "url": "https://github.com/redessmartonline/aninextup/commit/4442a9c5b06e3e7f8ad95d7273f6a19b4272808d",
+      "verified_after_write": true,
+      "final_blob_sha": "b45da9a6fb6ea08b40fc8bb68f7c810707dc578d"
+    }
+  },
+  "qa": {
+    "pr_17": {
+      "url": "https://github.com/redessmartonline/aninextup/pull/17",
+      "head_sha": "00dc4df5e1eefbed8ae0536f524f537d9a2d2c68",
+      "cloudflare_build": "success",
+      "cloudflare_deployment": "success",
+      "status": "BLOCKED_QA_PENDING",
+      "pending": [
+        "scripts/check_article_duplicates.py",
+        "scripts/validate_publication.py",
+        "final desktop and mobile visual review"
+      ]
+    },
+    "pr_18": {
+      "url": "https://github.com/redessmartonline/aninextup/pull/18",
+      "head_sha": "bdc9ba8cd564a883e263c83888f135e67e21500b",
+      "cloudflare_build": "success",
+      "cloudflare_deployment": "success",
+      "image_fix": {
+        "old_source": "YouTube thumbnail endpoints failed in preview",
+        "new_source": "https://sh-anime.shochiku.co.jp/yumeconne-anime/assets/img/movie/pv0.webp?v1",
+        "source_owner": "Shochiku official anime site",
+        "hero_verified": {
+          "complete": true,
+          "natural_width": 1920,
+          "natural_height": 1080
+        },
+        "teaser_verified": {
+          "complete": true,
+          "natural_width": 1920,
+          "natural_height": 1080
+        },
+        "final_commit": "bdc9ba8cd564a883e263c83888f135e67e21500b"
+      },
+      "status": "BLOCKED_QA_PENDING",
+      "pending": [
+        "scripts/check_article_duplicates.py",
+        "scripts/validate_publication.py",
+        "complete mobile visual review"
+      ]
+    },
+    "publication_action": "NONE",
+    "merge_action": "NONE",
+    "authorization_received": false
+  },
+  "search_console": {
+    "site": "sc-domain:aninextup.com",
+    "range": {
+      "start_date": "2026-09-14",
+      "end_date": "2026-10-11"
+    },
+    "source": "Google Search Console API via GSC Wizard",
+    "candidate_specific_metrics_found": false,
+    "top_verified_queries": [
+      {
+        "query": "anime releasing today",
+        "clicks": 0,
+        "impressions": 147,
+        "ctr_percent": 0,
+        "average_position": 10.081632653061224,
+        "opportunity_score": 118
+      },
+      {
+        "query": "today anime release",
+        "clicks": 0,
+        "impressions": 110,
+        "ctr_percent": 0,
+        "average_position": 9.563636363636364,
+        "opportunity_score": 110
+      },
+      {
+        "query": "anime release today",
+        "clicks": 0,
+        "impressions": 34,
+        "ctr_percent": 0,
+        "average_position": 10.088235294117647,
+        "opportunity_score": 27
+      }
+    ],
+    "note": "No Search Console metrics were invented or attributed to the three editorial candidates."
+  },
+  "writes": {
+    "catalog_write_confirmed": true,
+    "pr_18_image_correction_confirmed": true,
+    "report_write_confirmed": true,
+    "initial_report_commit": "dfb602b7eedfb2062eec69a910b226ed18a76e74"
+  }
+}

@@ -1,0 +1,290 @@
+{
+  "schema_version": 1,
+  "run_at": "2026-10-14T14:03:32-04:00",
+  "timezone": "America/Santo_Domingo",
+  "gsc": {
+    "property": "sc-domain:aninextup.com",
+    "period": {
+      "start": "2026-09-14",
+      "end": "2026-10-11",
+      "settled_through": "2026-10-11"
+    },
+    "aggregate_measured": {
+      "keys": [],
+      "clicks": 21,
+      "impressions": 991,
+      "ctr": 2.119071644803229,
+      "position": 13.98183652875883
+    },
+    "status": "UNCHANGED_FROM_PREVIOUS_HOUR",
+    "note": "Aggregate totals include anonymized query data; query rows are search impressions, not unique users.",
+    "semantic_groups": [
+      {
+        "name": "anime today",
+        "metrics_measured": {
+          "query_rows": 29,
+          "impressions": 432,
+          "clicks": 0,
+          "ctr_percent": 0,
+          "weighted_position": 11.715277777777779
+        },
+        "score_inferred": 96,
+        "status": "OPTIMIZED_AWAITING_RECRAWL"
+      },
+      {
+        "name": "November 2026 anime",
+        "metrics_measured": {
+          "query_rows": 11,
+          "impressions": 79,
+          "clicks": 1,
+          "ctr_percent": 1.2658227848101267,
+          "weighted_position": 7.113924050632911
+        },
+        "score_inferred": 91,
+        "status": "OPTIMIZED_INDEXED"
+      },
+      {
+        "name": "Demon's Crest",
+        "metrics_measured": {
+          "query_rows": 6,
+          "impressions": 16,
+          "clicks": 0,
+          "ctr_percent": 0,
+          "weighted_position": 4.1875
+        },
+        "score_inferred": 88,
+        "status": "OPTIMIZED_CANONICAL_MIGRATION_PENDING"
+      }
+    ],
+    "exact_queries_measured": [
+      {
+        "keys": [
+          "anime coming out in november 2026"
+        ],
+        "clicks": 1,
+        "impressions": 7,
+        "ctr": 14.285714285714285,
+        "position": 9.285714285714286
+      },
+      {
+        "keys": [
+          "anime november 2026"
+        ],
+        "clicks": 0,
+        "impressions": 20,
+        "ctr": 0,
+        "position": 7.05
+      },
+      {
+        "keys": [
+          "anime release today"
+        ],
+        "clicks": 0,
+        "impressions": 34,
+        "ctr": 0,
+        "position": 10.088235294117647
+      },
+      {
+        "keys": [
+          "anime releasing today"
+        ],
+        "clicks": 0,
+        "impressions": 147,
+        "ctr": 0,
+        "position": 10.081632653061224
+      },
+      {
+        "keys": [
+          "demon crest anime release date"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 4.666666666666666
+      },
+      {
+        "keys": [
+          "today anime release"
+        ],
+        "clicks": 0,
+        "impressions": 110,
+        "ctr": 0,
+        "position": 9.563636363636364
+      }
+    ],
+    "focus_pages_measured": [
+      {
+        "keys": [
+          "https://aninextup.com/articles/anime-releasing-november-2026.html"
+        ],
+        "clicks": 7,
+        "impressions": 245,
+        "ctr": 2.857142857142857,
+        "position": 7.106122448979592
+      },
+      {
+        "keys": [
+          "http://aninextup.com/today"
+        ],
+        "clicks": 0,
+        "impressions": 447,
+        "ctr": 0,
+        "position": 13.521252796420582
+      },
+      {
+        "keys": [
+          "https://aninextup.com/articles/demons-crest-release-date.html"
+        ],
+        "clicks": 0,
+        "impressions": 39,
+        "ctr": 0,
+        "position": 6.051282051282051
+      },
+      {
+        "keys": [
+          "https://aninextup.com/today.html"
+        ],
+        "clicks": 0,
+        "impressions": 63,
+        "ctr": 0,
+        "position": 24.444444444444443
+      }
+    ]
+  },
+  "new_anime_announced": {
+    "result": "Sin noticias nuevas en esta búsqueda",
+    "new": 0,
+    "known": 0,
+    "verified": 0,
+    "preparation": 0,
+    "approval": 0,
+    "published": 0,
+    "note": "Fresh official-source searches returned no new qualifying anime announcement. Older Netflix and Crunchyroll pages were excluded as already known."
+  },
+  "upcoming_releases": {
+    "next_7_days": [
+      [
+        "2026-10-17",
+        "Dreamland",
+        "Crunchyroll"
+      ],
+      [
+        "2026-10-20",
+        "Cyberpunk: Edgerunners 2",
+        "Netflix"
+      ]
+    ],
+    "next_30_days_additional": [
+      [
+        "2026-10-25",
+        "My Happy Marriage Season 2 Special Episodes",
+        "Netflix"
+      ],
+      [
+        "2026-11-03",
+        "Bass X Machina",
+        "Netflix"
+      ],
+      [
+        "2026-11-06",
+        "Demon's Crest",
+        "Prime Video"
+      ],
+      [
+        "2026-11-13",
+        "Rakuen Tsuihou: Kokoro no Resonance",
+        "Japanese theaters"
+      ]
+    ],
+    "next_90_days_additional": [
+      [
+        "2026-11-20",
+        "Witch on the Holy Night",
+        "Japanese theaters"
+      ],
+      [
+        "2026-11-20",
+        "Armored Trooper VOTOMS: The Gray Witch Part 1",
+        "Japanese theaters"
+      ],
+      [
+        "2026-11-26",
+        "Fool Night",
+        "Netflix"
+      ],
+      [
+        "2026-11-27",
+        "Takopi's Original Sin: Thank You, See You Tomorrow",
+        "Japanese theaters"
+      ],
+      [
+        "2026-12-11",
+        "The Apothecary Diaries Movie",
+        "Japanese theaters"
+      ],
+      [
+        "January 2027",
+        "Hirayasumi",
+        "NHK General; exact day unconfirmed"
+      ]
+    ]
+  },
+  "duplication_and_editorial": {
+    "registry_total": 14,
+    "statuses": {
+      "PUBLISHED": 11,
+      "UNVERIFIED": 3
+    },
+    "unverified": [
+      "Paw & Palaces creditless ending video",
+      "From Far Away creditless opening video",
+      "Netsuai Prince volume 25 and anniversary promotions"
+    ],
+    "open_prs": [
+      18,
+      17,
+      14
+    ],
+    "no_new_article_prepared": true,
+    "no_pr_merged": true
+  },
+  "repository": {
+    "new_external_commits_since_previous_scan": 0,
+    "articles_changed_this_run": 0,
+    "note": "No repository content change appeared after the 13:04 radar commit before this scan; optimized pages remain in observation."
+  },
+  "source_catalog": {
+    "total_entries": 244,
+    "verified": 179,
+    "pending_or_inaccessible": 65,
+    "consulted_this_run": 10,
+    "new_entries": 10,
+    "new_verified": 9,
+    "new_pending": 1,
+    "verified_new": [
+      "BOOK☆WALKER Japan",
+      "Renta! Japan",
+      "Manga Kingdom",
+      "BookLive",
+      "ebookjapan",
+      "Comic Seymour",
+      "Manga BANG!",
+      "Palcy",
+      "Manga Mee"
+    ],
+    "pending_new": [
+      "Sukima"
+    ]
+  },
+  "actions_recommended": [
+    "Keep /today, November and Demon's Crest unchanged until Google recrawls the new redirects and metadata.",
+    "Reinspect /today and Demon's Crest canonical state only after a later crawl timestamp appears.",
+    "Continue strengthening the verified source catalog toward 200 verified entries; 21 more verified sources remain."
+  ],
+  "writes": {
+    "source_catalog_commit": "fa45b12bf48c3b570c773eb9e5cf96d3a570e0b6",
+    "articles_changed": 0,
+    "articles_published": 0,
+    "prs_merged": 0
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "run_at": "2026-10-14T08:02:11-04:00",
+  "timezone": "America/Santo_Domingo",
+  "search_window": {
+    "previous_cutoff": "2026-10-14T07:01:19-04:00",
+    "cutoff": "2026-10-14T08:02:11-04:00",
+    "note": "Official-source search around 21:00 JST; no qualifying new anime or manga production announcement found."
+  },
+  "news_summary": {
+    "statement": "Sin noticias nuevas en esta búsqueda",
+    "found": 0,
+    "new": 0,
+    "known": 0,
+    "verified": 0,
+    "in_preparation": 0,
+    "ready_for_approval": 0,
+    "published": 0
+  },
+  "seo_scoring": {
+    "scale": "0-100",
+    "components": {
+      "demand": 35,
+      "freshness": 30,
+      "opportunity": 20,
+      "authority": 15
+    },
+    "items": [],
+    "note": "No qualifying news item was found after the prior cutoff."
+  },
+  "source_catalog": {
+    "path": "editorial/official-source-catalog.json",
+    "total_entries": 200,
+    "verified_catalogued": 150,
+    "pending_or_inaccessible": 50,
+    "consulted_this_run": 20,
+    "accessible_this_run": 6,
+    "inaccessible_this_run": 14,
+    "new_entries_added": 20,
+    "new_verified_added": 6,
+    "target_verified": 200,
+    "remaining_to_verified_target": 50,
+    "stretch_target_verified": 500,
+    "catalog_commit": "974221847ceb77375bb650a325a61448230eb8a1",
+    "catalog_blob": "089c960eae274d9377a53a19809f2e16b3ba6e8a",
+    "verified_new": [
+      {
+        "name": "Twin Engine",
+        "url": "https://twinengine.jp/",
+        "priority": "high"
+      },
+      {
+        "name": "GENCO",
+        "url": "https://www.genco.co.jp/",
+        "priority": "high"
+      },
+      {
+        "name": "100studio",
+        "url": "https://100studio.jp/",
+        "priority": "medium"
+      },
+      {
+        "name": "Qzil.la",
+        "url": "https://qzil.la/",
+        "priority": "medium"
+      },
+      {
+        "name": "Tomovies",
+        "url": "https://tomovies.co.jp/",
+        "priority": "low"
+      },
+      {
+        "name": "BS Fuji Anime & Kids",
+        "url": "https://www.bsfuji.tv/top/list/anime.html",
+        "priority": "medium"
+      }
+    ],
+    "inaccessible_new": [
+      "Good Smile Film",
+      "EGG FIRM",
+      "The Klockworx",
+      "Happinet Phantom Studios",
+      "Hakuhodo DY Music & Pictures",
+      "Staple Entertainment",
+      "BENTEN Film",
+      "Studio MOTHER",
+      "IMAGICA Infos",
+      "Studio Elle",
+      "AXsiZ",
+      "Studio Flad",
+      "DR Movie Japan",
+      "Chukyo TV Anime"
+    ]
+  },
+  "editorial_queue": {
+    "bleach_graniph": {
+      "branch": "editorial/bleach-graniph-collab-20261014",
+      "draft_path": "editorial/drafts/bleach-graniph-collaboration-20261014.md",
+      "blob": "fd0f2f9ebf64c2978ef7e688496a0bc8a0e94a17",
+      "status": "BLOCKED_QA_PENDING",
+      "published": false
+    },
+    "eriyiyans_terase": {
+      "branch": "editorial/eriyiyans-terase-20261014",
+      "draft_path": "editorial/drafts/eriyiyans-terase-song-20261014.md",
+      "blob": "0ade584ee565374d14deff9092a8fa9d6895571d",
+      "status": "BLOCKED_QA_PENDING",
+      "published": false
+    },
+    "publication_control": {
+      "request_seen": "Publica el primero",
+      "required_authorization_literal": "PUBLÍCALO",
+      "authorization_satisfied": false,
+      "action": "No merge or publication performed."
+    }
+  },
+  "duplicate_control": {
+    "performed_for_new_items": false,
+    "reason": "No radar item advanced to preparation in this run.",
+    "required_surfaces": [
+      "site articles",
+      "assets/data.js",
+      "sitemap.xml",
+      "editorial/seo-opportunities.json",
+      "open pull requests"
+    ]
+  },
+  "search_console": {
+    "site": "sc-domain:aninextup.com",
+    "data_source": "api",
+    "range": {
+      "start": "2026-09-14",
+      "end": "2026-10-11"
+    },
+    "metrics_invented": false,
+    "opportunities": [
+      {
+        "query": "anime releasing today",
+        "clicks": 0,
+        "impressions": 147,
+        "ctr": 0,
+        "position": 10.081632653061224,
+        "score": 118,
+        "potential_clicks": 37
+      },
+      {
+        "query": "today anime release",
+        "clicks": 0,
+        "impressions": 110,
+        "ctr": 0,
+        "position": 9.563636363636364,
+        "score": 110,
+        "potential_clicks": 28
+      },
+      {
+        "query": "anime release today",
+        "clicks": 0,
+        "impressions": 34,
+        "ctr": 0,
+        "position": 10.088235294117647,
+        "score": 27,
+        "potential_clicks": 9
+      }
+    ]
+  },
+  "publication": {
+    "created_or_updated_articles": 0,
+    "validation_run": false,
+    "validation_reason": "No radar article was prepared; existing drafts remain explicitly marked QA pending.",
+    "merged": false,
+    "published": false
+  }
+}

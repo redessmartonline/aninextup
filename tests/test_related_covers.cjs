@@ -14,7 +14,7 @@ for(const [parent,destination,cover] of [
   assert(section.includes('src="../assets/images/covers/'+cover+'"'));
   assert(!section.includes('this.remove()'));
   assert(html.includes('src="../assets/data.js"'));
-  assert(html.includes('src="../assets/app.js"'));
+  assert(/src="\.\.\/assets\/app\.js(?:\?[^\"]*)?"/.test(html));
   const matches=entries.filter(e=>e.article==='articles/'+destination);
   assert.equal(matches.length,1);
   assert.equal(matches[0].image,'assets/images/covers/'+cover);
