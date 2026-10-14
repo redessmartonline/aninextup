@@ -20,3 +20,10 @@ Every new or materially updated article MUST pass these checks **before** asking
 
 ## Review record
 Each publication PR should record the cover source, direct cover URL, duplicate check, visual test outcome, and any outstanding nonblocking checks. Do not mark the PR publication-ready with an unresolved blocking item.
+
+## Mandatory cover and media verification (October 2026)
+- Both exterior and interior covers must show verified official artwork specifically related to the article, not placeholders.
+- Verify image URLs return real image content and confirm intrinsic resolution and suitable 16:9 cropping; `maxresdefault.jpg` is not automatically a valid high-resolution image.
+- Verify the actual video ID and that playback works on the published article.
+- Do not merge or publish when these checks fail; keep the story as a draft.
+- Existing Paw & Palaces publication is an exception requiring follow-up: high-resolution YouTube thumbnail availability and live playback have NOT been verified.
