@@ -97,3 +97,9 @@
 .search input{min-width:0}
 .article-head h1,.visual-body h3,.prose a{overflow-wrap:anywhere}
 @media(max-width:780px){.release-summary{padding:18px}.release-summary dl{grid-template-columns:1fr}.search button{padding:0 14px}.article-head h1{font-size:clamp(30px,8vw,43px)}}
+
+/* Nested editorial sections should not inherit full-page section spacing. */
+.article .prose > section{padding:0;margin:0 0 28px}
+.article .prose > section > h2:first-child{margin-top:30px}
+.article .prose > section > h3{margin-top:24px}
+@media(max-width:780px){.article .prose > section{padding:0;margin-bottom:22px}}
