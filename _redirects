@@ -1,0 +1,5 @@
+# Consolidate legacy .html URLs to the canonical clean URLs with permanent redirects.
+/today.html /today 301
+/this-week.html /this-week 301
+/articles/anime-releasing-november-2026.html /articles/anime-releasing-november-2026 301
+/articles/demons-crest-release-date.html /articles/demons-crest-release-date 301
