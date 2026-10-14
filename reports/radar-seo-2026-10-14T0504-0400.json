@@ -181,6 +181,7 @@
   },
   "writes": {
     "catalog_write_confirmed": true,
-    "report_write_confirmed": false
+    "report_write_confirmed": true,
+    "initial_report_commit_sha": "e58dcb7510042d6042cafb12d341c6176fc9190f"
   }
 }
