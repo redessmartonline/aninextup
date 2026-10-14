@@ -1,0 +1,280 @@
+{
+  "schema_version": 1,
+  "run_at": "2026-10-14T05:57:26-04:00",
+  "timezone": "America/Santo_Domingo",
+  "search_window": {
+    "previous_cutoff": "2026-10-14T05:04:44-04:00",
+    "cutoff": "2026-10-14T05:57:26-04:00",
+    "note": "Official-source announcement search plus discovery queries; no qualifying new official anime or manga announcement was found after the previous cutoff."
+  },
+  "news_summary": {
+    "statement": "Sin noticias nuevas en esta búsqueda",
+    "found": 0,
+    "new": 0,
+    "known": 0,
+    "verified": 0,
+    "in_preparation": 0,
+    "ready_for_approval": 0,
+    "published": 0
+  },
+  "seo_scoring": {
+    "scale": "0-100",
+    "components": {
+      "demand": 35,
+      "freshness": 30,
+      "opportunity": 20,
+      "authority": 15
+    },
+    "items": [],
+    "note": "No qualifying news item was scored because no new official announcement was found in this run."
+  },
+  "duplicate_control": {
+    "performed_for_new_items": false,
+    "reason": "No item advanced to preparation.",
+    "required_surfaces": [
+      "site articles",
+      "assets/data.js",
+      "sitemap.xml",
+      "editorial/seo-opportunities.json",
+      "open pull requests"
+    ],
+    "open_prs": [
+      {
+        "number": 18,
+        "title": "DRAFT — Yumeneko Connect anime announcement",
+        "status": "BLOCKED_QA_PENDING"
+      },
+      {
+        "number": 17,
+        "title": "DRAFT — Update The Fable cast and Apothecary anniversary stream",
+        "status": "BLOCKED_QA_PENDING"
+      },
+      {
+        "number": 14,
+        "title": "DRAFT — Le Collège Noir Season 2: preparation corrected; playback verification pending",
+        "status": "BLOCKED_QA_PENDING"
+      }
+    ]
+  },
+  "source_catalog": {
+    "path": "editorial/official-source-catalog.json",
+    "total_entries": 161,
+    "verified_catalogued": 133,
+    "pending_or_inaccessible": 28,
+    "consulted_this_run": 20,
+    "accessible_this_run": 13,
+    "inaccessible_this_run": 7,
+    "new_entries_added": 20,
+    "new_verified_added": 13,
+    "target_verified": 200,
+    "remaining_to_target": 67,
+    "catalog_commit": "f096039f7b24ba56052bbc0909d45395a5fc1206",
+    "catalog_blob": "cab6b4ae0a39e9c50387f5e5a91708a8b7a9151d",
+    "verified_new": [
+      {
+        "name": "Studio Bind",
+        "url": "https://st-bind.jp/",
+        "priority": "high"
+      },
+      {
+        "name": "C2C",
+        "url": "https://www.c2c2009.com/",
+        "priority": "medium"
+      },
+      {
+        "name": "feel.",
+        "url": "https://www.feel-ing.com/",
+        "priority": "medium"
+      },
+      {
+        "name": "SILVER LINK.",
+        "url": "https://www.silverlink.co.jp/",
+        "priority": "high"
+      },
+      {
+        "name": "Studio KAI",
+        "url": "https://st-kai.jp/",
+        "priority": "medium"
+      },
+      {
+        "name": "Bibury Animation Studios",
+        "url": "https://bibury-st.com/",
+        "priority": "medium"
+      },
+      {
+        "name": "OLM Group",
+        "url": "https://olm.co.jp/",
+        "priority": "high"
+      },
+      {
+        "name": "Shin-Ei Animation",
+        "url": "https://shin-ei-animation.jp/",
+        "priority": "high"
+      },
+      {
+        "name": "GONZO",
+        "url": "https://www.gonzo.co.jp/",
+        "priority": "medium"
+      },
+      {
+        "name": "Studio Colorido",
+        "url": "https://colorido.co.jp/",
+        "priority": "medium"
+      },
+      {
+        "name": "ARVO ANIMATION",
+        "url": "https://arvo-animation.co.jp/",
+        "priority": "medium"
+      },
+      {
+        "name": "studio A-CAT",
+        "url": "https://a-cat.co.jp/",
+        "priority": "low"
+      },
+      {
+        "name": "Zero-G",
+        "url": "https://zerog2.jp/",
+        "priority": "medium"
+      }
+    ],
+    "inaccessible_new": [
+      {
+        "name": "Studio VOLN",
+        "url": "https://www.voln.co.jp/"
+      },
+      {
+        "name": "Ajia-do Animation Works",
+        "url": "https://www.ajiado.co.jp/"
+      },
+      {
+        "name": "Studio Comet",
+        "url": "https://www.st-comet.com/"
+      },
+      {
+        "name": "Pierrot",
+        "url": "https://www.pierrot.jp/"
+      },
+      {
+        "name": "E&H production",
+        "url": "https://ehproduction.com/"
+      },
+      {
+        "name": "Yokohama Animation Lab",
+        "url": "https://www.hama-anime.jp/"
+      },
+      {
+        "name": "EMT Squared",
+        "url": "https://emtsquared.co.jp/"
+      }
+    ]
+  },
+  "search_console": {
+    "site": "sc-domain:aninextup.com",
+    "data_source": "api",
+    "range": {
+      "start": "2026-09-14",
+      "end": "2026-10-11"
+    },
+    "metrics_invented": false,
+    "opportunities": [
+      {
+        "query": "anime releasing today",
+        "clicks": 0,
+        "impressions": 147,
+        "ctr": 0,
+        "position": 10.081632653061224,
+        "score": 118,
+        "potential_clicks": 37
+      },
+      {
+        "query": "today anime release",
+        "clicks": 0,
+        "impressions": 110,
+        "ctr": 0,
+        "position": 9.563636363636364,
+        "score": 110,
+        "potential_clicks": 28
+      },
+      {
+        "query": "anime release today",
+        "clicks": 0,
+        "impressions": 34,
+        "ctr": 0,
+        "position": 10.088235294117647,
+        "score": 27,
+        "potential_clicks": 9
+      },
+      {
+        "query": "anime november 2026",
+        "clicks": 0,
+        "impressions": 20,
+        "ctr": 0,
+        "position": 7.05,
+        "score": 20,
+        "potential_clicks": 5
+      },
+      {
+        "query": "today anime releases",
+        "clicks": 0,
+        "impressions": 24,
+        "ctr": 0,
+        "position": 10.041666666666666,
+        "score": 19,
+        "potential_clicks": 6
+      },
+      {
+        "query": "today's anime release",
+        "clicks": 0,
+        "impressions": 18,
+        "ctr": 0,
+        "position": 8.88888888888889,
+        "score": 18,
+        "potential_clicks": 5
+      },
+      {
+        "query": "todays anime release",
+        "clicks": 0,
+        "impressions": 17,
+        "ctr": 0,
+        "position": 8.588235294117647,
+        "score": 17,
+        "potential_clicks": 4
+      },
+      {
+        "query": "anime releases today",
+        "clicks": 0,
+        "impressions": 16,
+        "ctr": 0,
+        "position": 10.25,
+        "score": 13,
+        "potential_clicks": 4
+      },
+      {
+        "query": "november anime",
+        "clicks": 0,
+        "impressions": 11,
+        "ctr": 0,
+        "position": 7.181818181818182,
+        "score": 11,
+        "potential_clicks": 3
+      },
+      {
+        "query": "november anime releases 2026",
+        "clicks": 0,
+        "impressions": 11,
+        "ctr": 0,
+        "position": 6.909090909090909,
+        "score": 11,
+        "potential_clicks": 3
+      }
+    ]
+  },
+  "publication": {
+    "created_or_updated_articles": 0,
+    "validation_run": false,
+    "validation_reason": "No article was prepared in this run.",
+    "merged": false,
+    "published": false,
+    "authorization_received": false
+  }
+}
