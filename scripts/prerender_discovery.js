@@ -26,6 +26,7 @@ function fill(html,attribute,render){
   for(const [start,end,value] of edits.reverse())html=html.slice(0,start)+value+html.slice(end);
   return html;
 }
+const editorialStories=()=>{const seen=new Set();return [...data.anime.filter(a=>a.tag&&a.article),...data.guides].filter(g=>{if(!g.article||seen.has(g.article))return false;seen.add(g.article);return true;});};
 const list=(items,full=false,empty='No confirmed releases yet.')=>items.map(a=>card(a,full)).join('')||`<p class="empty">${escape(empty)}</p>`;
 let changed=0;
 for(const name of fs.readdirSync(root).filter(n=>n.endsWith('.html'))){
@@ -36,10 +37,11 @@ for(const name of fs.readdirSync(root).filter(n=>n.endsWith('.html'))){
   html=fill(html,'data-month-count',month=>{const n=data.anime.filter(a=>a.date?.startsWith(month)).length;return n?'· '+n+' CONFIRMED':'';});
   html=fill(html,'data-anime-platform',platform=>list(model.select(data.anime.filter(a=>model.matchesPlatform(a,platform)),'all',ctx)));
   html=fill(html,'data-platform-count',platform=>{const n=data.anime.filter(a=>model.matchesPlatform(a,platform)).length;return n?'· '+n+' TRACKED':'';});
-  html=fill(html,'data-home-latest',()=>data.guides.slice(0,6).map(guide).join(''));
-  html=fill(html,'data-guides',()=>data.guides.map(guide).join(''));
+  html=fill(html,'data-home-latest',()=>editorialStories().slice(0,6).map(guide).join(''));
+  html=fill(html,'data-guides',()=>editorialStories().map(guide).join(''));
   // All discovery pages load shared selectors before client-side refresh.
   if(html.includes('assets/data.js')&&!html.includes('src="assets/release-model.js'))html=html.replace(/<script src="assets\/app\.js[^\"]*"><\/script>/,'<script src="assets/release-model.js?v=discovery1"></script><script src="assets/app.js?v=discovery1"></script>');
   if(html!==original){fs.writeFileSync(file,html);changed++;}
 }
 console.log(`Discovery HTML updated: ${changed} pages; ${ctx.today}, week ending ${ctx.weekEnd}.`);
+
