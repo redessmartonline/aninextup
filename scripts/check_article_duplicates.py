@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Block new AniNextUp article files that duplicate an existing subject."""
+"""Block duplicate subjects in added or modified AniNextUp article files."""
 from pathlib import Path
 from html.parser import HTMLParser
 import re
@@ -47,16 +47,16 @@ def main():
     untracked = subprocess.check_output(["git", "ls-files", "--others", "--exclude-standard", "articles/"], text=True).splitlines()
     changed = subprocess.check_output(["git", "diff", "--name-only", "--diff-filter=ACMRT", "HEAD", "--", "articles/"], text=True).splitlines()
     # Check added, untracked, and modified article files while comparing each against the other tracked articles.
-    new = [Path(p) for p in sorted(set(untracked + changed)) if p.endswith(".html")]
+    candidates = [Path(p) for p in sorted(set(untracked + changed)) if p.endswith(".html")]
     existing = [Path(p) for p in base if p.endswith(".html") and Path(p).is_file()]
     errors = []
-    for path in new:
+    for path in candidates:
         errors += check(path, existing)
     if errors:
         for error in errors:
             print("BLOCKED: " + error, file=sys.stderr)
         return 1
-    print(f"PASS: checked {len(new)} new article(s) against {len(existing)} existing article(s)")
+    print(f"PASS: checked {len(candidates)} article candidate(s) against {len(existing)} existing article(s)")
     return 0
 
 if __name__ == "__main__":
