@@ -138,6 +138,23 @@
       "approval_at": "2026-10-13",
       "publication_url": "https://aninextup.com/articles/mobile-suit-gundam-seed-freedom-zero-release-date",
       "editorial_note": "User explicitly approved publication. PR #13 squash-merged to main, commit 6be872d43f02da512fe4beb14e0ac67274011261. Public deployment and desktop/mobile visual image checks remain unverified."
+    },
+    {
+      "id": "2026-10-13-le-college-noir-season-2-trailer",
+      "title_en": "Le Collège Noir Season 2 Trailer Revealed Ahead of October 31 Premiere",
+      "status": "BLOCKED_IMAGE_UNVERIFIED",
+      "priority": "MEDIUM",
+      "first_detected_at": "2026-10-13",
+      "announcement_at": "2026-10-13",
+      "announcement_timezone": "Europe/Paris; official publication date only, exact time unavailable",
+      "official_source_url": "https://www.toei-animation.com/college-noir-season-2-trailer/",
+      "official_cover_url": "https://news.animationdigitalnetwork.com/wp-content/uploads/2026/10/16x9_-1024x576.png",
+      "official_trailer_url": "https://www.youtube.com/watch?v=WjbH4XnNJh4",
+      "score": 68,
+      "seo_rationale": "Fresh October 13 official final trailer for October 31 French premiere; moderate qualitative English-language search opportunity, competition and Search Console data not verified.",
+      "action": "CREAR",
+      "draft_path": "articles/le-college-noir-season-2-trailer-october-2026.html",
+      "editorial_note": "Unpublished editorial PR draft. The cover URL was sourced from ADN but image loading and visual identity were not independently verified; related thumbnail loads, deployment and desktop/mobile tests pending. Do not publish until gate passes and owner explicitly approves."
     }
   ],
   "statuses": [
