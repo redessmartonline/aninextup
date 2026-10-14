@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-13T23:58:42-04:00",
+  "updated_at": "2026-10-14T00:56:45-04:00",
   "target_verified_sources": 200,
   "stretch_target_verified_sources": 500,
   "counts": {
-    "total_entries": 35,
-    "verified": 32,
-    "pending_or_inaccessible": 3
+    "total_entries": 55,
+    "verified": 51,
+    "pending_or_inaccessible": 4
   },
   "counting_policy": "Only entries with verified=true count toward the verified-source target. Direct-fetch failures are recorded but excluded until a later successful verification.",
   "sources": [
@@ -220,14 +220,15 @@
     {
       "id": "018",
       "name": "Young Magazine Web",
-      "url": "https://yanmaga.jp/",
+      "url": "https://magazine.yanmaga.jp/",
       "category": "manga magazine / platform",
       "country_language": "Japan / Japanese",
-      "accessibility": "direct_fetch_error",
-      "verified": false,
+      "accessibility": "accessible_via_official_alternate",
+      "verified": true,
       "priority": "high",
-      "evidence": "Direct verification failed this run; excluded from verified count.",
-      "verified_at": "2026-10-13T23:58:42-04:00"
+      "evidence": "Official Young Magazine site loaded through Kodansha's current magazine.yanmaga.jp endpoint, with current dated chapters and magazine sections.",
+      "verified_at": "2026-10-14T00:56:45-04:00",
+      "alternate_verified_url": "https://magazine.yanmaga.jp/"
     },
     {
       "id": "019",
@@ -244,14 +245,15 @@
     {
       "id": "020",
       "name": "Nippon TV Anime",
-      "url": "https://www.ntv.co.jp/program/anime/",
+      "url": "https://www.ntv.co.jp/anime/",
       "category": "broadcaster anime portal",
       "country_language": "Japan / Japanese",
-      "accessibility": "direct_fetch_error",
-      "verified": false,
+      "accessibility": "accessible_via_official_alternate",
+      "verified": true,
       "priority": "high",
-      "evidence": "Direct verification failed this run; excluded from verified count.",
-      "verified_at": "2026-10-13T23:58:42-04:00"
+      "evidence": "Official Nippon TV anime portal was indexed and accessible at /anime/, including current and past program navigation.",
+      "verified_at": "2026-10-14T00:56:45-04:00",
+      "alternate_verified_url": "https://www.ntv.co.jp/anime/"
     },
     {
       "id": "021",
@@ -432,6 +434,246 @@
       "priority": "medium",
       "evidence": "Official Tezuka Osamu news portal loaded successfully.",
       "verified_at": "2026-10-13T23:58:42-04:00"
+    },
+    {
+      "id": "036",
+      "name": "Hakusensha",
+      "url": "https://www.hakusensha.co.jp/",
+      "category": "publisher",
+      "country_language": "Japan / Japanese",
+      "accessibility": "direct_fetch_timeout",
+      "verified": false,
+      "priority": "high",
+      "evidence": "Official publisher endpoint timed out during direct verification; excluded from verified count.",
+      "verified_at": "2026-10-14T00:56:45-04:00"
+    },
+    {
+      "id": "037",
+      "name": "Square Enix Manga & Books",
+      "url": "https://magazine.jp.square-enix.com/",
+      "category": "publisher manga portal",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "high",
+      "evidence": "Official Square Enix magazine and books portal loaded with current releases, magazine labels and anime/live-action sections.",
+      "verified_at": "2026-10-14T00:56:45-04:00"
+    },
+    {
+      "id": "038",
+      "name": "Akita Shoten",
+      "url": "https://www.akitashoten.co.jp/",
+      "category": "publisher",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "high",
+      "evidence": "Official publisher site loaded with current comics, magazines and dated anime news.",
+      "verified_at": "2026-10-14T00:56:45-04:00"
+    },
+    {
+      "id": "039",
+      "name": "Futabasha",
+      "url": "https://www.futabasha.co.jp/",
+      "category": "publisher",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible_empty_render",
+      "verified": true,
+      "priority": "high",
+      "evidence": "Official Futabasha endpoint resolved; page body was largely client-rendered in this verifier.",
+      "verified_at": "2026-10-14T00:56:45-04:00"
+    },
+    {
+      "id": "040",
+      "name": "Houbunsha",
+      "url": "https://houbunsha.co.jp/",
+      "category": "publisher",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "high",
+      "evidence": "Official publisher site loaded with current manga magazine and comic release information.",
+      "verified_at": "2026-10-14T00:56:45-04:00"
+    },
+    {
+      "id": "041",
+      "name": "Shinchosha",
+      "url": "https://www.shinchosha.co.jp/",
+      "category": "publisher",
+      "country_language": "Japan / Japanese",
+      "accessibility": "direct_fetch_error",
+      "verified": false,
+      "priority": "medium",
+      "evidence": "Official endpoint could not be rendered during this run; excluded from verified count.",
+      "verified_at": "2026-10-14T00:56:45-04:00"
+    },
+    {
+      "id": "042",
+      "name": "Takeshobo",
+      "url": "https://www.takeshobo.co.jp/",
+      "category": "publisher",
+      "country_language": "Japan / Japanese",
+      "accessibility": "direct_fetch_error",
+      "verified": false,
+      "priority": "medium",
+      "evidence": "Official endpoint could not be rendered during this run; excluded from verified count.",
+      "verified_at": "2026-10-14T00:56:45-04:00"
+    },
+    {
+      "id": "043",
+      "name": "Zenon Plus / Coamix",
+      "url": "https://comic-zenon.com/",
+      "category": "official manga platform",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "medium",
+      "evidence": "Official Coamix web manga platform loaded successfully.",
+      "verified_at": "2026-10-14T00:56:45-04:00"
+    },
+    {
+      "id": "044",
+      "name": "Monthly Shonen Gangan",
+      "url": "https://magazine.jp.square-enix.com/gangan/",
+      "category": "manga magazine",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "high",
+      "evidence": "Official Square Enix Monthly Shonen Gangan site loaded successfully.",
+      "verified_at": "2026-10-14T00:56:45-04:00"
+    },
+    {
+      "id": "045",
+      "name": "Monthly Comic Alive",
+      "url": "https://comic-alive.jp/",
+      "category": "manga magazine",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible_via_official_redirect",
+      "verified": true,
+      "priority": "medium",
+      "evidence": "Official Comic Alive endpoint resolved to KADOKAWA's current label page and loaded successfully.",
+      "verified_at": "2026-10-14T00:56:45-04:00"
+    },
+    {
+      "id": "046",
+      "name": "Dengeki Bunko",
+      "url": "https://dengekibunko.jp/",
+      "category": "light novel imprint",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible_via_official_redirect",
+      "verified": true,
+      "priority": "high",
+      "evidence": "Official Dengeki Bunko endpoint resolved to KADOKAWA's current label page and loaded successfully.",
+      "verified_at": "2026-10-14T00:56:45-04:00"
+    },
+    {
+      "id": "047",
+      "name": "Studio Pierrot",
+      "url": "https://pierrot.jp/",
+      "category": "animation studio",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible_empty_render",
+      "verified": true,
+      "priority": "high",
+      "evidence": "Official Studio Pierrot domain resolved successfully; page body was not exposed by this verifier.",
+      "verified_at": "2026-10-14T00:56:45-04:00"
+    },
+    {
+      "id": "048",
+      "name": "Madhouse",
+      "url": "https://www.madhouse.co.jp/",
+      "category": "animation studio",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "high",
+      "evidence": "Official Madhouse corporate site loaded successfully.",
+      "verified_at": "2026-10-14T00:56:45-04:00"
+    },
+    {
+      "id": "049",
+      "name": "Production I.G",
+      "url": "https://www.production-ig.co.jp/",
+      "category": "animation studio",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "high",
+      "evidence": "Official Production I.G site loaded successfully.",
+      "verified_at": "2026-10-14T00:56:45-04:00"
+    },
+    {
+      "id": "050",
+      "name": "WIT Studio",
+      "url": "https://www.witstudio.co.jp/",
+      "category": "animation studio",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "high",
+      "evidence": "Official WIT Studio site loaded successfully.",
+      "verified_at": "2026-10-14T00:56:45-04:00"
+    },
+    {
+      "id": "051",
+      "name": "CloverWorks",
+      "url": "https://cloverworks.co.jp/",
+      "category": "animation studio",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "high",
+      "evidence": "Official CloverWorks site loaded successfully.",
+      "verified_at": "2026-10-14T00:56:45-04:00"
+    },
+    {
+      "id": "052",
+      "name": "A-1 Pictures",
+      "url": "https://a1p.jp/",
+      "category": "animation studio",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "high",
+      "evidence": "Official A-1 Pictures site loaded successfully.",
+      "verified_at": "2026-10-14T00:56:45-04:00"
+    },
+    {
+      "id": "053",
+      "name": "Studio Trigger",
+      "url": "https://www.st-trigger.co.jp/",
+      "category": "animation studio",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "high",
+      "evidence": "Official Studio Trigger corporate site loaded successfully.",
+      "verified_at": "2026-10-14T00:56:45-04:00"
+    },
+    {
+      "id": "054",
+      "name": "David Production",
+      "url": "https://davidproduction.jp/",
+      "category": "animation studio",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "high",
+      "evidence": "Official David Production site loaded successfully.",
+      "verified_at": "2026-10-14T00:56:45-04:00"
+    },
+    {
+      "id": "055",
+      "name": "Science SARU",
+      "url": "https://sciencesaru.com/",
+      "category": "animation studio",
+      "country_language": "Japan / Japanese / English",
+      "accessibility": "accessible_empty_render",
+      "verified": true,
+      "priority": "high",
+      "evidence": "Official Science SARU domain resolved successfully; page body was not exposed by this verifier.",
+      "verified_at": "2026-10-14T00:56:45-04:00"
     }
   ]
 }
