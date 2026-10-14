@@ -134,3 +134,18 @@
 }
 .article > .article-head + figure > figcaption{padding:10px 12px;font-size:.85rem}
 @media(max-width:780px){.article > .article-head + figure,.article > .article-head + img,.article > .article-head + .article-hero,.article > .article-head + .official-hero{margin:16px auto 28px!important}}
+
+/* KEEP WATCHING: three equal related cards in one desktop row. */
+@media(min-width:781px){
+  .article .related-releases .grid.two,
+  .article .related-releases .grid.three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:stretch}
+  .article .related-releases .mini.related-card{width:100%;min-width:0}
+}
+@media(max-width:780px) and (min-width:521px){
+  .article .related-releases .grid.two,
+  .article .related-releases .grid.three{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:520px){
+  .article .related-releases .grid.two,
+  .article .related-releases .grid.three{grid-template-columns:minmax(0,1fr)}
+}
