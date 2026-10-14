@@ -1,0 +1,347 @@
+{
+  "schema_version": 1,
+  "run_at": "2026-10-14T11:57:46-04:00",
+  "timezone": "America/Santo_Domingo",
+  "gsc": {
+    "property": "sc-domain:aninextup.com",
+    "period": {
+      "start": "2026-09-14",
+      "end": "2026-10-11",
+      "settled_through": "2026-10-11"
+    },
+    "aggregate_measured": {
+      "clicks": 21,
+      "impressions": 991,
+      "ctr_percent": 2.119071644803229,
+      "average_position": 13.98183652875883
+    },
+    "note": "Aggregate totals include anonymized query data; visible query rows do not sum to the site total.",
+    "focus_groups": [
+      {
+        "name": "anime today semantic group",
+        "metrics_measured": {
+          "queries": 29,
+          "impressions": 432,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 11.715277777777779
+        },
+        "score_inferred": 96,
+        "status": "IMPLEMENTED_AWAITING_GSC_REFRESH",
+        "action": "Monitor commits 3d75b23 and c05e5ba; verify canonical consolidation and daily content freshness before further edits."
+      },
+      {
+        "name": "November 2026 anime semantic group",
+        "metrics_measured": {
+          "queries": 11,
+          "impressions": 79,
+          "clicks": 1,
+          "ctr": 1.2658227848101267,
+          "position": 7.113924050632911
+        },
+        "score_inferred": 91,
+        "status": "ACTIONABLE_EXISTING_PAGE",
+        "action": "Refresh verified schedule details and strengthen internal links without changing canonical URL."
+      },
+      {
+        "name": "Demon's Crest release-intent group",
+        "metrics_measured": {
+          "queries": 6,
+          "impressions": 16,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 4.1875
+        },
+        "score_inferred": 88,
+        "status": "ACTIONABLE_EXISTING_PAGE",
+        "action": "Audit title/meta and visible release/platform answer on the canonical article."
+      }
+    ],
+    "exact_queries_measured": [
+      {
+        "keys": [
+          "anime coming out in november 2026"
+        ],
+        "clicks": 1,
+        "impressions": 7,
+        "ctr": 14.285714285714285,
+        "position": 9.285714285714286
+      },
+      {
+        "keys": [
+          "anime november 2026"
+        ],
+        "clicks": 0,
+        "impressions": 20,
+        "ctr": 0,
+        "position": 7.05
+      },
+      {
+        "keys": [
+          "anime release today"
+        ],
+        "clicks": 0,
+        "impressions": 34,
+        "ctr": 0,
+        "position": 10.088235294117647
+      },
+      {
+        "keys": [
+          "anime releasing today"
+        ],
+        "clicks": 0,
+        "impressions": 147,
+        "ctr": 0,
+        "position": 10.081632653061224
+      },
+      {
+        "keys": [
+          "demon crest anime release date"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 4.666666666666666
+      },
+      {
+        "keys": [
+          "today anime release"
+        ],
+        "clicks": 0,
+        "impressions": 110,
+        "ctr": 0,
+        "position": 9.563636363636364
+      }
+    ],
+    "focus_pages_measured": [
+      {
+        "keys": [
+          "https://aninextup.com/articles/anime-releasing-november-2026.html"
+        ],
+        "clicks": 7,
+        "impressions": 245,
+        "ctr": 2.857142857142857,
+        "position": 7.106122448979592
+      },
+      {
+        "keys": [
+          "http://aninextup.com/today"
+        ],
+        "clicks": 0,
+        "impressions": 447,
+        "ctr": 0,
+        "position": 13.521252796420582
+      },
+      {
+        "keys": [
+          "https://aninextup.com/articles/demons-crest-release-date.html"
+        ],
+        "clicks": 0,
+        "impressions": 39,
+        "ctr": 0,
+        "position": 6.051282051282051
+      },
+      {
+        "keys": [
+          "https://aninextup.com/today.html"
+        ],
+        "clicks": 0,
+        "impressions": 63,
+        "ctr": 0,
+        "position": 24.444444444444443
+      }
+    ]
+  },
+  "new_anime_announced": {
+    "result": "Sin noticias nuevas en esta búsqueda",
+    "newly_verified": 0,
+    "known": 0,
+    "prepared": 0,
+    "ready_for_approval": 0,
+    "published": 0,
+    "note": "Official-source searches produced no qualifying new announcement since the preceding scan."
+  },
+  "upcoming_releases": {
+    "next_7_days": [
+      {
+        "date": "2026-10-17",
+        "title": "Dreamland",
+        "platform": "Crunchyroll"
+      },
+      {
+        "date": "2026-10-20",
+        "title": "Cyberpunk: Edgerunners 2",
+        "platform": "Netflix"
+      }
+    ],
+    "next_30_days": [
+      {
+        "date": "2026-10-17",
+        "title": "Dreamland",
+        "platform": "Crunchyroll"
+      },
+      {
+        "date": "2026-10-20",
+        "title": "Cyberpunk: Edgerunners 2",
+        "platform": "Netflix"
+      },
+      {
+        "date": "2026-10-25",
+        "title": "My Happy Marriage Season 2 Special Episodes",
+        "platform": "Netflix"
+      },
+      {
+        "date": "2026-11-03",
+        "title": "Bass X Machina",
+        "platform": "Netflix"
+      },
+      {
+        "date": "2026-11-06",
+        "title": "Demon's Crest",
+        "platform": "Prime Video"
+      },
+      {
+        "date": "2026-11-13",
+        "title": "Rakuen Tsuihou: Kokoro no Resonance",
+        "platform": "Japanese theaters"
+      }
+    ],
+    "next_90_days_additional": [
+      {
+        "date": "2026-11-20",
+        "title": "Witch on the Holy Night",
+        "platform": "Japanese theaters"
+      },
+      {
+        "date": "2026-11-20",
+        "title": "Armored Trooper VOTOMS: The Gray Witch Part 1",
+        "platform": "Japanese theaters"
+      },
+      {
+        "date": "2026-11-26",
+        "title": "Fool Night",
+        "platform": "Netflix"
+      },
+      {
+        "date": "2026-11-27",
+        "title": "Takopi's Original Sin: Thank You, See You Tomorrow",
+        "platform": "Japanese theaters"
+      },
+      {
+        "date": "2026-12-11",
+        "title": "The Apothecary Diaries Movie",
+        "platform": "Japanese theaters"
+      },
+      {
+        "date_label": "January 2027",
+        "title": "Hirayasumi",
+        "platform": "NHK General (Japan)",
+        "precision": "month-confirmed"
+      }
+    ]
+  },
+  "duplication_and_editorial": {
+    "no_new_article_prepared": true,
+    "editorial_queue": {
+      "total": 14,
+      "published": 11,
+      "unverified": 3,
+      "unverified_titles": [
+        "From Far Away creditless opening video",
+        "Paw & Palaces creditless ending video",
+        "Netsuai Prince volume 25 and anniversary promotions"
+      ]
+    },
+    "open_prs": [
+      {
+        "number": 18,
+        "title": "DRAFT — Yumeneko Connect anime announcement",
+        "status": "BLOCKED_QA_PENDING"
+      },
+      {
+        "number": 17,
+        "title": "DRAFT — Update The Fable cast and Apothecary anniversary stream",
+        "status": "BLOCKED_QA_PENDING"
+      },
+      {
+        "number": 14,
+        "title": "DRAFT — Le Collège Noir Season 2",
+        "status": "BLOCKED_QA_PENDING"
+      }
+    ],
+    "note": "The Apothecary Diaries Movie opportunity records are reconciled as published in commit 2a425c7; video playback/mobile QA remains a separate technical check."
+  },
+  "repository_changes_observed": [
+    {
+      "commit": "3d75b2348c137bbd424051266ab21352de8e6b5e",
+      "purpose": "Improve Today hub search title and streaming-intent metadata"
+    },
+    {
+      "commit": "c05e5ba13d0dfc764d83c58502730941be858cda",
+      "purpose": "Keep daily anime SEO metadata evergreen"
+    },
+    {
+      "commit": "2a425c74c6662013c690086c0aa3ec64384b532e",
+      "purpose": "Reconcile published Apothecary movie opportunities without claiming video QA passed"
+    }
+  ],
+  "source_catalog": {
+    "total_entries": 221,
+    "verified": 162,
+    "pending_or_inaccessible": 59,
+    "consulted_this_run": 13,
+    "new_entries": 12,
+    "new_verified": 4,
+    "new_pending": 8,
+    "verified_new": [
+      {
+        "name": "TROYCA",
+        "url": "https://troyca.co.jp/",
+        "category": "animation studio",
+        "country_language": "Japan / Japanese",
+        "verified_at": "2026-10-14T11:57:46-04:00"
+      },
+      {
+        "name": "Studio Durian",
+        "url": "https://studio-durian.jp/",
+        "category": "animation studio",
+        "country_language": "Japan / Japanese",
+        "verified_at": "2026-10-14T11:57:46-04:00"
+      },
+      {
+        "name": "Contrail",
+        "url": "https://contrail.tokyo/",
+        "category": "animation studio",
+        "country_language": "Japan / Japanese",
+        "verified_at": "2026-10-14T11:57:46-04:00"
+      },
+      {
+        "name": "Signal.MD",
+        "url": "https://www.signal-md.co.jp/",
+        "category": "animation studio",
+        "country_language": "Japan / Japanese",
+        "verified_at": "2026-10-14T11:57:46-04:00",
+        "accessibility": "accessible_minimal"
+      }
+    ],
+    "inaccessible_new": [
+      "Studio Signpost",
+      "CompTown",
+      "Studio Massket",
+      "CygamesPictures",
+      "Lapin Track",
+      "NAMU Animation",
+      "Studio M2",
+      "EOTA"
+    ],
+    "excluded_mismatch": [
+      "Clap Co.,Ltd at clap.co.jp (site identity did not match an animation studio)"
+    ]
+  },
+  "writes": {
+    "source_catalog_commit": "9a68475a5ab2297abc9a89d850e88f27d9db0527",
+    "articles_changed": 0,
+    "articles_published": 0,
+    "prs_merged": 0
+  }
+}
