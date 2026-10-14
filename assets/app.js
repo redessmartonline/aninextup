@@ -39,7 +39,7 @@ function loadSiteSearchIndex(){
   const response=await fetch('/sitemap.xml');
   if(!response.ok)throw new Error('Sitemap unavailable');
   const xml=new DOMParser().parseFromString(await response.text(),'application/xml');
-  const urls=[...xml.getElementsByTagName('loc')].map(el=>el.textContent.trim()).filter(url=>{try{return new URL(url).origin===location.origin}catch{return false}});
+  const urls=[...xml.getElementsByTagName('loc')].map(el=>el.textContent.trim()).filter(url=>{try{const parsed=new URL(url);return parsed.origin===location.origin&&parsed.pathname.startsWith('/articles/')&&parsed.pathname.length>'/articles/'.length}catch{return false}});
   const entries=[];let cursor=0;
   async function worker(){
    while(cursor<urls.length){
@@ -65,7 +65,7 @@ async function searchSite(){
  const raw=(input?.value||'').trim(),request=++siteSearchRequest;
  if(!raw){if(box)box.hidden=true;return}
  const words=normalizeSiteSearch(raw).split(/\s+/).filter(Boolean);
- if(box){box.innerHTML='<div class="no-result">Searching all articles and pages…</div>';box.hidden=false}
+ if(box){box.innerHTML='<div class="no-result">Searching all articles…</div>';box.hidden=false}
  try{
   const entries=await loadSiteSearchIndex();
   if(request!==siteSearchRequest)return;
@@ -73,7 +73,7 @@ async function searchSite(){
    const title=normalizeSiteSearch(x.title);
    return {...x,score:words.every(w=>x.search.includes(w))?words.reduce((n,w)=>n+(title.includes(w)?5:1),0):-1};
   }).filter(x=>x.score>=0).sort((a,b)=>b.score-a.score||a.title.localeCompare(b.title)).slice(0,40);
-  if(box){box.innerHTML=results.length?results.map(x=>{const a=document.createElement('a');a.href=x.url;const strong=document.createElement('strong');strong.textContent=x.title;const span=document.createElement('span');span.textContent=x.description||'AniNextUp article';a.append(strong,span);return a.outerHTML}).join(''):'<div class="no-result">No matching articles or pages found.</div>';box.hidden=false}
+  if(box){box.innerHTML=results.length?results.map(x=>{const a=document.createElement('a');a.href=x.url;const strong=document.createElement('strong');strong.textContent=x.title;const span=document.createElement('span');span.textContent=x.description||'AniNextUp article';a.append(strong,span);return a.outerHTML}).join(''):'<div class="no-result">No matching articles found.</div>';box.hidden=false}
   else if(results[0])location.href=results[0].url;
  }catch(e){if(request===siteSearchRequest&&box){box.innerHTML='<div class="no-result">Search is temporarily unavailable. Please try again.</div>';box.hidden=false}}
 }
