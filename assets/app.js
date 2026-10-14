@@ -30,7 +30,22 @@ discoveryNodes('[data-anime-list]').forEach(el=>{let items=[...D.anime];const mo
 discoveryNodes('[data-anime-month]').forEach(el=>{const month=el.dataset.animeMonth;const items=(D.anime||[]).filter(a=>a.date&&a.date.startsWith(month)).sort((a,b)=>a.date.localeCompare(b.date));el.innerHTML=items.map(animeCard).join('')||'<p class="empty">No confirmed releases yet.</p>'});
 discoveryNodes('[data-month-count]').forEach(el=>{const month=el.dataset.monthCount;const n=(D.anime||[]).filter(a=>a.date&&a.date.startsWith(month)).length;el.textContent=n?'· '+n+' CONFIRMED':''});
 discoveryNodes('[data-guides]').forEach(el=>{const seen=new Set();const stories=[...(D.anime||[]).filter(a=>a.tag&&a.article),...(D.guides||[])].filter(g=>{if(!g.article||seen.has(g.article))return false;seen.add(g.article);return true});el.innerHTML=stories.map(g=>'<a class="card story visual-card" href="'+g.article+'">'+(g.image?'<img src="'+g.image+'" alt="'+g.title+'" loading="lazy">':'')+'<div class="visual-body"><span class="tag">'+g.tag+'</span><h3>'+g.title+'</h3><p>'+g.description+'</p><span class="more">READ MORE →</span></div></a>').join('');});
-function searchSite(){const input=document.getElementById('search'),q=(input?.value||'').trim().toLowerCase();if(!q)return;const results=[...D.anime.map(a=>({title:a.title,meta:a.platform,url:a.article})),...D.guides.map(g=>({title:g.title,meta:g.tag,url:g.article}))].filter(x=>(x.title+' '+x.meta).toLowerCase().includes(q));const box=document.getElementById('searchResults');if(box){box.innerHTML=results.length?results.map(x=>'<a href="'+x.url+'"><strong>'+x.title+'</strong><span>'+x.meta+'</span></a>').join(''):'<div class="no-result">No matching anime or guide found.</div>';box.hidden=false}else if(results[0])location.href=results[0].url}
+function searchSite(){
+ const input=document.getElementById('search'),raw=(input?.value||'').trim();
+ const box=document.getElementById('searchResults');if(!raw){if(box)box.hidden=true;return}
+ const normalize=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
+ const words=normalize(raw).split(/\s+/).filter(Boolean);
+ const items=[...D.anime,...D.guides].filter(x=>x.article);
+ const seen=new Set();
+ const results=items.map(x=>{
+  const url=x.article.replace(/\.html$/,'').replace(/\/$/,'');
+  const title=x.title||'',meta=x.tag||x.platform||x.category||'ARTICLE';
+  const titleText=normalize(title),all=normalize([title,x.description,x.tag,x.platform,x.category,url.replace(/[/-]/g,' ')].join(' '));
+  return {title,meta,url,score:words.every(w=>all.includes(w))?words.reduce((n,w)=>n+(titleText.includes(w)?3:1),0):-1};
+ }).filter(x=>x.score>=0&&!seen.has(x.url)&&seen.add(x.url)).sort((a,b)=>b.score-a.score||a.title.localeCompare(b.title));
+ if(box){box.innerHTML=results.length?results.map(x=>'<a href="'+x.url+'"><strong>'+x.title+'</strong><span>'+x.meta+'</span></a>').join(''):'<div class="no-result">No matching articles found.</div>';box.hidden=false}
+ else if(results[0])location.href=results[0].url;
+}
 document.getElementById('search')?.addEventListener('keydown',e=>{if(e.key==='Enter')searchSite()});document.getElementById('search')?.addEventListener('input',e=>{if(!e.target.value.trim()){const b=document.getElementById('searchResults');if(b)b.hidden=true}});
 
 const siteToday=new Date(new Date().toLocaleString('en-US',{timeZone:TZ}));discoveryNodes('[data-today-label]').forEach(el=>el.textContent='TODAY · '+siteToday.toLocaleDateString('en-US',{month:'long',day:'numeric'}).toUpperCase());
