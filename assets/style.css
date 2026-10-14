@@ -162,3 +162,35 @@
   .article .related-releases .related-card-copy h3{font-size:14px}
   .article .related-releases .related-card-copy span{font-size:12px}
 }
+
+
+/* Keep fact cards padded even when nested in editorial prose sections. */
+.article .prose > section.release-summary{
+  box-sizing:border-box;
+  width:100%;
+  margin:28px 0 36px;
+  padding:26px 28px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:var(--panel);
+}
+.article .prose > section.release-summary > h2:first-child{
+  margin:0 0 22px;
+  font-size:24px;
+  line-height:1.3;
+}
+.article .prose > section.release-summary dl{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  column-gap:30px;
+  row-gap:22px;
+  margin:0;
+}
+.article .prose > section.release-summary dl > div{min-width:0}
+.article .prose > section.release-summary dt{line-height:1.45}
+.article .prose > section.release-summary dd{margin:7px 0 0;line-height:1.55;overflow-wrap:break-word}
+@media(max-width:640px){
+  .article .prose > section.release-summary{padding:20px 18px;margin:24px 0 30px}
+  .article .prose > section.release-summary > h2:first-child{font-size:22px;margin-bottom:18px}
+  .article .prose > section.release-summary dl{grid-template-columns:1fr;row-gap:18px}
+}
