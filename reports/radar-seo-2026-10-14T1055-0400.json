@@ -1,0 +1,317 @@
+{
+  "schema_version": 2,
+  "run_at": "2026-10-14T10:55:37-04:00",
+  "timezone": "America/Santo_Domingo",
+  "gsc": {
+    "site": "sc-domain:aninextup.com",
+    "data_source": "api",
+    "settled_through": "2026-10-11",
+    "range": {
+      "start": "2026-09-14",
+      "end": "2026-10-11",
+      "days": 28
+    },
+    "totals": {
+      "clicks": 21,
+      "impressions": 991,
+      "ctr_percent": 2.119071644803229,
+      "position": 13.98183652875883
+    },
+    "previous_period": {
+      "start": "2026-08-17",
+      "end": "2026-09-13",
+      "has_data": false
+    },
+    "note": "Impressions are search-result impressions, not unique users. Semantic groups are aggregated for prioritization only.",
+    "semantic_groups": [
+      {
+        "name": "anime today",
+        "clicks": 0,
+        "impressions": 433,
+        "ctr_percent": 0,
+        "weighted_position": 11.711316397228638,
+        "primary_page": "http://aninextup.com/today",
+        "score": 96,
+        "status": "CRITICAL_EXISTING_PAGE_OPTIMIZATION"
+      },
+      {
+        "name": "November 2026 anime",
+        "clicks": 1,
+        "impressions": 91,
+        "ctr_percent": 1.098901098901099,
+        "weighted_position": 7.164835164835165,
+        "primary_page": "https://aninextup.com/articles/anime-releasing-november-2026.html",
+        "score": 91,
+        "status": "HIGH_EXISTING_PAGE_OPTIMIZATION"
+      },
+      {
+        "name": "Demon's Crest release date / where to watch",
+        "clicks": 0,
+        "impressions": 12,
+        "ctr_percent": 0,
+        "weighted_position": 4.166666666666667,
+        "primary_page": "https://aninextup.com/articles/demons-crest-release-date.html",
+        "score": 88,
+        "status": "HIGH_CTR_OPPORTUNITY"
+      }
+    ],
+    "priority_queries": [
+      {
+        "query": "anime releasing today",
+        "page": "http://aninextup.com/today",
+        "clicks": 0,
+        "impressions": 145,
+        "ctr_percent": 0,
+        "position": 10.075862068965517
+      },
+      {
+        "query": "today anime release",
+        "page": "http://aninextup.com/today",
+        "clicks": 0,
+        "impressions": 109,
+        "ctr_percent": 0,
+        "position": 9.568807339449542
+      },
+      {
+        "query": "anime release today",
+        "page": "http://aninextup.com/today",
+        "clicks": 0,
+        "impressions": 34,
+        "ctr_percent": 0,
+        "position": 10.088235294117647
+      },
+      {
+        "query": "anime november 2026",
+        "page": "https://aninextup.com/articles/anime-releasing-november-2026.html",
+        "clicks": 0,
+        "impressions": 20,
+        "ctr_percent": 0,
+        "position": 7.05
+      },
+      {
+        "query": "anime coming out in november 2026",
+        "page": "https://aninextup.com/articles/anime-releasing-november-2026.html",
+        "clicks": 1,
+        "impressions": 7,
+        "ctr_percent": 14.285714285714285,
+        "position": 9.285714285714286
+      },
+      {
+        "query": "demon crest anime release date",
+        "page": "https://aninextup.com/articles/demons-crest-release-date.html",
+        "clicks": 0,
+        "impressions": 6,
+        "ctr_percent": 0,
+        "position": 4.666666666666666
+      }
+    ],
+    "landing_pages": [
+      {
+        "page": "https://aninextup.com/articles/anime-releasing-november-2026.html",
+        "clicks": 7,
+        "impressions": 245,
+        "ctr_percent": 2.857142857142857,
+        "position": 7.106122448979592
+      },
+      {
+        "page": "http://aninextup.com/today",
+        "clicks": 0,
+        "impressions": 447,
+        "ctr_percent": 0,
+        "position": 13.521252796420582
+      },
+      {
+        "page": "https://aninextup.com/articles/demons-crest-release-date.html",
+        "clicks": 0,
+        "impressions": 39,
+        "ctr_percent": 0,
+        "position": 6.051282051282051
+      },
+      {
+        "page": "https://aninextup.com/articles/blue-box-season-2",
+        "clicks": 0,
+        "impressions": 15,
+        "ctr_percent": 0,
+        "position": 4.4
+      },
+      {
+        "page": "https://aninextup.com/articles/suikoden-anime.html",
+        "clicks": 0,
+        "impressions": 23,
+        "ctr_percent": 0,
+        "position": 5.6521739130434785
+      },
+      {
+        "page": "https://aninextup.com/articles/votoms-gray-witch-part-1.html",
+        "clicks": 0,
+        "impressions": 13,
+        "ctr_percent": 0,
+        "position": 7.846153846153846
+      }
+    ]
+  },
+  "official_news": {
+    "statement": "Sin noticias nuevas en esta búsqueda",
+    "new_announcements": 0,
+    "verified_new": 0,
+    "known_rechecked": 0,
+    "prepared": 0,
+    "ready_for_approval": 0,
+    "published_this_run": 0,
+    "search_note": "No qualifying new official anime or manga production announcement was found in the late-JST search window."
+  },
+  "upcoming_releases": {
+    "seven_days": [
+      {
+        "date": "2026-10-17",
+        "title": "Dreamland",
+        "platform": "Crunchyroll",
+        "source_context": "AniNextUp confirmed tracker"
+      },
+      {
+        "date": "2026-10-20",
+        "title": "Cyberpunk: Edgerunners 2",
+        "platform": "Netflix",
+        "source_context": "AniNextUp confirmed tracker"
+      },
+      {
+        "date": "2026-10-20",
+        "title": "Mission: Yozakura Family Season 2 new chapter",
+        "platform": "BS Nippon TV (Japan)",
+        "source_url": "https://www.bs4.jp/magazine/anime/animenimuchoo-4/"
+      }
+    ],
+    "thirty_days": [
+      {
+        "date": "2026-10-25",
+        "title": "My Happy Marriage Season 2 Special Episodes",
+        "platform": "Netflix"
+      },
+      {
+        "date": "2026-11-03",
+        "title": "Bass X Machina",
+        "platform": "Netflix"
+      },
+      {
+        "date": "2026-11-06",
+        "title": "Demon's Crest",
+        "platform": "Prime Video worldwide"
+      },
+      {
+        "date": "2026-11-13",
+        "title": "Rakuen Tsuihou: Kokoro no Resonance",
+        "platform": "Japanese theaters"
+      }
+    ],
+    "ninety_days": [
+      {
+        "date": "2026-11-20",
+        "title": "Witch on the Holy Night",
+        "platform": "Japanese theaters"
+      },
+      {
+        "date": "2026-11-20",
+        "title": "Armored Trooper VOTOMS: The Gray Witch Part 1",
+        "platform": "Japanese theaters"
+      },
+      {
+        "date": "2026-11-26",
+        "title": "Fool Night",
+        "platform": "Netflix worldwide"
+      },
+      {
+        "date": "2026-11-27",
+        "title": "Takopi's Original Sin Movie",
+        "platform": "Japanese theaters"
+      },
+      {
+        "date": "2026-12-11",
+        "title": "The Apothecary Diaries Movie",
+        "platform": "Japanese theaters"
+      },
+      {
+        "date": "2027-01",
+        "title": "Hirayasumi",
+        "platform": "NHK General (Japan)",
+        "precision": "month-confirmed"
+      }
+    ]
+  },
+  "duplicate_control": {
+    "new_items_checked": 0,
+    "reason": "No new official announcement advanced to preparation.",
+    "required_surfaces": [
+      "public site",
+      "assets/data.js",
+      "sitemap.xml",
+      "editorial/seo-opportunities.json",
+      "open pull requests"
+    ],
+    "open_prs": [
+      14,
+      17,
+      18
+    ]
+  },
+  "actions_recommended": [
+    {
+      "priority": 1,
+      "page": "/today",
+      "action": "Refresh the date-dependent server/static snapshot; verify the page shows October 14 data, then monitor consolidation of HTTP, /today and /today.html signals. Keep one canonical URL and redirects.",
+      "basis": "433 grouped query impressions, 0 clicks; page-level 447 impressions, 0 clicks."
+    },
+    {
+      "priority": 2,
+      "page": "/articles/anime-releasing-november-2026",
+      "action": "Update visible Updated date and release table as new official dates arrive; strengthen title/meta around November 2026 schedule and streaming intent; add internal links from /today, /this-week and /calendar.",
+      "basis": "245 page impressions, 7 clicks, 2.86% CTR, position 7.11; semantic group 91 impressions and 1 click."
+    },
+    {
+      "priority": 3,
+      "page": "/articles/demons-crest-release-date",
+      "action": "Audit title and description for exact release-date and where-to-watch intent; verify Prime Video wording and visible answer near the top before changing.",
+      "basis": "39 page impressions, 0 clicks, position 6.05; exact semantic group position 4.17."
+    },
+    {
+      "priority": 4,
+      "pages": [
+        "/articles/blue-box-season-2",
+        "/articles/suikoden-anime",
+        "/articles/votoms-gray-witch-part-1"
+      ],
+      "action": "Review snippets and first-screen answer blocks; preserve URLs and avoid new competing pages.",
+      "basis": "Positions 4.4–7.85 with zero clicks."
+    }
+  ],
+  "source_catalog": {
+    "path": "editorial/official-source-catalog.json",
+    "total_entries": 209,
+    "verified": 158,
+    "pending_or_inaccessible": 51,
+    "consulted_for_catalog_this_run": 10,
+    "new_entries_added": 9,
+    "new_verified_added": 8,
+    "inaccessible_this_run": 2,
+    "new_verified": [
+      "Geno Studio",
+      "Studio Kafka",
+      "Scooter Films",
+      "Studio Chromato",
+      "Peakys",
+      "OUTLINE",
+      "QUUN PLANT",
+      "NAGOMI"
+    ],
+    "inaccessible": [
+      "BUG FILMS",
+      "Orange (reverification attempt)"
+    ],
+    "commit": "cb8e9a3802b44fd932c555c99071ed4307d356c7",
+    "blob": "9b8fc43f7c54821fb2977f0fd9a199044c479059"
+  },
+  "writes": {
+    "site_content_changed": false,
+    "articles_published": 0,
+    "prs_merged": 0
+  }
+}
