@@ -222,3 +222,18 @@ discoveryNodes('[data-news-upcoming]').forEach(el=>{const items=[...(D.anime||[]
 // Lightweight official trailers: YouTube loads only after a visitor clicks play.
 document.querySelectorAll('.lite-trailer[data-youtube]').forEach(box=>{const btn=box.querySelector('.trailer-play');if(!btn)return;btn.addEventListener('click',()=>{const id=box.dataset.youtube,title=box.dataset.title||'Official trailer';const iframe=document.createElement('iframe');iframe.src='https://www.youtube-nocookie.com/embed/'+encodeURIComponent(id)+'?autoplay=1';iframe.title=title;iframe.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';iframe.referrerPolicy='strict-origin-when-cross-origin';iframe.allowFullscreen=true;box.replaceChildren(iframe)},{once:true})});
 
+
+// Lead cover artwork is illustrative, not a navigation link.
+// Keep caption/source links, related article cards and trailer play controls working.
+if(document.querySelector('article.article')){
+ const article=document.querySelector('article.article');
+ const head=article.querySelector(':scope > .article-head');
+ const cover=head?.nextElementSibling;
+ if(cover&&(cover.matches('figure,.article-hero,.official-hero,img'))){
+  const image=cover.matches('img')?cover:cover.querySelector('img');
+  const anchor=image?.closest('a');
+  if(anchor&&cover.contains(anchor)&&anchor.querySelector('img')===image){
+   anchor.replaceWith(...anchor.childNodes);
+  }
+ }
+}
