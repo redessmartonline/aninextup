@@ -18,7 +18,7 @@ def topic_tokens(s):
 
 def article_title(path):
     s = path.read_text(encoding="utf-8")
-    m = re.search(r"<h1\\b[^>]*>(.*?)</h1>", s, re.I | re.S)
+    m = re.search(r"<h1\b[^>]*>(.*?)</h1>", s, re.I | re.S)
     if not m:
         raise ValueError(f"No H1 in {path}")
     return re.sub(r"<[^>]+>", " ", m.group(1)).strip()
