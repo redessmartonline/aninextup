@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "executed_at": "2026-10-13T23:58:42-04:00",
+  "timezone": "America/Santo_Domingo",
+  "source_catalog": {
+    "path": "editorial/official-source-catalog.json",
+    "target_verified": 200,
+    "stretch_target_verified": 500,
+    "total_entries": 35,
+    "verified_entries": 32,
+    "consulted_this_run": 23,
+    "inaccessible_this_run": 3,
+    "new_entries_added": 20,
+    "new_verified_entries_added": 17,
+    "previously_pending_now_verified": 3,
+    "net_new_verified_this_run": 20,
+    "catalog_commit": "1153da0738fa79163be31ffbdbb59bad9e3e1453"
+  },
+  "repository_checks": {
+    "branch_checked": "main",
+    "compared": [
+      "articles/ tree",
+      "assets/data.js",
+      "sitemap.xml",
+      "editorial/seo-opportunities.json",
+      "open pull requests"
+    ],
+    "duplicate_dimensions": [
+      "title",
+      "aliases",
+      "franchise",
+      "event_or_announcement",
+      "source_url"
+    ],
+    "preexisting_open_prs": [
+      14
+    ],
+    "prepared_update_pr": 17
+  },
+  "search_console": {
+    "property": "sc-domain:aninextup.com",
+    "range": {
+      "start_date": "2026-09-14",
+      "end_date": "2026-10-11"
+    },
+    "data_source": "api",
+    "returned_queries": 51,
+    "candidate_specific_metrics_found": false,
+    "note": "No Fable, Apothecary/Kusuriya or Yumeneko query appeared; no candidate metrics were invented."
+  },
+  "news_totals": {
+    "found_this_search": 3,
+    "new_developments_since_prior_report": 3,
+    "already_known_without_new_development": 0,
+    "verified_primary": 2,
+    "not_verified_primary": 1,
+    "in_preparation": 2,
+    "ready_for_approval": 0,
+    "published_this_run": 0
+  },
+  "news": [
+    {
+      "rank": 1,
+      "title": "The Apothecary Diaries schedules October 22 anniversary stream with new movie information",
+      "official_source": "https://kusuriyanohitorigoto.jp/news/3108/",
+      "publication_date": "2026-10-14",
+      "publication_time": "not exposed by official source",
+      "event_time": "2026-10-22 20:00 JST",
+      "seo_score": {
+        "total": 92,
+        "demand": 32,
+        "freshness": 30,
+        "opportunity": 15,
+        "official_authority": 15
+      },
+      "status": "NEW OFFICIAL DEVELOPMENT — CANONICAL UPDATE PREPARED — BLOCKED_QA_PENDING",
+      "canonical": "https://aninextup.com/articles/apothecary-diaries-movie",
+      "duplicate_result": "Canonical match; update only, URL preserved.",
+      "preparation": {
+        "branch": "editorial/radar-canonical-updates-20261014-0000",
+        "commit": "63fd2bd1287399d184ebc69512e36776f3e0ba70",
+        "pr": 17
+      }
+    },
+    {
+      "rank": 2,
+      "title": "The Fable Season 2 reveals Yamaoka arc main visual and six additional cast members",
+      "official_source": "https://www.vap.co.jp/the-fable-anime/staffcast/",
+      "publication_date": "2026-10-14",
+      "publication_time": "Official page does not expose time; ORICON report timestamp is 00:00 JST.",
+      "seo_score": {
+        "total": 88,
+        "demand": 30,
+        "freshness": 28,
+        "opportunity": 15,
+        "official_authority": 15
+      },
+      "status": "NEW OFFICIAL DEVELOPMENT — CANONICAL UPDATE PREPARED — BLOCKED_QA_PENDING",
+      "canonical": "https://aninextup.com/articles/the-fable-season-2-january-2027",
+      "duplicate_result": "Canonical match; update only, URL preserved.",
+      "preparation": {
+        "branch": "editorial/radar-canonical-updates-20261014-0000",
+        "commit": "6f17f110c57949ceb1c8bfd2bb0103ff3c6d62a8",
+        "pr": 17
+      }
+    },
+    {
+      "rank": 3,
+      "title": "Yumeneko Connect TV anime adaptation announced",
+      "aliases": [
+        "ゆめねこねくと",
+        "Yume Neko Connect",
+        "Yumeneko Connect"
+      ],
+      "source_found": "https://www.oricon.co.jp/news/2486302/full/",
+      "source_status": "secondary trade report; primary anime announcement not independently retrieved",
+      "publication_date": "2026-10-14",
+      "publication_time": "12:00 JST on secondary report",
+      "seo_score": {
+        "total": 84,
+        "demand": 24,
+        "freshness": 30,
+        "opportunity": 20,
+        "official_authority": 10
+      },
+      "status": "NEW — NOT VERIFIED — BLOCKED",
+      "duplicate_result": "No match in article tree, assets/data.js, sitemap.xml, seo-opportunities.json or open PRs.",
+      "action": "No article prepared until a primary anime source is retrieved."
+    }
+  ],
+  "prepared_quality_checks": {
+    "structural_checks_passed": [
+      "JSON-LD syntax",
+      "NewsArticle",
+      "BreadcrumbList",
+      "Release at a glance",
+      "byline",
+      "two related cards",
+      "new source link present"
+    ],
+    "workflow_runs_found": 0,
+    "required_scripts_run": false,
+    "visual_desktop_mobile_run": false,
+    "status": "BLOCKED_QA_PENDING",
+    "missing": [
+      "scripts/check_article_duplicates.py execution",
+      "scripts/validate_publication.py execution",
+      "desktop visual QA",
+      "mobile visual QA",
+      "live image/link regression check"
+    ]
+  },
+  "publication_action": "Draft PR only. Nothing merged or published."
+}
