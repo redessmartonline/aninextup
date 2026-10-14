@@ -30,23 +30,54 @@ discoveryNodes('[data-anime-list]').forEach(el=>{let items=[...D.anime];const mo
 discoveryNodes('[data-anime-month]').forEach(el=>{const month=el.dataset.animeMonth;const items=(D.anime||[]).filter(a=>a.date&&a.date.startsWith(month)).sort((a,b)=>a.date.localeCompare(b.date));el.innerHTML=items.map(animeCard).join('')||'<p class="empty">No confirmed releases yet.</p>'});
 discoveryNodes('[data-month-count]').forEach(el=>{const month=el.dataset.monthCount;const n=(D.anime||[]).filter(a=>a.date&&a.date.startsWith(month)).length;el.textContent=n?'· '+n+' CONFIRMED':''});
 discoveryNodes('[data-guides]').forEach(el=>{const seen=new Set();const stories=[...(D.anime||[]).filter(a=>a.tag&&a.article),...(D.guides||[])].filter(g=>{if(!g.article||seen.has(g.article))return false;seen.add(g.article);return true});el.innerHTML=stories.map(g=>'<a class="card story visual-card" href="'+g.article+'">'+(g.image?'<img src="'+g.image+'" alt="'+g.title+'" loading="lazy">':'')+'<div class="visual-body"><span class="tag">'+g.tag+'</span><h3>'+g.title+'</h3><p>'+g.description+'</p><span class="more">READ MORE →</span></div></a>').join('');});
-function searchSite(){
- const input=document.getElementById('search'),raw=(input?.value||'').trim();
- const box=document.getElementById('searchResults');if(!raw){if(box)box.hidden=true;return}
- const normalize=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
- const words=normalize(raw).split(/\s+/).filter(Boolean);
- const items=[...D.anime,...D.guides].filter(x=>x.article);
- const seen=new Set();
- const results=items.map(x=>{
-  const url=x.article.replace(/\.html$/,'').replace(/\/$/,'');
-  const title=x.title||'',meta=x.tag||x.platform||x.category||'ARTICLE';
-  const titleText=normalize(title),all=normalize([title,x.description,x.tag,x.platform,x.category,url.replace(/[/-]/g,' ')].join(' '));
-  return {title,meta,url,score:words.every(w=>all.includes(w))?words.reduce((n,w)=>n+(titleText.includes(w)?3:1),0):-1};
- }).filter(x=>x.score>=0&&!seen.has(x.url)&&seen.add(x.url)).sort((a,b)=>b.score-a.score||a.title.localeCompare(b.title));
- if(box){box.innerHTML=results.length?results.map(x=>'<a href="'+x.url+'"><strong>'+x.title+'</strong><span>'+x.meta+'</span></a>').join(''):'<div class="no-result">No matching articles found.</div>';box.hidden=false}
- else if(results[0])location.href=results[0].url;
+// Search every indexed public page, including articles not featured on the homepage.
+let siteSearchIndexPromise=null,siteSearchRequest=0;
+const normalizeSiteSearch=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
+function loadSiteSearchIndex(){
+ if(siteSearchIndexPromise)return siteSearchIndexPromise;
+ siteSearchIndexPromise=(async()=>{
+  const response=await fetch('/sitemap.xml');
+  if(!response.ok)throw new Error('Sitemap unavailable');
+  const xml=new DOMParser().parseFromString(await response.text(),'application/xml');
+  const urls=[...xml.getElementsByTagName('loc')].map(el=>el.textContent.trim()).filter(url=>{try{return new URL(url).origin===location.origin}catch{return false}});
+  const entries=[];let cursor=0;
+  async function worker(){
+   while(cursor<urls.length){
+    const url=urls[cursor++];
+    try{
+     const res=await fetch(url);if(!res.ok)continue;
+     const doc=new DOMParser().parseFromString(await res.text(),'text/html');
+     doc.querySelectorAll('script,style,nav,footer,header.site-header').forEach(n=>n.remove());
+     const title=doc.querySelector('h1')?.textContent?.trim()||doc.title.replace(/ — AniNextUp$/,'');
+     const description=doc.querySelector('meta[name="description"]')?.content||'';
+     const content=(doc.querySelector('article')||doc.querySelector('main')||doc.body)?.textContent||'';
+     entries.push({title,description,url:new URL(url).pathname,search:normalizeSiteSearch(title+' '+description+' '+content)});
+    }catch(e){/* Ignore an individual unavailable page. */}
+   }
+  }
+  await Promise.all(Array.from({length:8},()=>worker()));
+  return entries;
+ })().catch(e=>{siteSearchIndexPromise=null;throw e});
+ return siteSearchIndexPromise;
 }
-document.getElementById('search')?.addEventListener('keydown',e=>{if(e.key==='Enter')searchSite()});document.getElementById('search')?.addEventListener('input',e=>{if(!e.target.value.trim()){const b=document.getElementById('searchResults');if(b)b.hidden=true}});
+async function searchSite(){
+ const input=document.getElementById('search'),box=document.getElementById('searchResults');
+ const raw=(input?.value||'').trim(),request=++siteSearchRequest;
+ if(!raw){if(box)box.hidden=true;return}
+ const words=normalizeSiteSearch(raw).split(/\s+/).filter(Boolean);
+ if(box){box.innerHTML='<div class="no-result">Searching all articles and pages…</div>';box.hidden=false}
+ try{
+  const entries=await loadSiteSearchIndex();
+  if(request!==siteSearchRequest)return;
+  const results=entries.map(x=>{
+   const title=normalizeSiteSearch(x.title);
+   return {...x,score:words.every(w=>x.search.includes(w))?words.reduce((n,w)=>n+(title.includes(w)?5:1),0):-1};
+  }).filter(x=>x.score>=0).sort((a,b)=>b.score-a.score||a.title.localeCompare(b.title)).slice(0,40);
+  if(box){box.innerHTML=results.length?results.map(x=>{const a=document.createElement('a');a.href=x.url;const strong=document.createElement('strong');strong.textContent=x.title;const span=document.createElement('span');span.textContent=x.description||'AniNextUp article';a.append(strong,span);return a.outerHTML}).join(''):'<div class="no-result">No matching articles or pages found.</div>';box.hidden=false}
+  else if(results[0])location.href=results[0].url;
+ }catch(e){if(request===siteSearchRequest&&box){box.innerHTML='<div class="no-result">Search is temporarily unavailable. Please try again.</div>';box.hidden=false}}
+}
+document.getElementById('search')?.addEventListener('keydown',e=>{if(e.key==='Enter')searchSite()});document.getElementById('search')?.addEventListener('input',e=>{if(!e.target.value.trim()){const b=document.getElementById('searchResults');if(b)b.hidden=true;siteSearchRequest++}});
 
 const siteToday=new Date(new Date().toLocaleString('en-US',{timeZone:TZ}));discoveryNodes('[data-today-label]').forEach(el=>el.textContent='TODAY · '+siteToday.toLocaleDateString('en-US',{month:'long',day:'numeric'}).toUpperCase());
 
