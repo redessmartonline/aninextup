@@ -2,7 +2,7 @@
   "schema_version": 1,
   "site": "https://aninextup.com",
   "purpose": "Editorial SEO opportunity approval queue; never auto-publish",
-  "updated_at": "2026-10-13T21:29:00-04:00",
+  "updated_at": "2026-10-14T01:28:04.569Z",
   "opportunities": [
     {
       "id": "2026-10-13-apothecary-movie-character-pv-kensho-ono",
@@ -158,9 +158,9 @@
       "first_detected_at": "2026-10-13T21:24:54-04:00",
       "quality_gate_passed": false,
       "score_breakdown": {
-        "demand_trends": 22,
+        "demand_trends": 19,
         "freshness": 28,
-        "ranking_opportunity": 12,
+        "ranking_opportunity": 15,
         "importance_official": 15
       }
     },
@@ -183,9 +183,9 @@
       "first_detected_at": "2026-10-13T21:24:54-04:00",
       "quality_gate_passed": false,
       "score_breakdown": {
-        "demand_trends": 22,
+        "demand_trends": 17,
         "freshness": 28,
-        "ranking_opportunity": 10,
+        "ranking_opportunity": 15,
         "importance_official": 15
       }
     },
@@ -208,9 +208,9 @@
       "first_detected_at": "2026-10-13T21:24:54-04:00",
       "quality_gate_passed": false,
       "score_breakdown": {
-        "demand_trends": 20,
+        "demand_trends": 12,
         "freshness": 28,
-        "ranking_opportunity": 7,
+        "ranking_opportunity": 15,
         "importance_official": 15
       }
     },
@@ -233,9 +233,9 @@
       "first_detected_at": "2026-10-13T21:24:54-04:00",
       "quality_gate_passed": false,
       "score_breakdown": {
-        "demand_trends": 20,
+        "demand_trends": 11,
         "freshness": 28,
-        "ranking_opportunity": 6,
+        "ranking_opportunity": 15,
         "importance_official": 15
       }
     },
@@ -258,9 +258,9 @@
       "first_detected_at": "2026-10-13T21:24:54-04:00",
       "quality_gate_passed": false,
       "score_breakdown": {
-        "demand_trends": 14,
+        "demand_trends": -7,
         "freshness": 25,
-        "ranking_opportunity": -6,
+        "ranking_opportunity": 15,
         "importance_official": 15
       }
     },
@@ -283,9 +283,9 @@
       "first_detected_at": "2026-10-13T21:24:54-04:00",
       "quality_gate_passed": false,
       "score_breakdown": {
-        "demand_trends": 11,
+        "demand_trends": -3,
         "freshness": 25,
-        "ranking_opportunity": -4,
+        "ranking_opportunity": 10,
         "importance_official": 5
       }
     },
@@ -308,9 +308,9 @@
       "first_detected_at": "2026-10-13T21:24:54-04:00",
       "quality_gate_passed": false,
       "score_breakdown": {
-        "demand_trends": 11,
+        "demand_trends": -1,
         "freshness": 25,
-        "ranking_opportunity": -2,
+        "ranking_opportunity": 10,
         "importance_official": 5
       }
     },
@@ -333,9 +333,9 @@
       "first_detected_at": "2026-10-13T21:24:54-04:00",
       "quality_gate_passed": false,
       "score_breakdown": {
-        "demand_trends": 10,
+        "demand_trends": -5,
         "freshness": 25,
-        "ranking_opportunity": -5,
+        "ranking_opportunity": 10,
         "importance_official": 5
       }
     }
@@ -432,9 +432,9 @@
           "first_detected_at": "2026-10-13T21:24:54-04:00",
           "quality_gate_passed": false,
           "score_breakdown": {
-            "demand_trends": 22,
+            "demand_trends": 19,
             "freshness": 28,
-            "ranking_opportunity": 12,
+            "ranking_opportunity": 15,
             "importance_official": 15
           }
         },
@@ -457,9 +457,9 @@
           "first_detected_at": "2026-10-13T21:24:54-04:00",
           "quality_gate_passed": false,
           "score_breakdown": {
-            "demand_trends": 22,
+            "demand_trends": 17,
             "freshness": 28,
-            "ranking_opportunity": 10,
+            "ranking_opportunity": 15,
             "importance_official": 15
           }
         },
@@ -482,9 +482,9 @@
           "first_detected_at": "2026-10-13T21:24:54-04:00",
           "quality_gate_passed": false,
           "score_breakdown": {
-            "demand_trends": 20,
+            "demand_trends": 12,
             "freshness": 28,
-            "ranking_opportunity": 7,
+            "ranking_opportunity": 15,
             "importance_official": 15
           }
         },
@@ -507,9 +507,9 @@
           "first_detected_at": "2026-10-13T21:24:54-04:00",
           "quality_gate_passed": false,
           "score_breakdown": {
-            "demand_trends": 20,
+            "demand_trends": 11,
             "freshness": 28,
-            "ranking_opportunity": 6,
+            "ranking_opportunity": 15,
             "importance_official": 15
           }
         },
@@ -532,9 +532,9 @@
           "first_detected_at": "2026-10-13T21:24:54-04:00",
           "quality_gate_passed": false,
           "score_breakdown": {
-            "demand_trends": 21,
+            "demand_trends": 29,
             "freshness": 15,
-            "ranking_opportunity": 23,
+            "ranking_opportunity": 15,
             "importance_official": 15
           }
         },
@@ -557,9 +557,9 @@
           "first_detected_at": "2026-10-13T21:24:54-04:00",
           "quality_gate_passed": false,
           "score_breakdown": {
-            "demand_trends": 21,
+            "demand_trends": 27,
             "freshness": 15,
-            "ranking_opportunity": 21,
+            "ranking_opportunity": 15,
             "importance_official": 15
           }
         },
@@ -582,9 +582,9 @@
           "first_detected_at": "2026-10-13T21:24:54-04:00",
           "quality_gate_passed": false,
           "score_breakdown": {
-            "demand_trends": 22,
+            "demand_trends": 21,
             "freshness": 25,
-            "ranking_opportunity": 14,
+            "ranking_opportunity": 15,
             "importance_official": 15
           }
         },
@@ -607,9 +607,9 @@
           "first_detected_at": "2026-10-13T21:24:54-04:00",
           "quality_gate_passed": false,
           "score_breakdown": {
-            "demand_trends": 19,
+            "demand_trends": 9,
             "freshness": 25,
-            "ranking_opportunity": 5,
+            "ranking_opportunity": 15,
             "importance_official": 15
           }
         },
@@ -632,9 +632,9 @@
           "first_detected_at": "2026-10-13T21:24:54-04:00",
           "quality_gate_passed": false,
           "score_breakdown": {
-            "demand_trends": 19,
+            "demand_trends": 11,
             "freshness": 25,
-            "ranking_opportunity": 7,
+            "ranking_opportunity": 15,
             "importance_official": 15
           }
         },
@@ -657,9 +657,9 @@
           "first_detected_at": "2026-10-13T21:24:54-04:00",
           "quality_gate_passed": false,
           "score_breakdown": {
-            "demand_trends": 18,
+            "demand_trends": 8,
             "freshness": 25,
-            "ranking_opportunity": 5,
+            "ranking_opportunity": 15,
             "importance_official": 15
           }
         },
@@ -682,9 +682,9 @@
           "first_detected_at": "2026-10-13T21:24:54-04:00",
           "quality_gate_passed": false,
           "score_breakdown": {
-            "demand_trends": 17,
+            "demand_trends": 5,
             "freshness": 25,
-            "ranking_opportunity": 3,
+            "ranking_opportunity": 15,
             "importance_official": 15
           }
         },
@@ -707,9 +707,9 @@
           "first_detected_at": "2026-10-13T21:24:54-04:00",
           "quality_gate_passed": false,
           "score_breakdown": {
-            "demand_trends": 18,
+            "demand_trends": 6,
             "freshness": 25,
-            "ranking_opportunity": 3,
+            "ranking_opportunity": 15,
             "importance_official": 15
           }
         },
@@ -732,9 +732,9 @@
           "first_detected_at": "2026-10-13T21:24:54-04:00",
           "quality_gate_passed": false,
           "score_breakdown": {
-            "demand_trends": 14,
+            "demand_trends": -7,
             "freshness": 25,
-            "ranking_opportunity": -6,
+            "ranking_opportunity": 15,
             "importance_official": 15
           }
         },
@@ -757,9 +757,9 @@
           "first_detected_at": "2026-10-13T21:24:54-04:00",
           "quality_gate_passed": false,
           "score_breakdown": {
-            "demand_trends": 11,
+            "demand_trends": -3,
             "freshness": 25,
-            "ranking_opportunity": -4,
+            "ranking_opportunity": 10,
             "importance_official": 5
           }
         },
@@ -782,9 +782,9 @@
           "first_detected_at": "2026-10-13T21:24:54-04:00",
           "quality_gate_passed": false,
           "score_breakdown": {
-            "demand_trends": 11,
+            "demand_trends": -1,
             "freshness": 25,
-            "ranking_opportunity": -2,
+            "ranking_opportunity": 10,
             "importance_official": 5
           }
         },
@@ -807,9 +807,9 @@
           "first_detected_at": "2026-10-13T21:24:54-04:00",
           "quality_gate_passed": false,
           "score_breakdown": {
-            "demand_trends": 10,
+            "demand_trends": -5,
             "freshness": 25,
-            "ranking_opportunity": -5,
+            "ranking_opportunity": 10,
             "importance_official": 5
           }
         }
