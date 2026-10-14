@@ -2,7 +2,7 @@
   "schema_version": 1,
   "site": "https://aninextup.com",
   "purpose": "Editorial SEO opportunity approval queue; never auto-publish",
-  "updated_at": "2026-10-14T01:55:58.401Z",
+  "updated_at": "2026-10-14T13:31:30.000Z",
   "opportunities": [
     {
       "id": "2026-10-13-apothecary-movie-character-pv-kensho-ono",
@@ -294,11 +294,11 @@
       "announcement_timezone": "Asia/Tokyo (JST)",
       "new_in_run": true,
       "verification_status": "VERIFIED_FACTS",
-      "status": "VERIFIED",
+      "status": "PUBLISHED",
       "score": 48,
       "score_basis": "Qualitative editorial estimate; not search volume or traffic prediction",
       "seo_rationale": "Where-to-watch intent, Japan-only relevance limits English site opportunity",
-      "action": "REVIEW",
+      "action": "CREAR",
       "existing_article_url": null,
       "first_detected_at": "2026-10-13T21:24:54-04:00",
       "quality_gate_passed": false,
@@ -315,7 +315,10 @@
         "exact_announcement_already_covered": false,
         "existing_article_url": null,
         "notes": "d Anime Store appears as broadcaster/platform in nine series guides; no 81-title roundup or exact release URL in articles/data/sitemap/PR. It overlaps seasonal guide intent; consider updating fall-2026-anime-calendar before creating a standalone story."
-      }
+      },
+      "publication_url": "https://aninextup.com/articles/d-anime-store-81-fall-2026-anime",
+      "approval_at": "2026-10-14",
+      "editorial_note": "User requested publication; article merged to main in PR #23. Public deployment not independently verified."
     },
     {
       "id": "2026-10-13-radar-paw-ending",
