@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "executed_at": "2026-10-13T23:00:06-04:00",
+  "timezone": "America/Santo_Domingo",
+  "source_catalog": {
+    "path": "editorial/official-source-catalog.json",
+    "target_verified": 200,
+    "stretch_target_verified": 500,
+    "total_entries": 15,
+    "verified_entries": 11,
+    "consulted_this_run": 15,
+    "inaccessible_or_pending_this_run": 4,
+    "new_entries_added": 15,
+    "new_verified_entries_added": 11,
+    "new_pending_entries_added": 4,
+    "catalog_commit": "5d5477c07a4436770d6d430293d9ab71afc7fb50"
+  },
+  "repository_checks": {
+    "repository": "redessmartonline/aninextup",
+    "branch": "main",
+    "checked": [
+      "articles/ tree",
+      "assets/data.js",
+      "sitemap.xml",
+      "editorial/seo-opportunities.json",
+      "open pull requests"
+    ],
+    "open_pull_requests": [
+      {
+        "number": 14,
+        "title": "DRAFT — Le Collège Noir Season 2: preparation corrected; playback verification pending",
+        "related_to_results": false
+      }
+    ],
+    "duplicate_dimensions": [
+      "title",
+      "aliases",
+      "franchise",
+      "event_or_announcement",
+      "source_url"
+    ]
+  },
+  "search_console": {
+    "property": "sc-domain:aninextup.com",
+    "data_source": "api",
+    "range": {
+      "start_date": "2026-09-14",
+      "end_date": "2026-10-11"
+    },
+    "candidate_specific_metrics_found": false,
+    "note": "No candidate-specific query appeared in the returned opportunity set; no metrics were invented.",
+    "leading_site_opportunities": [
+      {
+        "query": "anime releasing today",
+        "impressions": 147,
+        "clicks": 0,
+        "ctr_percent": 0,
+        "position": 10.0816,
+        "potential_clicks": 37
+      },
+      {
+        "query": "today anime release",
+        "impressions": 110,
+        "clicks": 0,
+        "ctr_percent": 0,
+        "position": 9.5636,
+        "potential_clicks": 28
+      },
+      {
+        "query": "anime november 2026",
+        "impressions": 20,
+        "clicks": 0,
+        "ctr_percent": 0,
+        "position": 7.05,
+        "potential_clicks": 5
+      }
+    ]
+  },
+  "news_totals": {
+    "found_in_this_search": 3,
+    "new": 0,
+    "known": 3,
+    "verified": 3,
+    "in_preparation": 0,
+    "ready_for_approval": 0,
+    "published_or_already_on_main": 3
+  },
+  "summary": "Sin noticias nuevas en esta búsqueda",
+  "news": [
+    {
+      "rank": 1,
+      "title": "The Apothecary Diaries movie: Luoqing and Yinshan character PV",
+      "official_source": "https://kusuriyanohitorigoto.jp/news/3125/",
+      "official_date": "2026-10-14",
+      "official_time": "not exposed by source",
+      "seo_score": {
+        "total": 91,
+        "demand": 31,
+        "freshness": 30,
+        "opportunity": 15,
+        "official_authority": 15
+      },
+      "seo_reason": "High-demand franchise and same-day official character video; value belongs in the existing movie guide rather than a competing URL.",
+      "status": "KNOWN — CANONICAL ARTICLE ALREADY UPDATED",
+      "canonical": "https://aninextup.com/articles/apothecary-diaries-movie",
+      "duplicate_check": {
+        "result": "canonical match",
+        "evidence": [
+          "articles/apothecary-diaries-movie.html",
+          "assets/data.js",
+          "sitemap.xml",
+          "editorial/seo-opportunities.json"
+        ],
+        "later_official_update_found": true,
+        "action": "Preserve canonical URL; the main-branch article already contains the October 14 update."
+      }
+    },
+    {
+      "rank": 2,
+      "title": "Nue's Exorcist TV anime announced for Summer 2027",
+      "aliases": [
+        "鵺の陰陽師",
+        "Nue no Onmyoji",
+        "Nue's Exorcist"
+      ],
+      "official_source": "https://www.nues-exorcist.com/",
+      "corroborating_primary_release": "https://dena.com/jp/news/5451/",
+      "official_date": "2026-10-12",
+      "official_time": "Jump PRESS listed for 20:00 Japan time; official site items expose date only",
+      "seo_score": {
+        "total": 85,
+        "demand": 27,
+        "freshness": 23,
+        "opportunity": 20,
+        "official_authority": 15
+      },
+      "seo_reason": "Weekly Shonen Jump adaptation with a clear season window, cast, staff and teaser.",
+      "status": "DUPLICATED — NO LATER OFFICIAL DEVELOPMENT FOUND",
+      "canonical": "https://aninextup.com/articles/nues-exorcist-anime-summer-2027",
+      "duplicate_check": {
+        "result": "canonical match",
+        "evidence": [
+          "articles/nues-exorcist-anime-summer-2027.html",
+          "assets/data.js",
+          "sitemap.xml"
+        ],
+        "later_official_update_found": false,
+        "action": "No new article and no update prepared."
+      }
+    },
+    {
+      "rank": 3,
+      "title": "Hirayasumi adds five cast members",
+      "official_source": "https://hirayasumi-anime.jp/news/add-cast-01/",
+      "official_date": "2026-10-13",
+      "official_time": "not exposed by source",
+      "seo_score": {
+        "total": 80,
+        "demand": 23,
+        "freshness": 27,
+        "opportunity": 15,
+        "official_authority": 15
+      },
+      "seo_reason": "Fresh casting update for a January 2027 NHK anime; useful as a canonical article refresh.",
+      "status": "KNOWN — CANONICAL ARTICLE ALREADY UPDATED",
+      "canonical": "https://aninextup.com/articles/hirayasumi-anime-release-date",
+      "duplicate_check": {
+        "result": "canonical match",
+        "evidence": [
+          "articles/hirayasumi-anime-release-date.html",
+          "assets/data.js",
+          "sitemap.xml",
+          "editorial/seo-opportunities.json"
+        ],
+        "later_official_update_found": true,
+        "action": "Preserve canonical URL; the main-branch article already contains the October 13 cast update."
+      }
+    }
+  ],
+  "quality_gate": {
+    "articles_prepared_this_run": 0,
+    "publication_validations_run": 0,
+    "reason": "No new or stale canonical article required preparation in this run.",
+    "ready_for_approval": [],
+    "blocked": []
+  },
+  "publication_action": "No article published, no PR merged, and no publication authorization inferred."
+}
