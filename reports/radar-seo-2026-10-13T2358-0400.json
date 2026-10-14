@@ -100,8 +100,10 @@
       "duplicate_result": "Canonical match; update only, URL preserved.",
       "preparation": {
         "branch": "editorial/radar-canonical-updates-20261014-0000",
-        "commit": "6f17f110c57949ceb1c8bfd2bb0103ff3c6d62a8",
-        "pr": 17
+        "commit": "00dc4df5e1eefbed8ae0536f524f537d9a2d2c68",
+        "pr": 17,
+        "initial_content_commit": "6f17f110c57949ceb1c8bfd2bb0103ff3c6d62a8",
+        "correction": "Removed the secondary-only exact premiere timestamp; retained the January 2027 window supported by retrieved official pages."
       }
     },
     {
