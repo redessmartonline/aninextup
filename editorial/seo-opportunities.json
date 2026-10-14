@@ -2,7 +2,7 @@
   "schema_version": 1,
   "site": "https://aninextup.com",
   "purpose": "Editorial SEO opportunity approval queue; never auto-publish",
-  "updated_at": "2026-10-14T01:40:36.120Z",
+  "updated_at": "2026-10-14T01:55:58.401Z",
   "opportunities": [
     {
       "id": "2026-10-13-apothecary-movie-character-pv-kensho-ono",
@@ -149,7 +149,7 @@
       "announcement_timezone": "Exact announcement hour and timezone not exposed/verified; Japanese site date where applicable",
       "new_in_run": true,
       "verification_status": "VERIFIED_FACTS",
-      "status": "VERIFIED",
+      "status": "BLOCKED_QA_PENDING",
       "score": 77,
       "score_basis": "Qualitative editorial estimate; not search volume or traffic prediction",
       "seo_rationale": "Update canonical movie article; new character footage",
@@ -171,7 +171,16 @@
         "existing_article_url": "https://aninextup.com/articles/apothecary-diaries-movie",
         "notes": "Same franchise and movie canonical exists; the four new source IDs, names and October 22 announcement are absent from all article text and open PR changes. Combine into one canonical update; never four new pages."
       },
-      "canonical_update_group": "apothecary-diaries-movie-2026-10-14"
+      "canonical_update_group": "apothecary-diaries-movie-2026-10-14",
+      "prepared_article_url": "https://aninextup.com/articles/apothecary-diaries-movie",
+      "editorial_pr_url": "https://github.com/redessmartonline/aninextup/pull/15",
+      "editorial_branch": "editorial/apothecary-movie-character-pv-20261014",
+      "official_cover_url": "https://kusuriyanohitorigoto.jp/movie/assets/img/top/kv.jpg",
+      "official_trailer_url": "https://www.youtube.com/watch?v=dipjaCmYris",
+      "prepared_at": "2026-10-14T01:55:58.401Z",
+      "blocking_checks": [
+        "Actual video playback not verified: media time remains 0, readyState 0 in cloud Chrome; cause not established."
+      ]
     },
     {
       "id": "2026-10-13-radar-apothecary-special-oct22",
@@ -956,6 +965,24 @@
         "No article prepared or quality-gate pass claimed. Fable posting time unverified. Shadow Rising name not confirmed by official source.",
         "GSC: settled through October 11; 7 days: 19 clicks, 960 impressions, CTR 1.979%, position 14.381; prior 7 days: 2 clicks,31 impressions,6.452%,1.613. 14 days:21 clicks,991 impressions,2.119%,13.982; prior window has no data."
       ]
+    },
+    {
+      "run_at": "2026-10-14T01:55:58.401Z",
+      "mode": "manual_prepare_first_opportunity",
+      "opportunity_id": "2026-10-13-radar-apothecary-luoqing-yinshan-pv",
+      "pr_url": "https://github.com/redessmartonline/aninextup/pull/15",
+      "action": "Update existing canonical; no new article",
+      "status": "BLOCKED_QA_PENDING",
+      "publication_performed": false,
+      "checks": {
+        "duplicate_manual": "77 articles, data.js, sitemap, queue and PRs checked",
+        "publication_structure": "PASS",
+        "discovery_navigation": "PASS",
+        "links_and_resources": "30 HTTP 200",
+        "browser_desktop": "PASS initial; final selected-artwork change retest in progress",
+        "browser_mobile": "360/390 widths passed; final selected-artwork change retest in progress",
+        "video_playback": "NOT VERIFIED"
+      }
     }
   ],
   "scoring_current": {
