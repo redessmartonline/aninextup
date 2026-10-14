@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-14T00:56:45-04:00",
+  "updated_at": "2026-10-14T02:03:15-04:00",
   "target_verified_sources": 200,
   "stretch_target_verified_sources": 500,
   "counts": {
-    "total_entries": 56,
-    "verified": 52,
-    "pending_or_inaccessible": 4
+    "total_entries": 76,
+    "verified": 71,
+    "pending_or_inaccessible": 5
   },
   "counting_policy": "Only entries with verified=true count toward the verified-source target. Direct-fetch failures are recorded but excluded until a later successful verification.",
   "sources": [
@@ -441,11 +441,12 @@
       "url": "https://www.hakusensha.co.jp/",
       "category": "publisher",
       "country_language": "Japan / Japanese",
-      "accessibility": "direct_fetch_timeout",
-      "verified": false,
+      "accessibility": "accessible_via_official_english_site",
+      "verified": true,
       "priority": "high",
-      "evidence": "Official publisher endpoint timed out during direct verification; excluded from verified count.",
-      "verified_at": "2026-10-14T00:56:45-04:00"
+      "evidence": "Official Hakusensha English corporate page loaded and identifies the publisher, manga magazines, titles, digital platforms and media-mix business.",
+      "verified_at": "2026-10-14T02:03:15-04:00",
+      "alternate_verified_url": "https://www.hakusensha.co.jp/en/"
     },
     {
       "id": "037",
@@ -501,11 +502,11 @@
       "url": "https://www.shinchosha.co.jp/",
       "category": "publisher",
       "country_language": "Japan / Japanese",
-      "accessibility": "direct_fetch_error",
-      "verified": false,
+      "accessibility": "accessible",
+      "verified": true,
       "priority": "medium",
-      "evidence": "Official endpoint could not be rendered during this run; excluded from verified count.",
-      "verified_at": "2026-10-14T00:56:45-04:00"
+      "evidence": "Official Shinchosha site loaded with comics, magazines, current releases, press releases and adaptation listings.",
+      "verified_at": "2026-10-14T02:03:15-04:00"
     },
     {
       "id": "042",
@@ -686,6 +687,246 @@
       "priority": "high",
       "evidence": "Official Shochiku anime site loaded with TV-anime status, cast, staff, studio, character information and production-committee copyright.",
       "verified_at": "2026-10-14T00:56:45-04:00"
+    },
+    {
+      "id": "057",
+      "name": "Shochiku anime",
+      "url": "https://sh-anime.shochiku.co.jp/",
+      "category": "anime producer / distributor portal",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "high",
+      "evidence": "Official Shochiku anime portal loaded successfully.",
+      "verified_at": "2026-10-14T02:03:15-04:00"
+    },
+    {
+      "id": "058",
+      "name": "Pony Canyon",
+      "url": "https://www.ponican.jp/",
+      "category": "anime producer / distributor",
+      "country_language": "Japan / Japanese",
+      "accessibility": "http_403",
+      "verified": false,
+      "priority": "high",
+      "evidence": "Official endpoint returned HTTP 403 in this verifier; excluded from verified count.",
+      "verified_at": "2026-10-14T02:03:15-04:00"
+    },
+    {
+      "id": "059",
+      "name": "King Amusement Creative",
+      "url": "https://king-cr.jp/",
+      "category": "anime / music producer portal",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "high",
+      "evidence": "Official King Records entertainment portal loaded with anime works and dated releases.",
+      "verified_at": "2026-10-14T02:03:15-04:00"
+    },
+    {
+      "id": "060",
+      "name": "NBCUniversal Anime Japan",
+      "url": "https://nbcuni.co.jp/anime/",
+      "category": "anime producer / distributor portal",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "high",
+      "evidence": "Official NBCUniversal anime portal loaded with lineup, streaming and news sections.",
+      "verified_at": "2026-10-14T02:03:15-04:00"
+    },
+    {
+      "id": "061",
+      "name": "Warner Bros. Japan Anime",
+      "url": "https://www.warnerbros.co.jp/anime/",
+      "category": "anime producer / distributor portal",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible_via_official_redirect",
+      "verified": true,
+      "priority": "high",
+      "evidence": "Official Warner Bros. Japan anime catalog loaded with current titles, release windows and trailers.",
+      "verified_at": "2026-10-14T02:03:15-04:00"
+    },
+    {
+      "id": "062",
+      "name": "Avex Pictures",
+      "url": "https://avex-pictures.co.jp/",
+      "category": "anime producer / distributor",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "high",
+      "evidence": "Official Avex Pictures corporate site loaded successfully.",
+      "verified_at": "2026-10-14T02:03:15-04:00"
+    },
+    {
+      "id": "063",
+      "name": "Bandai Namco Music Live",
+      "url": "https://www.bandainamcomusiclive.co.jp/",
+      "category": "anime music / live producer",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "medium",
+      "evidence": "Official Bandai Namco Music Live corporate site loaded successfully.",
+      "verified_at": "2026-10-14T02:03:15-04:00"
+    },
+    {
+      "id": "064",
+      "name": "Lantis",
+      "url": "https://www.lantis.jp/",
+      "category": "anime music label",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible_via_official_redirect",
+      "verified": true,
+      "priority": "medium",
+      "evidence": "Official Lantis label site loaded successfully.",
+      "verified_at": "2026-10-14T02:03:15-04:00"
+    },
+    {
+      "id": "065",
+      "name": "Bushiroad",
+      "url": "https://bushiroad.com/",
+      "category": "media / anime producer",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "medium",
+      "evidence": "Official Bushiroad site loaded with products, media franchises and events.",
+      "verified_at": "2026-10-14T02:03:15-04:00"
+    },
+    {
+      "id": "066",
+      "name": "Comic DAYS",
+      "url": "https://comic-days.com/",
+      "category": "official manga platform",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "high",
+      "evidence": "Official Kodansha Comic DAYS platform loaded successfully.",
+      "verified_at": "2026-10-14T02:03:15-04:00"
+    },
+    {
+      "id": "067",
+      "name": "MANGA Plus by Shueisha",
+      "url": "https://mangaplus.shueisha.co.jp/",
+      "category": "official manga platform",
+      "country_language": "Global / multilingual",
+      "accessibility": "accessible_empty_render",
+      "verified": true,
+      "priority": "high",
+      "evidence": "Official Shueisha MANGA Plus endpoint resolved successfully; content was minimally exposed by the verifier.",
+      "verified_at": "2026-10-14T02:03:15-04:00"
+    },
+    {
+      "id": "068",
+      "name": "Shonen Jump+",
+      "url": "https://shonenjumpplus.com/",
+      "category": "official manga platform",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "high",
+      "evidence": "Official Shueisha Shonen Jump+ platform loaded with current serialized manga.",
+      "verified_at": "2026-10-14T02:03:15-04:00"
+    },
+    {
+      "id": "069",
+      "name": "Tonari no Young Jump",
+      "url": "https://tonarinoyj.jp/",
+      "category": "official manga platform",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "medium",
+      "evidence": "Official Shueisha web manga platform loaded successfully.",
+      "verified_at": "2026-10-14T02:03:15-04:00"
+    },
+    {
+      "id": "070",
+      "name": "Sunday Webry",
+      "url": "https://www.sunday-webry.com/",
+      "category": "official manga platform",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "high",
+      "evidence": "Official Shogakukan Sunday Webry platform loaded successfully.",
+      "verified_at": "2026-10-14T02:03:15-04:00"
+    },
+    {
+      "id": "071",
+      "name": "MangaONE",
+      "url": "https://manga-one.com/",
+      "category": "official manga platform",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "high",
+      "evidence": "Official Shogakukan MangaONE site loaded successfully.",
+      "verified_at": "2026-10-14T02:03:15-04:00"
+    },
+    {
+      "id": "072",
+      "name": "Comic Newtype",
+      "url": "https://comic.webnewtype.com/",
+      "category": "official manga platform",
+      "country_language": "Japan / Japanese",
+      "accessibility": "direct_fetch_error",
+      "verified": false,
+      "priority": "medium",
+      "evidence": "Official endpoint could not be rendered during this run; excluded from verified count.",
+      "verified_at": "2026-10-14T02:03:15-04:00"
+    },
+    {
+      "id": "073",
+      "name": "Kadocomi / ComicWalker",
+      "url": "https://comic-walker.com/",
+      "category": "official manga platform",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "high",
+      "evidence": "Official KADOKAWA manga platform loaded successfully.",
+      "verified_at": "2026-10-14T02:03:15-04:00"
+    },
+    {
+      "id": "074",
+      "name": "Ichijinsha",
+      "url": "https://www.ichijinsha.co.jp/",
+      "category": "publisher",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "high",
+      "evidence": "Official Ichijinsha publisher site loaded successfully.",
+      "verified_at": "2026-10-14T02:03:15-04:00"
+    },
+    {
+      "id": "075",
+      "name": "Overlap",
+      "url": "https://over-lap.co.jp/",
+      "category": "publisher / light novel imprint",
+      "country_language": "Japan / Japanese",
+      "accessibility": "direct_fetch_error",
+      "verified": false,
+      "priority": "medium",
+      "evidence": "Official endpoint could not be rendered during this run; excluded from verified count.",
+      "verified_at": "2026-10-14T02:03:15-04:00"
+    },
+    {
+      "id": "076",
+      "name": "GA Bunko",
+      "url": "https://ga.sbcr.jp/",
+      "category": "light novel imprint",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "high",
+      "evidence": "Official SB Creative GA Bunko site loaded successfully.",
+      "verified_at": "2026-10-14T02:03:15-04:00"
     }
   ]
 }
