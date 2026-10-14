@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-14T11:57:46-04:00",
+  "updated_at": "2026-10-14T13:04:08-04:00",
   "target_verified_sources": 200,
   "stretch_target_verified_sources": 500,
   "counts": {
-    "total_entries": 221,
-    "verified": 162,
-    "pending_or_inaccessible": 59
+    "total_entries": 234,
+    "verified": 170,
+    "pending_or_inaccessible": 64
   },
   "counting_policy": "Only entries with verified=true count toward the verified-source target. Direct-fetch failures are recorded but excluded until a later successful verification.",
   "sources": [
@@ -2671,6 +2671,162 @@
       "priority": "medium",
       "evidence": "Official Signal.MD endpoint loaded with the Signal MD page identity; page body exposed no crawlable text.",
       "verified_at": "2026-10-14T11:57:46-04:00"
+    },
+    {
+      "id": "222",
+      "name": "Mag Garden",
+      "url": "https://www.mag-garden.co.jp/",
+      "category": "manga publisher",
+      "country_language": "Japan / Japanese",
+      "accessibility": "direct_fetch_timeout",
+      "verified": false,
+      "priority": "medium",
+      "evidence": "Candidate official Mag Garden endpoint timed out during this run; excluded from verified count.",
+      "verified_at": "2026-10-14T13:04:08-04:00"
+    },
+    {
+      "id": "223",
+      "name": "Bushiroad Works",
+      "url": "https://bushiroad-works.com/",
+      "category": "manga and media publisher",
+      "country_language": "Japan / Japanese",
+      "accessibility": "http_404",
+      "verified": false,
+      "priority": "medium",
+      "evidence": "Candidate Bushiroad Works endpoint returned HTTP 404 during this run; excluded from verified count pending a confirmed official replacement URL.",
+      "verified_at": "2026-10-14T13:04:08-04:00"
+    },
+    {
+      "id": "224",
+      "name": "Shonengahosha",
+      "url": "https://www.shonengahosha.co.jp/",
+      "category": "manga publisher",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "medium",
+      "evidence": "Official Shonengahosha site loaded with publisher identity, magazines, comics, licensing contacts and adaptation news.",
+      "verified_at": "2026-10-14T13:04:08-04:00"
+    },
+    {
+      "id": "225",
+      "name": "LEED Publishing",
+      "url": "https://www.leed.co.jp/",
+      "category": "manga publisher",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "medium",
+      "evidence": "Official LEED Publishing site loaded with company identity, manga imprints, new releases and dated notices.",
+      "verified_at": "2026-10-14T13:04:08-04:00"
+    },
+    {
+      "id": "226",
+      "name": "Libre",
+      "url": "https://libre-inc.co.jp/",
+      "category": "manga and novel publisher",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "medium",
+      "evidence": "Official Libre site loaded with publisher identity, comics, novels, magazines, events and licensing information.",
+      "verified_at": "2026-10-14T13:04:08-04:00"
+    },
+    {
+      "id": "227",
+      "name": "Ohzora Publishing",
+      "url": "https://ohzora.jp/",
+      "category": "manga publisher",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "low",
+      "evidence": "Official Ohzora Publishing site loaded with comics, books, magazines, publication schedule and corporate information.",
+      "verified_at": "2026-10-14T13:04:08-04:00"
+    },
+    {
+      "id": "228",
+      "name": "Anime Tourism Association",
+      "url": "https://animetourism88.com/en/",
+      "category": "anime industry association / locations",
+      "country_language": "Japan / Japanese-English",
+      "accessibility": "accessible_redirect",
+      "verified": true,
+      "priority": "low",
+      "evidence": "Official Anime Tourism Association site loaded through its English endpoint.",
+      "verified_at": "2026-10-14T13:04:08-04:00"
+    },
+    {
+      "id": "229",
+      "name": "JAniCA",
+      "url": "https://www.janica.jp/",
+      "category": "anime industry association",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "low",
+      "evidence": "Official Japan Animation Creators Association site loaded successfully.",
+      "verified_at": "2026-10-14T13:04:08-04:00"
+    },
+    {
+      "id": "230",
+      "name": "Tokuma Shoten",
+      "url": "https://www.tokuma.jp/",
+      "category": "publisher / manga and anime magazine",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible",
+      "verified": true,
+      "priority": "medium",
+      "evidence": "Official Tokuma Shoten site loaded with publisher identity, comics, Animage-related categories and current releases.",
+      "verified_at": "2026-10-14T13:04:08-04:00"
+    },
+    {
+      "id": "231",
+      "name": "Nihon Bungeisha",
+      "url": "https://www.nihonbungeisha.co.jp/",
+      "category": "manga publisher",
+      "country_language": "Japan / Japanese",
+      "accessibility": "restricted_fetch",
+      "verified": false,
+      "priority": "medium",
+      "evidence": "Candidate official Nihon Bungeisha endpoint was restricted during this run; excluded from verified count.",
+      "verified_at": "2026-10-14T13:04:08-04:00"
+    },
+    {
+      "id": "232",
+      "name": "Bunkasha",
+      "url": "https://www.bunkasha.co.jp/",
+      "category": "manga publisher",
+      "country_language": "Japan / Japanese",
+      "accessibility": "direct_fetch_timeout",
+      "verified": false,
+      "priority": "medium",
+      "evidence": "Candidate official Bunkasha endpoint timed out during this run; excluded from verified count.",
+      "verified_at": "2026-10-14T13:04:08-04:00"
+    },
+    {
+      "id": "233",
+      "name": "Seikaisha",
+      "url": "https://seikaisha.co.jp/",
+      "category": "publisher / manga and fiction",
+      "country_language": "Japan / Japanese",
+      "accessibility": "accessible_redirect",
+      "verified": true,
+      "priority": "medium",
+      "evidence": "Official Seikaisha site loaded with company identity, Seikaisha Comics, publications, dated news and media-mix licensing information.",
+      "verified_at": "2026-10-14T13:04:08-04:00"
+    },
+    {
+      "id": "234",
+      "name": "Hayakawa Publishing",
+      "url": "https://www.hayakawa-online.co.jp/",
+      "category": "publisher",
+      "country_language": "Japan / Japanese",
+      "accessibility": "direct_fetch_timeout",
+      "verified": false,
+      "priority": "low",
+      "evidence": "Candidate official Hayakawa Publishing endpoint timed out during this run; excluded from verified count.",
+      "verified_at": "2026-10-14T13:04:08-04:00"
     }
   ]
 }
