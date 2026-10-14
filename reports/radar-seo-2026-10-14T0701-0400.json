@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "run_at": "2026-10-14T07:01:19-04:00",
+  "timezone": "America/Santo_Domingo",
+  "search_window": {
+    "previous_cutoff": "2026-10-14T05:57:26-04:00",
+    "cutoff": "2026-10-14T07:01:19-04:00",
+    "note": "Fresh official-source and discovery search around the 20:00 JST publication window."
+  },
+  "news_summary": {
+    "statement": "Sin noticias nuevas en esta búsqueda",
+    "found": 0,
+    "new": 0,
+    "known": 0,
+    "verified": 0,
+    "in_preparation": 0,
+    "ready_for_approval": 0,
+    "published": 0
+  },
+  "seo_scoring": {
+    "scale": "0-100",
+    "components": {
+      "demand": 35,
+      "freshness": 30,
+      "opportunity": 20,
+      "authority": 15
+    },
+    "items": [],
+    "note": "No qualifying official anime or manga announcement was found after the previous cutoff."
+  },
+  "duplicate_control": {
+    "performed_for_new_items": false,
+    "reason": "No news item advanced to preparation.",
+    "required_surfaces": [
+      "site articles",
+      "assets/data.js",
+      "sitemap.xml",
+      "editorial/seo-opportunities.json",
+      "open pull requests"
+    ],
+    "open_prs": [
+      {
+        "number": 18,
+        "title": "DRAFT — Yumeneko Connect anime announcement",
+        "status": "BLOCKED_QA_PENDING"
+      },
+      {
+        "number": 17,
+        "title": "DRAFT — Update The Fable cast and Apothecary anniversary stream",
+        "status": "BLOCKED_QA_PENDING"
+      },
+      {
+        "number": 14,
+        "title": "DRAFT — Le Collège Noir Season 2: preparation corrected; playback verification pending",
+        "status": "BLOCKED_QA_PENDING"
+      }
+    ]
+  },
+  "source_catalog": {
+    "path": "editorial/official-source-catalog.json",
+    "total_entries": 180,
+    "verified_catalogued": 144,
+    "pending_or_inaccessible": 36,
+    "domains_consulted_this_run": 20,
+    "valid_official_candidates": 19,
+    "invalid_candidates_discarded": 1,
+    "accessible_this_run": 11,
+    "inaccessible_this_run": 8,
+    "new_entries_added": 19,
+    "new_verified_added": 11,
+    "target_verified": 200,
+    "remaining_to_target": 56,
+    "catalog_commit": "95b37f106ae4af40a03380a30a58e752cf6e944d",
+    "catalog_blob": "3d1cf2cac03928962361323b82c9a7cab9851b87",
+    "verified_new": [
+      {
+        "name": "Passione",
+        "url": "https://passione-anime.com/",
+        "priority": "medium"
+      },
+      {
+        "name": "MAHO FILM",
+        "url": "https://mahofilm.com/",
+        "priority": "medium"
+      },
+      {
+        "name": "FelixFilm",
+        "url": "https://felixfilm.co.jp/",
+        "priority": "medium"
+      },
+      {
+        "name": "NUT",
+        "url": "https://nutinc.jp/",
+        "priority": "medium"
+      },
+      {
+        "name": "Lay-duce",
+        "url": "https://lay-duce.co.jp/",
+        "priority": "medium"
+      },
+      {
+        "name": "Typhoon Graphics",
+        "url": "https://typhoon-g.com/",
+        "priority": "low"
+      },
+      {
+        "name": "CONNECT",
+        "url": "https://connect.jp.net/",
+        "priority": "medium"
+      },
+      {
+        "name": "Asahi Production",
+        "url": "https://asahi-pro.co.jp/",
+        "priority": "medium"
+      },
+      {
+        "name": "Doga Kobo",
+        "url": "https://www.dogakobo.com/",
+        "priority": "high"
+      },
+      {
+        "name": "Marvy Jack",
+        "url": "https://marvyjack.co.jp/",
+        "priority": "low"
+      },
+      {
+        "name": "PRA",
+        "url": "https://pra-anime.com/",
+        "priority": "low"
+      }
+    ],
+    "inaccessible_new": [
+      {
+        "name": "Seven Arcs",
+        "url": "https://sevenarcs.co.jp/"
+      },
+      {
+        "name": "GEEK TOYS",
+        "url": "https://geektoys.co.jp/"
+      },
+      {
+        "name": "Studio Palette",
+        "url": "https://studio-palette.com/"
+      },
+      {
+        "name": "A-Real",
+        "url": "https://a-real.info/"
+      },
+      {
+        "name": "Platinum Vision",
+        "url": "https://platinumvision.co.jp/"
+      },
+      {
+        "name": "SynergySP",
+        "url": "https://www.synergy-sp.com/"
+      },
+      {
+        "name": "Bridge",
+        "url": "https://www.bridge-inc.co.jp/"
+      },
+      {
+        "name": "LARX Entertainment",
+        "url": "https://larx.co.jp/"
+      }
+    ],
+    "discarded": [
+      {
+        "url": "https://studio-blanc.com/",
+        "reason": "Accessible site is a portrait/photo studio, not the anime studio sought; not added."
+      }
+    ]
+  },
+  "search_console": {
+    "site": "sc-domain:aninextup.com",
+    "data_source": "api",
+    "range": {
+      "start": "2026-09-14",
+      "end": "2026-10-11"
+    },
+    "metrics_invented": false,
+    "opportunities": [
+      {
+        "query": "anime releasing today",
+        "clicks": 0,
+        "impressions": 147,
+        "ctr": 0,
+        "position": 10.081632653061224,
+        "score": 118,
+        "potential_clicks": 37
+      },
+      {
+        "query": "today anime release",
+        "clicks": 0,
+        "impressions": 110,
+        "ctr": 0,
+        "position": 9.563636363636364,
+        "score": 110,
+        "potential_clicks": 28
+      },
+      {
+        "query": "anime release today",
+        "clicks": 0,
+        "impressions": 34,
+        "ctr": 0,
+        "position": 10.088235294117647,
+        "score": 27,
+        "potential_clicks": 9
+      },
+      {
+        "query": "anime november 2026",
+        "clicks": 0,
+        "impressions": 20,
+        "ctr": 0,
+        "position": 7.05,
+        "score": 20,
+        "potential_clicks": 5
+      }
+    ]
+  },
+  "publication": {
+    "created_or_updated_articles": 0,
+    "validation_run": false,
+    "validation_reason": "No article was prepared in this run.",
+    "merged": false,
+    "published": false,
+    "authorization_received": false
+  }
+}
