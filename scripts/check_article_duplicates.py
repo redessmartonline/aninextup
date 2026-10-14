@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Block new AniNextUp article files that duplicate an existing subject."""
+"""Block duplicate subjects in added or modified AniNextUp article files."""
 from pathlib import Path
 from html.parser import HTMLParser
 import re
@@ -18,7 +18,7 @@ def topic_tokens(s):
 
 def article_title(path):
     s = path.read_text(encoding="utf-8")
-    m = re.search(r"<h1\\b[^>]*>(.*?)</h1>", s, re.I | re.S)
+    m = re.search(r"<h1\b[^>]*>(.*?)</h1>", s, re.I | re.S)
     if not m:
         raise ValueError(f"No H1 in {path}")
     return re.sub(r"<[^>]+>", " ", m.group(1)).strip()
@@ -44,17 +44,19 @@ def check(new_path, existing_paths):
 
 def main():
     base = set(subprocess.check_output(["git", "ls-tree", "-r", "--name-only", "HEAD", "articles/"], text=True).splitlines())
-    new = [Path(p) for p in subprocess.check_output(["git", "ls-files", "--others", "--exclude-standard", "articles/"], text=True).splitlines() if p.endswith(".html")]
-    # Also handle files staged or modified in a branch relative to the current base.
+    untracked = subprocess.check_output(["git", "ls-files", "--others", "--exclude-standard", "articles/"], text=True).splitlines()
+    changed = subprocess.check_output(["git", "diff", "--name-only", "--diff-filter=ACMRT", "HEAD", "--", "articles/"], text=True).splitlines()
+    # Check added, untracked, and modified article files while comparing each against the other tracked articles.
+    candidates = [Path(p) for p in sorted(set(untracked + changed)) if p.endswith(".html")]
     existing = [Path(p) for p in base if p.endswith(".html") and Path(p).is_file()]
     errors = []
-    for path in new:
+    for path in candidates:
         errors += check(path, existing)
     if errors:
         for error in errors:
             print("BLOCKED: " + error, file=sys.stderr)
         return 1
-    print(f"PASS: checked {len(new)} new article(s) against {len(existing)} existing article(s)")
+    print(f"PASS: checked {len(candidates)} article candidate(s) against {len(existing)} existing article(s)")
     return 0
 
 if __name__ == "__main__":
