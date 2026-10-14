@@ -168,6 +168,27 @@ if(document.querySelector('article.article')){
 }
 
 
+// Enforce the three-column layout even when a page retains cached legacy CSS.
+// Run immediately, independently of image fetching or editorial data loading.
+function enforceRelatedReleaseRow(){
+  document.querySelectorAll('article.article .related-releases').forEach(section=>{
+    const grid=section.querySelector('.grid');
+    if(!grid)return;
+    const cards=Array.from(grid.querySelectorAll(':scope > a.mini'));
+    cards.slice(3).forEach(card=>card.remove());
+    grid.style.setProperty('display','grid','important');
+    grid.style.setProperty('grid-template-columns','repeat(3,minmax(0,1fr))','important');
+    grid.style.setProperty('gap','12px','important');
+    grid.style.setProperty('align-items','stretch','important');
+    cards.slice(0,3).forEach(card=>{
+      card.style.setProperty('min-width','0');
+      card.style.setProperty('width','100%');
+    });
+  });
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',enforceRelatedReleaseRow,{once:true});
+else enforceRelatedReleaseRow();
+
 // Every KEEP WATCHING card gets artwork, including legacy hand-authored sections.
 // Prefer the destination article's cover, never reuse the current article's image.
 async function ensureRelatedReleaseCovers(){
