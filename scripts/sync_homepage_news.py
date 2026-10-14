@@ -11,7 +11,7 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 DATA = ROOT / "assets" / "data.js"
 
 def meta(source, key):
-    pattern = r'<meta\\s+[^>]*?(?:name|property)="' + re.escape(key) + r'"[^>]*?content="([^"]*)"'
+    pattern = r'<meta\s+[^>]*?(?:name|property)="' + re.escape(key) + r'"[^>]*?content="([^"]*)"'
     found = re.search(pattern, source, re.I)
     return html.unescape(found.group(1)) if found else ""
 
@@ -22,7 +22,7 @@ def article_entry(path):
     if not file.is_file():
         return None
     source = file.read_text(encoding="utf-8")
-    if re.search(r'<meta\\s+name="robots"\\s+content="[^"]*noindex', source, re.I):
+    if re.search(r'<meta\s+name="robots"\s+content="[^"]*noindex', source, re.I):
         return None
     title = meta(source, "og:title")
     if not title:
@@ -33,7 +33,7 @@ def article_entry(path):
     description = meta(source, "description")
     image = meta(source, "og:image") or meta(source, "twitter:image")
     if not image:
-        m = re.search(r'<(?:figure[^>]*>\\s*)?<img[^>]+src="([^"]+)"', source, re.I)
+        m = re.search(r'<(?:figure[^>]*>\s*)?<img[^>]+src="([^"]+)"', source, re.I)
         image = html.unescape(m.group(1)) if m else ""
     if not image:
         return None  # Only show published stories with a real cover.
@@ -59,7 +59,7 @@ def main():
     lines = []
     for entry in additions:
         lines.append("{" + ",".join(k + ":" + json.dumps(v, ensure_ascii=False) for k, v in entry.items()) + "},")
-    updated = data.replace("anime:[\\n", "anime:\\n" + "\\n".join(lines) + "\\n", 1)
+    updated = data.replace("anime:[\n", "anime:\n" + "\n".join(lines) + "\n", 1)
     if updated == data:
         raise RuntimeError("Could not find anime array in assets/data.js")
     DATA.write_text(updated, encoding="utf-8")
