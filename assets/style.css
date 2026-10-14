@@ -103,3 +103,34 @@
 .article .prose > section > h2:first-child{margin-top:30px}
 .article .prose > section > h3{margin-top:24px}
 @media(max-width:780px){.article .prose > section{padding:0;margin-bottom:22px}}
+
+/* Sitewide article lead covers: one consistent centered 16:9 presentation. */
+.article > .article-head + figure:not(.related-card),
+.article > .article-head + img,
+.article > .article-head + .article-hero,
+.article > .article-head + .official-hero{
+  box-sizing:border-box!important;
+  display:block;
+  width:100%!important;
+  max-width:680px!important;
+  margin:16px auto 34px!important;
+  border:0;
+  border-radius:12px;
+  overflow:hidden;
+  background:var(--panel);
+}
+.article > .article-head + figure > img,
+.article > .article-head + img,
+.article > .article-head + .article-hero > img,
+.article > .article-head + .official-hero > img{
+  display:block!important;
+  width:100%!important;
+  max-width:100%!important;
+  height:auto!important;
+  aspect-ratio:16/9!important;
+  object-fit:cover!important;
+  object-position:center;
+  border-radius:12px 12px 0 0;
+}
+.article > .article-head + figure > figcaption{padding:10px 12px;font-size:.85rem}
+@media(max-width:780px){.article > .article-head + figure,.article > .article-head + img,.article > .article-head + .article-hero,.article > .article-head + .official-hero{margin:16px auto 28px!important}}
