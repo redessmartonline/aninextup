@@ -1,0 +1,30 @@
+name: Refresh latest anime news
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'articles/**'
+      - 'scripts/build_latest_news.py'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/build_latest_news.py
+      - name: Commit generated feed and sitemap
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/latest-news.json sitemap.xml
+          if ! git diff --cached --quiet; then
+            git commit -m "Auto-refresh latest anime news and sitemap"
+            git push
+          fi
