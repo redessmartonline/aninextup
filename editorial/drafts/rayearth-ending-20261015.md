@@ -34,3 +34,7 @@ On October 15, the production also confirmed Keiko Han as the narrator for episo
 - Image rights HOLD: the anime's own site explicitly prohibits unauthorized image reuse. The existing page currently hotlinks an official image; no permission has been established. Remove unlicensed cover references from proposed updated page and index metadata, or obtain explicit authorization before publication. Do not substitute AI, homemade SVG or unrelated images.
 - Validate trailer playback, structured data, links, mobile/desktop layout and homepage after approval.
 - User approval required before merge or publication.
+
+## October 15 artist MV (separate from anime ending)
+
+Universal Music Japan confirms that Kawaguchi Yurina released a standalone music video for “Hoshiakari” on October 15, 2026, directed by MONA (VeAble). This is not the creditless anime ending. Source: https://www.universal-music.co.jp/kawaguchi-yurina/news/2026-10-14/ . The label's own embedded video ID is hbS9KfrJ96o. Proposed editorial treatment: add a separate H3 and an AniNextUp lite-trailer player with a direct official YouTube fallback, retaining the anime ending and existing main PV. Do not repurpose any video still as the article cover. Image reuse rights remain unresolved.
