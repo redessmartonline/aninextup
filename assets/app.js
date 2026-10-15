@@ -117,7 +117,8 @@ if(latestNewsNodes.length){
       if(!items.length)return;
       const escapeHTML=s=>String(s||'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
       const validImage=s=>{const url=/^(https?:\/\/|\/)/.test(s||'')?s:'/assets/images/anime-image-fallback.svg';return url.replace(/^(https:\/\/i\.ytimg\.com\/vi\/[^/]+\/)maxresdefault\.jpg(?:\?.*)?$/,'$1mqdefault.jpg');};
-      const markup=items.map(g=>'<a class="card story visual-card" href="/'+escapeHTML(g.article)+'"><img src="'+escapeHTML(validImage(g.image))+'" alt="'+escapeHTML(g.title)+'" loading="lazy"><div class="visual-body"><span class="tag">'+escapeHTML(g.tag||'ANIME NEWS')+'</span><h3>'+escapeHTML(g.title)+'</h3><p>'+escapeHTML(g.description)+'</p><span class="more">READ UPDATE →</span></div></a>').join('');
+      const markup=items.map((g,i)=>'<a class="card story visual-card" href="/'+escapeHTML(g.article)+'"><img src="'+escapeHTML(validImage(g.image))+'" alt="'+escapeHTML(g.title)+'" loading="'+(i===0?'eager':'lazy')+'" decoding="async"'+(i===0?' fetchpriority="high"':' fetchpriority="low"')+'><div class="visual-body"><span class="tag">'+escapeHTML(g.tag||'ANIME NEWS')+'</span><h3>'+escapeHTML(g.title)+'</h3><p>'+escapeHTML(g.description)+'</p><span class="more">READ UPDATE →</span></div></a>').join('');
+      // Defer off-screen image downloads, but preserve ordinary links and native lazy-loading.
       latestNewsNodes.forEach(el=>{el.innerHTML=markup});
     }).catch(()=>{/* Keep pre-rendered news cards intact. */});
 }
