@@ -37,7 +37,7 @@ def extract(path):
         image = "/" + image
     # Prefer optimized local editorial thumbnails only after they actually exist.
     local_thumb = ROOT / "assets" / "images" / "news" / (path.stem + ".webp")
-    if local_thumb.is_file():
+    if local_thumb.is_file() and path.stem != "bleach-thousand-year-blood-war-graniph-collection-october-2026":
         image = "/assets/images/news/" + path.stem + ".webp"
     return dict(article="articles/" + path.stem, title=title, tag=data.get("tag") or "ANIME NEWS",
                 description=data.get("description") or meta(source, "description"),
