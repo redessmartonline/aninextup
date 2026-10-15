@@ -116,7 +116,7 @@ if(latestNewsNodes.length){
       }).slice(0,7);
       if(!items.length)return;
       const escapeHTML=s=>String(s||'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
-      const validImage=s=>/^(https?:\/\/|\/)/.test(s||'')?s:'/assets/images/anime-image-fallback.svg';
+      const validImage=s=>{const url=/^(https?:\/\/|\/)/.test(s||'')?s:'/assets/images/anime-image-fallback.svg';return url.replace(/^(https:\/\/i\.ytimg\.com\/vi\/[^/]+\/)maxresdefault\.jpg(?:\?.*)?$/,'$1mqdefault.jpg');};
       const markup=items.map(g=>'<a class="card story visual-card" href="/'+escapeHTML(g.article)+'"><img src="'+escapeHTML(validImage(g.image))+'" alt="'+escapeHTML(g.title)+'" loading="lazy"><div class="visual-body"><span class="tag">'+escapeHTML(g.tag||'ANIME NEWS')+'</span><h3>'+escapeHTML(g.title)+'</h3><p>'+escapeHTML(g.description)+'</p><span class="more">READ UPDATE →</span></div></a>').join('');
       latestNewsNodes.forEach(el=>{el.innerHTML=markup});
     }).catch(()=>{/* Keep pre-rendered news cards intact. */});
