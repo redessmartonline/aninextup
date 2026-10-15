@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Generate latest news from actual article metadata, without manually editing homepage."""
+# Runs on article changes and may also be started manually from GitHub Actions.
 import html, json, re
 from datetime import date
 from pathlib import Path
