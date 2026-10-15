@@ -102,7 +102,26 @@ discoveryNodes('[data-after-week]').forEach(el=>{const endIso=isoLocal(weekEnd);
 // Homepage discovery sections
 const homeIso=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
 const homeToday=homeIso(new Date(new Date().toLocaleString('en-US',{timeZone:TZ})));
-discoveryNodes('[data-home-latest]').forEach(el=>{const seen=new Set();const items=[...(D.anime||[]).filter(a=>a.tag&&a.article),...(D.guides||[])].filter(g=>{if(!g.article||seen.has(g.article))return false;seen.add(g.article);return true}).slice(0,7);el.innerHTML=items.map(g=>'<a class="card story visual-card" href="'+g.article+'">'+(g.image?'<img src="'+g.image+'" alt="'+g.title+'" loading="lazy">':'')+'<div class="visual-body"><span class="tag">'+g.tag+'</span><h3>'+g.title+'</h3><p>'+g.description+'</p><span class="more">READ UPDATE →</span></div></a>').join('')||'<p class="empty">No updates listed yet.</p>'});
+// Latest news is generated from articles/*.html on each article publication.
+// The static HTML cards remain a no-JavaScript / network-error fallback.
+const latestNewsNodes=discoveryNodes('[data-home-latest]');
+if(latestNewsNodes.length){
+  fetch('/assets/latest-news.json',{cache:'no-cache'})
+    .then(response=>{if(!response.ok)throw new Error('Latest news feed unavailable');return response.json()})
+    .then(feed=>{
+      const seen=new Set();
+      const items=(Array.isArray(feed.items)?feed.items:[]).filter(g=>{
+        if(!g.article||!g.title||seen.has(g.article))return false;
+        seen.add(g.article);return true;
+      }).slice(0,7);
+      if(!items.length)return;
+      const escapeHTML=s=>String(s||'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+      const validImage=s=>/^(https?:\/\/|\/)/.test(s||'')?s:'/assets/images/anime-image-fallback.svg';
+      const markup=items.map(g=>'<a class="card story visual-card" href="/'+escapeHTML(g.article)+'"><img src="'+escapeHTML(validImage(g.image))+'" alt="'+escapeHTML(g.title)+'" loading="lazy"><div class="visual-body"><span class="tag">'+escapeHTML(g.tag||'ANIME NEWS')+'</span><h3>'+escapeHTML(g.title)+'</h3><p>'+escapeHTML(g.description)+'</p><span class="more">READ UPDATE →</span></div></a>').join('');
+      latestNewsNodes.forEach(el=>{el.innerHTML=markup});
+    }).catch(()=>{/* Keep pre-rendered news cards intact. */});
+}
+
 discoveryNodes('[data-home-next]').forEach(el=>{const items=window.ANINEXTUP_RELEASES.select(D.anime||[],'after-week',releaseContext).slice(0,6);el.innerHTML=items.map(animeCard).join('')||'<p class="empty">No upcoming releases listed yet.</p>'});
 
 // Platform-specific release hubs
