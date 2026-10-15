@@ -1,6 +1,6 @@
 # From Far Away — Creditless Opening Video (editorial draft)
 
-**Status:** NOT APPROVED. DO NOT PUBLISH. Image reuse permission unresolved.
+**Status:** HTML DRAFT SAVED — NOT APPROVED. DO NOT PUBLISH. Image reuse permission unresolved.
 **Proposed URL:** /articles/from-far-away-creditless-opening-october-2026
 **SEO title:** From Far Away Anime Releases Creditless Opening Video for “Touhikou” — AniNextUp
 **Meta description:** From Far Away shares its official creditless opening with “Touhikou” by Genin wa Jibun ni Aru. Watch the official video and see verified staff and streaming details.
@@ -13,7 +13,7 @@ The 2026 TV anime adaptation of Kyoko Hikawa's *From Far Away* (*Kanata Kara*) h
 
 ## Watch the official opening
 
-The clip was announced by Crunchyroll on October 13, 2026 and is also listed on the official anime site. Embed the authentic NBCUniversal Anime/Music video **RbpGT6B6vVY** using AniNextUp's existing lazy YouTube player. If embedding fails in a region, provide the direct official link above.
+The official anime site dates the opening-video announcement October 12, 2026; Crunchyroll covered it October 13. The video is listed on the official anime site. Embed the authentic NBCUniversal Anime/Music video **RbpGT6B6vVY** using AniNextUp's existing lazy YouTube player. If embedding fails in a region, provide the direct official link above.
 
 ## Opening and ending music
 
@@ -42,6 +42,6 @@ No image reuse authorization was established. Do not upload, hotlink or repurpos
 - [x] Confirmed video ID and official producer channel.
 - [x] Confirmed Japanese theme song title on production's music page.
 - [ ] Confirm image license/permissions and official hero URL.
-- [ ] Convert to complete site-matching HTML with canonical, OG, NewsArticle and BreadcrumbList JSON-LD.
-- [ ] Validate video embed playback, desktop/mobile layout and all links.
+- [x] Prepared site-matching HTML on this branch at `articles/from-far-away-creditless-opening-october-2026.html`, including canonical, OG (without unlicensed cover), NewsArticle and BreadcrumbList JSON-LD.
+- [ ] Validate video embed playback, desktop/mobile layout and all links (official URL verified; playback not tested).
 - [ ] Obtain user approval before publishing or merging.
