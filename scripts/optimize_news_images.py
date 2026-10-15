@@ -54,6 +54,19 @@ def main():
             print("Optimized:", output.relative_to(ROOT), output.stat().st_size, "bytes")
         except (OSError, ValueError, UnidentifiedImageError) as exc:
             print("Source unavailable; preserving external image:", slug, str(exc))
+    # Update the server-rendered homepage fallback too, without touching its layout.
+    homepage = ROOT / "index.html"
+    if homepage.exists():
+        text = homepage.read_text(encoding="utf-8")
+        for slug, remote in SOURCES.items():
+            if not (DEST / (slug + ".webp")).exists():
+                continue
+            # Only replace images in the card linking to the matching article.
+            import re
+            pattern = r'(<a class="card story visual-card" href="articles/' + re.escape(slug) + r'"><img src=")' + re.escape(remote) + r'(")'
+            text, count = re.subn(pattern, lambda m: m.group(1) + "assets/images/news/" + slug + ".webp" + m.group(2), text)
+            print("Updated homepage fallback:", slug, count)
+        homepage.write_text(text, encoding="utf-8")
     print("Finished editorial thumbnails")
 
 if __name__ == "__main__":
