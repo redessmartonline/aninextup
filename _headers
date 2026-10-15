@@ -4,3 +4,13 @@ https://:version.:subdomain.workers.dev/*
   X-Robots-Tag: noindex, nofollow
 https://test-seo-clean-urls-2026-10-09-aninextup.redessmartonline.workers.dev/*
   X-Robots-Tag: noindex, nofollow
+
+# Long-lived static assets; versioned scripts in HTML are cache-busted on changes.
+/assets/images/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+/assets/*.css
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+/assets/*.js
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+/assets/latest-news.json
+  Cache-Control: public, max-age=60, must-revalidate
