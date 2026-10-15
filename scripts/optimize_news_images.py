@@ -19,6 +19,7 @@ SOURCES = {
 }
 HOSTS = {"sh-anime.shochiku.co.jp", "cf.graniph.com"}
 MAX_BYTES = 5 * 1024 * 1024
+# A failed origin download must never create a broken local image URL.
 MAX_PIXELS = 25_000_000
 Image.MAX_IMAGE_PIXELS = MAX_PIXELS
 
