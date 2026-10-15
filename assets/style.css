@@ -194,3 +194,17 @@
   .article .prose > section.release-summary > h2:first-child{font-size:22px;margin-bottom:18px}
   .article .prose > section.release-summary dl{grid-template-columns:1fr;row-gap:18px}
 }
+
+/* Homepage editorial spotlight: lead story + compact supporting news. */
+.home-news-spotlight{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:stretch}
+.home-news-spotlight>.visual-card:first-child{grid-row:span 2;display:flex;flex-direction:column;border:1px solid var(--line);overflow:hidden}
+.home-news-spotlight>.visual-card:first-child>img{width:100%;height:310px;object-fit:cover;object-position:center 28%}
+.home-news-spotlight>.visual-card:first-child .visual-body{padding:25px;flex:1}
+.home-news-spotlight>.visual-card:first-child h3{font-size:clamp(1.35rem,2vw,1.95rem);line-height:1.2}
+.home-news-spotlight>.visual-card:not(:first-child){display:grid;grid-template-columns:minmax(125px,38%) 1fr;min-width:0;overflow:hidden}
+.home-news-spotlight>.visual-card:not(:first-child)>img{width:100%;height:100%;min-height:165px;object-fit:cover}
+.home-news-spotlight>.visual-card:not(:first-child) .visual-body{padding:17px;min-width:0}
+.home-news-spotlight>.visual-card:not(:first-child) h3{font-size:1.04rem;line-height:1.35}
+.home-news-spotlight>.visual-card:not(:first-child) p{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+@media(max-width:860px){.home-news-spotlight{grid-template-columns:1fr 1fr}.home-news-spotlight>.visual-card:first-child{grid-column:1/-1;grid-row:auto}.home-news-spotlight>.visual-card:first-child>img{height:280px}.home-news-spotlight>.visual-card:not(:first-child){display:flex;flex-direction:column}.home-news-spotlight>.visual-card:not(:first-child)>img{height:180px;min-height:0}}
+@media(max-width:560px){.home-news-spotlight{grid-template-columns:1fr;gap:14px}.home-news-spotlight>.visual-card:first-child>img{height:240px}.home-news-spotlight>.visual-card:first-child .visual-body{padding:18px}.home-news-spotlight>.visual-card:not(:first-child){display:grid;grid-template-columns:120px minmax(0,1fr)}.home-news-spotlight>.visual-card:not(:first-child)>img{height:100%;min-height:140px}.home-news-spotlight>.visual-card:not(:first-child) .visual-body{padding:12px}.home-news-spotlight>.visual-card:not(:first-child) p{display:none}}
