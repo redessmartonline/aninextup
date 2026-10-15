@@ -35,6 +35,10 @@ def extract(path):
     image = data.get("image") or meta(source, "og:image") or "/assets/images/anime-image-fallback.svg"
     if image.startswith("assets/"):
         image = "/" + image
+    # Prefer optimized local editorial thumbnails only after they actually exist.
+    local_thumb = ROOT / "assets" / "images" / "news" / (path.stem + ".webp")
+    if local_thumb.is_file():
+        image = "/assets/images/news/" + path.stem + ".webp"
     return dict(article="articles/" + path.stem, title=title, tag=data.get("tag") or "ANIME NEWS",
                 description=data.get("description") or meta(source, "description"),
                 image=image, published=date_value)
