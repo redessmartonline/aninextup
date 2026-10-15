@@ -15,9 +15,8 @@ DEST = ROOT / "assets/images/news"
 # Explicit editorial-source allowlist, not arbitrary user-controlled image fetching.
 SOURCES = {
     "yumeneko-connect-anime-announcement": "https://sh-anime.shochiku.co.jp/yumeconne-anime/og-image.jpg",
-    "bleach-thousand-year-blood-war-graniph-collection-october-2026": "https://digitalpr.jp/simg/2515/145804/700_367_202610131847576acdfe4d0656a.jpg",
 }
-HOSTS = {"sh-anime.shochiku.co.jp", "digitalpr.jp"}
+HOSTS = {"sh-anime.shochiku.co.jp"}
 MAX_BYTES = 5 * 1024 * 1024
 # A failed origin download must never create a broken local image URL.
 MAX_PIXELS = 25_000_000
