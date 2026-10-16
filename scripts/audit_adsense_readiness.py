@@ -77,7 +77,8 @@ def audit():
                 warnings.append(f"IMAGE WITHOUT ALT {rel}: {src[:80]}")
             if not src or src.startswith(("data:", "http:", "https:", "//")):
                 continue
-            local = (path.parent / urllib.parse.unquote(urllib.parse.urlsplit(src).path)).resolve()
+            image_path = urllib.parse.unquote(urllib.parse.urlsplit(src).path)
+            local = ((ROOT / image_path.lstrip("/")) if image_path.startswith("/") else (path.parent / image_path)).resolve()
             if local.is_relative_to(ROOT) and not local.is_file():
                 issues.append(f"BROKEN IMAGE {rel}: {src}")
         for href in p.links:
