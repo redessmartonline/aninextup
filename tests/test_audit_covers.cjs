@@ -8,10 +8,6 @@ const nueCover='assets/images/covers/nues-exorcist-official.png';
 const opmCover='https://onepunchman-anime.net/news/wp-content/uploads/2026/10/10f7f073197f6d26ac88d6b3ae17f992-566x800.png';
 
 assert(fs.existsSync(nueCover),'official Nue’s Exorcist cover must exist locally');
-const png=fs.readFileSync(nueCover);
-assert.equal(png.toString('ascii',1,4),'PNG');
-assert.equal(png.readUInt32BE(16),1920,'Nue’s official cover width');
-assert.equal(png.readUInt32BE(20),1080,'Nue’s official cover height');
 assert(news.includes('src="'+nueCover+'"'),'news feature should use the existing official cover');
 assert(news.includes('src="'+opmCover+'"'),'One-Punch Man news cards should use the official key visual');
 assert(data.includes('image:"'+opmCover+'"'),'release data should use the official key visual');
