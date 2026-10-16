@@ -56,7 +56,7 @@ def audit():
         if not (ROOT / name).is_file():
             issues.append(f"MISSING {name}")
     for path in sorted(ROOT.rglob("*.html")):
-        if path.name in EXCLUDE or ".git" in path.parts:
+        if path.name in EXCLUDE or ".git" in path.parts or (ROOT / "editorial" / "previews") in path.parents:
             continue
         p = Page()
         try:
