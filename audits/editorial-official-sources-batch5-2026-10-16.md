@@ -1,6 +1,6 @@
 # Official-source verification and media provenance — batch 5 (2026-10-16)
 
-Scope: resolve the two pending source-verification items in batch 4. Read the published AniNextUp HTML on `main` and compare its principal assertions with the actual primary-source pages. No article text or visible site assets are changed.
+Scope: resolve the two pending source-verification items in batch 4. Read the published AniNextUp HTML on `main` and compare its principal assertions with the actual primary-source pages. One narrow text-only correction to the Bless article is included; no visual site assets, layout, image, or trailer is changed.
 
 ## Bless: Akiharu Nakano character PV
 
@@ -13,7 +13,7 @@ Article: `articles/bless-anime-akiharu-nakano-koki-uchiyama-january-2027.html`
 - Official production credits include A-1 Pictures, director Shotaro Kitamura, character designer Honoka Yokoyama and composer Ryo Yoshimata: https://bless-anime.com/ and https://a1p.jp/works/bless/
 - Article accurately notes that international streaming and an exact premiere date are not established by these cited announcements.
 
-**Nuance:** Aniplex describes Nakano as a high-school student learning makeup at **Mirror (ミラー)**. The article calls this “Mirror Academy,” which is not the wording established by the official release. Treat that expanded institutional label as **not independently supported**; a narrow wording correction is recommended if the article is edited.
+**Nuance:** Aniplex describes Nakano as a high-school student learning makeup at **Mirror (ミラー)**. The article calls this “Mirror Academy,” which is not the wording established by the official release. Treat that expanded institutional label as **not independently supported**; this PR corrects the wording to **“studies makeup with the Mirror group”**, avoiding the unsupported institutional term.
 
 ## I Got a Cheat Skill in Another World Season 2
 
@@ -36,4 +36,4 @@ Article: `articles/i-got-a-cheat-skill-season-2-january-2027.html`
 
 ## Disposition
 
-Both previously pending batch-4 source verifications are now **corroborated for the enumerated claims**. One wording nuance (“Mirror Academy”) remains for a potential targeted correction. Image permissions and real-browser playback are still **unverified**.
+Both previously pending batch-4 source verifications are now **corroborated for the enumerated claims**. The unsupported wording (“Mirror Academy”) was corrected in the Bless article. Image permissions and real-browser playback are still **unverified**.
