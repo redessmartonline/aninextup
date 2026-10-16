@@ -3,6 +3,13 @@ document.querySelectorAll('.site-header').forEach(header=>{
   const button=header.querySelector('.menu');
   const nav=header.querySelector('nav');
   if(!button||!nav)return;
+  // Keep a direct route back to the AniNextUp homepage on every page.
+  if(!nav.querySelector('a[href="/"]')){
+    const home=document.createElement('a');
+    home.href='/';
+    home.textContent='HOME';
+    nav.insertBefore(home,nav.querySelector('a[href="today"],a[href="/today"]')||nav.firstChild);
+  }
   const close=(restoreFocus=false)=>{
     nav.classList.remove('open');
     button.setAttribute('aria-expanded','false');
