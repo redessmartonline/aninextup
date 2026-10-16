@@ -1,0 +1,31 @@
+name: All articles preflight audit
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'articles/**'
+      - 'scripts/audit_all_articles_preflight.py'
+      - '.github/workflows/all-articles-preflight.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Audit all published HTML articles
+        run: python scripts/audit_all_articles_preflight.py --root articles --out audits/generated
+      - name: Upload complete article-by-article reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: all-articles-preflight
+          path: |
+            audits/generated/all-articles-preflight.json
+            audits/generated/all-articles-preflight.md
+          retention-days: 30
