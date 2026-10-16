@@ -1,7 +1,8 @@
 window.ANINEXTUP_DATA={
 updated:"2026-10-16",
 site:{timezone:"America/Santo_Domingo",season:"Fall 2026"},
-anime:[
+anime:
+{id:"full-clearing-another-world-zero-believers-premiere",image:"https://zero-believers-anime.com/assets/images/top/mv/mv01.jpg",title:"Full Clearing Another World under a Goddess with Zero Believers: Premiere and Trailer",tag:"OFFICIAL NEWS",article:"articles/full-clearing-another-world-zero-believers-premiere",description:"The anime premieres October 11, 2026. Confirmed production details and official trailer sources."},
 {image:"https://ogre.natalie.mu/media/news/comic/2026/0104/boukenshalicense_anime_tokuho.jpg",title:"I Lost My Adventurer's License Anime: January 2027 Premiere, Trailer and Cast",tag:"OFFICIAL ANIME NEWS",article:"articles/i-lost-my-adventurers-license-anime-january-2027",description:"I Lost My Adventurer's License anime premieres in January 2027. See the teaser, Douglas and Rabi's voice cast, studio and what remains unconfirmed."},
 {image:"https://i.ytimg.com/vi/BVz1EyrHILk/maxresdefault.jpg",title:"Berserk of Gluttony Season 2 Confirmed for 2027: New Trailer and Streaming Details",tag:"OFFICIAL ANIME NEWS",article:"articles/berserk-of-gluttony-season-2",description:"Berserk of Gluttony Season 2 is coming in 2027. Find the official teaser, Crunchyroll streaming regions, and what remains unconfirmed."},
 {id:"bless-anime-akiharu-nakano-koki-uchiyama-january-2027",image:"https://bless-anime.com/assets/img/top/visual/visual1-main.jpg",title:"Bless Anime Reveals Koki Uchiyama as Akiharu Nakano Ahead of January 2027 Premiere",tag:"OFFICIAL NEWS",article:"articles/bless-anime-akiharu-nakano-koki-uchiyama-january-2027",description:"Koki Uchiyama joins the January 2027 Bless anime as Akiharu Nakano; new character PV announced."},
