@@ -32,7 +32,7 @@ class Page(HTMLParser):
         if tag == "a" and a.get("href"):
             self.links.append(a["href"])
         if tag == "img":
-            self.images.append((a.get("src", ""), a.get("alt", "")))
+            self.images.append((a.get("src", ""), a.get("alt")))
         if tag == "link" and a.get("rel") == "canonical":
             self.canonical.append(a.get("href", ""))
         if tag == "meta" and a.get("name", "").lower() == "description":
@@ -73,7 +73,7 @@ def audit():
         if not p.canonical:
             warnings.append(f"NO CANONICAL {rel}")
         for src, alt in p.images:
-            if not alt.strip():
+            if alt is None:
                 warnings.append(f"IMAGE WITHOUT ALT {rel}: {src[:80]}")
             if not src or src.startswith(("data:", "http:", "https:", "//")):
                 continue
