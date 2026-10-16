@@ -2,7 +2,14 @@
 import json,re,datetime,pathlib,collections,ast
 root=pathlib.Path(__file__).resolve().parents[1]
 data=(root/'assets/data.js').read_text(encoding='utf8')
-rows=[x for x in data.splitlines() if re.search(r'\{id:"',x)]
+# Only structured release entries require date/platform/category/status fields.
+# Editorial news cards in the same anime array, and cards in guides, use a
+# different schema and must not be flagged as malformed release entries.
+anime_match=re.search(r'(?m)^anime:\[\s*\n(.*?)^\],',data,re.S|re.M)
+if not anime_match:raise RuntimeError('anime array not found in assets/data.js')
+anime_rows=[x for x in anime_match.group(1).splitlines() if re.search(r'\{id:"',x)]
+rows=[x for x in anime_rows if re.search(r'\\bstatus:',x)]
+news_cards=[x for x in anime_rows if not re.search(r'\\bstatus:',x)]
 issues=[];seen=set();found=0
 def field(row,k):
  m=re.search(r'\b'+re.escape(k)+r':("(?:\\.|[^"\\])*"|null)',row)
@@ -33,6 +40,6 @@ for row in rows:
  except json.JSONDecodeError as ex:warn(ident,'invalid_embedded_json',str(ex));continue
  for k in ('id','title','date','dateLabel','platform','category','status','image'):
   if embedded.get(k)!=e[k]:warn(ident,'index_mismatch',k+': central='+repr(e[k])+', article='+repr(embedded.get(k)))
-report={'scope':'Structural checks for indexed articles only; no factual verification','entries':len(rows),'articles_found':found,'warning_count':len(issues),'warnings_by_code':dict(collections.Counter(x['code'] for x in issues)),'findings':issues}
+report={'scope':'Structured release entries in anime[] only; news cards excluded; no factual verification','entries':len(rows),'news_cards_excluded':len(news_cards),'articles_found':found,'warning_count':len(issues),'warnings_by_code':dict(collections.Counter(x['code'] for x in issues)),'findings':issues}
 out=root/'editorial_report.json';out.write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf8')
 print(json.dumps(report,ensure_ascii=False,indent=2))
