@@ -90,22 +90,47 @@ function loadSiteSearchIndex(){
  })().catch(e=>{siteSearchIndexPromise=null;throw e});
  return siteSearchIndexPromise;
 }
+function rankSiteSearchEntries(entries,words){
+ return entries.map(x=>{
+  const title=normalizeSiteSearch(x.title);
+  return {...x,score:words.every(w=>x.search.includes(w))?words.reduce((n,w)=>n+(title.includes(w)?5:1),0):-1};
+ }).filter(x=>x.score>=0).sort((a,b)=>b.score-a.score||a.title.localeCompare(b.title)).slice(0,40);
+}
+function renderSiteSearchResults(box,results){
+ if(!box)return;
+ box.innerHTML=results.length?results.map(x=>{
+  const a=document.createElement('a');a.href=x.url;
+  const strong=document.createElement('strong');strong.textContent=x.title;
+  const span=document.createElement('span');span.textContent=x.description||'AniNextUp article';
+  a.append(strong,span);return a.outerHTML
+ }).join(''):'<div class="no-result">No matching articles found.</div>';
+ box.hidden=false;
+}
 async function searchSite(){
  const input=document.getElementById('search'),box=document.getElementById('searchResults');
  const raw=(input?.value||'').trim(),request=++siteSearchRequest;
  if(!raw){if(box)box.hidden=true;return}
  const words=normalizeSiteSearch(raw).split(/\s+/).filter(Boolean);
- if(box){box.innerHTML='<div class="no-result">Searching all articles…</div>';box.hidden=false}
+ // Show matches already present in the homepage data before loading the full sitemap index.
+ const localEntries=(window.ANINEXTUP_DATA?.anime||[]).filter(x=>x.article).map(x=>({
+  title:x.title||'',description:x.description||'',url:new URL(x.article,location.origin).pathname,
+  search:normalizeSiteSearch([x.title,x.description,x.tag,x.platform].filter(Boolean).join(' '))
+ }));
+ const immediate=rankSiteSearchEntries(localEntries,words);
+ if(immediate.length)renderSiteSearchResults(box,immediate);
+ else if(box){box.innerHTML='<div class="no-result">Searching all articles…</div>';box.hidden=false}
  try{
   const entries=await loadSiteSearchIndex();
   if(request!==siteSearchRequest)return;
-  const results=entries.map(x=>{
-   const title=normalizeSiteSearch(x.title);
-   return {...x,score:words.every(w=>x.search.includes(w))?words.reduce((n,w)=>n+(title.includes(w)?5:1),0):-1};
-  }).filter(x=>x.score>=0).sort((a,b)=>b.score-a.score||a.title.localeCompare(b.title)).slice(0,40);
-  if(box){box.innerHTML=results.length?results.map(x=>{const a=document.createElement('a');a.href=x.url;const strong=document.createElement('strong');strong.textContent=x.title;const span=document.createElement('span');span.textContent=x.description||'AniNextUp article';a.append(strong,span);return a.outerHTML}).join(''):'<div class="no-result">No matching articles found.</div>';box.hidden=false}
+  const results=rankSiteSearchEntries(entries,words);
+  if(box)renderSiteSearchResults(box,results);
   else if(results[0])location.href=results[0].url;
- }catch(e){if(request===siteSearchRequest&&box){box.innerHTML='<div class="no-result">Search is temporarily unavailable. Please try again.</div>';box.hidden=false}}
+ }catch(e){
+  if(request===siteSearchRequest&&box&&!immediate.length){
+   box.innerHTML='<div class="no-result">Search is temporarily unavailable. Please try again.</div>';
+   box.hidden=false;
+  }
+ }
 }
 document.getElementById('search')?.addEventListener('keydown',e=>{if(e.key==='Enter')searchSite()});document.getElementById('search')?.addEventListener('input',e=>{if(!e.target.value.trim()){const b=document.getElementById('searchResults');if(b)b.hidden=true;siteSearchRequest++}});
 
