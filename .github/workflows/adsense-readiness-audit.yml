@@ -1,16 +1,42 @@
 name: AdSense Readiness Audit
 on:
   workflow_dispatch:
-  push:
+  pull_request:
     paths:
+      - 'articles/**'
+      - '*.html'
+      - 'assets/images/**'
+      - 'sitemap.xml'
+      - 'robots.txt'
+      - 'ads.txt'
       - 'scripts/audit_adsense_readiness.py'
       - '.github/workflows/adsense-readiness-audit.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'articles/**'
+      - '*.html'
+      - 'assets/images/**'
+      - 'sitemap.xml'
+      - 'robots.txt'
+      - 'ads.txt'
+      - 'scripts/audit_adsense_readiness.py'
+      - '.github/workflows/adsense-readiness-audit.yml'
+permissions:
+  contents: read
 jobs:
   audit:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
     steps:
       - uses: actions/checkout@v4
       - name: Check links, metadata, images and sitemap
-        run: python3 scripts/audit_adsense_readiness.py
+        run: |
+          python3 scripts/audit_adsense_readiness.py 2>&1 | tee adsense_readiness_audit.log
+          exit ${PIPESTATUS[0]}
+      - name: Upload audit log even on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: adsense-readiness-audit-log
+          path: adsense_readiness_audit.log
+          if-no-files-found: warn
