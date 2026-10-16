@@ -6,10 +6,10 @@ The latest main editorial audit workflow completed successfully but reported 7 w
 `scripts/editorial_audit.py` scanned **every line containing `{id:"`** in `assets/data.js` as though it were a release calendar entry. The data file contains different schemas:
 - `anime[]` includes **49 structured release entries** with `status`, `date`, `platform`, etc.
 - `anime[]` also includes **3 news teaser cards** with `tag` and `description` instead of release fields: Bless Anime Akiharu Nakano; I Got a Cheat Skill Season 2; In a World Full of Zombies. They caused the three `invalid_status` and three `missing_field` warnings.
-- `guides[]` includes the Yumeneko Connect article card with `date:"TBA"` and `status:"confirmed"`. That card caused the one `invalid_date` warning, because the validator mistakenly applied release-date rules to a guide card.
+- `anime[]` also included the Yumeneko Connect article entry with `date:"TBA"` and `status:"confirmed"`. This was a genuine metadata inconsistency: no exact release date has been announced. The article's embedded index and central data entry were both corrected to `date:null`, `dateLabel:"TBA"`, `status:"tba"`.
 
 ## Patch
-The release validator now selects `anime[]` entries containing a `status` property. It counts but excludes the three differently structured news cards and all `guides[]` cards from release-specific validation. No site data, article, image, trailer, or design is modified.
+The release validator now selects `anime[]` entries containing a `status` property. It counts but excludes the three differently structured news cards and all `guides[]` cards from release-specific validation. The Yumeneko release-status metadata was also corrected consistently in `assets/data.js` and its embedded article index. No visible article body, image, trailer, or design was modified.
 
 **Expected** after CI: 49 structured entries, 3 excluded news cards, 0 warnings. This is not evidence that every claim or news card has been fact checked. Future work should implement separate schema checks for the editorial news cards.
 
