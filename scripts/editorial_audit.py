@@ -8,8 +8,8 @@ data=(root/'assets/data.js').read_text(encoding='utf8')
 anime_match=re.search(r'(?m)^anime:\[\s*\n(.*?)^\],',data,re.S|re.M)
 if not anime_match:raise RuntimeError('anime array not found in assets/data.js')
 anime_rows=[x for x in anime_match.group(1).splitlines() if re.search(r'\{id:"',x)]
-rows=[x for x in anime_rows if re.search(r'\\bstatus:',x)]
-news_cards=[x for x in anime_rows if not re.search(r'\\bstatus:',x)]
+rows=[x for x in anime_rows if re.search(r'\bstatus:',x)]
+news_cards=[x for x in anime_rows if not re.search(r'\bstatus:',x)]
 issues=[];seen=set();found=0
 def field(row,k):
  m=re.search(r'\b'+re.escape(k)+r':("(?:\\.|[^"\\])*"|null)',row)
