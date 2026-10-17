@@ -21,6 +21,11 @@ RELATED_STORY_OVERRIDES = {
     ],
 }
 
+for article_slug, cards in RELATED_STORY_OVERRIDES.items():
+    targets = [card[0] for card in cards]
+    if len(targets) != 3 or len(set(targets)) != 3 or article_slug in targets:
+        raise ValueError(f'{article_slug}: related stories must be three unique articles excluding itself')
+
 
 def related_stories_section(cards):
     links = []
