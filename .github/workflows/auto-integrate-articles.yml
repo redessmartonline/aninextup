@@ -40,13 +40,16 @@ jobs:
               page = p.read_text(encoding="utf-8")
               original_page = page
               footer = '<footer><b>ANINEXTUP</b><p>Anime releases, streaming guides, calendars and news.</p><small>Release dates and availability can vary by region.</small><p><a href="../about">About</a> · <a href="../contact">Contact</a> · <a href="../privacy">Privacy</a> · <a href="../terms">Terms</a></p></footer>'
-              page, footer_count = re.subn(r"<footer\b[^>]*>.*?</footer\s*>", footer, page, count=1, flags=re.I|re.S)
-              if footer_count == 0:
+              # Collapse all legacy duplicates and append one canonical footer at the end.
+              page = re.sub(r"<footer\b[^>]*>.*?</footer\s*>", "", page, flags=re.I|re.S)
+              if "</body>" in page:
                   page = page.replace("</body>", footer + "\n</body>", 1)
+              else:
+                  page += "\n" + footer + "\n"
               if page != original_page:
                   p.write_text(page, encoding="utf-8")
               app_script = re.compile(r'<script\s+src=["\'](?:\.\./)?assets/app\.js(?:\?[^"\']*)?["\']\s*></script>', re.I)
-              app_script_tag = '<script src="../assets/app.js?v=20261017-footer-full"></script>'
+              app_script_tag = '<script src="../assets/app.js?v=20261017-footer-restored"></script>'
               updated, replacements = app_script.subn(app_script_tag, page, count=1)
               if replacements == 0:
                   updated = page.replace("</body>", app_script_tag + "\n</body>", 1)
