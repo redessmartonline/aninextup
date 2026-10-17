@@ -10,6 +10,17 @@ document.querySelectorAll('.site-header').forEach(header=>{
     home.textContent='HOME';
     nav.insertBefore(home,nav.querySelector('a[href="today"],a[href="/today"]')||nav.firstChild);
   }
+  const newsLink=nav.querySelector('a[href="news"],a[href="/news"]');
+  if(newsLink&&!newsLink.parentElement.classList.contains('nav-news-item')){
+    const item=document.createElement('div');item.className='nav-news-item';
+    newsLink.parentNode.insertBefore(item,newsLink);item.append(newsLink);
+    const submenu=document.createElement('div');submenu.className='nav-news-menu';
+    submenu.setAttribute('role','group');submenu.setAttribute('aria-label','News subcategories');
+    [['New Anime','new-anime'],['Returning Series','returning-series'],['Trailers & Cast','trailers-cast'],['Release News','release-news']].forEach(([label,category])=>{
+      const link=document.createElement('a');link.href='/news?category='+category;link.textContent=label;submenu.append(link);
+    });
+    item.append(submenu);
+  }
   const close=(restoreFocus=false)=>{
     nav.classList.remove('open');
     button.setAttribute('aria-expanded','false');
