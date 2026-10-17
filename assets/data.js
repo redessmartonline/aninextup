@@ -1,7 +1,8 @@
 window.ANINEXTUP_DATA={
 updated:"2026-10-17",
 site:{timezone:"America/Santo_Domingo",season:"Fall 2026"},
-anime:[
+anime:
+{id:"sakamoto-days-season-2",image:"https://img.youtube.com/vi/Ld4PMbghy78/maxresdefault.jpg",title:"Sakamoto Days Season 2 Release Date, Netflix, Trailer & Cast",tag:"OFFICIAL NEWS",article:"articles/sakamoto-days-season-2",description:"SAKAMOTO DAYS Season 2 returns in January 2027 on Netflix. Get the confirmed release window, official character trailer, story details and new cast characters."},
 {id:"maebashi-witches-emoemories",image:"https://www.maebashi-witches.com/assets/img/common/movie_thumbnail_007.jpg",title:"Maebashi Witches Movie Release Date: Emoemories – Blooming Witches",date:"2026-10-23",platform:"Japanese Theaters",article:"articles/maebashi-witches-emoemories-release-date",category:"Anime Movie",status:"confirmed"},
 {id:"made-in-abyss-awakening-mystery",image:"https://miabyss.com/part1_images/movie/tmb_003.jpg",title:"Made in Abyss: Awakening Mystery Release Date and Where to Watch",date:"2026-10-23",platform:"Japanese Theaters",article:"articles/made-in-abyss-awakening-mystery-release-date",category:"Anime Movie",status:"confirmed"},
 {id:"full-clearing-another-world-zero-believers-premiere",image:"https://zero-believers-anime.com/assets/images/top/mv/mv01.jpg",title:"Full Clearing Another World under a Goddess with Zero Believers: Premiere and Trailer",tag:"OFFICIAL NEWS",article:"articles/full-clearing-another-world-zero-believers-premiere",description:"The anime premieres October 11, 2026. Confirmed production details and official trailer sources."},
