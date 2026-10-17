@@ -208,7 +208,7 @@ const homeToday=homeIso(new Date(new Date().toLocaleString('en-US',{timeZone:TZ}
 // The static HTML cards remain a no-JavaScript / network-error fallback.
 const latestNewsNodes=discoveryNodes('[data-home-latest]');
 if(latestNewsNodes.length){
-  fetch('/assets/latest-news.json',{cache:'no-cache'})
+  fetch('/assets/latest-news.json?v='+Date.now(),{cache:'no-store'})
     .then(response=>{if(!response.ok)throw new Error('Latest news feed unavailable');return response.json()})
     .then(feed=>{
       const seen=new Set();
