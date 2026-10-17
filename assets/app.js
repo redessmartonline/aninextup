@@ -416,9 +416,11 @@ if(document.querySelector('article.article')){
 }
 
 
-// Preserve the standard footer on article pages, including cached legacy HTML.
-if(document.querySelector('article.article')&&!document.querySelector('footer')){
-  const footer=document.createElement('footer');
+// Ensure every article has exactly one complete footer, including legacy HTML.
+if(document.querySelector('article.article')){
+  const footers=[...document.querySelectorAll('footer')];
+  const footer=footers.shift()||document.createElement('footer');
   footer.innerHTML='<b>ANINEXTUP</b><p>Anime releases, streaming guides, calendars and news.</p><small>Release dates and availability can vary by region.</small><p><a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></p>';
-  document.body.append(footer);
+  footers.forEach(extra=>extra.remove());
+  if(!footer.isConnected)document.body.append(footer);
 }
