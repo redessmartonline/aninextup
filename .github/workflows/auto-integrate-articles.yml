@@ -43,7 +43,7 @@ jobs:
               if page != original_page:
                   p.write_text(page, encoding="utf-8")
               app_script = re.compile(r'<script\s+src=["\'](?:\.\./)?assets/app\.js(?:\?[^"\']*)?["\']\s*></script>', re.I)
-              app_script_tag = '<script src="../assets/app.js?v=20261017-article-footer-removed-v3"></script>'
+              app_script_tag = '<script src="../assets/app.js?v=20261017-article-footer-removed-v4"></script>'
               updated, replacements = app_script.subn(app_script_tag, page, count=1)
               if replacements == 0:
                   updated = page.replace("</body>", app_script_tag + "\n</body>", 1)
