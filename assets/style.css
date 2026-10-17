@@ -226,3 +226,6 @@
 .site-search-panel .search-results a{align-items:flex-start;flex-direction:column;gap:3px}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 @media(max-width:780px){.site-header .menu{order:2}.site-header nav{order:3;margin-left:0}.global-search-toggle{order:4;margin-left:auto;margin-right:0}.site-search-panel{right:18px;width:calc(100vw - 36px)}}
+
+/* Desktop search follows the final navigation link. */
+@media(min-width:781px){.site-header nav{order:2}.site-header .global-search-toggle{order:3}}
