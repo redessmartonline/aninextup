@@ -3,7 +3,7 @@ document.querySelectorAll('.site-header').forEach(header=>{
   const button=header.querySelector('.menu');
   const nav=header.querySelector('nav');
   if(!button||!nav)return;
-  const langPath=location.pathname.replace(/\\.html$/,'').replace(/\\/$/,'')||'/';
+  const langPath=location.pathname.replace(/\.html$/,'').replace(/\/$/,'')||'/';
   const enToEs={'/':'/es/','/calendar':'/es/calendario','/news':'/es/noticias','/where-to-watch':'/es/donde-ver','/new-anime-2026':'/es/new-anime-2026'};
   const esToEn={'/es':'/','/es/calendario':'/calendar','/es/noticias':'/news','/es/donde-ver':'/where-to-watch','/es/new-anime-2026':'/new-anime-2026'};
   const onSpanish=langPath==='/es'||langPath.startsWith('/es/');
