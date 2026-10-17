@@ -9,7 +9,7 @@ document.querySelectorAll('.site-header').forEach(header=>{
   const onSpanish=langPath==='/es'||langPath.startsWith('/es/');
   const languageSelect=document.createElement('select');
   languageSelect.className='language-select';
-  languageSelect.setAttribute('aria-label','Choose page language');
+  languageSelect.setAttribute('aria-label',onSpanish?'Idioma de la página':'Choose page language');
   languageSelect.innerHTML='<option value="en">English</option><option value="es">Español</option><option value="fr">Français</option><option value="pt">Português</option><option value="de">Deutsch</option><option value="it">Italiano</option><option value="ja">日本語</option><option value="zh-CN">中文（简体）</option><option value="zh-TW">中文（繁體）</option><option value="ko">한국어</option><option value="ar">العربية</option><option value="hi">हिन्दी</option><option value="ru">Русский</option><option value="id">Bahasa Indonesia</option><option value="tr">Türkçe</option>';
   languageSelect.value=onSpanish?'es':'en';
   languageSelect.addEventListener('change',()=>{
