@@ -28,6 +28,7 @@ jobs:
         run: |
           from pathlib import Path
           import datetime, html as htmlmod, json, re, xml.etree.ElementTree as ET
+          from scripts.news_categories import classify_news_category
 
           today = datetime.date.today().isoformat()
           data_path = Path("assets/data.js")
@@ -72,6 +73,25 @@ jobs:
                   raise SystemExit(f"{p}: invalid aninextup-index JSON: {e}")
 
               article = p.with_suffix("").as_posix()
+              category = meta.get("newsCategory")
+              category_set = {"new-anime", "returning-series", "trailers-cast", "release-news"}
+              if category not in category_set:
+                  article_key = json.dumps(article)
+                  existing_entry = re.search(
+                      r'\{[^\n{}]*article:' + re.escape(article_key)
+                      + r'[^\n{}]*newsCategory:["\']([^"\']+)["\'][^\n{}]*\},', data
+                  )
+                  category = existing_entry.group(1) if existing_entry and existing_entry.group(1) in category_set else None
+              if category not in category_set:
+                  category = classify_news_category(page, kind=kind)
+              if category:
+                  meta["newsCategory"] = category
+              else:
+                  meta.pop("newsCategory", None)
+              updated_meta = json.dumps(meta, ensure_ascii=False, separators=(",", ":"))
+              if updated_meta != m.group(1):
+                  page = page[:m.start(1)] + updated_meta + page[m.end(1):]
+                  p.write_text(page, encoding="utf-8")
 
               def js(v):
                   if v is None: return "null"
@@ -93,6 +113,7 @@ jobs:
                   fields = [f'id:{js(item_id)}', f'image:{js(image)}', f'title:{js(title)}', f'date:{js(date)}']
                   if date_label: fields.append(f'dateLabel:{js(date_label)}')
                   fields += [f'platform:{js(platform)}', f'article:{js(article)}', f'category:{js(category)}', f'status:{js(status)}']
+                  if meta.get("newsCategory"): fields.append(f'newsCategory:{js(meta["newsCategory"])}')
                   line = "{" + ",".join(fields) + "},"
                   pattern = re.compile(r'\{[^\n{}]*article:' + re.escape(js(article)) + r'[^\n{}]*\},')
                   if pattern.search(data):
@@ -102,10 +123,12 @@ jobs:
               else:
                   tag = meta.get("tag", "NEW")
                   desc = meta.get("description", "")
-                  line = "{" + ",".join([
+                  fields = [
                       f'image:{js(image)}', f'title:{js(title)}', f'tag:{js(tag)}',
                       f'article:{js(article)}', f'description:{js(desc)}'
-                  ]) + "},"
+                  ]
+                  if meta.get("newsCategory"): fields.append(f'newsCategory:{js(meta["newsCategory"])}')
+                  line = "{" + ",".join(fields) + "},"
                   pattern = re.compile(r'\{[^\n{}]*article:' + re.escape(js(article)) + r'[^\n{}]*\},')
                   if pattern.search(data):
                       data = pattern.sub(line, data, count=1)
@@ -146,6 +169,9 @@ jobs:
           ET.parse("sitemap.xml")
           print("sitemap.xml valid")
           PY
+
+      - name: Verify News classification
+        run: python tests/test_news_categories.py
 
       - name: Commit automatic integration
         run: |
