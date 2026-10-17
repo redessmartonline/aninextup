@@ -38,7 +38,7 @@ jobs:
           # <script type="application/json" id="aninextup-index">{"kind":"anime",...}</script>
           for p in sorted(Path("articles").glob("*.html")):
               page = p.read_text(encoding="utf-8")
-          page = re.sub(r"<footer\b[^>]*>.*?</footer\s*>", "", page, count=1, flags=re.I|re.S)
+              page = re.sub(r"<footer\b[^>]*>.*?</footer\s*>", "", page, count=1, flags=re.I|re.S)
               app_script = re.compile(r'<script\s+src=["\'](?:\.\./)?assets/app\.js(?:\?[^"\']*)?["\']\s*></script>', re.I)
               app_script_tag = '<script src="../assets/app.js?v=20261017-article-footer-removed"></script>'
               updated, replacements = app_script.subn(app_script_tag, page, count=1)
