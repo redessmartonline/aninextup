@@ -237,52 +237,56 @@ for(const el of discoveryNodes('[data-anime-platform]')){
 
 discoveryNodes('[data-platform-count]').forEach(el=>{const p=el.dataset.platformCount;const n=(D.anime||[]).filter(x=>window.ANINEXTUP_RELEASES.matchesPlatform(x,p)).length;el.textContent=n?'· '+n+' TRACKED':''});
 
-// Consistent, accessible related releases for every article page.
+// Keep exactly three related anime releases on every article, including legacy and future pages.
 const renderRelatedReleases=data=>{
   const article=document.querySelector('article.article');
   if(!article)return;
-  // Keep the editor's related links; fill only pages without a section.
-  if(article.querySelector('.related-releases'))return;
   const slug=location.pathname.split('/').pop().replace(/\.html$/,'');
-  const items=(data?.anime||[]).filter(a=>a.article&&a.title);
+  const items=(data?.anime||[]).filter(a=>a.article&&a.title&&a.image);
   const current=items.find(a=>a.article.split('/').pop().replace(/\.html$/,'')===slug);
-  const ranked=items.filter(a=>a!==current).sort((a,b)=>{
-    const score=x=>(current&&x.category===current.category?4:0)+(current&&x.platform===current.platform?2:0)+(current&&x.date&&x.date===current.date?1:0);
-    return score(b)-score(a);
-  }).slice(0,3);
-  if(!ranked.length)return;
-  const section=article.querySelector('.related-releases')||document.createElement('section');
-  section.className='related-releases';
-  section.dataset.autoRelated='true';
-  const head=document.createElement('div');head.className='section-head';
-  const title=document.createElement('div');
-  const kicker=document.createElement('span');kicker.className='kicker';kicker.textContent='KEEP WATCHING';
-  const h=document.createElement('h2');h.textContent='Related releases';
-  title.append(kicker,h);
-  const calendar=document.createElement('a');calendar.href='../calendar';calendar.textContent='FULL CALENDAR →';
-  head.append(title,calendar);
-  const grid=document.createElement('div');grid.className='grid three';
+  let section=article.querySelector('.related-releases');
+  if(!section){
+    section=document.createElement('section');
+    section.className='related-releases';
+    section.setAttribute('aria-labelledby','related-releases-heading');
+    const head=document.createElement('div');head.className='section-head';
+    const title=document.createElement('div');
+    const kicker=document.createElement('span');kicker.className='kicker';kicker.textContent='KEEP WATCHING';
+    const heading=document.createElement('h2');heading.id='related-releases-heading';heading.textContent='Related releases';
+    title.append(kicker,heading);
+    const calendar=document.createElement('a');calendar.href='../calendar';calendar.textContent='FULL CALENDAR →';
+    head.append(title,calendar);section.append(head);article.append(section);
+  }
+  let grid=section.querySelector('.grid');
+  if(!grid){grid=document.createElement('div');grid.className='grid three';section.append(grid);}
+  const existing=Array.from(section.querySelectorAll('.grid > a.mini'));
+  const slugOf=value=>{try{return new URL(value,location.href).pathname.split('/').pop().replace(/\.html$/,'')}catch{return String(value||'').split('/').pop().replace(/\.html$/,'')}};
+  const used=new Set(existing.map(card=>slugOf(card.href)));
+  used.add(slug);
+  const refDate=current?.date||(new Date()).toISOString().slice(0,10);
+  const distance=value=>{
+    const target=Date.parse((value||'')+'T00:00:00Z'),reference=Date.parse(refDate+'T00:00:00Z');
+    return Number.isFinite(target)&&Number.isFinite(reference)?Math.abs(target-reference):999999999;
+  };
+  const score=x=>(current&&x.category===current.category?4:0)+(current&&x.platform===current.platform?2:0)+(current&&x.date&&x.date===current.date?1:0);
+  const ranked=items.filter(x=>!used.has(slugOf(x.article))).sort((a,b)=>{
+    const relevance=score(b)-score(a);
+    return relevance||distance(a.date)-distance(b.date);
+  }).slice(0,Math.max(0,3-existing.length));
   ranked.forEach(a=>{
     const link=document.createElement('a');link.className='mini data-card related-card';link.href='../'+a.article.replace(/^\//,'');
-    if(a.image){
-      try{
-        const source=new URL(a.image,location.origin+'/');
-        // This cached Aoashi asset was visually confirmed to contain another work.
-        if((source.protocol==='https:'||source.origin===location.origin)&&source.pathname!=='/assets/images/covers/aoashi-season-2.jpg'&&!/(?:favicon|\.svg(?:$|\?))/i.test(source.href)){
-          const media=document.createElement('span');media.className='related-card-media';
-          const image=document.createElement('img');image.className='related-card-image';image.alt='';image.width=160;image.height=90;image.loading='lazy';image.decoding='async';
-          image.src=source.href;media.append(image);link.append(media);
-        }
-      }catch{/* An invalid cover must not prevent the related link from rendering. */}
+    const source=new URL(a.image,location.origin+'/');
+    if((source.protocol==='https:'||source.origin===location.origin)&&source.pathname!=='/assets/images/covers/aoashi-season-2.jpg'&&!/(?:favicon|\.svg(?:$|\?))/i.test(source.href)){
+      const media=document.createElement('span');media.className='related-card-media';
+      const image=document.createElement('img');image.className='related-card-image';image.alt=a.title;image.width=160;image.height=90;image.loading='lazy';image.decoding='async';image.src=source.href;media.append(image);link.append(media);
     }
     const copy=document.createElement('div');copy.className='related-card-copy';
-    const label=document.createElement('b');label.textContent=a.category||'ANIME RELEASE';
+    const label=document.createElement('b');label.textContent=a.dateLabel||a.date||'ANIME RELEASE';
     const heading=document.createElement('h3');heading.textContent=a.title;
-    const detail=document.createElement('span');detail.textContent=(a.dateLabel||a.date||'DATE TBA')+' · '+(a.platform||'Release updates')+' →';
+    const detail=document.createElement('span');detail.textContent=(a.platform||'Release updates')+' · Read the release guide →';
     copy.append(label,heading,detail);link.append(copy);grid.append(link);
   });
-  section.replaceChildren(head,grid);
-  article.appendChild(section);
+  normalizeRelatedReleaseGrid(section);
 };
 if(document.querySelector('article.article')){
   if(D.anime?.length)renderRelatedReleases(D);
@@ -307,7 +311,6 @@ function normalizeRelatedReleaseGrid(section){
 
   grid.classList.toggle('three',visibleCards.length===3);
   grid.style.setProperty('display','grid','important');
-  grid.style.setProperty('grid-template-columns','repeat(3,minmax(0,1fr))','important');
   grid.style.setProperty('gap','12px','important');
   grid.style.setProperty('align-items','stretch','important');
   visibleCards.forEach(card=>{
