@@ -414,3 +414,6 @@ if(document.querySelector('article.article')){
   }
  }
 }
+
+// Remove the shared footer from article pages so Related releases is the final content.
+if(document.querySelector('article.article'))document.querySelector('footer')?.remove();
