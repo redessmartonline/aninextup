@@ -415,3 +415,10 @@ if(document.querySelector('article.article')){
  }
 }
 
+
+// Preserve the standard footer on article pages, including cached legacy HTML.
+if(document.querySelector('article.article')&&!document.querySelector('footer')){
+  const footer=document.createElement('footer');
+  footer.innerHTML='<b>ANINEXTUP</b><small>Anime releases, streaming guides, calendars and news.</small>';
+  document.body.append(footer);
+}
