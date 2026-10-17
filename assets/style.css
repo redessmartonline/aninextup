@@ -252,19 +252,22 @@
   align-content:center;
   width:100%;
   max-width:none;
-  min-height:330px;
+  min-height:320px;
 }
 .hero>.eyebrow,.hero>h1,.hero>p{grid-column:1}
-.hero>p{max-width:640px}
+.hero h1{font-size:clamp(54px,7.2vw,82px);margin:12px 0 16px}
+.hero>p{max-width:640px;margin-bottom:10px}
+.hero>p:last-child{margin-bottom:0}
 .hero::before{
   content:"";
-  grid-column:2;
-  grid-row:1 / span 4;
-  justify-self:center;
-  align-self:center;
-  width:min(100%,360px);
+  position:absolute;
+  z-index:-1;
+  top:50%;
+  right:5%;
+  width:min(31vw,360px);
   aspect-ratio:1;
   border-radius:50%;
+  transform:translateY(-50%);
   background:
     radial-gradient(circle at 50% 50%,rgba(221,204,255,.95) 0 3px,transparent 4px),
     radial-gradient(circle at 50% 50%,rgba(139,92,246,.24),rgba(139,92,246,.08) 38%,transparent 70%),
@@ -274,27 +277,27 @@
 }
 .hero::after{
   content:"";
-  grid-column:2;
-  grid-row:1 / span 4;
-  justify-self:center;
-  align-self:center;
-  width:min(84%,300px);
+  position:absolute;
+  z-index:-1;
+  top:50%;
+  right:calc(5% + 30px);
+  width:min(26vw,300px);
   aspect-ratio:1.38;
   border:1px solid rgba(196,181,253,.28);
   border-radius:50%;
-  transform:rotate(-28deg);
+  transform:translateY(-50%) rotate(-28deg);
   box-shadow:0 0 30px rgba(124,58,237,.12),inset 0 0 24px rgba(124,58,237,.07);
   pointer-events:none;
 }
-.hero+section{padding-top:22px}
+.hero+section{padding-top:18px}
 @media(max-width:850px){
-  .hero{grid-template-columns:minmax(0,1.25fr) minmax(210px,.75fr);column-gap:18px;min-height:320px}
+  .hero{grid-template-columns:minmax(0,1.25fr) minmax(210px,.75fr);column-gap:18px;min-height:300px}
   .hero h1{font-size:clamp(48px,7vw,68px)}
 }
 @media(max-width:680px){
-  .hero{display:flex;min-height:320px;max-width:100%}
+  .hero{display:flex;min-height:300px;max-width:100%}
   .hero::before,.hero::after{display:none}
-  .hero+section{padding-top:18px}
-  .hero h1{font-size:clamp(44px,11vw,55px)}
+  .hero+section{padding-top:14px}
+  .hero h1{font-size:clamp(44px,11vw,55px);margin:12px 0 14px}
   .hero>p{font-size:17px}
 }
