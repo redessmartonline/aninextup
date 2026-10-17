@@ -1,14 +1,13 @@
 #!/usr/bin/env python3
 """Generate latest news from actual article metadata, without manually editing homepage."""
 # Runs on article changes and may also be started manually from GitHub Actions.
-import html, json, re
+import html, json, re, subprocess
 from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 ARTICLES = ROOT / "articles"
 OUT = ROOT / "assets" / "latest-news.json"
-SITEMAP = ROOT / "sitemap.xml"
 
 def meta(source, name):
     pattern = r'<meta\s+[^>]*?(?:name|property)=["\']' + re.escape(name) + r'["\'][^>]*?content=["\']([^"\']*)["\']'
@@ -43,18 +42,70 @@ def extract(path):
                 description=data.get("description") or meta(source, "description"),
                 image=image, published=date_value)
 
+def publication_timestamp(path):
+    # Git records the actual publication/integration time, including posts with the same visible datePublished.
+    relative = path.relative_to(ROOT).as_posix()
+    try:
+        value = subprocess.check_output(
+            ["git", "log", "-1", "--format=%ct", "--", relative],
+            cwd=ROOT, stderr=subprocess.DEVNULL, text=True
+        ).strip()
+        return int(value) if value else 0
+    except (OSError, ValueError, subprocess.CalledProcessError):
+        return 0
+
+def homepage_cards(items):
+    cards = []
+    for item in items:
+        href = "/" + html.escape(item["article"], quote=True)
+        image = html.escape(item["image"], quote=True)
+        title = html.escape(item["title"], quote=True)
+        tag = html.escape(item["tag"], quote=True)
+        description = html.escape(item["description"], quote=True)
+        cards.append(
+            f'<a class="card story visual-card" href="{href}">'
+            f'<img src="{image}" alt="{title}" loading="lazy">'
+            f'<div class="visual-body"><span class="tag">{tag}</span>'
+            f'<h3>{title}</h3><p>{description}</p>'
+            f'<span class="more">READ UPDATE →</span></div></a>'
+        )
+    return "".join(cards)
+
+def update_homepage(items):
+    homepage = ROOT / "index.html"
+    if not homepage.exists():
+        return
+    source = homepage.read_text(encoding="utf-8")
+    opening = re.search(r'<div\b(?=[^>]*\bdata-home-latest\b)[^>]*>', source, re.I)
+    if not opening:
+        raise SystemExit("Could not find the homepage latest-news container")
+    depth = 1
+    content_start = opening.end()
+    end = None
+    for token in re.finditer(r'</?div\b[^>]*>', source[content_start:], re.I):
+        if token.group(0).startswith("</"):
+            depth -= 1
+            if depth == 0:
+                end = content_start + token.start()
+                break
+        else:
+            depth += 1
+    if end is None:
+        raise SystemExit("Could not find the end of the homepage latest-news container")
+    source = source[:content_start] + homepage_cards(items) + source[end:]
+    homepage.write_text(source, encoding="utf-8")
+
 def main():
     items = [item for path in ARTICLES.glob("*.html") if (item := extract(path))]
-    items.sort(key=lambda x: (x["published"], x["article"]), reverse=True)
-    OUT.write_text(json.dumps({"generated":date.today().isoformat(),"items":items[:7]}, ensure_ascii=False, separators=(",",":"))+"\n", encoding="utf-8")
-    if SITEMAP.exists():
-        text = SITEMAP.read_text(encoding="utf-8")
-        for item in items:
-            url = "https://aninextup.com/" + item["article"]
-            if url not in text:
-                text = text.replace("</urlset>",f"  <url><loc>{url}</loc><lastmod>{item['published']}</lastmod></url>\n</urlset>")
-        SITEMAP.write_text(text, encoding="utf-8")
-    print("Generated latest news:", len(items), "articles,", len(items[:7]), "homepage cards")
+    items.sort(
+        key=lambda item: (publication_timestamp(ARTICLES / (item["article"].split("/")[-1] + ".html")),
+                          item["published"], item["article"]),
+        reverse=True
+    )
+    latest = items[:7]
+    OUT.write_text(json.dumps({"generated":date.today().isoformat(),"items":latest}, ensure_ascii=False, separators=(",",":"))+"\n", encoding="utf-8")
+    update_homepage(latest)
+    print("Generated latest news:", len(items), "articles,", len(latest), "homepage cards")
 
 if __name__ == "__main__":
     main()
