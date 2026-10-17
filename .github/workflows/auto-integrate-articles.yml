@@ -36,6 +36,22 @@ jobs:
           sitemap_path = Path("sitemap.xml")
           data = data_path.read_text(encoding="utf-8")
 
+          def upsert_array_entry(source, array_name, pattern, line):
+              marker = f"{array_name}:[\n"
+              start = source.find(marker)
+              if start < 0:
+                  raise SystemExit(f"assets/data.js is missing {array_name} array")
+              content_start = start + len(marker)
+              end = source.find("\n]", content_start)
+              if end < 0:
+                  raise SystemExit(f"Could not find end of {array_name} array")
+              block = source[content_start:end]
+              if pattern.search(block):
+                  block = pattern.sub(line, block, count=1)
+              else:
+                  block = line + "\n" + block
+              return source[:content_start] + block + source[end:]
+
           # Optional machine-readable metadata embedded in a new article:
           # <script type="application/json" id="aninextup-index">{"kind":"anime",...}</script>
           for p in sorted(Path("articles").glob("*.html")):
@@ -118,10 +134,7 @@ jobs:
                   fields += [f'category:{js(category)}', f'status:{js(status)}']
                   line = "{" + ",".join(fields) + "},"
                   pattern = re.compile(r'\{[^\n{}]*article:' + re.escape(js(article)) + r'[^\n{}]*\},')
-                  if pattern.search(data):
-                      data = pattern.sub(line, data, count=1)
-                  else:
-                      data = data.replace("anime:[\n", "anime:[\n" + line + "\n", 1)
+                  data = upsert_array_entry(data, "anime", pattern, line)
               else:
                   tag = meta.get("tag", "NEW")
                   desc = meta.get("description", "")
@@ -133,10 +146,7 @@ jobs:
                   fields.append(f'description:{js(desc)}')
                   line = "{" + ",".join(fields) + "},"
                   pattern = re.compile(r'\{[^\n{}]*article:' + re.escape(js(article)) + r'[^\n{}]*\},')
-                  if pattern.search(data):
-                      data = pattern.sub(line, data, count=1)
-                  else:
-                      data = data.replace("guides:[\n", "guides:[\n" + line + "\n", 1)
+                  data = upsert_array_entry(data, "guides", pattern, line)
 
           data = re.sub(r'updated:"\d{4}-\d{2}-\d{2}"', f'updated:"{today}"', data, count=1)
           data_path.write_text(data, encoding="utf-8")
