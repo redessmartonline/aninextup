@@ -66,7 +66,44 @@ const fullCard=a=>'<a class="card story data-card visual-card" href="'+a.article
 discoveryNodes('[data-anime-list]').forEach(el=>{let items=[...D.anime];const mode=el.dataset.animeList;if(mode==='today'){const day=el.dataset.date||(()=>{const parts=new Intl.DateTimeFormat('en-US',{timeZone:TZ,year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());const value=t=>parts.find(p=>p.type===t)?.value;return value('year')+'-'+value('month')+'-'+value('day')})();items=items.filter(a=>a.date===day)}if(mode==='week'){const now=new Date(),day=new Date(now.toLocaleString('en-US',{timeZone:TZ})),dow=(day.getDay()+6)%7,start=new Date(day);start.setDate(day.getDate()-dow);const end=new Date(start);end.setDate(start.getDate()+6);const iso=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');items=items.filter(a=>a.date&&a.date>=iso(start)&&a.date<=iso(end)).sort((a,b)=>a.date.localeCompare(b.date))}if(mode==='upcoming-week'){const now=new Date(),day=new Date(now.toLocaleString('en-US',{timeZone:TZ})),dow=(day.getDay()+6)%7,end=new Date(day);end.setDate(day.getDate()+(6-dow));const iso=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'),today=iso(day);items=items.filter(a=>a.date&&a.date>=today&&a.date<=iso(end)).sort((a,b)=>a.date.localeCompare(b.date))}if(mode==='calendar')items=items.filter(a=>a.date).sort((a,b)=>a.date.localeCompare(b.date));if(mode==='netflix')items=items.filter(a=>a.platform==='Netflix');if(mode==='crunchyroll')items=items.filter(a=>a.platform==='Crunchyroll');el.innerHTML=items.map(mode==='today'?fullCard:animeCard).join('')||'<p class="empty">No premieres confirmed for this date. Explore the upcoming releases below.</p>'});
 discoveryNodes('[data-anime-month]').forEach(el=>{const month=el.dataset.animeMonth;const items=(D.anime||[]).filter(a=>a.date&&a.date.startsWith(month)).sort((a,b)=>a.date.localeCompare(b.date));el.innerHTML=items.map(animeCard).join('')||'<p class="empty">No confirmed releases yet.</p>'});
 discoveryNodes('[data-month-count]').forEach(el=>{const month=el.dataset.monthCount;const n=(D.anime||[]).filter(a=>a.date&&a.date.startsWith(month)).length;el.textContent=n?'· '+n+' CONFIRMED':''});
-discoveryNodes('[data-guides]').forEach(el=>{const seen=new Set();const stories=[...(D.anime||[]).filter(a=>a.tag&&a.article),...(D.guides||[])].filter(g=>{if(!g.article||seen.has(g.article))return false;seen.add(g.article);return true});el.innerHTML=stories.map(g=>'<a class="card story visual-card" href="'+g.article+'">'+(g.image?'<img src="'+g.image+'" alt="'+g.title+'" loading="lazy">':'')+'<div class="visual-body"><span class="tag">'+g.tag+'</span><h3>'+g.title+'</h3><p>'+g.description+'</p><span class="more">READ MORE →</span></div></a>').join('');});
+const NEWS_ARTICLE_CATEGORY=Object.freeze({"articles/nues-exorcist-anime-summer-2027":"new-anime","articles/dr-stone-terraforming-anime":"new-anime","articles/full-clearing-another-world-zero-believers-premiere":"new-anime","articles/i-lost-my-adventurers-license-anime-january-2027":"new-anime","articles/bless-anime-akiharu-nakano-koki-uchiyama-january-2027":"new-anime","articles/in-a-world-full-of-zombies-january-2027":"new-anime","articles/inherit-the-winds-anime-january-2027":"new-anime","articles/the-boxer-anime-announcement":"new-anime","articles/ghost-of-tsushima-legends-anime-2028":"new-anime","articles/kagurabachi-anime-world-tour-finale":"new-anime","articles/sss-class-revival-hunter-anime-january-2027":"new-anime","articles/noa-is-my-senior-anime-2027":"new-anime","articles/naruto-ninku-anime":"new-anime","articles/the-moon-on-a-rainy-night-anime":"new-anime","articles/cosmoship-yamato-root-2199":"new-anime","articles/fledgling-demon-lords-starter-shop":"new-anime","articles/otome-heroines-fight-for-survival-anime":"new-anime","articles/record-of-a-fallen-vampire-anime":"new-anime","articles/red-riding-hood-detective-story":"new-anime","articles/manchuria-opium-squad-anime":"new-anime","articles/one-punch-man-season-3-part-2-january-2027":"returning-series","articles/berserk-of-gluttony-season-2":"returning-series","articles/i-got-a-cheat-skill-season-2-january-2027":"returning-series","articles/le-college-noir-season-2-trailer-october-2026":"returning-series","articles/the-fable-season-2-january-2027":"returning-series","articles/sasaki-and-peeps-season-2-anime-shares-creditless-opening-and-end-a03f04c7":"returning-series","articles/ascendance-of-a-bookworm-part-4":"returning-series","articles/paw-palaces-creditless-ending-october-2026":"trailers-cast","articles/bleach-thousand-year-blood-war-the-last-pv-episodes-49-50":"trailers-cast","articles/naruto-shadow-rising-manga":"trailers-cast","articles/pok-mon-horizons-anime-unseals-treasures-of-ruin-in-latest-wonder-a6b9d2d5":"trailers-cast","articles/d-anime-store-81-fall-2026-anime":"release-news","articles/bleach-thousand-year-blood-war-graniph-collection-october-2026":"release-news","articles/maebashi-witches-emoemories-release-date":"release-news","articles/mobile-suit-gundam-seed-freedom-zero-release-date":"release-news","articles/live-action-firefly-wedding-tv-drama-announced-for-2027-a1ac1e86":"release-news","articles/anime-news-october-2026":"release-news"});
+const NEWS_CATEGORY_COUNTS=Object.freeze({'new-anime':20,'returning-series':7,'trailers-cast':4,'release-news':6});
+function setupNewsCategoryFilters(){
+ const nav=document.querySelector('[data-news-category-filters]');if(!nav)return;
+ const grid=document.querySelector('[data-guides]');if(!grid)return;
+ const cards=[...grid.querySelectorAll('[data-news-category]')];
+ const status=document.querySelector('[data-news-filter-status]');
+ const lead=document.querySelector('.news-lead');
+ const intro=document.querySelector('.news-intro');
+ const guideSection=grid.closest('section');
+ const sections=[...document.querySelectorAll('.news-redesign > section')];
+ function applyNewsFilter(key){
+  const active=key!=='all';
+  let shown=0;
+  cards.forEach(card=>{const match=!active||card.dataset.newsCategory===key;card.hidden=!match;if(match)shown++;});
+  nav.querySelectorAll('[data-news-filter]').forEach(button=>{
+   const selected=button.dataset.newsFilter===key;
+   button.classList.toggle('is-active',selected);button.setAttribute('aria-pressed',String(selected));
+  });
+  if(lead)lead.hidden=active;
+  sections.forEach(section=>{if(section!==intro&&section!==guideSection) section.hidden=active;});
+  if(status){status.hidden=!active;status.textContent=active?shown+' '+(shown===1?'article':'articles')+' shown':'';}
+  try{const url=new URL(location.href);if(active)url.searchParams.set('category',key);else url.searchParams.delete('category');history.replaceState({},'',url);}catch(_){}
+ }
+ nav.addEventListener('click',event=>{const button=event.target.closest('[data-news-filter]');if(button)applyNewsFilter(button.dataset.newsFilter);});
+ nav.hidden=false;
+ const requested=new URLSearchParams(location.search).get('category');
+ applyNewsFilter(NEWS_CATEGORY_COUNTS[requested]!==undefined?requested:'all');
+}
+discoveryNodes('[data-guides]').forEach(el=>{
+ const seen=new Set();
+ const stories=[...(D.anime||[]).filter(a=>a.article&&NEWS_ARTICLE_CATEGORY[a.article]),...(D.guides||[])].filter(g=>{
+  if(!g.article||seen.has(g.article)||!NEWS_ARTICLE_CATEGORY[g.article])return false;
+  seen.add(g.article);return true;
+ });
+ el.innerHTML=stories.map(g=>'<a class="card story visual-card" data-news-category="'+NEWS_ARTICLE_CATEGORY[g.article]+'" href="'+g.article+'">'+(g.image?'<img src="'+g.image+'" alt="'+g.title+'" loading="lazy">':'')+'<div class="visual-body"><span class="tag"'+(g.tag||'OFFICIAL NEWS')+'</span><h3>'+g.title+'</h3><p>'+g.description+'</p><span class="more">READ MORE →</span></div></a>').join('');
+ setupNewsCategoryFilters();
+});
 // Search every indexed public page, including articles not featured on the homepage.
 let siteSearchIndexPromise=null,siteSearchRequest=0;
 const normalizeSiteSearch=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
