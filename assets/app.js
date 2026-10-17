@@ -3,6 +3,17 @@ document.querySelectorAll('.site-header').forEach(header=>{
   const button=header.querySelector('.menu');
   const nav=header.querySelector('nav');
   if(!button||!nav)return;
+  const langPath=location.pathname.replace(/\\.html$/,'').replace(/\\/$/,'')||'/';
+  const enToEs={'/':'/es/','/calendar':'/es/calendario','/news':'/es/noticias','/where-to-watch':'/es/donde-ver','/new-anime-2026':'/es/new-anime-2026'};
+  const esToEn={'/es':'/','/es/calendario':'/calendar','/es/noticias':'/news','/es/donde-ver':'/where-to-watch','/es/new-anime-2026':'/new-anime-2026'};
+  const onSpanish=langPath==='/es'||langPath.startsWith('/es/');
+  const languageLink=document.createElement('a');languageLink.className='language-switcher';
+  languageLink.textContent=onSpanish?'EN':'ES';
+  languageLink.setAttribute('aria-label',onSpanish?'View this section in English':'Ver esta página en español');
+  if(onSpanish){languageLink.href=esToEn[langPath]||'/';}
+  else if(enToEs[langPath]){languageLink.href=enToEs[langPath];}
+  else{languageLink.href='https://translate.google.com/translate?sl=auto&tl=es&u='+encodeURIComponent(location.href);languageLink.target='_blank';languageLink.rel='noopener noreferrer';}
+  nav.append(languageLink);
   // Keep a direct route back to the AniNextUp homepage on every page.
   if(!nav.querySelector('a[href="/"]')){
     const home=document.createElement('a');
