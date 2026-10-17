@@ -47,47 +47,6 @@ document.querySelectorAll('.site-header').forEach(header=>{
   if(desktop.addEventListener)desktop.addEventListener('change',reset);
   else if(desktop.addListener)desktop.addListener(reset);
 });
-// Native English/Spanish routes. Untranslated pages keep Spanish unavailable in the picker.
-const localeRoutes=Object.freeze({
-  '/':'/es/',
-  '/calendar':'/es/calendario',
-  '/news':'/es/noticias',
-  '/where-to-watch':'/es/donde-ver',
-  '/new-anime-2026':'/es/new-anime-2026'
-});
-let normalizedLocalePath=location.pathname;
-if(normalizedLocalePath.endsWith('.html'))normalizedLocalePath=normalizedLocalePath.slice(0,-5);
-if(normalizedLocalePath.length>1&&normalizedLocalePath.endsWith('/'))normalizedLocalePath=normalizedLocalePath.slice(0,-1);
-normalizedLocalePath=normalizedLocalePath||'/';
-const localePath=normalizedLocalePath==='/index'?'/':normalizedLocalePath==='/es/index'?'/es':normalizedLocalePath;
-const spanishRoute=localeRoutes[localePath]||null;
-const englishRoute=Object.entries(localeRoutes).find(([,es])=>(es.endsWith('/')?es.slice(0,-1):es)===localePath)?.[0]||null;
-const onSpanishLocale=localePath==='/es'||localePath.startsWith('/es/');
-function localeHref(path){return path+location.search+location.hash}
-document.querySelectorAll('footer').forEach(footer=>{
-  if(footer.querySelector('.language-picker'))return;
-  const picker=document.createElement('details');
-  picker.className='language-picker';
-  const summary=document.createElement('summary');
-  summary.textContent=onSpanishLocale?'Idioma: Español':'Language: English';
-  const options=document.createElement('div');
-  options.className='language-options';
-  options.setAttribute('role','group');
-  options.setAttribute('aria-label',onSpanishLocale?'Seleccionar idioma':'Choose language');
-  const english=document.createElement(englishRoute?'a':'span');
-  english.textContent='English';
-  if(englishRoute){english.href=localeHref(englishRoute);english.setAttribute('hreflang','en')}
-  else if(onSpanishLocale)english.setAttribute('aria-disabled','true');
-  if(!onSpanishLocale)english.setAttribute('aria-current','page');
-  const spanish=document.createElement(spanishRoute?'a':'span');
-  spanish.textContent=spanishRoute?'Español':onSpanishLocale?'Español':'Español · En preparación';
-  if(spanishRoute){spanish.href=localeHref(spanishRoute);spanish.setAttribute('hreflang','es')}
-  else if(!onSpanishLocale)spanish.setAttribute('aria-disabled','true');
-  if(onSpanishLocale)spanish.setAttribute('aria-current','page');
-  options.append(english,spanish);
-  picker.append(summary,options);
-  footer.append(picker);
-});
 const cardImageFallback='/assets/images/anime-image-fallback.svg';
 const cardImageSelector='.visual-card > img, .news-featured > img, .news-side-card img, .week-release img, .calendar-day-items img, .related-releases img';
 function useCardImageFallback(image){
