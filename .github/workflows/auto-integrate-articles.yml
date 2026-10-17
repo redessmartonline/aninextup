@@ -46,10 +46,17 @@ jobs:
                   page = page.replace("</body>", footer + "\n</body>", 1)
               else:
                   page += "\n" + footer + "\n"
+              # Move post-recommendation content above Related releases.
+              related = re.search(r'(<section\\b[^>]*class="[^"]*\\brelated-releases\\b[^"]*"[^>]*>.*?</section>)', page, re.I|re.S)
+              closing_article = page.lower().find("</article>", related.end()) if related else -1
+              if related and closing_article >= 0:
+                  trailing = page[related.end():closing_article]
+                  if trailing.strip():
+                      page = page[:related.start()] + trailing + related.group(1) + page[closing_article:]
               if page != original_page:
                   p.write_text(page, encoding="utf-8")
               app_script = re.compile(r'<script\s+src=["\'](?:\.\./)?assets/app\.js(?:\?[^"\']*)?["\']\s*></script>', re.I)
-              app_script_tag = '<script src="../assets/app.js?v=20261017-footer-dom-ready"></script>'
+              app_script_tag = '<script src="../assets/app.js?v=20261017-footer-related-order"></script>'
               updated, replacements = app_script.subn(app_script_tag, page, count=1)
               if replacements == 0:
                   updated = page.replace("</body>", app_script_tag + "\n</body>", 1)
