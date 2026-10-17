@@ -64,7 +64,7 @@ def complete():
             else:
                 page = page.replace('</article>', section + '</article>', 1)
             page = re.sub(
-                r'<script src="../assets/app\\.js(?:\\?v=[^"]*)?"></script>',
+                r'<script src="../assets/app\.js(?:\?v=[^"]*)?"></script>',
                 '<script src="../assets/app.js?v=20261017-related-stories-v2"></script>',
                 page,
                 count=1,
