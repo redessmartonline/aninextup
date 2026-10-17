@@ -23,3 +23,8 @@
 .home-news-overview{padding-bottom:26px}
 .home-release-overview{padding-top:26px}
 @media(max-width:780px){.home-news-overview{padding-bottom:20px}.home-release-overview{padding-top:20px}}
+
+/* Keep secondary homepage sections closer while preserving room around the hero. */
+.home-page>section:not(.hero):not(.home-news-overview):not(.home-release-overview){padding:40px 0}
+.home-page>.home-release-overview+section{padding-top:28px}
+@media(max-width:780px){.home-page>section:not(.hero):not(.home-news-overview):not(.home-release-overview){padding:28px 0}.home-page>.home-release-overview+section{padding-top:24px}}
