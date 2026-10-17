@@ -113,8 +113,9 @@ jobs:
                   status = meta.get("status", "tba")
                   fields = [f'id:{js(item_id)}', f'image:{js(image)}', f'title:{js(title)}', f'date:{js(date)}']
                   if date_label: fields.append(f'dateLabel:{js(date_label)}')
-                  fields += [f'platform:{js(platform)}', f'article:{js(article)}', f'category:{js(category)}', f'status:{js(status)}']
+                  fields += [f'platform:{js(platform)}', f'article:{js(article)}']
                   if meta.get("newsCategory"): fields.append(f'newsCategory:{js(meta["newsCategory"])}')
+                  fields += [f'category:{js(category)}', f'status:{js(status)}']
                   line = "{" + ",".join(fields) + "},"
                   pattern = re.compile(r'\{[^\n{}]*article:' + re.escape(js(article)) + r'[^\n{}]*\},')
                   if pattern.search(data):
@@ -126,9 +127,10 @@ jobs:
                   desc = meta.get("description", "")
                   fields = [
                       f'image:{js(image)}', f'title:{js(title)}', f'tag:{js(tag)}',
-                      f'article:{js(article)}', f'description:{js(desc)}'
+                      f'article:{js(article)}'
                   ]
                   if meta.get("newsCategory"): fields.append(f'newsCategory:{js(meta["newsCategory"])}')
+                  fields.append(f'description:{js(desc)}')
                   line = "{" + ",".join(fields) + "},"
                   pattern = re.compile(r'\{[^\n{}]*article:' + re.escape(js(article)) + r'[^\n{}]*\},')
                   if pattern.search(data):
