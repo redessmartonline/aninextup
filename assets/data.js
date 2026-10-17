@@ -2,6 +2,7 @@ window.ANINEXTUP_DATA={
 updated:"2026-10-17",
 site:{timezone:"America/Santo_Domingo",season:"Fall 2026"},
 anime:[
+{image:"https://img.youtube.com/vi/3Gmo0EXHyKg/maxresdefault.jpg",title:"THE ONE PIECE: February 2027 Release Date, Episodes & Trailer",tag:"NETFLIX ANIME",article:"articles/the-one-piece-netflix-february-2027",description:"THE ONE PIECE premieres on Netflix in February 2027. See the confirmed seven-episode plan, East Blue story, WIT Studio staff, teaser and cast news."},
 {image:"https://img.youtube.com/vi/Ld4PMbghy78/maxresdefault.jpg",title:"Sakamoto Days Season 2 Release Date, Netflix, Trailer & Cast",tag:"NETFLIX ANIME",article:"articles/sakamoto-days-season-2",description:"SAKAMOTO DAYS Season 2 returns in January 2027 on Netflix. Get the confirmed release window, official character trailer, story details and new cast characters."},
 {id:"maebashi-witches-emoemories",image:"https://www.maebashi-witches.com/assets/img/common/movie_thumbnail_007.jpg",title:"Maebashi Witches Movie Release Date: Emoemories – Blooming Witches",date:"2026-10-23",platform:"Japanese Theaters",article:"articles/maebashi-witches-emoemories-release-date",category:"Anime Movie",status:"confirmed"},
 {id:"made-in-abyss-awakening-mystery",image:"https://miabyss.com/part1_images/movie/tmb_003.jpg",title:"Made in Abyss: Awakening Mystery Release Date and Where to Watch",date:"2026-10-23",platform:"Japanese Theaters",article:"articles/made-in-abyss-awakening-mystery-release-date",category:"Anime Movie",status:"confirmed"},
