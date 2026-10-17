@@ -3,24 +3,6 @@ document.querySelectorAll('.site-header').forEach(header=>{
   const button=header.querySelector('.menu');
   const nav=header.querySelector('nav');
   if(!button||!nav)return;
-  const langPath=location.pathname.replace(/\.html$/,'').replace(/\/$/,'')||'/';
-  const enToEs={'/':'/es/','/calendar':'/es/calendario','/news':'/es/noticias','/where-to-watch':'/es/donde-ver','/new-anime-2026':'/es/new-anime-2026'};
-  const esToEn={'/es':'/','/es/calendario':'/calendar','/es/noticias':'/news','/es/donde-ver':'/where-to-watch','/es/new-anime-2026':'/new-anime-2026'};
-  const onSpanish=langPath==='/es'||langPath.startsWith('/es/');
-  const hasNativeVersion=Boolean(enToEs[langPath]||esToEn[langPath]);
-  if(hasNativeVersion){
-    const languageSelect=document.createElement('select');
-    languageSelect.className='language-select';
-    languageSelect.setAttribute('aria-label',onSpanish?'Idioma de la página':'Page language');
-    languageSelect.innerHTML='<option value="en">English</option><option value="es">Español</option>';
-    languageSelect.value=onSpanish?'es':'en';
-    languageSelect.addEventListener('change',()=>{
-      const target=languageSelect.value;
-      if(target==='es'&&enToEs[langPath])location.href=enToEs[langPath];
-      else if(target==='en'&&onSpanish)location.href=esToEn[langPath]||'/';
-    });
-    nav.append(languageSelect);
-  }
   // Keep a direct route back to the AniNextUp homepage on every page.
   if(!nav.querySelector('a[href="/"]')){
     const home=document.createElement('a');
@@ -64,6 +46,47 @@ document.querySelectorAll('.site-header').forEach(header=>{
   const reset=()=>{if(desktop.matches)close()};
   if(desktop.addEventListener)desktop.addEventListener('change',reset);
   else if(desktop.addListener)desktop.addListener(reset);
+});
+// Native English/Spanish routes. Untranslated pages keep Spanish unavailable in the picker.
+const localeRoutes=Object.freeze({
+  '/':'/es/',
+  '/calendar':'/es/calendario',
+  '/news':'/es/noticias',
+  '/where-to-watch':'/es/donde-ver',
+  '/new-anime-2026':'/es/new-anime-2026'
+});
+let normalizedLocalePath=location.pathname;
+if(normalizedLocalePath.endsWith('.html'))normalizedLocalePath=normalizedLocalePath.slice(0,-5);
+if(normalizedLocalePath.length>1&&normalizedLocalePath.endsWith('/'))normalizedLocalePath=normalizedLocalePath.slice(0,-1);
+normalizedLocalePath=normalizedLocalePath||'/';
+const localePath=normalizedLocalePath==='/index'?'/':normalizedLocalePath==='/es/index'?'/es':normalizedLocalePath;
+const spanishRoute=localeRoutes[localePath]||null;
+const englishRoute=Object.entries(localeRoutes).find(([,es])=>(es.endsWith('/')?es.slice(0,-1):es)===localePath)?.[0]||null;
+const onSpanishLocale=localePath==='/es'||localePath.startsWith('/es/');
+function localeHref(path){return path+location.search+location.hash}
+document.querySelectorAll('footer').forEach(footer=>{
+  if(footer.querySelector('.language-picker'))return;
+  const picker=document.createElement('details');
+  picker.className='language-picker';
+  const summary=document.createElement('summary');
+  summary.textContent=onSpanishLocale?'Idioma: Español':'Language: English';
+  const options=document.createElement('div');
+  options.className='language-options';
+  options.setAttribute('role','group');
+  options.setAttribute('aria-label',onSpanishLocale?'Seleccionar idioma':'Choose language');
+  const english=document.createElement(englishRoute?'a':'span');
+  english.textContent='English';
+  if(englishRoute){english.href=localeHref(englishRoute);english.setAttribute('hreflang','en')}
+  else english.setAttribute('aria-disabled','true');
+  if(!onSpanishLocale)english.setAttribute('aria-current','page');
+  const spanish=document.createElement(spanishRoute?'a':'span');
+  spanish.textContent=spanishRoute?'Español':'Español · En preparación';
+  if(spanishRoute){spanish.href=localeHref(spanishRoute);spanish.setAttribute('hreflang','es')}
+  else spanish.setAttribute('aria-disabled','true');
+  if(onSpanishLocale)spanish.setAttribute('aria-current','page');
+  options.append(english,spanish);
+  picker.append(summary,options);
+  footer.append(picker);
 });
 const cardImageFallback='/assets/images/anime-image-fallback.svg';
 const cardImageSelector='.visual-card > img, .news-featured > img, .news-side-card img, .week-release img, .calendar-day-items img, .related-releases img';
