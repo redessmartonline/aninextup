@@ -355,6 +355,20 @@ if(document.querySelector('article.article')){
   else{const script=document.createElement('script');script.src='../assets/data.js';script.onload=()=>renderRelatedReleases(window.ANINEXTUP_DATA);document.head.appendChild(script);}
 }
 
+function updateCuratedRelatedHeadings(){
+  const curatedSlugs=['one-piece-elbaph-arc-english-dub-october-2026','reincarnated-as-a-sword-season-2-english-dub-release-date'];
+  const slug=location.pathname.split('/').pop().replace(/\\.html$/,'');
+  if(!curatedSlugs.includes(slug))return;
+  const section=document.querySelector('article.article .related-releases');
+  if(!section)return;
+  const kicker=section.querySelector('.kicker');
+  if(kicker)kicker.textContent='MORE ANIME NEWS';
+  const heading=section.querySelector('h2');
+  if(heading){heading.textContent='Related stories';heading.id='related-releases-heading';section.setAttribute('aria-labelledby','related-releases-heading');}
+}
+updateCuratedRelatedHeadings();
+document.addEventListener('DOMContentLoaded',updateCuratedRelatedHeadings,{once:true});
+
 
 // Enforce the three-column layout even when a page retains cached legacy CSS.
 // Run immediately, independently of image fetching or editorial data loading.
