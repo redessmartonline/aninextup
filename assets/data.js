@@ -1,5 +1,5 @@
 window.ANINEXTUP_DATA={
-updated:"2026-10-16",
+updated:"2026-10-17",
 site:{timezone:"America/Santo_Domingo",season:"Fall 2026"},
 anime:[
 {id:"made-in-abyss-awakening-mystery",image:"https://miabyss.com/part1_images/movie/tmb_003.jpg",title:"Made in Abyss: Awakening Mystery Release Date and Where to Watch",date:"2026-10-23",platform:"Japanese Theaters",article:"articles/made-in-abyss-awakening-mystery-release-date",category:"Anime Movie",status:"confirmed",tag:"OFFICIAL RELEASE NEWS",description:"Japanese theatrical opening on October 23, 2026; international release and streaming are unconfirmed."},
