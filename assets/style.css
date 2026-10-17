@@ -328,3 +328,7 @@
 footer a{transition:color .15s ease}footer a:hover,footer a:focus-visible{color:var(--purple)}
 
 
+
+/* Homepage CTA: keep the action with the hero copy and use a quieter finish. */
+.hero>.cta{grid-column:1;justify-self:start;align-self:start;display:inline-flex;align-items:center;width:auto;max-width:100%;margin-top:8px;padding:10px 16px;border:1px solid rgba(196,181,253,.38);border-radius:999px;background:linear-gradient(135deg,rgba(124,58,237,.2),rgba(124,58,237,.08));box-shadow:0 6px 24px rgba(124,58,237,.12);color:#e9ddff;font-size:11px;letter-spacing:.055em;transition:background .18s,border-color .18s,box-shadow .18s,transform .18s}
+.hero>.cta:hover{background:linear-gradient(135deg,rgba(124,58,237,.36),rgba(124,58,237,.16));border-color:rgba(196,181,253,.68);box-shadow:0 8px 28px rgba(124,58,237,.2);transform:translateY(-1px)}
