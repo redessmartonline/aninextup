@@ -229,3 +229,14 @@
 
 /* Desktop search follows the final navigation link. */
 @media(min-width:781px){.site-header nav{order:2}.site-header .global-search-toggle{order:3}}
+
+/* Inset, consistently sized covers on release cards throughout the site. */
+.mini.data-card.visual-card:not(.related-card){display:flex;align-items:center;gap:16px;padding:14px!important;min-width:0;min-height:176px;border-radius:15px;overflow:hidden;background:linear-gradient(145deg,#18243c,#101729);border:1px solid #293651;transition:transform .2s,border-color .2s,background .2s}
+.mini.data-card.visual-card:not(.related-card):hover{transform:translateY(-3px);border-color:#7055a4;background:linear-gradient(145deg,#211a3a,#121a2d)}
+.mini.data-card.visual-card:not(.related-card)>img{display:block!important;width:150px!important;height:146px!important;aspect-ratio:1/1!important;object-fit:cover;border-radius:12px;flex:none;box-shadow:0 6px 18px #0005}
+.mini.data-card.visual-card:not(.related-card)>.visual-body{padding:0!important;min-width:0}
+.mini.data-card.visual-card:not(.related-card) .visual-body h3{font-size:16px;line-height:1.35;margin:7px 0 8px}
+.mini.data-card.visual-card:not(.related-card) .visual-body .status{display:none}
+.mini.data-card.visual-card:not(.related-card) .visual-body>b{display:inline-flex;padding:4px 8px;border-radius:999px;background:#211b3a;color:#c4b5fd;font-size:10px;letter-spacing:.04em}
+.mini.data-card.visual-card:not(.related-card) .visual-body>span{font-size:12px;color:#aeb8cb}
+@media(max-width:650px){.mini.data-card.visual-card:not(.related-card){min-height:138px;padding:10px!important;gap:12px}.mini.data-card.visual-card:not(.related-card)>img{width:100px!important;height:116px!important}}
