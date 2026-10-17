@@ -419,6 +419,6 @@ if(document.querySelector('article.article')){
 // Preserve the standard footer on article pages, including cached legacy HTML.
 if(document.querySelector('article.article')&&!document.querySelector('footer')){
   const footer=document.createElement('footer');
-  footer.innerHTML='<b>ANINEXTUP</b><small>Anime releases, streaming guides, calendars and news.</small>';
+  footer.innerHTML='<b>ANINEXTUP</b><p>Anime releases, streaming guides, calendars and news.</p><small>Release dates and availability can vary by region.</small><p><a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></p>';
   document.body.append(footer);
 }
