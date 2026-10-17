@@ -63,6 +63,12 @@ def complete():
                 page = re.sub(r'<section class="related-releases"[^>]*>.*?</section>', section, page, count=1, flags=re.S)
             else:
                 page = page.replace('</article>', section + '</article>', 1)
+            page = re.sub(
+                r'<script src="../assets/app\\.js(?:\\?v=[^"]*)?"></script>',
+                '<script src="../assets/app.js?v=20261017-related-stories-v2"></script>',
+                page,
+                count=1,
+            )
         else:
             if 'class="related-releases"' not in page:
                 section = related_release_section(re.sub('<[^>]+>', '', title[1]), data, path.stem)
