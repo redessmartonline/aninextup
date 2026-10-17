@@ -127,8 +127,8 @@ document.querySelectorAll('.site-header').forEach((header,index)=>{
  panel.hidden=true;
  panel.innerHTML='<form class="site-search-form" role="search"><label class="sr-only" for="site-search-input-'+index+'">Search anime, platforms and guides</label><div class="search"><input id="site-search-input-'+index+'" class="site-search-input" type="search" placeholder="Search anime, platform or guide..."><button type="submit">SEARCH</button></div><div class="search-results site-search-results" aria-live="polite" hidden></div></form>';
  toggle.setAttribute('aria-controls',panel.id);
- const menu=header.querySelector('.menu');
- header.insertBefore(toggle,menu||header.querySelector('nav'));
+ const nav=header.querySelector('nav');
+ if(nav)nav.after(toggle);else header.append(toggle);
  header.append(panel);
  const input=panel.querySelector('.site-search-input');
  const results=panel.querySelector('.site-search-results');
