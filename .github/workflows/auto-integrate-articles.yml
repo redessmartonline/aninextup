@@ -38,11 +38,15 @@ jobs:
           # <script type="application/json" id="aninextup-index">{"kind":"anime",...}</script>
           for p in sorted(Path("articles").glob("*.html")):
               page = p.read_text(encoding="utf-8")
-              if not re.search(r"<footer\b", page, re.I):
-                  page = page.replace("</body>", '<footer><b>ANINEXTUP</b><small>Anime releases, streaming guides, calendars and news.</small></footer>\n</body>', 1)
+              original_page = page
+              footer = '<footer><b>ANINEXTUP</b><p>Anime releases, streaming guides, calendars and news.</p><small>Release dates and availability can vary by region.</small><p><a href="../about">About</a> · <a href="../contact">Contact</a> · <a href="../privacy">Privacy</a> · <a href="../terms">Terms</a></p></footer>'
+              page, footer_count = re.subn(r"<footer\b[^>]*>.*?</footer\s*>", footer, page, count=1, flags=re.I|re.S)
+              if footer_count == 0:
+                  page = page.replace("</body>", footer + "\n</body>", 1)
+              if page != original_page:
                   p.write_text(page, encoding="utf-8")
               app_script = re.compile(r'<script\s+src=["\'](?:\.\./)?assets/app\.js(?:\?[^"\']*)?["\']\s*></script>', re.I)
-              app_script_tag = '<script src="../assets/app.js?v=20261017-footer-restored-v2"></script>'
+              app_script_tag = '<script src="../assets/app.js?v=20261017-footer-full"></script>'
               updated, replacements = app_script.subn(app_script_tag, page, count=1)
               if replacements == 0:
                   updated = page.replace("</body>", app_script_tag + "\n</body>", 1)
