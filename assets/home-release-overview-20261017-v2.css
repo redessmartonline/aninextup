@@ -18,3 +18,8 @@
 .home-release-overview .home-week-grid .visual-body>.more,.home-release-overview .home-today-list .visual-body>.more{grid-area:more;align-self:center;white-space:nowrap}
 @media(max-width:780px){.home-release-overview .section-head{margin-bottom:18px}.home-release-overview .home-today-block{padding:12px 14px}.home-release-overview .home-week-block{margin-top:18px}.home-release-overview .home-week-grid,.home-release-overview .home-today-list{grid-template-columns:1fr}}
 @media(max-width:640px){.home-release-overview{padding-bottom:24px}.home-release-overview+section{padding-top:24px}.home-release-overview .home-week-grid .visual-body,.home-release-overview .home-today-list .visual-body{grid-template-areas:"date status" "title title" "platform more";gap:5px 12px}}
+
+/* Reduce the oversized gap between latest news and the release schedule. */
+.home-news-overview{padding-bottom:26px}
+.home-release-overview{padding-top:26px}
+@media(max-width:780px){.home-news-overview{padding-bottom:20px}.home-release-overview{padding-top:20px}}
