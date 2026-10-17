@@ -328,16 +328,3 @@
 footer a{transition:color .15s ease}footer a:hover,footer a:focus-visible{color:var(--purple)}
 
 
-/* Crunchyroll-style first-party language menu in the footer. */
-footer .language-picker{position:relative;order:4;margin-left:auto;color:var(--text,#e8ecfa)}
-footer .language-picker summary{display:flex;align-items:center;gap:9px;min-height:42px;padding:8px 14px;border:1px solid var(--line,#303956);border-radius:10px;background:var(--panel,#151d30);color:var(--text,#e8ecfa);font-size:12px;font-weight:800;cursor:pointer;list-style:none}
-footer .language-picker summary::-webkit-details-marker{display:none}
-footer .language-picker summary:after{content:"";width:7px;height:7px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translateY(-2px);transition:transform .16s}
-footer .language-picker[open] summary:after{transform:rotate(225deg) translate(-2px,-1px)}
-footer .language-picker summary:focus-visible{outline:2px solid var(--purple,#a78bfa);outline-offset:3px}
-footer .language-options{position:absolute;right:0;bottom:calc(100% + 9px);z-index:50;display:grid;gap:3px;min-width:205px;padding:7px;border:1px solid rgba(167,139,250,.25);border-radius:12px;background:rgba(15,21,39,.98);box-shadow:0 18px 48px rgba(0,0,0,.45)}
-footer .language-options a,footer .language-options span{display:flex;align-items:center;justify-content:space-between;min-height:40px;padding:8px 11px;border-radius:8px;color:#cbd5e1;font-size:13px;font-weight:700}
-footer .language-options a:hover,footer .language-options a:focus-visible{background:rgba(167,139,250,.13);color:#fff}
-footer .language-options [aria-current=page]{color:#c4b5fd}
-footer .language-options [aria-disabled=true]{color:#78839a;cursor:not-allowed}
-@media(max-width:650px){footer .language-picker{margin-left:0}footer .language-options{right:auto;left:0}}
