@@ -27,7 +27,8 @@ jobs:
         shell: python
         run: |
           from pathlib import Path
-          import datetime, html as htmlmod, json, re, xml.etree.ElementTree as ET
+          import datetime, html as htmlmod, json, re, sys, xml.etree.ElementTree as ET
+          sys.path.insert(0, str(Path.cwd()))
           from scripts.news_categories import classify_news_category
 
           today = datetime.date.today().isoformat()
@@ -73,6 +74,7 @@ jobs:
                   raise SystemExit(f"{p}: invalid aninextup-index JSON: {e}")
 
               article = p.with_suffix("").as_posix()
+              kind = meta.get("kind", "guide")
               category = meta.get("newsCategory")
               category_set = {"new-anime", "returning-series", "trailers-cast", "release-news"}
               if category not in category_set:
@@ -97,7 +99,6 @@ jobs:
                   if v is None: return "null"
                   return json.dumps(str(v), ensure_ascii=False)
 
-              kind = meta.get("kind", "guide")
               image = meta.get("image")
               title = meta.get("title")
               if not image or not title:
