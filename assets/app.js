@@ -14,6 +14,7 @@ document.querySelectorAll('.site-header').forEach(header=>{
   languageSelect.value=onSpanish?'es':'en';
   languageSelect.addEventListener('change',()=>{
     const target=languageSelect.value;
+    if((target==='es'&&onSpanish)||(target==='en'&&!onSpanish))return;
     if(target==='es'&&enToEs[langPath]){location.href=enToEs[langPath];return;}
     if(target==='en'&&onSpanish){location.href=esToEn[langPath]||'/';return;}
     if(target==='en')return;
