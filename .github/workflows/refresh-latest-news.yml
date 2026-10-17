@@ -18,6 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          fetch-depth: 0
           persist-credentials: true
       - uses: actions/setup-python@v5
         with:
@@ -29,10 +30,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add index.html assets/latest-news.json sitemap.xml
+          git add index.html assets/latest-news.json
           git add -A assets/images/news/
           if ! git diff --cached --quiet; then
-            git commit -m "Auto-refresh latest anime news, thumbnails and sitemap"
+            git commit -m "Auto-refresh latest anime news and homepage"
             for attempt in 1 2 3; do
               git pull --rebase origin main
               if git push origin HEAD:main; then exit 0; fi
