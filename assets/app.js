@@ -7,13 +7,19 @@ document.querySelectorAll('.site-header').forEach(header=>{
   const enToEs={'/':'/es/','/calendar':'/es/calendario','/news':'/es/noticias','/where-to-watch':'/es/donde-ver','/new-anime-2026':'/es/new-anime-2026'};
   const esToEn={'/es':'/','/es/calendario':'/calendar','/es/noticias':'/news','/es/donde-ver':'/where-to-watch','/es/new-anime-2026':'/new-anime-2026'};
   const onSpanish=langPath==='/es'||langPath.startsWith('/es/');
-  const languageLink=document.createElement('a');languageLink.className='language-switcher';
-  languageLink.textContent=onSpanish?'EN':'ES';
-  languageLink.setAttribute('aria-label',onSpanish?'View this section in English':'Ver esta página en español');
-  if(onSpanish){languageLink.href=esToEn[langPath]||'/';}
-  else if(enToEs[langPath]){languageLink.href=enToEs[langPath];}
-  else{languageLink.href='https://translate.google.com/translate?sl=auto&tl=es&u='+encodeURIComponent(location.href);languageLink.target='_blank';languageLink.rel='noopener noreferrer';}
-  nav.append(languageLink);
+  const languageSelect=document.createElement('select');
+  languageSelect.className='language-select';
+  languageSelect.setAttribute('aria-label','Choose page language');
+  languageSelect.innerHTML='<option value="en">English</option><option value="es">Español</option><option value="fr">Français</option><option value="pt">Português</option><option value="de">Deutsch</option><option value="it">Italiano</option><option value="ja">日本語</option><option value="zh-CN">中文（简体）</option><option value="zh-TW">中文（繁體）</option><option value="ko">한국어</option><option value="ar">العربية</option><option value="hi">हिन्दी</option><option value="ru">Русский</option><option value="id">Bahasa Indonesia</option><option value="tr">Türkçe</option>';
+  languageSelect.value=onSpanish?'es':'en';
+  languageSelect.addEventListener('change',()=>{
+    const target=languageSelect.value;
+    if(target==='es'&&enToEs[langPath]){location.href=enToEs[langPath];return;}
+    if(target==='en'&&onSpanish){location.href=esToEn[langPath]||'/';return;}
+    if(target==='en')return;
+    location.href='https://translate.google.com/translate?sl=auto&tl='+encodeURIComponent(target)+'&u='+encodeURIComponent(location.href);
+  });
+  nav.append(languageSelect);
   // Keep a direct route back to the AniNextUp homepage on every page.
   if(!nav.querySelector('a[href="/"]')){
     const home=document.createElement('a');
