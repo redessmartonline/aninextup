@@ -38,6 +38,14 @@ jobs:
           # <script type="application/json" id="aninextup-index">{"kind":"anime",...}</script>
           for p in sorted(Path("articles").glob("*.html")):
               page = p.read_text(encoding="utf-8")
+              app_script = re.compile(r'<script\s+src=["\'](?:\.\./)?assets/app\.js(?:\?[^"\']*)?["\']\s*></script>', re.I)
+              app_script_tag = '<script src="../assets/app.js?v=20261016-related-releases-3"></script>'
+              updated, replacements = app_script.subn(app_script_tag, page, count=1)
+              if replacements == 0:
+                  updated = page.replace("</body>", app_script_tag + "\n</body>", 1)
+              if updated != page:
+                  page = updated
+                  p.write_text(page, encoding="utf-8")
               m = re.search(r'<script\s+type=["\']application/json["\']\s+id=["\']aninextup-index["\']>(.*?)</script>', page, re.I|re.S)
               if not m:
                   continue
@@ -124,13 +132,13 @@ jobs:
 
       - name: Commit automatic integration
         run: |
-          if git diff --quiet -- assets/data.js sitemap.xml; then
+          if git diff --quiet -- assets/data.js sitemap.xml articles; then
             echo "No integration changes required."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/data.js sitemap.xml
+          git add assets/data.js sitemap.xml articles
           git commit -m "Auto-integrate AniNextUp article"
 
           # main can advance while this workflow is validating/generating files.
