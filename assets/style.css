@@ -318,7 +318,7 @@
 /* News navigation dropdown */
 .site-header nav .nav-news-item{position:relative;display:flex;align-items:center;height:100%}
 .site-header nav .nav-news-item>a{display:inline-flex;align-items:center;height:100%}
-.site-header nav .nav-news-menu{position:absolute;top:calc(100% + 9px);right:-18px;z-index:100;min-width:230px;padding:7px;display:grid;gap:2px;background:rgba(15,21,39,.98);border:1px solid rgba(167,139,250,.25);border-radius:14px;box-shadow:0 18px 48px rgba(0,0,0,.45);opacity:0;visibility:hidden;pointer-events:none;transform:translateY(7px);transition:opacity .16s ease,transform .16s ease,visibility .16s ease}
+.site-header nav .nav-news-menu{position:absolute;top:calc(100% + 9px);right:-18px;z-index:100;min-width:190px;padding:7px;display:grid;gap:2px;background:rgba(15,21,39,.98);border:1px solid rgba(167,139,250,.25);border-radius:14px;box-shadow:0 18px 48px rgba(0,0,0,.45);opacity:0;visibility:hidden;pointer-events:none;transform:translateY(7px);transition:opacity .16s ease,transform .16s ease,visibility .16s ease}
 .site-header nav .nav-news-menu:before{content:"";position:absolute;left:0;right:0;top:-10px;height:10px}
 .site-header nav .nav-news-item:hover .nav-news-menu,.site-header nav .nav-news-item:focus-within .nav-news-menu{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
 .site-header nav .nav-news-menu a{display:flex;align-items:center;min-height:40px;padding:8px 12px;border-radius:9px;color:#cbd5e1;font-size:12px;font-weight:700;letter-spacing:.01em;white-space:nowrap;transition:background .15s,color .15s}
