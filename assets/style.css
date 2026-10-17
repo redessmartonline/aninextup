@@ -327,3 +327,8 @@
 
 footer a{transition:color .15s ease}footer a:hover,footer a:focus-visible{color:var(--purple)}
 
+
+/* Accessible language selector */
+.site-header nav .language-select{min-width:108px;padding:8px 28px 8px 10px;border:1px solid var(--line,#303956);border-radius:9px;background:var(--panel,#151d30);color:var(--text,#e8ecfa);font:inherit;font-size:12px;font-weight:800;cursor:pointer}
+.site-header nav .language-select:focus-visible{outline:2px solid var(--purple,#a78bfa);outline-offset:3px}
+.site-header nav .language-select option{background:#111a2e;color:#f3f5ff}
