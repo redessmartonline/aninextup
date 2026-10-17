@@ -506,3 +506,43 @@ function normalizeArticleFooter(){
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',normalizeArticleFooter,{once:true});
 else normalizeArticleFooter();
+
+
+// Measure clicks from AniNextUp to streaming services in GA4.
+(function setupStreamingLinkAnalytics(){
+  const platforms=[
+    {host:"crunchyroll.com",name:"Crunchyroll"},
+    {host:"netflix.com",name:"Netflix"},
+    {host:"hidive.com",name:"HIDIVE"},
+    {host:"disneyplus.com",name:"Disney+"},
+    {host:"primevideo.com",name:"Prime Video"},
+    {host:"hulu.com",name:"Hulu"},
+    {host:"tv.apple.com",name:"Apple TV"},
+    {host:"max.com",name:"Max"},
+    {host:"peacocktv.com",name:"Peacock"},
+    {host:"tubitv.com",name:"Tubi"}
+  ];
+  document.addEventListener("click",event=>{
+    if(event.defaultPrevented||event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;
+    const link=event.target instanceof Element?event.target.closest("a[href]"):null;
+    if(!link)return;
+    let destination;
+    try{destination=new URL(link.href,location.href)}catch{return}
+    if(destination.origin===location.origin)return;
+    const hostname=destination.hostname.toLowerCase();
+    const platform=platforms.find(item=>hostname===item.host||hostname.endsWith("."+item.host));
+    if(!platform)return;
+    // Do not count Netflix editorial/press pages as streaming destinations.
+    if(platform.name==="Netflix"&&/^\/(tudum|media|newsroom|only-on-netflix)(\/|$)/i.test(destination.pathname))return;
+    if(typeof window.gtag!=="function")return;
+    const slug=platform.name.toLowerCase().replace(/[^a-z0-9]+/g,"_").replace(/^_|_$/g,"");
+    window.gtag("event","streaming_click_"+slug,{
+      platform_name:platform.name,
+      link_url:destination.href,
+      link_domain:destination.hostname,
+      link_text:(link.innerText||link.getAttribute("aria-label")||"").trim().slice(0,120),
+      page_path:location.pathname,
+      transport_type:"beacon"
+    });
+  },true);
+})();
