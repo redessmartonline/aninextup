@@ -126,7 +126,7 @@ discoveryNodes('[data-guides]').forEach(el=>{
   if(!g.article||seen.has(g.article)||!NEWS_ARTICLE_CATEGORY[g.article])return false;
   seen.add(g.article);return true;
  });
- el.innerHTML=stories.map(g=>'<a class="card story visual-card" data-news-category="'+NEWS_ARTICLE_CATEGORY[g.article]+'" href="'+g.article+'">'+(g.image?'<img src="'+g.image+'" alt="'+g.title+'" loading="lazy">':'')+'<div class="visual-body"><span class="tag">'+(g.tag||'OFFICIAL NEWS')+'</span><h3>'+g.title+'</h3><p>'+g.description+'</p><span class="more">READ MORE →</span></div></a>').join('');
+ el.innerHTML=stories.map(g=>'<a class="card story visual-card" data-news-category="'+NEWS_ARTICLE_CATEGORY[g.article]+'" href="'+g.article+'">'+(g.image?'<img src="'+g.image+'" alt="'+g.title+'" loading="lazy">':'')+'<div class="visual-body"><span class="tag">'+(g.tag||'OFFICIAL NEWS')+'</span><h3>'+g.title+'</h3>'+(typeof g.description==='string'&&g.description.trim()?'<p>'+g.description+'</p>':'')+'<span class="more">READ MORE →</span></div></a>').join('');
 });
 setupNewsCategoryFilters();
 // Search every indexed public page, including articles not featured on the homepage.
