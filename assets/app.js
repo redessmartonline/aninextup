@@ -77,12 +77,12 @@ document.querySelectorAll('footer').forEach(footer=>{
   const english=document.createElement(englishRoute?'a':'span');
   english.textContent='English';
   if(englishRoute){english.href=localeHref(englishRoute);english.setAttribute('hreflang','en')}
-  else english.setAttribute('aria-disabled','true');
+  else if(onSpanishLocale)english.setAttribute('aria-disabled','true');
   if(!onSpanishLocale)english.setAttribute('aria-current','page');
   const spanish=document.createElement(spanishRoute?'a':'span');
-  spanish.textContent=spanishRoute?'Español':'Español · En preparación';
+  spanish.textContent=spanishRoute?'Español':onSpanishLocale?'Español':'Español · En preparación';
   if(spanishRoute){spanish.href=localeHref(spanishRoute);spanish.setAttribute('hreflang','es')}
-  else spanish.setAttribute('aria-disabled','true');
+  else if(!onSpanishLocale)spanish.setAttribute('aria-disabled','true');
   if(onSpanishLocale)spanish.setAttribute('aria-current','page');
   options.append(english,spanish);
   picker.append(summary,options);
