@@ -416,11 +416,14 @@ if(document.querySelector('article.article')){
 }
 
 
-// Ensure every article has exactly one complete footer, including legacy HTML.
-if(document.querySelector('article.article')){
+// Normalize article footers after parsing so the source footer is already present.
+function normalizeArticleFooter(){
+  if(!document.querySelector('article.article'))return;
   const footers=[...document.querySelectorAll('footer')];
   const footer=footers.shift()||document.createElement('footer');
   footer.innerHTML='<b>ANINEXTUP</b><p>Anime releases, streaming guides, calendars and news.</p><small>Release dates and availability can vary by region.</small><p><a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></p>';
   footers.forEach(extra=>extra.remove());
   if(!footer.isConnected)document.body.append(footer);
 }
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',normalizeArticleFooter,{once:true});
+else normalizeArticleFooter();
