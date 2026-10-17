@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Generate latest news from actual article metadata, without manually editing homepage."""
 # Runs on article changes and may also be started manually from GitHub Actions.
+# Full Git history is required to sort same-day articles by publication commit time.
 import html, json, re, subprocess
 from datetime import date
 from pathlib import Path
