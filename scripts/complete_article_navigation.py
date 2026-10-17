@@ -10,12 +10,12 @@ ROOT = Path(__file__).resolve().parents[1]
 
 RELATED_STORY_OVERRIDES = {
     'one-piece-elbaph-arc-english-dub-october-2026': [
-        ('reincarnated-as-a-sword-season-2-english-dub-release-date', 'DUB RELEASE', 'Reincarnated as a Sword Season 2 English Dub Starts October 21 on HIDIVE', 'https://i.ytimg.com/vi/Yt364dCCxIE/maxresdefault.jpg'),
+        ('reincarnated-as-a-sword-season-2-english-dub-release-date', 'DUB RELEASE', 'Reincarnated as a Sword Season 2 English Dub Starts October 21 on HIDIVE', 'https://img.youtube.com/vi/Yt364dCCxIE/maxresdefault.jpg'),
         ('the-one-piece-netflix-february-2027', 'NETFLIX ANIME', 'THE ONE PIECE: February 2027 Release Date, Episodes & Trailer', 'https://img.youtube.com/vi/3Gmo0EXHyKg/maxresdefault.jpg'),
         ('bleach-thousand-year-blood-war-the-last-pv-episodes-49-50', 'OFFICIAL TRAILER NEWS', 'BLEACH: Thousand-Year Blood War Releases “THE LAST PV”', 'https://www.aniplex.co.jp/news/detail/SYS/CONTENTS/3bf96511-2b17-4fe2-8d7d-13fd99bc8a0e/w707'),
     ],
     'reincarnated-as-a-sword-season-2-english-dub-release-date': [
-        ('one-piece-elbaph-arc-english-dub-october-2026', 'DUB RELEASE', 'ONE PIECE: Elbaph Arc English Dub Starts October 20 on Crunchyroll', 'https://i.ytimg.com/vi/YnczpEoeaDM/maxresdefault.jpg'),
+        ('one-piece-elbaph-arc-english-dub-october-2026', 'DUB RELEASE', 'ONE PIECE: Elbaph Arc English Dub Starts October 20 on Crunchyroll', 'https://img.youtube.com/vi/YnczpEoeaDM/maxresdefault.jpg'),
         ('berserk-of-gluttony-season-2', 'RETURNING SERIES', 'Berserk of Gluttony Season 2 Confirmed for 2027: New Trailer and Streaming Details', 'https://i.ytimg.com/vi/BVz1EyrHILk/maxresdefault.jpg'),
         ('iceblade-sorcerer-ii', 'FALL 2026 RELEASE', 'The Iceblade Sorcerer Shall Rule the World II', 'https://hyouken-anime.com/wp/wp-content/themes/hyouken-theme/images/kv1.webp'),
     ],
