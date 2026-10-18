@@ -41,7 +41,7 @@ def extract(path):
         image = "/assets/images/news/" + path.stem + ".webp"
     return dict(article="articles/" + path.stem, title=title, tag=data.get("tag") or "ANIME NEWS",
                 description=data.get("description") or meta(source, "description"),
-                image=image, published=date_value)
+                image=image, published=date_value, updated=modified.group(1) if modified else date_value)
 
 def publication_timestamp(path):
     # Git records the actual publication/integration time, including posts with the same visible datePublished.
@@ -99,7 +99,8 @@ def update_homepage(items):
 def main():
     items = [item for path in ARTICLES.glob("*.html") if (item := extract(path))]
     items.sort(
-        key=lambda item: (publication_timestamp(ARTICLES / (item["article"].split("/")[-1] + ".html")),
+        key=lambda item: (item["updated"],
+                          publication_timestamp(ARTICLES / (item["article"].split("/")[-1] + ".html")),
                           item["published"], item["article"]),
         reverse=True
     )
