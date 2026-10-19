@@ -8,16 +8,44 @@
 .home-release-overview .home-today-list>.empty,.home-release-overview .home-week-grid>.empty{grid-column:1/-1;margin:0;padding:0;border:0;background:transparent;font-size:14px}
 .home-release-overview .home-week-block{margin-top:22px}
 .home-release-overview .home-week-block>.kicker{display:block;margin-bottom:12px;font-size:10px}
-.home-release-overview .home-week-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:16px}
-.home-release-overview .home-week-grid>.empty{padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
-.home-release-overview .home-week-grid>.mini,.home-release-overview .home-today-list>.mini{min-height:154px}
-.home-release-overview .home-week-grid .visual-body,.home-release-overview .home-today-list .visual-body{display:grid!important;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"date more" "title more" "platform more";align-content:center;align-items:center;gap:5px 28px;flex:1;min-width:0}
-.home-release-overview .home-week-grid .visual-body>b,.home-release-overview .home-today-list .visual-body>b{grid-area:date}
-.home-release-overview .home-week-grid .visual-body>h3,.home-release-overview .home-today-list .visual-body>h3{grid-area:title;margin:0;line-height:1.25}
-.home-release-overview .home-week-grid .visual-body>span:not(.more),.home-release-overview .home-today-list .visual-body>span:not(.more){grid-area:platform}
-.home-release-overview .home-week-grid .visual-body>.more,.home-release-overview .home-today-list .visual-body>.more{grid-area:more;align-self:center;white-space:nowrap}
-@media(max-width:780px){.home-release-overview .section-head{margin-bottom:18px}.home-release-overview .home-today-block{padding:12px 14px}.home-release-overview .home-week-block{margin-top:18px}.home-release-overview .home-week-grid,.home-release-overview .home-today-list{grid-template-columns:1fr}}
-@media(max-width:640px){.home-release-overview{padding-bottom:24px}.home-release-overview+section{padding-top:24px}.home-release-overview .home-week-grid .visual-body,.home-release-overview .home-today-list .visual-body{grid-template-areas:"date status" "title title" "platform more";gap:5px 12px}}
+.home-release-overview .home-week-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:20px}
+.home-release-overview .home-week-grid>.empty{grid-column:1/-1;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
+/* Stack artwork and copy so the title never competes with a fixed image and CTA. */
+.home-release-overview [data-home-schedule]>.mini.data-card.visual-card{
+  display:flex;flex-direction:column;align-items:stretch;gap:0;
+  min-width:0;min-height:0;padding:0!important;border-radius:14px;
+}
+.home-release-overview [data-home-schedule]>.mini.data-card.visual-card>img{
+  width:100%!important;height:auto!important;aspect-ratio:16/9!important;
+  object-fit:cover;object-position:center;border-radius:0;box-shadow:none;
+}
+.home-release-overview [data-home-schedule]>.mini.data-card.visual-card>.visual-body{
+  display:flex!important;flex-direction:column;align-items:flex-start;gap:10px;
+  flex:1;min-width:0;width:100%;padding:18px!important;
+}
+.home-release-overview [data-home-schedule]>.mini.data-card.visual-card .visual-body>b{
+  align-self:flex-start;white-space:nowrap;
+}
+.home-release-overview [data-home-schedule]>.mini.data-card.visual-card .visual-body>h3{
+  width:100%;margin:0;font-size:18px;line-height:1.4;
+  overflow-wrap:break-word;word-break:normal;
+}
+.home-release-overview [data-home-schedule]>.mini.data-card.visual-card .visual-body>span:not(.more){
+  line-height:1.5;
+}
+.home-release-overview [data-home-schedule]>.mini.data-card.visual-card .visual-body>.more{
+  margin-top:auto;padding-top:8px;white-space:normal;color:var(--purple);
+}
+@media(max-width:780px){
+  .home-release-overview .section-head{margin-bottom:18px}
+  .home-release-overview .home-today-block{padding:12px 14px}
+  .home-release-overview .home-week-block{margin-top:18px}
+}
+@media(max-width:580px){
+  .home-release-overview{padding-bottom:24px}
+  .home-release-overview+section{padding-top:24px}
+  .home-release-overview .home-week-grid,.home-release-overview .home-today-list{grid-template-columns:1fr}
+}
 
 /* Reduce the oversized gap between latest news and the release schedule. */
 .home-news-overview{padding-bottom:26px}
