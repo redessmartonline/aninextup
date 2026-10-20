@@ -8,6 +8,7 @@
 - Corrected the broken Cyberpunk Netflix link from title 81744226 to the current series listing, title 81054853, verified on Netflix.
 - Added contextual links from Cyberpunk, Made in Abyss, Maebashi Witches and My Happy Marriage to Today, This Week and the November release guide as appropriate.
 - Added a nonduplicate Shangri-La Frontier Season 3 guide with official production artwork, January 10, 2027 Japanese premiere, two-cour announcement, production credits and the October 15 official exhibition interview. The interview is explicitly identified as an interview, not a trailer.
+- Browser verification exposed a separate discovery-cache issue: the unversioned release index was cached for a day. Discovery generation now adds a content-derived version to every root-page index script, and static News cards use the same category selection as the browser. Regression checks cover both behaviors.
 
 ## Verification
 

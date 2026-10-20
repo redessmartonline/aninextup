@@ -3,6 +3,15 @@ const path=require('node:path');process.chdir(path.join(__dirname,'..'));
 const model=require('../assets/release-model.js');
 const box={window:{}};vm.runInNewContext(fs.readFileSync('assets/data.js','utf8'),box);
 const data=box.window.ANINEXTUP_DATA;
+const dataVersion=require('node:crypto').createHash('sha256').update(fs.readFileSync('assets/data.js')).digest('hex').slice(0,16);
+for(const name of fs.readdirSync('.').filter(n=>n.endsWith('.html'))){
+  const html=fs.readFileSync(name,'utf8');
+  if(html.includes('assets/data.js'))assert(html.includes('assets/data.js?v='+dataVersion),`${name}: stale release-index cache version`);
+}
+const newsHtml=fs.readFileSync('news.html','utf8');
+for(const item of [...data.anime,...data.guides].filter(x=>['new-anime','returning-series','trailers-cast','release-news'].includes(x.newsCategory))){
+  assert(newsHtml.includes('href="'+item.article+'"'),`news.html: missing categorized story ${item.article}`);
+}
 // Sunday midnight in UTC is still Saturday in the site's timezone.
 assert.equal(model.context(new Date('2026-10-19T02:00:00Z')).weekEnd,'2026-10-18');
 assert.equal(model.context(new Date('2026-10-19T05:00:00Z')).weekEnd,'2026-10-25');
