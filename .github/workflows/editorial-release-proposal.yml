@@ -1,0 +1,82 @@
+name: Editorial release proposal checks
+
+on:
+  pull_request:
+    paths:
+      - 'articles/prisma-illya-finale-anime-2027.html'
+      - 'articles/because-i-the-true-saint-was-banished-anime-january-2027.html'
+      - '.github/workflows/editorial-release-proposal.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate JavaScript syntax
+        run: node --check assets/data.js
+      - name: Validate proposed articles, duplicates and discovery metadata
+        shell: python
+        run: |
+          from pathlib import Path
+          import html, importlib.util, json, re, sys, xml.etree.ElementTree as ET
+
+          def module(name, path):
+              spec = importlib.util.spec_from_file_location(name, path)
+              value = importlib.util.module_from_spec(spec)
+              spec.loader.exec_module(value)
+              return value
+
+          publication = module("publication", "scripts/validate_publication.py")
+          duplicates = module("duplicates", "scripts/check_article_duplicates.py")
+          candidates = [Path(p) for p in ["articles/prisma-illya-finale-anime-2027.html","articles/because-i-the-true-saint-was-banished-anime-january-2027.html"]]
+          if not all(p.is_file() for p in candidates):
+              raise SystemExit("Proposed articles missing from checkout")
+          existing = sorted(Path("articles").glob("*.html"))
+          errors = []
+          data = Path("assets/data.js").read_text()
+          sitemap = ET.parse("sitemap.xml").getroot()
+          urls = {n.text for n in sitemap.findall("{http://www.sitemaps.org/schemas/sitemap/0.9}url/{http://www.sitemaps.org/schemas/sitemap/0.9}loc")}
+          aliases = json.loads(Path("assets/search-aliases.json").read_text())
+          for path in candidates:
+              errors.extend(str(path) + ": " + e for e in publication.validate(path))
+              errors.extend(duplicates.check(path, existing))
+              text = path.read_text()
+              canonical = "https://aninextup.com/articles/" + path.stem
+              if canonical not in urls:
+                  errors.append(str(path) + ": sitemap entry missing")
+              metadata = json.loads(re.search(r'<script type="application/json" id="aninextup-index">(.*?)</script>', text, re.S).group(1))
+              lines = [line for line in data.splitlines() if 'article:"' + path.with_suffix("").as_posix() + '"' in line]
+              if len(lines) != 1:
+                  errors.append(str(path) + ": expected one central index entry")
+              else:
+                  for field in ("image", "title", "tag", "description", "newsCategory"):
+                      if field + ":" + json.dumps(metadata[field], ensure_ascii=False) not in lines[0]:
+                          errors.append(str(path) + ": mismatched central field " + field)
+              if "/articles/" + path.stem not in aliases:
+                  errors.append(str(path) + ": search aliases missing")
+              for target in re.findall(r'class="mini related-card" href="([^"]+)"', text):
+                  if not (Path("articles") / (target + ".html")).is_file():
+                      errors.append(str(path) + ": related article missing " + target)
+              if text.count('<script src="../assets/app.js') != 1:
+                  errors.append(str(path) + ": expected one application script")
+          if errors:
+              raise SystemExit("\n".join(errors))
+          print("PASS: both proposed articles, duplicate subjects, related routes, sitemap and index metadata")
+      - name: Audit all article SEO metadata
+        run: python scripts/audit_all_articles_preflight.py --root articles --out audits/generated
+      - name: Fail on article preflight errors
+        shell: python
+        run: |
+          import json
+          from pathlib import Path
+          report = json.loads(Path("audits/generated/all-articles-preflight.json").read_text())
+          if report["total_error_findings"]:
+              raise SystemExit("Article preflight errors: " + str(report["total_error_findings"]))
+          print("PASS: no article preflight errors")

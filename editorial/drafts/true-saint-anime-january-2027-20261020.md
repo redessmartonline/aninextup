@@ -1,6 +1,6 @@
 # Because I, the True Saint, Was Banished Anime Sets January 2027 Premiere
 
-Status: UNPUBLISHED TEXT DRAFT — media and rendered article checks incomplete.
+Status: Superseded by the full unpublished HTML proposal at articles/because-i-the-true-saint-was-banished-anime-january-2027.html. See release-coverage-20261020-review.md for current validation status.
 Prepared: October 20, 2026.
 Proposed News category: New Anime.
 Proposed canonical slug: because-i-the-true-saint-was-banished-anime-january-2027
@@ -19,7 +19,7 @@ The announcement establishes a release window, rather than an exact first-episod
 - Animation studio: Tsumugi Akita Anime Lab.
 - Director: Tsukasa Sakurai.
 - Series composition: Naoki Tozuka.
-- Character design: Nari Nishikori.
+- Character design: Naru Nishikori.
 - Music: Harakanako.
 - Lead cast: Masumi Tazawa as Eliane; Taku Yashiro as Nigel.
 - Exact premiere day and international streaming: not established by these announcements.
@@ -28,7 +28,7 @@ The announcement establishes a release window, rather than an exact first-episod
 
 Eliane is expelled after her engagement to Prince Claude is broken. Rather than remain trapped by that relationship, she leaves and meets Nigel, a prince from a neighboring country. Her healing abilities and a fresh start become central to the fantasy story.
 
-The adaptation is based on Shikiso Utsuzawa's novels, illustrated by Pukyuunosuke. Matsu Mokuba draws the manga adaptation. The anime's official site identifies the source works separately, avoiding confusion between the novels and manga.
+The adaptation is based on Shikiso Utsuzawa's novels, illustrated by Pukyunosuke. Mokuba Matsu draws the manga adaptation. The anime's official site identifies the source works separately, avoiding confusion between the novels and manga.
 
 ### What does the teaser confirm?
 
@@ -51,10 +51,6 @@ When an exact date is released, this same guide should be updated instead of cre
 - Official video: https://www.youtube.com/watch?v=AgwEj6-rVdw
 Video identity confirmed by the official source link; actual playback, thumbnail dimensions and embedding have NOT been verified.
 
-## Production checklist — incomplete
+## Current implementation and review
 
-Duplicate check: current article paths, assets/data.js, sitemap.xml and open PR titles checked October 20; no matching title/alias located.
-This is distinct from the existing A Tale of the Secret Saint article.
-BLOCKED: IMAGE UNVERIFIED. Obtain an official series-specific visual; confirm correct subject, image response, dimensions, desktop/mobile crop and matching homepage/social uses.
-Next: check romanized staff names against official English credits where available, build the full established HTML layout and lite-trailer, add two verified related cards, schema and index metadata, then run publication and visual checks.
-Do not add this Markdown draft to the live sitemap, homepage or search index.
+The full HTML article, official-image URLs, structured data, related cards and proposed discovery entries are now on this same PR branch. The current blocking visual/media checks are recorded in [release-coverage-20261020-review.md](release-coverage-20261020-review.md). This draft is not published.

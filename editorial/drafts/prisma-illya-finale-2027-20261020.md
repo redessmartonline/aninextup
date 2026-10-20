@@ -1,6 +1,6 @@
 # Prisma Illya FINALE Confirms 2027 TV Return and Japanese Broadcasters
 
-Status: UNPUBLISHED TEXT DRAFT — media and rendered article checks incomplete.
+Status: Superseded by the full unpublished HTML proposal at articles/prisma-illya-finale-anime-2027.html. See release-coverage-20261020-review.md for current validation status.
 Prepared: October 20, 2026.
 Proposed News category: Returning Series.
 Proposed canonical slug: prisma-illya-finale-anime-2027
@@ -42,11 +42,6 @@ For the precise premiere schedule, follow the franchise's official notices. Neit
 - July 20 KADOKAWA announcement: https://group.kadokawa.co.jp/information/promotional_topics/article-15272.html
 - Official franchise news: https://prisma-illya.jp/portal/
 
-## Production checklist — incomplete
+## Current implementation and review
 
-Duplicate check: current article paths, assets/data.js, sitemap.xml and open PR titles checked October 20; no matching franchise coverage located.
-Existing draft directories checked by path; no matching draft located.
-BLOCKED: IMAGE UNVERIFIED. Obtain the actual official FINALE visual and verify subject, MIME, dimensions, desktop/mobile crop and all card uses.
-Official trailer: not verified; do not invent an embed or reuse a different Prisma Illya installment's video.
-Next: build the full established HTML layout, two related cards, schema and index metadata; run publication and duplicate checks; inspect real desktop/mobile rendering.
-Do not add this Markdown draft to the live sitemap, homepage or search index.
+The full HTML article, official-image URLs, structured data, related cards and proposed discovery entries are now on this same PR branch. The current blocking visual/media checks are recorded in [release-coverage-20261020-review.md](release-coverage-20261020-review.md). This draft is not published.
