@@ -4,6 +4,7 @@ const root=path.resolve(__dirname,'..');
 const model=require('../assets/release-model.js');
 const dataSource=fs.readFileSync(path.join(root,'assets/data.js'),'utf8');
 const dataVersion=crypto.createHash('sha256').update(dataSource).digest('hex').slice(0,16);
+const appVersion=crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'assets/app.js'))).digest('hex').slice(0,16);
 const sandbox={window:{}};vm.runInNewContext(dataSource,sandbox);
 const data=sandbox.window.ANINEXTUP_DATA;
 const now=process.env.ANINEXTUP_NOW?new Date(process.env.ANINEXTUP_NOW):new Date();
@@ -23,7 +24,7 @@ function fill(html,attribute,render){
     const tags=new RegExp(`</?${match[1]}\\b[^>]*>`,'gi');tags.lastIndex=pattern.lastIndex;
     let depth=1,tag;while((tag=tags.exec(html))){depth+=tag[0].startsWith('</')?-1:1;if(!depth)break;}
     if(depth)throw new Error('Unclosed '+attribute);
-    edits.push([pattern.lastIndex,tag.index,render(match[2])]);
+    edits.push([pattern.lastIndex,tag.index,render(match[2],match[0])]);
   }
   for(const [start,end,value] of edits.reverse())html=html.slice(0,start)+value+html.slice(end);
   return html;
@@ -41,6 +42,7 @@ for(const name of fs.readdirSync(root).filter(n=>n.endsWith('.html'))){
   html=fill(html,'data-anime-month',month=>list(model.select(data.anime,'calendar',ctx).filter(a=>a.date.startsWith(month))));
   html=fill(html,'data-month-count',month=>{const n=data.anime.filter(a=>a.date?.startsWith(month)).length;return n?'· '+n+' CONFIRMED':'';});
   html=fill(html,'data-anime-platform',platform=>list(model.select(data.anime.filter(a=>model.matchesPlatform(a,platform)),'all',ctx)));
+  html=fill(html,'data-archive-platform',(platform,opening)=>{const month=/data-release-month="([^"]+)"/.exec(opening)?.[1];return list(model.select(data.anime.filter(a=>model.matchesPlatform(a,platform)&&a.date?.startsWith(month)),'all',ctx));});
   html=fill(html,'data-platform-count',platform=>{const n=data.anime.filter(a=>model.matchesPlatform(a,platform)).length;return n?'· '+n+' TRACKED':'';});
   html=fill(html,'data-home-latest',()=>editorialStories().slice(0,6).map(guide).join(''));
   html=fill(html,'data-guides',()=>newsStories().map(guide).join(''));
@@ -48,6 +50,7 @@ for(const name of fs.readdirSync(root).filter(n=>n.endsWith('.html'))){
   html=html.replace(/(<script\b[^>]*\bsrc=")assets\/data\.js(?:\?[^"\s]*)?"/g,(_,prefix)=>prefix+'assets/data.js?v='+dataVersion+'"');
   // All discovery pages load shared selectors before client-side refresh.
   if(html.includes('assets/data.js')&&!html.includes('src="assets/release-model.js'))html=html.replace(/<script src="assets\/app\.js[^\"]*"><\/script>/,'<script src="assets/release-model.js?v=discovery1"></script><script src="assets/app.js?v=discovery1"></script>');
+  html=html.replace(/(<script\b[^>]*\bsrc=")(\/?)assets\/app\.js(?:\?[^"\s]*)?"/g,(_,prefix,slash)=>prefix+slash+'assets/app.js?v='+appVersion+'"');
   if(html!==original){fs.writeFileSync(file,html);changed++;}
 }
 console.log(`Discovery HTML updated: ${changed} pages; ${ctx.today}, week ending ${ctx.weekEnd}.`);

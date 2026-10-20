@@ -4,11 +4,21 @@ const model=require('../assets/release-model.js');
 const box={window:{}};vm.runInNewContext(fs.readFileSync('assets/data.js','utf8'),box);
 const data=box.window.ANINEXTUP_DATA;
 const dataVersion=require('node:crypto').createHash('sha256').update(fs.readFileSync('assets/data.js')).digest('hex').slice(0,16);
+const appVersion=require('node:crypto').createHash('sha256').update(fs.readFileSync('assets/app.js')).digest('hex').slice(0,16);
 for(const name of fs.readdirSync('.').filter(n=>n.endsWith('.html'))){
   const html=fs.readFileSync(name,'utf8');
   if(html.includes('assets/data.js'))assert(html.includes('assets/data.js?v='+dataVersion),`${name}: stale release-index cache version`);
+  if(html.includes('assets/app.js'))assert(html.includes('assets/app.js?v='+appVersion),`${name}: stale application cache version`);
 }
 const newsHtml=fs.readFileSync('news.html','utf8');
+for(const name of ['crunchyroll-october-2026.html','netflix-october-2026-guide.html']){
+  const html=fs.readFileSync(name,'utf8'),start=html.indexOf('data-archive-platform=');
+  assert(start>=0,`${name}: missing month-specific archive`);
+  const cards=html.slice(start,html.indexOf('</section>',start));
+  const refs=[...cards.matchAll(/href="(articles\/[^"]+)"/g)].map(x=>x[1]);
+  assert(refs.length,`${name}: empty archive`);
+  for(const ref of refs)assert(data.anime.find(x=>x.article===ref)?.date?.startsWith('2026-10'),`${name}: out-of-month release ${ref}`);
+}
 for(const item of [...data.anime,...data.guides].filter(x=>['new-anime','returning-series','trailers-cast','release-news'].includes(x.newsCategory))){
   assert(newsHtml.includes('href="'+item.article+'"'),`news.html: missing categorized story ${item.article}`);
 }

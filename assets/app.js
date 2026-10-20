@@ -131,10 +131,29 @@ discoveryNodes('[data-guides]').forEach(el=>{
 setupNewsCategoryFilters();
 // Search every indexed public page, including articles not featured on the homepage.
 let siteSearchIndexPromise=null,siteSearchRequest=0;
-const normalizeSiteSearch=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
+const normalizeSiteSearch=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^\p{L}\p{N}]+/gu,' ').trim();
+function prepareSiteSearchEntry(entry){
+ if(!entry||typeof entry.title!=='string'||!entry.title.trim())return null;
+ let url;try{url=new URL(entry.url||entry.article,location.origin)}catch{return null}
+ if(url.origin!==location.origin||!url.pathname.startsWith('/articles/'))return null;
+ const aliases=Array.isArray(entry.aliases)?entry.aliases.filter(a=>typeof a==='string'):[];
+ const description=typeof entry.description==='string'?entry.description:'';
+ return {title:entry.title,description,url:url.pathname,aliases,search:normalizeSiteSearch([entry.title,...aliases,description,entry.content,entry.tag,entry.platform].filter(x=>typeof x==='string').join(' '))};
+}
 function loadSiteSearchIndex(){
  if(siteSearchIndexPromise)return siteSearchIndexPromise;
  siteSearchIndexPromise=(async()=>{
+  // One generated index replaces a separate network request for every article.
+  try{
+   const response=await fetch('/assets/search-index.json',{cache:'no-cache'});
+   if(response.ok){
+    const payload=await response.json();
+    if(payload.version===1&&Array.isArray(payload.entries)){
+     const entries=payload.entries.map(prepareSiteSearchEntry).filter(Boolean);
+     if(entries.length)return entries;
+    }
+   }
+  }catch(e){/* Older deployments can still use the public sitemap fallback. */}
   const response=await fetch('/sitemap.xml');
   if(!response.ok)throw new Error('Sitemap unavailable');
   const xml=new DOMParser().parseFromString(await response.text(),'application/xml');
@@ -160,9 +179,12 @@ function loadSiteSearchIndex(){
  return siteSearchIndexPromise;
 }
 function rankSiteSearchEntries(entries,words){
+ if(!words.length)return [];
+ const phrase=words.join(' ');
  return entries.map(x=>{
-  const title=normalizeSiteSearch(x.title);
-  return {...x,score:words.every(w=>x.search.includes(w))?words.reduce((n,w)=>n+(title.includes(w)?5:1),0):-1};
+  const title=normalizeSiteSearch(x.title),aliases=(x.aliases||[]).map(normalizeSiteSearch);
+  const score=words.every(w=>x.search.includes(w))?words.reduce((n,w)=>n+(title.includes(w)?5:1),0):-1;
+  return {...x,score:score<0?-1:score+(title===phrase?100:aliases.includes(phrase)?90:title.includes(phrase)?30:0)};
  }).filter(x=>x.score>=0).sort((a,b)=>b.score-a.score||a.title.localeCompare(b.title)).slice(0,40);
 }
 function renderSiteSearchResults(box,results){
@@ -220,18 +242,17 @@ async function searchSite(input=document.getElementById('search'),box=document.g
  const raw=(input?.value||'').trim(),request=++siteSearchRequest;
  if(!raw){if(box)box.hidden=true;return}
  const words=normalizeSiteSearch(raw).split(/\s+/).filter(Boolean);
+ if(!words.length){renderSiteSearchResults(box,[]);return;}
  // Show matches already present in the homepage data before loading the full sitemap index.
- const localEntries=(window.ANINEXTUP_DATA?.anime||[]).filter(x=>x.article).map(x=>({
-  title:x.title||'',description:x.description||'',url:new URL(x.article,location.origin).pathname,
-  search:normalizeSiteSearch([x.title,x.description,x.tag,x.platform].filter(Boolean).join(' '))
- }));
+ const localEntries=[...(window.ANINEXTUP_DATA?.anime||[]),...(window.ANINEXTUP_DATA?.guides||[])].map(prepareSiteSearchEntry).filter(Boolean);
  const immediate=rankSiteSearchEntries(localEntries,words);
  if(immediate.length)renderSiteSearchResults(box,immediate);
  else if(box){box.innerHTML='<div class="no-result">Searching all articles…</div>';box.hidden=false}
  try{
   const entries=await loadSiteSearchIndex();
   if(request!==siteSearchRequest)return;
-  const results=rankSiteSearchEntries(entries,words);
+  const unique=new Map([...localEntries,...entries].map(x=>[x.url,x]));
+  const results=rankSiteSearchEntries([...unique.values()],words);
   if(box)renderSiteSearchResults(box,results);
   else if(results[0])location.href=results[0].url;
  }catch(e){

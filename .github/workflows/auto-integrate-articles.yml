@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'articles/**'
+      - 'assets/app.js'
       - '.github/workflows/auto-integrate-articles.yml'
   workflow_dispatch:
 
@@ -28,7 +29,7 @@ jobs:
         shell: python
         run: |
           from pathlib import Path
-          import datetime, html as htmlmod, json, re, sys, xml.etree.ElementTree as ET
+          import datetime, hashlib, html as htmlmod, json, re, sys, xml.etree.ElementTree as ET
           sys.path.insert(0, str(Path.cwd()))
           from scripts.news_categories import classify_news_category
 
@@ -75,7 +76,12 @@ jobs:
               if page != original_page:
                   p.write_text(page, encoding="utf-8")
               app_script = re.compile(r'<script\s+src=["\'](?:\.\./)?assets/app\.js(?:\?[^"\']*)?["\']\s*></script>', re.I)
-              app_script_tag = '<script src="../assets/app.js?v=20261017-ga4-streaming-clicks-1"></script>'
+              app_version = hashlib.sha256(Path('assets/app.js').read_bytes()).hexdigest()[:16]
+              app_script_tag = f'<script src="../assets/app.js?v={app_version}"></script>'
+              # Replace every defer/legacy copy with one current shared application.
+              all_app_scripts = re.compile(r'<script\b(?=[^>]*\bsrc=["\'][^"\']*assets/app\.js)[^>]*>\s*</script>', re.I)
+              page = all_app_scripts.sub("", page)
+
               updated, replacements = app_script.subn(app_script_tag, page, count=1)
               if replacements == 0:
                   updated = page.replace("</body>", app_script_tag + "\n</body>", 1)
