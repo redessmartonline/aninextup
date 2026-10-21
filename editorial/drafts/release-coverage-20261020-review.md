@@ -60,3 +60,12 @@ Verified in the actual branch preview:
 - Local existing publication validator passes both articles; discovery test passes. GitHub checks and branch deployment passed after the poster fix.
 
 Remaining: inspect regenerated homepage cards after preview deployment, record final CI status, and verify actual teaser playback when this browser can load the media. Production main remains unchanged; the PR is not ready for unconditional publication while playback remains unverified.
+
+
+## Final October 21 follow-up
+
+Regenerated homepage cards were inspected in the public preview at desktop and narrow-frame widths. Both new stories show their correct loaded 1200 x 630 official images and fit the content width. A fresh playback attempt still stayed at currentTime=0 and readyState=0, so actual teaser playback remains unverified.
+
+Resolved conflicts against main 6c18460ee8888d1f9c24d4476b1cc2706c3e08b0, preserving its updated One Piece Elbaph dub and Reincarnated as a Sword dub articles. Regenerated discovery, latest news and search index from the merged sources. Proposed publication/modified dates now reflect October 21.
+
+After reconciliation: both publication-structure and duplicate checks pass; discovery, progressive search and Python search-index tests pass; 110-article preflight reports 0 errors and 0 warnings. Keep unpublished pending playback verification.
