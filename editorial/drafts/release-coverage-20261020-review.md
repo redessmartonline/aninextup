@@ -43,3 +43,20 @@ This establishes official provenance, address and nonzero reported image-documen
 A read-only TinyFish browser automation for media QA was rejected by automatic approval review because it consumes credits and the owner requested no paid tools. No paid browser run was executed; no alternative was used to bypass the rejection.
 
 Keep PR #117 as a draft. The branch has proposed publication assets, but production main has not been changed.
+
+
+## October 21 free-browser review update
+
+The public branch preview URL was recovered from Cloudflare's PR comment, so preview inspection no longer requires dashboard authentication. A dashboard sign-in attempt returned 403 and was not repeated.
+
+Verified in the actual branch preview:
+- Both official hero images display the correct named series and load at 1200 x 630. Independent image requests returned 200 image/jpeg and 200 image/png.
+- Both articles render at desktop width without horizontal overflow.
+- The noindex responsive review harness embeds a 390 CSS pixel frame (375 pixel content width with scrollbar). Both articles fit that content width without horizontal overflow. This is a responsive frame test, not a physical-mobile-device test.
+- All three runtime related cards load their correct images; the two authored cards and the existing application's third recommendation remain one row.
+- Discovered a broken YouTube thumbnail (naturalWidth 0). Fixed the lite-trailer poster and VideoObject thumbnailUrl to the verified official True Saint artwork; both corrected images now load at 1200 x 630.
+- The standard button loads the correct youtube-nocookie iframe, title and official channel. Actual media playback does NOT advance: currentTime stays 0 and readyState stays 0. This occurs on the production's own official embed too. Do not label playback passed.
+- Regenerated proposed homepage/news HTML, latest-news feed and the full 110-article search index. Both new stories are in the first seven homepage items.
+- Local existing publication validator passes both articles; discovery test passes. GitHub checks and branch deployment passed after the poster fix.
+
+Remaining: inspect regenerated homepage cards after preview deployment, record final CI status, and verify actual teaser playback when this browser can load the media. Production main remains unchanged; the PR is not ready for unconditional publication while playback remains unverified.
