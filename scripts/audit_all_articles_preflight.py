@@ -23,6 +23,8 @@ def meta(text, key, value):
 def audit(path):
     text = path.read_text(encoding='utf-8')
     issues = [("error", "invalid_video_upload_date") for error in video_schema_errors(text)]
+    if 'googletagmanager.com/gtag/js?id=G-TRV5CF738D' not in text:
+        issues.append(('error', 'missing_ga4_tag'))
     title = re.search(r'<title\b[^>]*>(.*?)</title>', text, re.I | re.S)
     if not title or not re.sub(r'<[^>]*>', '', title.group(1)).strip():
         issues.append(('error', 'missing_title'))
@@ -92,6 +94,8 @@ def main():
     print(f"Audited {len(rows)} articles; errors={result['total_error_findings']}; warnings={result['total_warning_findings']}")
     for k, v in sorted(counts.items()):
         print(f'{k}: {v}')
+    if result['total_error_findings']:
+        raise SystemExit(1)
 
 if __name__ == '__main__':
     main()

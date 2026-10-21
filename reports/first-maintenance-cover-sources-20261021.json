@@ -1,0 +1,58 @@
+[
+  {
+    "id": "chihara",
+    "status": 200,
+    "mime": "image/png",
+    "bytes": 478758,
+    "dimensions": [
+      1200,
+      630
+    ],
+    "source": "https://chiharasan-anime.com/ogimage.png",
+    "article": "articles/jirai-girl-chihara-san-anime-january-2027",
+    "localAsset": "assets/images/news/jirai-girl-chihara-san-anime-january-2027-official.webp",
+    "optimizedBytes": 57626
+  },
+  {
+    "id": "kakunaru",
+    "status": 200,
+    "mime": "image/jpeg",
+    "bytes": 233455,
+    "dimensions": [
+      1200,
+      630
+    ],
+    "source": "https://kakunaru-anime.com/assets/og/ogp2.jpg",
+    "article": "articles/now-that-we-draw-anime-january-2027",
+    "localAsset": "assets/images/news/now-that-we-draw-anime-january-2027-official.webp",
+    "optimizedBytes": 110742
+  },
+  {
+    "id": "murcielago",
+    "status": 200,
+    "mime": "image/jpeg",
+    "bytes": 378339,
+    "dimensions": [
+      1200,
+      630
+    ],
+    "source": "https://murcielago-anime.com/core_sys/images/others/ogp.jpg",
+    "article": "articles/murcielago-anime-january-2027",
+    "localAsset": "assets/images/news/murcielago-anime-january-2027-official.webp",
+    "optimizedBytes": 126582
+  },
+  {
+    "id": "sss",
+    "status": 200,
+    "mime": "image/jpeg",
+    "bytes": 209007,
+    "dimensions": [
+      1200,
+      630
+    ],
+    "source": "https://sss-revival.com/core_sys/images/others/ogp.jpg",
+    "article": "articles/sss-class-revival-hunter-anime-january-2027",
+    "localAsset": "assets/images/news/sss-class-revival-hunter-anime-january-2027-official.webp",
+    "optimizedBytes": 61958
+  }
+]

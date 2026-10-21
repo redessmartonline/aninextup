@@ -35,7 +35,8 @@ def validate(path):
     for required in ('KEEP WATCHING', 'Related releases', 'Release at a glance',
                      'rel="canonical"', 'og:image', 'twitter:image', 'og:title',
                      'og:description', 'twitter:card', 'BreadcrumbList',
-                     'NewsArticle', 'aninextup-index', 'editorial-policy'):
+                     'NewsArticle', 'aninextup-index', 'editorial-policy',
+                     'googletagmanager.com/gtag/js?id=G-TRV5CF738D'):
         if required not in s: errors.append("Missing " + required)
     if not has("figure", "") and "<figure" not in s: errors.append("Missing official hero figure")
     cards = re.findall(r'<a\b[^>]*class="[^"]*related-card[^"]*"[^>]*>(.*?)</a>', s, re.S)

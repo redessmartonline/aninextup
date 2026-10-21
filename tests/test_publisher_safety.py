@@ -24,9 +24,12 @@ class PublisherSafety(unittest.TestCase):
         self.assertIsNone(publisher.verified_image_bytes('https://evil.example/cover.jpg'))
     def test_editorial_short_rejected(self):
         self.assertIsNone(publisher.editorial_sections('Anime','Short description.','https://crunchyroll.com/news'))
-    def test_editorial_complete_accepted(self):
+    def test_editorial_brief_does_not_copy_source(self):
         desc=' '.join(f'The official announcement provides verified detail number {i} about the upcoming anime release and the publisher confirms this information.' for i in range(10))
-        self.assertIn('What the official source reports',publisher.editorial_sections('Anime',desc,'https://crunchyroll.com/news'))
+        brief=publisher.editorial_sections('Example Anime Reveals January Premiere',desc,'https://crunchyroll.com/news')
+        self.assertIn('Official update',brief)
+        self.assertIn('editorial verification before publication',brief)
+        self.assertNotIn(desc,brief)
     def test_image_not_erased_before_save(self):
         code=(ROOT/'scripts'/'auto_publish_news.py').read_text()
         self.assertIn('and not image_payload:',code)

@@ -126,7 +126,8 @@ discoveryNodes('[data-guides]').forEach(el=>{
   if(!g.article||seen.has(g.article)||!NEWS_ARTICLE_CATEGORY[g.article])return false;
   seen.add(g.article);return true;
  });
- el.innerHTML=stories.map(g=>'<a class="card story visual-card" data-news-category="'+NEWS_ARTICLE_CATEGORY[g.article]+'" href="'+g.article+'">'+(g.image?'<img src="'+g.image+'" alt="'+g.title+'" loading="lazy">':'')+'<div class="visual-body"><span class="tag">'+(g.tag||'OFFICIAL NEWS')+'</span><h3>'+g.title+'</h3>'+(typeof g.description==='string'&&g.description.trim()?'<p>'+g.description+'</p>':'')+'<span class="more">READ MORE →</span></div></a>').join('');
+ const ordered=window.ANINEXTUP_RELEASES?.sortNews(stories,window.ANINEXTUP_NEWS_DATES||{})||stories;
+ el.innerHTML=ordered.map(g=>'<a class="card story visual-card" data-news-category="'+NEWS_ARTICLE_CATEGORY[g.article]+'" href="'+g.article+'">'+(g.image?'<img src="'+g.image+'" alt="'+g.title+'" loading="lazy">':'')+'<div class="visual-body"><span class="tag">'+(g.tag||'OFFICIAL NEWS')+'</span><h3>'+g.title+'</h3>'+(typeof g.description==='string'&&g.description.trim()?'<p>'+g.description+'</p>':'')+'<span class="more">READ MORE →</span></div></a>').join('');
 });
 setupNewsCategoryFilters();
 // Search every indexed public page, including articles not featured on the homepage.
@@ -529,42 +530,44 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 else normalizeArticleFooter();
 
 
-// Measure clicks from AniNextUp to streaming services in GA4.
-(function setupStreamingLinkAnalytics(){
+// Classify platform destinations before counting outbound clicks in GA4.
+function classifyPlatformLink(destination){
+  if(!['https:','http:'].includes(destination.protocol))return null;
   const platforms=[
-    {host:"crunchyroll.com",name:"Crunchyroll"},
-    {host:"netflix.com",name:"Netflix"},
-    {host:"hidive.com",name:"HIDIVE"},
-    {host:"disneyplus.com",name:"Disney+"},
-    {host:"primevideo.com",name:"Prime Video"},
-    {host:"hulu.com",name:"Hulu"},
-    {host:"tv.apple.com",name:"Apple TV"},
-    {host:"max.com",name:"Max"},
-    {host:"peacocktv.com",name:"Peacock"},
-    {host:"tubitv.com",name:"Tubi"}
+    {host:"crunchyroll.com",name:"Crunchyroll"},{host:"netflix.com",name:"Netflix"},
+    {host:"hidive.com",name:"HIDIVE"},{host:"disneyplus.com",name:"Disney+"},
+    {host:"primevideo.com",name:"Prime Video"},{host:"hulu.com",name:"Hulu"},
+    {host:"tv.apple.com",name:"Apple TV"},{host:"max.com",name:"Max"},
+    {host:"peacocktv.com",name:"Peacock"},{host:"tubitv.com",name:"Tubi"}
   ];
-  document.addEventListener("click",event=>{
+  const hostname=destination.hostname.toLowerCase();
+  const platform=platforms.find(p=>hostname===p.host||hostname.endsWith('.'+p.host));
+  if(!platform)return null;
+  // Match editorial sections across localized routes, e.g. /es/news/ and /en-US/news/.
+  const editorialPath=/(?:^|\/)(?:news|tudum|media|newsroom|press|press-releases|blog|only-on-netflix)(?:\/|$)/i.test(destination.pathname);
+  const editorialHost=/^(?:about|media|news|press)\./i.test(hostname);
+  const kind=editorialPath||editorialHost?'source':'streaming';
+  const slug=platform.name.toLowerCase().replace(/[^a-z0-9]+/g,'_').replace(/^_|_$/g,'');
+  return {platform:platform.name,kind,event:kind+'_click_'+slug};
+}
+(function setupStreamingLinkAnalytics(){
+  document.addEventListener('click',event=>{
     if(event.defaultPrevented||event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;
-    const link=event.target instanceof Element?event.target.closest("a[href]"):null;
+    const link=event.target instanceof Element?event.target.closest('a[href]'):null;
     if(!link)return;
     let destination;
     try{destination=new URL(link.href,location.href)}catch{return}
     if(destination.origin===location.origin)return;
-    const hostname=destination.hostname.toLowerCase();
-    const platform=platforms.find(item=>hostname===item.host||hostname.endsWith("."+item.host));
-    if(!platform)return;
-    // Do not count Netflix editorial/press pages as streaming destinations.
-    if(platform.name==="Netflix"&&/^\/(tudum|media|newsroom|only-on-netflix)(\/|$)/i.test(destination.pathname))return;
-    if(typeof window.gtag!=="function")return;
-    const slug=platform.name.toLowerCase().replace(/[^a-z0-9]+/g,"_").replace(/^_|_$/g,"");
-    window.gtag("event","streaming_click_"+slug,{
-      platform_name:platform.name,
+    const metric=classifyPlatformLink(destination);
+    if(!metric||typeof window.gtag!=='function')return;
+    window.gtag('event',metric.event,{
+      platform_name:metric.platform,
+      destination_type:metric.kind,
       link_url:destination.href,
       link_domain:destination.hostname,
-      link_text:(link.innerText||link.getAttribute("aria-label")||"").trim().slice(0,120),
+      link_text:(link.innerText||link.getAttribute('aria-label')||'').trim().slice(0,120),
       page_path:location.pathname,
-      transport_type:"beacon"
+      transport_type:'beacon'
     });
   },true);
 })();
-

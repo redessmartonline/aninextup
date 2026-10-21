@@ -2,6 +2,9 @@
 const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),crypto=require('node:crypto');
 const root=path.resolve(__dirname,'..');
 const model=require('../assets/release-model.js');
+const newsDates=require('../assets/news-dates.js');
+const modelVersion=crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'assets/release-model.js'))).digest('hex').slice(0,16);
+const newsDatesVersion=crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'assets/news-dates.js'))).digest('hex').slice(0,16);
 const dataSource=fs.readFileSync(path.join(root,'assets/data.js'),'utf8');
 const dataVersion=crypto.createHash('sha256').update(dataSource).digest('hex').slice(0,16);
 const appVersion=crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'assets/app.js'))).digest('hex').slice(0,16);
@@ -32,7 +35,7 @@ function fill(html,attribute,render){
 const editorialStories=()=>{const seen=new Set();return [...data.anime.filter(a=>a.tag&&a.article),...data.guides].filter(g=>{if(!g.article||seen.has(g.article))return false;seen.add(g.article);return true;});};
 // Match the browser's category rules, including releases without a guide tag.
 const newsCategories=new Set(['new-anime','returning-series','trailers-cast','release-news']);
-const newsStories=()=>{const seen=new Set();return [...data.anime,...data.guides].filter(g=>{if(!g.article||seen.has(g.article)||!newsCategories.has(g.newsCategory))return false;seen.add(g.article);return true;});};
+const newsStories=()=>{const seen=new Set();return model.sortNews([...data.anime,...data.guides].filter(g=>{if(!g.article||seen.has(g.article)||!newsCategories.has(g.newsCategory))return false;seen.add(g.article);return true;}),newsDates);};
 const list=(items,full=false,empty='No confirmed releases yet.')=>items.map(a=>card(a,full)).join('')||`<p class="empty">${escape(empty)}</p>`;
 let changed=0;
 for(const name of fs.readdirSync(root).filter(n=>n.endsWith('.html'))){
@@ -51,6 +54,11 @@ for(const name of fs.readdirSync(root).filter(n=>n.endsWith('.html'))){
   // All discovery pages load shared selectors before client-side refresh.
   if(html.includes('assets/data.js')&&!html.includes('src="assets/release-model.js'))html=html.replace(/<script src="assets\/app\.js[^\"]*"><\/script>/,'<script src="assets/release-model.js?v=discovery1"></script><script src="assets/app.js?v=discovery1"></script>');
   html=html.replace(/(<script\b[^>]*\bsrc=")(\/?)assets\/app\.js(?:\?[^"\s]*)?"/g,(_,prefix,slash)=>prefix+slash+'assets/app.js?v='+appVersion+'"');
+  html=html.replace(/assets\/release-model\.js(?:\?[^"\s]*)?/g,'assets/release-model.js?v='+modelVersion);
+  if(html.includes('data-guides')){
+    html=html.replace(/<script src="assets\/news-dates\.js[^"]*"><\/script>/g,'');
+    html=html.replace(/<script src="assets\/app\.js/,'<script src="assets/news-dates.js?v='+newsDatesVersion+'"></script><script src="assets/app.js');
+  }
   if(html!==original){fs.writeFileSync(file,html);changed++;}
 }
 console.log(`Discovery HTML updated: ${changed} pages; ${ctx.today}, week ending ${ctx.weekEnd}.`);

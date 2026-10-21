@@ -2,6 +2,12 @@ name: All articles preflight audit
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'articles/**'
+      - 'scripts/audit_all_articles_preflight.py'
+      - '.github/workflows/all-articles-preflight.yml'
   pull_request:
     paths:
       - 'articles/**'

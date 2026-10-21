@@ -22,6 +22,13 @@
       return true;
     }).sort((a,b)=>(a.date||'9999').localeCompare(b.date||'9999'));
   }
-  root.ANINEXTUP_RELEASES={context,matchesPlatform,select};
+  function sortNews(items,dates={}){
+    return [...items].sort((a,b)=>{
+      const left=dates[a.article]||{},right=dates[b.article]||{};
+      const dateOrder=(right.updated||right.published||'').localeCompare(left.updated||left.published||'');
+      return dateOrder||(Number(right.publishedAt)||0)-(Number(left.publishedAt)||0)||String(a.article||'').localeCompare(String(b.article||''));
+    });
+  }
+  root.ANINEXTUP_RELEASES={context,matchesPlatform,select,sortNews};
   if(typeof module!=='undefined')module.exports=root.ANINEXTUP_RELEASES;
 })(typeof window!=='undefined'?window:globalThis);

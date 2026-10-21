@@ -31,8 +31,10 @@ const section=new Section([['TANK CHAIR','PSYREN'],['Anime release calendar','Wh
 const grid=context.normalizeRelatedReleaseGrid(section);
 assert.equal(section.grids.length,1,'split legacy grids should be merged into one');
 assert.deepEqual(grid.children.map(card=>card.title),['TANK CHAIR','PSYREN','Anime release calendar']);
-assert.equal(grid.style.values['grid-template-columns'].value,'repeat(3,minmax(0,1fr))');
-assert.equal(grid.style.values['grid-template-columns'].priority,'important');
+assert.equal(grid.style.values.display.value,'grid');
+// Column sizing lives in the shared stylesheet so narrow layouts can use it too.
+const css=fs.readFileSync('assets/style.css','utf8');
+assert(/\.article \.related-releases \.grid\.three\s*\{[^}]*grid-template-columns:\s*repeat\(3,minmax\(0,1fr\)\)!important/.test(css));
 assert.equal(grid.classList.values.has('three'),true);
 
 const twoCardSection=new Section([['First','Second'],['Third']]);
