@@ -1,0 +1,16 @@
+{
+  "article": "articles/rakuen-tsuihou-kokoro-no-resonance",
+  "checked": "2026-10-21",
+  "officialAnnouncement": "https://news.aniplex.co.jp/detail.html?id=71470",
+  "imageSourcePage": "https://eiga.com/news/20261018/6/",
+  "downloadUrl": "https://media.eiga.com/images/buzz/129892/ea55d2a282aaa3e8/640.jpg",
+  "httpStatus": 200,
+  "contentType": "image/jpeg",
+  "sourceDimensions": [
+    452,
+    640
+  ],
+  "localAsset": "assets/images/news/rakuen-tsuihou-kokoro-no-resonance.webp",
+  "assetBytes": 101536,
+  "reason": "The previous externally hosted cover failed while its origin displayed a maintenance notice. Local optimized official key visual preserves full artwork in the article hero."
+}
