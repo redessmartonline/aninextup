@@ -12,6 +12,10 @@ on:
       - 'tests/test_video_schema.py'
       - 'assets/data.js'
       - 'sitemap.xml'
+      - 'robots.txt'
+      - '_headers'
+      - 'news.html'
+      - 'scripts/validate_indexability.py'
       - '.github/workflows/validate-publication.yml'
   workflow_dispatch:
 
@@ -28,6 +32,9 @@ jobs:
         run: |
           python -m unittest discover -s tests -p test_video_schema.py
           python scripts/validate_video_schema.py
+
+      - name: Check indexability and crawlable article discovery
+        run: python scripts/validate_indexability.py
 
       - name: Validate central release index
         run: node --check assets/data.js
