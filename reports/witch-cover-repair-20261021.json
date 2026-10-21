@@ -1,0 +1,15 @@
+{
+  "article": "articles/witch-on-the-holy-night-movie",
+  "checked": "2026-10-21",
+  "officialSource": "https://www.ufotable.com/news/article/3055/",
+  "downloadUrl": "https://www.ufotable.co.jp/_____corp/wp-content/uploads/top_event_mhy0930.webp",
+  "httpStatus": 200,
+  "contentType": "image/webp",
+  "dimensions": [
+    1500,
+    844
+  ],
+  "localAsset": "assets/images/news/witch-on-the-holy-night-official-trailer.webp",
+  "assetBytes": 67148,
+  "reason": "Live previous hero had naturalWidth=0. Replaced failed external image with locally hosted official final-trailer visual, including related card and social metadata references."
+}

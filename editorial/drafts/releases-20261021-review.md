@@ -40,3 +40,16 @@ See seo-title-proposals-20261021.json for exact before/after values. These are e
 - Actual trailer playback: browser opened both exact official watch pages. Titles/channels and upload dates match the announcement sources. ELECEED JSON-LD declares PT63S; Haru declares PT37S. Both players remained at time 0, readyState 0, so actual playback is NOT VERIFIED. A displayed watch page or play control is not proof that the video played.
 - Search Console: opening the service reaches its public introduction page with a sign-in link. No signed-in property was available. Validation of the uploadDate correction has NOT been requested, and current clicks/impressions/CTR have NOT been read. The earlier 20-page correction was deployed and checked separately; this draft does not alter it.
 - Explicit owner publication instruction and all remaining material checks are required before either article or the title edits enter main.
+
+
+## Follow-up review — October 21, 2026
+
+- Updated this draft branch against production commit e345acdb3ea6b855e5af6056fafddc0672a106ae. Resolved generated-file conflicts by keeping current production and rebuilding from the combined data. The 47 verified video timestamps, Today improvements, and Rakuen/Witch cover repairs are retained.
+- Re-read both ELECEED October 21 production announcements successfully over HTTPS. They confirm April 2027, the English-version trailer q7eT3oVvko4 and the worldwide wording; no exact first-episode day is given.
+- Preview deployment is now available. ELECEED hero loads at 1200 × 630 and matches the named series. Desktop article has no horizontal overflow.
+- Replaced the failing SSS-Class thumbnail in ELECEED's related section with the existing PSYREN article and its local official artwork. Shangri-La Frontier also uses the local official asset, with the verified-artwork marker to preserve the reviewed source.
+- Simplified repetitive release caveats and preserved the complete official visual with contain framing. Versioned the two drafts' data script to avoid stale related-card data.
+- Fresh checks: 110-article preflight zero errors/warnings; full video timestamp validator passes; five schema tests pass; discovery regression passes; both new article structure validations pass; duplicate review against 108 production articles passes. Existing three article proposals change HTML titles only.
+- In the preview, the ELECEED button opens the expected embedded YouTube video, whose declared duration is 63 seconds. Actual video playback remains unverified: currentTime 0, readyState 0. The fallback watch link is present.
+- Final updated-preview hero/cards/narrow-layout checks are recorded in the PR body after deployment. Browser review uses a 390 CSS-pixel iframe harness, not physical-device emulation.
+- No article has been published. Owner's specific publication instruction is still required by editorial/PUBLICATION_QUALITY_GATE.md. Artwork reuse clearance remains unresolved as previously recorded.

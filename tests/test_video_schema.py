@@ -24,12 +24,12 @@ class VideoSchemaTests(unittest.TestCase):
         self.assertEqual(len(video_schema_errors(markup(data))), 1)
 
     def test_invalid_dates(self):
-        for value in ('', None, 20261021, '2026-02-30', 'October 21, 2026', '2026-10-21T27:00:00Z'):
+        for value in ('', None, 20261021, '2026-02-30', '2026-10-03', '2026-10-03T12:30:00', 'October 21, 2026', '2026-10-21T27:00:00Z'):
             with self.subTest(value=value):
                 self.assertTrue(video_schema_errors(markup({'@type': 'VideoObject', 'uploadDate': value})))
 
     def test_valid_dates_and_non_video_articles(self):
-        for value in ('2026-10-03', '2026-10-03T12:30:00Z', '2026-10-03T12:30:00+09:00'):
+        for value in ('2026-10-03T12:30:00Z', '2026-10-03T12:30:00+09:00'):
             self.assertEqual(video_schema_errors(markup({'@type': 'VideoObject', 'uploadDate': value})), [])
         self.assertEqual(video_schema_errors(markup({'@type': 'NewsArticle'})), [])
 
