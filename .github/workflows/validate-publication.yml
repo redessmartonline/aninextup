@@ -7,6 +7,9 @@ on:
   push:
     branches: [main]
     paths:
+      - 'articles/**'
+      - 'scripts/validate_video_schema.py'
+      - 'tests/test_video_schema.py'
       - 'assets/data.js'
       - 'sitemap.xml'
       - '.github/workflows/validate-publication.yml'
@@ -20,6 +23,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - name: Validate video structured data
+        run: |
+          python -m unittest discover -s tests -p test_video_schema.py
+          python scripts/validate_video_schema.py
 
       - name: Validate central release index
         run: node --check assets/data.js

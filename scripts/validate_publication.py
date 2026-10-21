@@ -6,6 +6,7 @@ import json
 import re
 import subprocess
 import sys
+from validate_video_schema import video_schema_errors
 
 class Audit(HTMLParser):
     def __init__(self):
@@ -22,6 +23,7 @@ class Audit(HTMLParser):
 def validate(path):
     errors = []
     s = path.read_text(encoding="utf-8")
+    errors.extend(video_schema_errors(s))
     dom = Audit()
     dom.feed(s)
     has = lambda tag, cls: any(t == tag and cls in a.get("class", "").split() for t, a in dom.tags)

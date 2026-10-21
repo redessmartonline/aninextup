@@ -8,6 +8,7 @@ from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlparse
+from validate_video_schema import video_schema_errors
 
 def attr(tag, key):
     m = re.search(r'\b' + re.escape(key) + r'\s*=\s*(["\'])(.*?)\1', tag, re.I | re.S)
@@ -21,7 +22,7 @@ def meta(text, key, value):
 
 def audit(path):
     text = path.read_text(encoding='utf-8')
-    issues = []
+    issues = [("error", "invalid_video_upload_date") for error in video_schema_errors(text)]
     title = re.search(r'<title\b[^>]*>(.*?)</title>', text, re.I | re.S)
     if not title or not re.sub(r'<[^>]*>', '', title.group(1)).strip():
         issues.append(('error', 'missing_title'))
