@@ -5,6 +5,8 @@ on:
     paths:
       - 'assets/data.js'
       - 'articles/**'
+      - 'scripts/validate_video_schema.py'
+      - 'tests/test_video_schema.py'
       - 'scripts/editorial_audit.py'
       - 'scripts/check_image_urls.py'
       - '.github/workflows/editorial-audit.yml'
@@ -20,6 +22,10 @@ jobs:
           python-version: '3.12'
       - name: Validate Python syntax
         run: python -m py_compile scripts/editorial_audit.py
+      - name: Validate video structured data
+        run: |
+          python -m unittest discover -s tests -p test_video_schema.py
+          python scripts/validate_video_schema.py
       - name: Audit all indexed articles
         run: python scripts/editorial_audit.py > editorial_audit.log
       - name: Check external cover images
