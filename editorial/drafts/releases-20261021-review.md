@@ -5,7 +5,7 @@ Status: unpublished proposals. No production publication requested or performed.
 ## New articles
 
 - ELECEED: April 2027 window verified against the production's October 21 Japanese and English notices. No invented premiere day. Crunchyroll distribution distinguished from region/language availability. Official English-version video q7eT3oVvko4: uploadDate 2026-10-21T02:00:08-07:00; duration 63 seconds.
-- Haru to Gen: January 4, 2027 at 21:55 JST on tvk verified against AnimationID's October 21 notice and official on-air section. International streaming not announced in checked sources. Official teaser DFbZN4QYhao: uploadDate 2026-10-20T20:00:13-07:00; duration 36 seconds. The YouTube date's offset differs from the Japanese announcement date; it is intentionally preserved.
+- Haru to Gen: January 4, 2027 at 21:55 JST on tvk verified against AnimationID's October 21 notice and official on-air section. International streaming not announced in checked sources. Official teaser DFbZN4QYhao: uploadDate 2026-10-20T20:00:13-07:00; duration PT37S as declared by YouTube JSON-LD (the integer lengthSeconds extraction rounded differently). The YouTube date's offset differs from the Japanese announcement date; it is intentionally preserved.
 - Both classified as Release News because these reports focus on newly confirmed premiere timing for previously announced adaptations.
 
 ## Duplicate review before drafting
@@ -27,7 +27,8 @@ See seo-title-proposals-20261021.json for exact before/after values. These are e
 - Full publication structure validator: all five changed/new article files pass.
 - Complete static preflight: 110 draft-branch article files, zero errors and zero warnings.
 - Video date validator: all 110 article files pass.
-- Five video schema regression tests pass.
+- Five video schema regression tests and two search-index tests pass.
+- All three GitHub checks on commit 46e6eb2d2410633c1951bc12942844d7eca1a0d0 completed successfully.
 - Publication workflow's reference/index/sitemap validator passes.
 - JavaScript syntax and discovery/navigation regression pass.
 - Generated latest-news feed, public search index, crawlable hubs and sitemap include both new articles on this draft branch.
@@ -36,6 +37,6 @@ See seo-title-proposals-20261021.json for exact before/after values. These are e
 ## Checks remaining
 
 - Preview browser review of article heroes, homepage cards, related cards and narrow layouts.
-- Actual trailer playback: not yet verified; availability of a watch page/metadata alone is not proof of playback.
+- Actual trailer playback: browser opened both exact official watch pages. Titles/channels and upload dates match the announcement sources. ELECEED JSON-LD declares PT63S; Haru declares PT37S. Both players remained at time 0, readyState 0, so actual playback is NOT VERIFIED. A displayed watch page or play control is not proof that the video played.
 - Search Console: opening the service reaches its public introduction page with a sign-in link. No signed-in property was available. Validation of the uploadDate correction has NOT been requested, and current clicks/impressions/CTR have NOT been read. The earlier 20-page correction was deployed and checked separately; this draft does not alter it.
 - Explicit owner publication instruction and all remaining material checks are required before either article or the title edits enter main.
