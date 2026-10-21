@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Validate video upload dates without inferring them from article dates."""
 import argparse
-from datetime import date, datetime
+from datetime import datetime
 from html.parser import HTMLParser
 import json
 from pathlib import Path
@@ -44,9 +44,7 @@ def valid_upload_date(value):
     if not isinstance(value, str):
         return False
     try:
-        if re.fullmatch(r'\d{4}-\d{2}-\d{2}', value):
-            date.fromisoformat(value)
-        elif re.fullmatch(r'\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})?', value):
+        if re.fullmatch(r'\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})', value):
             datetime.fromisoformat(value.replace('Z', '+00:00'))
         else:
             return False
@@ -67,7 +65,7 @@ def video_schema_errors(text):
             continue
         for video in video_objects(data):
             if not valid_upload_date(video.get('uploadDate')):
-                errors.append('VideoObject missing or invalid uploadDate (verify the original video publication date)')
+                errors.append('VideoObject missing or invalid uploadDate (require a verified publication timestamp with timezone)')
     return errors
 
 

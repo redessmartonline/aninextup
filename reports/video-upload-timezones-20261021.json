@@ -1,0 +1,335 @@
+{
+  "checked_on": "2026-10-21",
+  "method": "Use original video uploadDate timestamps with their original timezone offsets. Never derive a time from the article or append an assumed midnight. Different calendar dates across timezone offsets are preserved.",
+  "videos": [
+    {
+      "file": "articles/dark-machine-the-animation.html",
+      "source": "https://www.youtube.com/watch?v=P8FfvDLyMrY",
+      "previous_uploadDate": "2026-08-18",
+      "uploadDate": "2026-08-18T20:00:33-07:00",
+      "verification": "Original YouTube watch-page metadata"
+    },
+    {
+      "file": "articles/grotesqqque-release-date.html",
+      "source": "https://www.youtube.com/watch?v=BfE9BOSmW7I",
+      "previous_uploadDate": "2026-08-30",
+      "uploadDate": "2026-08-30T21:17:50-07:00",
+      "verification": "Rendered original YouTube watch-page VideoObject JSON-LD"
+    },
+    {
+      "file": "articles/made-in-abyss-awakening-mystery-release-date.html",
+      "source": "https://www.youtube.com/watch?v=Sy7cLG6XHRY",
+      "previous_uploadDate": "2026-08-07",
+      "uploadDate": "2026-08-06T18:00:26-07:00",
+      "verification": "Rendered original YouTube watch-page VideoObject JSON-LD"
+    },
+    {
+      "file": "articles/shangri-la-frontier-season-3-release-date.html",
+      "source": "https://www.youtube.com/watch?v=03eWCvfLg2Y",
+      "previous_uploadDate": "2026-10-15",
+      "uploadDate": "2026-10-15T02:00:12-07:00",
+      "verification": "Rendered original YouTube watch-page VideoObject JSON-LD"
+    },
+    {
+      "file": "articles/cyberpunk-edgerunners-2.html",
+      "source": "https://www.youtube.com/watch?v=IBTK8PGe_Oo",
+      "previous_uploadDate": "2026-08-21",
+      "uploadDate": "2026-08-20T16:16:19-07:00",
+      "verification": "Original YouTube watch-page metadata"
+    },
+    {
+      "file": "articles/dr-stone-terraforming-anime.html",
+      "source": "https://www.youtube.com/watch?v=-Vk8vSnnmnY",
+      "previous_uploadDate": "2026-10-10",
+      "uploadDate": "2026-10-10T04:51:15-07:00",
+      "verification": "Rendered original YouTube watch-page VideoObject JSON-LD"
+    },
+    {
+      "file": "articles/in-a-world-full-of-zombies-january-2027.html",
+      "source": "https://www.youtube.com/watch?v=ky1EjKvGMrA",
+      "previous_uploadDate": "2026-10-10",
+      "uploadDate": "2026-10-09T20:00:08-07:00",
+      "verification": "Original YouTube watch-page metadata"
+    },
+    {
+      "file": "articles/the-boxer-anime-announcement.html",
+      "source": "https://www.youtube.com/watch?v=Y6pedL99rcY",
+      "previous_uploadDate": "2026-10-09",
+      "uploadDate": "2026-10-08T15:00:27-07:00",
+      "verification": "Original YouTube watch-page metadata"
+    },
+    {
+      "file": "articles/yumeneko-connect-anime-announcement.html",
+      "source": "https://www.youtube.com/watch?v=LCAL2iL5vLc",
+      "previous_uploadDate": "2026-10-14",
+      "uploadDate": "2026-10-13T20:00:24-07:00",
+      "verification": "Original YouTube watch-page metadata"
+    },
+    {
+      "file": "articles/black-clover-season-2.html",
+      "source": "https://www.youtube.com/watch?v=ZRrFCX47cJc",
+      "previous_uploadDate": "2026-08-07",
+      "uploadDate": "2026-08-07T12:00:37-07:00",
+      "verification": "Rendered original YouTube watch-page VideoObject JSON-LD"
+    },
+    {
+      "file": "articles/otome-heroines-fight-for-survival-anime.html",
+      "source": "https://www.youtube.com/watch?v=DGPf04O404Y",
+      "previous_uploadDate": "2026-10-06",
+      "uploadDate": "2026-10-06T02:00:06-07:00",
+      "verification": "Rendered original YouTube watch-page VideoObject JSON-LD"
+    },
+    {
+      "file": "articles/one-punch-man-season-3-part-2-january-2027.html",
+      "source": "https://www.youtube.com/watch?v=VR9MRmP2GF8",
+      "previous_uploadDate": "2026-10-11",
+      "uploadDate": "2026-10-10T11:15:04-07:00",
+      "verification": "Rendered original YouTube watch-page VideoObject JSON-LD"
+    },
+    {
+      "file": "articles/detective-is-already-dead-season-2.html",
+      "source": "https://www.youtube.com/watch?v=Q31atLvV6MM",
+      "previous_uploadDate": "2026-09-15",
+      "uploadDate": "2026-09-15T08:59:47-07:00",
+      "verification": "Rendered original YouTube watch-page VideoObject JSON-LD"
+    },
+    {
+      "file": "articles/maebashi-witches-emoemories-release-date.html",
+      "source": "https://www.youtube.com/watch?v=txDov2HH7xM",
+      "previous_uploadDate": "2026-08-28",
+      "uploadDate": "2026-08-27T08:00:11-07:00",
+      "verification": "Original YouTube watch-page metadata"
+    },
+    {
+      "file": "articles/the-one-piece-netflix-february-2027.html",
+      "source": "https://www.youtube.com/watch?v=3Gmo0EXHyKg",
+      "previous_uploadDate": "2026-06-24",
+      "uploadDate": "2026-06-24T06:00:00-07:00",
+      "verification": "Rendered original YouTube watch-page VideoObject JSON-LD"
+    },
+    {
+      "file": "articles/berserk-of-gluttony-season-2.html",
+      "source": "https://www.youtube.com/watch?v=BVz1EyrHILk",
+      "previous_uploadDate": "2026-10-09",
+      "uploadDate": "2026-10-08T14:00:13-07:00",
+      "verification": "Original YouTube watch-page metadata"
+    },
+    {
+      "file": "articles/kinioto-january-2027.html",
+      "source": "https://www.youtube.com/watch?v=kLO7KyjhGR0",
+      "previous_uploadDate": "2026-10-09",
+      "uploadDate": "2026-10-08T12:55:37-07:00",
+      "verification": "Original YouTube watch-page metadata"
+    },
+    {
+      "file": "articles/rakuen-tsuihou-kokoro-no-resonance.html",
+      "source": "https://www.youtube.com/watch?v=gdqs6y-6R3g",
+      "previous_uploadDate": "2026-10-12",
+      "uploadDate": "2026-10-13T06:00:26-07:00",
+      "verification": "Rendered original YouTube watch-page VideoObject JSON-LD"
+    },
+    {
+      "file": "articles/my-happy-marriage-special-episodes.html",
+      "source": "https://www.youtube.com/watch?v=dXeAqvXkSUM",
+      "previous_uploadDate": "2026-08-31",
+      "uploadDate": "2026-08-30T20:00:10-07:00",
+      "verification": "Rendered original YouTube watch-page VideoObject JSON-LD"
+    },
+    {
+      "file": "articles/mobile-suit-gundam-seed-freedom-zero-release-date.html",
+      "source": "https://www.youtube.com/watch?v=_PTSJJdqLB8",
+      "previous_uploadDate": "2026-10-09",
+      "uploadDate": "2026-10-08T13:00:09-07:00",
+      "verification": "Rendered original YouTube watch-page VideoObject JSON-LD"
+    },
+    {
+      "file": "articles/record-of-a-fallen-vampire-anime.html",
+      "source": "https://www.youtube.com/watch?v=qbfo4EyFeNw",
+      "previous_uploadDate": "2026-10-05",
+      "uploadDate": "2026-10-05T02:00:01-07:00",
+      "verification": "Rendered original YouTube watch-page VideoObject JSON-LD"
+    },
+    {
+      "file": "articles/aikatsu-stars-hoshiboshi-no-progress-release-date.html",
+      "source": "https://www.youtube.com/watch?v=8g68u8qd87c",
+      "previous_uploadDate": "2026-10-17",
+      "uploadDate": "2026-10-17T01:00:27-07:00",
+      "verification": "Rendered original YouTube watch-page VideoObject JSON-LD"
+    },
+    {
+      "file": "articles/i-lost-my-adventurers-license-anime-january-2027.html",
+      "source": "https://www.youtube.com/watch?v=inKTTHeuzds",
+      "previous_uploadDate": "2026-10-15",
+      "uploadDate": "2026-10-14T20:30:03-07:00",
+      "verification": "Original YouTube watch-page metadata"
+    },
+    {
+      "file": "articles/kagurabachi-anime-world-tour-finale.html",
+      "source": "https://www.youtube.com/watch?v=pC39732i1bA",
+      "previous_uploadDate": "2026-04-27",
+      "uploadDate": "2026-04-27T05:09:35-07:00",
+      "verification": "Rendered original YouTube watch-page VideoObject JSON-LD"
+    },
+    {
+      "file": "articles/sakamoto-days-season-2.html",
+      "source": "https://www.youtube.com/watch?v=Ld4PMbghy78",
+      "previous_uploadDate": "2026-08-20",
+      "uploadDate": "2026-08-20T17:00:00-07:00",
+      "verification": "Rendered original YouTube watch-page VideoObject JSON-LD"
+    },
+    {
+      "file": "articles/nia-liston-release-date.html",
+      "source": "https://www.youtube.com/watch?v=HKdiA5mNb_A",
+      "previous_uploadDate": "2026-02-06",
+      "uploadDate": "2026-01-28T00:00:29-08:00",
+      "verification": "Rendered original YouTube watch-page VideoObject JSON-LD"
+    },
+    {
+      "file": "articles/sekiro-no-defeat-release-date.html",
+      "source": "https://www.youtube.com/watch?v=q0zQNh0wSb0",
+      "previous_uploadDate": "2026-06-26",
+      "uploadDate": "2026-06-26T03:00:07-07:00",
+      "verification": "Rendered original YouTube watch-page VideoObject JSON-LD"
+    },
+    {
+      "file": "articles/bless-anime-akiharu-nakano-koki-uchiyama-january-2027.html",
+      "source": "https://www.youtube.com/watch?v=JG_CIP10xAA",
+      "previous_uploadDate": "2026-10-15",
+      "uploadDate": "2026-10-15T04:00:20-07:00",
+      "verification": "Original YouTube watch-page metadata"
+    },
+    {
+      "file": "articles/sasaki-and-peeps-season-2.html",
+      "source": "https://www.youtube.com/watch?v=w7UIM4myqm4",
+      "previous_uploadDate": "2026-06-03",
+      "uploadDate": "2026-06-03T09:00:26-07:00",
+      "verification": "Rendered original YouTube watch-page VideoObject JSON-LD"
+    },
+    {
+      "file": "articles/bleach-thousand-year-blood-war-the-last-pv-episodes-49-50.html",
+      "source": "https://www.youtube.com/watch?v=YnjWqcR0spM",
+      "previous_uploadDate": "2026-10-16",
+      "uploadDate": "2026-10-16T04:00:38-07:00",
+      "verification": "Rendered original YouTube watch-page VideoObject JSON-LD"
+    },
+    {
+      "file": "articles/full-clearing-another-world-zero-believers-premiere.html",
+      "source": "https://www.youtube.com/watch?v=qlMB8vSpLzc",
+      "previous_uploadDate": "2026-09-30",
+      "uploadDate": "2026-09-29T20:00:13-07:00",
+      "verification": "Rendered original YouTube watch-page VideoObject JSON-LD"
+    },
+    {
+      "file": "articles/sss-class-revival-hunter-anime-january-2027.html",
+      "source": "https://www.youtube.com/watch?v=C6ecZk2mHqA",
+      "previous_uploadDate": "2026-10-11",
+      "uploadDate": "2026-10-10T18:30:00-07:00",
+      "verification": "Rendered original YouTube watch-page VideoObject JSON-LD"
+    },
+    {
+      "file": "articles/red-riding-hood-detective-story.html",
+      "source": "https://www.youtube.com/watch?v=dRYjeN1IDcA",
+      "previous_uploadDate": "2026-10-05",
+      "uploadDate": "2026-10-05T04:00:27-07:00",
+      "verification": "Rendered original YouTube watch-page VideoObject JSON-LD"
+    },
+    {
+      "file": "articles/naruto-shadow-rising-manga.html",
+      "source": "https://www.youtube.com/watch?v=B5QJZFYQ2Qs",
+      "previous_uploadDate": "2026-10-10",
+      "uploadDate": "2026-10-10T14:58:08-07:00",
+      "verification": "Original YouTube watch-page metadata"
+    },
+    {
+      "file": "articles/takopis-original-sin-movie.html",
+      "source": "https://www.youtube.com/watch?v=F0pqUWNrTXI",
+      "previous_uploadDate": "2026-08-18",
+      "uploadDate": "2026-08-17T20:00:06-07:00",
+      "verification": "Rendered original YouTube watch-page VideoObject JSON-LD"
+    },
+    {
+      "file": "articles/hirayasumi-anime-release-date.html",
+      "source": "https://www.youtube.com/watch?v=ZoVtjJsdyB4",
+      "previous_uploadDate": "2026-09-29",
+      "uploadDate": "2026-09-28T16:00:07-07:00",
+      "verification": "Rendered original YouTube watch-page VideoObject JSON-LD"
+    },
+    {
+      "file": "articles/votoms-gray-witch-part-1.html",
+      "source": "https://www.youtube.com/watch?v=vh6wwh6SxN8",
+      "previous_uploadDate": "2026-08-20",
+      "uploadDate": "2026-08-20T15:00:06-07:00",
+      "verification": "Original YouTube watch-page metadata"
+    },
+    {
+      "file": "articles/the-fable-season-2-january-2027.html",
+      "source": "https://www.youtube.com/watch?v=VoZ43A3XE-Q",
+      "previous_uploadDate": "2026-09-14",
+      "uploadDate": "2026-09-14T08:00:20-07:00",
+      "verification": "Rendered original YouTube watch-page VideoObject JSON-LD"
+    },
+    {
+      "file": "articles/apothecary-diaries-movie.html",
+      "source": "https://www.youtube.com/watch?v=dipjaCmYris",
+      "previous_uploadDate": "2026-10-14",
+      "uploadDate": "2026-10-13T16:00:35-07:00",
+      "verification": "Rendered original YouTube watch-page VideoObject JSON-LD"
+    },
+    {
+      "file": "articles/le-college-noir-season-2-trailer-october-2026.html",
+      "source": "https://www.youtube.com/watch?v=WjbH4XnNJh4",
+      "previous_uploadDate": "2026-10-13",
+      "uploadDate": "2026-10-13T03:00:39-07:00",
+      "verification": "Rendered original YouTube watch-page VideoObject JSON-LD"
+    },
+    {
+      "file": "articles/pokemon-horizons-season-4-wonders-ahead.html",
+      "source": "https://www.youtube.com/watch?v=QwXy-HbEKmI",
+      "previous_uploadDate": "2026-10-06",
+      "uploadDate": "2026-10-06T09:00:03-07:00",
+      "verification": "Rendered original YouTube watch-page VideoObject JSON-LD"
+    },
+    {
+      "file": "articles/paw-palaces-creditless-ending-october-2026.html",
+      "source": "https://www.youtube.com/watch?v=UdSboTKzsN0",
+      "previous_uploadDate": "2026-10-10",
+      "uploadDate": "2026-10-10T05:30:11-07:00",
+      "verification": "Rendered original YouTube watch-page VideoObject JSON-LD"
+    },
+    {
+      "file": "articles/dragon-ball-super-beerus.html",
+      "source": "https://www.youtube.com/watch?v=iCD3Lf7Jf9o",
+      "previous_uploadDate": "2026-09-02",
+      "uploadDate": "2026-09-02T15:42:37-07:00",
+      "verification": "Rendered original YouTube watch-page VideoObject JSON-LD"
+    },
+    {
+      "file": "articles/blue-box-season-2.html",
+      "source": "https://www.youtube.com/watch?v=n0ugKku1fzc",
+      "previous_uploadDate": "2026-08-31",
+      "uploadDate": "2026-08-31T17:00:01-07:00",
+      "verification": "Original YouTube watch-page metadata"
+    },
+    {
+      "file": "articles/fledgling-demon-lords-starter-shop.html",
+      "source": "https://www.youtube.com/watch?v=BXcu-Z3SEYo",
+      "previous_uploadDate": "2026-10-06",
+      "uploadDate": "2026-10-06T01:00:13-07:00",
+      "verification": "Original YouTube watch-page metadata"
+    },
+    {
+      "file": "articles/i-got-a-cheat-skill-season-2-january-2027.html",
+      "source": "https://www.youtube.com/watch?v=twGVFfRI-7s",
+      "previous_uploadDate": "2026-10-15",
+      "uploadDate": "2026-10-15T02:00:02-07:00",
+      "verification": "Rendered original YouTube watch-page VideoObject JSON-LD"
+    },
+    {
+      "file": "articles/psyren-release-date.html",
+      "source": "https://www.youtube.com/watch?v=kACrcUBQY3Y",
+      "previous_uploadDate": "2026-06-17",
+      "uploadDate": "2026-07-12T05:15:33-07:00",
+      "verification": "Original YouTube watch-page metadata"
+    }
+  ]
+}
