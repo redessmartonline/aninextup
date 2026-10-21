@@ -1,0 +1,20 @@
+[
+  {
+    "file": "articles/ghost-of-tsushima-legends-anime-2028.html",
+    "before": "Ghost of Tsushima: Legends Anime Delayed to 2028: New Cast, Staff and Streaming Details \u2014 AniNextUp",
+    "after": "Ghost of Tsushima: Legends Anime Delayed to 2028 | AniNextUp",
+    "reason": "Put the franchise and confirmed release window first; remove the trailing list of secondary topics. This is a metadata proposal, not a GSC-measured priority."
+  },
+  {
+    "file": "articles/one-punch-man-season-3-part-2-january-2027.html",
+    "before": "One-Punch Man Season 3 Part 2: January 2027 Release, New Trailer and JAM Project Opening \u2014 AniNextUp",
+    "after": "One-Punch Man Season 3 Part 2: January 2027 Release | AniNextUp",
+    "reason": "Put the franchise and confirmed release window first; remove the trailing list of secondary topics. This is a metadata proposal, not a GSC-measured priority."
+  },
+  {
+    "file": "articles/sss-class-revival-hunter-anime-january-2027.html",
+    "before": "SSS-Class Revival Hunter Anime: January 2027 Premiere, New Trailer, Cast and Crunchyroll \u2014 AniNextUp",
+    "after": "SSS-Class Revival Hunter Anime: January 2027 Release | AniNextUp",
+    "reason": "Put the franchise and confirmed release window first; remove the trailing list of secondary topics. This is a metadata proposal, not a GSC-measured priority."
+  }
+]
