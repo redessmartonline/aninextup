@@ -7,11 +7,15 @@ on:
     paths:
       - 'articles/**'
       - 'scripts/audit_all_articles_preflight.py'
+      - 'scripts/editorial_dates.py'
+      - 'tests/test_editorial_dates.py'
       - '.github/workflows/all-articles-preflight.yml'
   pull_request:
     paths:
       - 'articles/**'
       - 'scripts/audit_all_articles_preflight.py'
+      - 'scripts/editorial_dates.py'
+      - 'tests/test_editorial_dates.py'
       - '.github/workflows/all-articles-preflight.yml'
 
 permissions:
@@ -27,6 +31,8 @@ jobs:
           python-version: '3.12'
       - name: Audit all published HTML articles
         run: python scripts/audit_all_articles_preflight.py --root articles --out audits/generated
+      - name: Validate editorial date consistency and sitemap behavior
+        run: python -m unittest discover -s tests -p test_editorial_dates.py
       - name: Upload complete article-by-article reports
         uses: actions/upload-artifact@v4
         with:

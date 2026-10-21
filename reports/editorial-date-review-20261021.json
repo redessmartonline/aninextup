@@ -1,0 +1,222 @@
+{
+  "reviewed": "2026-10-21",
+  "method": "Last commit changing the article headline, lead, prose or release summary, excluding navigation, scripts, schema and related cards. Existing publication dates retained. No blanket current-date update.",
+  "articles": [
+    {
+      "slug": "sasaki-and-peeps-season-2",
+      "visible": "2026-10-05",
+      "schema": "2026-10-16",
+      "last_content_commit": [
+        "89dfd08220f7d7b83d6a22ed1ed75b7835855af2",
+        "2026-10-16"
+      ]
+    },
+    {
+      "slug": "romelia-war-chronicle",
+      "visible": "2026-10-05",
+      "schema": "2026-10-16",
+      "last_content_commit": [
+        "627064c697f146af3d5c993bedb815d93022e11d",
+        "2026-10-16"
+      ]
+    },
+    {
+      "slug": "paw-palaces-creditless-ending-october-2026",
+      "visible": "2026-10-14",
+      "schema": "2026-10-16",
+      "last_content_commit": [
+        "038a8e5f1790c8b89955a9f4110b34cfa472a812",
+        "2026-10-20"
+      ]
+    },
+    {
+      "slug": "i-got-a-cheat-skill-season-2-january-2027",
+      "visible": "2026-10-15",
+      "schema": "2026-10-16",
+      "last_content_commit": [
+        "f3b2929f4301bd24ca45a3e95cd59f9bb259c122",
+        "2026-10-16"
+      ]
+    },
+    {
+      "slug": "d-anime-store-81-fall-2026-anime",
+      "visible": "2026-10-14",
+      "schema": "2026-10-16",
+      "last_content_commit": [
+        "541a486ef7f069437fd7cb6097d6031937c68cd5",
+        "2026-10-16"
+      ]
+    },
+    {
+      "slug": "cosmoship-yamato-root-2199",
+      "visible": "2026-10-06",
+      "schema": "2026-10-16",
+      "last_content_commit": [
+        "7efb4b79c75ff8765d9fe9a5ad935c9f60edd50f",
+        "2026-10-16"
+      ]
+    },
+    {
+      "slug": "le-college-noir-season-2-trailer-october-2026",
+      "visible": "2026-10-13",
+      "schema": "2026-10-16",
+      "last_content_commit": [
+        "bf0a62d1be784224883590bfb3c2712170444212",
+        "2026-10-16"
+      ]
+    },
+    {
+      "slug": "otome-heroines-fight-for-survival-anime",
+      "visible": "2026-10-06",
+      "schema": "2026-10-16",
+      "last_content_commit": [
+        "627064c697f146af3d5c993bedb815d93022e11d",
+        "2026-10-16"
+      ]
+    },
+    {
+      "slug": "ascendance-of-a-bookworm-part-4",
+      "visible": "2026-10-07",
+      "schema": "2026-10-16",
+      "last_content_commit": [
+        "b2c4f07be7a9c850724cfc8fdd3f1f714442527a",
+        "2026-10-16"
+      ]
+    },
+    {
+      "slug": "witch-on-the-holy-night-movie",
+      "visible": "2026-10-07",
+      "schema": "2026-10-16",
+      "last_content_commit": [
+        "b2c4f07be7a9c850724cfc8fdd3f1f714442527a",
+        "2026-10-16"
+      ]
+    },
+    {
+      "slug": "yumeneko-connect-anime-announcement",
+      "visible": "2026-10-14",
+      "schema": "2026-10-16",
+      "last_content_commit": [
+        "d593f95aea5f39f68b32df2b39594f7b4b1fa455",
+        "2026-10-16"
+      ]
+    },
+    {
+      "slug": "full-clearing-another-world-zero-believers-premiere",
+      "visible": "2026-10-10",
+      "schema": "2026-10-16",
+      "last_content_commit": [
+        "541a486ef7f069437fd7cb6097d6031937c68cd5",
+        "2026-10-16"
+      ]
+    },
+    {
+      "slug": "horror-collector-release-date",
+      "visible": "2026-10-05",
+      "schema": "2026-10-16",
+      "last_content_commit": [
+        "627064c697f146af3d5c993bedb815d93022e11d",
+        "2026-10-16"
+      ]
+    },
+    {
+      "slug": "takopis-original-sin-movie",
+      "visible": "2026-10-05",
+      "schema": "2026-10-16",
+      "last_content_commit": [
+        "8eb6c56a2b71755db31557be38da2c54afe2e5d5",
+        "2026-10-16"
+      ]
+    },
+    {
+      "slug": "kinioto-january-2027",
+      "visible": "2026-10-14",
+      "schema": "2026-10-16",
+      "last_content_commit": [
+        "038a8e5f1790c8b89955a9f4110b34cfa472a812",
+        "2026-10-20"
+      ]
+    },
+    {
+      "slug": "fledgling-demon-lords-starter-shop",
+      "visible": "2026-10-06",
+      "schema": "2026-10-16",
+      "last_content_commit": [
+        "2662edbe3d66cb28d706ae421dcac4357d38b74d",
+        "2026-10-16"
+      ]
+    },
+    {
+      "slug": "anime-releasing-december-2026",
+      "visible": "2026-10-04",
+      "schema": "2026-10-16",
+      "last_content_commit": [
+        "541a486ef7f069437fd7cb6097d6031937c68cd5",
+        "2026-10-16"
+      ]
+    },
+    {
+      "slug": "the-fable-season-2-january-2027",
+      "visible": "2026-10-13",
+      "schema": "2026-10-16",
+      "last_content_commit": [
+        "8eb6c56a2b71755db31557be38da2c54afe2e5d5",
+        "2026-10-16"
+      ]
+    },
+    {
+      "slug": "in-a-world-full-of-zombies-january-2027",
+      "visible": "2026-10-14",
+      "schema": "2026-10-16",
+      "last_content_commit": [
+        "011a22490c80455d6da2f3113cfb940b9e32a852",
+        "2026-10-16"
+      ]
+    },
+    {
+      "slug": "bless-anime-akiharu-nakano-koki-uchiyama-january-2027",
+      "visible": "2026-10-15",
+      "schema": "2026-10-16",
+      "last_content_commit": [
+        "570c73c4d42207dc3bde760f8ab2a722fef73a3e",
+        "2026-10-16"
+      ]
+    },
+    {
+      "slug": "apothecary-diaries-season-3",
+      "visible": "2026-10-08",
+      "schema": "2026-10-16",
+      "last_content_commit": [
+        "2b82fc210b34f324273d4c163f76f92fbbb96f7d",
+        "2026-10-16"
+      ]
+    },
+    {
+      "slug": "suikoden-anime",
+      "visible": "2026-10-05",
+      "schema": "2026-10-16",
+      "last_content_commit": [
+        "6adee0b954c9c74688855702c53974cac105cd79",
+        "2026-10-16"
+      ]
+    },
+    {
+      "slug": "live-action-firefly-wedding-tv-drama-announced-for-2027-a1ac1e86",
+      "visible": "2026-10-09",
+      "schema": "2026-10-16",
+      "last_content_commit": [
+        "bf0a62d1be784224883590bfb3c2712170444212",
+        "2026-10-16"
+      ]
+    },
+    {
+      "slug": "firefly-wedding",
+      "visible": "2026-10-05",
+      "schema": "2026-10-16",
+      "last_content_commit": [
+        "6adee0b954c9c74688855702c53974cac105cd79",
+        "2026-10-16"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "reviewed": "2026-10-21",
+  "scope": "Updates to existing November and January guides; no new article publication.",
+  "primary_sources": [
+    {
+      "url": "https://about.netflix.com/ja/news/anime-nyc-2026",
+      "supports": "Bass X Machina November 3; Fool Night November 26 worldwide and all episodes."
+    },
+    {
+      "url": "https://demonscrest-anime.com/",
+      "supports": "November 6 worldwide Prime Video."
+    },
+    {
+      "url": "https://www.ufotable.com/news/article/3055/",
+      "supports": "Witch on the Holy Night November 20 Japanese opening."
+    },
+    {
+      "url": "https://www.votoms-gh.com/news/detail.php?id=23579",
+      "supports": "VOTOMS first film November 20 Japan."
+    },
+    {
+      "url": "https://www.tbs.co.jp/anime/takopi_project/series/news/news20260817.html",
+      "supports": "Takopi movie November 27 Japan."
+    },
+    {
+      "url": "https://rakuen-tsuiho-r.com/news/?article_id=71476",
+      "supports": "November 13 opening visible in official indexed page."
+    },
+    {
+      "url": "https://www.sonymusic.co.jp/artist/Hashimero/info/585680",
+      "supports": "GROTESQQQUE November 6 opening, official participating artist announcement."
+    },
+    {
+      "url": "https://reol.jp/news/detail/586",
+      "supports": "GROTESQQQUE second segment, domestic Netflix preview October 23-November 5, indexed official artist announcement."
+    },
+    {
+      "url": "https://anime.shangrilafrontier.com/topics/32/",
+      "supports": "January 10, 17:00 JST Japanese broadcast."
+    },
+    {
+      "url": "https://www.aniplex.co.jp/lineup/kinioto/news/detail/?id=71451",
+      "supports": "January 8, 23:00 JST broadcast."
+    },
+    {
+      "url": "https://www.vap.co.jp/the-fable-anime/news/20261014.html",
+      "supports": "January 9, 24:55 JST official broadcast notation."
+    },
+    {
+      "url": "https://chiharasan-anime.com/",
+      "supports": "Official January 7 date label and Thursday late-night 0:26 notation; no inferred international upload date."
+    },
+    {
+      "url": "https://kakunaru-anime.com/",
+      "supports": "Now That We Draw January 2027 window."
+    },
+    {
+      "url": "https://sss-revival.com/",
+      "supports": "SSS-Class Revival Hunter January 2027, Fuji TV +Ultra."
+    },
+    {
+      "url": "https://gundam-official.com/seed/freedom/news/item.php?id=u41ricmmmttp4p014dosmk9p",
+      "supports": "Gundam January 15 Japan opening."
+    },
+    {
+      "url": "https://en.gundam-official.com/seed/freedom/news/item.php?id=u41ricmmmttp4p014dosmk9p",
+      "supports": "Gundam February North American theatrical window."
+    },
+    {
+      "url": "https://www.aikatsu.net/aikatsustars_movie_progress/",
+      "supports": "January 22 Japan opening."
+    },
+    {
+      "url": "https://about.netflix.com/en/news/sakamoto-days-season-2-returns-january-2027",
+      "supports": "January Netflix window."
+    },
+    {
+      "url": "https://sekiro-anime.jp/news.html",
+      "supports": "Indexed official January TV window; eight episodes."
+    },
+    {
+      "url": "https://onepunchman-anime.net/news/archives/7808",
+      "supports": "January 2027 second cour."
+    },
+    {
+      "url": "https://hirayasumi-anime.jp/",
+      "supports": "January 2027 NHK General window."
+    },
+    {
+      "url": "https://murcielago-anime.com/news/index00060000.html",
+      "supports": "January broadcast and streaming window."
+    }
+  ],
+  "limitations": [
+    "Hasunosora official on-air URL returned 403 during this review. Its existing January 10 entry and source link are retained; no new time, territory or platform claim was added.",
+    "Some official sites were only available through indexed text; no claim of playback, universal catalog availability, exact global upload hours or language versions."
+  ]
+}

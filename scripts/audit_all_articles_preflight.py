@@ -9,6 +9,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlparse
 from validate_video_schema import video_schema_errors
+from editorial_dates import editorial_date_errors
 
 def attr(tag, key):
     m = re.search(r'\b' + re.escape(key) + r'\s*=\s*(["\'])(.*?)\1', tag, re.I | re.S)
@@ -25,6 +26,7 @@ def audit(path):
     issues = [("error", "invalid_video_upload_date") for error in video_schema_errors(text)]
     if 'googletagmanager.com/gtag/js?id=G-TRV5CF738D' not in text:
         issues.append(('error', 'missing_ga4_tag'))
+    issues.extend(('error', error) for error in editorial_date_errors(text))
     title = re.search(r'<title\b[^>]*>(.*?)</title>', text, re.I | re.S)
     if not title or not re.sub(r'<[^>]*>', '', title.group(1)).strip():
         issues.append(('error', 'missing_title'))
