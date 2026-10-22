@@ -3,11 +3,14 @@ const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),cryp
 const root=path.resolve(__dirname,'..');
 const model=require('../assets/release-model.js');
 const newsDates=require('../assets/news-dates.js');
+const weeklyEpisodes=require('../assets/weekly-episodes.js');
 const modelVersion=crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'assets/release-model.js'))).digest('hex').slice(0,16);
 const newsDatesVersion=crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'assets/news-dates.js'))).digest('hex').slice(0,16);
 const dataSource=fs.readFileSync(path.join(root,'assets/data.js'),'utf8');
 const dataVersion=crypto.createHash('sha256').update(dataSource).digest('hex').slice(0,16);
 const appVersion=crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'assets/app.js'))).digest('hex').slice(0,16);
+const weeklyDataVersion=crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'assets/weekly-episodes.js'))).digest('hex').slice(0,16);
+const weeklyUiVersion=crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'assets/weekly-episodes-ui.js'))).digest('hex').slice(0,16);
 const sandbox={window:{}};vm.runInNewContext(dataSource,sandbox);
 const data=sandbox.window.ANINEXTUP_DATA;
 const now=process.env.ANINEXTUP_NOW?new Date(process.env.ANINEXTUP_NOW):new Date();
@@ -37,10 +40,14 @@ const editorialStories=()=>{const seen=new Set();return [...data.anime.filter(a=
 const newsCategories=new Set(['new-anime','returning-series','trailers-cast','release-news']);
 const newsStories=()=>{const seen=new Set();return model.sortNews([...data.anime,...data.guides].filter(g=>{if(!g.article||seen.has(g.article)||!newsCategories.has(g.newsCategory))return false;seen.add(g.article);return true;}),newsDates);};
 const list=(items,full=false,empty='No confirmed releases yet.')=>items.map(a=>card(a,full)).join('')||`<p class="empty">${escape(empty)}</p>`;
+const episodeDate=d=>new Date(d+'T12:00:00Z').toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric',timeZone:'UTC'});
+const episodeTime=t=>{const [h,m]=t.split(':').map(Number);return (h%12||12)+':'+String(m).padStart(2,'0')+' '+(h>=12?'PM':'AM');};
+const episodeCards=date=>{const items=weeklyEpisodes.episodes.filter(e=>e.date===date);return items.map(e=>`<article class="episode-card"><div class="episode-card-title"><h3><a href="${escape(e.url)}" target="_blank" rel="noopener noreferrer">${escape(e.title)}</a></h3><span>Episode ${escape(e.episode)}</span></div><p class="episode-meta">${escape(episodeDate(e.date))} · Crunchyroll</p><p class="episode-time" data-regional-times="${escape(e.times.join('|'))}" data-next-day-regions="${escape((e.nextDayRegions||[]).join(','))}">${escape(episodeTime(e.times[2]||e.times[0])+' · '+weeklyEpisodes.regions[2])}</p></article>`).join('')||`<p class="empty">No weekly episode schedule is listed here for today. Check <a href="${escape(weeklyEpisodes.sourceUrl)}" target="_blank" rel="noopener noreferrer">Crunchyroll’s official weekly calendar</a> for the latest regional schedule.</p>`;};
 let changed=0;
 for(const name of fs.readdirSync(root).filter(n=>n.endsWith('.html'))){
   const file=path.join(root,name),original=fs.readFileSync(file,'utf8');let html=original;
   html=fill(html,'data-anime-list',mode=>list(model.select(data.anime,mode,ctx),mode==='today','No premieres confirmed for this date. Explore the upcoming releases below.'));
+  html=fill(html,'data-weekly-episodes',()=>episodeCards(ctx.today));
   for(const [hook,mode,limit] of [['data-home-next','after-week',6],['data-today-next','next',6],['data-after-week','after-week',6],['data-news-upcoming','upcoming',9]])html=fill(html,hook,()=>list(model.select(data.anime,mode,ctx).slice(0,limit),hook==='data-news-upcoming'));
   html=fill(html,'data-anime-month',month=>list(model.select(data.anime,'calendar',ctx).filter(a=>a.date.startsWith(month))));
   html=fill(html,'data-month-count',month=>{const n=data.anime.filter(a=>a.date?.startsWith(month)).length;return n?'· '+n+' CONFIRMED':'';});
@@ -55,6 +62,10 @@ for(const name of fs.readdirSync(root).filter(n=>n.endsWith('.html'))){
   if(html.includes('assets/data.js')&&!html.includes('src="assets/release-model.js'))html=html.replace(/<script src="assets\/app\.js[^\"]*"><\/script>/,'<script src="assets/release-model.js?v=discovery1"></script><script src="assets/app.js?v=discovery1"></script>');
   html=html.replace(/(<script\b[^>]*\bsrc=")(\/?)assets\/app\.js(?:\?[^"\s]*)?"/g,(_,prefix,slash)=>prefix+slash+'assets/app.js?v='+appVersion+'"');
   html=html.replace(/assets\/release-model\.js(?:\?[^"\s]*)?/g,'assets/release-model.js?v='+modelVersion);
+  if(html.includes('data-weekly-episodes')){
+    html=html.replace(/assets\/weekly-episodes\.js(?:\?[^"\s]*)?/g,'assets/weekly-episodes.js?v='+weeklyDataVersion);
+    html=html.replace(/assets\/weekly-episodes-ui\.js(?:\?[^"\s]*)?/g,'assets/weekly-episodes-ui.js?v='+weeklyUiVersion);
+  }
   if(html.includes('data-guides')){
     html=html.replace(/<script src="assets\/news-dates\.js[^"]*"><\/script>/g,'');
     html=html.replace(/<script src="assets\/app\.js/,'<script src="assets/news-dates.js?v='+newsDatesVersion+'"></script><script src="assets/app.js');
