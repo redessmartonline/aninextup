@@ -10,6 +10,8 @@
 
 ## Revisión puntual realizada en esta rama
 - `articles/bass-x-machina-release-date.html`: se eliminó una segunda sección que repetía la premisa familiar ya explicada en “What is Bass X Machina about?”. Se conservaron la primera explicación, los enlaces a fuentes oficiales, las demás secciones y la URL canónica. Esta revisión puntual no certifica la exactitud de todos los datos de reparto, imágenes, video ni créditos.
+- `articles/black-clover-season-2.html`: se retiró solo la pregunta/respuesta “Where can I watch it?” del FAQ porque repetía casi literalmente la sección “Where to watch”; se conservó el horario de Crunchyroll indicado en la sección principal, las advertencias de variación regional y la URL canónica.
+- Barrido automático de texto sobre las 109 fichas: 728 párrafos de cuerpo revisados; sin párrafos idénticos entre fichas y dos candidatos de repetición dentro de ficha (Bass X Machina y Black Clover). El barrido identifica redundancia textual, no verifica hechos ni sustituye la revisión editorial/factual de 109/109.
 
 ## Criterio de cierre
 Cada artículo solo se marca **completo** tras verificar: portada y URL de imagen; fechas/plataformas contra fuentes oficiales; tráiler oficial y `VideoObject` cuando exista video verificable; title/description/canonical/Open Graph/JSON-LD; enlaces internos; inclusión en sitemap; y, cuando estén accesibles, datos de Search Console y despliegue de GitHub Actions. No inventar información ni cambiar URLs, diseño o AniNextUp Auto Publisher.
