@@ -1,6 +1,15 @@
 # Auditoría editorial y SEO — AniNextUp
 
-Última revisión: 2026-10-09. Rama: `main`. Objetivo solicitado: 59 artículos. Estado: **en curso; 0/59 con auditoría integral completada**.
+Última revisión: 2026-10-23. Rama de trabajo: `adsense/editorial-audit-redundancy-20261023`. Inventario observado: 109 archivos HTML de artículos en la comprobación anterior; requiere reconciliación con sitemap e índice. Estado: **en curso; 0/109 con auditoría integral completada**.
+
+## Cambios publicados antes de esta auditoría
+- PR #128: cambios editoriales en fichas existentes, con rótulos genéricos revisados en 29 y repeticiones acortadas en ocho.
+- PR #129: actualización de `/today` y guías permanentes de contexto.
+- PR #130: exclusión de herramientas del repositorio de los activos del Worker.
+- Estas PR se fusionaron en `main`; las verificaciones de compilación/auditoría y el despliegue del Worker pasaron. No equivalen a una auditoría factual integral de todas las fichas.
+
+## Revisión puntual realizada en esta rama
+- `articles/bass-x-machina-release-date.html`: se eliminó una segunda sección que repetía la premisa familiar ya explicada en “What is Bass X Machina about?”. Se conservaron la primera explicación, los enlaces a fuentes oficiales, las demás secciones y la URL canónica. Esta revisión puntual no certifica la exactitud de todos los datos de reparto, imágenes, video ni créditos.
 
 ## Criterio de cierre
 Cada artículo solo se marca **completo** tras verificar: portada y URL de imagen; fechas/plataformas contra fuentes oficiales; tráiler oficial y `VideoObject` cuando exista video verificable; title/description/canonical/Open Graph/JSON-LD; enlaces internos; inclusión en sitemap; y, cuando estén accesibles, datos de Search Console y despliegue de GitHub Actions. No inventar información ni cambiar URLs, diseño o AniNextUp Auto Publisher.
@@ -18,9 +27,9 @@ Cada artículo solo se marca **completo** tras verificar: portada y URL de image
 - No se han aplicado correcciones editoriales sin evidencia suficiente.
 
 ## Pendientes
-1. Reconciliar el inventario exacto de 59 artículos con `sitemap.xml`, `assets/data.js` y archivos HTML del repositorio; registrar cada ruta individual.
+1. Reconciliar el inventario exacto de artículos con `sitemap.xml`, `assets/data.js` y archivos HTML del repositorio; registrar cada ruta individual.
 2. Completar la verificación integral de los tres artículos anteriores.
-3. Auditar uno por uno los restantes artículos del inventario reconciliado (hasta completar 59/59).
+3. Auditar uno por uno los restantes artículos del inventario reconciliado (hasta completar todas las fichas del inventario reconciliado).
 4. Corregir solo fallos confirmados; antes de cada actualización leer SHA actual, después comprobar commit y releer archivo.
 5. Comprobar Google Search Console si está disponible, resultados de GitHub Actions y despliegue público.
 
