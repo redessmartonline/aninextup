@@ -1,0 +1,12 @@
+# Wrangler deploys assets from the repository root. Keep build tooling and repository-only material out of the public asset bundle.
+node_modules/
+.git/
+.github/
+scripts/
+tests/
+audits/
+reports/
+editorial-drafts/
+README.md
+AUDITORIA_ARTICULOS.md
+wrangler.jsonc

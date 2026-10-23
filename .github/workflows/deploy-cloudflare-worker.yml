@@ -12,6 +12,7 @@ on:
       - "robots.txt"
       - "sitemap.xml"
       - "wrangler.jsonc"
+      - ".assetsignore"
       - ".github/workflows/deploy-cloudflare-worker.yml"
   workflow_dispatch:
 
