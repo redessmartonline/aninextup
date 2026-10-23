@@ -1,5 +1,5 @@
 window.ANINEXTUP_DATA={
-updated:"2026-10-22",
+updated:"2026-10-23",
 site:{timezone:"America/Santo_Domingo",season:"Fall 2026"},
 anime:[
 {id:"shangri-la-frontier-season-3-release-date",image:"https://aninextup.com/assets/images/shangri-la-frontier-season-3-official-visual.webp",title:"Shangri-La Frontier Season 3 Release Date: January 10, 2027",date:"2027-01-10",platform:"Crunchyroll (announced); Japanese TV",article:"articles/shangri-la-frontier-season-3-release-date",newsCategory:"returning-series",category:"Season Premiere",status:"confirmed"},
