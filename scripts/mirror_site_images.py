@@ -25,6 +25,23 @@ TEXT_EXTENSIONS = {".html", ".js", ".json", ".css", ".svg"}
 SKIP_DIRS = {".git", ".github", "node_modules", "scripts", "tests", "audits", "reports", "editorial-drafts"}
 URL_RE = re.compile(r"(?:https?:)?//[^\s\"'<>),]+", re.I)
 
+# Some legacy or hotlink-protected sources in the content have stopped serving
+# images. These verified image URLs are replacements for the same visuals.
+SOURCE_OVERRIDES = {
+    "https://bless-anime.com/assets/img/top/visual/visual1-main.jpg":
+        "https://img2.animatetimes.com/2026/03/953189380a8f51ee780a2a49a69690dc69aa7a7a892dd5_59053360_0fd2bafd5c8626dedc940b4db4e8b3f50b57a0fe.jpg",
+    "https://en.dragon-ball-official.com/dragonball/en/news/2026/09/DBSBE_SurgeKV_en.jpg?_=1791070440":
+        "https://dragonball-super.com/en/updates/img/20260903-1.jpg",
+    "https://hyouken-anime.com/wp/wp-content/themes/hyouken-theme/images/kv1.webp":
+        "https://cimg.kgl-systems.io/camion/files/84990/ogp_cTHd.jpg?x=1280",
+    "https://i0.wp.com/anitrendz.net/news/wp-content/uploads/2026/09/ace-of-the-diamond-act-II-second-season-second-cour-new-visual.jpeg?ssl=1":
+        "https://cimg.kgl-systems.io/camion/files/87131/ogp_WNsM.jpg?x=1280",
+    "https://i0.wp.com/anitrendz.net/news/wp-content/uploads/2026/10/Manchuria-Opium-SquadFirst-Anime-Adaptation-Visual-EN.jpg?ssl=1":
+        "https://cimg.kgl-systems.io/camion/files/dengeki/90002/a666340cd694ea563ac5b8a04ea66915e.jpg",
+    "https://tokyo-revengers-anime.com/img/home/visual_10.jpg":
+        "https://moca-news.net/article/2026/10/03/0200a00/%21img/%21tweet0.jpg",
+}
+
 
 def image_references(text: str) -> set[str]:
     """Return URLs used in image-bearing HTML tags, data fields, and CSS."""
@@ -138,26 +155,28 @@ def main() -> int:
     for index, source in enumerate(sorted(refs), 1):
         # Normalize HTML-escaped query separators before requesting the source.
         source = html.unescape(source)
+        original = source
+        source = SOURCE_OVERRIDES.get(source, source)
         if source.startswith("//"):
             source = "https:" + source
         local = local_site_path(source)
         if local:
-            mapping[source] = local
+            mapping[original] = local
             continue
         digest = hashlib.sha256(source.encode("utf-8")).hexdigest()
         existing = list(OUT.glob(digest + ".*"))
         if existing:
-            mapping[source] = "/" + existing[0].relative_to(ROOT).as_posix()
+            mapping[original] = "/" + existing[0].relative_to(ROOT).as_posix()
             continue
         try:
             raw, ext, _mime = download_image(source)
             target = OUT / (digest + ext)
             target.write_bytes(raw)
-            mapping[source] = "/" + target.relative_to(ROOT).as_posix()
-            print(f"[{index}/{len(refs)}] mirrored {source} -> {mapping[source]} ({len(raw)} bytes)", flush=True)
+            mapping[original] = "/" + target.relative_to(ROOT).as_posix()
+            print(f"[{index}/{len(refs)}] mirrored {original} -> {mapping[original]} ({len(raw)} bytes)", flush=True)
         except (HTTPError, URLError, TimeoutError, OSError, ValueError) as exc:
-            errors.append((source, str(exc)))
-            print(f"[{index}/{len(refs)}] FAILED {source}: {exc}", flush=True)
+            errors.append((original, str(exc)))
+            print(f"[{index}/{len(refs)}] FAILED {original}: {exc}", flush=True)
         time.sleep(0.08)
 
     if errors:
