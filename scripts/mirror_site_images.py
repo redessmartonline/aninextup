@@ -23,7 +23,7 @@ MAX_BYTES = 20 * 1024 * 1024
 SITE_HOSTS = {"aninextup.com", "www.aninextup.com"}
 TEXT_EXTENSIONS = {".html", ".js", ".json", ".css", ".svg"}
 SKIP_DIRS = {".git", ".github", "node_modules", "scripts", "tests", "audits", "reports", "editorial-drafts"}
-URL_RE = re.compile(r"https?://[^\s\"'<>),]+", re.I)
+URL_RE = re.compile(r"(?:https?:)?//[^\s\"'<>),]+", re.I)
 
 
 def image_references(text: str) -> set[str]:
@@ -62,8 +62,8 @@ def image_references(text: str) -> set[str]:
 
     # Data files and JSON-LD use these keys; CSS backgrounds use url(...).
     for pattern in (
-        r"(?:^|[{,\s])(?:[\"']?(?:image|thumbnailUrl|thumbnail_url|poster)[\"']?)\s*:\s*[\"'](https?://[^\"']+)",
-        r"url\(\s*[\"']?(https?://[^\s\"')]+)",
+        r"(?:^|[{,\s])(?:[\"']?(?:image|thumbnailUrl|thumbnail_url|poster)[\"']?)\s*:\s*[\"']((?:https?:)?//[^\"']+)",
+        r"url\(\s*[\"']?((?:https?:)?//[^\s\"')]+)",
     ):
         found.update(m.group(1) for m in re.finditer(pattern, text, re.I | re.M))
     return found
@@ -89,7 +89,7 @@ def download_image(url: str) -> tuple[bytes, str, str]:
         raw = response.read(MAX_BYTES + 1)
     if len(raw) > MAX_BYTES:
         raise ValueError(f"image exceeds {MAX_BYTES} bytes")
-    if content_type == "image/svg+xml":
+    if content_type == "image/svg+xml" or raw.lstrip().startswith(b"<svg") or b"<svg" in raw[:512]:
         try:
             root = ET.fromstring(raw)
         except ET.ParseError as exc:
@@ -105,7 +105,7 @@ def download_image(url: str) -> tuple[bytes, str, str]:
         raise ValueError(f"response is not a valid image (MIME {content_type or 'missing'})") from exc
     extensions = {"jpeg": ".jpg", "png": ".png", "webp": ".webp", "gif": ".gif", "avif": ".avif", "bmp": ".bmp", "tiff": ".tif"}
     ext = extensions.get(fmt)
-    if not ext or not content_type.startswith("image/"):
+    if not ext:
         raise ValueError(f"unsupported image format/MIME: {fmt}/{content_type}")
     # Normalize large raster artwork to WebP to keep the Worker asset bundle lean.
     # Animated GIFs remain GIFs so their motion is preserved.
@@ -138,6 +138,8 @@ def main() -> int:
     for index, source in enumerate(sorted(refs), 1):
         # Normalize HTML-escaped query separators before requesting the source.
         source = html.unescape(source)
+        if source.startswith("//"):
+            source = "https:" + source
         local = local_site_path(source)
         if local:
             mapping[source] = local
