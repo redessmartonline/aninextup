@@ -8,7 +8,9 @@ const categories=new Set(['new-anime','returning-series','trailers-cast','releas
 const seen=new Set();
 const input=[...data.anime,...data.guides].filter(x=>x.article&&categories.has(x.newsCategory)&&!seen.has(x.article)&&seen.add(x.article));
 const ordered=model.sortNews(input,dates);
-assert.equal(ordered[0].article,'articles/eleceed-anime-april-2027-release-date');
+const newestEditorialDate=input.reduce((latest,item)=>{const meta=dates[item.article]||{};return [latest,meta.updated||meta.published||''].sort().at(-1);},'');
+const firstMeta=dates[ordered[0].article]||{};
+assert.equal(firstMeta.updated||firstMeta.published||'',newestEditorialDate,'News must start with the most recently updated or published article, without hard-coding a title.');
 assert.equal(ordered.length,input.length);
 const start=fs.readFileSync(path.join(root,'news.html'),'utf8').split('data-guides')[1];
 const rendered=[...start.matchAll(/href="(articles\/[^"#]+)"/g)].map(m=>m[1]).slice(0,ordered.length);
