@@ -321,7 +321,7 @@ for(const el of discoveryNodes('[data-anime-platform]')){
 
 discoveryNodes('[data-platform-count]').forEach(el=>{const p=el.dataset.platformCount;const n=(D.anime||[]).filter(x=>window.ANINEXTUP_RELEASES.matchesPlatform(x,p)).length;el.textContent=n?'· '+n+' TRACKED':''});
 
-// Keep exactly three related anime releases on every article, including legacy and future pages.
+// Preserve the two editorially selected related article cards on each page.
 const renderRelatedReleases=data=>{
   const article=document.querySelector('article.article');
   if(!article)return;
@@ -356,7 +356,7 @@ const renderRelatedReleases=data=>{
   const ranked=items.filter(x=>!used.has(slugOf(x.article))).sort((a,b)=>{
     const relevance=score(b)-score(a);
     return relevance||distance(a.date)-distance(b.date);
-  }).slice(0,Math.max(0,3-existing.length));
+  }).slice(0,Math.max(0,2-existing.length));
   ranked.forEach(a=>{
     const link=document.createElement('a');link.className='mini data-card related-card';link.href='../'+a.article.replace(/^\//,'');
     const source=new URL(a.image,location.origin+'/');
