@@ -62,6 +62,14 @@ class MirrorImageTests(unittest.TestCase):
                     "/assets/cover.webp",
                 )
 
+    def test_known_unavailable_sources_use_replacements(self):
+        self.assertEqual(
+            mirror.SOURCE_OVERRIDES[
+                "https://en.dragon-ball-official.com/dragonball/en/news/2026/09/DBSBE_SurgeKV_en.jpg?_=1791070440"
+            ],
+            "https://dragonball-super.com/en/updates/img/20260903-1.jpg",
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
