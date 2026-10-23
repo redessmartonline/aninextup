@@ -356,7 +356,7 @@ const renderRelatedReleases=data=>{
   const ranked=items.filter(x=>!used.has(slugOf(x.article))).sort((a,b)=>{
     const relevance=score(b)-score(a);
     return relevance||distance(a.date)-distance(b.date);
-  }).slice(0,Math.max(0,3-existing.length));
+  }).slice(0,Math.max(0,2-existing.length));
   ranked.forEach(a=>{
     const link=document.createElement('a');link.className='mini data-card related-card';link.href='../'+a.article.replace(/^\//,'');
     const source=new URL(a.image,location.origin+'/');
