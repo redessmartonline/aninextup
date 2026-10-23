@@ -9,6 +9,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 ARTICLES = ROOT / "articles"
 OUT = ROOT / "assets" / "latest-news.json"
+# Keep this newly published, substantially updated guide visible on the homepage.
+PINNED_ARTICLES = {"articles/a-certain-dark-item-release-date"}
 
 def meta(source, name):
     pattern = r'<meta\s+[^>]*?(?:name|property)=["\']' + re.escape(name) + r'["\'][^>]*?content=["\']([^"\']*)["\']'
@@ -99,7 +101,7 @@ def update_homepage(items):
 def main():
     items = [item for path in ARTICLES.glob("*.html") if (item := extract(path))]
     items.sort(
-        key=lambda item: (item["updated"],
+        key=lambda item: (item["article"] in PINNED_ARTICLES, item["updated"],
                           publication_timestamp(ARTICLES / (item["article"].split("/")[-1] + ".html")),
                           item["published"], item["article"]),
         reverse=True
