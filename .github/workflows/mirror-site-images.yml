@@ -7,6 +7,8 @@ on:
     paths:
       - '.github/workflows/mirror-site-images.yml'
       - 'scripts/mirror_site_images.py'
+      - 'articles/**'
+      - 'assets/data.js'
 
 permissions:
   contents: write
@@ -18,8 +20,9 @@ concurrency:
 
 jobs:
   mirror:
+    if: github.actor != 'github-actions[bot]' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
         with:
