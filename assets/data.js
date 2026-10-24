@@ -1,7 +1,8 @@
 window.ANINEXTUP_DATA={
 updated:"2026-10-24",
 site:{timezone:"America/Santo_Domingo",season:"Fall 2026"},
-anime:[
+anime:
+{id:"haru-to-gen-anime-january-4-2027",image:"https://animationid.com/all/wp-content/uploads/2026/10/img_KV-scaled.png",title:"Haru to Gen Anime Premieres January 4, 2027: Cast and Teaser",tag:"OFFICIAL NEWS",article:"articles/haru-to-gen-anime-january-4-2027",description:"Haru to Gen begins on tvk January 4, 2027. See the Japanese broadcast time, confirmed cast, story, official teaser, manga details and streaming status."},
 {id:"dengeki-daisy-anime-january-2027-trailer-cast",image:"https://www.aniplex.co.jp/lineup/dengeki-daisy/news/detail/SYS/CONTENTS/378152f0-5c29-4bfc-afbe-11d9e5b8409c/w673",title:"Dengeki Daisy Anime Sets January 2027 Premiere, Reveals Trailer and Cast",date:"January 2027",platform:"Crunchyroll",article:"articles/dengeki-daisy-anime-january-2027-trailer-cast",newsCategory:"new-anime",category:"TV Anime",status:"confirmed"},
 {id:"one-piece-elbaph-arc-english-dub-october-2026",image:"/assets/images/external/7030a714c355d627d5ed8b098ee8b83fd181382b87a19d5984a3b61f1f2ae70e.webp",title:"ONE PIECE: Elbaph Arc English Dub Starts October 20 on Crunchyroll",date:null,platform:"See article",article:"articles/one-piece-elbaph-arc-english-dub-october-2026",newsCategory:"returning-series",category:"Anime release",status:"confirmed"},
 {id:"shangri-la-frontier-season-3-release-date",image:"/assets/images/shangri-la-frontier-season-3-official-visual.webp",title:"Shangri-La Frontier Season 3 Release Date: January 10, 2027",date:"2027-01-10",platform:"Crunchyroll (announced); Japanese TV",article:"articles/shangri-la-frontier-season-3-release-date",newsCategory:"returning-series",category:"Season Premiere",status:"confirmed"},
