@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 ARTICLES = ROOT / "articles"
 OUT = ROOT / "assets" / "latest-news.json"
 # Keep this newly published, substantially updated guide visible on the homepage.
-PINNED_ARTICLES = {"articles/a-certain-dark-item-release-date"}
+PINNED_ARTICLES = set()
 
 def meta(source, name):
     pattern = r'<meta\s+[^>]*?(?:name|property)=["\']' + re.escape(name) + r'["\'][^>]*?content=["\']([^"\']*)["\']'
@@ -74,12 +74,8 @@ def homepage_cards(items):
         )
     return "".join(cards)
 
-def update_homepage(items):
-    homepage = ROOT / "index.html"
-    if not homepage.exists():
-        return
-    source = homepage.read_text(encoding="utf-8")
-    opening = re.search(r'<div\b(?=[^>]*\bdata-home-latest\b)[^>]*>', source, re.I)
+def replace_cards(source, attribute, items):
+    opening = re.search(r'<div\b(?=[^>]*\b' + re.escape(attribute) + r'\b)[^>]*>', source, re.I)
     if not opening:
         raise SystemExit("Could not find the homepage latest-news container")
     depth = 1
@@ -95,7 +91,14 @@ def update_homepage(items):
             depth += 1
     if end is None:
         raise SystemExit("Could not find the end of the homepage latest-news container")
-    source = source[:content_start] + homepage_cards(items) + source[end:]
+    return source[:content_start] + homepage_cards(items) + source[end:]
+
+
+def update_homepage(items):
+    homepage = ROOT / "index.html"
+    source = homepage.read_text(encoding="utf-8")
+    source = replace_cards(source, "data-home-latest", items[:6])
+    source = replace_cards(source, "data-home-more", items[6:26])
     homepage.write_text(source, encoding="utf-8")
 
 def main():
@@ -106,7 +109,7 @@ def main():
                           item["published"], item["article"]),
         reverse=True
     )
-    latest = items[:7]
+    latest = items[:26]
     OUT.write_text(json.dumps({"generated":date.today().isoformat(),"items":latest}, ensure_ascii=False, separators=(",",":"))+"\n", encoding="utf-8")
     update_homepage(latest)
     print("Generated latest news:", len(items), "articles,", len(latest), "homepage cards")
