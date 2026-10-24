@@ -332,3 +332,13 @@ footer a{transition:color .15s ease}footer a:hover,footer a:focus-visible{color:
 /* Homepage CTA: keep the action with the hero copy and use a quieter finish. */
 .hero>.cta{grid-column:1;justify-self:start;align-self:start;display:inline-flex;align-items:center;width:auto;max-width:100%;margin-top:8px;padding:10px 16px;border:1px solid rgba(196,181,253,.38);border-radius:999px;background:linear-gradient(135deg,rgba(124,58,237,.2),rgba(124,58,237,.08));box-shadow:0 6px 24px rgba(124,58,237,.12);color:#e9ddff;font-size:11px;letter-spacing:.055em;transition:background .18s,border-color .18s,box-shadow .18s,transform .18s}
 .hero>.cta:hover{background:linear-gradient(135deg,rgba(124,58,237,.36),rgba(124,58,237,.16));border-color:rgba(196,181,253,.68);box-shadow:0 8px 28px rgba(124,58,237,.2);transform:translateY(-1px)}
+
+/* Twenty newest additional stories displayed as compact vertical rows. */
+.home-more-news-list{display:flex;flex-direction:column}
+.home-more-news-list>.visual-card{display:grid;grid-template-columns:180px minmax(0,1fr);gap:20px;padding:16px 0;border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;min-width:0}
+.home-more-news-list>.visual-card>img{width:180px;height:120px;object-fit:cover;border-radius:9px}
+.home-more-news-list>.visual-card .visual-body{display:flex;flex-direction:column;justify-content:center;min-width:0;padding:0}
+.home-more-news-list>.visual-card h3{font-size:1.05rem;line-height:1.35;margin:7px 0;overflow-wrap:anywhere}
+.home-more-news-list>.visual-card p{font-size:.88rem;line-height:1.45;margin:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.home-more-news-list>.visual-card .more{font-size:.76rem;margin-top:8px}
+@media(max-width:580px){.home-more-news-list>.visual-card{grid-template-columns:110px minmax(0,1fr);gap:12px;padding:12px 0}.home-more-news-list>.visual-card>img{width:110px;height:90px}.home-more-news-list>.visual-card h3{font-size:.94rem;margin:4px 0}.home-more-news-list>.visual-card p{display:none}.home-more-news-list>.visual-card .more{margin-top:4px}}
