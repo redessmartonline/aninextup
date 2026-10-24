@@ -2,9 +2,9 @@ name: Editorial source visual review
 on:
   pull_request:
     branches: [main]
-    paths: [articles/dreamland-release-date.html, articles/votoms-gray-witch-part-1.html, articles/otome-heroines-fight-for-survival-anime.html, assets/data.js, sitemap.xml, .github/workflows/editorial-source-visual.yml]
+    paths: [articles/tank-chair-release-date.html,articles/dreamland-release-date.html, articles/votoms-gray-witch-part-1.html, articles/otome-heroines-fight-for-survival-anime.html, assets/data.js, sitemap.xml, .github/workflows/editorial-source-visual.yml]
   push:
-    branches: [editorial/full-clearing-reader-guide-20261024, editorial/manchuria-opium-squad-guide-20261024, editorial/my-happy-marriage-guide-20261024, editorial/fallen-vampire-guide-20261024, editorial/reincarnated-goblin-guide-20261024, editorial/suikoden-viewing-guide-20261024, editorial/ranma-season3-guide-20261024, editorial/votoms-gray-witch-guide-20261024, editorial/otome-survival-depth-20261024, editorial/dreamland-release-guide-20261024]
+    branches: [editorial/tank-chair-guide-20261024, editorial/full-clearing-reader-guide-20261024, editorial/manchuria-opium-squad-guide-20261024, editorial/my-happy-marriage-guide-20261024, editorial/fallen-vampire-guide-20261024, editorial/reincarnated-goblin-guide-20261024, editorial/suikoden-viewing-guide-20261024, editorial/ranma-season3-guide-20261024, editorial/votoms-gray-witch-guide-20261024, editorial/otome-survival-depth-20261024, editorial/dreamland-release-guide-20261024]
 permissions:
   contents: read
 jobs:
@@ -40,7 +40,7 @@ jobs:
             const browser=await chromium.launch();
             const report=[];
             const branch=process.env.GITHUB_HEAD_REF||process.env.GITHUB_REF_NAME;
-            const article=branch.includes('dreamland-release-guide')?'dreamland-release-date':branch.includes('otome-survival-depth')?'otome-heroines-fight-for-survival-anime':branch.includes('votoms-gray-witch')?'votoms-gray-witch-part-1':branch.includes('ranma-season3')?'ranma-season-3':branch.includes('suikoden-viewing')?'suikoden-anime':branch.includes('reincarnated-goblin')?'reincarnated-goblin':branch.includes('fallen-vampire')?'record-of-a-fallen-vampire-anime':branch.includes('my-happy-marriage')?'my-happy-marriage-special-episodes':branch.includes('manchuria')?'manchuria-opium-squad-anime':'full-clearing-another-world-zero-believers-premiere';
+            const article=branch.includes('tank-chair-guide-20261024')?'tank-chair-release-date':branch.includes('dreamland-release-guide')?'dreamland-release-date':branch.includes('otome-survival-depth')?'otome-heroines-fight-for-survival-anime':branch.includes('votoms-gray-witch')?'votoms-gray-witch-part-1':branch.includes('ranma-season3')?'ranma-season-3':branch.includes('suikoden-viewing')?'suikoden-anime':branch.includes('reincarnated-goblin')?'reincarnated-goblin':branch.includes('fallen-vampire')?'record-of-a-fallen-vampire-anime':branch.includes('my-happy-marriage')?'my-happy-marriage-special-episodes':branch.includes('manchuria')?'manchuria-opium-squad-anime':'full-clearing-another-world-zero-believers-premiere';
             for(const [name,width,height] of [['desktop',1440,1000],['mobile',390,844]]){
               const context=await browser.newContext({viewport:{width,height}});
               await context.route('**/*',route=>(new URL(route.request().url()).hostname==='127.0.0.1')?route.continue():route.abort());
@@ -61,7 +61,7 @@ jobs:
               }
               await page.goto('http://127.0.0.1:8000/',{waitUntil:'networkidle'});
               const cards=page.locator('a[href*="'+article+'"]');
-              for(let i=0;i<await cards.count();i++){await cards.nth(i).scrollIntoViewIfNeeded();await cards.nth(i).locator('img').evaluateAll(async es=>{await Promise.all(es.map(i=>i.decode().catch(()=>{})));});await cards.nth(i).screenshot({path:'/tmp/editorial-evidence/'+name+'-home-card-'+i+'.png'});}
+              for(let i=0;i<await cards.count();i++){await cards.nth(i).scrollIntoViewIfNeeded();await cards.nth(i).locator('img').evaluateAll(async es=>{await Promise.all(es.map(i=>i.decode()));if(es.some(i=>!i.complete||i.naturalWidth===0))throw Error('Homepage card image failed');});await cards.nth(i).screenshot({path:'/tmp/editorial-evidence/'+name+'-home-card-'+i+'.png'});}
               report.push({name,homeCardCount:await cards.count()});
               await context.close();
             }
