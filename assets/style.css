@@ -357,3 +357,17 @@ footer a{transition:color .15s ease}footer a:hover,footer a:focus-visible{color:
 /* Homepage starts directly with Latest Anime News: remove old hero-era top spacing. */
 .home-page>.home-news-overview:first-child{padding-top:18px}
 @media(max-width:580px){.home-page>.home-news-overview:first-child{padding-top:12px}}
+
+/* Larger horizontal news rows on desktop; one story per row remains. */
+@media (min-width:851px){
+.home-more-news-list>.card.story.visual-card{grid-template-columns:220px minmax(0,1fr);gap:24px;padding:18px 0!important}
+.home-more-news-list>.card.story.visual-card>img{width:220px;height:140px}
+.home-more-news-list>.card.story.visual-card h3{font-size:1.23rem;line-height:1.32;margin:7px 0}
+.home-more-news-list>.card.story.visual-card p{font-size:.96rem;line-height:1.5;max-width:none}
+.home-more-news-list>.card.story.visual-card .tag{font-size:.73rem}
+}
+@media (min-width:581px) and (max-width:850px){
+.home-more-news-list>.card.story.visual-card{grid-template-columns:190px minmax(0,1fr);gap:18px}
+.home-more-news-list>.card.story.visual-card>img{width:190px;height:120px}
+.home-more-news-list>.card.story.visual-card h3{font-size:1.12rem}
+}
