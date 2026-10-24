@@ -1,5 +1,5 @@
 window.ANINEXTUP_DATA={
-updated:"2026-10-23",
+updated:"2026-10-24",
 site:{timezone:"America/Santo_Domingo",season:"Fall 2026"},
 anime:[
 {id:"dengeki-daisy-anime-january-2027-trailer-cast",image:"https://www.aniplex.co.jp/lineup/dengeki-daisy/news/detail/SYS/CONTENTS/378152f0-5c29-4bfc-afbe-11d9e5b8409c/w673",title:"Dengeki Daisy Anime Sets January 2027 Premiere, Reveals Trailer and Cast",date:"January 2027",platform:"Crunchyroll",article:"articles/dengeki-daisy-anime-january-2027-trailer-cast",newsCategory:"new-anime",category:"TV Anime",status:"confirmed"},
