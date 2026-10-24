@@ -398,3 +398,16 @@ footer a{transition:color .15s ease}footer a:hover,footer a:focus-visible{color:
     padding-top:18px;
   }
 }
+
+/* Article-only: keep the footer close to the last Related releases row. */
+main:has(> .article) > .article{
+  padding-bottom:24px;
+}
+main:has(> .article) + footer{
+  margin-top:20px;
+  padding-top:28px;
+}
+@media(max-width:780px){
+  main:has(> .article) > .article{padding-bottom:16px}
+  main:has(> .article) + footer{margin-top:12px;padding-top:22px}
+}
