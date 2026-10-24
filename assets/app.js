@@ -1,19 +1,22 @@
 document.addEventListener('DOMContentLoaded',()=>{
 document.querySelectorAll('.site-header').forEach((header,index)=>{
- const toggle=document.createElement('button');
- toggle.className='global-search-toggle';
- toggle.type='button';
- toggle.setAttribute('aria-label','Search AniNextUp');
+ let toggle=header.querySelector('.global-search-toggle');
+ if(!toggle){
+  toggle=document.createElement('button');
+  toggle.className='global-search-toggle';
+  toggle.type='button';
+  toggle.setAttribute('aria-label','Search articles');
+  toggle.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg><span class="sr-only">Search</span>';
+  const nav=header.querySelector('nav');
+  if(nav)nav.after(toggle);else header.append(toggle);
+ }
  toggle.setAttribute('aria-expanded','false');
- toggle.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg><span class="sr-only">Search</span>';
  const panel=document.createElement('div');
  panel.className='site-search-panel';
  panel.id='site-search-panel-'+index;
  panel.hidden=true;
  panel.innerHTML='<form class="site-search-form" role="search"><label class="sr-only" for="site-search-input-'+index+'">Search published articles</label><div class="search"><input id="site-search-input-'+index+'" class="site-search-input" type="search" placeholder="Search articles by title or keyword..."><button type="submit">SEARCH</button></div><div class="search-results site-search-results" aria-live="polite" hidden></div></form>';
  toggle.setAttribute('aria-controls',panel.id);
- const nav=header.querySelector('nav');
- if(nav)nav.after(toggle);else header.append(toggle);
  header.append(panel);
  const input=panel.querySelector('.site-search-input');
  const results=panel.querySelector('.site-search-results');
