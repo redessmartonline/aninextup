@@ -1,7 +1,10 @@
 name: Editorial source visual review
 on:
+  pull_request:
+    branches: [main]
+    paths: [articles/votoms-gray-witch-part-1.html, assets/data.js, sitemap.xml, .github/workflows/editorial-source-visual.yml]
   push:
-    branches: [editorial/full-clearing-reader-guide-20261024, editorial/manchuria-opium-squad-guide-20261024, editorial/my-happy-marriage-guide-20261024, editorial/fallen-vampire-guide-20261024, editorial/reincarnated-goblin-guide-20261024, editorial/suikoden-viewing-guide-20261024, editorial/ranma-season3-guide-20261024]
+    branches: [editorial/full-clearing-reader-guide-20261024, editorial/manchuria-opium-squad-guide-20261024, editorial/my-happy-marriage-guide-20261024, editorial/fallen-vampire-guide-20261024, editorial/reincarnated-goblin-guide-20261024, editorial/suikoden-viewing-guide-20261024, editorial/ranma-season3-guide-20261024, editorial/votoms-gray-witch-guide-20261024]
 permissions:
   contents: read
 jobs:
@@ -36,14 +39,15 @@ jobs:
           (async()=>{
             const browser=await chromium.launch();
             const report=[];
-            const article=process.env.GITHUB_REF_NAME.includes('ranma-season3')?'ranma-season-3':process.env.GITHUB_REF_NAME.includes('suikoden-viewing')?'suikoden-anime':process.env.GITHUB_REF_NAME.includes('reincarnated-goblin')?'reincarnated-goblin':process.env.GITHUB_REF_NAME.includes('fallen-vampire')?'record-of-a-fallen-vampire-anime':process.env.GITHUB_REF_NAME.includes('my-happy-marriage')?'my-happy-marriage-special-episodes':process.env.GITHUB_REF_NAME.includes('manchuria')?'manchuria-opium-squad-anime':'full-clearing-another-world-zero-believers-premiere';
+            const branch=process.env.GITHUB_HEAD_REF||process.env.GITHUB_REF_NAME;
+            const article=branch.includes('votoms-gray-witch')?'votoms-gray-witch-part-1':branch.includes('ranma-season3')?'ranma-season-3':branch.includes('suikoden-viewing')?'suikoden-anime':branch.includes('reincarnated-goblin')?'reincarnated-goblin':branch.includes('fallen-vampire')?'record-of-a-fallen-vampire-anime':branch.includes('my-happy-marriage')?'my-happy-marriage-special-episodes':branch.includes('manchuria')?'manchuria-opium-squad-anime':'full-clearing-another-world-zero-believers-premiere';
             for(const [name,width,height] of [['desktop',1440,1000],['mobile',390,844]]){
               const context=await browser.newContext({viewport:{width,height}});
               await context.route('**/*',route=>(new URL(route.request().url()).hostname==='127.0.0.1')?route.continue():route.abort());
               const page=await context.newPage();
               for(const slug of [article,'the-fable-season-2-january-2027']){
                 await page.goto('http://127.0.0.1:8000/articles/'+slug,{waitUntil:'networkidle'});
-                await page.locator('footer').scrollIntoViewIfNeeded();
+                await page.locator('article.article').waitFor({state:'visible'});
                 await page.evaluate(()=>window.scrollTo(0,0));
                 await page.locator('article img').evaluateAll(async es=>{for(const i of es)i.loading='eager';await Promise.all(es.map(i=>i.decode().catch(()=>{})));});
                 const imageURLs=await page.locator('article img').evaluateAll(es=>es.map(i=>i.src));
