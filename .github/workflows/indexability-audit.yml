@@ -1,0 +1,44 @@
+name: Indexability Audit
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'articles/**'
+      - '*.html'
+      - 'sitemap.xml'
+      - 'robots.txt'
+      - '_headers'
+      - 'scripts/validate_indexability.py'
+      - '.github/workflows/indexability-audit.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'articles/**'
+      - '*.html'
+      - 'sitemap.xml'
+      - 'robots.txt'
+      - '_headers'
+      - 'scripts/validate_indexability.py'
+      - '.github/workflows/indexability-audit.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  indexability:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check article canonicals, sitemap, robots and internal discovery
+        shell: bash
+        run: |
+          set -o pipefail
+          python3 scripts/validate_indexability.py 2>&1 | tee indexability-audit.log
+      - name: Save reproducible audit log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: indexability-audit-log
+          path: indexability-audit.log
+          if-no-files-found: warn
