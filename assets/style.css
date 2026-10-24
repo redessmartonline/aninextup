@@ -426,3 +426,25 @@ main:has(> .article) + footer{
   .site-header .global-search-toggle{width:46px;height:46px}
   .site-header .global-search-toggle svg{width:23px;height:23px}
 }
+
+/* Homepage editorial polish: strong lead story, comfortable rhythm, no duplicate cards. */
+.home-page .home-news-spotlight>a[hidden],
+.home-page .home-popular-news-grid>a[hidden],
+.home-page .home-more-news-list>a[hidden]{display:none!important}
+.home-page>.home-news-overview:first-child{padding-top:24px;padding-bottom:34px}
+.home-page .home-news-spotlight{gap:18px}
+@media(min-width:851px){
+  .home-page .home-news-spotlight>.visual-card:first-child{min-height:360px;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr)}
+  .home-page .home-news-spotlight>.visual-card:first-child>img{min-height:360px;max-height:440px}
+  .home-page .home-news-spotlight>.visual-card:first-child .visual-body{padding:30px}
+  .home-page .home-news-spotlight>.visual-card:first-child h3{font-size:clamp(1.5rem,2.4vw,2rem);line-height:1.2}
+  .home-page .home-news-spotlight>.visual-card:first-child p{font-size:1rem;line-height:1.6;-webkit-line-clamp:3}
+}
+.home-page .home-news-spotlight>.visual-card:focus-visible,
+.home-page .home-popular-news-grid>a:focus-visible,
+.home-page .home-more-news-list>a:focus-visible{outline:3px solid var(--purple);outline-offset:3px}
+@media(max-width:580px){
+  .home-page>.home-news-overview:first-child{padding-top:14px;padding-bottom:24px}
+  .home-page .home-news-spotlight{gap:12px}
+  .home-page .home-news-spotlight>.visual-card:first-child h3{line-height:1.25}
+}
