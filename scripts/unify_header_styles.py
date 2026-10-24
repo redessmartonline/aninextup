@@ -9,8 +9,8 @@ for path in root.rglob("*.html"):
     if ".git" in path.parts:
         continue
     original = path.read_text(encoding="utf-8")
-    updated = re.sub(r'(href="(?:\\.\\./)*assets/style\\.css)(?:\\?[^"]*)?(")', r'\\g<1>?v=20261024-header-unified\\2', original)
-    updated = re.sub(r'(src="(?:\\.\\./)*assets/app\\.js)(?:\\?[^"]*)?(")', r'\\g<1>?v=20261024-search-restored\\2', updated)
+    updated = re.sub(r'(href="(?:\\.\\./)*assets/style\\.css)(?:\\?[^"]*)?(")', lambda m: m.group(1) + '?v=20261024-header-unified' + m.group(2), original)
+    updated = re.sub(r'(src="(?:\\.\\./)*assets/app\\.js)(?:\\?[^"]*)?(")', lambda m: m.group(1) + '?v=20261024-search-restored' + m.group(2), updated)
     if updated != original:
         path.write_text(updated, encoding="utf-8")
         count += 1
