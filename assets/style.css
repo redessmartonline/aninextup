@@ -342,3 +342,14 @@ footer a{transition:color .15s ease}footer a:hover,footer a:focus-visible{color:
 .home-more-news-list>.visual-card p{font-size:.88rem;line-height:1.45;margin:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .home-more-news-list>.visual-card .more{font-size:.76rem;margin-top:8px}
 @media(max-width:580px){.home-more-news-list>.visual-card{grid-template-columns:110px minmax(0,1fr);gap:12px;padding:12px 0}.home-more-news-list>.visual-card>img{width:110px;height:90px}.home-more-news-list>.visual-card h3{font-size:.94rem;margin:4px 0}.home-more-news-list>.visual-card p{display:none}.home-more-news-list>.visual-card .more{margin-top:4px}}
+
+/* Fix inherited 245px story minimum height and oversized empty rows. */
+.home-more-news-list>.card.story.visual-card{min-height:0;height:auto;padding:14px 0!important;align-items:center;grid-template-columns:168px minmax(0,1fr);gap:18px;transition:background .18s ease}
+.home-more-news-list>.card.story.visual-card:hover{background:rgba(167,139,250,.045)}
+.home-more-news-list>.card.story.visual-card>img{width:168px;height:106px;aspect-ratio:16/10;display:block;object-fit:cover;border-radius:10px}
+.home-more-news-list>.card.story.visual-card .visual-body{padding:0;align-self:center;gap:0}
+.home-more-news-list>.card.story.visual-card .tag{font-size:.68rem;letter-spacing:.07em}
+.home-more-news-list>.card.story.visual-card h3{font-size:1.07rem;line-height:1.35;margin:6px 0 5px}
+.home-more-news-list>.card.story.visual-card p{margin:0;line-height:1.45;max-width:95ch}
+.home-more-news-list>.card.story.visual-card .more{margin-top:7px}
+@media(max-width:580px){.home-more-news-list>.card.story.visual-card{grid-template-columns:104px minmax(0,1fr);gap:12px;padding:12px 0!important}.home-more-news-list>.card.story.visual-card>img{width:104px;height:83px}.home-more-news-list>.card.story.visual-card h3{font-size:.93rem;line-height:1.3;margin:4px 0}.home-more-news-list>.card.story.visual-card .more{margin-top:5px}}
