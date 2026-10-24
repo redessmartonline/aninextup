@@ -9,7 +9,7 @@ document.querySelectorAll('.site-header').forEach((header,index)=>{
  panel.className='site-search-panel';
  panel.id='site-search-panel-'+index;
  panel.hidden=true;
- panel.innerHTML='<form class="site-search-form" role="search"><label class="sr-only" for="site-search-input-'+index+'">Search anime, platforms and guides</label><div class="search"><input id="site-search-input-'+index+'" class="site-search-input" type="search" placeholder="Search anime, platform or guide..."><button type="submit">SEARCH</button></div><div class="search-results site-search-results" aria-live="polite" hidden></div></form>';
+ panel.innerHTML='<form class="site-search-form" role="search"><label class="sr-only" for="site-search-input-'+index+'">Search published articles</label><div class="search"><input id="site-search-input-'+index+'" class="site-search-input" type="search" placeholder="Search articles by title or keyword..."><button type="submit">SEARCH</button></div><div class="search-results site-search-results" aria-live="polite" hidden></div></form>';
  toggle.setAttribute('aria-controls',panel.id);
  const nav=header.querySelector('nav');
  if(nav)nav.after(toggle);else header.append(toggle);
@@ -247,7 +247,7 @@ async function searchSite(input=document.getElementById('search'),box=document.g
  const words=normalizeSiteSearch(raw).split(/\s+/).filter(Boolean);
  if(!words.length){renderSiteSearchResults(box,[]);return;}
  // Show matches already present in the homepage data before loading the full sitemap index.
- const localEntries=[...(window.ANINEXTUP_DATA?.anime||[]),...(window.ANINEXTUP_DATA?.guides||[])].map(prepareSiteSearchEntry).filter(Boolean);
+ const localEntries=[]; // Only published article index entries, not anime listings or platform guides.
  const immediate=rankSiteSearchEntries(localEntries,words);
  if(immediate.length)renderSiteSearchResults(box,immediate);
  else if(box){box.innerHTML='<div class="no-result">Searching all articles…</div>';box.hidden=false}
@@ -255,7 +255,7 @@ async function searchSite(input=document.getElementById('search'),box=document.g
   const entries=await loadSiteSearchIndex();
   if(request!==siteSearchRequest)return;
   const unique=new Map([...localEntries,...entries].map(x=>[x.url,x]));
-  const results=rankSiteSearchEntries([...unique.values()],words);
+  const results=rankSiteSearchEntries([...unique.values()].filter(x=>x.url.startsWith('/articles/')),words);
   if(box)renderSiteSearchResults(box,results);
   else if(results[0])location.href=results[0].url;
  }catch(e){
