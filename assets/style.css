@@ -386,3 +386,15 @@ footer a{transition:color .15s ease}footer a:hover,footer a:focus-visible{color:
 
 /* Enforce exactly one featured and at most three secondary latest-news cards. */
 .home-news-spotlight>.card.story.visual-card:nth-child(n+5){display:none!important}
+
+/* Reduce excessive whitespace above KEEP WATCHING on article pages. */
+.article .related-releases{
+  margin-top:24px;
+  padding-top:24px;
+}
+@media(max-width:780px){
+  .article .related-releases{
+    margin-top:18px;
+    padding-top:18px;
+  }
+}
