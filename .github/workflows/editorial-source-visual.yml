@@ -1,7 +1,7 @@
 name: Editorial source visual review
 on:
   push:
-    branches: [editorial/full-clearing-reader-guide-20261024, editorial/manchuria-opium-squad-guide-20261024, editorial/my-happy-marriage-guide-20261024]
+    branches: [editorial/full-clearing-reader-guide-20261024, editorial/manchuria-opium-squad-guide-20261024, editorial/my-happy-marriage-guide-20261024, editorial/fallen-vampire-guide-20261024]
 permissions:
   contents: read
 jobs:
@@ -36,7 +36,7 @@ jobs:
           (async()=>{
             const browser=await chromium.launch();
             const report=[];
-            const article=process.env.GITHUB_REF_NAME.includes('my-happy-marriage')?'my-happy-marriage-special-episodes':process.env.GITHUB_REF_NAME.includes('manchuria')?'manchuria-opium-squad-anime':'full-clearing-another-world-zero-believers-premiere';
+            const article=process.env.GITHUB_REF_NAME.includes('fallen-vampire')?'record-of-a-fallen-vampire-anime':process.env.GITHUB_REF_NAME.includes('my-happy-marriage')?'my-happy-marriage-special-episodes':process.env.GITHUB_REF_NAME.includes('manchuria')?'manchuria-opium-squad-anime':'full-clearing-another-world-zero-believers-premiere';
             for(const [name,width,height] of [['desktop',1440,1000],['mobile',390,844]]){
               const context=await browser.newContext({viewport:{width,height}});
               await context.route('**/*',route=>new URL(route.request().url()).hostname==='127.0.0.1'?route.continue():route.abort());
