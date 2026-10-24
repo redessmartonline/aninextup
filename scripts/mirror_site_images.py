@@ -179,11 +179,12 @@ def main() -> int:
             print(f"[{index}/{len(refs)}] FAILED {original}: {exc}", flush=True)
         time.sleep(0.08)
 
+    # Keep successful, validated local copies even when other origins block access.
+    # Never rewrite a failed source to a missing local asset.
     if errors:
-        print("\nNo source files were rewritten because some images could not be verified:", file=sys.stderr)
+        print(f"WARNING: {len(errors)} remote images could not be mirrored:", file=sys.stderr)
         for source, error in errors:
             print(f"- {source}: {error}", file=sys.stderr)
-        return 1
 
     changed = 0
     # Longest first avoids replacing a URL prefix before a URL with a query string.
@@ -199,6 +200,8 @@ def main() -> int:
 
     manifest = {
         "count": len(mapping),
+        "failed_count": len(errors),
+        "failed": [{"source": source, "error": error} for source, error in errors],
         "images": [{"source": source, "local": target} for source, target in sorted(mapping.items())],
     }
     (OUT / "sources.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
