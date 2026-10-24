@@ -1,3 +1,44 @@
+document.querySelectorAll('.site-header').forEach((header,index)=>{
+ const toggle=document.createElement('button');
+ toggle.className='global-search-toggle';
+ toggle.type='button';
+ toggle.setAttribute('aria-label','Search AniNextUp');
+ toggle.setAttribute('aria-expanded','false');
+ toggle.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg><span class="sr-only">Search</span>';
+ const panel=document.createElement('div');
+ panel.className='site-search-panel';
+ panel.id='site-search-panel-'+index;
+ panel.hidden=true;
+ panel.innerHTML='<form class="site-search-form" role="search"><label class="sr-only" for="site-search-input-'+index+'">Search anime, platforms and guides</label><div class="search"><input id="site-search-input-'+index+'" class="site-search-input" type="search" placeholder="Search anime, platform or guide..."><button type="submit">SEARCH</button></div><div class="search-results site-search-results" aria-live="polite" hidden></div></form>';
+ toggle.setAttribute('aria-controls',panel.id);
+ const nav=header.querySelector('nav');
+ if(nav)nav.after(toggle);else header.append(toggle);
+ header.append(panel);
+ const input=panel.querySelector('.site-search-input');
+ const results=panel.querySelector('.site-search-results');
+ toggle.addEventListener('click',()=>{
+  const open=panel.hidden;
+  panel.hidden=!open;
+  toggle.setAttribute('aria-expanded',String(open));
+  if(open)input.focus();
+ });
+ panel.querySelector('form').addEventListener('submit',event=>{
+  event.preventDefault();
+  searchSite(input,results);
+ });
+ input.addEventListener('input',()=>{
+  if(input.value.trim())return;
+  results.hidden=true;
+  siteSearchRequest++;
+ });
+ document.addEventListener('keydown',event=>{
+  if(event.key==='Escape'&&!panel.hidden){panel.hidden=true;toggle.setAttribute('aria-expanded','false');toggle.focus()}
+ });
+ document.addEventListener('pointerdown',event=>{
+  if(!panel.hidden&&!header.contains(event.target)){panel.hidden=true;toggle.setAttribute('aria-expanded','false')}
+ });
+});
+
 // Accessible mobile navigation: one toggle state, keyboard dismissal, and responsive reset.
 document.querySelectorAll('.site-header').forEach(header=>{
   const button=header.querySelector('.menu');
@@ -199,46 +240,7 @@ function renderSiteSearchResults(box,results){
  box.hidden=false;
 }
 // Make the same article search available from every page, including articles.
-document.querySelectorAll('.site-header').forEach((header,index)=>{
- const toggle=document.createElement('button');
- toggle.className='global-search-toggle';
- toggle.type='button';
- toggle.setAttribute('aria-label','Search AniNextUp');
- toggle.setAttribute('aria-expanded','false');
- toggle.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg><span class="sr-only">Search</span>';
- const panel=document.createElement('div');
- panel.className='site-search-panel';
- panel.id='site-search-panel-'+index;
- panel.hidden=true;
- panel.innerHTML='<form class="site-search-form" role="search"><label class="sr-only" for="site-search-input-'+index+'">Search anime, platforms and guides</label><div class="search"><input id="site-search-input-'+index+'" class="site-search-input" type="search" placeholder="Search anime, platform or guide..."><button type="submit">SEARCH</button></div><div class="search-results site-search-results" aria-live="polite" hidden></div></form>';
- toggle.setAttribute('aria-controls',panel.id);
- const nav=header.querySelector('nav');
- if(nav)nav.after(toggle);else header.append(toggle);
- header.append(panel);
- const input=panel.querySelector('.site-search-input');
- const results=panel.querySelector('.site-search-results');
- toggle.addEventListener('click',()=>{
-  const open=panel.hidden;
-  panel.hidden=!open;
-  toggle.setAttribute('aria-expanded',String(open));
-  if(open)input.focus();
- });
- panel.querySelector('form').addEventListener('submit',event=>{
-  event.preventDefault();
-  searchSite(input,results);
- });
- input.addEventListener('input',()=>{
-  if(input.value.trim())return;
-  results.hidden=true;
-  siteSearchRequest++;
- });
- document.addEventListener('keydown',event=>{
-  if(event.key==='Escape'&&!panel.hidden){panel.hidden=true;toggle.setAttribute('aria-expanded','false');toggle.focus()}
- });
- document.addEventListener('pointerdown',event=>{
-  if(!panel.hidden&&!header.contains(event.target)){panel.hidden=true;toggle.setAttribute('aria-expanded','false')}
- });
-});
+
 async function searchSite(input=document.getElementById('search'),box=document.getElementById('searchResults')){
  const raw=(input?.value||'').trim(),request=++siteSearchRequest;
  if(!raw){if(box)box.hidden=true;return}
