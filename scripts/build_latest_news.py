@@ -97,8 +97,8 @@ def replace_cards(source, attribute, items):
 def update_homepage(items):
     homepage = ROOT / "index.html"
     source = homepage.read_text(encoding="utf-8")
-    source = replace_cards(source, "data-home-latest", items[:6])
-    source = replace_cards(source, "data-home-more", items[6:26])
+    source = replace_cards(source, "data-home-latest", items[:4])
+    source = replace_cards(source, "data-home-more", items[4:24])
     homepage.write_text(source, encoding="utf-8")
 
 def main():
@@ -109,7 +109,7 @@ def main():
                           item["published"], item["article"]),
         reverse=True
     )
-    latest = items[:26]
+    latest = items[:24]
     OUT.write_text(json.dumps({"generated":date.today().isoformat(),"items":latest}, ensure_ascii=False, separators=(",",":"))+"\n", encoding="utf-8")
     update_homepage(latest)
     print("Generated latest news:", len(items), "articles,", len(latest), "homepage cards")
