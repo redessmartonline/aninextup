@@ -321,7 +321,7 @@ for(const el of discoveryNodes('[data-anime-platform]')){
 
 discoveryNodes('[data-platform-count]').forEach(el=>{const p=el.dataset.platformCount;const n=(D.anime||[]).filter(x=>window.ANINEXTUP_RELEASES.matchesPlatform(x,p)).length;el.textContent=n?'· '+n+' TRACKED':''});
 
-// Render the two related article cards required by the editorial publication gate.
+// Render up to three related article cards for each article.
 const renderRelatedReleases=data=>{
   const article=document.querySelector('article.article');
   if(!article)return;
@@ -401,8 +401,8 @@ function normalizeRelatedReleaseGrid(section){
   // Older editorial markup sometimes split one related list across several grids.
   // Move the first three cards, in document order, into one shared grid.
   const cards=grids.flatMap(grid=>Array.from(grid.querySelectorAll(':scope > a.mini')));
-  cards.slice(2).forEach(card=>card.remove());
-  const visibleCards=cards.slice(0,2);
+  cards.slice(3).forEach(card=>card.remove());
+  const visibleCards=cards.slice(0,3);
   const grid=grids[0];
   visibleCards.forEach(card=>grid.append(card));
   grids.slice(1).forEach(extra=>extra.remove());
