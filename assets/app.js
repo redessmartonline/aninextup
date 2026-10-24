@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded',()=>{
 document.querySelectorAll('.site-header').forEach((header,index)=>{
  const toggle=document.createElement('button');
  toggle.className='global-search-toggle';
@@ -37,6 +38,7 @@ document.querySelectorAll('.site-header').forEach((header,index)=>{
  document.addEventListener('pointerdown',event=>{
   if(!panel.hidden&&!header.contains(event.target)){panel.hidden=true;toggle.setAttribute('aria-expanded','false')}
  });
+});
 });
 
 // Accessible mobile navigation: one toggle state, keyboard dismissal, and responsive reset.
