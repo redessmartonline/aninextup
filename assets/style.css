@@ -383,3 +383,6 @@ footer a{transition:color .15s ease}footer a:hover,footer a:focus-visible{color:
 .popular-news-copy h3{font-size:1.15rem;line-height:1.35;margin:0;flex:1}
 .popular-news-copy .more{font-size:.76rem}
 @media(max-width:700px){.home-popular-news-grid{grid-template-columns:1fr;gap:12px}.popular-news-card{flex-direction:row}.popular-news-card>img{width:38%;aspect-ratio:auto;min-height:120px}.popular-news-copy{padding:12px}.popular-news-copy h3{font-size:1rem}}
+
+/* Enforce exactly one featured and at most three secondary latest-news cards. */
+.home-news-spotlight>.card.story.visual-card:nth-child(n+5){display:none!important}
