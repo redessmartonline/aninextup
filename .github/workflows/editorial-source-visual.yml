@@ -1,7 +1,7 @@
 name: Editorial source visual review
 on:
   push:
-    branches: [editorial/full-clearing-reader-guide-20261024, editorial/manchuria-opium-squad-guide-20261024, editorial/my-happy-marriage-guide-20261024, editorial/fallen-vampire-guide-20261024]
+    branches: [editorial/full-clearing-reader-guide-20261024, editorial/manchuria-opium-squad-guide-20261024, editorial/my-happy-marriage-guide-20261024, editorial/fallen-vampire-guide-20261024, editorial/reincarnated-goblin-guide-20261024]
 permissions:
   contents: read
 jobs:
@@ -15,7 +15,7 @@ jobs:
           node-version: '22'
       - run: npm install --no-save playwright@1.56.1
       - run: npx playwright install --with-deps chromium
-      - name: Render source only, with external requests blocked
+      - name: Render source with only the official trailer thumbnail allowed externally
         run: |
           mkdir -p /tmp/editorial-evidence
           cat > /tmp/editorial-server.py <<'PY'
@@ -36,10 +36,10 @@ jobs:
           (async()=>{
             const browser=await chromium.launch();
             const report=[];
-            const article=process.env.GITHUB_REF_NAME.includes('fallen-vampire')?'record-of-a-fallen-vampire-anime':process.env.GITHUB_REF_NAME.includes('my-happy-marriage')?'my-happy-marriage-special-episodes':process.env.GITHUB_REF_NAME.includes('manchuria')?'manchuria-opium-squad-anime':'full-clearing-another-world-zero-believers-premiere';
+            const article=process.env.GITHUB_REF_NAME.includes('reincarnated-goblin')?'reincarnated-goblin':process.env.GITHUB_REF_NAME.includes('fallen-vampire')?'record-of-a-fallen-vampire-anime':process.env.GITHUB_REF_NAME.includes('my-happy-marriage')?'my-happy-marriage-special-episodes':process.env.GITHUB_REF_NAME.includes('manchuria')?'manchuria-opium-squad-anime':'full-clearing-another-world-zero-believers-premiere';
             for(const [name,width,height] of [['desktop',1440,1000],['mobile',390,844]]){
               const context=await browser.newContext({viewport:{width,height}});
-              await context.route('**/*',route=>new URL(route.request().url()).hostname==='127.0.0.1'?route.continue():route.abort());
+              await context.route('**/*',route=>(new URL(route.request().url()).hostname==='127.0.0.1'||route.request().url()==='https://i.ytimg.com/vi/ynr8tFWrK4c/maxresdefault.jpg')?route.continue():route.abort());
               const page=await context.newPage();
               for(const slug of [article,'the-fable-season-2-january-2027']){
                 await page.goto('http://127.0.0.1:8000/articles/'+slug,{waitUntil:'networkidle'});
