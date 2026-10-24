@@ -1,0 +1,38 @@
+name: Upgrade related releases to three
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/auto_publish_news.py'
+      - 'scripts/upgrade_related_releases.py'
+      - '.github/workflows/upgrade-related-releases.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  upgrade:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Update existing article cards
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            python scripts/upgrade_related_releases.py
+            git add articles/
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m "Upgrade article related releases to three cards"
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 3
+          done
+          exit 1
