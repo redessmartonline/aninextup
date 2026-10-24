@@ -1,0 +1,67 @@
+name: Editorial source visual review
+on:
+  push:
+    branches: [editorial/full-clearing-reader-guide-20261024, editorial/manchuria-opium-squad-guide-20261024]
+permissions:
+  contents: read
+jobs:
+  visual:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-save playwright@1.56.1
+      - run: npx playwright install --with-deps chromium
+      - name: Render source only, with external requests blocked
+        run: |
+          mkdir -p /tmp/editorial-evidence
+          cat > /tmp/editorial-server.py <<'PY'
+          import http.server
+          class Handler(http.server.SimpleHTTPRequestHandler):
+              def do_GET(self):
+                  import os
+                  route=self.path.split('?')[0]
+                  if not os.path.exists('.'+route) and os.path.isfile('.'+route+'.html'):
+                      self.path=route+'.html'
+                  super().do_GET()
+          http.server.ThreadingHTTPServer(('127.0.0.1',8000),Handler).serve_forever()
+          PY
+          python /tmp/editorial-server.py >/tmp/server.log 2>&1 &
+          node <<'JS'
+          const {chromium}=require('playwright');
+          const fs=require('fs');
+          (async()=>{
+            const browser=await chromium.launch();
+            const report=[];
+            const article=process.env.GITHUB_REF_NAME.includes('manchuria')?'manchuria-opium-squad-anime':'full-clearing-another-world-zero-believers-premiere';
+            for(const [name,width,height] of [['desktop',1440,1000],['mobile',390,844]]){
+              const context=await browser.newContext({viewport:{width,height}});
+              await context.route('**/*',route=>new URL(route.request().url()).hostname==='127.0.0.1'?route.continue():route.abort());
+              const page=await context.newPage();
+              for(const slug of [article,'the-fable-season-2-january-2027']){
+                await page.goto('http://127.0.0.1:8000/articles/'+slug,{waitUntil:'networkidle'});
+                await page.locator('footer').scrollIntoViewIfNeeded();
+                await page.evaluate(()=>window.scrollTo(0,0));
+                await page.screenshot({path:'/tmp/editorial-evidence/'+name+'-'+slug+'.png',fullPage:true});
+                report.push({name,slug,checks:await page.evaluate(()=>({h1:document.querySelector('h1')?.textContent,overflow:document.documentElement.scrollWidth>innerWidth,images:[...document.querySelectorAll('article img')].map(i=>({src:i.getAttribute('src'),loaded:i.complete&&i.naturalWidth>0,width:i.naturalWidth,height:i.naturalHeight})),schemas:[...document.querySelectorAll('script[type="application/ld+json"]')].map(s=>JSON.parse(s.textContent)['@type'])}))});
+              }
+              await page.goto('http://127.0.0.1:8000/',{waitUntil:'networkidle'});
+              const cards=page.locator('a[href*="'+article+'"]');
+              for(let i=0;i<await cards.count();i++){await cards.nth(i).scrollIntoViewIfNeeded();await cards.nth(i).screenshot({path:'/tmp/editorial-evidence/'+name+'-home-card-'+i+'.png'});}
+              report.push({name,homeCardCount:await cards.count()});
+              await context.close();
+            }
+            fs.writeFileSync('/tmp/editorial-evidence/report.json',JSON.stringify(report,null,2));
+            console.log(JSON.stringify(report));
+            await browser.close();
+          })().catch(e=>{console.error(e);process.exit(1)});
+          JS
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: editorial-source-visual-review
+          path: /tmp/editorial-evidence
+          retention-days: 7
