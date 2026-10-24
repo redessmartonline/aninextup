@@ -411,3 +411,18 @@ main:has(> .article) + footer{
   main:has(> .article) > .article{padding-bottom:16px}
   main:has(> .article) + footer{margin-top:12px;padding-top:22px}
 }
+
+/* Slightly larger brand, navigation and search control in the top header. */
+@media(min-width:781px){
+  .site-header{height:84px}
+  .site-header .brand{font-size:24px}
+  .site-header nav{gap:24px}
+  .site-header nav a{font-size:13px}
+  .site-header .global-search-toggle{width:48px;height:48px;margin-left:16px}
+  .site-header .global-search-toggle svg{width:24px;height:24px}
+}
+@media(max-width:780px){
+  .site-header .brand{font-size:23px}
+  .site-header .global-search-toggle{width:46px;height:46px}
+  .site-header .global-search-toggle svg{width:23px;height:23px}
+}
