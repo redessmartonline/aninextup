@@ -104,7 +104,7 @@ def update_homepage(items):
 def main():
     items = [item for path in ARTICLES.glob("*.html") if (item := extract(path))]
     items.sort(
-        key=lambda item: (item["article"] in PINNED_ARTICLES, item["updated"],
+        key=lambda item: (item["published"],
                           publication_timestamp(ARTICLES / (item["article"].split("/")[-1] + ".html")),
                           item["published"], item["article"]),
         reverse=True
