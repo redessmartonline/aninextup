@@ -15,13 +15,9 @@ jobs:
           node-version: '22'
       - run: npm install --no-save playwright@1.56.1
       - run: npx playwright install --with-deps chromium
-      - name: Render source with only the official trailer thumbnail allowed externally
+      - name: Render committed source with all external requests blocked
         run: |
           mkdir -p /tmp/editorial-evidence
-          if [ "$GITHUB_REF_NAME" = "editorial/suikoden-viewing-guide-20261024" ]; then
-            curl --fail --location --max-time 30 https://i.ytimg.com/vi/m4T9VcBD0vo/maxresdefault.jpg -o /tmp/editorial-evidence/suikoden-third-pv.jpg
-            cp /tmp/editorial-evidence/suikoden-third-pv.jpg assets/images/news/suikoden-third-pv.jpg
-          fi
           cat > /tmp/editorial-server.py <<'PY'
           import http.server
           class Handler(http.server.SimpleHTTPRequestHandler):
@@ -43,7 +39,7 @@ jobs:
             const article=process.env.GITHUB_REF_NAME.includes('suikoden-viewing')?'suikoden-anime':process.env.GITHUB_REF_NAME.includes('reincarnated-goblin')?'reincarnated-goblin':process.env.GITHUB_REF_NAME.includes('fallen-vampire')?'record-of-a-fallen-vampire-anime':process.env.GITHUB_REF_NAME.includes('my-happy-marriage')?'my-happy-marriage-special-episodes':process.env.GITHUB_REF_NAME.includes('manchuria')?'manchuria-opium-squad-anime':'full-clearing-another-world-zero-believers-premiere';
             for(const [name,width,height] of [['desktop',1440,1000],['mobile',390,844]]){
               const context=await browser.newContext({viewport:{width,height}});
-              await context.route('**/*',route=>(new URL(route.request().url()).hostname==='127.0.0.1'||route.request().url()==='https://i.ytimg.com/vi/ynr8tFWrK4c/maxresdefault.jpg')?route.continue():route.abort());
+              await context.route('**/*',route=>(new URL(route.request().url()).hostname==='127.0.0.1')?route.continue():route.abort());
               const page=await context.newPage();
               for(const slug of [article,'the-fable-season-2-january-2027']){
                 await page.goto('http://127.0.0.1:8000/articles/'+slug,{waitUntil:'networkidle'});
