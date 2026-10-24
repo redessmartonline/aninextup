@@ -45,12 +45,13 @@ jobs:
                 await page.goto('http://127.0.0.1:8000/articles/'+slug,{waitUntil:'networkidle'});
                 await page.locator('footer').scrollIntoViewIfNeeded();
                 await page.evaluate(()=>window.scrollTo(0,0));
+                await page.locator('article img').evaluateAll(async es=>{for(const i of es)i.loading='eager';await Promise.all(es.map(i=>i.decode().catch(()=>{})));});
                 await page.screenshot({path:'/tmp/editorial-evidence/'+name+'-'+slug+'.png',fullPage:true});
                 report.push({name,slug,checks:await page.evaluate(()=>({h1:document.querySelector('h1')?.textContent,overflow:document.documentElement.scrollWidth>innerWidth,images:[...document.querySelectorAll('article img')].map(i=>({src:i.getAttribute('src'),loaded:i.complete&&i.naturalWidth>0,width:i.naturalWidth,height:i.naturalHeight})),schemas:[...document.querySelectorAll('script[type="application/ld+json"]')].map(s=>JSON.parse(s.textContent)['@type'])}))});
               }
               await page.goto('http://127.0.0.1:8000/',{waitUntil:'networkidle'});
               const cards=page.locator('a[href*="'+article+'"]');
-              for(let i=0;i<await cards.count();i++){await cards.nth(i).scrollIntoViewIfNeeded();await cards.nth(i).screenshot({path:'/tmp/editorial-evidence/'+name+'-home-card-'+i+'.png'});}
+              for(let i=0;i<await cards.count();i++){await cards.nth(i).scrollIntoViewIfNeeded();await cards.nth(i).locator('img').evaluateAll(async es=>{await Promise.all(es.map(i=>i.decode().catch(()=>{})));});await cards.nth(i).screenshot({path:'/tmp/editorial-evidence/'+name+'-home-card-'+i+'.png'});}
               report.push({name,homeCardCount:await cards.count()});
               await context.close();
             }
