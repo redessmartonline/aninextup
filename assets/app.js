@@ -285,6 +285,27 @@ discoveryNodes('[data-week-description]').forEach(el=>el.textContent='Browse wee
 if(document.querySelector('[data-week-heading]')){document.title='Anime Episodes & Premieres This Week: '+weekRange+' — AniNextUp';const m=document.querySelector('meta[name="description"]');if(m)m.content='Find weekly anime episodes and confirmed first premieres this week, '+weekRange+', with regional times and viewing guides.';}
 discoveryNodes('[data-after-week]').forEach(el=>{const endIso=isoLocal(weekEnd);const items=[...(D.anime||[])].filter(a=>a.date&&a.date>endIso).sort((a,b)=>a.date.localeCompare(b.date)).slice(0,6);el.innerHTML=items.map(animeCard).join('')||'<p class="empty">No later confirmed releases listed yet.</p>'});
 
+// Keep each homepage news story in its highest-priority section only.
+// The fallback HTML is also checked when the live latest-news feed is unavailable.
+function tidyHomepageStoryDuplicates(){
+  const seen=new Set();
+  const canonical=href=>{
+    try {const u=new URL(href,location.origin);return u.origin===location.origin?u.pathname.replace(/\\/$/,''):null}
+    catch {return null}
+  };
+  for(const selector of ['.home-news-spotlight','.home-popular-news-grid','.home-more-news-list']){
+    const root=document.querySelector(selector);
+    if(!root)continue;
+    for(const card of root.querySelectorAll(':scope > a[href]')){
+      const key=canonical(card.getAttribute('href'));
+      if(!key)continue;
+      if(seen.has(key)){card.hidden=true;card.setAttribute('aria-hidden','true')}
+      else {seen.add(key);card.hidden=false;card.removeAttribute('aria-hidden')}
+    }
+  }
+}
+if(document.querySelector('.home-page'))tidyHomepageStoryDuplicates();
+
 // Homepage discovery sections
 const homeIso=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
 const homeToday=homeIso(new Date(new Date().toLocaleString('en-US',{timeZone:TZ})));
@@ -306,6 +327,7 @@ if(latestNewsNodes.length){
       const markup=items.map((g,i)=>'<a class="card story visual-card" href="/'+escapeHTML(g.article)+'"><img src="'+escapeHTML(validImage(g.image))+'" alt="'+escapeHTML(g.title)+'" loading="'+(i===0?'eager':'lazy')+'" decoding="async"'+(i===0?' fetchpriority="high"':' fetchpriority="low"')+'><div class="visual-body"><span class="tag">'+escapeHTML(g.tag||'ANIME NEWS')+'</span><h3>'+escapeHTML(g.title)+'</h3><p>'+escapeHTML(g.description)+'</p><span class="more">READ UPDATE →</span></div></a>').join('');
       // Defer off-screen image downloads, but preserve ordinary links and native lazy-loading.
       latestNewsNodes.forEach(el=>{el.innerHTML=markup});
+      tidyHomepageStoryDuplicates();
     }).catch(()=>{/* Keep pre-rendered news cards intact. */});
 }
 
