@@ -1,0 +1,42 @@
+name: Contextual internal links
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'articles/**'
+      - 'scripts/add_contextual_internal_links.py'
+      - '.github/workflows/contextual-internal-links.yml'
+permissions:
+  contents: write
+concurrency:
+  group: contextual-internal-links
+  cancel-in-progress: false
+jobs:
+  update:
+    if: github.actor != 'github-actions[bot]' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Generate and validate internal links
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            python scripts/add_contextual_internal_links.py
+            git add articles/
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m "Add verified contextual links to articles"
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 3
+          done
+          exit 1
