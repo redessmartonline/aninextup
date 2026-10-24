@@ -17,13 +17,13 @@ for path in root.rglob("*.html"):
     original = path.read_text(encoding="utf-8")
     updated = re.sub(
         r'(href="(?:\.\./)*assets/style\.css)(?:\?[^"]*)?(")',
-        lambda m: m.group(1) + '?v=20261024-search-static' + m.group(2), original)
+        lambda m: m.group(1) + '?v=20261024-independent-search' + m.group(2), original)
     updated = re.sub(
         r'(src="(?:\.\./)*assets/app\.js)(?:\?[^"]*)?(")',
         lambda m: m.group(1) + '?v=20261024-search-static' + m.group(2), updated)
     if '<header class="site-header">' in updated and 'global-search-toggle' not in updated.split('</header>',1)[0]:
         updated = updated.replace('</nav></header>', '</nav>' + button + '</header>', 1)
-    if updated != original:
+    if '<header class="site-header">' in updated and 'article-search.js' not in updated:\n        updated = updated.replace('</body>', '<script defer src="/assets/article-search.js?v=20261024-independent-search"></script></body>', 1)\n    if updated != original:
         path.write_text(updated, encoding="utf-8")
         count += 1
 print(f"Updated {count} HTML pages")
