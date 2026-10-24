@@ -1,5 +1,8 @@
 name: Editorial source visual review
 on:
+  pull_request:
+    branches: [main]
+    paths: [articles/votoms-gray-witch-part-1.html, assets/data.js, sitemap.xml, .github/workflows/editorial-source-visual.yml]
   push:
     branches: [editorial/full-clearing-reader-guide-20261024, editorial/manchuria-opium-squad-guide-20261024, editorial/my-happy-marriage-guide-20261024, editorial/fallen-vampire-guide-20261024, editorial/reincarnated-goblin-guide-20261024, editorial/suikoden-viewing-guide-20261024, editorial/ranma-season3-guide-20261024, editorial/votoms-gray-witch-guide-20261024]
 permissions:
