@@ -22,7 +22,7 @@ for path in sorted((ROOT / "articles").glob("*.html")):
         raise RuntimeError(f"{path.name}: expected exactly three related cards")
     source = source[:match.start()] + replacement + source[match.end():]
     # Invalidate old cached article runtime so every article loads the 3-card logic.
-    source = re.sub(r'(src="\\.\\./assets/app\\.js)(?:\\?v=[^"]*)?("', r'\\g<1>?v=20261024-all-related-three\\2', source)
+    source = re.sub(r'(src="../assets/app[.]js)(?:[?]v=[^"]*)?(")', r'\g<1>?v=20261024-all-related-three\2', source)
     if source != path.read_text(encoding="utf-8"):
         path.write_text(source, encoding="utf-8")
         changed += 1
