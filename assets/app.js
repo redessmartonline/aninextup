@@ -342,7 +342,7 @@ const renderRelatedReleases=data=>{
     head.append(title,calendar);section.append(head);article.append(section);
   }
   let grid=section.querySelector('.grid');
-  if(!grid){grid=document.createElement('div');grid.className='grid two';section.append(grid);}
+  if(!grid){grid=document.createElement('div');grid.className='grid three';section.append(grid);}
   const existing=Array.from(section.querySelectorAll('.grid > a.mini'));
   const slugOf=value=>{try{return new URL(value,location.href).pathname.split('/').pop().replace(/\.html$/,'')}catch{return String(value||'').split('/').pop().replace(/\.html$/,'')}};
   const used=new Set(existing.map(card=>slugOf(card.href)));
@@ -356,7 +356,7 @@ const renderRelatedReleases=data=>{
   const ranked=items.filter(x=>!used.has(slugOf(x.article))).sort((a,b)=>{
     const relevance=score(b)-score(a);
     return relevance||distance(a.date)-distance(b.date);
-  }).slice(0,Math.max(0,2-existing.length));
+  }).slice(0,Math.max(0,3-existing.length));
   ranked.forEach(a=>{
     const link=document.createElement('a');link.className='mini data-card related-card';link.href='../'+a.article.replace(/^\//,'');
     const source=new URL(a.image,location.origin+'/');
