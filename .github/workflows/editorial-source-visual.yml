@@ -46,6 +46,12 @@ jobs:
                 await page.locator('footer').scrollIntoViewIfNeeded();
                 await page.evaluate(()=>window.scrollTo(0,0));
                 await page.locator('article img').evaluateAll(async es=>{for(const i of es)i.loading='eager';await Promise.all(es.map(i=>i.decode().catch(()=>{})));});
+                const imageURLs=await page.locator('article img').evaluateAll(es=>es.map(i=>i.src));
+                const imageHTTP=[];
+                for(const url of imageURLs){const response=await page.request.get(url);imageHTTP.push({url,status:response.status(),mime:response.headers()['content-type']});if(!response.ok()||!response.headers()['content-type']?.startsWith('image/'))throw Error('Invalid image '+url);}
+                const relatedURLs=await page.locator('.related-releases a.mini').evaluateAll(es=>es.map(a=>a.href));
+                for(const url of relatedURLs){const response=await page.request.get(url);if(!response.ok())throw Error('Broken related route '+url);}
+                report.push({name,slug,imageHTTP,relatedURLs});
                 await page.screenshot({path:'/tmp/editorial-evidence/'+name+'-'+slug+'.png',fullPage:true});
                 report.push({name,slug,checks:await page.evaluate(()=>({h1:document.querySelector('h1')?.textContent,overflow:document.documentElement.scrollWidth>innerWidth,images:[...document.querySelectorAll('article img')].map(i=>({src:i.getAttribute('src'),loaded:i.complete&&i.naturalWidth>0,width:i.naturalWidth,height:i.naturalHeight})),schemas:[...document.querySelectorAll('script[type="application/ld+json"]')].map(s=>JSON.parse(s.textContent)['@type'])}))});
               }
