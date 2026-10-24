@@ -29,6 +29,19 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
             python scripts/upgrade_related_releases.py
+            python - <<'PY'
+            import pathlib, re
+            count = 0
+            for path in pathlib.Path('articles').glob('*.html'):
+                source = path.read_text(encoding='utf-8')
+                section = re.search(r'<section class="related-releases"[^>]*>.*?<h2[^>]*>Related releases</h2>.*?</section>', source, re.S)
+                if section:
+                    cards = len(re.findall(r'class="mini related-card"', section.group()))
+                    if cards != 3:
+                        raise SystemExit(f'{path}: expected 3 related releases, got {cards}')
+                    count += 1
+            print(f'Validated {count} article sections with 3 cards')
+            PY
             git add articles/
             if git diff --cached --quiet; then exit 0; fi
             git commit -m "Upgrade article related releases to three cards"
