@@ -61,7 +61,7 @@ jobs:
               }
               await page.goto('http://127.0.0.1:8000/',{waitUntil:'networkidle'});
               const cards=page.locator('a[href*="'+article+'"]');
-              for(let i=0;i<await cards.count();i++){await cards.nth(i).scrollIntoViewIfNeeded();await cards.nth(i).locator('img').evaluateAll(async es=>{await Promise.all(es.map(i=>i.decode()));if(es.some(i=>!i.complete||i.naturalWidth===0))throw Error('Homepage card image failed');});await cards.nth(i).screenshot({path:'/tmp/editorial-evidence/'+name+'-home-card-'+i+'.png'});}
+              for(let i=0;i<await cards.count();i++){await cards.nth(i).scrollIntoViewIfNeeded();await cards.nth(i).locator('img').evaluateAll(async es=>{for(const i of es)i.loading='eager';await Promise.all(es.map(async i=>{try{await i.decode();}catch(e){throw Error('Homepage image decode failed: '+i.src+'; '+e.message);}}));if(es.some(i=>!i.complete||i.naturalWidth===0))throw Error('Homepage card image failed');});await cards.nth(i).screenshot({path:'/tmp/editorial-evidence/'+name+'-home-card-'+i+'.png'});}
               report.push({name,homeCardCount:await cards.count()});
               await context.close();
             }
