@@ -496,12 +496,22 @@ def related_release_section(title, data, article_slug):
             hubs.append(item)
 
     candidates.sort(key=lambda item: (-item[0], item[1]))
-    selected = (candidates + hubs)[:2]
-    if not selected:
-        selected = [
-            (0, "Anime release calendar", "../calendar", ""),
-            (0, "Where to watch anime", "../where-to-watch", ""),
-        ]
+    selected = (candidates + hubs)[:3]
+    if len(selected) < 3:
+        selected_paths = {item[2] for item in selected}
+        for item in candidates + hubs:
+            if item[2] not in selected_paths:
+                selected.append(item)
+                selected_paths.add(item[2])
+            if len(selected) == 3:
+                break
+    if len(selected) < 3:
+        selected_paths = {item[2] for item in selected}
+        for label, href in (("Anime release calendar", "../calendar"), ("Where to watch anime", "../where-to-watch"), ("Latest anime news", "../news")):
+            if href not in selected_paths:
+                selected.append((0, label, href, ""))
+            if len(selected) == 3:
+                break
     def card(label, href, image):
         thumbnail = (
             '<img class="related-card-image" src="' + html.escape(image, quote=True)
@@ -519,7 +529,7 @@ def related_release_section(title, data, article_slug):
         '<section class="related-releases" aria-labelledby="related-releases-heading">'
         '<div class="section-head"><div><span class="kicker">KEEP WATCHING</span>'
         '<h2 id="related-releases-heading">Related releases</h2></div></div>'
-        '<div class="grid two">' + cards + '</div></section>'
+        '<div class="grid three">' + cards + '</div></section>'
     )
 
 
