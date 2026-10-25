@@ -86,7 +86,7 @@ jobs:
               await nav.waitFor({state:'visible'});
               await nav.scrollIntoViewIfNeeded();
               const checks=await nav.evaluate(el=>{
-                const numbers=[...el.children].filter(x=>/^\\d+$/.test(x.textContent.trim()));
+                const numbers=[...el.children].filter(x=>/^\d+$/.test(x.textContent.trim()));
                 const ys=[...new Set(numbers.map(x=>Math.round(x.getBoundingClientRect().top)))];
                 return {flexDirection:getComputedStyle(el).flexDirection,navWidth:el.clientWidth,navScrollWidth:el.scrollWidth,numberButtons:numbers.length,numberRows:ys.length,numberY:ys,viewport:innerWidth};
               });
