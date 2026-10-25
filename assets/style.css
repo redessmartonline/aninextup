@@ -459,3 +459,6 @@ main:has(> .article) + footer{
 .home-more-news-pagination>a:hover,.home-more-news-pagination>a:focus-visible{border-color:var(--purple);color:var(--purple);outline:none}
 .home-more-news-pagination>.current{border-color:var(--purple);background:var(--purple);color:#fff}
 .home-more-news-pagination>a:focus-visible{outline:2px solid var(--purple);outline-offset:3px}
+
+/* Ensure the page-size visibility filter wins over visual-card display rules. */
+.home-more-news-list>[hidden]{display:none!important}
