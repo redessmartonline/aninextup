@@ -43,7 +43,7 @@ function setupNewsCategoryFilters(){
     const tag=(card.querySelector('.tag')?.textContent||'').toLowerCase();
     const title=(card.querySelector('h3')?.textContent||'').toLowerCase();
     const combined=tag+' '+title;
-    const inferred=/trailer|teaser|cast|voice actor|visual/.test(combined)?'trailers-cast':/season [2-9]|season two|sequel|returning|renewed/.test(combined)?'returning-series':/release date|premiere date|schedule|streaming|where to watch/.test(combined)?'release-news':'new-anime';
+    const inferred=/returning series|season [2-9]|season two|sequel|returning|renewed/.test(tag)?'returning-series':/release news|release date|premiere date|schedule|streaming/.test(tag)?'release-news':/trailers? (?:&|and) cast|trailer|teaser|cast|voice actor|visual/.test(tag)?'trailers-cast':/new anime/.test(tag)?'new-anime':/season [2-9]|sequel|returning/.test(title)?'returning-series':/trailer|teaser|cast/.test(title)?'trailers-cast':/release date|premiere date|streaming/.test(title)?'release-news':'new-anime';
     card.dataset.newsCategory=inferred;
     categoryCards.push(card);
     return;
