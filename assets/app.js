@@ -290,7 +290,23 @@ function syncHomeMoreNewsPagination(){
       const url=new URL(location.href);
       url.searchParams.set('more-news-page',String(page));
       url.hash='more-anime-news';
-      history.pushState({moreNewsfunction loadAllHomeMoreNews(){
+      history.pushState({moreNewsPage:page},'',url);
+    }
+    if(scroll)document.getElementById('more-anime-news')?.scrollIntoView({behavior:'smooth',block:'start'});
+  }
+  if(!nav.dataset.moreNewsReady){
+    nav.addEventListener('click',event=>{
+      const link=event.target.closest('[data-more-news-page]');
+      if(!link)return;
+      event.preventDefault();
+      render(Number(link.dataset.moreNewsPage),{push:true,scroll:true});
+    });
+    nav.dataset.moreNewsReady='true';
+    window.addEventListener('popstate',()=>render(readPage()));
+  }
+  render(readPage());
+}
+function loadAllHomeMoreNews(){
   const list=document.querySelector('[data-home-more]');
   if(!list)return;
   fetch('/news',{headers:{'Accept':'text/html'},cache:'no-store'})
@@ -298,6 +314,14 @@ function syncHomeMoreNewsPagination(){
     .then(markup=>{
       const page=new DOMParser().parseFromString(markup,'text/html');
       const sources=Array.from(page.querySelectorAll('a[href*="articles/"]'));
+      const fallbackCards=new Map();
+      for(const candidate of document.querySelectorAll('a[href*="articles/"]')){
+        const href=candidate.getAttribute('href')||'';
+        let url;
+        try {url=new URL(href,location.origin)} catch {continue}
+        if(url.origin!==location.origin||!/^\/articles\/[^/]+\/?$/.test(url.pathname))continue;
+        if(candidate.querySelector('img,h2,h3'))fallbackCards.set(url.pathname.replace(/\/$/,''),candidate);
+      }
       const seen=new Set();
       const cards=[];
       for(const source of sources){
@@ -307,20 +331,24 @@ function syncHomeMoreNewsPagination(){
         if(url.origin!==location.origin||!/^\/articles\/[^/]+\/?$/.test(url.pathname))continue;
         const key=url.pathname.replace(/\/$/,'');
         if(seen.has(key))continue;
-        const sourceImage=source.querySelector('img');
-        const heading=source.querySelector('h2,h3');
-        if(!sourceImage||!heading||!heading.textContent.trim())continue;
+        const fallback=fallbackCards.get(key);
+        const sourceImage=source.querySelector('img')||fallback?.querySelector('img');
+        const heading=source.querySelector('h2,h3')||fallback?.querySelector('h2,h3');
+        const titleText=(heading?.textContent||source.textContent||'').replace(/\s*→\s*$/,'').trim();
+        if(!titleText)continue;
         seen.add(key);
         const card=document.createElement('a');
         card.className='card story visual-card';
         card.href=url.pathname;
-        const image=sourceImage.cloneNode(true);
-        image.loading='lazy';
-        image.decoding='async';
-        card.append(image);
+        if(sourceImage){
+          const image=sourceImage.cloneNode(true);
+          image.loading='lazy';
+          image.decoding='async';
+          card.append(image);
+        }
         const body=document.createElement('div');
         body.className='visual-body';
-        const label=source.querySelector('.tag,.kicker,small.status');
+        const label=source.querySelector('.tag,.kicker,small.status')||fallback?.querySelector('.tag,.kicker,small.status');
         if(label){
           const tag=document.createElement('span');
           tag.className='tag';
@@ -328,9 +356,9 @@ function syncHomeMoreNewsPagination(){
           body.append(tag);
         }
         const title=document.createElement('h3');
-        title.textContent=heading.textContent.trim();
+        title.textContent=titleText;
         body.append(title);
-        const description=source.querySelector('.visual-body p,p,.visual-body>span:not(.more),.news-featured-copy p');
+        const description=source.querySelector('.visual-body p,p,.visual-body>span:not(.more),.news-featured-copy p')||fallback?.querySelector('.visual-body p,p,.visual-body>span:not(.more),.news-featured-copy p');
         if(description){
           const copy=document.createElement('p');
           copy.textContent=description.textContent.trim();
@@ -352,21 +380,7 @@ function syncHomeMoreNewsPagination(){
 if(document.querySelector('.home-page')){
   tidyHomepageStoryDuplicates();
   loadAllHomeMoreNews();
-}anime-news')?.scrollIntoView({behavior:'smooth',block:'start'});
-  }
-  if(!nav.dataset.moreNewsReady){
-    nav.addEventListener('click',event=>{
-      const link=event.target.closest('[data-more-news-page]');
-      if(!link)return;
-      event.preventDefault();
-      render(Number(link.dataset.moreNewsPage),{push:true,scroll:true});
-    });
-    nav.dataset.moreNewsReady='true';
-    window.addEventListener('popstate',()=>render(readPage()));
-  }
-  render(readPage());
 }
-if(document.querySelector('.home-page'))tidyHomepageStoryDuplicates();
 
 // Homepage discovery sections
 const homeIso=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
