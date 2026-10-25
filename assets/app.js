@@ -38,7 +38,16 @@ function setupNewsCategoryFilters(){
  [...grid.querySelectorAll('a[href^="articles/"]')].forEach(card=>{
   const article=card.getAttribute('href').split('?')[0].replace(/\\.html$/,'');
   const category=NEWS_ARTICLE_CATEGORY[article];
-  if(!category){card.hidden=true;return;}
+  if(!category){
+    // Do not hide new articles simply because the curated data map is not updated yet.
+    const tag=(card.querySelector('.tag')?.textContent||'').toLowerCase();
+    const title=(card.querySelector('h3')?.textContent||'').toLowerCase();
+    const combined=tag+' '+title;
+    const inferred=/trailer|teaser|cast|voice actor|visual/.test(combined)?'trailers-cast':/season [2-9]|season two|sequel|returning|renewed/.test(combined)?'returning-series':/release date|premiere date|schedule|streaming|where to watch/.test(combined)?'release-news':'new-anime';
+    card.dataset.newsCategory=inferred;
+    categoryCards.push(card);
+    return;
+  }
   card.dataset.newsCategory=category;categoryCards.push(card);
  });
  if(!categoryCards.length)return;
