@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Keep search visible in every header, and bust asset caches consistently."""
+"""Keep the shared navigation and article search present on all site pages."""
 from pathlib import Path
 import re
 
@@ -17,13 +17,18 @@ for path in root.rglob("*.html"):
     original = path.read_text(encoding="utf-8")
     updated = re.sub(
         r'(href="(?:\.\./)*assets/style\.css)(?:\?[^"]*)?(")',
-        lambda m: m.group(1) + '?v=20261024-independent-search' + m.group(2), original)
+        lambda m: m.group(1) + '?v=20261024-sitewide-navigation' + m.group(2), original)
     updated = re.sub(
         r'(src="(?:\.\./)*assets/app\.js)(?:\?[^"]*)?(")',
-        lambda m: m.group(1) + '?v=20261024-search-static' + m.group(2), updated)
-    if '<header class="site-header">' in updated and 'global-search-toggle' not in updated.split('</header>',1)[0]:
-        updated = updated.replace('</nav></header>', '</nav>' + button + '</header>', 1)
-    if '<header class="site-header">' in updated and 'article-search.js' not in updated:\n        updated = updated.replace('</body>', '<script defer src="/assets/article-search.js?v=20261024-independent-search"></script></body>', 1)\n    if '<header class="site-header">' in updated and 'mobile-menu.js' not in updated:\n        updated = updated.replace('</body>', '<script defer src="/assets/mobile-menu.js?v=20261024-mobile-fix"></script></body>', 1)\n    if updated != original:
+        lambda m: m.group(1) + '?v=20261024-sitewide-navigation' + m.group(2), updated)
+    if '<header class="site-header">' in updated:
+        header = updated.split('</header>', 1)[0]
+        if 'global-search-toggle' not in header:
+            updated = updated.replace('</nav></header>', '</nav>' + button + '</header>', 1)
+        for name in ("article-search", "mobile-menu"):
+            if f'/assets/{name}.js' not in updated:
+                updated = re.sub(r'</body\s*>', f'<script defer src="/assets/{name}.js?v=20261024-sitewide-navigation"></script></body>', updated, count=1, flags=re.I)
+    if updated != original:
         path.write_text(updated, encoding="utf-8")
         count += 1
-print(f"Updated {count} HTML pages")
+print(f"Updated {count} HTML files")
