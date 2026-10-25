@@ -1,59 +1,27 @@
 {
-  "count": 13,
+  "count": 5,
   "failed_count": 0,
   "failed": [],
   "images": [
     {
-      "source": "https://aninextup.com/assets/images/covers/returners-magic-s2.jpeg",
-      "local": "/assets/images/covers/returners-magic-s2.jpeg"
+      "source": "https://aninextup.com/assets/images/covers/im-looking-for-a-zombie.jpg",
+      "local": "/assets/images/covers/im-looking-for-a-zombie.jpg"
     },
     {
-      "source": "https://aninextup.com/assets/images/covers/romelia-war-chronicle.png",
-      "local": "/assets/images/covers/romelia-war-chronicle.png"
+      "source": "https://aninextup.com/assets/images/external/005fbcefe4e9fd52d2fc8c2a2a5e03df023625940480a9e0d7c54fe810a2e89e.webp",
+      "local": "/assets/images/external/005fbcefe4e9fd52d2fc8c2a2a5e03df023625940480a9e0d7c54fe810a2e89e.webp"
     },
     {
-      "source": "https://aninextup.com/assets/images/covers/sasaki-and-peeps-season-2.jpg",
-      "local": "/assets/images/covers/sasaki-and-peeps-season-2.jpg"
+      "source": "https://aninextup.com/assets/images/external/197843177dba18dfe7a1bfc48932df628edd3e476e2f63e198a6530244764e90.webp",
+      "local": "/assets/images/external/197843177dba18dfe7a1bfc48932df628edd3e476e2f63e198a6530244764e90.webp"
     },
     {
-      "source": "https://aninextup.com/assets/images/external/0df63a485f0e012f9a966e043e8a440114ffdbf63be0e7e0baa7972f5e74ed80.webp",
-      "local": "/assets/images/external/0df63a485f0e012f9a966e043e8a440114ffdbf63be0e7e0baa7972f5e74ed80.webp"
+      "source": "https://aninextup.com/assets/images/external/b14932f686f1be01ee10da57c30a5123e718589b595c3e850834ea5a29fa4e01.webp",
+      "local": "/assets/images/external/b14932f686f1be01ee10da57c30a5123e718589b595c3e850834ea5a29fa4e01.webp"
     },
     {
-      "source": "https://aninextup.com/assets/images/external/2131a85ff4ea89fb8a5d09a5f776bab06016ae3bb6c5ab984f8d26080e477c69.webp",
-      "local": "/assets/images/external/2131a85ff4ea89fb8a5d09a5f776bab06016ae3bb6c5ab984f8d26080e477c69.webp"
-    },
-    {
-      "source": "https://aninextup.com/assets/images/external/5b99045ade93940fa12b44de70038e19402fa31801833eaf54b64c39696a6b89.webp",
-      "local": "/assets/images/external/5b99045ade93940fa12b44de70038e19402fa31801833eaf54b64c39696a6b89.webp"
-    },
-    {
-      "source": "https://aninextup.com/assets/images/external/bf6b377c445c307e1f70fc4b1f52e20def481dfb44e27296d40d7b741e0e4258.webp",
-      "local": "/assets/images/external/bf6b377c445c307e1f70fc4b1f52e20def481dfb44e27296d40d7b741e0e4258.webp"
-    },
-    {
-      "source": "https://hyouken-anime.com/wp/wp-content/themes/hyouken-theme/images/kv1.webp",
-      "local": "/assets/images/external/e6229d9c6720b1bd64deb439aea12b6c45e26d76e860f63aea2c47dd38017e4b.webp"
-    },
-    {
-      "source": "https://i.ytimg.com/vi/BVz1EyrHILk/maxresdefault.jpg",
-      "local": "/assets/images/external/a680b9abc06dd5380a50a0abba035bf12f54321863ebe8317a343bed5391514f.webp"
-    },
-    {
-      "source": "https://img.youtube.com/vi/3Gmo0EXHyKg/maxresdefault.jpg",
-      "local": "/assets/images/external/67b9b7f3d42e3f9ec613e43732be4007bf25ff2dbb065594fdc2d8c895c87055.webp"
-    },
-    {
-      "source": "https://img.youtube.com/vi/YnczpEoeaDM/maxresdefault.jpg",
-      "local": "/assets/images/external/7030a714c355d627d5ed8b098ee8b83fd181382b87a19d5984a3b61f1f2ae70e.webp"
-    },
-    {
-      "source": "https://img.youtube.com/vi/Yt364dCCxIE/maxresdefault.jpg",
-      "local": "/assets/images/external/0aa553719847b02cac63ab3996596db56c6ebcd1c05521da2bbcf0ed8d8c0701.webp"
-    },
-    {
-      "source": "https://www.aniplex.co.jp/news/detail/SYS/CONTENTS/3bf96511-2b17-4fe2-8d7d-13fd99bc8a0e/w707",
-      "local": "/assets/images/external/68a20681af9bdd6b38e91ee54007f318399dc160491aceb3cbf8fda5dc80f2ed.webp"
+      "source": "https://aninextup.com/assets/images/external/d548e02cc2d509b8e38cf018d703a0dd7b201a443a324681d6983050449597d8.webp",
+      "local": "/assets/images/external/d548e02cc2d509b8e38cf018d703a0dd7b201a443a324681d6983050449597d8.webp"
     }
   ]
 }
