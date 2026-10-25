@@ -1,5 +1,5 @@
 window.ANINEXTUP_DATA={
-updated:"2026-10-24",
+updated:"2026-10-25",
 site:{timezone:"America/Santo_Domingo",season:"Fall 2026"},
 anime:[
 {id:"ranma-s3",image:"/assets/images/ranma-season-3.jpeg",title:"Ranma 1/2 Season 3: Netflix Schedule, Cast and Watch Guide",date:"2026-10-03",platform:"Netflix",article:"articles/ranma-season-3",newsCategory:"returning-series",category:"Season Premiere",status:"confirmed"},
@@ -84,6 +84,7 @@ anime:[
 {id:"ranma-s3",image:"/assets/images/ranma-season-3.jpeg",title:"Ranma 1/2 Season 3: Netflix Schedule, Cast and Watch Guide",date:"2026-10-03",platform:"Netflix",article:"articles/ranma-season-3",category:"Season Premiere",status:"confirmed"}
 ],
 guides:[
+{image:"/assets/images/external/8df0491ef5d88102e18e5af40a69986cec8eee8ea03e91ec96e7d6d6d97c8585.webp",title:"Pokémon Horizons Season 4: February 27 Netflix Date, Story and Trailer",tag:"NEW",article:"articles/pokemon-horizons-season-4-wonders-ahead",newsCategory:"returning-series",description:""},
 {image:"/assets/images/covers/horror-collector-official-nhk.webp",title:"HORROR COLLECTOR Anime: Release Date, Schedule and Where to Watch",tag:"AIRING NOW",article:"articles/horror-collector-release-date",newsCategory:"release-news",description:"Japanese premiere October 10, 2026; weekly NHK General TV schedule, Japanese streaming rollout, cast, staff and source novels."},
 {image:"/assets/images/news/witch-on-the-holy-night-official-trailer.webp",title:"Witch on the Holy Night Movie: Release Date and Theaters",tag:"NOVEMBER 20 · UFOTABLE",article:"articles/witch-on-the-holy-night-movie",newsCategory:"release-news",description:"Japan theaters November 20, 2026; announced international cinema dates follow in January 2027. Streaming remains unannounced."},
 {image:"/assets/images/covers/detective-is-already-dead-season-2.jpg",title:"The Detective Is Already Dead Season 2: Release Date, Episodes & Where to Watch",tag:"FALL 2026 · NOW AIRING",article:"articles/detective-is-already-dead-season-2",newsCategory:"returning-series",description:"Season 2 began October 7, 2026. Japanese broadcast times, story context, cast, staff and official PV, with regional viewing limits."},
