@@ -61,10 +61,19 @@ jobs:
               }
               await page.goto('http://127.0.0.1:8000/',{waitUntil:'networkidle'});
               for(const homeSlug of (branch.includes('-length')?['tank-chair-release-date','chitose-ramune-bottle-cour-2','detective-is-already-dead-season-2','dreamland-release-date']:[article])){
-              const cards=page.locator('a[href*="'+homeSlug+'"]');
-              if(await cards.count()===0)throw Error('Missing homepage card '+homeSlug);
+              let cards=page.locator('[data-home-more] > a[href*="'+homeSlug+'"]');
+              if(await cards.count()===0)throw Error('Missing More Anime News homepage card '+homeSlug);
+              const pageLabel=await page.locator('[data-home-more-pagination] .pages').innerText().catch(()=> 'Page 1 of 1');
+              const pageCount=Number(pageLabel.match(/of\s+(\d+)/i)?.[1]||1);
+              let foundPage=1;
+              while(!(await cards.first().isVisible())&&foundPage<pageCount){
+                foundPage++;
+                await page.goto('http://127.0.0.1:8000/?more-news-page='+foundPage+'#more-anime-news',{waitUntil:'networkidle'});
+                cards=page.locator('[data-home-more] > a[href*="'+homeSlug+'"]');
+              }
+              if(!(await cards.first().isVisible()))throw Error('More Anime News card is not visible on any page '+homeSlug);
               for(let i=0;i<await cards.count();i++){await cards.nth(i).scrollIntoViewIfNeeded();await cards.nth(i).locator('img').evaluateAll(async es=>{for(const i of es)i.loading='eager';await Promise.all(es.map(i=>i.decode()));if(es.some(i=>!i.complete||i.naturalWidth===0))throw Error('Homepage card image failed');});await cards.nth(i).screenshot({path:'/tmp/editorial-evidence/'+name+'-home-card-'+homeSlug+'-'+i+'.png'});}
-              report.push({name,homeSlug,homeCardCount:await cards.count()});
+              report.push({name,homeSlug,foundPage,pageCount,homeCardCount:await cards.count()});
               }
               await context.close();
             }
