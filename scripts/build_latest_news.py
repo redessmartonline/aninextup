@@ -60,13 +60,14 @@ def publication_timestamp(path):
 def homepage_cards(items):
     cards = []
     for item in items:
+        pinned = ' data-home-pinned="true"' if item["article"] in PINNED_ARTICLES else ""
         href = "/" + html.escape(item["article"], quote=True)
         image = html.escape(item["image"], quote=True)
         title = html.escape(item["title"], quote=True)
         tag = html.escape(item["tag"], quote=True)
         description = html.escape(item["description"], quote=True)
         cards.append(
-            f'<a class="card story visual-card" href="{href}">'
+            f'<a class="card story visual-card" href="{href}"{pinned}>'
             f'<img src="{image}" alt="{title}" loading="lazy">'
             f'<div class="visual-body"><span class="tag">{tag}</span>'
             f'<h3>{title}</h3><p>{description}</p>'
