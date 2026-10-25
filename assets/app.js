@@ -214,7 +214,7 @@ discoveryNodes('[data-after-week]').forEach(el=>{const endIso=isoLocal(weekEnd);
 function tidyHomepageStoryDuplicates(){
   const seen=new Set();
   const canonical=href=>{
-    try {const u=new URL(href,location.origin);return u.origin===location.origin?u.pathname.replace(/\\/$/,''):null}
+    try {const u=new URL(href,location.origin);return u.origin===location.origin?u.pathname.replace(/\/$/,''):null}
     catch {return null}
   };
   for(const selector of ['.home-news-spotlight','.home-popular-news-grid','.home-more-news-list']){
