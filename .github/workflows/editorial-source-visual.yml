@@ -2,9 +2,9 @@ name: Editorial source visual review
 on:
   pull_request:
     branches: [main]
-    paths: [articles/blue-box-season-2.html,articles/horror-collector-release-date.html,articles/witch-on-the-holy-night-movie.html,articles/detective-is-already-dead-season-2.html,articles/chitose-ramune-bottle-cour-2.html,articles/tank-chair-release-date.html,articles/dreamland-release-date.html, articles/pokemon-horizons-season-4-wonders-ahead.html, articles/votoms-gray-witch-part-1.html, articles/otome-heroines-fight-for-survival-anime.html, articles/demons-crest-release-date.html, assets/data.js, sitemap.xml, .github/workflows/editorial-source-visual.yml]
+    paths: [articles/blue-box-season-2.html,articles/horror-collector-release-date.html,articles/witch-on-the-holy-night-movie.html,articles/detective-is-already-dead-season-2.html,articles/chitose-ramune-bottle-cour-2.html,articles/tank-chair-release-date.html,articles/dreamland-release-date.html, articles/pokemon-horizons-season-4-wonders-ahead.html, articles/votoms-gray-witch-part-1.html, articles/otome-heroines-fight-for-survival-anime.html, articles/demons-crest-release-date.html, assets/style.css, index.html, assets/data.js, sitemap.xml, .github/workflows/editorial-source-visual.yml]
   push:
-    branches: [editorial/blue-box-depth-20261024, editorial/tank-chair-guide-20261024, editorial/full-clearing-reader-guide-20261024, editorial/demons-crest-800-1000-october-25-2026, editorial/manchuria-opium-squad-guide-20261024, editorial/my-happy-marriage-guide-20261024, editorial/fallen-vampire-guide-20261024, editorial/reincarnated-goblin-guide-20261024, editorial/suikoden-viewing-guide-20261024, editorial/ranma-season3-guide-20261024, editorial/votoms-gray-witch-guide-20261024, editorial/otome-survival-depth-20261024, editorial/dreamland-release-guide-20261024, editorial/pokemon-horizons-season4-depth-20261024]
+    branches: [editorial/blue-box-depth-20261024, editorial/tank-chair-guide-20261024, editorial/full-clearing-reader-guide-20261024, editorial/demons-crest-800-1000-october-25-2026, editorial/manchuria-opium-squad-guide-20261024, editorial/my-happy-marriage-guide-20261024, editorial/fallen-vampire-guide-20261024, editorial/reincarnated-goblin-guide-20261024, editorial/suikoden-viewing-guide-20261024, editorial/ranma-season3-guide-20261024, editorial/votoms-gray-witch-guide-20261024, editorial/otome-survival-depth-20261024, editorial/dreamland-release-guide-20261024, editorial/pokemon-horizons-season4-depth-20261024, fix/more-news-pagination-mobile-20261025]
 permissions:
   contents: read
 jobs:
@@ -75,6 +75,24 @@ jobs:
               for(let i=0;i<await cards.count();i++){await cards.nth(i).scrollIntoViewIfNeeded();await cards.nth(i).locator('img').evaluateAll(async es=>{for(const i of es)i.loading='eager';await Promise.all(es.map(i=>i.decode()));if(es.some(i=>!i.complete||i.naturalWidth===0))throw Error('Homepage card image failed');});await cards.nth(i).screenshot({path:'/tmp/editorial-evidence/'+name+'-home-card-'+homeSlug+'-'+i+'.png'});}
               report.push({name,homeSlug,foundPage,pageCount,homeCardCount:await cards.count()});
               }
+              await context.close();
+            }
+            if(branch.includes('pagination-mobile')){
+              const context=await browser.newContext({viewport:{width:390,height:844}});
+              await context.route('**/*',route=>(new URL(route.request().url()).hostname==='127.0.0.1')?route.continue():route.abort());
+              const page=await context.newPage();
+              await page.goto('http://127.0.0.1:8000/?more-news-page=1#more-anime-news',{waitUntil:'networkidle'});
+              const nav=page.locator('[data-home-more-pagination]');
+              await nav.waitFor({state:'visible'});
+              await nav.scrollIntoViewIfNeeded();
+              const checks=await nav.evaluate(el=>{
+                const numbers=[...el.children].filter(x=>/^\d+$/.test(x.textContent.trim()));
+                const ys=[...new Set(numbers.map(x=>Math.round(x.getBoundingClientRect().top)))];
+                return {flexDirection:getComputedStyle(el).flexDirection,navWidth:el.clientWidth,navScrollWidth:el.scrollWidth,numberButtons:numbers.length,numberRows:ys.length,numberY:ys,viewport:innerWidth};
+              });
+              if(checks.flexDirection!=='row'||checks.navScrollWidth>checks.navWidth||checks.numberButtons<2||checks.numberRows!==1)throw Error('Mobile More Anime News pagination layout failed: '+JSON.stringify(checks));
+              await page.screenshot({path:'/tmp/editorial-evidence/mobile-home-pagination.png'});
+              report.push({name:'mobile-pagination',...checks});
               await context.close();
             }
             fs.writeFileSync('/tmp/editorial-evidence/report.json',JSON.stringify(report,null,2));

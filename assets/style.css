@@ -462,3 +462,27 @@ main:has(> .article) + footer{
 
 /* Ensure the page-size visibility filter wins over visual-card display rules. */
 .home-more-news-list>[hidden]{display:none!important}
+
+/* Keep homepage archive pagination horizontal on mobile despite the site menu nav rules. */
+@media(max-width:780px){
+  .home-page nav.home-more-news-pagination{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    width:100%;
+    align-items:center;
+    justify-content:center;
+    gap:4px;
+    padding:0;
+  }
+  .home-page nav.home-more-news-pagination>.pages{
+    flex:0 0 100%;
+    margin-bottom:6px;
+  }
+  .home-page nav.home-more-news-pagination>a,
+  .home-page nav.home-more-news-pagination>.current{
+    min-width:34px;
+    min-height:40px;
+    padding:6px 4px;
+  }
+}
