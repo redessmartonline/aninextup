@@ -296,11 +296,13 @@ function syncHomeMoreNewsPagination(){
   }
   if(!nav.dataset.moreNewsReady){
     nav.addEventListener('click',event=>{
-      const link=event.target.closest('[data-more-news-page]');
+      const target=event.target instanceof Element?event.target:null;
+      const link=target?.closest('[data-more-news-page]');
       if(!link)return;
       event.preventDefault();
+      event.stopPropagation();
       render(Number(link.dataset.moreNewsPage),{push:true,scroll:true});
-    });
+    },true);
     nav.dataset.moreNewsReady='true';
     window.addEventListener('popstate',()=>render(readPage()));
   }
