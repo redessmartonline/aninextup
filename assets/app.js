@@ -77,7 +77,9 @@ function setupNewsCategoryFilters(){
  }
  nav.addEventListener('click',event=>{const button=event.target.closest('[data-news-filter]');if(button)applyNewsFilter(button.dataset.newsFilter);});
  nav.hidden=false;
- const requested=new URLSearchParams(location.search).get('category');
+ const queryCategory=new URLSearchParams(location.search).get('category');
+ const hashCategory=(location.hash.match(/^#category-(new-anime|returning-series|trailers-cast|release-news)$/)||[])[1];
+ const requested=NEWS_CATEGORY_KEYS.has(queryCategory)?queryCategory:hashCategory;
  applyNewsFilter(NEWS_CATEGORY_KEYS.has(requested)?requested:'all');
 }
 discoveryNodes('[data-guides]').forEach(el=>{
