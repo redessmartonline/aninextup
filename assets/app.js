@@ -255,7 +255,7 @@ function tidyHomepageStoryDuplicates(){
   }
   syncHomeMoreNewsPagination();
 }
-function syncHomeMoreNewsPagination(){
+function syncHomeMoreNewsPagination(requestedPage=null,{push=false,scroll=false}={}){
   const list=document.querySelector('[data-home-more]');
   const nav=document.querySelector('[data-home-more-pagination]');
   if(!list||!nav)return;
@@ -302,12 +302,14 @@ function syncHomeMoreNewsPagination(){
       if(!link)return;
       event.preventDefault();
       event.stopPropagation();
-      render(Number(link.dataset.moreNewsPage),{push:true,scroll:true});
+      // Rebuild from the current card list: this handler can outlive an earlier
+      // render while /news is still loading and the list is being replaced.
+      syncHomeMoreNewsPagination(Number(link.dataset.moreNewsPage),{push:true,scroll:true});
     },true);
     nav.dataset.moreNewsReady='true';
-    window.addEventListener('popstate',()=>render(readPage()));
+    window.addEventListener('popstate',()=>syncHomeMoreNewsPagination());
   }
-  render(readPage());
+  render(requestedPage??readPage(),{push,scroll});
 }
 function loadAllHomeMoreNews(){
   const list=document.querySelector('[data-home-more]');
