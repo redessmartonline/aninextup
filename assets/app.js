@@ -376,6 +376,14 @@ function loadAllHomeMoreNews(){
         card.append(body);
         cards.push(card);
       }
+      // A substantially refreshed article can be pinned on the homepage before
+      // the News archive has its next generated snapshot. Preserve that explicit
+      // homepage card when the dynamic archive feed does not include it yet.
+      for(const [key,fallback] of fallbackCards){
+        if(seen.has(key)||fallback.dataset.homePinned!=='true')continue;
+        cards.push(fallback.cloneNode(true));
+        seen.add(key);
+      }
       if(!cards.length)return;
       list.replaceChildren(...cards);
       tidyHomepageStoryDuplicates();
