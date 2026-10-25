@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 ARTICLES = ROOT / "articles"
 OUT = ROOT / "assets" / "latest-news.json"
 # Keep this newly published, substantially updated guide visible on the homepage.
-PINNED_ARTICLES = set()
+PINNED_ARTICLES = {"articles/returners-magic-season-2"}
 
 def meta(source, name):
     pattern = r'<meta\s+[^>]*?(?:name|property)=["\']' + re.escape(name) + r'["\'][^>]*?content=["\']([^"\']*)["\']'
@@ -109,7 +109,11 @@ def main():
                           item["published"], item["article"]),
         reverse=True
     )
-    latest = items[:24]
+    pinned = [item for item in items if item["article"] in PINNED_ARTICLES]
+    unpinned = [item for item in items if item["article"] not in PINNED_ARTICLES]
+    # Keep the four freshest stories in the lead strip; pin substantially updated guides
+    # immediately after them so the More Anime News pagination keeps them visible.
+    latest = unpinned[:4] + pinned[:20] + unpinned[4:24-len(pinned[:20])]
     OUT.write_text(json.dumps({"generated":date.today().isoformat(),"items":latest}, ensure_ascii=False, separators=(",",":"))+"\n", encoding="utf-8")
     update_homepage(latest)
     print("Generated latest news:", len(items), "articles,", len(latest), "homepage cards")
