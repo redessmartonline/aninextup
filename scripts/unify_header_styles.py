@@ -20,7 +20,7 @@ for path in root.rglob("*.html"):
         lambda m: m.group(1) + '?v=20261024-sitewide-navigation' + m.group(2), original)
     updated = re.sub(
         r'(src="(?:\.\./)*assets/app\.js)(?:\?[^"]*)?(")',
-        lambda m: m.group(1) + '?v=20261025-news-classification' + m.group(2), updated)
+        lambda m: m.group(1) + '?v=20261025-news-restored' + m.group(2), updated)
     if '<header class="site-header">' in updated:
         header = updated.split('</header>', 1)[0]
         if 'global-search-toggle' not in header:
@@ -28,7 +28,7 @@ for path in root.rglob("*.html"):
         for name in ("article-search", "mobile-menu"):
             if f'/assets/{name}.js' not in updated:
                 updated = re.sub(r'</body\s*>', f'<script defer src="/assets/{name}.js?v=20261024-sitewide-navigation"></script></body>', updated, count=1, flags=re.I)
-    updated = re.sub(r'(src="/assets/mobile-menu[.]js)(?:[?][^"]*)?(")', lambda m: m.group(1) + '?v=20261025-news-dropdown-v2' + m.group(2), updated)
+    updated = re.sub(r'(src="/assets/mobile-menu[.]js)(?:[?][^"]*)?(")', lambda m: m.group(1) + '?v=20261025-news-restored' + m.group(2), updated)
     if updated != original:
         path.write_text(updated, encoding="utf-8")
         count += 1
