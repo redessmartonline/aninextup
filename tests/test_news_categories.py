@@ -30,6 +30,16 @@ class NewsCategoryTests(unittest.TestCase):
     def test_unmatched_story_is_not_forced(self):
         self.assertIsNone(module.classify_news_category({"title":"Anime Mysterious Codes","description":"Roblox game codes"}))
 
+
+    def test_dropdown_routes_to_real_category_filters(self):
+        menu=(ROOT/"assets"/"mobile-menu.js").read_text(encoding="utf-8")
+        app=(ROOT/"assets"/"app.js").read_text(encoding="utf-8")
+        news=(ROOT/"news.html").read_text(encoding="utf-8")
+        self.assertIn("link.href='/news?category='+key+'#category-'+key",menu)
+        self.assertIn("location.hash.match(/^#category-",app)
+        for key in ("new-anime","returning-series","trailers-cast","release-news"):
+            self.assertIn(f'id="category-{key}"',news)
+
     def test_existing_category_backfill_is_reviewed(self):
         data=(ROOT/"assets"/"data.js").read_text(encoding="utf-8")
         self.assertNotIn('article:"articles/anime-mysterious-codes-october-2026",newsCategory:',data)
