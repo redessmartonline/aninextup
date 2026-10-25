@@ -1,59 +1,43 @@
 {
-  "count": 19,
+  "count": 13,
   "failed_count": 0,
   "failed": [],
   "images": [
     {
-      "source": "https://animationid.com/all/wp-content/uploads/2026/10/img_KV-scaled.png",
-      "local": "/assets/images/external/14d5408ae661c195c6c31c5b0ee530869a00d175c6fecf47d316b87453cc4008.webp"
+      "source": "https://aninextup.com/assets/images/covers/returners-magic-s2.jpeg",
+      "local": "/assets/images/covers/returners-magic-s2.jpeg"
     },
     {
-      "source": "https://anime.prisma-illya.jp/finale/img/ogp.jpg",
-      "local": "/assets/images/external/bc2edb554b60a9a865476c50863585cf7cb8d383b9cb61c90d741e503ab601fd.webp"
+      "source": "https://aninextup.com/assets/images/covers/romelia-war-chronicle.png",
+      "local": "/assets/images/covers/romelia-war-chronicle.png"
     },
     {
-      "source": "https://aninextup.com/assets/images/apothecary-diaries-season-3.jpg",
-      "local": "/assets/images/apothecary-diaries-season-3.jpg"
+      "source": "https://aninextup.com/assets/images/covers/sasaki-and-peeps-season-2.jpg",
+      "local": "/assets/images/covers/sasaki-and-peeps-season-2.jpg"
     },
     {
-      "source": "https://aninextup.com/assets/images/black-clover-season-2.jpg",
-      "local": "/assets/images/black-clover-season-2.jpg"
+      "source": "https://aninextup.com/assets/images/external/0df63a485f0e012f9a966e043e8a440114ffdbf63be0e7e0baa7972f5e74ed80.webp",
+      "local": "/assets/images/external/0df63a485f0e012f9a966e043e8a440114ffdbf63be0e7e0baa7972f5e74ed80.webp"
     },
     {
-      "source": "https://aninextup.com/assets/images/external/34c30fd1f7b3546f875a779ee8e4d0eae08a903585e3d2bd49a46408eccc8b16.webp",
-      "local": "/assets/images/external/34c30fd1f7b3546f875a779ee8e4d0eae08a903585e3d2bd49a46408eccc8b16.webp"
+      "source": "https://aninextup.com/assets/images/external/2131a85ff4ea89fb8a5d09a5f776bab06016ae3bb6c5ab984f8d26080e477c69.webp",
+      "local": "/assets/images/external/2131a85ff4ea89fb8a5d09a5f776bab06016ae3bb6c5ab984f8d26080e477c69.webp"
     },
     {
-      "source": "https://aninextup.com/assets/images/external/37dbd40f1207408df4bf1ace84617157880809abc097ae614eb10f335c4f5b63.webp",
-      "local": "/assets/images/external/37dbd40f1207408df4bf1ace84617157880809abc097ae614eb10f335c4f5b63.webp"
+      "source": "https://aninextup.com/assets/images/external/5b99045ade93940fa12b44de70038e19402fa31801833eaf54b64c39696a6b89.webp",
+      "local": "/assets/images/external/5b99045ade93940fa12b44de70038e19402fa31801833eaf54b64c39696a6b89.webp"
     },
     {
-      "source": "https://aninextup.com/assets/images/external/5f80028e33c806f976c9cea58313b60ee8b507d93c338d7320c48105e37bacf6.webp",
-      "local": "/assets/images/external/5f80028e33c806f976c9cea58313b60ee8b507d93c338d7320c48105e37bacf6.webp"
-    },
-    {
-      "source": "https://aninextup.com/assets/images/external/e078486924fe3ef6efa02000037242a2e406c67df82de220b3eb9e1cdc0332a4.webp",
-      "local": "/assets/images/external/e078486924fe3ef6efa02000037242a2e406c67df82de220b3eb9e1cdc0332a4.webp"
+      "source": "https://aninextup.com/assets/images/external/bf6b377c445c307e1f70fc4b1f52e20def481dfb44e27296d40d7b741e0e4258.webp",
+      "local": "/assets/images/external/bf6b377c445c307e1f70fc4b1f52e20def481dfb44e27296d40d7b741e0e4258.webp"
     },
     {
       "source": "https://hyouken-anime.com/wp/wp-content/themes/hyouken-theme/images/kv1.webp",
       "local": "/assets/images/external/e6229d9c6720b1bd64deb439aea12b6c45e26d76e860f63aea2c47dd38017e4b.webp"
     },
     {
-      "source": "https://i.ytimg.com/vi/9wIJGKQKqZY/hqdefault.jpg",
-      "local": "/assets/images/external/d8dc429c8788c866408e87db5b3c628639b25e063b07a0a18280a2e8846804f0.webp"
-    },
-    {
       "source": "https://i.ytimg.com/vi/BVz1EyrHILk/maxresdefault.jpg",
       "local": "/assets/images/external/a680b9abc06dd5380a50a0abba035bf12f54321863ebe8317a343bed5391514f.webp"
-    },
-    {
-      "source": "https://i.ytimg.com/vi/mnoR-kTU25E/hqdefault.jpg",
-      "local": "/assets/images/external/fb9dd7d1106395bba202f86bd83feb8514c540df734f8f57a4e7e4dcd59fda89.webp"
-    },
-    {
-      "source": "https://i.ytimg.com/vi/ynr8tFWrK4c/maxresdefault.jpg",
-      "local": "/assets/images/external/dca58955e5d87e5851d3e526e5332ab8d4bd4143fa90beaa86b915e1e539ae99.webp"
     },
     {
       "source": "https://img.youtube.com/vi/3Gmo0EXHyKg/maxresdefault.jpg",
@@ -68,16 +52,8 @@
       "local": "/assets/images/external/0aa553719847b02cac63ab3996596db56c6ebcd1c05521da2bbcf0ed8d8c0701.webp"
     },
     {
-      "source": "https://www.aniplex.co.jp/lineup/dengeki-daisy/news/detail/SYS/CONTENTS/378152f0-5c29-4bfc-afbe-11d9e5b8409c/w673",
-      "local": "/assets/images/external/a5fe789c0f2e00db88066e4d511203f0f40bd4b859f54f348a34f407b62716d4.webp"
-    },
-    {
       "source": "https://www.aniplex.co.jp/news/detail/SYS/CONTENTS/3bf96511-2b17-4fe2-8d7d-13fd99bc8a0e/w707",
       "local": "/assets/images/external/68a20681af9bdd6b38e91ee54007f318399dc160491aceb3cbf8fda5dc80f2ed.webp"
-    },
-    {
-      "source": "https://www.shinnoseijo-anime.com/assets/img/ogp.png",
-      "local": "/assets/images/external/a7a27c69b44ed72413a9175d32cf3300d5da6394a53d69ce6050ce1928c21990.webp"
     }
   ]
 }
