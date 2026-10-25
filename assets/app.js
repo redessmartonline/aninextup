@@ -36,8 +36,8 @@ function setupNewsCategoryFilters(){
  const grid=document.querySelector('[data-guides]');if(!grid)return;
  const categoryCards=[];
  [...grid.querySelectorAll('a[href^="articles/"]')].forEach(card=>{
-  const article=card.getAttribute('href').split('?')[0].replace(/\\.html$/,'');
-  const category=NEWS_ARTICLE_CATEGORY[article];
+  const article=card.getAttribute('href').split('?')[0].replace(/\.html$/,'');
+  const category=card.dataset.newsCategory || NEWS_ARTICLE_CATEGORY[article];
   if(!category){
     // Do not hide new articles simply because the curated data map is not updated yet.
     const tag=(card.querySelector('.tag')?.textContent||'').toLowerCase();
@@ -81,6 +81,7 @@ function setupNewsCategoryFilters(){
  applyNewsFilter(NEWS_CATEGORY_KEYS.has(requested)?requested:'all');
 }
 discoveryNodes('[data-guides]').forEach(el=>{
+ if(el.children.length)return;
  const seen=new Set();
  const stories=[...(D.anime||[]).filter(a=>a.article&&NEWS_ARTICLE_CATEGORY[a.article]),...(D.guides||[])].filter(g=>{
   if(!g.article||seen.has(g.article)||!NEWS_ARTICLE_CATEGORY[g.article])return false;
