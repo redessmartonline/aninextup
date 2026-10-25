@@ -459,3 +459,7 @@ main:has(> .article) + footer{
 .home-more-news-pagination>a:hover,.home-more-news-pagination>a:focus-visible{border-color:var(--purple);color:var(--purple);outline:none}
 .home-more-news-pagination>.current{border-color:var(--purple);background:var(--purple);color:#fff}
 .home-more-news-pagination>a:focus-visible{outline:2px solid var(--purple);outline-offset:3px}
+
+
+.article-hero figcaption{padding:10px 14px;color:var(--muted);font-size:.8rem;line-height:1.5}
+.article-hero figcaption a{color:var(--purple)}
