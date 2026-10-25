@@ -244,7 +244,7 @@ if(latestNewsNodes.length){
       const items=(Array.isArray(feed.items)?feed.items:[]).filter(g=>{
         if(!g.article||!g.title||seen.has(g.article))return false;
         seen.add(g.article);return true;
-      }).slice(0,7);
+      }).slice(0,4);
       if(!items.length)return;
       const escapeHTML=s=>String(s||'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
       const validImage=s=>{const url=/^(https?:\/\/|\/)/.test(s||'')?s:'/assets/images/anime-image-fallback.svg';return url;};
