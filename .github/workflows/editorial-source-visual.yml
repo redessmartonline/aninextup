@@ -61,7 +61,7 @@ jobs:
               }
               await page.goto('http://127.0.0.1:8000/',{waitUntil:'networkidle'});
               for(const homeSlug of (branch.includes('-length')?['tank-chair-release-date','chitose-ramune-bottle-cour-2','detective-is-already-dead-season-2','dreamland-release-date']:[article])){
-              let cards=page.locator('[data-home-more] > a[href*="'+homeSlug+'"]');
+              let cards=page.locator('[data-home-more] > a[href="/articles/'+homeSlug+'"]');
               if(await cards.count()===0)throw Error('Missing More Anime News homepage card '+homeSlug);
               const pageLabel=await page.locator('[data-home-more-pagination] .pages').innerText().catch(()=> 'Page 1 of 1');
               const pageCount=Number(pageLabel.match(/of\s+(\d+)/i)?.[1]||1);
