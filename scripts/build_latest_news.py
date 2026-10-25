@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 ARTICLES = ROOT / "articles"
 OUT = ROOT / "assets" / "latest-news.json"
 # Keep this newly published, substantially updated guide visible on the homepage.
-PINNED_ARTICLES = {"articles/returners-magic-season-2", "articles/sasaki-and-peeps-season-2", "articles/romelia-war-chronicle"}
+PINNED_ARTICLES = {"articles/returners-magic-season-2", "articles/sasaki-and-peeps-season-2", "articles/romelia-war-chronicle", "articles/bleach-thousand-year-blood-war-the-last-pv-episodes-49-50"}
 
 def meta(source, name):
     pattern = r'<meta\s+[^>]*?(?:name|property)=["\']' + re.escape(name) + r'["\'][^>]*?content=["\']([^"\']*)["\']'
