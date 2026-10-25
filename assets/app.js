@@ -212,12 +212,12 @@ discoveryNodes('[data-after-week]').forEach(el=>{const endIso=isoLocal(weekEnd);
 // Keep each homepage news story in its highest-priority section only.
 // The fallback HTML is also checked when the live latest-news feed is unavailable.
 function tidyHomepageStoryDuplicates(){
-  const seen=new Set();
   const canonical=href=>{
     try {const u=new URL(href,location.origin);return u.origin===location.origin?u.pathname.replace(/\/$/,''):null}
     catch {return null}
   };
-  for(const selector of ['.home-news-spotlight','.home-popular-news-grid','.home-more-news-list']){
+  const seen=new Set();
+  for(const selector of ['.home-news-spotlight','.home-popular-news-grid']){
     const root=document.querySelector(selector);
     if(!root)continue;
     for(const card of root.querySelectorAll(':scope > a[href]')){
@@ -229,6 +229,24 @@ function tidyHomepageStoryDuplicates(){
         card.setAttribute('aria-hidden','true');
       }else{
         seen.add(key);
+        delete card.dataset.homeDuplicate;
+        card.hidden=false;
+        card.removeAttribute('aria-hidden');
+      }
+    }
+  }
+  const more=document.querySelector('[data-home-more]');
+  if(more){
+    const localSeen=new Set();
+    for(const card of more.querySelectorAll(':scope > a[href]')){
+      const key=canonical(card.getAttribute('href'));
+      if(!key)continue;
+      if(localSeen.has(key)){
+        card.dataset.homeDuplicate='true';
+        card.hidden=true;
+        card.setAttribute('aria-hidden','true');
+      }else{
+        localSeen.add(key);
         delete card.dataset.homeDuplicate;
         card.hidden=false;
         card.removeAttribute('aria-hidden');
@@ -272,9 +290,69 @@ function syncHomeMoreNewsPagination(){
       const url=new URL(location.href);
       url.searchParams.set('more-news-page',String(page));
       url.hash='more-anime-news';
-      history.pushState({moreNewsPage:page},'',url);
-    }
-    if(scroll)document.getElementById('more-anime-news')?.scrollIntoView({behavior:'smooth',block:'start'});
+      history.pushState({moreNewsfunction loadAllHomeMoreNews(){
+  const list=document.querySelector('[data-home-more]');
+  if(!list)return;
+  fetch('/news',{headers:{'Accept':'text/html'},cache:'no-store'})
+    .then(response=>{if(!response.ok)throw new Error('News index unavailable');return response.text()})
+    .then(markup=>{
+      const page=new DOMParser().parseFromString(markup,'text/html');
+      const sources=Array.from(page.querySelectorAll('a[href*="articles/"]'));
+      const seen=new Set();
+      const cards=[];
+      for(const source of sources){
+        const href=source.getAttribute('href')||'';
+        let url;
+        try {url=new URL(href,location.origin)} catch {continue}
+        if(url.origin!==location.origin||!/^\/articles\/[^/]+\/?$/.test(url.pathname))continue;
+        const key=url.pathname.replace(/\/$/,'');
+        if(seen.has(key))continue;
+        const sourceImage=source.querySelector('img');
+        const heading=source.querySelector('h2,h3');
+        if(!sourceImage||!heading||!heading.textContent.trim())continue;
+        seen.add(key);
+        const card=document.createElement('a');
+        card.className='card story visual-card';
+        card.href=url.pathname;
+        const image=sourceImage.cloneNode(true);
+        image.loading='lazy';
+        image.decoding='async';
+        card.append(image);
+        const body=document.createElement('div');
+        body.className='visual-body';
+        const label=source.querySelector('.tag,.kicker,small.status');
+        if(label){
+          const tag=document.createElement('span');
+          tag.className='tag';
+          tag.textContent=label.textContent.trim();
+          body.append(tag);
+        }
+        const title=document.createElement('h3');
+        title.textContent=heading.textContent.trim();
+        body.append(title);
+        const description=source.querySelector('.visual-body p,p,.visual-body>span:not(.more),.news-featured-copy p');
+        if(description){
+          const copy=document.createElement('p');
+          copy.textContent=description.textContent.trim();
+          body.append(copy);
+        }
+        const moreLink=document.createElement('span');
+        moreLink.className='more';
+        moreLink.textContent='READ UPDATE →';
+        body.append(moreLink);
+        card.append(body);
+        cards.push(card);
+      }
+      if(!cards.length)return;
+      list.replaceChildren(...cards);
+      tidyHomepageStoryDuplicates();
+    })
+    .catch(()=>{/* Keep the accessible static fallback cards. */});
+}
+if(document.querySelector('.home-page')){
+  tidyHomepageStoryDuplicates();
+  loadAllHomeMoreNews();
+}anime-news')?.scrollIntoView({behavior:'smooth',block:'start'});
   }
   if(!nav.dataset.moreNewsReady){
     nav.addEventListener('click',event=>{
