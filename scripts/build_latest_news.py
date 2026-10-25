@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 ARTICLES = ROOT / "articles"
 OUT = ROOT / "assets" / "latest-news.json"
 # Keep this newly published, substantially updated guide visible on the homepage.
-PINNED_ARTICLES = set()
+PINNED_ARTICLES = {"articles/returners-magic-season-2"}
 
 def meta(source, name):
     pattern = r'<meta\s+[^>]*?(?:name|property)=["\']' + re.escape(name) + r'["\'][^>]*?content=["\']([^"\']*)["\']'
@@ -60,13 +60,14 @@ def publication_timestamp(path):
 def homepage_cards(items):
     cards = []
     for item in items:
+        pinned = ' data-home-pinned="true"' if item["article"] in PINNED_ARTICLES else ""
         href = "/" + html.escape(item["article"], quote=True)
         image = html.escape(item["image"], quote=True)
         title = html.escape(item["title"], quote=True)
         tag = html.escape(item["tag"], quote=True)
         description = html.escape(item["description"], quote=True)
         cards.append(
-            f'<a class="card story visual-card" href="{href}">'
+            f'<a class="card story visual-card" href="{href}"{pinned}>'
             f'<img src="{image}" alt="{title}" loading="lazy">'
             f'<div class="visual-body"><span class="tag">{tag}</span>'
             f'<h3>{title}</h3><p>{description}</p>'
@@ -109,7 +110,11 @@ def main():
                           item["published"], item["article"]),
         reverse=True
     )
-    latest = items[:24]
+    pinned = [item for item in items if item["article"] in PINNED_ARTICLES]
+    unpinned = [item for item in items if item["article"] not in PINNED_ARTICLES]
+    # Keep the four freshest stories in the lead strip; pin substantially updated guides
+    # immediately after them so the More Anime News pagination keeps them visible.
+    latest = unpinned[:4] + pinned[:20] + unpinned[4:24-len(pinned[:20])]
     OUT.write_text(json.dumps({"generated":date.today().isoformat(),"items":latest}, ensure_ascii=False, separators=(",",":"))+"\n", encoding="utf-8")
     update_homepage(latest)
     print("Generated latest news:", len(items), "articles,", len(latest), "homepage cards")
