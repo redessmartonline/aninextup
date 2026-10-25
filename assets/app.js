@@ -276,6 +276,7 @@ function syncHomeMoreNewsPagination(){
     cards.forEach((card,index)=>{
       const visible=index>=(page-1)*pageSize&&index<page*pageSize;
       card.hidden=!visible;
+      card.style.setProperty('display',visible?'':'none','important');
       if(visible)card.removeAttribute('aria-hidden');else card.setAttribute('aria-hidden','true');
     });
     const parts=['<span class="pages">Page '+page+' of '+pageCount+'</span>'];
