@@ -486,3 +486,4 @@ main:has(> .article) + footer{
     padding:6px 4px;
   }
 }
+.info span{display:block}.info strong{display:block;margin-top:6px}
