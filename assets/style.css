@@ -448,3 +448,14 @@ main:has(> .article) + footer{
   .home-page .home-news-spotlight{gap:12px}
   .home-page .home-news-spotlight>.visual-card:first-child h3{line-height:1.25}
 }
+
+
+/* Numbered navigation for the More Anime News archive on the homepage. */
+.home-more-news-list>[hidden]{display:none!important}
+.home-more-news-pagination{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px;margin:22px 0 4px;padding:0;border:0;background:transparent}
+.home-more-news-pagination[hidden]{display:none!important}
+.home-more-news-pagination>a,.home-more-news-pagination>.current,.home-more-news-pagination>.pages{display:inline-flex;min-width:40px;min-height:40px;align-items:center;justify-content:center;padding:8px 12px;border:1px solid var(--line);border-radius:8px;color:var(--text);font-size:.88rem;font-weight:750;text-decoration:none}
+.home-more-news-pagination>.pages{border-color:transparent;color:var(--muted);font-weight:600}
+.home-more-news-pagination>a:hover,.home-more-news-pagination>a:focus-visible{border-color:var(--purple);color:var(--purple);outline:none}
+.home-more-news-pagination>.current{border-color:var(--purple);background:var(--purple);color:#fff}
+.home-more-news-pagination>a:focus-visible{outline:2px solid var(--purple);outline-offset:3px}

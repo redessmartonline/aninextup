@@ -223,10 +223,70 @@ function tidyHomepageStoryDuplicates(){
     for(const card of root.querySelectorAll(':scope > a[href]')){
       const key=canonical(card.getAttribute('href'));
       if(!key)continue;
-      if(seen.has(key)){card.hidden=true;card.setAttribute('aria-hidden','true')}
-      else {seen.add(key);card.hidden=false;card.removeAttribute('aria-hidden')}
+      if(seen.has(key)){
+        card.dataset.homeDuplicate='true';
+        card.hidden=true;
+        card.setAttribute('aria-hidden','true');
+      }else{
+        seen.add(key);
+        delete card.dataset.homeDuplicate;
+        card.hidden=false;
+        card.removeAttribute('aria-hidden');
+      }
     }
   }
+  syncHomeMoreNewsPagination();
+}
+function syncHomeMoreNewsPagination(){
+  const list=document.querySelector('[data-home-more]');
+  const nav=document.querySelector('[data-home-more-pagination]');
+  if(!list||!nav)return;
+  const cards=Array.from(list.querySelectorAll(':scope > a[href]')).filter(card=>card.dataset.homeDuplicate!=='true');
+  const pageSize=10;
+  const pageCount=Math.ceil(cards.length/pageSize);
+  if(pageCount<2){
+    cards.forEach(card=>{card.hidden=false;card.removeAttribute('aria-hidden')});
+    nav.hidden=true;
+    nav.replaceChildren();
+    return;
+  }
+  nav.hidden=false;
+  const readPage=()=>Math.max(1,Math.min(pageCount,Number(new URLSearchParams(location.search).get('more-news-page'))||1));
+  const makeLink=(label,target,extraClass='')=>'<a href="/?more-news-page='+target+'#more-anime-news" data-more-news-page="'+target+'"'+(extraClass?' class="'+extraClass+'"':'')+'>'+label+'</a>';
+  function render(page,{push=false,scroll=false}={}){
+    page=Math.max(1,Math.min(pageCount,page));
+    cards.forEach((card,index)=>{
+      const visible=index>=(page-1)*pageSize&&index<page*pageSize;
+      card.hidden=!visible;
+      if(visible)card.removeAttribute('aria-hidden');else card.setAttribute('aria-hidden','true');
+    });
+    const parts=['<span class="pages">Page '+page+' of '+pageCount+'</span>'];
+    if(page>1)parts.push(makeLink('« Previous',page-1,'previouspostslink'));
+    for(let number=1;number<=pageCount;number++){
+      if(number===page)parts.push('<span class="current" aria-current="page">'+number+'</span>');
+      else parts.push(makeLink(String(number),number));
+    }
+    if(page<pageCount)parts.push(makeLink('Next »',page+1,'nextpostslink'));
+    nav.innerHTML=parts.join('');
+    if(push){
+      const url=new URL(location.href);
+      url.searchParams.set('more-news-page',String(page));
+      url.hash='more-anime-news';
+      history.pushState({moreNewsPage:page},'',url);
+    }
+    if(scroll)document.getElementById('more-anime-news')?.scrollIntoView({behavior:'smooth',block:'start'});
+  }
+  if(!nav.dataset.moreNewsReady){
+    nav.addEventListener('click',event=>{
+      const link=event.target.closest('[data-more-news-page]');
+      if(!link)return;
+      event.preventDefault();
+      render(Number(link.dataset.moreNewsPage),{push:true,scroll:true});
+    });
+    nav.dataset.moreNewsReady='true';
+    window.addEventListener('popstate',()=>render(readPage()));
+  }
+  render(readPage());
 }
 if(document.querySelector('.home-page'))tidyHomepageStoryDuplicates();
 
