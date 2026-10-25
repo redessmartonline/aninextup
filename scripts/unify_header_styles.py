@@ -20,7 +20,7 @@ for path in root.rglob("*.html"):
         lambda m: m.group(1) + '?v=20261024-sitewide-navigation' + m.group(2), original)
     updated = re.sub(
         r'(src="(?:\.\./)*assets/app\.js)(?:\?[^"]*)?(")',
-        lambda m: m.group(1) + '?v=20261024-sitewide-navigation' + m.group(2), updated)
+        lambda m: m.group(1) + '?v=20261025-news-classification' + m.group(2), updated)
     if '<header class="site-header">' in updated:
         header = updated.split('</header>', 1)[0]
         if 'global-search-toggle' not in header:
