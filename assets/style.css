@@ -487,3 +487,6 @@ main:has(> .article) + footer{
   }
 }
 .info span{display:block}.info strong{display:block;margin-top:6px}
+
+/* Contact form */
+.contact-form-section{margin-top:32px;max-width:720px}.contact-form{display:grid;gap:10px;margin-top:18px}.contact-form label{font-weight:700}.contact-form input,.contact-form select,.contact-form textarea{width:100%;box-sizing:border-box;border:1px solid rgba(167,139,250,.4);border-radius:10px;background:#101827;color:#fff;padding:12px;font:inherit}.contact-form button{justify-self:start;border:0;border-radius:10px;background:#8054e8;color:white;font:inherit;font-weight:700;padding:12px 22px;cursor:pointer}.contact-form button:disabled{opacity:.65;cursor:wait}.contact-honeypot{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}#contact-status{min-height:1.5em}
