@@ -29,6 +29,20 @@
     }
     if (group.length) { take(heading); group.forEach(take); }
   });
+  // Keep the wording in the story while placing supporting outbound links with the references.
+  // Direct links for watching, reading, listening or buying remain available in context.
+  const inlineReferences = [];
+  const actionWords = /\b(?:watch|play|listen|buy|tickets?|trailer|teaser|video|youtube)\b/i;
+  article.querySelectorAll('.prose a[href]').forEach(a => {
+    if (!isExternal(a) || a.closest('.lite-trailer') || [...claimed].some(node => node === a || node.contains(a))) return;
+    const url = new URL(a.getAttribute('href'), location.href);
+    const directViewing = /(?:^|\.)youtube\.com$|(?:^|\.)youtu\.be$/i.test(url.hostname) ||
+      /(?:^|\.)netflix\.com$/i.test(url.hostname) && /^\/(?:[a-z-]+\/)?title\//i.test(url.pathname) ||
+      /(?:^|\.)crunchyroll\.com$/i.test(url.hostname) && /^\/(?:[a-z-]+\/)?(?:series|watch)\//i.test(url.pathname);
+    if (directViewing || actionWords.test(a.textContent) || /\bread\b/i.test(a.textContent) && /\b(?:manga|novel|chapter)\b/i.test(a.textContent)) return;
+    inlineReferences.push(a.cloneNode(true));
+    a.replaceWith(document.createTextNode(a.textContent));
+  });
   // Move references from the release box, leaving video and viewing links in place.
   const summaryReferences = [];
   article.querySelectorAll('.release-summary p').forEach(p => {
@@ -47,7 +61,7 @@
       }
     });
   });
-  if (!blocks.length && !summaryReferences.length) return;
+  if (!blocks.length && !summaryReferences.length && !inlineReferences.length) return;
   const details = document.createElement('details');
   details.className = 'article-sources';
   details.id = 'article-sources';
@@ -60,6 +74,12 @@
     const p = document.createElement('p');
     p.append(document.createTextNode('Release references: '));
     summaryReferences.forEach((link, i) => { if (i) p.append(document.createTextNode(' · ')); p.append(link); });
+    body.append(p);
+  }
+  if (inlineReferences.length) {
+    const p = document.createElement('p');
+    p.append(document.createTextNode('Article references: '));
+    inlineReferences.forEach((link, i) => { if (i) p.append(document.createTextNode(' · ')); p.append(link); });
     body.append(p);
   }
   blocks.forEach(node => body.append(node));
