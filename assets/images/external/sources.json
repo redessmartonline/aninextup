@@ -1,11 +1,6 @@
 {
-  "count": 1,
+  "count": 0,
   "failed_count": 0,
   "failed": [],
-  "images": [
-    {
-      "source": "https://aninextup.com/assets/images/external/67b9b7f3d42e3f9ec613e43732be4007bf25ff2dbb065594fdc2d8c895c87055.webp",
-      "local": "/assets/images/external/67b9b7f3d42e3f9ec613e43732be4007bf25ff2dbb065594fdc2d8c895c87055.webp"
-    }
-  ]
+  "images": []
 }
