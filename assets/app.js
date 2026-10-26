@@ -363,7 +363,7 @@ function loadAllHomeMoreNews(){
         const title=document.createElement('h3');
         title.textContent=titleText;
         body.append(title);
-        const description=source.querySelector('.visual-body p,p,.visual-body>span:not(.more),.news-featured-copy p')||fallback?.querySelector('.visual-body p,p,.visual-body>span:not(.more),.news-featured-copy p');
+        const description=source.querySelector('.visual-body p,p,.visual-body>span:not(.more):not(.tag):not(.kicker),.news-featured-copy p')||fallback?.querySelector('.visual-body p,p,.visual-body>span:not(.more),.news-featured-copy p');
         if(description){
           const copy=document.createElement('p');
           copy.textContent=description.textContent.trim();
