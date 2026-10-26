@@ -124,7 +124,7 @@ jobs:
                   req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0'})
                   source=urllib.request.urlopen(req,timeout=30).read().decode()
                   relevant=[line[:20000] for line in source.splitlines() if re.search(r'kACrcUBQY3Y|data-youtube|data-video|uploadDate|publishDate',line)]
-                  result.append({'url':url,'status':'fetched','matches':relevant})
+                  result.append({'url':url,'status':'fetched','matches':relevant,'source':source})
               except Exception as e:
                   result.append({'url':url,'error':str(e)})
           open('/tmp/editorial-evidence/official-metadata.json','w').write(json.dumps(result,indent=2))
