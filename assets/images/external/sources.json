@@ -1,27 +1,11 @@
 {
-  "count": 5,
+  "count": 1,
   "failed_count": 0,
   "failed": [],
   "images": [
     {
-      "source": "https://aninextup.com/assets/images/covers/im-looking-for-a-zombie.jpg",
-      "local": "/assets/images/covers/im-looking-for-a-zombie.jpg"
-    },
-    {
-      "source": "https://aninextup.com/assets/images/external/005fbcefe4e9fd52d2fc8c2a2a5e03df023625940480a9e0d7c54fe810a2e89e.webp",
-      "local": "/assets/images/external/005fbcefe4e9fd52d2fc8c2a2a5e03df023625940480a9e0d7c54fe810a2e89e.webp"
-    },
-    {
-      "source": "https://aninextup.com/assets/images/external/197843177dba18dfe7a1bfc48932df628edd3e476e2f63e198a6530244764e90.webp",
-      "local": "/assets/images/external/197843177dba18dfe7a1bfc48932df628edd3e476e2f63e198a6530244764e90.webp"
-    },
-    {
-      "source": "https://aninextup.com/assets/images/external/b14932f686f1be01ee10da57c30a5123e718589b595c3e850834ea5a29fa4e01.webp",
-      "local": "/assets/images/external/b14932f686f1be01ee10da57c30a5123e718589b595c3e850834ea5a29fa4e01.webp"
-    },
-    {
-      "source": "https://aninextup.com/assets/images/external/d548e02cc2d509b8e38cf018d703a0dd7b201a443a324681d6983050449597d8.webp",
-      "local": "/assets/images/external/d548e02cc2d509b8e38cf018d703a0dd7b201a443a324681d6983050449597d8.webp"
+      "source": "https://aninextup.com/assets/images/external/1b28bf36dc298cae32e36b201776061b8adb397ff09a1a17099446329b77b6ea.webp",
+      "local": "/assets/images/external/1b28bf36dc298cae32e36b201776061b8adb397ff09a1a17099446329b77b6ea.webp"
     }
   ]
 }
