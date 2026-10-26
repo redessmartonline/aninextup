@@ -16,6 +16,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Verify game guide News classification
+        if: contains(github.head_ref, 'anime-mysterious-depth')
+        run: python tests/test_news_categories.py
       - run: npm install --no-save playwright@1.56.1
       - run: npx playwright install --with-deps chromium
       - name: Render committed source with all external requests blocked
