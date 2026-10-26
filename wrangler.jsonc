@@ -2,7 +2,10 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "aninextup",
   "compatibility_date": "2026-10-09",
+  "main": "src/contact-worker.js",
   "assets": {
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/contact"],
     "directory": "./"
   },
   "previews": {}
