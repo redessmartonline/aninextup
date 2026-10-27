@@ -40,3 +40,10 @@ Each publication PR should record the cover source, direct cover URL, duplicate 
 - Use distinct factual H2 sections and primary-source citations. Never pad with unsupported staff, release dates, regions, or invented claims merely to reach a word target.
 - Ensure media layout, lead-cover treatment, related content, and SEO metadata match established site patterns.
 - If the story lacks enough confirmed substance for a full article, keep it as a brief or draft rather than presenting an underdeveloped article as complete.
+
+## Official trailers: required whenever available (October 27, 2026)
+- Search the official announcement and show media page for the relevant trailer, teaser or season announcement video for every release article, even when the headline does not mention a video.
+- When a relevant official video is available, include the in-page `.lite-trailer` player with a thumbnail and play button. Do not substitute a description of the video or an outbound-only YouTube link for playback.
+- Record `trailer.youtubeId`, `title`, `sourceUrl`, `thumbnail` and `verifiedOn` in `aninextup-index`. The video validator blocks a recorded available trailer if its player is missing, mismatched or outbound-only.
+- Verify the source, exact installment, image and live playback. If embedding is restricted, report the actual restriction; do not silently omit the available video or claim in-page playback works.
+- VideoObject markup requires a verified upload timestamp. Omit that optional markup when its metadata cannot be verified; keep the verified player. Never invent an upload date or remove a working trailer solely because its SEO metadata is incomplete.
