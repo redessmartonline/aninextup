@@ -379,12 +379,17 @@ function loadAllHomeMoreNews(){
         const title=document.createElement('h3');
         title.textContent=titleText;
         body.append(title);
-        const description=source.querySelector('.visual-body p,p,.visual-body>span:not(.more):not(.tag):not(.kicker),.news-featured-copy p')||fallback?.querySelector('.visual-body p,p,.visual-body>span:not(.more),.news-featured-copy p');
-        if(description){
-          const copy=document.createElement('p');
-          copy.textContent=description.textContent.trim();
-          body.append(copy);
-        }
+        // The News archive includes compact cards without summaries. Prefer a
+        // real editorial description from the archive, homepage or data index.
+        const description=source.querySelector('.visual-body p,.news-featured-copy p,.news-side-card p')||fallback?.querySelector('.visual-body p,.news-featured-copy p,.news-side-card p');
+        const indexed=[...(D.anime||[]),...(D.guides||[])].find(item=>{
+          if(!item.article)return false;
+          try{return new URL(item.article,location.origin).pathname.replace(/\\/$/,'')===key}catch{return false}
+        });
+        const summary=description?.textContent?.trim()||indexed?.description?.trim()||'';
+        const copy=document.createElement('p');
+        copy.textContent=summary||('Explore the latest news, confirmed details and updates about '+titleText.replace(/[.!?]+$/,'')+'.');
+        body.append(copy);
         const moreLink=document.createElement('span');
         moreLink.className='more';
         moreLink.textContent='READ UPDATE →';
