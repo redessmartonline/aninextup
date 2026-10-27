@@ -33,7 +33,7 @@ def main():
         if not match:
             continue
         # Idempotence: remove only our own previously generated links.
-        inner = re.sub(r'<span data-aninextup-contextual="1">.*?</span>', '', match.group(2), flags=re.S)
+        inner = re.sub(r'\s*<span data-aninextup-contextual="1">.*?</span>', '', match.group(2), flags=re.S)
         current_words = words(titles.get(path, ""))
         ranked = []
         for target, title in titles.items():
