@@ -29,6 +29,14 @@
       return dateOrder||(Number(right.publishedAt)||0)-(Number(left.publishedAt)||0)||String(a.article||'').localeCompare(String(b.article||''));
     });
   }
-  root.ANINEXTUP_RELEASES={context,matchesPlatform,select,sortNews};
+  function sortNewsByPublication(items,dates={}){
+    return [...items].sort((a,b)=>{
+      const left=dates[a.article]||{},right=dates[b.article]||{};
+      return (right.published||'').localeCompare(left.published||'')||
+        (Number(right.publishedAt)||0)-(Number(left.publishedAt)||0)||
+        String(b.article||'').localeCompare(String(a.article||''));
+    });
+  }
+  root.ANINEXTUP_RELEASES={context,matchesPlatform,select,sortNews,sortNewsByPublication};
   if(typeof module!=='undefined')module.exports=root.ANINEXTUP_RELEASES;
 })(typeof window!=='undefined'?window:globalThis);

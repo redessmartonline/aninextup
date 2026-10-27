@@ -66,7 +66,7 @@ for(const name of fs.readdirSync(root).filter(n=>n.endsWith('.html'))){
     html=html.replace(/assets\/weekly-episodes\.js(?:\?[^"\s]*)?/g,'assets/weekly-episodes.js?v='+weeklyDataVersion);
     html=html.replace(/assets\/weekly-episodes-ui\.js(?:\?[^"\s]*)?/g,'assets/weekly-episodes-ui.js?v='+weeklyUiVersion);
   }
-  if(html.includes('data-guides')){
+  if(html.includes('data-guides')||html.includes('data-home-more')){
     html=html.replace(/<script src="assets\/news-dates\.js[^"]*"><\/script>/g,'');
     html=html.replace(/<script src="assets\/app\.js/,'<script src="assets/news-dates.js?v='+newsDatesVersion+'"></script><script src="assets/app.js');
   }
