@@ -214,5 +214,16 @@
     "YouTube oEmbed confirmed title and publisher; not a guarantee of playback in every territory.",
     "No invented upload timestamp or VideoObject uploadDate.",
     "Sasaki and Peeps player is the official Season 2 main PV, not the creditless OP/ED."
-  ]
+  ],
+  "productionVerification": {
+    "checkedOn": "2026-10-27",
+    "pagesReturning200WithExpectedVideoId": 19,
+    "pagesChecked": 19,
+    "playerButtonTest": {
+      "article": "fool-night-release-date",
+      "expectedIframe": "https://www.youtube-nocookie.com/embed/we-eaYBtUDE?autoplay=1",
+      "passed": true
+    },
+    "regionalPlayback": "Not tested in every country"
+  }
 }
