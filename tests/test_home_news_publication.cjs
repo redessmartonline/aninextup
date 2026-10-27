@@ -13,4 +13,14 @@ const more=source.split('data-home-more>')[1].split('</section>')[0];
 const hrefs=[...more.matchAll(/href="\/(articles\/[^"#]+)"/g)].map(m=>({article:m[1]}));
 assert.ok(hrefs.length>20,'Do not truncate the archive');
 assert.deepEqual(hrefs.map(x=>x.article),model.sortNewsByPublication(hrefs,dates).map(x=>x.article),'Static More Anime News must remain chronological');
-console.log('PASS: publication date, same-day time, edits, preserved archive and static homepage order.');
+// If the date index cannot load, do not overwrite the chronological fallback
+// with the featured archive's HTML order.
+const app=fs.readFileSync(require.resolve('../assets/app.js'),'utf8');
+const start=app.indexOf('function loadAllHomeMoreNews(){');
+const end=app.indexOf("\nif(document.querySelector('.home-page')){",start);
+let fetched=false;
+const context={document:{querySelector:()=>({})},window:{},fetch:()=>{fetched=true}};
+const vm=require('node:vm');vm.createContext(context);
+vm.runInContext(app.slice(start,end)+';loadAllHomeMoreNews();',context);
+assert.equal(fetched,false,'Missing publication metadata must preserve the static fallback');
+console.log('PASS: publication date, same-day time, edits, complete archive, static order and date-index failure fallback.');

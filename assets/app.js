@@ -322,7 +322,7 @@ function syncHomeMoreNewsPagination(requestedPage=null,{push=false,scroll=false}
 }
 function loadAllHomeMoreNews(){
   const list=document.querySelector('[data-home-more]');
-  if(!list)return;
+  if(!list||!window.ANINEXTUP_NEWS_DATES||!window.ANINEXTUP_RELEASES?.sortNewsByPublication)return;
   fetch('/news',{headers:{'Accept':'text/html'},cache:'no-store'})
     .then(response=>{if(!response.ok)throw new Error('News index unavailable');return response.text()})
     .then(markup=>{
