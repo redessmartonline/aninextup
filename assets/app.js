@@ -328,7 +328,8 @@ function loadAllHomeMoreNews(){
   const list=document.querySelector('[data-home-more]');
   if(!list||!window.ANINEXTUP_NEWS_DATES||!window.ANINEXTUP_RELEASES?.sortNewsByPublication){revealHomeMoreNews();return;}
   // Do not leave the static fallback invisible if the network stalls.
-  const revealTimeout=setTimeout(revealHomeMoreNews,2500);
+  let fallbackShown=false;
+  const revealTimeout=setTimeout(()=>{fallbackShown=true;revealHomeMoreNews();},2500);
   fetch('/news',{headers:{'Accept':'text/html'},cache:'no-store'})
     .then(response=>{if(!response.ok)throw new Error('News index unavailable');return response.text()})
     .then(markup=>{
@@ -399,7 +400,7 @@ function loadAllHomeMoreNews(){
         cards.push(fallback.cloneNode(true));
         seen.add(key);
       }
-      if(!cards.length)return;
+      if(!cards.length||fallbackShown)return;
       list.replaceChildren(...cards);
       tidyHomepageStoryDuplicates();
     })
