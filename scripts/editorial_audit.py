@@ -20,7 +20,7 @@ for row in rows:
  ident=e['id'] or '(missing id)'
  if ident in seen:warn(ident,'duplicate_id','Repeated ID')
  seen.add(ident)
- if e['status'] not in ('confirmed','month-confirmed','tba'):warn(ident,'invalid_status',str(e['status']))
+ if e['status'] not in ('confirmed','month-confirmed','tba','released'):warn(ident,'invalid_status',str(e['status']))
  if e['status']=='confirmed' and not e['date']:warn(ident,'confirmed_without_date','Exact date missing')
  if e['status']=='month-confirmed' and e['date']:warn(ident,'month_with_exact_date',str(e['date']))
  if e['date']:
