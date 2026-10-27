@@ -52,7 +52,7 @@ def build(root=ROOT):
         expected='/articles/'+path.stem
         title=' '.join(' '.join(page.heading).split())
         if not page.indexable or not title or canonical.scheme!='https' or canonical.netloc!='aninextup.com' or canonical.path!=expected:continue
-        rows.append({'title':title,'description':page.description,'url':expected,'aliases':aliases.get(expected,[]),'content':' '.join(' '.join(page.words).split())})
+        rows.append({'title':title,'description':page.description,'url':expected,'aliases':aliases.get(expected,[]),'content':' '.join(' '.join(page.words).split())[:320]})
     return {'version':1,'entries':rows}
 
 if __name__=='__main__':
