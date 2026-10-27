@@ -384,7 +384,7 @@ function loadAllHomeMoreNews(){
         const description=source.querySelector('.visual-body p,.news-featured-copy p,.news-side-card p')||fallback?.querySelector('.visual-body p,.news-featured-copy p,.news-side-card p');
         const indexed=[...(D.anime||[]),...(D.guides||[])].find(item=>{
           if(!item.article)return false;
-          try{return new URL(item.article,location.origin).pathname.replace(/\\/$/,'')===key}catch{return false}
+          try{return new URL(item.article,location.origin).pathname.replace(/\/$/,'')===key}catch{return false}
         });
         const summary=description?.textContent?.trim()||indexed?.description?.trim()||'';
         const copy=document.createElement('p');
