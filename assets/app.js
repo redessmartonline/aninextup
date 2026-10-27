@@ -320,9 +320,15 @@ function syncHomeMoreNewsPagination(requestedPage=null,{push=false,scroll=false}
   }
   render(requestedPage??readPage(),{push,scroll});
 }
+function revealHomeMoreNews(){
+  const list=document.querySelector('[data-home-more]');
+  if(list)list.style.removeProperty('visibility');
+}
 function loadAllHomeMoreNews(){
   const list=document.querySelector('[data-home-more]');
-  if(!list||!window.ANINEXTUP_NEWS_DATES||!window.ANINEXTUP_RELEASES?.sortNewsByPublication)return;
+  if(!list||!window.ANINEXTUP_NEWS_DATES||!window.ANINEXTUP_RELEASES?.sortNewsByPublication){revealHomeMoreNews();return;}
+  // Do not leave the static fallback invisible if the network stalls.
+  const revealTimeout=setTimeout(revealHomeMoreNews,2500);
   fetch('/news',{headers:{'Accept':'text/html'},cache:'no-store'})
     .then(response=>{if(!response.ok)throw new Error('News index unavailable');return response.text()})
     .then(markup=>{
@@ -397,7 +403,8 @@ function loadAllHomeMoreNews(){
       list.replaceChildren(...cards);
       tidyHomepageStoryDuplicates();
     })
-    .catch(()=>{/* Keep the accessible static fallback cards. */});
+    .catch(()=>{/* Keep the accessible static fallback cards. */})
+    .finally(()=>{clearTimeout(revealTimeout);revealHomeMoreNews();});
 }
 if(document.querySelector('.home-page')){
   tidyHomepageStoryDuplicates();
