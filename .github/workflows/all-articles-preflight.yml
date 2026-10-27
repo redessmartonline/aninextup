@@ -33,6 +33,11 @@ jobs:
         run: python scripts/audit_all_articles_preflight.py --root articles --out audits/generated
       - name: Validate editorial date consistency and sitemap behavior
         run: python -m unittest discover -s tests -p test_editorial_dates.py
+      - name: Verify official trailer detection and required playback markup
+        run: |
+          python -m unittest discover -s tests -p test_official_trailers.py
+          python -m unittest discover -s tests -p test_video_schema.py
+          python -m unittest discover -s tests -p test_publisher_safety.py
       - name: Upload complete article-by-article reports
         uses: actions/upload-artifact@v4
         with:

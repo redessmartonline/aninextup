@@ -55,7 +55,7 @@ def validate(path):
         except ValueError: errors.append("Invalid index JSON")
     if 'lite-trailer' in s:
         ids=re.findall(r'data-youtube="([A-Za-z0-9_-]{11})"',s)
-        if not ids or 'VideoObject' not in s or 'youtube.com/watch?v=' not in s:
+        if not ids or '<button' not in s:
             errors.append("Trailer missing verified video markup/fallback")
     for tag, attrs in dom.tags:
         if tag == "script" and attrs.get("type") == "application/ld+json":

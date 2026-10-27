@@ -53,10 +53,76 @@ def valid_upload_date(value):
     return True
 
 
+class TrailerMarkup(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.index = None
+        self.index_text = []
+        self.players = []
+        self.active_player = None
+        self.depth = 0
+
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        if tag == 'script' and attrs.get('id') == 'aninextup-index':
+            self.index = True
+        if tag == 'div':
+            if 'lite-trailer' in attrs.get('class', '').split():
+                self.active_player = dict(attrs, button=False, image=False, overlay=False)
+                self.players.append(self.active_player)
+                self.depth = 1
+            elif self.active_player is not None:
+                self.depth += 1
+        if self.active_player is not None:
+            if tag == 'button' and 'trailer-play' in attrs.get('class', '').split():
+                self.active_player['button'] = True
+            if tag == 'img' and attrs.get('src'):
+                self.active_player['image'] = True
+            if 'trailer-overlay' in attrs.get('class', '').split():
+                self.active_player['overlay'] = True
+
+    def handle_data(self, value):
+        if self.index:
+            self.index_text.append(value)
+
+    def handle_endtag(self, tag):
+        if tag == 'script':
+            self.index = False
+        if tag == 'div' and self.active_player is not None:
+            self.depth -= 1
+            if self.depth == 0:
+                self.active_player = None
+
+
+def trailer_markup_errors(text):
+    """A recorded available official trailer must remain playable in the article."""
+    parser = TrailerMarkup()
+    parser.feed(text)
+    if not parser.index_text:
+        return []
+    try:
+        trailer = json.loads(''.join(parser.index_text)).get('trailer')
+    except (ValueError, AttributeError):
+        return ['Invalid article media metadata']
+    if trailer is None:
+        return []
+    if not isinstance(trailer, dict) or not re.fullmatch(r'[A-Za-z0-9_-]{11}', str(trailer.get('youtubeId', ''))):
+        return ['Invalid official trailer ID']
+    if not all(trailer.get(key) for key in ('title', 'sourceUrl', 'thumbnail', 'verifiedOn')):
+        return ['Official trailer is missing verification metadata']
+    players = [player for player in parser.players if player.get('data-youtube') == trailer['youtubeId']]
+    if len(parser.players) != 1 or len(players) != 1:
+        return ['Available official trailer is missing or has a mismatched player']
+    player = players[0]
+    if player.get('data-external-only') == 'true' or not all(player[key] for key in ('button', 'image', 'overlay')):
+        return ['Available official trailer requires an in-page play button, thumbnail and overlay']
+    return []
+
+
 def video_schema_errors(text):
     parser = StructuredData()
     parser.feed(text)
-    errors = []
+    errors = trailer_markup_errors(text)
     for block in parser.blocks:
         try:
             data = json.loads(block)
