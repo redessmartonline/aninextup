@@ -332,95 +332,13 @@ function revealHomeMoreNews(){
 }
 function loadAllHomeMoreNews(){
   const list=document.querySelector('[data-home-more]');
-  if(!list||!window.ANINEXTUP_NEWS_DATES||!window.ANINEXTUP_RELEASES?.sortNewsByPublication){revealHomeMoreNews();return;}
-  // Do not leave the static fallback invisible if the network stalls.
-  let fallbackShown=false;
-  const revealTimeout=setTimeout(()=>{fallbackShown=true;revealHomeMoreNews();},2500);
-  fetch('/news',{headers:{'Accept':'text/html'},cache:'no-store'})
-    .then(response=>{if(!response.ok)throw new Error('News index unavailable');return response.text()})
-    .then(markup=>{
-      const page=new DOMParser().parseFromString(markup,'text/html');
-      const sources=Array.from(page.querySelectorAll('a[href*="articles/"]'));
-      const fallbackCards=new Map();
-      for(const candidate of document.querySelectorAll('a[href*="articles/"]')){
-        const href=candidate.getAttribute('href')||'';
-        let url;
-        try {url=new URL(href,location.origin)} catch {continue}
-        if(url.origin!==location.origin||!/^\/articles\/[^/]+\/?$/.test(url.pathname))continue;
-        if(candidate.querySelector('img,h2,h3'))fallbackCards.set(url.pathname.replace(/\/$/,''),candidate);
-      }
-      const seen=new Set();
-      const cards=[];
-      for(const source of sources){
-        const href=source.getAttribute('href')||'';
-        let url;
-        try {url=new URL(href,location.origin)} catch {continue}
-        if(url.origin!==location.origin||!/^\/articles\/[^/]+\/?$/.test(url.pathname))continue;
-        const key=url.pathname.replace(/\/$/,'');
-        if(seen.has(key))continue;
-        const fallback=fallbackCards.get(key);
-        const sourceImage=source.querySelector('img')||fallback?.querySelector('img');
-        const heading=source.querySelector('h2,h3')||fallback?.querySelector('h2,h3');
-        const titleText=(heading?.textContent||source.textContent||'').replace(/\s*→\s*$/,'').trim();
-        if(!titleText)continue;
-        seen.add(key);
-        const card=document.createElement('a');
-        card.className='card story visual-card';
-        card.href=url.pathname;
-        if(sourceImage){
-          const image=sourceImage.cloneNode(true);
-          image.loading='lazy';
-          image.decoding='async';
-          card.append(image);
-        }
-        const body=document.createElement('div');
-        body.className='visual-body';
-        const label=source.querySelector('.tag,.kicker,small.status')||fallback?.querySelector('.tag,.kicker,small.status');
-        if(label){
-          const tag=document.createElement('span');
-          tag.className='tag';
-          tag.textContent=label.textContent.trim();
-          body.append(tag);
-        }
-        const title=document.createElement('h3');
-        title.textContent=titleText;
-        body.append(title);
-        // The News archive includes compact cards without summaries. Prefer a
-        // real editorial description from the archive, homepage or data index.
-        const description=source.querySelector('.visual-body p,.news-featured-copy p,.news-side-card p')||fallback?.querySelector('.visual-body p,.news-featured-copy p,.news-side-card p');
-        const indexed=[...(D.anime||[]),...(D.guides||[])].find(item=>{
-          if(!item.article)return false;
-          try{return new URL(item.article,location.origin).pathname.replace(/\/$/,'')===key}catch{return false}
-        });
-        const candidateSummary=description?.textContent?.trim()||indexed?.description?.trim()||'';
-        const summary=/^(?:anime news|official news|release news|news|updates?)$/i.test(candidateSummary)?(indexed?.description?.trim()||''):candidateSummary;
-        if(summary){
-          const copy=document.createElement('p');
-          copy.textContent=summary;
-          body.append(copy);
-        }
-        const moreLink=document.createElement('span');
-        moreLink.className='more';
-        moreLink.textContent='READ UPDATE →';
-        body.append(moreLink);
-        card.append(body);
-        cards.push(card);
-      }
-      // A substantially refreshed article can be pinned on the homepage before
-      // the News archive has its next generated snapshot. Preserve that explicit
-      // homepage card when the dynamic archive feed does not include it yet.
-      for(const [key,fallback] of fallbackCards){
-        if(seen.has(key)||fallback.dataset.homePinned!=='true')continue;
-        cards.push(fallback.cloneNode(true));
-        seen.add(key);
-      }
-      if(!cards.length||fallbackShown)return;
-      list.replaceChildren(...cards);
-      tidyHomepageStoryDuplicates();
-    })
-    .catch(()=>{/* Keep the accessible static fallback cards. */})
-    .finally(()=>{clearTimeout(revealTimeout);revealHomeMoreNews();});
+  if(!list)return;
+  // The homepage archive is generated server-side with complete summaries.
+  // Keep that first render stable instead of replacing it with a partial feed.
+  revealHomeMoreNews();
+  syncHomeMoreNewsPagination();
 }
+
 if(document.querySelector('.home-page')){
   tidyHomepageStoryDuplicates();
   loadAllHomeMoreNews();
