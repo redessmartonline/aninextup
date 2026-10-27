@@ -334,7 +334,7 @@ footer a{transition:color .15s ease}footer a:hover,footer a:focus-visible{color:
 .hero>.cta:hover{background:linear-gradient(135deg,rgba(124,58,237,.36),rgba(124,58,237,.16));border-color:rgba(196,181,253,.68);box-shadow:0 8px 28px rgba(124,58,237,.2);transform:translateY(-1px)}
 
 /* Twenty newest additional stories displayed as compact vertical rows. */
-.home-more-news-list{display:flex;flex-direction:column};visibility:hidden
+.home-more-news-list{display:flex;flex-direction:column;visibility:hidden}
 .home-more-news-list>.visual-card{display:grid;grid-template-columns:180px minmax(0,1fr);gap:20px;padding:16px 0;border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;min-width:0}
 .home-more-news-list>.visual-card>img{width:180px;height:120px;object-fit:cover;border-radius:9px}
 .home-more-news-list>.visual-card .visual-body{display:flex;flex-direction:column;justify-content:center;min-width:0;padding:0}
@@ -344,7 +344,7 @@ footer a{transition:color .15s ease}footer a:hover,footer a:focus-visible{color:
 @media(max-width:580px){.home-more-news-list>.visual-card{grid-template-columns:110px minmax(0,1fr);gap:12px;padding:12px 0}.home-more-news-list>.visual-card>img{width:110px;height:90px}.home-more-news-list>.visual-card h3{font-size:.94rem;margin:4px 0}.home-more-news-list>.visual-card p{display:none}.home-more-news-list>.visual-card .more{margin-top:4px}}
 
 /* Fix inherited 245px story minimum height and oversized empty rows. */
-.home-more-news-list>.card.story.visual-card{min-height:0;height:auto;padding:14px 0!important;align-items:center;grid-template-columns:168px minmax(0,1fr);gap:18px;transition:background .18s ease}
+.home-more-news-list>.card.story.visual-card{display:grid;min-height:0;height:auto;padding:14px 0!important;align-items:center;grid-template-columns:168px minmax(0,1fr);gap:18px;transition:background .18s ease}
 .home-more-news-list>.card.story.visual-card:hover{background:rgba(167,139,250,.045)}
 .home-more-news-list>.card.story.visual-card>img{width:168px;height:106px;aspect-ratio:16/10;display:block;object-fit:cover;border-radius:10px}
 .home-more-news-list>.card.story.visual-card .visual-body{padding:0;align-self:center;gap:0}

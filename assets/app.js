@@ -394,9 +394,11 @@ function loadAllHomeMoreNews(){
         });
         const candidateSummary=description?.textContent?.trim()||indexed?.description?.trim()||'';
         const summary=/^(?:anime news|official news|release news|news|updates?)$/i.test(candidateSummary)?(indexed?.description?.trim()||''):candidateSummary;
-        const copy=document.createElement('p');
-        copy.textContent=summary||('Explore the latest news, confirmed details and updates about '+titleText.replace(/[.!?]+$/,'')+'.');
-        body.append(copy);
+        if(summary){
+          const copy=document.createElement('p');
+          copy.textContent=summary;
+          body.append(copy);
+        }
         const moreLink=document.createElement('span');
         moreLink.className='more';
         moreLink.textContent='READ UPDATE →';
