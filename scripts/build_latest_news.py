@@ -99,7 +99,7 @@ def update_homepage(items):
     homepage = ROOT / "index.html"
     source = homepage.read_text(encoding="utf-8")
     source = replace_cards(source, "data-home-latest", items[:4])
-    source = replace_cards(source, "data-home-more", items[4:24])
+    source = replace_cards(source, "data-home-more", items[4:])
     homepage.write_text(source, encoding="utf-8")
 
 def main():
@@ -114,7 +114,7 @@ def main():
     unpinned = [item for item in items if item["article"] not in PINNED_ARTICLES]
     # Keep the four freshest stories in the lead strip; pin substantially updated guides
     # immediately after them so the More Anime News pagination keeps them visible.
-    latest = unpinned[:4] + pinned[:20] + unpinned[4:24-len(pinned[:20])]
+    latest = unpinned[:4] + pinned + unpinned[4:]
     OUT.write_text(json.dumps({"generated":date.today().isoformat(),"items":latest}, ensure_ascii=False, separators=(",",":"))+"\n", encoding="utf-8")
     update_homepage(latest)
     print("Generated latest news:", len(items), "articles,", len(latest), "homepage cards")
