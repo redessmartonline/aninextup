@@ -29,7 +29,7 @@ discoveryNodes('[data-anime-list]').forEach(el=>{let items=[...D.anime];const mo
 discoveryNodes('[data-anime-month]').forEach(el=>{const month=el.dataset.animeMonth;const items=(D.anime||[]).filter(a=>a.date&&a.date.startsWith(month)).sort((a,b)=>a.date.localeCompare(b.date));el.innerHTML=items.map(animeCard).join('')||'<p class="empty">No confirmed releases yet.</p>'});
 discoveryNodes('[data-month-count]').forEach(el=>{const month=el.dataset.monthCount;const n=(D.anime||[]).filter(a=>a.date&&a.date.startsWith(month)).length;el.textContent=n?'· '+n+' CONFIRMED':''});
 const NEWS_CATEGORY_KEYS=new Set(['new-anime','returning-series','trailers-cast','release-news']);
-const NEWS_ARTICLE_CATEGORY=Object.freeze(Object.fromEntries([...(D.anime||[]),...(D.guides||[])].filter(item=>item.article&&NEWS_CATEGORY_KEYS.has(item.newsCategory)).map(item=>[item.article,item.newsCategory])));
+const NEWS_ARTICLE_CATEGORY=Object.freeze(Object.fromEntries([...(window.ANINEXTUP_DATA?.anime||[]),...(window.ANINEXTUP_DATA?.guides||[])].filter(item=>item.article&&NEWS_CATEGORY_KEYS.has(item.newsCategory)).map(item=>[item.article,item.newsCategory])));
 const NEWS_CATEGORY_COUNTS=Object.freeze({'new-anime':20,'returning-series':7,'trailers-cast':4,'release-news':6});
 function setupNewsCategoryFilters(){
  const nav=document.querySelector('[data-news-category-filters]');if(!nav)return;
@@ -169,7 +169,13 @@ async function searchSite(input=document.getElementById('search'),box=document.g
  const words=normalizeSiteSearch(raw).split(/\s+/).filter(Boolean);
  if(!words.length){renderSiteSearchResults(box,[]);return;}
  // Show matches already present in the homepage data before loading the full sitemap index.
- const localEntries=[]; // Only published article index entries, not anime listings or platform guides.
+ const localEntries=[]; // Use the embedded catalog for an immediate first result.
+ const localSeen=new Set();
+ for(const item of [...(window.ANINEXTUP_DATA?.anime||[]),...(window.ANINEXTUP_DATA?.guides||[])]){
+  if(!item?.article||localSeen.has(item.article))continue;
+  const entry=prepareSiteSearchEntry({article:item.article,title:item.title,description:item.description,aliases:item.aliases,tag:item.tag,platform:item.platform});
+  if(entry){localEntries.push(entry);localSeen.add(item.article)}
+ }
  const immediate=rankSiteSearchEntries(localEntries,words);
  if(immediate.length)renderSiteSearchResults(box,immediate);
  else if(box){box.innerHTML='<div class="no-result">Searching all articles…</div>';box.hidden=false}
@@ -386,7 +392,8 @@ function loadAllHomeMoreNews(){
           if(!item.article)return false;
           try{return new URL(item.article,location.origin).pathname.replace(/\/$/,'')===key}catch{return false}
         });
-        const summary=description?.textContent?.trim()||indexed?.description?.trim()||'';
+        const candidateSummary=description?.textContent?.trim()||indexed?.description?.trim()||'';
+        const summary=/^(?:anime news|official news|release news|news|updates?)$/i.test(candidateSummary)?(indexed?.description?.trim()||''):candidateSummary;
         const copy=document.createElement('p');
         copy.textContent=summary||('Explore the latest news, confirmed details and updates about '+titleText.replace(/[.!?]+$/,'')+'.');
         body.append(copy);
