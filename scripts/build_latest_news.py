@@ -9,8 +9,6 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 ARTICLES = ROOT / "articles"
 OUT = ROOT / "assets" / "latest-news.json"
-# Keep this newly published, substantially updated guide visible on the homepage.
-PINNED_ARTICLES = {"articles/returners-magic-season-2", "articles/sasaki-and-peeps-season-2", "articles/romelia-war-chronicle", "articles/bleach-thousand-year-blood-war-the-last-pv-episodes-49-50"}
 
 def meta(source, name):
     pattern = r'<meta\s+[^>]*?(?:name|property)=["\']' + re.escape(name) + r'["\'][^>]*?content=["\']([^"\']*)["\']'
@@ -46,11 +44,11 @@ def extract(path):
                 image=image, published=date_value, updated=modified.group(1) if modified else date_value)
 
 def publication_timestamp(path):
-    # Git records the actual publication/integration time, including posts with the same visible datePublished.
+    # Use the original addition time; later edits must not promote an older article.
     relative = path.relative_to(ROOT).as_posix()
     try:
         value = subprocess.check_output(
-            ["git", "log", "-1", "--format=%ct", "--", relative],
+            ["git", "log", "-1", "--diff-filter=A", "--format=%ct", "--", relative],
             cwd=ROOT, stderr=subprocess.DEVNULL, text=True
         ).strip()
         return int(value) if value else 0
@@ -60,14 +58,13 @@ def publication_timestamp(path):
 def homepage_cards(items):
     cards = []
     for item in items:
-        pinned = ' data-home-pinned="true"' if item["article"] in PINNED_ARTICLES else ""
         href = "/" + html.escape(item["article"], quote=True)
         image = html.escape(item["image"], quote=True)
         title = html.escape(item["title"], quote=True)
         tag = html.escape(item["tag"], quote=True)
         description = html.escape(item["description"], quote=True)
         cards.append(
-            f'<a class="card story visual-card" href="{href}"{pinned}>'
+            f'<a class="card story visual-card" href="{href}">'
             f'<img src="{image}" alt="{title}" loading="lazy">'
             f'<div class="visual-body"><span class="tag">{tag}</span>'
             f'<h3>{title}</h3><p>{description}</p>'
@@ -107,14 +104,12 @@ def main():
     items.sort(
         key=lambda item: (item["published"],
                           publication_timestamp(ARTICLES / (item["article"].split("/")[-1] + ".html")),
-                          item["published"], item["article"]),
+                          item["article"]),
         reverse=True
     )
-    pinned = [item for item in items if item["article"] in PINNED_ARTICLES]
-    unpinned = [item for item in items if item["article"] not in PINNED_ARTICLES]
-    # Keep the four freshest stories in the lead strip; pin substantially updated guides
-    # immediately after them so the More Anime News pagination keeps them visible.
-    latest = unpinned[:4] + pinned + unpinned[4:]
+    # Publication order is shared by the lead strip and the complete archive.
+    # Edits and previous editorial pins do not promote an older publication.
+    latest = items
     OUT.write_text(json.dumps({"generated":date.today().isoformat(),"items":latest}, ensure_ascii=False, separators=(",",":"))+"\n", encoding="utf-8")
     update_homepage(latest)
     print("Generated latest news:", len(items), "articles,", len(latest), "homepage cards")

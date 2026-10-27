@@ -19,6 +19,11 @@ jobs:
       - name: Verify game guide News classification
         if: contains(github.head_ref, 'anime-mysterious-depth')
         run: python tests/test_news_categories.py
+      - name: Verify homepage publication order
+        if: contains(github.head_ref, 'more-news-publication')
+        run: |
+          node tests/test_home_news_publication.cjs
+          python -m unittest discover -s tests -p test_latest_news.py
       - run: npm install --no-save playwright@1.56.1
       - name: Install Chromium and verify runtime dependencies
         run: |
@@ -77,6 +82,26 @@ jobs:
                 report.push({name,slug,checks:await page.evaluate(()=>({h1:document.querySelector('h1')?.textContent,overflow:document.documentElement.scrollWidth>innerWidth,images:[...document.querySelectorAll('article img')].map(i=>({src:i.getAttribute('src'),loaded:i.complete&&i.naturalWidth>0,width:i.naturalWidth,height:i.naturalHeight})),schemas:[...document.querySelectorAll('script[type="application/ld+json"]')].map(s=>JSON.parse(s.textContent)['@type'])}))});
               }
               await page.goto('http://127.0.0.1:8000/',{waitUntil:'networkidle'});
+              if(branch.includes('more-news-publication')){
+                const checkOrder=await page.evaluate(()=>{
+                  const dates=window.ANINEXTUP_NEWS_DATES;
+                  const entries=[...document.querySelectorAll('[data-home-more] > a[href]')].map(card=>({article:new URL(card.href).pathname.slice(1)}));
+                  const expected=window.ANINEXTUP_RELEASES.sortNewsByPublication(entries,dates).map(item=>item.article);
+                  return {actual:entries.map(item=>item.article),expected};
+                });
+                if(JSON.stringify(checkOrder.actual)!==JSON.stringify(checkOrder.expected))throw Error('More Anime News is not ordered by publication');
+                const nav=page.locator('[data-home-more-pagination]');
+                const visible=()=>page.locator('[data-home-more] > a:visible').evaluateAll(cards=>cards.map(card=>new URL(card.href).pathname.slice(1)));
+                const firstPage=await visible();
+                await nav.locator('a.nextpostslink').click();
+                const secondPage=await visible();
+                if(JSON.stringify(secondPage)!==JSON.stringify(checkOrder.expected.slice(10,20)))throw Error('Publication order changed on page two');
+                await nav.locator('a.previouspostslink').click();
+                if(JSON.stringify(await visible())!==JSON.stringify(firstPage))throw Error('Previous page did not restore publication order');
+                await page.locator('#more-anime-news').scrollIntoViewIfNeeded();
+                await page.screenshot({path:'/tmp/editorial-evidence/'+name+'-publication-order.png'});
+                report.push({name,publicationOrder:true,firstPage,secondPage,total:checkOrder.actual.length});
+              }
               for(const homeSlug of ((branch.includes('more-premieres')||branch.includes('premiere-trailers'))?premiereSlugs:branch.includes('-length')?['tank-chair-release-date','chitose-ramune-bottle-cour-2','detective-is-already-dead-season-2','dreamland-release-date']:[article])){
               let cards=page.locator('[data-home-latest] > a[href="/articles/'+homeSlug+'"], [data-home-more] > a[href="/articles/'+homeSlug+'"]');
               

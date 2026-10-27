@@ -237,6 +237,15 @@ function tidyHomepageStoryDuplicates(){
   }
   const more=document.querySelector('[data-home-more]');
   if(more){
+    // Featured archive cards and later edits must not change publication order.
+    // Keep the already ordered static fallback if the date index is unavailable.
+    if(window.ANINEXTUP_NEWS_DATES&&window.ANINEXTUP_RELEASES?.sortNewsByPublication){
+      const entries=Array.from(more.querySelectorAll(':scope > a[href]')).map(card=>({
+        article:(canonical(card.getAttribute('href'))||'').replace(/^\//,''),card
+      }));
+      const ordered=window.ANINEXTUP_RELEASES.sortNewsByPublication(entries,window.ANINEXTUP_NEWS_DATES);
+      more.append(...ordered.map(entry=>entry.card));
+    }
     const localSeen=new Set();
     for(const card of more.querySelectorAll(':scope > a[href]')){
       const key=canonical(card.getAttribute('href'));
