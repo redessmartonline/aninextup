@@ -1,5 +1,5 @@
 window.ANINEXTUP_DATA={
-updated:"2026-10-26",
+updated:"2026-10-27",
 site:{timezone:"America/Santo_Domingo",season:"Fall 2026"},
 anime:[
 {id:"ranma-s3",image:"/assets/images/ranma-season-3.jpeg",title:"Ranma 1/2 Season 3: Netflix Schedule, Cast and Watch Guide",date:"2026-10-03",platform:"Netflix",article:"articles/ranma-season-3",newsCategory:"returning-series",category:"Season Premiere",status:"confirmed"},
