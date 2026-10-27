@@ -631,7 +631,10 @@ function normalizeArticleFooter(){
   if(!article)return;
   const footers=[...document.querySelectorAll('footer')];
   const footer=footers.shift()||document.createElement('footer');
+  const cookiePreferences=document.getElementById('open_preferences_center');
   footer.innerHTML='<b>ANINEXTUP</b><p>Anime releases, streaming guides, calendars and news.</p><small>Release dates and availability can vary by region.</small><p><a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></p>';
+  // Preserve the same control so its TermsFeed click handler remains attached.
+  if(cookiePreferences){const preferencesRow=document.createElement('p');preferencesRow.append(cookiePreferences);footer.append(preferencesRow);}
   footers.forEach(extra=>extra.remove());
   if(!footer.isConnected)document.body.append(footer);
   const related=article.querySelector('.related-releases');
