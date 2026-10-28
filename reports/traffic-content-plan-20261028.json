@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-28",
+  "searchConsole": {
+    "period": "2026-10-01 through 2026-10-26",
+    "scope": "Query/page rows; anonymized queries may be omitted. These are site impressions, not keyword search volumes.",
+    "clusters": [
+      [
+        "Today",
+        521,
+        0
+      ],
+      [
+        "November2026",
+        125,
+        1
+      ],
+      [
+        "Granite Waves",
+        74,
+        6
+      ]
+    ]
+  },
+  "priorities": [
+    {
+      "rank": 1,
+      "title": "Dual Shadow Precure Anime: 2027 Release Date & Official Teaser",
+      "intent": "Release date, official teaser, streaming status",
+      "status": "Published",
+      "url": "https://aninextup.com/articles/dual-shadow-precure-villain-heroines-anime-2027",
+      "basis": "New official 2027 spin-off announcement; gap in AniNextUp coverage, qualitative opportunity."
+    },
+    {
+      "rank": 2,
+      "title": "Jump Festa 2027 Schedule: Stages, Dates & Streaming Updates",
+      "intent": "Event schedule and where to watch",
+      "status": "Research queue",
+      "basis": "Official Dec19–20 Super Stage schedule available; streaming requires separate verification."
+    },
+    {
+      "rank": 3,
+      "title": "Fall 2026 Anime English Dub Schedule: Dates & Platforms",
+      "intent": "Dub release dates and language availability",
+      "status": "Research queue",
+      "basis": "Separate viewing intent from Japanese release guides. Existing official dub notices can support a roundup."
+    },
+    {
+      "rank": 4,
+      "title": "Anime Movies Coming in 2027: Confirmed Dates & Release Regions",
+      "intent": "Movie discovery and theatrical dates",
+      "status": "Research queue",
+      "basis": "Separate film-format intent; verify every title and distinguish Japan from international release."
+    },
+    {
+      "rank": 5,
+      "title": "Skull Dragon’s Precious Daughter Anime: 2027, Cast & Trailer",
+      "intent": "Specific title release date and trailer",
+      "status": "Research queue; primary-source verification required",
+      "basis": "Not in current sitemap; only publish after original production sources and video are verified."
+    }
+  ],
+  "notes": [
+    "No search volumes or guaranteed traffic claimed for the five new topics.",
+    "Today episode dataset expires October25; user-visible no-coverage state now distinguished from zero releases. Official new episode schedule remains unverified.",
+    "Dual Shadow platform remains TBA and must not create an unconfirmed platform entry in Where to Watch."
+  ]
+}
