@@ -40,7 +40,7 @@ def validate(path):
         if required not in s: errors.append("Missing " + required)
     if not has("figure", "") and "<figure" not in s: errors.append("Missing official hero figure")
     cards = re.findall(r'<a\b[^>]*class="[^"]*related-card[^"]*"[^>]*>(.*?)</a>', s, re.S)
-    if len(cards) != 2: errors.append("Expected exactly two related cards")
+    if len(cards) != 3: errors.append("Expected exactly three related cards")
     for i, card in enumerate(cards):
         if 'related-card-image' not in card or 'related-card-copy' not in card or '<h3' not in card:
             errors.append(f"Related card {i+1} lacks image/copy/title")
