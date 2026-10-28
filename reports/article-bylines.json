@@ -1,0 +1,722 @@
+{
+  "articles": 119,
+  "changed": 119,
+  "standardized": 119,
+  "unresolved": [],
+  "records": [
+    {
+      "status": "ok",
+      "published": "2026-10-04",
+      "path": "articles/a-certain-dark-item-release-date.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-04",
+      "path": "articles/ace-of-diamond-second-season.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-18",
+      "path": "articles/aikatsu-stars-hoshiboshi-no-progress-release-date.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-27",
+      "path": "articles/akane-banashi-season-2-release-date.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-17",
+      "path": "articles/anime-mysterious-codes-october-2026.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-03",
+      "path": "articles/anime-news-october-2026.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-04",
+      "path": "articles/anime-releasing-december-2026.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-20",
+      "path": "articles/anime-releasing-january-2027.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-04",
+      "path": "articles/anime-releasing-november-2026.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-03",
+      "path": "articles/aoashi-season-2.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-04",
+      "path": "articles/apothecary-diaries-movie.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-03",
+      "path": "articles/apothecary-diaries-season-3.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-07",
+      "path": "articles/ascendance-of-a-bookworm-part-4.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-04",
+      "path": "articles/bass-x-machina-release-date.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-24",
+      "path": "articles/because-i-the-true-saint-was-banished-anime-january-2027.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-15",
+      "path": "articles/berserk-of-gluttony-season-2.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-03",
+      "path": "articles/black-clover-season-2.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-14",
+      "path": "articles/bleach-thousand-year-blood-war-graniph-collection-october-2026.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-16",
+      "path": "articles/bleach-thousand-year-blood-war-the-last-pv-episodes-49-50.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-15",
+      "path": "articles/bless-anime-akiharu-nakano-koki-uchiyama-january-2027.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-03",
+      "path": "articles/blue-box-season-2.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-04",
+      "path": "articles/chitose-ramune-bottle-cour-2.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-06",
+      "path": "articles/cosmoship-yamato-root-2199.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-03",
+      "path": "articles/cyberpunk-edgerunners-2.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-14",
+      "path": "articles/d-anime-store-81-fall-2026-anime.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-04",
+      "path": "articles/dandivine-release-date.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-04",
+      "path": "articles/dark-machine-the-animation.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-18",
+      "path": "articles/delicious-in-dungeon-season-2-release-date.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-04",
+      "path": "articles/demons-crest-release-date.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-15",
+      "path": "articles/dengeki-daisy-anime-january-2027-trailer-cast.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-03",
+      "path": "articles/detective-is-already-dead-season-2.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-12",
+      "path": "articles/dr-stone-terraforming-anime.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-03",
+      "path": "articles/dragon-ball-super-beerus.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-04",
+      "path": "articles/dreamland-release-date.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-28",
+      "path": "articles/dual-shadow-precure-villain-heroines-anime-2027.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-21",
+      "path": "articles/eleceed-anime-april-2027-release-date.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-03",
+      "path": "articles/fall-2026-anime-calendar.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-03",
+      "path": "articles/firefly-wedding.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-06",
+      "path": "articles/fledgling-demon-lords-starter-shop.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-12",
+      "path": "articles/fool-night-release-date.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-18",
+      "path": "articles/frieren-season-3-release-date.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-10",
+      "path": "articles/full-clearing-another-world-zero-believers-premiere.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-12",
+      "path": "articles/ghost-of-tsushima-legends-anime-2028.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-17",
+      "path": "articles/granite-waves-anime.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-19",
+      "path": "articles/grotesqqque-release-date.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-24",
+      "path": "articles/haru-to-gen-anime-january-4-2027.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-05",
+      "path": "articles/hello-witch-love-potion-release-date.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-07",
+      "path": "articles/hirayasumi-anime-release-date.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-04",
+      "path": "articles/horror-collector-release-date.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-15",
+      "path": "articles/i-got-a-cheat-skill-season-2-january-2027.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-15",
+      "path": "articles/i-lost-my-adventurers-license-anime-january-2027.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-04",
+      "path": "articles/iceblade-sorcerer-ii.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-04",
+      "path": "articles/im-looking-for-a-zombie.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-14",
+      "path": "articles/in-a-world-full-of-zombies-january-2027.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-13",
+      "path": "articles/inherit-the-winds-anime-january-2027.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-17",
+      "path": "articles/jirai-girl-chihara-san-anime-january-2027.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-28",
+      "path": "articles/jump-festa-2027-schedule-dates-streaming.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-12",
+      "path": "articles/kagurabachi-anime-world-tour-finale.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-14",
+      "path": "articles/kinioto-january-2027.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-04",
+      "path": "articles/laid-off-cheat-granting-mage.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-13",
+      "path": "articles/le-college-noir-season-2-trailer-october-2026.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-09",
+      "path": "articles/live-action-firefly-wedding-tv-drama-announced-for-2027-a1ac1e86.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-20",
+      "path": "articles/love-live-hasunosora-release-date.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-16",
+      "path": "articles/made-in-abyss-awakening-mystery-release-date.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-16",
+      "path": "articles/maebashi-witches-emoemories-release-date.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-03",
+      "path": "articles/magic-knight-rayearth-2026.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-05",
+      "path": "articles/manchuria-opium-squad-anime.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-27",
+      "path": "articles/mashle-season-3-release-date.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-27",
+      "path": "articles/medalist-movie-release-date.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-13",
+      "path": "articles/mobile-suit-gundam-seed-freedom-zero-release-date.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-17",
+      "path": "articles/murcielago-anime-january-2027.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-03",
+      "path": "articles/my-happy-marriage-special-episodes.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-11",
+      "path": "articles/naruto-ninku-anime.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-12",
+      "path": "articles/naruto-shadow-rising-manga.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-03",
+      "path": "articles/netflix-october-2026.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-04",
+      "path": "articles/nia-liston-release-date.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-12",
+      "path": "articles/noa-is-my-senior-anime-2027.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-17",
+      "path": "articles/now-that-we-draw-anime-january-2027.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-12",
+      "path": "articles/nues-exorcist-anime-summer-2027.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-17",
+      "path": "articles/one-piece-elbaph-arc-english-dub-october-2026.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-12",
+      "path": "articles/one-punch-man-season-3-part-2-january-2027.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-06",
+      "path": "articles/otome-heroines-fight-for-survival-anime.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-14",
+      "path": "articles/paw-palaces-creditless-ending-october-2026.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-09",
+      "path": "articles/pok-mon-horizons-anime-unseals-treasures-of-ruin-in-latest-wonder-a6b9d2d5.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-06",
+      "path": "articles/pokemon-horizons-season-4-wonders-ahead.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-24",
+      "path": "articles/prisma-illya-finale-anime-2027.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-03",
+      "path": "articles/psyren-release-date.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-04",
+      "path": "articles/rakuen-tsuihou-kokoro-no-resonance.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-04",
+      "path": "articles/ramparts-of-ice-season-2.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-03",
+      "path": "articles/ranma-season-3.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-03",
+      "path": "articles/reborn-space-mercenary.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-05",
+      "path": "articles/record-of-a-fallen-vampire-anime.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-05",
+      "path": "articles/red-riding-hood-detective-story.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-17",
+      "path": "articles/reincarnated-as-a-sword-season-2-english-dub-release-date.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-04",
+      "path": "articles/reincarnated-goblin.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-03",
+      "path": "articles/returners-magic-season-2.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-04",
+      "path": "articles/romelia-war-chronicle.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-16",
+      "path": "articles/sakamoto-days-season-2.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-09",
+      "path": "articles/sasaki-and-peeps-season-2-anime-shares-creditless-opening-and-end-a03f04c7.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-03",
+      "path": "articles/sasaki-and-peeps-season-2.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-19",
+      "path": "articles/sekiro-no-defeat-release-date.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-20",
+      "path": "articles/shangri-la-frontier-season-3-release-date.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-12",
+      "path": "articles/sss-class-revival-hunter-anime-january-2027.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-03",
+      "path": "articles/suikoden-anime.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-04",
+      "path": "articles/takopis-original-sin-movie.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-04",
+      "path": "articles/tale-secret-saint.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-04",
+      "path": "articles/tank-chair-release-date.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-13",
+      "path": "articles/the-boxer-anime-announcement.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-13",
+      "path": "articles/the-fable-season-2-january-2027.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-07",
+      "path": "articles/the-moon-on-a-rainy-night-anime.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-17",
+      "path": "articles/the-one-piece-netflix-february-2027.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-03",
+      "path": "articles/tokyo-revengers-war-three-titans.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-04",
+      "path": "articles/vermilion-mask-release-date.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-04",
+      "path": "articles/votoms-gray-witch-part-1.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-07",
+      "path": "articles/walking-home-with-you-anime.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-28",
+      "path": "articles/where-to-watch-one-piece.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-04",
+      "path": "articles/witch-on-the-holy-night-movie.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-04",
+      "path": "articles/worlds-strongest-witch.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-14",
+      "path": "articles/yumeneko-connect-anime-announcement.html",
+      "changed": true
+    }
+  ]
+}
