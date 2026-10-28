@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-28",
+  "article": "articles/where-to-watch-one-piece.html",
+  "title": "Where to Watch One Piece in 2026: Streaming, Dub & Regions",
+  "wordCount": 1326,
+  "countScope": "Lead and main prose, excluding navigation, tables, media labels, sources and related cards",
+  "primaryIntent": "Where to stream the original One Piece anime legally",
+  "keywords": [
+    "where to watch One Piece",
+    "where to stream One Piece",
+    "One Piece English dub streaming",
+    "is One Piece on Netflix",
+    "is One Piece on Hulu"
+  ],
+  "duplicateCheck": {
+    "sitemap": "Only separate Elbaph dub and Netflix remake articles found",
+    "catalog": "No general One Piece streaming guide found",
+    "searchIndex": "No equivalent",
+    "openPullRequests": "No equivalent found"
+  },
+  "sourceNotes": [
+    "Toei regional distribution notices",
+    "Official Crunchyroll episode 1156 listing",
+    "Official Netflix title page and country-library help",
+    "Official Hulu US title page: dated observation, not worldwide catalog",
+    "Japanese official service notice via indexed text; direct fetch restricted",
+    "BBC inventory unverified; not claimed as confirmed"
+  ],
+  "media": {
+    "hero": "/assets/images/external/7030a714c355d627d5ed8b098ee8b83fd181382b87a19d5984a3b61f1f2ae70e.webp",
+    "youtube": "YnczpEoeaDM",
+    "channel": "ONE PIECE Official - ENG",
+    "identity": "Official Toei trailer link and YouTube oEmbed matched",
+    "heroLiveWidth": 1280
+  },
+  "checks": {
+    "editorialValidator": "PASS",
+    "oneH1": true,
+    "json": "PASS",
+    "fragmentLinks": "PASS",
+    "relatedCards": 3,
+    "mobileVisual": "NOT TESTED — device emulation unavailable",
+    "livePublication": "pending"
+  },
+  "rankingGuarantee": false
+}
