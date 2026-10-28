@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-28",
+  "basis": "Search Console query/page rows, October 1–26, 2026. Impressions are site visibility, not search volume.",
+  "pages": [
+    {
+      "url": "/articles/anime-releasing-november-2026",
+      "primaryKeyword": "November 2026 anime releases",
+      "secondaryKeywords": [
+        "anime november 2026",
+        "anime release november 2026",
+        "anime coming out in november 2026"
+      ],
+      "changes": [
+        "Aligned title, H1, descriptions and structured metadata",
+        "Direct opening answer with three streaming dates and coverage scope",
+        "Section navigation to existing streaming, movie and region tables"
+      ]
+    },
+    {
+      "url": "/articles/granite-waves-anime",
+      "primaryKeyword": "where to watch Granite Waves",
+      "secondaryKeywords": [
+        "Granite Waves free pilot",
+        "Granite Waves episodes"
+      ],
+      "changes": [
+        "Moved viewing answer to first prose section",
+        "Distinguished free pilots from subscription episodes",
+        "Added factual platform questions",
+        "Restored missing images on two related cards"
+      ]
+    },
+    {
+      "url": "/articles/demons-crest-release-date",
+      "primaryKeyword": "Demon's Crest anime release date",
+      "secondaryKeywords": [
+        "Demons Crest anime where to watch",
+        "Demons' Crest Prime Video"
+      ],
+      "changes": [
+        "Dedicated viewing section",
+        "Clarified title spelling and Prime Video exclusivity",
+        "Separated announced JST time from local availability"
+      ]
+    },
+    {
+      "url": "/today",
+      "primaryKeyword": "anime releasing today",
+      "secondaryKeywords": [
+        "anime releases today",
+        "anime episode schedule today"
+      ],
+      "changes": [
+        "Improved static title and social descriptions",
+        "Added viewing questions and internal links",
+        "Coverage-aware live description and static no-JavaScript verification notice"
+      ],
+      "pending": "Verified episode dataset ends October 25. No subsequent dates, episodes or times inferred."
+    }
+  ],
+  "checks": [
+    "Three article editorial validators passed",
+    "One H1 per page",
+    "JSON and inline JavaScript syntax passed",
+    "Internal fragment targets verified"
+  ],
+  "rankingGuarantee": false
+}
