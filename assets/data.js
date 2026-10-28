@@ -1,5 +1,5 @@
 window.ANINEXTUP_DATA={
-updated:"2026-10-27",
+updated:"2026-10-28",
 site:{timezone:"America/Santo_Domingo",season:"Fall 2026"},
 anime:[
 {id:"dual-shadow-precure-villain-heroines-anime-2027",image:"/assets/images/external/27277b3aa3c3af637a5004c6465fd3d314cc5ef0c81bd25e84fc0b77ab9475f6.webp",title:"Dual Shadow Precure Anime: 2027 Release Date & Official Teaser",date:null,dateLabel:"2027",platform:"TBA",article:"articles/dual-shadow-precure-villain-heroines-anime-2027",newsCategory:"new-anime",category:"Premiere",status:"tba"},
@@ -89,6 +89,7 @@ anime:[
 {id:"psyren",newsCategory:"new-anime",image:"assets/images/psyren.jpg",title:"PSYREN",date:"2026-10-05",platform:"Crunchyroll",article:"articles/psyren-release-date",category:"Premiere",status:"confirmed"},
 ],
 guides:[
+{image:"/assets/images/jump-festa-2027-schedule.svg",title:"Jump Festa 2027 Schedule: Dates, Stages & Streaming",tag:"JUMP FESTA 2027 · EVENT GUIDE",article:"articles/jump-festa-2027-schedule-dates-streaming",description:"Jump Festa 2027 runs December 19–20, 2026. See the Super Stage schedule in JST, time conversions and confirmed online streaming information."},
 {image:"assets/images/psyren.jpg",title:"PSYREN",tag:"NEW",article:"articles/psyren-release-date",newsCategory:"release-news",description:"Japan and Crunchyroll premiere times, cast, manga and streaming guide."},
 {image:"/assets/images/external/f8eabe7be060132cdc8aef4ce896e7cd425c71cb620c1316c911f73f0165fea5.webp",title:"Hello, I am a Witch: Release Date, Schedule & Watch Guide",tag:"OFFICIAL NEWS",article:"articles/hello-witch-love-potion-release-date",newsCategory:"new-anime",description:"Hello, I am a Witch premiered October 5, 2026. Check Japan's weekly times in JST, streaming distinctions, cast, official PV and English novel information."},
 {image:"/assets/images/external/1b28bf36dc298cae32e36b201776061b8adb397ff09a1a17099446329b77b6ea.webp",title:"Nia Liston: The Merciless Maiden",tag:"OFFICIAL NEWS",article:"articles/nia-liston-release-date",newsCategory:"new-anime",description:"Nia Liston premiered October 6, 2026. Official Blu-ray listings cover 25 episodes; see the Japan broadcast schedule and HIDIVE simulcast."},
