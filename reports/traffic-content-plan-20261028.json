@@ -32,10 +32,20 @@
     },
     {
       "rank": 2,
-      "title": "Jump Festa 2027 Schedule: Stages, Dates & Streaming Updates",
+      "title": "Jump Festa 2027 Schedule: Dates, Stages & Streaming",
       "intent": "Event schedule and where to watch",
-      "status": "Research queue",
-      "basis": "Official Dec19–20 Super Stage schedule available; streaming requires separate verification."
+      "status": "Published",
+      "basis": "Official December 19–20, 2026 dates and 15 Super Stage sessions verified. Organizer confirms online coverage, archives undecided.",
+      "url": "https://aninextup.com/articles/jump-festa-2027-schedule-dates-streaming",
+      "verification": {
+        "date": "2026-10-28",
+        "liveBrowser": true,
+        "heroLoaded": true,
+        "tableRows": 15,
+        "sitemap": true,
+        "searchIndex": true,
+        "editorialValidator": "PASS"
+      }
     },
     {
       "rank": 3,
