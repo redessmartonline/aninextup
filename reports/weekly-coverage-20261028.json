@@ -1,0 +1,32 @@
+{
+  "checked": "2026-10-28",
+  "source": "https://www.crunchyroll.com/pt-pt/news/seasonal-lineup/2026/10/7/programacao-calendario-crunchyroll-semana-temporada-outubro-2026",
+  "sourceUpdated": "2026-10-26T11:12:00Z",
+  "retrieval": "Indexed official Crunchyroll article text via web search; direct article body unavailable",
+  "validFrom": "2026-10-26",
+  "validThrough": "2026-11-01",
+  "scope": "Selected Japanese-audio releases with Portuguese subtitles in Brazil. Not a worldwide or complete platform schedule.",
+  "timeZone": "America/Sao_Paulo",
+  "slots": 49,
+  "wednesdaySlots": 8,
+  "episodeNumbers": "Not supplied in the source; left null",
+  "exclusions": [
+    "Star Detective Precure: paused in the source",
+    "TOUGEN ANKI: pause marker requires clarification",
+    "Portuguese dub-only entries"
+  ],
+  "checks": [
+    "JavaScript syntax",
+    "49 weekly cards",
+    "8 Wednesday cards",
+    "Brazil midnight boundary",
+    "Coverage expiry",
+    "Null episode labels"
+  ],
+  "limitations": [
+    "Other countries not verified",
+    "Episode numbers not verified",
+    "Indexed official article can lag later schedule edits"
+  ],
+  "liveVerification": "pending"
+}
