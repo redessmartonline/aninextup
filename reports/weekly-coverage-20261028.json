@@ -28,5 +28,12 @@
     "Episode numbers not verified",
     "Indexed official article can lag later schedule edits"
   ],
-  "liveVerification": "pending"
+  "liveVerification": {
+    "todayCards": 8,
+    "weeklyCards": 49,
+    "dayGroups": 7,
+    "regionLabel": "Brazil · Brasília time (UTC−3)",
+    "checked": "2026-10-28",
+    "episodeNumbersNotInvented": true
+  }
 }
