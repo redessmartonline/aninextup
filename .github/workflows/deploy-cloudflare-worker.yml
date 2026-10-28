@@ -8,6 +8,7 @@ on:
       - "**.html"
       - "assets/**"
       - "scripts/build_watch_catalog.js"
+      - "scripts/standardize_article_bylines.py"
       - "_headers"
       - "_redirects"
       - "robots.txt"
