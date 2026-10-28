@@ -72,6 +72,29 @@ def normalize(text):
     edits.append((at,at,byline))
     for start,end,value in sorted(edits,key=lambda e:(e[0],e[1]),reverse=True):
         text=text[:start]+value+text[end:]
+    text = re.sub(r'(?m)^[ \\t]+
+
+def main():
+    rows=[]
+    for path in sorted((ROOT/'articles').glob('*.html')):
+        before=path.read_text(encoding='utf-8')
+        after, row=normalize(before)
+        row['path']=path.relative_to(ROOT).as_posix()
+        row['changed']=after!=before
+        if after!=before:
+            path.write_text(after,encoding='utf-8')
+        rows.append(row)
+    report={'articles':len(rows),'changed':sum(r['changed'] for r in rows),'standardized':sum(r['status']=='ok' for r in rows),'unresolved':[r for r in rows if r['status']=='blocked'],'records':rows}
+    target=ROOT/'reports'/'article-bylines.json'
+    target.parent.mkdir(exist_ok=True)
+    target.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    print(json.dumps({k:v for k,v in report.items() if k!='records'},ensure_ascii=False))
+    if report['unresolved']:
+        raise SystemExit('Some original dates or article headers require verification; see reports/article-bylines.json')
+
+if __name__=='__main__':
+    main()
+, '', text)
     return text, {'status':'ok','published':published[0]}
 
 def main():
