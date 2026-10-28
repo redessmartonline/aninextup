@@ -22,6 +22,9 @@ def article_entry(path):
     if not file.is_file():
         return None
     source = file.read_text(encoding="utf-8")
+    # Structured articles belong to auto-integrate-articles, not this legacy feed.
+    if re.search(r'id=["\\\']aninextup-index["\\\']', source):
+        return None
     if re.search(r'<meta\s+name="robots"\s+content="[^"]*noindex', source, re.I):
         return None
     title = meta(source, "og:title")
@@ -59,9 +62,10 @@ def main():
     lines = []
     for entry in additions:
         lines.append("{" + ",".join(k + ":" + json.dumps(v, ensure_ascii=False) for k, v in entry.items()) + "},")
-    updated = data.replace("anime:[\n", "anime:\n" + "\n".join(lines) + "\n", 1)
+    updated = data.replace("guides:[\n", "guides:[\n" + "\n".join(lines) + "\n", 1)
     if updated == data:
-        raise RuntimeError("Could not find anime array in assets/data.js")
+        raise RuntimeError("Could not find guides array in assets/data.js")
+    subprocess.run(["node", "--check"], input=updated, text=True, check=True, capture_output=True)
     DATA.write_text(updated, encoding="utf-8")
     print("Added", len(additions), "new article(s) to homepage feed")
 
