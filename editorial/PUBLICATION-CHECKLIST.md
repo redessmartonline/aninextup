@@ -1,5 +1,20 @@
 # AniNextUp — Mandatory pre-publication gate
 
+## New-article standard — owner instruction, October 28, 2026
+
+This standard applies to articles created after this instruction. It supersedes earlier 800–1,000-word targets for NEW articles; it does not require bulk expansion of existing articles.
+
+- Write **1,200–2,000 words of original English main editorial content**. Count the lead and substantive article text, excluding navigation, metadata, source lists, captions, repeated table labels, related cards and footer.
+- Before drafting, identify one primary user search intent, one primary keyword cluster and relevant secondary questions. Use current Search Console signals when available; do not invent search volumes, difficulty scores or ranking forecasts.
+- Search existing canonical articles, aliases and open editorial work first. Update an existing page when it serves the same intent rather than create competing duplicate pages.
+- Answer the main question directly in the opening. Organize useful H2/H3 sections around actual reader questions, not a repeated template or a fixed keyword density.
+- Cover relevant release dates, exact versus year/month-only windows, platforms, countries, language versions, episode information, watch order and story context ONLY when those questions fit the topic and the evidence supports the answers. State unknowns clearly.
+- Add original editorial value through source comparison, clear release-scope distinctions, useful tables or explanations; distinguish interpretation from confirmed facts. Never add filler, repeated paragraphs, invented FAQs or unsupported claims to reach the range. If the evidence cannot support 1,200 useful words, choose a better-supported topic or update an existing guide; flag the shortfall instead of publishing it as compliant.
+- Use a concise, descriptive SEO title and unique description, one H1, clear headings, a preserved canonical URL and accurate structured data. Place keywords naturally; avoid stuffing, clickbait and unsupported promises.
+- Add relevant contextual internal links and exactly three related cards with real destination artwork. Keep the verified official cover and embed an official trailer whenever one is available.
+- Record the word count, primary intent, target keyword cluster, questions answered, sources and verification limits in the editorial review record.
+- Validate factual accuracy, useful answers, images, video, links, metadata, index/sitemap inclusion and deployed rendering. Assess Search Console impressions, clicks, CTR and position after recrawling; length and SEO edits do not guarantee Google rankings.
+
 Every new or materially updated article MUST pass these checks **before** asking for final publication approval or merging to `main`.
 
 ## Cover: BLOCKING
