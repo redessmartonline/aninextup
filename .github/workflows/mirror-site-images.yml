@@ -32,19 +32,28 @@ jobs:
           python-version: '3.x'
       - name: Install image validation tools
         run: python -m pip install --disable-pip-version-check Pillow
-      - name: Mirror and validate every rendered image
-        run: python scripts/mirror_site_images.py
       - id: commit
-        name: Commit local images and rewritten references
+        name: Mirror images and commit from the latest branch
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          if ! git diff --cached --quiet; then
+          for attempt in 1 2 3; do
+            # This is an ephemeral generated-output checkout.
+            # Rebuild from current main after a competing workflow advances it.
+            git fetch origin main
+            git reset --hard origin/main
+            python scripts/mirror_site_images.py
+            git add -A
+            if git diff --cached --quiet; then exit 0; fi
             git commit -m "Host rendered site images on AniNextUp"
-            git push origin main
-            echo "changed=true" >> "$GITHUB_OUTPUT"
-          fi
+            if git push origin HEAD:main; then
+              echo "changed=true" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            sleep 3
+          done
+          echo "Image mirroring could not publish after three branch-refresh attempts."
+          exit 1
       - name: Deploy the updated site assets
         if: steps.commit.outputs.changed == 'true'
         env:
