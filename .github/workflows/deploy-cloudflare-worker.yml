@@ -20,6 +20,11 @@ on:
 permissions:
   contents: read
 
+# Serialize production publishes so an older job cannot replace a newer release.
+concurrency:
+  group: aninextup-production
+  cancel-in-progress: false
+
 jobs:
   deploy:
     name: Deploy production Worker
@@ -28,6 +33,8 @@ jobs:
     steps:
       - name: Check out main
         uses: actions/checkout@v6
+        with:
+          ref: main
 
       - name: Check Cloudflare deployment secrets
         shell: bash
