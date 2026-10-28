@@ -55,6 +55,9 @@ jobs:
             exit 1
           fi
 
+      - name: Standardize article authorship and original publication dates
+        run: python scripts/standardize_article_bylines.py
+
       - name: Build confirmed streaming platform catalog
         run: node scripts/build_watch_catalog.js
 
