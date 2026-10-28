@@ -1,12 +1,8 @@
 {
-  "count": 7,
+  "count": 6,
   "failed_count": 0,
   "failed": [],
   "images": [
-    {
-      "source": "https://aninextup.com/assets/images/jump-festa-2027-schedule.svg",
-      "local": "/assets/images/jump-festa-2027-schedule.svg"
-    },
     {
       "source": "https://hyouken-anime.com/wp/wp-content/themes/hyouken-theme/images/kv1.webp",
       "local": "/assets/images/external/e6229d9c6720b1bd64deb439aea12b6c45e26d76e860f63aea2c47dd38017e4b.webp"
