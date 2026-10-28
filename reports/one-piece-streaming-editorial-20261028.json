@@ -40,7 +40,14 @@
     "fragmentLinks": "PASS",
     "relatedCards": 3,
     "mobileVisual": "NOT TESTED — device emulation unavailable",
-    "livePublication": "pending"
+    "livePublication": "Verified public article route and homepage featured card",
+    "heroLoaded": true,
+    "relatedImagesLoaded": 3,
+    "trailerIframe": "https://www.youtube-nocookie.com/embed/YnczpEoeaDM?autoplay=1",
+    "trailerPlaybackLimit": "Iframe initiation verified, not a guarantee of playback in every country",
+    "sourceDisclosure": "collapsed",
+    "searchIndex": "Guide entry added",
+    "sitemap": "Present"
   },
   "rankingGuarantee": false
 }
