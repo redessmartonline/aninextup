@@ -14,9 +14,12 @@ const displayDate=e=>{const d=new Date(e.date+'T12:00:00Z');if((e.nextDayRegions
 const renderCard=(e,date)=>{const next=(e.nextDayRegions||[]).includes(selected),slot=e.times[selected]||e.times[2]||e.times[0];return '<article class="episode-card"><div class="episode-card-title"><h3><a href="'+esc(e.url)+'" target="_blank" rel="noopener noreferrer">'+esc(e.title)+'</a></h3><span>Episode '+esc(e.episode)+'</span></div><p class="episode-meta">'+esc(dayLabel(date||e.date))+' · Crunchyroll</p><p class="episode-time">'+esc(timeLabel(slot)+(next?' (next day)':'')+' · '+regions[selected])+'</p></article>';};
 function render(){
  const current=today(tz);
+ const outsideCoverage=!!(data.validFrom&&current<data.validFrom||data.validThrough&&current>data.validThrough);
+ const coverageNote='<p class="empty" role="status">Episode schedule awaiting verification for this date. Last verified coverage: '+esc(data.validFrom||'unknown')+' to '+esc(data.validThrough||'unknown')+'. This does not mean that no anime episodes are airing. We will list new dates after the official schedule is checked.</p>';
  if(todayRoot){
   const items=data.episodes.filter(e=>e.date===current);
-  todayRoot.innerHTML=items.length?items.map(e=>renderCard(e,e.date)).join(''):'<p class="empty">No weekly episode schedule is listed here for today. Check <a href="'+esc(data.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Crunchyroll’s official weekly calendar</a> for the latest regional schedule.</p>';
+  todayRoot.dataset.scheduleState=outsideCoverage?'awaiting-verification':'verified';
+  todayRoot.innerHTML=outsideCoverage?coverageNote:items.length?items.map(e=>renderCard(e,e.date)).join(''):'<p class="empty">No weekly episode schedule is listed here for today. Check <a href="'+esc(data.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Crunchyroll’s official weekly calendar</a> for the latest regional schedule.</p>';
  }
  if(weekRoot){
   const start=new Date(current+'T12:00:00Z');start.setUTCDate(start.getUTCDate()-((start.getUTCDay()+6)%7));
@@ -27,7 +30,7 @@ function render(){
    const groups=new Map();items.forEach(e=>{if(!groups.has(e.localDate))groups.set(e.localDate,[]);groups.get(e.localDate).push(e);});
    weekRoot.innerHTML=[...groups.entries()].map(([date,eps])=>'<section class="episode-day-group"><h3>'+esc(dayLabel(date))+'</h3><div class="episode-schedule">'+eps.map(e=>renderCard(e,e.localDate)).join('')+'</div></section>').join('');
   }else{
-   weekRoot.innerHTML='<p class="empty">No weekly episodes are listed for this week. Check <a href="'+esc(data.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Crunchyroll’s official schedule</a> for the latest regional lineup.</p>';
+   weekRoot.innerHTML=outsideCoverage?coverageNote:'<p class="empty">No weekly episodes are listed for this week. Check <a href="'+esc(data.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Crunchyroll’s official schedule</a> for the latest regional lineup.</p>';
   }
  }
 }
