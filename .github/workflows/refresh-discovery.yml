@@ -9,6 +9,7 @@ on:
       - 'assets/data.js'
       - 'assets/app.js'
       - 'assets/search-aliases.json'
+      - 'scripts/standardize_article_bylines.py'
       - 'scripts/build_search_index.py'
       - 'scripts/build_news_dates.py'
       - 'tests/test_news_order.cjs'
@@ -40,6 +41,7 @@ jobs:
           for attempt in 1 2 3; do
             git fetch origin main
             git reset --hard origin/main
+            python scripts/standardize_article_bylines.py
             python scripts/build_news_dates.py
             python scripts/build_search_index.py
             node scripts/prerender_discovery.js
@@ -50,7 +52,7 @@ jobs:
             node tests/test_search_progressive.cjs
             python -m unittest discover -s tests -p test_search_index.py
             git diff --check
-            git add -- '*.html' 'articles/*.html' 'assets/search-index.json' 'assets/news-dates.js'
+            git add -- '*.html' 'articles/*.html' 'assets/search-index.json' 'assets/news-dates.js' 'reports/article-bylines.json'
             if git diff --cached --quiet; then exit 0; fi
             git commit -m "Refresh crawlable schedules and article navigation"
             if git push origin HEAD:main; then exit 0; fi
