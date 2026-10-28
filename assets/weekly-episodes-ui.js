@@ -5,21 +5,21 @@ const weekRoot=document.querySelector('[data-weekly-episodes-week]');
 const select=document.querySelector('[data-episode-region]');
 if(!data||(!todayRoot&&!weekRoot))return;
 const tz=window.ANINEXTUP_DATA&&window.ANINEXTUP_DATA.site&&window.ANINEXTUP_DATA.site.timezone||data.timezone||'America/Santo_Domingo';
-const regions=data.regions||[];let selected=select?Number(select.value):2;if(!Number.isInteger(selected)||selected<0||selected>=regions.length)selected=2;
+const regions=data.regions||[];let selected=select?Number(select.value):0;if(!Number.isInteger(selected)||selected<0||selected>=regions.length)selected=0;
 const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const today=zone=>{const parts=new Intl.DateTimeFormat('en-US',{timeZone:zone,year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());const get=t=>parts.find(p=>p.type===t).value;return get('year')+'-'+get('month')+'-'+get('day');};
 const dayLabel=d=>new Date(d+'T12:00:00Z').toLocaleDateString('en-US',{weekday:'long',month:'short',day:'numeric',timeZone:'UTC'});
 const timeLabel=t=>{const p=t.split(':'),h=Number(p[0]);return (h%12||12)+':'+p[1]+' '+(h>=12?'PM':'AM');};
 const displayDate=e=>{const d=new Date(e.date+'T12:00:00Z');if((e.nextDayRegions||[]).includes(selected))d.setUTCDate(d.getUTCDate()+1);return d.toISOString().slice(0,10);};
-const renderCard=(e,date)=>{const next=(e.nextDayRegions||[]).includes(selected),slot=e.times[selected]||e.times[2]||e.times[0];return '<article class="episode-card"><div class="episode-card-title"><h3><a href="'+esc(e.url)+'" target="_blank" rel="noopener noreferrer">'+esc(e.title)+'</a></h3><span>Episode '+esc(e.episode)+'</span></div><p class="episode-meta">'+esc(dayLabel(date||e.date))+' · Crunchyroll</p><p class="episode-time">'+esc(timeLabel(slot)+(next?' (next day)':'')+' · '+regions[selected])+'</p></article>';};
+const renderCard=(e,date)=>{const next=(e.nextDayRegions||[]).includes(selected),slot=e.times[selected]||e.times[0];const heading=e.url?'<a href="'+esc(e.url)+'">'+esc(e.title)+'</a>':esc(e.title);const episode=Number.isInteger(e.episode)?'Episode '+e.episode:'Weekly episode · number not listed';return '<article class="episode-card"><div class="episode-card-title"><h3>'+heading+'</h3><span>'+esc(episode)+'</span></div><p class="episode-meta">'+esc(dayLabel(date||e.date))+' · Crunchyroll</p><p class="episode-time">'+esc(timeLabel(slot)+(next?' (next day)':'')+' · '+regions[selected])+'</p><p class="episode-language">'+esc(data.language||'')+'</p></article>';};
 function render(){
- const current=today(tz);
+ const current=today((data.regionTimezones||[])[selected]||tz);
  const outsideCoverage=!!(data.validFrom&&current<data.validFrom||data.validThrough&&current>data.validThrough);
  const coverageNote='<p class="empty" role="status">Episode schedule awaiting verification for this date. Last verified coverage: '+esc(data.validFrom||'unknown')+' to '+esc(data.validThrough||'unknown')+'. This does not mean that no anime episodes are airing. We will list new dates after the official schedule is checked.</p>';
  if(todayRoot){
-  const items=data.episodes.filter(e=>e.date===current);
+  const items=data.episodes.map(e=>({...e,localDate:displayDate(e)})).filter(e=>e.localDate===current).sort((a,b)=>(a.times[selected]||'').localeCompare(b.times[selected]||''));
   todayRoot.dataset.scheduleState=outsideCoverage?'awaiting-verification':'verified';
-  todayRoot.innerHTML=outsideCoverage?coverageNote:items.length?items.map(e=>renderCard(e,e.date)).join(''):'<p class="empty">No weekly episode schedule is listed here for today. Check <a href="'+esc(data.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Crunchyroll’s official weekly calendar</a> for the latest regional schedule.</p>';
+  todayRoot.innerHTML=outsideCoverage?coverageNote:items.length?items.map(e=>renderCard(e,e.localDate)).join(''):'<p class="empty">No weekly episode schedule is listed here for today. Check <a href="'+esc(data.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Crunchyroll’s official weekly calendar</a> for the latest regional schedule.</p>';
  }
  if(weekRoot){
   const start=new Date(current+'T12:00:00Z');start.setUTCDate(start.getUTCDate()-((start.getUTCDay()+6)%7));
