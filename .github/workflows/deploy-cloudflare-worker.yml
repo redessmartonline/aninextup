@@ -62,6 +62,9 @@ jobs:
       - name: Build confirmed streaming platform catalog
         run: node scripts/build_watch_catalog.js
 
+      - name: Refresh crawlable discovery schedules
+        run: node scripts/prerender_discovery.js
+
       - name: Deploy with Wrangler
         uses: cloudflare/wrangler-action@v4
         with:
