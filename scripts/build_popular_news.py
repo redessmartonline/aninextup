@@ -58,7 +58,7 @@ def select(snapshot, root):
 def render(source, snapshot, selected):
     esc = lambda value: html.escape(str(value), quote=True)
     cards = ''.join(f'<a class="popular-news-card" href="{esc(i["url"])}"><img src="{esc(i["image"])}" alt="{esc(i["title"])}" loading="lazy"><div class="popular-news-copy"><span class="popular-news-rank">#{rank} · MOST VIEWED</span><h3>{esc(i["title"])}</h3><span class="more">READ ARTICLE →</span></div></a>' for rank, i in enumerate(selected, 1))
-    section = '<section class="home-popular-news" aria-labelledby="popular-news-title"><div class="section-head"><div><span class="kicker">MOST VIEWED · LAST 30 COMPLETE DAYS</span><h2 id="popular-news-title">Popular News</h2></div></div><p class="popular-news-period">Based on Google Analytics page views · '+esc(snapshot['dateFrom'])+' to '+esc(snapshot['dateTo'])+' · Updated <time datetime="'+esc(snapshot['checkedAt'][:10])+'">'+esc(snapshot['checkedAt'][:10])+'</time></p><div class="home-popular-news-grid">'+cards+'</div></section>'
+    section = '<section class="home-popular-news" aria-labelledby="popular-news-title"><div class="section-head"><div><span class="kicker">MOST VIEWED · LAST 30 COMPLETE DAYS</span><h2 id="popular-news-title">Popular News</h2></div></div><div class="home-popular-news-grid">'+cards+'</div></section>'
     result, count = re.subn(r'<section class="home-popular-news".*?</section>', lambda _:section, source, flags=re.S)
     if count != 1:
         raise ValueError('Expected one Popular News section')
