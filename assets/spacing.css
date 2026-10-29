@@ -1,0 +1,57 @@
+/* Shared vertical rhythm, loaded after page-specific presentation styles.
+   Only section spacing is normalized; card padding and content remain intact. */
+:root{--section-space:24px;--heading-list-space:16px}
+body main > section:not(.hero):not(.page-hero):not(.release-summary){
+  padding-top:var(--section-space)!important;
+  padding-bottom:var(--section-space)!important;
+  margin-top:0!important;
+  margin-bottom:0!important;
+}
+body main > section.section-head{margin-bottom:0!important}
+body main > section.section-head:has(+section.grid),
+body main > section.section-head:has(+section.calendar-app){
+  padding-bottom:var(--heading-list-space)!important;
+}
+body main > section.section-head + section.grid,
+body main > section.section-head + section.calendar-app{
+  padding-top:0!important;
+}
+body main > section.page-hero{padding-top:40px;padding-bottom:24px}
+body main[class] > section.page-hero{padding-top:40px;padding-bottom:24px}
+body main:not(.home-page) > section.hero{
+  min-height:0;padding-top:40px;padding-bottom:24px;
+}
+body main > section.today-stats{
+  padding-top:0!important;padding-bottom:0!important;
+  margin-top:16px!important;margin-bottom:24px!important;
+}
+body main > section.today-episodes{
+  margin-top:16px!important;margin-bottom:24px!important;
+}
+body main.news-redesign > section.news-intro{padding-top:32px!important}
+body main.news-redesign > section.news-lead{padding-top:0!important}
+body main > .article{padding-top:48px;padding-bottom:24px}
+body .article .article-head{padding-bottom:24px}
+body .article > section:not(.release-summary):not(.related-releases),
+body .article .prose section:not(.release-summary){
+  padding-top:0;padding-bottom:0;margin-top:24px;margin-bottom:24px;
+}
+body .article .prose h2{margin-top:32px}
+body .article .related-releases{margin-top:24px;padding-top:24px}
+body > footer{margin-top:24px;padding-top:28px;padding-bottom:32px}
+body:has(main > .article) > footer{margin-top:16px}
+@media(max-width:780px){
+  :root{--section-space:18px;--heading-list-space:12px}
+  body main > section.page-hero,
+  body main[class] > section.page-hero{padding-top:28px;padding-bottom:18px}
+  body main:not(.home-page) > section.hero{padding-top:28px;padding-bottom:18px}
+  body main.news-redesign > section.news-intro{padding-top:24px!important}
+  body main > .article{padding-top:32px;padding-bottom:16px}
+  body .article .article-head{padding-bottom:20px}
+  body .article > section:not(.release-summary):not(.related-releases),
+  body .article .prose section:not(.release-summary){margin-top:20px;margin-bottom:20px}
+  body .article .prose h2{margin-top:28px}
+  body .article .related-releases{margin-top:18px;padding-top:18px}
+  body > footer{margin-top:20px;padding-top:24px;padding-bottom:28px}
+  body:has(main > .article) > footer{margin-top:12px}
+}

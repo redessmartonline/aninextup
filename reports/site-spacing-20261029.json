@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-29",
+  "scope": {
+    "htmlPages": 137,
+    "articlePages": 122,
+    "otherPages": 15
+  },
+  "changes": [
+    "Shared /assets/spacing.css loaded after page presentation CSS",
+    "Unboxed section spacing 24px per edge desktop, 18px mobile",
+    "Heading-to-calendar/list separation reduced",
+    "Removed stacked padding from Today stats",
+    "Reduced article start and footer separation",
+    "Removed redundant Today-only spacing patch"
+  ],
+  "checks": {
+    "all137BodiesUnchanged": true,
+    "cssParse": "PASS"
+  },
+  "baseline": {
+    "genericAdjacentSections": "124px plus margins",
+    "homepageSections": "80px",
+    "articleTop": "80px"
+  },
+  "production": "pending",
+  "limits": [
+    "All HTML audited; visual QA will sample shared templates",
+    "No device emulation exposed; mobile rules not a claim of mobile visual inspection"
+  ]
+}
