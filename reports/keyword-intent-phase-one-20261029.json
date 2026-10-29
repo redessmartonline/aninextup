@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-29",
+  "scope": "First phase: four existing pages; no duplicate articles",
+  "baseline": {
+    "source": "Google Search Console via Windsor.ai",
+    "from": "2026-10-01",
+    "through": "2026-10-27",
+    "note": "Property impressions, not global keyword volume. No ranking improvement yet measured."
+  },
+  "pages": [
+    {
+      "path": "/today",
+      "primary": "anime releasing today",
+      "secondary": [
+        "today anime release",
+        "new anime episodes today"
+      ],
+      "action": "Explain episode vs premiere, Brazil-only coverage; fix server-rendered region, missing episode number, absent URLs and expiry notice"
+    },
+    {
+      "path": "/articles/anime-releasing-november-2026",
+      "primary": "november 2026 anime releases",
+      "action": "Add viewing-intent navigation, subscription guidance and monthly/daily internal links"
+    },
+    {
+      "path": "/articles/granite-waves-anime",
+      "primary": "granite waves anime where to watch",
+      "action": "Clarify free pilot vs subscription, episode length caveat; anchor official pilot; link hubs"
+    },
+    {
+      "path": "/articles/demons-crest-release-date",
+      "primary": "demon crest anime release date",
+      "action": "Answer English dub, first two episodes vs complete season, and Japanese time vs regional unlock questions"
+    }
+  ],
+  "checks": {
+    "originalPublicationDatesPreserved": true,
+    "singleBylineEach": true,
+    "threeRelatedCardsEach": true,
+    "officialVideoPreservedEach": true,
+    "novemberAnchorsExist": true,
+    "serverRenderCases": [
+      "Thursday slots",
+      "Brazil timezone boundary",
+      "null episode",
+      "null URL",
+      "expired coverage"
+    ]
+  },
+  "next": [
+    "December and January guide review",
+    "Verified dub and episode schedule coverage",
+    "Recheck GSC after recrawl; historical URL variants do not establish current redirect failure"
+  ]
+}
