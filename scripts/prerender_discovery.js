@@ -59,7 +59,8 @@ for(const name of fs.readdirSync(root).filter(n=>n.endsWith('.html'))){
   html=fill(html,'data-anime-platform',platform=>list(model.select(data.anime.filter(a=>model.matchesPlatform(a,platform)),'all',ctx)));
   html=fill(html,'data-archive-platform',(platform,opening)=>{const month=/data-release-month="([^"]+)"/.exec(opening)?.[1];return list(model.select(data.anime.filter(a=>model.matchesPlatform(a,platform)&&a.date?.startsWith(month)),'all',ctx));});
   html=fill(html,'data-platform-count',platform=>{const n=data.anime.filter(a=>model.matchesPlatform(a,platform)).length;return n?'· '+n+' TRACKED':'';});
-  html=fill(html,'data-home-latest',()=>editorialStories().slice(0,6).map(guide).join(''));
+  // Homepage latest and archive are owned exclusively by build_latest_news.py.
+  // Never replace its publication-ordered four cards with legacy catalog order.
   html=fill(html,'data-guides',()=>newsStories().map(guide).join(''));
   // A new release index must not be replaced by a day-old cached script.
   html=html.replace(/(<script\b[^>]*\bsrc=")assets\/data\.js(?:\?[^"\s]*)?"/g,(_,prefix)=>prefix+'assets/data.js?v='+dataVersion+'"');
