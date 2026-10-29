@@ -1,0 +1,39 @@
+{
+  "checked": "2026-10-29",
+  "article": "/articles/anime-expeditions-codes",
+  "editorialWordsApprox": 1409,
+  "liveRedemptionTest": false,
+  "firstPartyCodeAnnouncementVerified": false,
+  "reportedCodes": [
+    "SorryForDelay",
+    "awakening",
+    "breakthelimit",
+    "otherside"
+  ],
+  "reportedExpiry": "2026-10-29",
+  "expiryTimeAndTimezone": null,
+  "disputedReward": "awakening: Stat Locks vs Stat Rerolls; Equipment Lock quantity ambiguous in some reporting",
+  "sources": [
+    "https://www.roblox.com/games/84515722934860/Anime-Expeditions",
+    "https://www.gamesradar.com/games/strategy/anime-expeditions-codes/",
+    "https://beebom.com/anime-expeditions-codes/",
+    "https://www.mrguider.org/roblox/anime-expeditions-codes/",
+    "https://www.destructoid.com/anime-expeditions-codes/",
+    "https://tryhardguides.com/anime-expeditions-codes/",
+    "https://bloxinformer.com/wikis/anime-expeditions/codes/"
+  ],
+  "media": {
+    "cover": "Official Roblox listing thumbnail, downloaded and visually checked",
+    "video": "yW-Hr4IXjYI",
+    "title": "Anime Expeditions | Villain Invasion",
+    "channel": "https://www.youtube.com/@AnimeExpeditionsOfficial",
+    "verification": "YouTube oEmbed metadata; promotional context only, not code proof"
+  },
+  "checks": {
+    "publicationValidator": "passed",
+    "videoSchema": "passed",
+    "relatedCards": 3,
+    "searchEntryIncluded": true,
+    "duplicateArticleFound": false
+  }
+}
