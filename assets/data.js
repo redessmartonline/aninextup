@@ -1,5 +1,5 @@
 window.ANINEXTUP_DATA={
-updated:"2026-10-28",
+updated:"2026-10-29",
 site:{timezone:"America/Santo_Domingo",season:"Fall 2026"},
 anime:[
 {id:"dual-shadow-precure-villain-heroines-anime-2027",image:"/assets/images/external/27277b3aa3c3af637a5004c6465fd3d314cc5ef0c81bd25e84fc0b77ab9475f6.webp",title:"Dual Shadow Precure Anime: 2027 Release Date & Official Teaser",date:null,dateLabel:"2027",platform:"TBA",article:"articles/dual-shadow-precure-villain-heroines-anime-2027",newsCategory:"new-anime",category:"Premiere",status:"tba"},
