@@ -31,5 +31,11 @@
     "No Season 2 dub timetable confirmed in reviewed material",
     "No fabricated precise trailer timestamp"
   ],
-  "production": "pending verification"
+  "production": {
+    "deployment": 40940520985,
+    "status": "success",
+    "publicArticle": "Verified title and new official hero loaded",
+    "related": "3 images loaded",
+    "video": "Button creates correct youtube-nocookie iframe; full playback not asserted"
+  }
 }
