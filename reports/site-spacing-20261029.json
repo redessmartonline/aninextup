@@ -15,14 +15,28 @@
   ],
   "checks": {
     "all137BodiesUnchanged": true,
-    "cssParse": "PASS"
+    "cssParse": "Browser loaded 20 stylesheet rules including responsive media block; initial local parser dependency unavailable",
+    "publicTemplatesBeforeFinalRefinement": [
+      "/",
+      "/today",
+      "/this-week",
+      "/calendar",
+      "/where-to-watch",
+      "/news",
+      "/articles/ramparts-of-ice-season-2",
+      "/about",
+      "/privacy",
+      "/terms",
+      "/contact"
+    ],
+    "noHorizontalOverflow": "All 11 sampled public templates"
   },
   "baseline": {
     "genericAdjacentSections": "124px plus margins",
     "homepageSections": "80px",
     "articleTop": "80px"
   },
-  "production": "pending",
+  "production": "Final cascade refinement pending deployment",
   "limits": [
     "All HTML audited; visual QA will sample shared templates",
     "No device emulation exposed; mobile rules not a claim of mobile visual inspection"

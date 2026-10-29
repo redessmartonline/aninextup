@@ -1,7 +1,7 @@
 /* Shared vertical rhythm, loaded after page-specific presentation styles.
    Only section spacing is normalized; card padding and content remain intact. */
 :root{--section-space:24px;--heading-list-space:16px}
-body main > section:not(.hero):not(.page-hero):not(.release-summary){
+body main > section:where(:not(.hero):not(.page-hero):not(.release-summary)){
   padding-top:var(--section-space)!important;
   padding-bottom:var(--section-space)!important;
   margin-top:0!important;
