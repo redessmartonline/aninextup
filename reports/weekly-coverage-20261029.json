@@ -1,0 +1,40 @@
+{
+  "checked": "2026-10-29",
+  "status": "source_reverification_blocked",
+  "changesToSchedule": false,
+  "source": "https://www.crunchyroll.com/pt-pt/news/seasonal-lineup/2026/10/7/programacao-calendario-crunchyroll-semana-temporada-outubro-2026",
+  "lastRecordedSourceUpdated": "2026-10-26T11:12:00Z",
+  "retrieval": "Direct web retrieval returned no article body; indexed results surfaced older October weeks, insufficient to reverify October 26-November 1 or changes.",
+  "validFrom": "2026-10-26",
+  "validThrough": "2026-11-01",
+  "region": [
+    "Brazil · Brasília time (UTC−3)"
+  ],
+  "language": "Japanese audio · Portuguese subtitles",
+  "scope": "Selected subtitled releases in Brazil. Not a worldwide schedule; episode numbers are not supplied by this source.",
+  "checks": {
+    "slots": 49,
+    "dailyCounts": {
+      "2026-10-26": 3,
+      "2026-10-27": 7,
+      "2026-10-28": 8,
+      "2026-10-29": 3,
+      "2026-10-30": 6,
+      "2026-10-31": 11,
+      "2026-11-01": 11
+    },
+    "allEpisodeNumbersNull": true,
+    "duplicates": 0,
+    "coveragePreserved": true,
+    "timezone": "America/Sao_Paulo",
+    "midnightBoundary": "2026-10-28",
+    "uiHasExpiryGuard": true
+  },
+  "limitations": [
+    "No current primary-source body retrieved",
+    "No new pauses or changes confirmed",
+    "No episode numbers inferred",
+    "Public pages and deployment not reverified; no UI or schedule changes published"
+  ],
+  "decision": "Preserve all existing slots and expiry date; retry primary source on next review. Source availability appears transient, recurring review remains enabled."
+}
