@@ -1,14 +1,63 @@
 {
-  "/articles/my-happy-marriage-special-episodes": ["Watashi no Shiawase na Kekkon", "WataKon", "わたしの幸せな結婚", "わた婚"],
-  "/articles/shangri-la-frontier-season-3-release-date": ["ShanFro", "Shangri La Frontier", "Shangri-La Frontier 3rd Season", "シャングリラ・フロンティア"],
-  "/articles/love-live-hasunosora-release-date": ["Hasu no Sora", "Hasunosora Jogakuin School Idol Club", "蓮ノ空女学院スクールアイドルクラブ"],
-  "/articles/kinioto-january-2027": ["Kinioto", "Ki ni Natteru Hito ga Otoko Janakatta", "気になってる人が男じゃなかった"],
-  "/articles/jirai-girl-chihara-san-anime-january-2027": ["Jirai Girl Chihara-san", "Jirai Nandesuka Chihara-san", "地雷なんですか？地原さん"],
-  "/articles/made-in-abyss-awakening-mystery-release-date": ["Made in Abyss Mezameru Shinpi", "メイドインアビス 目覚める神秘"],
-  "/articles/maebashi-witches-emoemories-release-date": ["Maebashi Witches Emoemories", "前橋ウィッチーズ", "魔女見習いのエモエモリーズ"],
-  "/articles/murcielago-anime-january-2027": ["Murcielago", "ムルシエラゴ"],
-  "/articles/now-that-we-draw-anime-january-2027": ["Kakunaru Ue wa", "描くなるうえは"],
-  "/articles/sekiro-no-defeat-release-date": ["Sekiro anime", "SEKIRO NO DEFEAT"],
-  "/articles/aikatsu-stars-hoshiboshi-no-progress-release-date": ["Aikatsu Stars Hoshiboshi no Progress", "アイカツスターズ 星々のProgress"],
-  "/articles/anime-releasing-january-2027": ["Winter 2027 anime", "January 2027 anime schedule"]
+  "/articles/my-happy-marriage-special-episodes": [
+    "Watashi no Shiawase na Kekkon",
+    "WataKon",
+    "わたしの幸せな結婚",
+    "わた婚"
+  ],
+  "/articles/shangri-la-frontier-season-3-release-date": [
+    "ShanFro",
+    "Shangri La Frontier",
+    "Shangri-La Frontier 3rd Season",
+    "シャングリラ・フロンティア"
+  ],
+  "/articles/love-live-hasunosora-release-date": [
+    "Hasu no Sora",
+    "Hasunosora Jogakuin School Idol Club",
+    "蓮ノ空女学院スクールアイドルクラブ"
+  ],
+  "/articles/kinioto-january-2027": [
+    "Kinioto",
+    "Ki ni Natteru Hito ga Otoko Janakatta",
+    "気になってる人が男じゃなかった"
+  ],
+  "/articles/jirai-girl-chihara-san-anime-january-2027": [
+    "Jirai Girl Chihara-san",
+    "Jirai Nandesuka Chihara-san",
+    "地雷なんですか？地原さん"
+  ],
+  "/articles/made-in-abyss-awakening-mystery-release-date": [
+    "Made in Abyss Mezameru Shinpi",
+    "メイドインアビス 目覚める神秘"
+  ],
+  "/articles/maebashi-witches-emoemories-release-date": [
+    "Maebashi Witches Emoemories",
+    "前橋ウィッチーズ",
+    "魔女見習いのエモエモリーズ"
+  ],
+  "/articles/murcielago-anime-january-2027": [
+    "Murcielago",
+    "ムルシエラゴ"
+  ],
+  "/articles/now-that-we-draw-anime-january-2027": [
+    "Kakunaru Ue wa",
+    "描くなるうえは"
+  ],
+  "/articles/sekiro-no-defeat-release-date": [
+    "Sekiro anime",
+    "SEKIRO NO DEFEAT"
+  ],
+  "/articles/aikatsu-stars-hoshiboshi-no-progress-release-date": [
+    "Aikatsu Stars Hoshiboshi no Progress",
+    "アイカツスターズ 星々のProgress"
+  ],
+  "/articles/anime-releasing-january-2027": [
+    "Winter 2027 anime",
+    "January 2027 anime schedule"
+  ],
+  "/articles/apothecary-diaries-season-3": [
+    "Los diarios de la boticaria",
+    "Kusuriya no Hitorigoto",
+    "薬屋のひとりごと"
+  ]
 }

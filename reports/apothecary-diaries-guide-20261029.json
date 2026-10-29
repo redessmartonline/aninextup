@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-29",
+  "action": "Expand existing canonical article, no new URL",
+  "canonical": "https://aninextup.com/articles/apothecary-diaries-season-3",
+  "duplicatesChecked": [
+    "main recursive tree",
+    "search index English/Japanese/Spanish",
+    "open PRs 307 and 82 unrelated"
+  ],
+  "words": 1661,
+  "sourceRetrieval": "Indexed official pages; direct anime onair/staffcast access returned 403; no live inspection claimed",
+  "sources": [
+    "https://kusuriyanohitorigoto.jp/",
+    "https://kusuriyanohitorigoto.jp/season3/onair/",
+    "https://kusuriyanohitorigoto.jp/season3/introduction/",
+    "https://kusuriyanohitorigoto.jp/season3/staffcast/",
+    "https://kusuriyanohitorigoto.jp/news/2623/",
+    "https://www.crunchyroll.com/news/announcements/2026/10/15/the-apothecary-diaries-season-3-anime-english-dub-release-date-cast-crew",
+    "https://www.crunchyroll.com/ko/news/announcements/2026/6/3/the-apothecary-diaries-season-3-gachiakuta-season-2-anime-stream-crunchyroll",
+    "https://j-novel.club/series/the-apothecary-diaries"
+  ],
+  "facts": {
+    "japanPremiere": "2026-10-02",
+    "dubLaunch": "2026-10-16",
+    "nextListedJapan": "2026-10-30T23:40:00+09:00",
+    "secondCour": "2027-04",
+    "episodeCount": null
+  },
+  "checks": [
+    "Publication validator PASS",
+    "JSON-LD parses",
+    "Original publication 2026-10-03 preserved",
+    "Time conversions verified with zoneinfo",
+    "Unique IDs and valid anchors",
+    "Exactly three illustrated related cards",
+    "No outbound trailer CTA"
+  ],
+  "limits": [
+    "No exact April date",
+    "No final episode count",
+    "No inferred regional streaming clock",
+    "No new verification of old exact trailer upload timestamp; unnecessary VideoObject precision removed"
+  ],
+  "video": {
+    "id": "9rProUQlD-I",
+    "source": "Official August 15 announcement",
+    "mode": "Embedded button"
+  },
+  "production": "pending verification"
+}
