@@ -295,12 +295,21 @@ function syncHomeMoreNewsPagination(requestedPage=null,{push=false,scroll=false}
       if(visible)card.removeAttribute('aria-hidden');else card.setAttribute('aria-hidden','true');
     });
     const parts=['<span class="pages">Page '+page+' of '+pageCount+'</span>'];
-    if(page>1)parts.push(makeLink('« Previous',page-1,'previouspostslink'));
-    for(let number=1;number<=pageCount;number++){
+    if(page>1)parts.push(makeLink('← Previous',page-1,'previouspostslink'));
+    const start=Math.max(2,Math.min(page-1,pageCount-2));
+    const end=Math.min(pageCount-1,Math.max(page+1,3));
+    const numbers=[1];
+    for(let number=start;number<=end;number++)numbers.push(number);
+    numbers.push(pageCount);
+    let previous=0;
+    for(const number of [...new Set(numbers)].sort((a,b)=>a-b)){
+      if(previous&&number-previous===2)parts.push(makeLink(String(previous+1),previous+1));
+      else if(previous&&number-previous>2)parts.push('<span class="pagination-ellipsis" aria-hidden="true">…</span>');
       if(number===page)parts.push('<span class="current" aria-current="page">'+number+'</span>');
       else parts.push(makeLink(String(number),number));
+      previous=number;
     }
-    if(page<pageCount)parts.push(makeLink('Next »',page+1,'nextpostslink'));
+    if(page<pageCount)parts.push(makeLink('Next →',page+1,'nextpostslink'));
     nav.innerHTML=parts.join('');
     if(push){
       const url=new URL(location.href);
