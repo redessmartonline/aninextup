@@ -69,6 +69,9 @@ jobs:
       - name: Refresh crawlable discovery schedules
         run: node scripts/prerender_discovery.js
 
+      - name: Verify homepage first render matches latest publications
+        run: node tests/test_homepage_first_render.cjs
+
       - name: Deploy with Wrangler
         uses: cloudflare/wrangler-action@v4
         with:
