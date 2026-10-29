@@ -1,11 +1,6 @@
 {
-  "count": 1,
+  "count": 0,
   "failed_count": 0,
   "failed": [],
-  "images": [
-    {
-      "source": "https://aninextup.com/assets/images/news/anime-expeditions-official-roblox.webp",
-      "local": "/assets/images/news/anime-expeditions-official-roblox.webp"
-    }
-  ]
+  "images": []
 }
