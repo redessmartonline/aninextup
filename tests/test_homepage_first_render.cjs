@@ -1,0 +1,18 @@
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const path=require('node:path');
+const root=path.resolve(__dirname,'..');
+const feed=JSON.parse(fs.readFileSync(path.join(root,'assets/latest-news.json'),'utf8'));
+const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
+const app=fs.readFileSync(path.join(root,'assets/app.js'),'utf8');
+const start=html.indexOf('data-home-latest');
+const end=html.indexOf('</section>',start);
+assert(start>=0&&end>start,'Homepage lead container missing');
+const block=html.slice(start,end);
+const links=[...block.matchAll(/<a\b[^>]*href="([^"]+)"/g)].map(m=>m[1].replace(/^\//,''));
+assert.equal(links.length,4,'Exactly four published stories must be in initial HTML');
+assert.deepEqual(links,feed.items.slice(0,4).map(x=>x.article),'Initial stories must equal publication-ordered feed');
+assert(!app.includes("fetch('/assets/latest-news.json"),'Do not replace initial stories after page load');
+assert(!app.includes('latestNewsNodes.forEach'),'Do not rewrite lead container asynchronously');
+assert.equal(new Set(links).size,4,'No duplicate lead stories');
+console.log('PASS: initial homepage contains exactly the latest four feed stories and has no async lead replacement.');
