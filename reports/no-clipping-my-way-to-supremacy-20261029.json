@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-29",
+  "sources": [
+    "https://kabenukebug-anime.com/",
+    "https://kabenukebug-anime.com/news/20261029_01.html",
+    "https://kmanga.kodansha.com/title/10704/episode/368028"
+  ],
+  "retrieval": {
+    "anime": "Direct HTML retrieved including October 29 news",
+    "kmanga": "Indexed official text"
+  },
+  "facts": {
+    "year": 2027,
+    "month": null,
+    "day": null,
+    "streaming": null,
+    "officialTrailer": null
+  },
+  "editorialWords": 1416,
+  "checks": {
+    "publicationValidator": "PASS",
+    "relatedCards": 3,
+    "officialVisual": "Downloaded and visually inspected",
+    "noInventedDate": true
+  },
+  "limits": [
+    "No official trailer verified",
+    "No international streaming license confirmed",
+    "No visual production-page QA yet"
+  ]
+}
