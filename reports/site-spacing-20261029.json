@@ -15,7 +15,7 @@
   ],
   "checks": {
     "all137BodiesUnchanged": true,
-    "cssParse": "Browser loaded 20 stylesheet rules including responsive media block; initial local parser dependency unavailable",
+    "cssParse": "Browser CSSOM recognized shared stylesheet and responsive media block; final computed values verified",
     "publicTemplatesBeforeFinalRefinement": [
       "/",
       "/today",
@@ -36,7 +36,32 @@
     "homepageSections": "80px",
     "articleTop": "80px"
   },
-  "production": "Final cascade refinement pending deployment",
+  "production": {
+    "deploymentRun": 40943724665,
+    "result": "success",
+    "templatesVerified": [
+      "/",
+      "/today",
+      "/this-week",
+      "/calendar",
+      "/where-to-watch",
+      "/news",
+      "/about",
+      "/articles/ramparts-of-ice-season-2"
+    ],
+    "visualScreenshots": [
+      "Today section transitions",
+      "Calendar hero and section-to-controls transition"
+    ],
+    "desktopMeasurements": {
+      "standardSectionEdges": "24px",
+      "todayStatsVerticalPadding": "0px",
+      "calendarHeadingToGrid": "16px + 0px",
+      "articleStart": "48px"
+    },
+    "overflow": "No horizontal overflow in final sampled templates",
+    "stylesheet": "/assets/spacing.css?v=20261029b"
+  },
   "limits": [
     "All HTML audited; visual QA will sample shared templates",
     "No device emulation exposed; mobile rules not a claim of mobile visual inspection"
