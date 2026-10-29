@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-29",
+  "action": "Expanded existing canonical, no new article",
+  "words": 1484,
+  "originalPublication": "2026-10-04",
+  "sources": [
+    "https://about.netflix.com/en/news/the-ramparts-of-ice-season-2",
+    "https://media.netflix.com/en/only-on-netflix/82031882",
+    "https://korinojoheki-pr.com/",
+    "https://www.tbs.co.jp/tv/20261029_C2FF.html",
+    "https://www.tbs.co.jp/tv/20261001_BF1B.html",
+    "https://www.universal-music.co.jp/thebeatgarden/news/2026-09-14/",
+    "https://mangaplaza.com/genre/3/152/"
+  ],
+  "visual": {
+    "source": "https://korinojoheki-pr.com/wp/wp-content/themes/bda003df6be3/static/assets/fv/visual04.webp",
+    "local": "/assets/images/news/ramparts-of-ice-season-2-official-visual.webp",
+    "inspection": "Viewed four leads in classroom, matches official Season 2 key art description"
+  },
+  "retrieval": "Netflix, TBS and Universal web retrieval; official anime HTML directly downloaded after initial web timeout",
+  "checks": [
+    "Publication validator PASS before final hero substitution",
+    "Unique IDs and anchors",
+    "Original date preserved",
+    "Three illustrated related cards",
+    "One official embedded Netflix Anime trailer sWvfeHOkAOU"
+  ],
+  "limits": [
+    "No final episode count",
+    "No inferred Netflix upload clock or finale date",
+    "No Season 2 dub timetable confirmed in reviewed material",
+    "No fabricated precise trailer timestamp"
+  ],
+  "production": "pending verification"
+}
