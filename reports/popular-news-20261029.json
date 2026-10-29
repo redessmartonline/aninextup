@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-29",
+  "automation": "Daily morning America/Santo_Domingo",
+  "metric": "GA4 screen_page_views",
+  "period": [
+    "2026-09-29",
+    "2026-10-28"
+  ],
+  "top": [
+    {
+      "url": "/articles/prisma-illya-finale-anime-2027",
+      "views": 55
+    },
+    {
+      "url": "/articles/granite-waves-anime",
+      "views": 34
+    },
+    {
+      "url": "/articles/one-piece-elbaph-arc-english-dub-october-2026",
+      "views": 29
+    }
+  ],
+  "checks": [
+    "Python syntax",
+    "Ranking",
+    "Domain filter",
+    "URL normalization",
+    "Insufficient data rejects",
+    "Idempotent render",
+    "Exactly 3 cards"
+  ],
+  "delivery": "Static HTML generated at deployment, no client fetch or GA credentials",
+  "limits": [
+    "GA4 views are measured views, not unique readers",
+    "Timezone metadata unavailable; local completed calendar days"
+  ]
+}
