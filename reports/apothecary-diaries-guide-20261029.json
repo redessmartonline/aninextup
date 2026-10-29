@@ -46,5 +46,12 @@
     "source": "Official August 15 announcement",
     "mode": "Embedded button"
   },
-  "production": "pending verification"
+  "production": {
+    "article": "Verified live",
+    "title": "Verified",
+    "hero": "Loads, existing asset preserved",
+    "related": "3 images loaded",
+    "trailer": "Click creates privacy-enhanced iframe with verified official video ID; full playback not asserted",
+    "deploymentRun": 40935733169
+  }
 }
