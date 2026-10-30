@@ -23,6 +23,6 @@
     "Sitemap XML parsed"
   ],
   "deploymentRun": 41068338703,
-  "publicVerification": "Pending at report creation; initial public request before Wrangler finished returned HTTP response failure. Final status will be checked before completion.",
+  "publicVerification": "Production run 41068338703 completed successfully. Article title and hero loaded; no horizontal overflow; three related cards present. Teaser button created youtube-nocookie embed ruIT6Xez6tw (full playback not asserted). November IMAX section present. Public root homepage rechecked after initial stale response: latest four now start with new article. More Anime News and three Popular News cards retained.",
   "calendar": "No new calendar update attempted: October 30 source blockage already recorded in reports/weekly-coverage-20261030.json; existing data preserved."
 }
