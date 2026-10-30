@@ -1,5 +1,5 @@
 window.ANINEXTUP_DATA={
-updated:"2026-10-29",
+updated:"2026-10-30",
 site:{timezone:"America/Santo_Domingo",season:"Fall 2026"},
 anime:[
 {id:"no-clipping-my-way-to-supremacy-anime",image:"/assets/images/news/no-clipping-my-way-to-supremacy-official-visual.webp",title:"No-Clipping My Way to Supremacy Anime: 2027 Release & Cast",date:null,dateLabel:"2027 · exact date TBA",platform:"Not announced",article:"articles/no-clipping-my-way-to-supremacy-anime",newsCategory:"new-anime",category:"Premiere",status:"year-confirmed"},
@@ -91,6 +91,7 @@ anime:[
 {id:"psyren",newsCategory:"new-anime",image:"assets/images/psyren.jpg",title:"PSYREN",date:"2026-10-05",platform:"Crunchyroll",article:"articles/psyren-release-date",category:"Premiere",status:"confirmed"},
 ],
 guides:[
+{image:"/assets/images/news/death-stranding-isolations-anime.webp",title:"Death Stranding Isolations: 2027 Release, Trailer & Streaming",tag:"2027 · NEW OFFICIAL TEASER",article:"articles/death-stranding-isolations-anime",newsCategory:"release-news",description:"Death Stranding Isolations has a new official teaser and a 2027 Disney release window. Explore the anime story, staff and what remains unannounced."},
 {image:"/assets/images/news/anime-expeditions-official-roblox.webp",title:"Anime Expeditions Codes (October 2026): Rewards & Redeem Guide",tag:"ROBLOX CODES · REPORTED",article:"articles/anime-expeditions-codes",newsCategory:"release-news",description:"Check reported Anime Expeditions codes, rewards and the October 29 expiry warning. Learn how to redeem codes and troubleshoot errors in Roblox."},
 {image:"/assets/images/news/glasses-with-a-chance-of-delinquent-official-visual.webp",title:"Glasses with a Chance of Delinquent Anime: Release Date & Trailer",tag:"APRIL 2027 · ROMANCE ANIME",article:"articles/glasses-with-a-chance-of-delinquent-anime",newsCategory:"new-anime",description:"Glasses with a Chance of Delinquent premieres in April 2027. See the official teaser, cast, studios, Japan streaming plans and international release status."},
 {image:"/assets/images/external/7030a714c355d627d5ed8b098ee8b83fd181382b87a19d5984a3b61f1f2ae70e.webp",title:"Where to Watch One Piece in 2026: Streaming, Dub & Regions",tag:"ONE PIECE · STREAMING GUIDE",article:"articles/where-to-watch-one-piece",newsCategory:"release-news",description:"Find where to watch One Piece on Crunchyroll, Netflix and Hulu. Compare regional availability, English dub options and the original anime versus the remake."},
