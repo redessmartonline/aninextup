@@ -16,5 +16,12 @@
     "crons": [
       "0 12 * * *"
     ]
-  }
+  },
+  "d1_databases": [
+    {
+      "binding": "NEWSLETTER_DB",
+      "database_name": "aninextup-newsletter",
+      "database_id": "4b800ca2-2f01-45a6-9240-70b1eda5b4d8"
+    }
+  ]
 }
