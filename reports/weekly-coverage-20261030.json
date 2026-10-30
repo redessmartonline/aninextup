@@ -1,0 +1,74 @@
+{
+  "checkedAt": "2026-10-30T12:47:39.941Z",
+  "status": "source_reverification_blocked",
+  "changesToSchedule": false,
+  "source": "https://www.crunchyroll.com/pt-pt/news/seasonal-lineup/2026/10/7/programacao-calendario-crunchyroll-semana-temporada-outubro-2026",
+  "lastRecordedSourceUpdated": "2026-10-26T11:12:00Z",
+  "validFrom": "2026-10-26",
+  "validThrough": "2026-11-01",
+  "region": [
+    "Brazil · Brasília time (UTC−3)"
+  ],
+  "timezone": "America/Sao_Paulo",
+  "language": "Japanese audio · Portuguese subtitles",
+  "scope": "Selected releases only; not a complete or worldwide calendar.",
+  "sources": [
+    {
+      "url": "https://www.crunchyroll.com/pt-pt/news/seasonal-lineup/2026/10/7/programacao-calendario-crunchyroll-semana-temporada-outubro-2026",
+      "method": "Direct web retrieval plus HTTP HTML inspection",
+      "result": "Web tool: zero readable lines. HTTP 200 HTML contains Next.js notFound message: This page could not be found. No schedule body or current update timestamp."
+    },
+    {
+      "url": "https://www.crunchyroll.com/pt-br/news/seasonal-lineup/2026/10/7/programacao-calendario-crunchyroll-semana-temporada-outubro-2026",
+      "method": "Direct web retrieval",
+      "result": "Zero readable lines."
+    },
+    {
+      "url": "https://www.crunchyroll.com/pt-br/simulcastcalendar?date=2026-10-26",
+      "method": "Direct web retrieval",
+      "result": "Tool could not access page."
+    },
+    {
+      "url": "https://www.crunchyroll.com/pt-pt/news/tag/Calend%C3%A1rio",
+      "method": "Indexed official text",
+      "result": "Lists October 12–18, not current week. Other indexed calendars cover October 5–11 or 19–25; insufficient for current changes."
+    }
+  ],
+  "checks": {
+    "freshMainFilesRead": [
+      "assets/weekly-episodes.js",
+      "assets/weekly-episodes-ui.js",
+      "today.html",
+      "this-week.html",
+      "reports/weekly-coverage-20261029.json"
+    ],
+    "syntaxBothAssets": true,
+    "slots": 49,
+    "dailyCounts": {
+      "2026-10-26": 3,
+      "2026-10-27": 7,
+      "2026-10-28": 8,
+      "2026-10-29": 3,
+      "2026-10-30": 6,
+      "2026-10-31": 11,
+      "2026-11-01": 11
+    },
+    "duplicates": 0,
+    "allEpisodeNumbersNull": true,
+    "allDatesWithinCoverage": true,
+    "expiryTest": {
+      "before": "2026-11-02T02:59:59Z",
+      "beforeState": "verified",
+      "at": "2026-11-02T03:00:00Z",
+      "atState": "awaiting-verification",
+      "method": "Executed fresh UI in Node VM with fixed Date and minimal DOM"
+    },
+    "nullLabelVerified": true
+  },
+  "limitations": [
+    "Current coverage and source update date could not be independently reverified; recorded dates retained, not refreshed.",
+    "No changes or pauses confirmed; excluded entries remain excluded.",
+    "No schedule/UI changes deployed; public pages and deployment not reverified."
+  ],
+  "decision": "Preserve schedule, language/region and expiration. Keep recurring review enabled: alternate official calendar retrieval failure may be transient; retry later."
+}
