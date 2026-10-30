@@ -1,0 +1,37 @@
+name: Test newsletter delivery
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Send one requested test to the sole active subscriber
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+        run: |
+          node --input-type=module <<'NODE'
+          import assert from 'node:assert/strict';
+          import {readFileSync} from 'node:fs';
+          const cfg=JSON.parse(readFileSync('wrangler.jsonc','utf8'));
+          const id=cfg.d1_databases.find(x=>x.binding==='NEWSLETTER_DB').database_id;
+          const r=await fetch('https://api.cloudflare.com/client/v4/accounts/'+process.env.CLOUDFLARE_ACCOUNT_ID+'/d1/database/'+id+'/query',{method:'POST',headers:{Authorization:'Bearer '+process.env.CLOUDFLARE_API_TOKEN,'Content-Type':'application/json'},body:JSON.stringify({sql:"SELECT email,unsubscribe_token FROM newsletter_subscribers WHERE state='active' AND email NOT LIKE 'newsletter-check-%@aninextup.com' LIMIT 2",params:[]})});
+          const d=await r.json();assert(r.ok&&d.success,'Cannot verify active subscriber');
+          const rows=d.result[0].results;assert.equal(rows.length,1,'Test requires exactly one active subscriber; no email sent');
+          const s=rows[0];const unsub='https://aninextup.com/api/newsletter/unsubscribe?token='+encodeURIComponent(s.unsubscribe_token);
+          const sent=await fetch('https://api.resend.com/emails',{method:'POST',headers:{Authorization:'Bearer '+process.env.RESEND_API_KEY,'Content-Type':'application/json','Idempotency-Key':'aninextup-owner-request-test-20261030'},body:JSON.stringify({from:cfg.vars.CONTACT_FROM_EMAIL,to:[s.email],subject:'AniNextUp — Newsletter delivery test',html:'<h1>Your AniNextUp subscription is active</h1><p>This is the newsletter test you requested. Daily updates are scheduled for 8:00 a.m. Dominican Republic time when new articles or updates are available.</p><p><a href="https://aninextup.com/">Read the latest anime news</a></p><p><a href="'+unsub+'">Unsubscribe</a></p>',headers:{'List-Unsubscribe':'<'+unsub+'>','List-Unsubscribe-Post':'List-Unsubscribe=One-Click'}})});
+          const result=await sent.json();assert(sent.ok&&result.id,'Provider rejected test: HTTP '+sent.status+' '+String(result.message||''));
+          console.log('Test accepted by Resend; message ID: '+result.id);
+          await new Promise(resolve=>setTimeout(resolve,15000));
+          const status=await fetch('https://api.resend.com/emails/'+encodeURIComponent(result.id),{headers:{Authorization:'Bearer '+process.env.RESEND_API_KEY}});
+          if(status.ok){const v=await status.json();console.log('Provider delivery event: '+v.last_event);}else console.log('Delivery status lookup unavailable: HTTP '+status.status);
+          NODE
