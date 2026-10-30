@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-30",
+  "publisher": "ca-pub-6586052507600375",
+  "commit": "27762bf6ad2b40a4c7e81271538757f487180e26",
+  "pagesUpdated": 129,
+  "indexablePagesChecked": 139,
+  "checks": {
+    "oneLoaderEach": true,
+    "consentCategory": "targeting",
+    "adsTxtMatches": true,
+    "existingLoadersPreserved": true,
+    "noindex404Unchanged": true
+  },
+  "limitations": [
+    "Google AdSense approval and ad serving not verified",
+    "Direct HTTP production verification returned HTTP errors; deployment verification pending"
+  ]
+}
