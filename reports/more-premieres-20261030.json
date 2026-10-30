@@ -1,0 +1,42 @@
+{
+  "checked": "2026-10-30",
+  "articles": [
+    {
+      "path": "articles/medaka-kuroiwa-season-2-release-date.html",
+      "bodyWords": 1218,
+      "tvDate": null,
+      "preview": "November 28, 2026 at 15:30–17:00 JST, United Cinemas Toyosu; episodes 1–2 and cast talk",
+      "sources": [
+        "https://monaxmedaka.com/",
+        "https://monaxmedaka.com/news/378/"
+      ],
+      "teaser": "OOHTPQCmfYA",
+      "uploader": "DMM pictures"
+    },
+    {
+      "path": "articles/vertex-force-anime-release-date.html",
+      "bodyWords": 1312,
+      "japanDate": "2026-10-03",
+      "sources": [
+        "https://vertexforce.jp/",
+        "https://vertexforce.jp/onair/",
+        "https://vertexforce.jp/news/?id=71515"
+      ],
+      "teaser": "7ph13UeZOtM",
+      "uploader": "Aniplex"
+    }
+  ],
+  "retrieval": "Official pages retrieved directly over HTTP; web-search service returned errors. Secondary pages used only to locate primary announcements. Official images visually inspected; Medaka broadcast graphic rendered and read: Season 2 announced, no date. YouTube oEmbed verified official uploaders. Full playback not asserted.",
+  "checks": [
+    "Duplicate check against 123 existing articles",
+    "Editorial validator passed for each article",
+    "One H1 and three related cards each",
+    "Local images present",
+    "Sitemap XML and unique URLs",
+    "Search index 125 articles",
+    "Catalog JS syntax passed",
+    "Medaka catalog TV date remains null; ticketed preview not entered as TV premiere",
+    "No weekly-episodes data changed"
+  ],
+  "deployment": "Pending at commit creation"
+}
