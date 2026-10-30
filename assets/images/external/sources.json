@@ -1,15 +1,6 @@
 {
-  "count": 2,
+  "count": 0,
   "failed_count": 0,
   "failed": [],
-  "images": [
-    {
-      "source": "https://aninextup.com/assets/images/news/medaka-kuroiwa-season-2-release-date.webp",
-      "local": "/assets/images/news/medaka-kuroiwa-season-2-release-date.webp"
-    },
-    {
-      "source": "https://aninextup.com/assets/images/news/vertex-force-anime-release-date.webp",
-      "local": "/assets/images/news/vertex-force-anime-release-date.webp"
-    }
-  ]
+  "images": []
 }
