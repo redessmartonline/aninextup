@@ -13,7 +13,7 @@ async function send(env,to,subject,html,key,unsubscribe){
 async function limited(db,key,max){const hour=Math.floor(Date.now()/3600000);const row=await db.prepare('INSERT INTO newsletter_limits (key,period,count) VALUES(?,?,1) ON CONFLICT(key,period) DO UPDATE SET count=count+1 RETURNING count').bind(await hash(key),hour).first();return row.count>max;}
 export async function newsletter(request,env){
  const u=new URL(request.url),db=env.NEWSLETTER_DB;
- if(u.pathname==='/api/newsletter/status')return json({available:!!(db&&env.RESEND_API_KEY&&env.CONTACT_FROM_EMAIL)});
+ if(u.pathname==='/api/newsletter/status')return json({available:!!(db&&env.RESEND_API_KEY&&env.CONTACT_FROM_EMAIL),configured:{storage:!!db,delivery:!!env.RESEND_API_KEY,sender:!!env.CONTACT_FROM_EMAIL}});
  if(!db||!env.RESEND_API_KEY||!env.CONTACT_FROM_EMAIL)return json({error:'Subscriptions are temporarily unavailable. Please try again later.'},503);
  if(!['GET','POST'].includes(request.method))return json({error:'Method not allowed'},405);
  if(request.method==='POST'&&request.headers.get('origin')&&request.headers.get('origin')!==ORIGIN&&request.headers.get('origin')!==u.origin)return json({error:'Invalid origin'},403);
