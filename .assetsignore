@@ -10,3 +10,6 @@ editorial-drafts/
 README.md
 AUDITORIA_ARTICULOS.md
 wrangler.jsonc
+
+src/
+db/

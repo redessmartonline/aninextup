@@ -5,8 +5,16 @@
   "main": "src/contact-worker.js",
   "assets": {
     "binding": "ASSETS",
-    "run_worker_first": ["/api/contact"],
+    "run_worker_first": [
+      "/api/contact",
+      "/api/newsletter/*"
+    ],
     "directory": "./"
   },
-  "previews": {}
+  "previews": {},
+  "triggers": {
+    "crons": [
+      "0 12 * * *"
+    ]
+  }
 }
