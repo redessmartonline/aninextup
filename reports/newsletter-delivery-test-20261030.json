@@ -1,0 +1,12 @@
+{
+  "requestedAt": "2026-10-30",
+  "activeRecipients": 1,
+  "sentAt": "2026-10-30T17:24:00Z",
+  "provider": "Resend",
+  "accepted": true,
+  "messageId": "01a18dd7-02d3-7f42-ba49-3d9e1ffb997d",
+  "workflowRun": 41098463403,
+  "deliveryVerification": "Not confirmed: read-email API returned HTTP 401; sending key accepted email successfully.",
+  "subscriberCursorChanged": false,
+  "dailyScheduleChanged": false
+}
