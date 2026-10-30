@@ -23,5 +23,8 @@
       "database_name": "aninextup-newsletter",
       "database_id": "4b800ca2-2f01-45a6-9240-70b1eda5b4d8"
     }
-  ]
+  ],
+  "vars": {
+    "CONTACT_FROM_EMAIL": "AniNextUp <newsletter@aninextup.com>"
+  }
 }
