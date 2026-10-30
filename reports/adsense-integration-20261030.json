@@ -12,7 +12,11 @@
     "noindex404Unchanged": true
   },
   "limitations": [
-    "Google AdSense approval and ad serving not verified",
-    "Direct HTTP production verification returned HTTP errors; deployment verification pending"
-  ]
+    "AdSense approval, actual ad serving and post-consent network loading not verified",
+    "GitHub Actions completion not independently confirmed; live updated pages verified"
+  ],
+  "productionVerification": {
+    "homepage": "One consent-gated loader observed in live DOM",
+    "recentArticle": "VERTEX FORCE: one loader observed in live DOM"
+  }
 }
