@@ -10,6 +10,7 @@ on:
       - "src/**"
       - "db/**"
       - "scripts/prepare_newsletter_db.mjs"
+      - "scripts/test_newsletter_live.mjs"
       - "scripts/build_watch_catalog.js"
       - "scripts/build_popular_news.py"
       - "scripts/standardize_article_bylines.py"
@@ -113,3 +114,9 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: deploy
+
+      - name: Verify live immediate newsletter signup and unsubscribe
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: node scripts/test_newsletter_live.mjs
