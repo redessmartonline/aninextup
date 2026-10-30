@@ -24,5 +24,16 @@
     "Digest sends up to 80 subscriber messages per run; confirmation requests capped at 80/hour",
     "New articles only; minor edits do not trigger messages",
     "No real subscriber was enrolled during tests"
-  ]
+  ],
+  "latestDeployment": {
+    "run": 41084766286,
+    "status": "success",
+    "databaseProvisioning": "Still unauthorized; optional setup failed, live form remains disabled."
+  },
+  "publicVerification": {
+    "fourLatestCards": true,
+    "threePopularCards": true,
+    "disabledForm": true,
+    "statusNotice": "Coming soon — email subscriptions are not open yet."
+  }
 }
