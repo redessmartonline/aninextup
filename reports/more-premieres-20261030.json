@@ -38,5 +38,28 @@
     "Medaka catalog TV date remains null; ticketed preview not entered as TV premiere",
     "No weekly-episodes data changed"
   ],
-  "deployment": "Pending at commit creation"
+  "deployment": {
+    "runs": [
+      41094714457,
+      41094747802
+    ],
+    "conclusion": "success"
+  },
+  "commit": "c23a8c7ed4d1e5d614845ad04bbba178c32bd42f",
+  "publicChecks": {
+    "articleTitlesAndLeads": true,
+    "localHeroesLoaded": true,
+    "relatedCardsPerArticle": 3,
+    "allSixRelatedImagesLoaded": true,
+    "noHorizontalOverflow": true,
+    "teaserButtonsCreateCorrectNoCookieEmbeds": true,
+    "fullPlaybackVerified": false,
+    "homepageLatestFour": [
+      "vertex-force-anime-release-date",
+      "medaka-kuroiwa-season-2-release-date",
+      "death-stranding-isolations-anime",
+      "no-clipping-my-way-to-supremacy-anime"
+    ],
+    "newsletterRetained": true
+  }
 }
