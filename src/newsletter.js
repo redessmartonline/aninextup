@@ -36,12 +36,12 @@ export async function newsletter(request,env){
  }
  if(u.pathname==='/api/newsletter/confirm'){
   const raw=u.searchParams.get('token')||'';if(raw.length!==72)return page('Invalid confirmation link','<p>Please subscribe again from the homepage.</p>',400);
-  const hashed=await hash(raw),row=await db.prepare('SELECT email FROM newsletter_subscribers WHERE confirm_hash=? AND confirm_expires>?').bind(hashed,Date.now()).first();
+  const hashed=await hash(raw),row=await db.prepare('SELECT email,unsubscribe_token FROM newsletter_subscribers WHERE confirm_hash=? AND confirm_expires>?').bind(hashed,Date.now()).first();
   if(!row)return page('This confirmation link has expired','<p>Please request a new confirmation from the <a href="/">homepage</a>.</p>',400);
   if(request.method==='GET')return page('Confirm your subscription',`<p>Receive a daily digest of new AniNextUp articles when there is news.</p><form method="POST"><button>Confirm subscription</button></form><p><a href="/privacy">Privacy policy</a></p>`);
   const updated=await db.prepare("UPDATE newsletter_subscribers SET state='active',confirmed_at=?,cursor=?,confirm_hash=NULL,confirm_expires=NULL WHERE confirm_hash=? AND confirm_expires>?").bind(Date.now(),day(Date.now()-86400000),hashed,Date.now()).run();
   if(!updated.meta.changes)return page('Link already used','<p>Please return to the homepage.</p>',400);
-  return page('You’re subscribed!','<p>Your email is confirmed. You’ll receive our daily digest when new articles are published. Every digest includes an unsubscribe link.</p><p><a href="/">Explore AniNextUp →</a></p>');
+  return page('You’re subscribed!',`<p>Your email is confirmed. You’ll receive our daily digest when new articles are published. Every digest includes an unsubscribe link.</p><p><a href="/">Explore AniNextUp →</a></p><p><a href="/api/newsletter/unsubscribe?token=${encodeURIComponent(row.unsubscribe_token)}">Unsubscribe</a></p>`);
  }
  if(u.pathname==='/api/newsletter/unsubscribe'){
   const raw=u.searchParams.get('token')||'';if(raw.length!==72)return page('Invalid unsubscribe link','<p>Use the link in your AniNextUp email.</p>',400);
