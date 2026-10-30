@@ -1,6 +1,11 @@
 {
-  "count": 0,
+  "count": 1,
   "failed_count": 0,
   "failed": [],
-  "images": []
+  "images": [
+    {
+      "source": "https://aninextup.com/assets/images/news/death-stranding-isolations-anime.webp",
+      "local": "/assets/images/news/death-stranding-isolations-anime.webp"
+    }
+  ]
 }
