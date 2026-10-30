@@ -1,0 +1,28 @@
+{
+  "checked": "2026-10-30",
+  "implementationCommit": "96bfffe5142ba615437261023e779a23dd89abf1",
+  "features": [
+    "Double opt-in; 24-hour single-use confirmation",
+    "Scanner-safe GET; explicit POST confirmation",
+    "Per-email and per-IP hashed limits",
+    "Daily new-article digest at 12:00 UTC; no empty digest",
+    "One-click email unsubscribe; GET confirmation page",
+    "Cloudflare D1 storage; Resend delivery using existing configuration",
+    "No client credentials; subscriber files excluded from static assets"
+  ],
+  "localTests": "PASS: validation, pending/active, GET nonmutation, replay prevention, escaped HTML, cursor duplicate prevention, unsubscribe, cross-origin rejection, provider rejection, missing configuration.",
+  "productionBlocker": {
+    "run": 41084520978,
+    "step": "Prepare newsletter database",
+    "http": 401,
+    "code": 10000,
+    "message": "Authentication error"
+  },
+  "decision": "Form remains disabled until database and email configuration are present. Database provisioning failure does not block unrelated site deployments. Real delivery and subscription activation not verified.",
+  "required": "Cloudflare credential authorized to create/query/bind D1, then rerun deployment and verify live delivery. Existing Resend sender acceptance must still be tested.",
+  "limits": [
+    "Digest sends up to 80 subscriber messages per run; confirmation requests capped at 80/hour",
+    "New articles only; minor edits do not trigger messages",
+    "No real subscriber was enrolled during tests"
+  ]
+}
