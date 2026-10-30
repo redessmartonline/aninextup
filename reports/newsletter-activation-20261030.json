@@ -1,39 +1,24 @@
 {
-  "checked": "2026-10-30",
-  "implementationCommit": "96bfffe5142ba615437261023e779a23dd89abf1",
-  "features": [
-    "Double opt-in; 24-hour single-use confirmation",
-    "Scanner-safe GET; explicit POST confirmation",
-    "Per-email and per-IP hashed limits",
-    "Daily new-article digest at 12:00 UTC; no empty digest",
-    "One-click email unsubscribe; GET confirmation page",
-    "Cloudflare D1 storage; Resend delivery using existing configuration",
-    "No client credentials; subscriber files excluded from static assets"
-  ],
-  "localTests": "PASS: validation, pending/active, GET nonmutation, replay prevention, escaped HTML, cursor duplicate prevention, unsubscribe, cross-origin rejection, provider rejection, missing configuration.",
-  "productionBlocker": {
-    "resolvedD1": true,
-    "database": "aninextup-newsletter",
-    "databaseId": "4b800ca2-2f01-45a6-9240-70b1eda5b4d8",
-    "remaining": "RESEND_API_KEY missing in Worker and repository. CONTACT_FROM_EMAIL configured on verified aninextup.com domain. Resend account authenticated; API-key page DOM inspection rejected by automatic approval review to avoid secret exposure."
+  "checkedAt": "2026-10-30T16:34:34.079Z",
+  "status": "immediate_signup_live",
+  "userDecision": "User requested no email confirmation; sending the homepage form immediately activates the address.",
+  "commit": "3275ca394d93b397535db2816d02e0bcb688def5",
+  "verificationCommit": "edc803d6d1d81dea9dc3fc499413972f6081762b",
+  "signup": "Active state persisted immediately; normalized unique email; no confirmation email sent; no confirmation token created.",
+  "delivery": "Daily digest configured at 12:00 UTC (08:00 America/Santo_Domingo), including new articles and updates since the subscription cursor; unsubscribe in each digest.",
+  "production": {
+    "run": 41090832900,
+    "conclusion": "success",
+    "d1": true,
+    "sender": true,
+    "resendSecret": true,
+    "liveIntegration": "PASS: signup persisted active, duplicate prevented, GET unsubscribe nonmutating, POST unsubscribe persisted; ephemeral first-party test address deleted.",
+    "homepage": "Enabled form and no-confirmation notice verified. Four latest articles and three Popular News cards preserved."
   },
-  "decision": "Form remains disabled until database and email configuration are present. Database provisioning failure does not block unrelated site deployments. Real delivery and subscription activation not verified.",
-  "required": "User enters Resend sending credential directly in GitHub repository secret RESEND_API_KEY. Then rerun deployment and test confirmation delivery, activation and unsubscribe.",
+  "tests": "Immediate signup, consent/email validation, deduplication, rate limits, new/updated article inclusion, future exclusion, no empty/duplicate digest, unsubscribe, invalid origin, delivery retry behavior.",
   "limits": [
-    "Digest sends up to 80 subscriber messages per run; confirmation requests capped at 80/hour",
-    "New articles only; minor edits do not trigger messages",
-    "No real subscriber was enrolled during tests"
-  ],
-  "latestDeployment": {
-    "run": 41088988506,
-    "status": "success",
-    "databaseProvisioning": "success",
-    "deliveryCredential": "Repository secret absent; existing secret not overwritten."
-  },
-  "publicVerification": {
-    "fourLatestCards": true,
-    "threePopularCards": true,
-    "disabledForm": true,
-    "statusNotice": "Coming soon — email subscriptions are not open yet."
-  }
+    "No real recipient delivery or inbox placement verified during this run; production signup integration intentionally sends no messages.",
+    "Existing older pending subscriptions are not bulk activated; submitting their address again activates them.",
+    "Daily processing currently handles up to 80 eligible subscribers per run."
+  ]
 }
