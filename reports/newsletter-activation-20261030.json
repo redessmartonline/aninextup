@@ -12,23 +12,23 @@
   ],
   "localTests": "PASS: validation, pending/active, GET nonmutation, replay prevention, escaped HTML, cursor duplicate prevention, unsubscribe, cross-origin rejection, provider rejection, missing configuration.",
   "productionBlocker": {
-    "run": 41084520978,
-    "step": "Prepare newsletter database",
-    "http": 401,
-    "code": 10000,
-    "message": "Authentication error"
+    "resolvedD1": true,
+    "database": "aninextup-newsletter",
+    "databaseId": "4b800ca2-2f01-45a6-9240-70b1eda5b4d8",
+    "remaining": "RESEND_API_KEY missing in Worker and repository. CONTACT_FROM_EMAIL configured on verified aninextup.com domain. Resend account authenticated; API-key page DOM inspection rejected by automatic approval review to avoid secret exposure."
   },
   "decision": "Form remains disabled until database and email configuration are present. Database provisioning failure does not block unrelated site deployments. Real delivery and subscription activation not verified.",
-  "required": "Cloudflare credential authorized to create/query/bind D1, then rerun deployment and verify live delivery. Existing Resend sender acceptance must still be tested.",
+  "required": "User enters Resend sending credential directly in GitHub repository secret RESEND_API_KEY. Then rerun deployment and test confirmation delivery, activation and unsubscribe.",
   "limits": [
     "Digest sends up to 80 subscriber messages per run; confirmation requests capped at 80/hour",
     "New articles only; minor edits do not trigger messages",
     "No real subscriber was enrolled during tests"
   ],
   "latestDeployment": {
-    "run": 41084766286,
+    "run": 41088988506,
     "status": "success",
-    "databaseProvisioning": "Still unauthorized; optional setup failed, live form remains disabled."
+    "databaseProvisioning": "success",
+    "deliveryCredential": "Repository secret absent; existing secret not overwritten."
   },
   "publicVerification": {
     "fourLatestCards": true,
