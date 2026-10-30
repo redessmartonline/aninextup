@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-30",
+  "commit": "57845deccc6a1a1af3c4b8412a3b9ca3dca4d1f0",
+  "article": "/articles/death-stranding-isolations-anime",
+  "words": 1219,
+  "duplicateCheck": "Passed against 122 existing articles; English and Japanese franchise names checked",
+  "sources": [
+    "https://www.kojimaproductions.jp/en/node/306",
+    "https://www.kojimaproductions.jp/en/ds_animation_project",
+    "https://www.kojimaproductions.jp/en/deathstranding-animation-series-announcement",
+    "https://www.aniplex.co.jp/lineup/mahoyo-movie/news/detail/?id=71584"
+  ],
+  "retrieval": "Current Kojima announcement and visual retrieved directly via HTTP after search retrieval succeeded; no exact date or regional service extrapolation.",
+  "trailer": "ruIT6Xez6tw — linked by official announcement; embedded, full playback not asserted",
+  "cover": "Official Kojima visual; local WebP",
+  "novemberChange": "Added November 20 Japan IMAX format for Witch on the Holy Night; eight-premiere count and original publication date retained.",
+  "checks": [
+    "Valid metadata JSON",
+    "One H1",
+    "Three related cards with local images",
+    "Video schema validator passed",
+    "Search index 123 public articles",
+    "Sitemap XML parsed"
+  ],
+  "deploymentRun": 41068338703,
+  "publicVerification": "Pending at report creation; initial public request before Wrangler finished returned HTTP response failure. Final status will be checked before completion.",
+  "calendar": "No new calendar update attempted: October 30 source blockage already recorded in reports/weekly-coverage-20261030.json; existing data preserved."
+}
