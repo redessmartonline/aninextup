@@ -24,10 +24,17 @@ for(const name of fs.readdirSync(path.join(root,'articles')).filter(x=>x.endsWit
  if(/codes|manga|live.action|collection|event/i.test(meta.category||''))continue;
  catalog.set(article,{...catalog.get(article),...meta,article});
 }
-const items=[...catalog.values()].filter(a=>a.title&&a.article).map(a=>({...a,date:a.date||null,platform:a.platform||'Not announced'}));
+const supplemental=JSON.parse(fs.readFileSync(path.join(root,'assets/calendar-releases.json'),'utf8')).releases;
+const normalized=s=>s.toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
+for(const a of supplemental){
+ if(!a.id||!a.title||!/^https:\/\//.test(a.sourceUrl||''))throw Error('Invalid source-backed release');
+ if(catalog.has(a.articleSlug)||[...catalog.values()].some(x=>normalized(x.title||'')===normalized(a.title)||normalized(x.title||'').startsWith(normalized(a.title)+' ')))continue;
+ catalog.set('source:'+a.id,a);
+}
+const items=[...catalog.values()].filter(a=>a.title&&(a.article||a.sourceUrl)).map(a=>({...a,date:a.date||null,platform:a.platform||'Not announced'}));
 const now=new Date(process.env.ANINEXTUP_NOW||Date.now()),months=model.range(now),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const label=m=>new Date(m+'-01T12:00:00Z').toLocaleDateString('en-US',{month:'long',year:'numeric',timeZone:'UTC'});
-const card=a=>'<a class="calendar-release" href="/'+esc(a.article)+'"><span class="calendar-release-date">'+esc(a.date||a.dateLabel||'Date TBA')+' · '+esc(model.precision(a))+'</span><h3>'+esc(a.title)+'</h3><p>'+esc(model.format(a))+' · '+esc(a.platform)+'</p><small>Read guide for territories, language options and official sources →</small></a>';
+const card=a=>'<a class="calendar-release" href="'+esc(a.article?'/'+a.article:a.sourceUrl)+'"'+(a.article?'':' target="_blank" rel="noopener noreferrer"')+'><span class="calendar-release-date">'+esc(a.date||a.dateLabel||'Date TBA')+' · '+esc(model.precision(a))+'</span><h3>'+esc(a.title)+'</h3><p>'+esc(model.format(a))+' · '+esc(a.platform)+'</p>'+(a.article?'':'<p>'+esc(a.region)+' · Source checked '+esc(a.verifiedOn)+'</p>')+'<small>'+(a.article?'Read guide for territories, language options and official sources →':'Official release announcement ↗')+'</small></a>';
 const dated=items.filter(a=>months.includes(model.monthOf(a)));
 const pending=items.filter(a=>!model.monthOf(a));
 let body='<section class="calendar-expanded" aria-label="Anime release tracker"><div class="calendar-filter-bar"><label>Month<select id="cal-month"><option value="">All 12 months</option>'+months.map(m=>'<option value="'+m+'">'+label(m)+'</option>').join('')+'<option value="announced">Season, year &amp; date TBA</option></select></label><label>Search title<input type="search" id="cal-query" placeholder="Search anime..."></label><label>Format<select id="cal-format"><option value="">All formats</option>'+['New series','Returning series','Movies','Specials','Preview screenings'].map(x=>'<option>'+x+'</option>').join('')+'</select></label><label>Platform / distribution<select id="cal-platform"><option value="">All platforms</option>'+[...new Set(items.flatMap(a=>model.platforms(a)))].sort().map(x=>'<option>'+esc(x)+'</option>').join('')+'</select></label><label>Date status<select id="cal-precision"><option value="">All date statuses</option>'+['Exact date','Month confirmed','Season announced','Year announced','Date TBA'].map(x=>'<option>'+x+'</option>').join('')+'</select></label><button type="button" id="cal-clear">Clear filters</button><p id="cal-count" role="status" aria-live="polite">'+dated.length+' releases across the next 12 months; '+pending.length+' announcements without an exact month.</p></div><div id="cal-results">';

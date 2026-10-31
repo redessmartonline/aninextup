@@ -1,0 +1,83 @@
+{
+  "updated": "2026-10-31",
+  "releases": [
+    {
+      "id": "ms-isshiki-love",
+      "title": "Ms. Isshiki Wants to Know About Love",
+      "date": null,
+      "dateLabel": "January 2027",
+      "platform": "Japanese TV; international streaming not announced",
+      "category": "TV Anime",
+      "region": "Japan",
+      "sourceUrl": "https://isshikisan-anime.com/",
+      "articleSlug": "articles/ms-isshiki-wants-to-know-about-love",
+      "verifiedOn": "2026-10-31",
+      "status": "month-confirmed"
+    },
+    {
+      "id": "reincarnated-elf",
+      "title": "The Reincarnated Elf Left on a Journey to Master His Magic",
+      "date": null,
+      "dateLabel": "January 2027",
+      "platform": "Japanese TV; international streaming not announced",
+      "category": "TV Anime",
+      "region": "Japan",
+      "sourceUrl": "https://tenseielf.asmik-ace.co.jp/",
+      "articleSlug": "articles/reincarnated-elf-anime",
+      "verifiedOn": "2026-10-31",
+      "status": "month-confirmed"
+    },
+    {
+      "id": "lona",
+      "title": "LONA",
+      "date": null,
+      "dateLabel": "Spring 2027",
+      "platform": "Japanese TV; streaming not announced",
+      "category": "TV Anime",
+      "region": "Japan",
+      "sourceUrl": "https://lona-animation.com/news/0001/",
+      "articleSlug": "articles/lona-anime",
+      "verifiedOn": "2026-10-31",
+      "status": "season-confirmed"
+    },
+    {
+      "id": "beat-motion",
+      "title": "BEAT & MOTION",
+      "date": null,
+      "dateLabel": "2027",
+      "platform": "Netflix · worldwide",
+      "category": "TV Anime",
+      "region": "Worldwide",
+      "sourceUrl": "https://www.cyberagent.co.jp/news/detail/id%3D33469",
+      "articleSlug": "articles/beat-and-motion-anime",
+      "verifiedOn": "2026-10-31",
+      "status": "year-confirmed"
+    },
+    {
+      "id": "false-angels",
+      "title": "Fall in Love, You False Angels",
+      "date": null,
+      "dateLabel": "2027",
+      "platform": "Japanese TV; international streaming not announced",
+      "category": "TV Anime",
+      "region": "Japan",
+      "sourceUrl": "https://koidomo-anime.com/",
+      "articleSlug": "articles/fall-in-love-you-false-angels",
+      "verifiedOn": "2026-10-31",
+      "status": "year-confirmed"
+    },
+    {
+      "id": "twisted-wonderland-savanaclaw",
+      "title": "Disney Twisted-Wonderland The Animation: Episode of Savanaclaw",
+      "date": null,
+      "dateLabel": "December 2026",
+      "platform": "Disney+ (Japan announcement)",
+      "category": "Season Premiere",
+      "region": "Japan announcement; check local availability",
+      "sourceUrl": "https://www.disney.co.jp/shopping/itemnews/20260820_01",
+      "articleSlug": "articles/twisted-wonderland-savanaclaw",
+      "verifiedOn": "2026-10-31",
+      "status": "month-confirmed"
+    }
+  ]
+}

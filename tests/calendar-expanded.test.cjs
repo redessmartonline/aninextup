@@ -14,13 +14,16 @@ assert.equal(m.matches({title:'Example',platform:'Netflix'},{platform:'Prime Vid
 assert.deepEqual(m.range(new Date('2026-12-31T12:00:00Z')).slice(0,2),['2026-12','2027-01']);
 assert.equal(m.range(new Date('2026-12-31T12:00:00Z')).length,12);
 const html=fs.readFileSync('calendar.html','utf8'),catalog=JSON.parse(html.match(/id="calendar-catalog" type="application\/json">([\s\S]*?)<\/script>/)[1]);
-assert.equal(new Set(catalog.items.map(x=>x.article)).size,catalog.items.length,'No duplicate releases');
+assert.equal(new Set(catalog.items.map(x=>x.article||x.id)).size,catalog.items.length,'No duplicate releases');
 assert(!catalog.items.some(x=>/jump-festa|anime-releasing-|-[a-f0-9]{8}$/.test(x.article)),'No event roundups or duplicate news entries');
 assert(catalog.items.some(x=>x.article.endsWith('full-clearing-another-world-zero-believers-premiere')),'Release summaries without index metadata are supported');
 assert.equal(catalog.months.length,12);
 assert(catalog.items.some(x=>m.monthOf(x)==='2027-01'),'2027 releases included');
 assert(catalog.items.some(x=>!x.date&&m.monthOf(x)),'Month-only releases included without invented days');
 assert(catalog.items.some(x=>m.precision(x)==='Date TBA'));
-for(const a of catalog.items){assert(html.includes(a.article),'Crawlable guide link');if(a.date)assert(!Number.isNaN(Date.parse(a.date)));}
+for(const a of catalog.items){assert(html.includes(a.article||a.sourceUrl),'Crawlable guide or primary source link');if(a.date)assert(!Number.isNaN(Date.parse(a.date)));}
+const newReleases=catalog.items.filter(a=>!a.article);assert(newReleases.every(a=>a.sourceUrl.startsWith('https://')&&a.verifiedOn));
+const supplemental=JSON.parse(fs.readFileSync('assets/calendar-releases.json','utf8')).releases;
+for(const a of supplemental)assert(catalog.items.some(x=>x.id===a.id||x.article===a.articleSlug||x.title.toLowerCase().startsWith(a.title.toLowerCase())),'Supplemental release or its full guide is present');
 assert(!html.includes("const months=['2026-10','2026-11','2026-12']"),'Legacy fixed calendar removed');
 console.log('PASS: 12-month rollover, 2027 catalog, date precision, formats, combined filters, deduplication and crawlable fallback');
