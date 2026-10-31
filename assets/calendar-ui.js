@@ -19,5 +19,5 @@ for(const m of [...catalog.months,'announced']){if(month.value&&month.value!==m)
 if(!results.children.length)results.append(el('p','No tracked releases match these filters.','empty'));
 }
 for(const input of [month,format,platform,precision])input.addEventListener('change',()=>{selectedDay=null;render();});query.addEventListener('input',()=>{selectedDay=null;render();});byId('cal-clear').onclick=()=>{for(const x of [month,query,format,platform,precision])x.value='';selectedDay=null;render();query.focus();};
-render();
+month.value=catalog.months[0]||'';render();
 })();
