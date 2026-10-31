@@ -11,6 +11,8 @@ on:
       - "db/**"
       - "scripts/prepare_newsletter_db.mjs"
       - "scripts/test_newsletter_live.mjs"
+      - "scripts/test_comments_live.mjs"
+      - "scripts/build_article_community.py"
       - "scripts/build_watch_catalog.js"
       - "scripts/build_popular_news.py"
       - "scripts/standardize_article_bylines.py"
@@ -65,6 +67,9 @@ jobs:
       - name: Standardize article authorship and original publication dates
         run: python scripts/standardize_article_bylines.py
 
+      - name: Install sharing and comments on published articles
+        run: python scripts/build_article_community.py
+
       - name: Build confirmed streaming platform catalog
         run: node scripts/build_watch_catalog.js
 
@@ -86,7 +91,9 @@ jobs:
           node-version: 24
 
       - name: Verify newsletter flows
-        run: node tests/newsletter.test.mjs
+        run: |
+          node tests/newsletter.test.mjs
+          node tests/comments.test.mjs
 
       - name: Prepare newsletter database
         continue-on-error: true
@@ -120,3 +127,9 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: node scripts/test_newsletter_live.mjs
+
+      - name: Verify live pending comments remain private
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: node scripts/test_comments_live.mjs

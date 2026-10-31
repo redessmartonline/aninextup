@@ -1,0 +1,32 @@
+name: Moderate article comment
+on:
+  workflow_dispatch:
+    inputs:
+      comment_id:
+        description: Comment ID from Cloudflare D1 article_comments
+        required: true
+        type: string
+      state:
+        description: Approved publishes the comment; rejected or pending hides it
+        required: true
+        type: choice
+        options:
+          - approved
+          - rejected
+          - pending
+permissions:
+  contents: read
+jobs:
+  moderate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+      - name: Apply the requested moderation decision
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          COMMENT_ID: ${{ inputs.comment_id }}
+          COMMENT_STATE: ${{ inputs.state }}
+        run: node scripts/moderate_comment.mjs
