@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-31",
+  "commit": "2212e995403816e093a3b5bab2011d02e33b4c15",
+  "articles": 125,
+  "workflowRun": 41199498034,
+  "conclusion": "success",
+  "features": [
+    "Five share links, copy link, native share with copy fallback",
+    "Pending D1 comments and replies; approved-only public feed",
+    "Manual moderation through authenticated GitHub workflow",
+    "Automatic module insertion for future articles at deployment"
+  ],
+  "checks": [
+    "Syntax, comments unit tests, newsletter regression tests",
+    "139 indexable pages plus noindex preview audit: zero errors/warnings",
+    "125 articles contain exactly one module and both asset includes",
+    "Homepage latest-four first render preserved",
+    "Production D1 pending write and public exclusion passed; ephemeral test removed",
+    "Public Medaka and VERTEX modules, canonical share URL, copy action and three related cards verified"
+  ],
+  "limits": [
+    "Social posts were not sent during verification",
+    "Native OS share sheet not exercised",
+    "Approval/rejection and pagination tested in memory; no reader comment auto-approved",
+    "Moderator reviews pending content in Cloudflare D1; no public admin API",
+    "3 submissions/IP/hour, 100 globally/hour; manual review still required"
+  ]
+}
