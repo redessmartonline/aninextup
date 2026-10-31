@@ -12,10 +12,11 @@ def main():
    match=re.search(r'<section\b[^>]*(?:aria-labelledby="related-releases-heading"|class="related-releases")[^>]*>',text)
    if not match:raise ValueError('Missing related section: '+str(path))
    text=text[:match.start()]+BLOCK+text[match.start():]
-  css='<link rel="stylesheet" href="/assets/article-community.css?v=20261031a">'
-  js='<script defer src="/assets/article-community.js?v=20261031a"></script>'
+  css='<link rel="stylesheet" href="/assets/article-community.css?v=20261031b">'
+  js='<script defer src="/assets/article-community.js?v=20261031b"></script>'
   if '/assets/article-community.css?' not in text:text=text.replace('</head>',css+'\n</head>',1)
   if '/assets/article-community.js?' not in text:text=text.replace('</body>',js+'</body>',1) if '</body>' in text else text+js+'\n'
+  text=re.sub(r'(/assets/article-community\.(?:css|js)\?v=)[^"\s]+',r'\g<1>20261031b',text)
   if text!=path.read_text():path.write_text(text);count+=1
  print('Article community modules updated:',count)
 if __name__=='__main__':main()
