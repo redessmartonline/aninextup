@@ -1,11 +1,6 @@
 {
-  "count": 1,
+  "count": 0,
   "failed_count": 0,
   "failed": [],
-  "images": [
-    {
-      "source": "https://hiragihouse-anime.com/assets/_t/img/top/visual_st.jpg",
-      "local": "/assets/images/external/3f3b71e08c4fef35809c699f8f78e9fb0549dec4538e1897fcfe50a51d72d5ff.webp"
-    }
-  ]
+  "images": []
 }
