@@ -1,6 +1,15 @@
 {
-  "count": 0,
+  "count": 2,
   "failed_count": 0,
   "failed": [],
-  "images": []
+  "images": [
+    {
+      "source": "https://aninextup.com/assets/images/covers/ms-isshiki-main-trailer.webp",
+      "local": "/assets/images/covers/ms-isshiki-main-trailer.webp"
+    },
+    {
+      "source": "https://aninextup.com/assets/images/covers/ms-isshiki-official.webp",
+      "local": "/assets/images/covers/ms-isshiki-official.webp"
+    }
+  ]
 }
