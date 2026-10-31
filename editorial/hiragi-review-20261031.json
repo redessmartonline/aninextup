@@ -1,10 +1,9 @@
 {
   "slug": "hiragi-san-house-of-vampires-anime",
-  "main_editorial_word_count": 629,
+  "main_editorial_word_count": 1308,
   "word_count_scope": "lead and substantive paragraphs; excludes headings, captions, source list, metadata, navigation, related cards and footer",
-  "status": "DRAFT — NOT PUBLISHED",
+  "status": "EDITORIAL REVISION COMPLETE — UNPUBLISHED; VISUAL CHECKS PENDING",
   "blockers": [
-    "Below mandatory 1,200-word minimum; insufficient confirmed detail to expand without filler",
     "DESKTOP VISUAL: NOT VERIFIED — browser usage limit blocked required page/card rendering inspection",
     "MOBILE VISUAL: NOT TESTED",
     "DEPLOYMENT: NOT PERFORMED",
@@ -18,12 +17,13 @@
     "first visual"
   ],
   "questions_answered": [
-    "Is Hiragi-san's House of Vampires getting an anime?",
-    "What is the story?",
-    "Who appears in the first visual?",
-    "What production information is actually confirmed?",
-    "Is there an official trailer?",
-    "Where can I follow the release and source manga?"
+    "A Halloween announcement, with the premiere still ahead",
+    "The family welcome is the unsettling part",
+    "Reading the first visual: closeness without reassurance",
+    "What Miki Yoshikawa's other stories add to the context",
+    "Where English readers can start with the manga",
+    "The production credit and viewing details to keep straight",
+    "Why this one belongs on a supernatural-romance watchlist"
   ],
   "duplicate_check": "125 existing main article pages, central index, sitemap and both open PRs checked; no title/alias match",
   "hero": {
@@ -40,10 +40,14 @@
   "video": "No YouTube link or embedded video on official anime homepage; social campaign videos mentioned by TMS are not asserted absent",
   "sources": [
     "https://hiragihouse-anime.com/",
-    "https://www.tms-e.co.jp/release/anime/entry-26221.html"
+    "https://www.tms-e.co.jp/release/anime/entry-26221.html",
+    "https://kmanga.kodansha.com/title/10015/episode/365624",
+    "https://kodansha.us/series/a-couple-of-cuckoos/",
+    "https://kodansha.us/series/yamada-kun-and-the-seven-witches/",
+    "https://kodansha.us/2016/01/26/miki-yoshikawa-interview-on-yamada-kun-and-the-seven-witches/"
   ],
   "search_console": "No current property metrics retrieved; no volume or ranking claims",
-  "publication_authorization": "Current owner instruction to finish/publish recognized; no additional approval requested. Quality blockers remain.",
+  "publication_authorization": "Owner requests preparation and notification before publication. Do not merge or publish until approved.",
   "asset_http_checks": [
     {
       "asset": "hero",
@@ -77,6 +81,23 @@
     "exactly 3 related cards",
     "all table-of-contents anchors resolve",
     "sitemap XML parses",
-    "index and sitemap contain exactly one intended route"
-  ]
+    "index and sitemap contain exactly one intended route",
+    "1,308 main editorial words, within 1,200–2,000",
+    "seven substantive sections, all ToC targets resolve",
+    "no duplicate paragraphs",
+    "official hero and three related cards preserved",
+    "six primary sources listed; date-only book release kept separate from anime date"
+  ],
+  "original_value": [
+    "Close reading of the official visual: framing, eye line, color and incomplete access to Shota’s reaction",
+    "Comparison of relationship disruptions in the official opening premises of Cuckoos, Yamada-kun and Hiragi-san",
+    "Careful use of Yoshikawa’s 2015 interview as historical context, explicitly distinguished from comments on the new anime",
+    "Practical English reading route, title/romanization cross-check and distinction between manga and anime rights"
+  ],
+  "editorial_limitations": [
+    "No full-episode or full-manga review claimed",
+    "No AI detector score or claim of human authorship",
+    "Interpretive passages identified as analysis, not new production facts"
+  ],
+  "revision_note": "Rewritten beyond announcement paraphrase: premise analysis, direct artwork reading, source-supported author context and English manga route. Unpublished; browser and public image checks remain pending."
 }
