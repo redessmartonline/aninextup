@@ -1,0 +1,82 @@
+{
+  "slug": "hiragi-san-house-of-vampires-anime",
+  "main_editorial_word_count": 629,
+  "word_count_scope": "lead and substantive paragraphs; excludes headings, captions, source list, metadata, navigation, related cards and footer",
+  "status": "DRAFT — NOT PUBLISHED",
+  "blockers": [
+    "Below mandatory 1,200-word minimum; insufficient confirmed detail to expand without filler",
+    "DESKTOP VISUAL: NOT VERIFIED — browser usage limit blocked required page/card rendering inspection",
+    "MOBILE VISUAL: NOT TESTED",
+    "DEPLOYMENT: NOT PERFORMED",
+    "Related image HTTP checks returned 403 from this environment; source paths exist in main but public accessibility is not verified"
+  ],
+  "intent": "Confirm whether a Hiragi-san TV anime exists, what the first visual reveals, and whether a premiere date is announced",
+  "primary_keyword_cluster": [
+    "Hiragi-san House of Vampires anime",
+    "Hiiragi-san Chi no Kyuuketsu Jijou anime",
+    "release date",
+    "first visual"
+  ],
+  "questions_answered": [
+    "Is Hiragi-san's House of Vampires getting an anime?",
+    "What is the story?",
+    "Who appears in the first visual?",
+    "What production information is actually confirmed?",
+    "Is there an official trailer?",
+    "Where can I follow the release and source manga?"
+  ],
+  "duplicate_check": "125 existing main article pages, central index, sitemap and both open PRs checked; no title/alias match",
+  "hero": {
+    "url": "https://hiragihouse-anime.com/assets/_t/img/top/visual_st.jpg",
+    "status": 200,
+    "mime": "image/jpeg",
+    "dimensions": [
+      2100,
+      2966
+    ],
+    "subject_identity": "Inspected image: blue-haired Yukie and Shota in a moonlit Japanese room; matches official announcement",
+    "browser_layout": "NOT VERIFIED"
+  },
+  "video": "No YouTube link or embedded video on official anime homepage; social campaign videos mentioned by TMS are not asserted absent",
+  "sources": [
+    "https://hiragihouse-anime.com/",
+    "https://www.tms-e.co.jp/release/anime/entry-26221.html"
+  ],
+  "search_console": "No current property metrics retrieved; no volume or ranking claims",
+  "publication_authorization": "Current owner instruction to finish/publish recognized; no additional approval requested. Quality blockers remain.",
+  "asset_http_checks": [
+    {
+      "asset": "hero",
+      "url": "https://hiragihouse-anime.com/assets/_t/img/top/visual_st.jpg",
+      "status": 200,
+      "mime": "image/jpeg",
+      "dimensions": [
+        2100,
+        2966
+      ]
+    },
+    {
+      "asset": "related-0",
+      "url": "https://aninextup.com/assets/images/covers/record-of-a-fallen-vampire-teaser.webp",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "asset": "related-1",
+      "url": "https://aninextup.com/assets/images/external/f8eabe7be060132cdc8aef4ce896e7cd425c71cb620c1316c911f73f0165fea5.webp",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "asset": "related-2",
+      "url": "https://aninextup.com/assets/images/covers/nues-exorcist-official.png",
+      "error": "HTTP Error 403: Forbidden"
+    }
+  ],
+  "automated_checks": [
+    "one H1",
+    "all JSON metadata parses",
+    "exactly 3 related cards",
+    "all table-of-contents anchors resolve",
+    "sitemap XML parses",
+    "index and sitemap contain exactly one intended route"
+  ]
+}
