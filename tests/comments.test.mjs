@@ -1,8 +1,8 @@
-import assert from 'node:assert/strict';import {DatabaseSync} from 'node:sqlite';import {readFileSync} from 'node:fs';import {comments} from '../src/comments.js';
+import assert from 'node:assert/strict';import {DatabaseSync} from 'node:sqlite';import {readFileSync} from 'node:fs';import {comments,needsReview} from '../src/comments.js';
 const sql=new DatabaseSync(':memory:');sql.exec(readFileSync('db/comments.sql','utf8'));const db={prepare(q){let v=[];return{bind(...a){v=a;return this},async first(){return sql.prepare(q).get(...v)||null},async run(){return{meta:{changes:sql.prepare(q).run(...v).changes}}},async all(){return{results:sql.prepare(q).all(...v)}}}}};
 const env={NEWSLETTER_DB:db,ASSETS:{async fetch(request){const slug=new URL(request.url).pathname.split('/').at(-1);return new Response(slug==='valid-guide'||slug==='other-guide'?'<link rel="canonical" href="https://aninextup.com/articles/'+slug+'">':'not found',{status:slug.endsWith('guide')?200:404});}}};
 const req=(body,ip='192.0.2.1',origin='https://aninextup.com')=>new Request('https://aninextup.com/api/comments',{method:'POST',headers:{'content-type':'application/json',origin,'cf-connecting-ip':ip},body:JSON.stringify(body)});
-const base={article:'valid-guide',name:'Reader',body:'Looking forward to this anime.'};
+const base={article:'valid-guide',name:'Reader',body:'Looking forward to this anime. https://example.com'};
 assert.equal((await comments(req(base,'1','https://attacker.example'),env)).status,403);
 assert.equal((await comments(req({...base,body:'a'}),env)).status,400);
 assert.equal((await comments(req({...base,article:'../../privacy'}),env)).status,404);
@@ -19,7 +19,16 @@ await comments(req({...base,body:'Third message'}),env);assert.equal((await comm
 await comments(req({...base,name:'<script>',body:'<img src=x onerror=alert(1)>'},'3'),env);assert.equal(sql.prepare("SELECT state FROM article_comments WHERE display_name='<script>'").get().state,'pending');
 assert.equal((await comments(req({...base,website:'spam'},'4'),env)).status,202);assert.equal(sql.prepare('SELECT COUNT(*) AS n FROM article_comments').get().n,4,'Honeypot stores nothing');
 for(let i=0;i<25;i++)sql.prepare("INSERT INTO article_comments(article,display_name,body,state,created_at,fingerprint) VALUES('valid-guide','Reader','Test','approved',?,?)").run(new Date().toISOString(),'paging-'+i);
-data=await (await comments(get(),env)).json();assert.equal(data.items.length,20);assert(data.nextBefore);const second=await (await comments(get('valid-guide',data.nextBefore),env)).json();assert.equal(second.items.length,6);assert(!second.items.some(i=>data.items.some(j=>i.id===j.id)),'Pagination has no duplicate IDs');
+data=await (await comments(get(),env)).json();assert.equal(data.items.length,20);assert(data.nextBefore);const second=await (await comments(get('valid-guide',data.nextBefore),env)).json();assert.equal(second.items.length,8);assert(!second.items.some(i=>data.items.some(j=>i.id===j.id)),'Pagination has no duplicate IDs');
 sql.prepare("UPDATE article_comments SET state='rejected'").run();assert.equal((await (await comments(get(),env)).json()).total,0,'Rejected comments hidden');
 assert.equal((await comments(req(base),{})).status,503);assert.equal((await comments(req({...base,body:'x'.repeat(11000)}),env)).status,413);
 console.log('PASS: origin, validation, existing articles, pending privacy, approval/rejection, duplicate suppression, rate limits, reply scope, honeypot, bounded input, pagination and unavailable storage');
+
+assert.equal(needsReview('Reader','Looking forward to this anime!'),false);
+assert.equal(needsReview('Reader','Buy now https://spam.example'),true);
+assert.equal(needsReview('Reader','Check www.example.com'),true);
+assert.equal(needsReview('Reader','Contact me on Telegram'),true);
+r=await comments(req({...base,body:'The animation in the trailer looks great!'},'clean-reader'),env);
+assert.equal((await r.json()).state,'approved');
+assert.equal(sql.prepare("SELECT state FROM article_comments WHERE body=?").get('The animation in the trailer looks great!').state,'approved');
+assert.equal((await (await comments(get(),env)).json()).total,1,'Clean comments publish immediately');

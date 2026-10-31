@@ -1,6 +1,15 @@
 const ORIGIN='https://aninextup.com';
 const json=(body,status=200)=>Response.json(body,{status,headers:{'cache-control':'no-store','x-robots-tag':'noindex','x-content-type-options':'nosniff'}});
 const hash=async value=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(value))),n=>n.toString(16).padStart(2,'0')).join('');
+
+// Conservative local spam rules; retained comments remain available for manual review.
+export function needsReview(name,body){
+ const text=(name+' '+body).normalize('NFKC').replace(/[\u200b-\u200f\u2060\ufeff]/g,'').toLowerCase();
+ return /https?:|www\.|[a-z0-9-]+\.(?:com|net|org|io|xyz|top|ru|click|info|shop)\b|[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}|<\/?[a-z][^>]*>|\[url\b/i.test(text)
+ || /\b(?:buy now|promo code|earn money|make money|free crypto|crypto giveaway|casino bonus|whatsapp me|telegram me|contact me on|comprar ahora|gana dinero|dinero facil)\b/i.test(text)
+ || /(.)\1{14,}/u.test(text);
+}
+
 async function validArticle(env,slug){
  if(!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)||slug.length>180)return false;
  const response=await env.ASSETS.fetch(new Request(ORIGIN+'/articles/'+slug));
@@ -39,6 +48,7 @@ async function handle(request,env){
  await db.prepare('DELETE FROM comment_limits WHERE period<=?').bind(hour-24).run();
  for(const [key,limit] of [['ip:'+ip,3],['global',100]]){const row=await db.prepare('INSERT INTO comment_limits(key,period,count) VALUES(?,?,1) ON CONFLICT(key,period) DO UPDATE SET count=count+1 RETURNING count').bind(await hash(hour+':'+key),hour).first();if(row.count>limit)return json({error:'Too many comments. Please try again later.'},429);}
  const fingerprint=await hash(slug+'\n'+name+'\n'+body+'\n'+parent);
- await db.prepare("INSERT OR IGNORE INTO article_comments(article,display_name,body,parent_id,state,created_at,fingerprint) VALUES(?,?,?,?,'pending',?,?)").bind(slug,name,body,parent,new Date(now).toISOString(),fingerprint).run();
- return json({ok:true,message:'Thanks! Your comment has been submitted for review. It will appear after approval.'},202);
+ const state=needsReview(name,body)?'pending':'approved';
+ await db.prepare("INSERT OR IGNORE INTO article_comments(article,display_name,body,parent_id,state,created_at,fingerprint) VALUES(?,?,?,?,?,?,?)").bind(slug,name,body,parent,state,new Date(now).toISOString(),fingerprint).run();
+ return json({ok:true,state,message:state==='approved'?'Thanks! Your comment is now published.':'Thanks! Your comment is awaiting review.'},202);
 }
