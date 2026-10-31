@@ -93,6 +93,7 @@ anime:[
 {id:"psyren",newsCategory:"new-anime",image:"assets/images/psyren.jpg",title:"PSYREN",date:"2026-10-05",platform:"Crunchyroll",article:"articles/psyren-release-date",category:"Premiere",status:"confirmed"},
 ],
 guides:[
+{image:"https://hiragihouse-anime.com/assets/_t/img/top/visual_st.jpg",title:"Hiragi-san's House of Vampires Anime Announced: First Visual",tag:"OFFICIAL NEWS",article:"articles/hiragi-san-house-of-vampires-anime",newsCategory:"new-anime",description:"Hiragi-san's House of Vampires is getting a TV anime. See the official first visual, story, production credit and what remains unannounced."},
 {image:"/assets/images/news/death-stranding-isolations-anime.webp",title:"Death Stranding Isolations: 2027 Release, Trailer & Streaming",tag:"2027 · NEW OFFICIAL TEASER",article:"articles/death-stranding-isolations-anime",newsCategory:"release-news",description:"Death Stranding Isolations has a new official teaser and a 2027 Disney release window. Explore the anime story, staff and what remains unannounced."},
 {image:"/assets/images/news/anime-expeditions-official-roblox.webp",title:"Anime Expeditions Codes (October 2026): Rewards & Redeem Guide",tag:"ROBLOX CODES · REPORTED",article:"articles/anime-expeditions-codes",newsCategory:"release-news",description:"Check reported Anime Expeditions codes, rewards and the October 29 expiry warning. Learn how to redeem codes and troubleshoot errors in Roblox."},
 {image:"/assets/images/news/glasses-with-a-chance-of-delinquent-official-visual.webp",title:"Glasses with a Chance of Delinquent Anime: Release Date & Trailer",tag:"APRIL 2027 · ROMANCE ANIME",article:"articles/glasses-with-a-chance-of-delinquent-anime",newsCategory:"new-anime",description:"Glasses with a Chance of Delinquent premieres in April 2027. See the official teaser, cast, studios, Japan streaming plans and international release status."},
@@ -178,5 +179,6 @@ guides:[
 {image:"assets/images/netflix-october-2026.jpg",title:"New Anime on Netflix in October 2026",tag:"NETFLIX",article:"articles/netflix-october-2026",newsCategory:"release-news",description:"Notable anime arriving on Netflix this month."},
 {image:"assets/images/fall-2026-calendar.jpeg",title:"Fall 2026 Anime Calendar",tag:"FALL 2026",article:"articles/fall-2026-anime-calendar",newsCategory:"release-news",description:"October premieres and where to watch them."}
 ]};
+
 
 
