@@ -27,7 +27,7 @@
   ],
   "duplicate_check": "125 existing main article pages, central index, sitemap and both open PRs checked; no title/alias match",
   "hero": {
-    "url": "https://hiragihouse-anime.com/assets/_t/img/top/visual_st.jpg",
+    "url": "/assets/images/external/3f3b71e08c4fef35809c699f8f78e9fb0549dec4538e1897fcfe50a51d72d5ff.webp",
     "status": 200,
     "mime": "image/jpeg",
     "dimensions": [
@@ -51,7 +51,7 @@
   "asset_http_checks": [
     {
       "asset": "hero",
-      "url": "https://hiragihouse-anime.com/assets/_t/img/top/visual_st.jpg",
+      "url": "/assets/images/external/3f3b71e08c4fef35809c699f8f78e9fb0549dec4538e1897fcfe50a51d72d5ff.webp",
       "status": 200,
       "mime": "image/jpeg",
       "dimensions": [
