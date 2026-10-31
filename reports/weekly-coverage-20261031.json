@@ -1,0 +1,135 @@
+{
+  "checkedAt": "2026-10-31T12:17:38.110Z",
+  "status": "source_reverification_blocked",
+  "changesToSchedule": false,
+  "filesReadFromMain": [
+    "assets/weekly-episodes.js",
+    "assets/weekly-episodes-ui.js",
+    "today.html",
+    "this-week.html",
+    "reports/weekly-coverage-20261030.json"
+  ],
+  "mainReadAt": "11544dc8e8891bc6da02519c24e013615f9a9eca",
+  "source": "https://www.crunchyroll.com/pt-pt/news/seasonal-lineup/2026/10/7/programacao-calendario-crunchyroll-semana-temporada-outubro-2026",
+  "lastRecordedSourceUpdated": "2026-10-26T11:12:00Z",
+  "recordedCoverage": {
+    "validFrom": "2026-10-26",
+    "validThrough": "2026-11-01",
+    "scope": "49 selected slots only; not complete or worldwide",
+    "region": "Brazil",
+    "timezone": "America/Sao_Paulo",
+    "language": "Japanese audio · Portuguese subtitles",
+    "currentSourceTimestampReverified": false
+  },
+  "sources": [
+    {
+      "url": "https://www.crunchyroll.com/pt-pt/news/seasonal-lineup/2026/10/7/programacao-calendario-crunchyroll-semana-temporada-outubro-2026",
+      "method": "Web open plus separate direct HTTP HTML retrieval",
+      "httpStatus": 200,
+      "htmlBytes": 13802,
+      "result": "Web open returned zero readable lines; HTTP HTML contains 'This page could not be found'. No weekly body or update timestamp recovered. This is not a successful live inspection of the schedule."
+    },
+    {
+      "url": "https://www.crunchyroll.com/pt-br/simulcastcalendar?date=2026-10-26",
+      "method": "Web open",
+      "result": "Not accessible through web tool"
+    },
+    {
+      "url": "https://www.crunchyroll.com/pt-pt/news/tag/Calend%C3%A1rio",
+      "method": "Indexed official text retrieved through web search",
+      "result": "Indexed title still covers October 12–18; insufficient for current week."
+    },
+    {
+      "url": "https://www.crunchyroll.com/pt-br/news/tag/Calend%C3%A1rio",
+      "method": "Indexed official text retrieved through web search",
+      "result": "Indexed title covers October 5–11; insufficient for current week."
+    },
+    {
+      "url": "https://www.crunchyroll.com/pt-br/simulcastcalendar?filter=free",
+      "method": "Indexed official text",
+      "result": "October 19–25 and upcoming placeholders; wrong week/filter for current subtitled premium slots."
+    },
+    {
+      "url": "https://www.crunchyroll.com/es-es/news/seasonal-lineup/2026/10/11/crunchyroll-calendario-semanal-otono-2026",
+      "method": "Indexed official text through search; direct web open returned zero readable lines",
+      "indexedCoverage": "2026-10-26 to 2026-11-01",
+      "indexedSourceUpdated": "2026-10-26T19:46:00Z",
+      "result": "Current-week candidate but region flags collapse to 'Image' in indexed text and Brazilian Portuguese subtitle scope cannot be established. Contains differing times from stored Brazil calendar, including Dreamland, The Cold Sato-san, The Apothecary Diaries and HOTEL INHUMANS. Not applied to Brazil or added as a new region; no episode numbers imported from another regional calendar."
+    },
+    {
+      "url": "https://help.crunchyroll.com/pt-BR/article/is-there-a-release-calendar-available",
+      "method": "Indexed official help",
+      "result": "Describes logged-in website calendar; does not supply current dated slots."
+    }
+  ],
+  "checks": {
+    "syntax": true,
+    "slots": 49,
+    "dailyCounts": {
+      "2026-10-26": 3,
+      "2026-10-27": 7,
+      "2026-10-28": 8,
+      "2026-10-29": 3,
+      "2026-10-30": 6,
+      "2026-10-31": 11,
+      "2026-11-01": 11
+    },
+    "duplicates": 0,
+    "allEpisodeNumbersNull": true,
+    "allDatesWithinCoverage": true,
+    "regionAndLanguagePreserved": true,
+    "timezone": "America/Sao_Paulo",
+    "boundaryAndExpirySamples": {
+      "brazilBeforeMidnight": {
+        "state": "verified",
+        "todayCards": 6,
+        "weekCards": 49,
+        "todayNotice": false,
+        "weekNotice": false,
+        "nullLabel": true
+      },
+      "brazilMidnight": {
+        "state": "verified",
+        "todayCards": 11,
+        "weekCards": 49,
+        "todayNotice": false,
+        "weekNotice": false,
+        "nullLabel": true
+      },
+      "beforeExpiry": {
+        "state": "verified",
+        "todayCards": 11,
+        "weekCards": 49,
+        "todayNotice": false,
+        "weekNotice": false,
+        "nullLabel": true
+      },
+      "atExpiry": {
+        "state": "awaiting-verification",
+        "todayCards": 0,
+        "weekCards": 0,
+        "todayNotice": true,
+        "weekNotice": true,
+        "nullLabel": false
+      },
+      "beforeCoverage": {
+        "state": "awaiting-verification",
+        "todayCards": 0,
+        "weekCards": 0,
+        "todayNotice": true,
+        "weekNotice": true,
+        "nullLabel": false
+      }
+    },
+    "mainAssetsAndPagesUnchangedBeforeReport": true,
+    "expiryInstantUTC": "2026-11-02T03:00:00Z",
+    "method": "Fresh main assets executed in Node VM with fixed Date and minimal DOM; no previous local execution data used."
+  },
+  "decision": "Preserve stored 49 slots, all null episode values, exclusions, sourceUpdated and validThrough. No calendar/UI asset change, no cache version update, no deployment triggered. Keep recurring review active because a current accessible regional source may become available; recurring monitoring goal is not complete.",
+  "limitations": [
+    "No current Brazil weekly calendar or source-update timestamp could be independently confirmed.",
+    "No new pauses, changes, languages, licenses or regional slots verified.",
+    "No production deployment or public browser verification performed in this run; UI expiry was exercised locally.",
+    "Indexed regional differences remain unresolved and are not asserted as errors in the Brazil schedule."
+  ]
+}
