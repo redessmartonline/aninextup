@@ -1,0 +1,59 @@
+{
+  "slug": "ms-isshiki-wants-to-know-about-love",
+  "status": "OWNER AUTHORIZED PUBLICATION; BUILD AND PUBLIC URL VERIFICATION PENDING",
+  "main_editorial_word_count": 1344,
+  "scope": "lead and substantive paragraphs, excluding headings, video button, metadata, sources, captions, navigation, related cards and footer",
+  "intent": "Confirm the January 2027 release window, watch the official main trailer and understand the December preview and romantic premise",
+  "primary_keyword_cluster": [
+    "Ms. Isshiki Wants to Know About Love",
+    "Isshiki-san Wants to Know About Love",
+    "January 2027 release",
+    "official trailer",
+    "cast"
+  ],
+  "original_value": [
+    "Investigative competence versus romantic uncertainty: interpretation of the official premise",
+    "Close reading of the autumn main visual and tentative hand gesture",
+    "Distinction between December cinema preview and January TV broadcast",
+    "English manga reading route with publisher title and release-date cross-check",
+    "Distinguishes September cast announcement from October voice preview"
+  ],
+  "sources": [
+    "https://isshikisan-anime.com/news/index00140000.html",
+    "https://isshikisan-anime.com/news/index00130000.html",
+    "https://isshikisan-anime.com/story/index.html",
+    "https://isshikisan-anime.com/staffcast/index.html",
+    "https://isshikisan-anime.com/music/index.html",
+    "https://isshikisan-anime.com/books/index.html",
+    "https://www.youtube.com/watch?v=A86REZ-veV8",
+    "https://yenpress.com/titles/9798855430226-isshiki-san-wants-to-know-about-love-vol-1"
+  ],
+  "duplicate_review": "126 main article pages, assets/data.js, sitemap.xml and open PRs checked. Berserk of Gluttony author Isshiki Ichika is an unrelated name match, not a duplicate.",
+  "artwork": "Official hero and official video thumbnail downloaded, MIME and dimensions checked and visually inspected; all three existing related images also downloaded and visually inspected. Hero and video thumbnail stored locally.",
+  "video": {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Ms. Isshiki Wants to Know About Love — Official Main Trailer",
+    "description": "Official Japanese main promotional video linked by the anime production website and hosted by KADOKAWAanime.",
+    "thumbnailUrl": "https://aninextup.com/assets/images/covers/ms-isshiki-main-trailer.webp",
+    "uploadDate": "2026-10-30T22:00:25-07:00",
+    "duration": "PT1M30S",
+    "embedUrl": "https://www.youtube-nocookie.com/embed/A86REZ-veV8",
+    "url": "https://www.youtube.com/watch?v=A86REZ-veV8"
+  },
+  "date_precision": "January 2027 is month-only; no fabricated day. December 13 is an advance screening. Event hours explicitly JST.",
+  "automated_checks": [
+    "Word range 1,200–2,000",
+    "Metadata JSON parses",
+    "One H1",
+    "Exactly three existing related cards",
+    "Sitemap XML and central index inclusion",
+    "Explicit dateLabel January 2027 for calendar; no invented exact date"
+  ],
+  "visual_limits": [
+    "Desktop and mobile browser rendering NOT VERIFIED: previously blocked by browser usage limit.",
+    "No claim that trailer playback or live rendering was tested in a browser."
+  ],
+  "publication_authorization": "Owner explicitly instructed Publicalo for this specific article. No additional approval requested.",
+  "search_console": "No ranking, traffic or search-volume claims; current property metrics not retrieved."
+}
