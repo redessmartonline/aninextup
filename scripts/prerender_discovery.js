@@ -80,3 +80,6 @@ for(const name of fs.readdirSync(root).filter(n=>n.endsWith('.html'))){
 }
 console.log(`Discovery HTML updated: ${changed} pages; ${ctx.today}, week ending ${ctx.weekEnd}.`);
 
+
+// Keep the rolling calendar and article-derived release windows current on every discovery build.
+require('./build_calendar.js');

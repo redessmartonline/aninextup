@@ -14,6 +14,8 @@ on:
       - "scripts/test_comments_live.mjs"
       - "scripts/build_article_community.py"
       - "scripts/build_watch_catalog.js"
+      - "scripts/build_calendar.js"
+      - "tests/calendar-expanded.test.cjs"
       - "scripts/build_popular_news.py"
       - "scripts/standardize_article_bylines.py"
       - "_headers"
@@ -94,6 +96,7 @@ jobs:
         run: |
           node tests/newsletter.test.mjs
           node tests/comments.test.mjs
+          node tests/calendar-expanded.test.cjs
 
       - name: Prepare newsletter database
         continue-on-error: true

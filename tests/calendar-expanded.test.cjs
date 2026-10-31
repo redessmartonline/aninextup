@@ -1,0 +1,22 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),m=require('../assets/calendar-model.js');
+assert.equal(m.monthOf({dateLabel:'January 2027'}),'2027-01');
+assert.equal(m.monthOf({dateLabel:'Summer 2027'}),null);
+assert.equal(m.precision({dateLabel:'Summer 2027'}),'Season announced');
+assert.equal(m.precision({dateLabel:'2028; exact date pending'}),'Year announced');
+assert.equal(m.precision({dateLabel:'Season 2 · TV date TBA'}),'Date TBA');
+assert.equal(m.format({category:'Anime Movie'}),'Movies');
+assert.equal(m.format({category:'Cour 2'}),'Returning series');
+assert.equal(m.format({category:'Special Episodes'}),'Specials');
+assert.equal(m.matches({title:'Example',platform:'Netflix',category:'Movie'},{query:'exam',platform:'Netflix',format:'Movies'}),true);
+assert.equal(m.matches({title:'Example',platform:'Netflix'},{platform:'Prime Video'}),false);
+assert.deepEqual(m.range(new Date('2026-12-31T12:00:00Z')).slice(0,2),['2026-12','2027-01']);
+assert.equal(m.range(new Date('2026-12-31T12:00:00Z')).length,12);
+const html=fs.readFileSync('calendar.html','utf8'),catalog=JSON.parse(html.match(/id="calendar-catalog" type="application\/json">([\s\S]*?)<\/script>/)[1]);
+assert.equal(new Set(catalog.items.map(x=>x.article)).size,catalog.items.length,'No duplicate releases');
+assert.equal(catalog.months.length,12);
+assert(catalog.items.some(x=>m.monthOf(x)==='2027-01'),'2027 releases included');
+assert(catalog.items.some(x=>!x.date&&m.monthOf(x)),'Month-only releases included without invented days');
+assert(catalog.items.some(x=>m.precision(x)==='Date TBA'));
+for(const a of catalog.items){assert(html.includes(a.article),'Crawlable guide link');if(a.date)assert(!Number.isNaN(Date.parse(a.date)));}
+assert(!html.includes("const months=['2026-10','2026-11','2026-12']"),'Legacy fixed calendar removed');
+console.log('PASS: 12-month rollover, 2027 catalog, date precision, formats, combined filters, deduplication and crawlable fallback');
