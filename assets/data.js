@@ -1,5 +1,5 @@
 window.ANINEXTUP_DATA={
-updated:"2026-10-30",
+updated:"2026-10-31",
 site:{timezone:"America/Santo_Domingo",season:"Fall 2026"},
 anime:[
 {id:"vertex-force-anime-release-date",image:"/assets/images/news/vertex-force-anime-release-date.webp",title:"VERTEX FORCE: Release Date, Streaming & Official Trailer",date:"2026-10-03",dateLabel:"October 3, 2026 · Japan",platform:"Japan services: U-NEXT / ABEMA and others",article:"articles/vertex-force-anime-release-date",newsCategory:"new-anime",category:"Japan TV premiere",status:"confirmed"},
