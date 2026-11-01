@@ -130,7 +130,8 @@
   ],
   "preview_fixes": [
     "Re-encoded hero after preview exposed an empty WebP; verified nonzero bytes and actual dimensions 1000x1412",
-    "Generated crawlable homepage and latest-news entry before merge"
+    "Generated crawlable homepage and latest-news entry before merge",
+    "Renamed hero asset to avoid stale cached empty response after correcting the encoding"
   ],
   "baseline_ci_findings": [
     "All-articles preflight: existing anime-releasing-november-2026 visible update date is October 29 while schema says October 30; Mercedes dates match November 1",
