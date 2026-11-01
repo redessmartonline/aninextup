@@ -1,6 +1,6 @@
 {
   "slug": "iruma-kun-irumafia-edition-release-date",
-  "status": "PREPARED; OWNER AUTHORIZED PUBLICATION; PREVIEW VISUAL CHECK PENDING",
+  "status": "PUBLISHED; PRODUCTION DEPLOYMENT SUCCESS; PUBLIC DESKTOP VERIFIED",
   "main_editorial_word_count": 1385,
   "word_count_scope": "Lead and substantive paragraphs only; excludes headings, captions, sources, metadata, video controls, navigation, related cards and footer",
   "intent": "Find the IruMafia premiere, episode count and official teaser; understand its alternate continuity and reading options",
@@ -77,13 +77,21 @@
     "SEO/schema metadata and calendar/index/sitemap/homepage inclusion"
   ],
   "visual_review": {
-    "desktop": "PENDING PREVIEW",
+    "desktop": "PASSED: preview and public article/header/hero, official teaser button, exactly three decoded related artworks and homepage lead card",
     "mobile": "NOT TESTED — device emulation unavailable in advertised API"
   },
   "authorization": "Owner explicitly instructed PUBLICALO for this specific article on November 1, 2026.",
   "limitations": [
     "No full-episode or full-manga review claimed",
     "No invented anime streaming rights from manga publication",
-    "No ranking or traffic promises"
-  ]
+    "No ranking or traffic promises",
+    "Existing sitewide preflight visible_article_update_mismatch persists in another article; new article metadata passes targeted checks."
+  ],
+  "deployment": {
+    "merge_sha": "2ab989b78c784f035b192629e23b52d34b6c3990",
+    "workflow_run": 41337298872,
+    "conclusion": "success",
+    "public_url": "https://aninextup.com/articles/iruma-kun-irumafia-edition-release-date"
+  }
 }
+
