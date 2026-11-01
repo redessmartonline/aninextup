@@ -16,7 +16,10 @@ assert.equal(m.range(new Date('2026-12-31T12:00:00Z')).length,12);
 const html=fs.readFileSync('calendar.html','utf8'),catalog=JSON.parse(html.match(/id="calendar-catalog" type="application\/json">([\s\S]*?)<\/script>/)[1]);
 assert.equal(new Set(catalog.items.map(x=>x.article||x.id)).size,catalog.items.length,'No duplicate releases');
 assert(!catalog.items.some(x=>/jump-festa|anime-releasing-|-[a-f0-9]{8}$/.test(x.article)),'No event roundups or duplicate news entries');
-assert(catalog.items.some(x=>x.article.endsWith('full-clearing-another-world-zero-believers-premiere')),'Release summaries without index metadata are supported');
+const octoberSummary=catalog.items.find(x=>typeof x.article==='string'&&x.article.endsWith('full-clearing-another-world-zero-believers-premiere'));
+// This known October 2026 release leaves the rolling window on November 1.
+assert.equal(Boolean(octoberSummary),catalog.months.includes('2026-10'),'Release-summary guide is included only while its release month is tracked');
+assert(catalog.items.every(x=>!m.monthOf(x)||catalog.months.includes(m.monthOf(x))),'Dated releases remain inside the rolling window');
 assert.equal(catalog.months.length,12);
 assert(catalog.items.some(x=>m.monthOf(x)==='2027-01'),'2027 releases included');
 assert(catalog.items.some(x=>!x.date&&m.monthOf(x)),'Month-only releases included without invented days');
