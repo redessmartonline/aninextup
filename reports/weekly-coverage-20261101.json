@@ -1,0 +1,119 @@
+{
+  "checkedAt": "2026-11-01T12:41:11.220Z",
+  "status": "source_reverification_blocked",
+  "changesToSchedule": false,
+  "mainAtReview": "f91d1ec82acffe2f466c4de1fc16e118c77c273d",
+  "filesReadFromMain": [
+    "assets/weekly-episodes.js",
+    "assets/weekly-episodes-ui.js",
+    "today.html",
+    "this-week.html",
+    "reports/weekly-coverage-20261031.json"
+  ],
+  "recordedCoverage": {
+    "validFrom": "2026-10-26",
+    "validThrough": "2026-11-01",
+    "lastRecordedSourceUpdated": "2026-10-26T11:12:00Z",
+    "lastDataUpdated": "2026-10-28",
+    "region": "Brazil",
+    "timezone": "America/Sao_Paulo",
+    "language": "Japanese audio · Portuguese subtitles",
+    "scope": "49 selected slots; not complete or worldwide",
+    "independentlyReverified": false
+  },
+  "sources": [
+    {
+      "url": "https://www.crunchyroll.com/pt-pt/news/seasonal-lineup/2026/10/7/programacao-calendario-crunchyroll-semana-temporada-outubro-2026",
+      "method": "Web open and direct HTTP HTML retrieval",
+      "httpStatus": 200,
+      "htmlBytes": 13802,
+      "result": "Zero readable lines via web; direct HTML contains 'This page could not be found'; no dateModified or schedule body. Not a successful live inspection of the calendar."
+    },
+    {
+      "url": "https://www.crunchyroll.com/pt-br/news/seasonal-lineup/2026/10/7/programacao-calendario-crunchyroll-semana-temporada-outubro-2026",
+      "method": "Web open",
+      "redirect": "https://www.crunchyroll.com/pt-br/currently-unavailable-in-your-location?source=japan",
+      "result": "Location unavailable redirect; no current Brazil schedule retrieved. No attempts to bypass regional restriction."
+    },
+    {
+      "url": "https://www.crunchyroll.com/pt-br/simulcastcalendar?date=2026-11-01",
+      "method": "Web open",
+      "result": "Not accessible through web tool"
+    },
+    {
+      "url": "https://www.crunchyroll.com/es/news/seasonal-lineup/2026/10/11/crunchyroll-calendario-semanal-otono-2026",
+      "method": "Indexed official text retrieved through search",
+      "indexedCoverage": "2026-10-26 to 2026-11-01",
+      "indexedUpdated": "2026-10-26T19:46:00Z",
+      "result": "Region flags represented as Image, without safe country mapping. Portuguese subtitle/audio scope not established. Not used to amend Brazil times or episode numbers."
+    },
+    {
+      "url": "https://www.crunchyroll.com/pt-br/news/seasonal-lineup/2026/9/15/animes-temporada-outubro-2026-crunchyroll",
+      "method": "Indexed official text",
+      "indexedUpdated": "2026-10-05T16:09:00Z",
+      "result": "Seasonal premiere listing only; does not verify November 1 episode times or November 2–8 coverage."
+    }
+  ],
+  "checks": {
+    "syntaxBothAssets": true,
+    "slots": 49,
+    "dailyCounts": {
+      "2026-10-26": 3,
+      "2026-10-27": 7,
+      "2026-10-28": 8,
+      "2026-10-29": 3,
+      "2026-10-30": 6,
+      "2026-10-31": 11,
+      "2026-11-01": 11
+    },
+    "duplicates": 0,
+    "allEpisodesNull": true,
+    "allDatesWithinCoverage": true,
+    "timezoneAndRegionValid": true,
+    "boundaries": {
+      "beforeLocalMidnight": {
+        "state": "verified",
+        "todayCards": 11,
+        "weekCards": 49,
+        "nullLabel": true,
+        "todayNotice": false,
+        "weekNotice": false
+      },
+      "atLocalMidnight": {
+        "state": "verified",
+        "todayCards": 11,
+        "weekCards": 49,
+        "nullLabel": true,
+        "todayNotice": false,
+        "weekNotice": false
+      },
+      "beforeExpiry": {
+        "state": "verified",
+        "todayCards": 11,
+        "weekCards": 49,
+        "nullLabel": true,
+        "todayNotice": false,
+        "weekNotice": false
+      },
+      "atExpiry": {
+        "state": "awaiting-verification",
+        "todayCards": 0,
+        "weekCards": 0,
+        "nullLabel": false,
+        "todayNotice": true,
+        "weekNotice": true
+      }
+    },
+    "freshMainAssetsUnchangedBeforeReport": true,
+    "expiryInstant": "2026-11-02T03:00:00Z",
+    "expiryBrazil": "2026-11-02T00:00:00-03:00",
+    "expiryDominicanRepublic": "2026-11-01T23:00:00-04:00",
+    "method": "Executed fresh main scripts in Node VM using fixed Date and minimal DOM; current files fetched anew."
+  },
+  "decision": "Preserve last version, all 49 episode:null values, exclusions, languages, region, sourceUpdated and validThrough. No calendar/UI deployment or script-version change. Coverage ends today; verified expiry notice replaces episode listings at the local Brazil boundary. Keep recurring review enabled because source access may recover and monitoring is not finished.",
+  "limitations": [
+    "No sufficient current official Brazil calendar; source update date and changes/pauses could not be reconfirmed.",
+    "No new regions, dates, episode numbers or licenses inferred.",
+    "No production deployment or public-page verification performed in this run; expiry was tested locally."
+  ]
+}
