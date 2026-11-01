@@ -1,7 +1,7 @@
 {
   "slug": "iruma-kun-irumafia-edition-release-date",
   "status": "PREPARED; OWNER AUTHORIZED PUBLICATION; PREVIEW VISUAL CHECK PENDING",
-  "main_editorial_word_count": 1387,
+  "main_editorial_word_count": 1385,
   "word_count_scope": "Lead and substantive paragraphs only; excludes headings, captions, sources, metadata, video controls, navigation, related cards and footer",
   "intent": "Find the IruMafia premiere, episode count and official teaser; understand its alternate continuity and reading options",
   "keyword_cluster": [
@@ -65,7 +65,8 @@
           1080
         ]
       }
-    ]
+    ],
+    "teaser_display": "Official-site button: cross-domain embedding rejected by Vimeo privacy settings in browser; no broken iframe published"
   },
   "checks": [
     "1,200–2,000 main editorial words",
