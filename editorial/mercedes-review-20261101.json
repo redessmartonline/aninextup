@@ -1,6 +1,6 @@
 {
   "slug": "mercedes-and-the-waning-moon-anime",
-  "status": "OWNER AUTHORIZED; EDITORIAL AND TARGETED DESKTOP REVIEW PASSED; PRODUCTION DEPLOYMENT PENDING",
+  "status": "PUBLISHED — PRODUCTION DEPLOYMENT SUCCEEDED; PUBLIC ARTICLE AND HOMEPAGE DESKTOP VERIFIED",
   "main_editorial_word_count": 1432,
   "word_count_scope": "lead and substantive paragraphs; excludes headings, sources, captions, metadata, navigation, related cards and video controls",
   "intent": "Confirm the January 2027 release, watch the second trailer, identify the new cast and choose a starting English edition",
@@ -139,5 +139,13 @@
   "baseline_ci_findings": [
     "All-articles preflight: existing anime-releasing-november-2026 visible update date is October 29 while schema says October 30; Mercedes dates match November 1",
     "Sitewide visual workflow: existing full-clearing-another-world-zero-believers-premiere card lookup fails; manual Mercedes desktop inspection performed separately"
-  ]
+  ],
+  "production": {
+    "deployment_run": 41329713978,
+    "conclusion": "success",
+    "url": "https://aninextup.com/articles/mercedes-and-the-waning-moon-anime",
+    "public_article": "Verified in browser: correct H1, lead and official hero loaded at 1000x1412",
+    "homepage": "Verified in browser: newest lead card with official Mercedes image",
+    "calendar_test_recovery": "Fixed the existing October-only regression assertion for the November month rollover; tested generated catalogs for both October 31 and November 1."
+  }
 }
