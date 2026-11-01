@@ -1,6 +1,6 @@
 {
   "slug": "mercedes-and-the-waning-moon-anime",
-  "status": "PREPARED FOR OWNER-AUTHORIZED PUBLICATION; PREVIEW VISUAL REVIEW PENDING",
+  "status": "OWNER AUTHORIZED; EDITORIAL AND TARGETED DESKTOP REVIEW PASSED; PRODUCTION DEPLOYMENT PENDING",
   "main_editorial_word_count": 1432,
   "word_count_scope": "lead and substantive paragraphs; excludes headings, sources, captions, metadata, navigation, related cards and video controls",
   "intent": "Confirm the January 2027 release, watch the second trailer, identify the new cast and choose a starting English edition",
@@ -117,11 +117,14 @@
     "No invented exact date: metadata date is null and dateLabel January 2027",
     "Official hero, trailer thumbnail and three relevant related images inspected",
     "Image files hosted locally",
-    "Full shared article template preserved"
+    "Full shared article template preserved",
+    "Crawlable homepage and latest-news inclusion: indexability CI passed",
+    "Hero nonempty encoding and local Git blob SHA verified after fix"
   ],
   "visual_review": {
-    "desktop": "PENDING PREVIEW",
-    "mobile": "NOT TESTED — device-width emulation unavailable in advertised browser API"
+    "desktop": "PASSED: preview homepage card and internal hero load at natural dimensions 1000x1412; official trailer opens the correct Showgate YouTube player at 1:30 duration; three related images load in one row with matching cards; layout compared with the existing Ms. Isshiki article.",
+    "mobile": "NOT TESTED — device-width emulation unavailable in advertised browser API",
+    "preview_url": "https://editorial-mercedes-anime-20261101-aninextup.redessmartonline.workers.dev/articles/mercedes-and-the-waning-moon-anime"
   },
   "authorization": "Owner explicitly instructed PUBLICALO for this specific article on November 1, 2026. No further permission needed.",
   "limitations": [
