@@ -1,0 +1,88 @@
+{
+  "slug": "iruma-kun-irumafia-edition-release-date",
+  "status": "PREPARED; OWNER AUTHORIZED PUBLICATION; PREVIEW VISUAL CHECK PENDING",
+  "main_editorial_word_count": 1387,
+  "word_count_scope": "Lead and substantive paragraphs only; excludes headings, captions, sources, metadata, video controls, navigation, related cards and footer",
+  "intent": "Find the IruMafia premiere, episode count and official teaser; understand its alternate continuity and reading options",
+  "keyword_cluster": [
+    "Iruma-kun IruMafia Edition",
+    "release date",
+    "January 4 2027",
+    "12 episodes",
+    "official teaser",
+    "watch order"
+  ],
+  "original_value": [
+    "Alternative-world reading approach and distinction between actor continuity and chronological continuity",
+    "Kindness versus criminal hierarchy: analysis of the official premise",
+    "Close reading of the staircase visual and contrasting suit colors",
+    "English/Japanese editions and spoiler-conscious first-volume reading route"
+  ],
+  "sources": [
+    "https://www.nhk-character.com/chara/irumafia/news/66/",
+    "https://www.nhk-character.com/chara/irumafia/",
+    "https://www.nhk-character.com/chara/irumafia/staffcast/",
+    "https://www.akitashoten.co.jp/series/12862",
+    "https://kodansha.us/series/welcome-to-demon-school-iruma-kun-irumafia-edition/",
+    "https://kodansha.us/series/welcome-to-demon-school-iruma-kun-irumafia-edition/volume-1/"
+  ],
+  "duplicate_review": "128 existing articles, data.js, sitemap and both open editorial PRs checked; no alias or intent duplicate",
+  "media": {
+    "hero_source": "https://www.nhk-character.com/chara/irumafia/wp-content/themes/irumafia/assets/img/top/kv-2.png",
+    "hero_local": "/assets/images/covers/irumafia-official-main-visual.webp",
+    "verified_dimensions": [
+      1000,
+      1432
+    ],
+    "teaser": "https://player.vimeo.com/video/1237542276",
+    "teaser_origin": "Linked and played in the official NHK production site in a real browser",
+    "video_schema": "No VideoObject uploadDate invented: original Vimeo upload timestamp was not independently available; YouTube-only metadata rule is inapplicable.",
+    "related_checks": [
+      {
+        "url": "https://raw.githubusercontent.com/redessmartonline/aninextup/main/assets/images/external/f8b01e904b2f530e4f6e06c618a3c271d28a5853fde6708f4cc4e7a308436059.webp",
+        "status": 200,
+        "mime": "image/webp",
+        "dimensions": [
+          1200,
+          630
+        ]
+      },
+      {
+        "url": "https://raw.githubusercontent.com/redessmartonline/aninextup/main/assets/images/external/821605091a2185f8e5e09f3b951d012c368ffb2e51cd248932ee46f2937285ba.webp",
+        "status": 200,
+        "mime": "image/webp",
+        "dimensions": [
+          1280,
+          720
+        ]
+      },
+      {
+        "url": "https://raw.githubusercontent.com/redessmartonline/aninextup/main/assets/images/covers/nues-exorcist-official.png",
+        "status": 200,
+        "mime": "image/png",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      }
+    ]
+  },
+  "checks": [
+    "1,200–2,000 main editorial words",
+    "Precise confirmed first broadcast date with explicit JST",
+    "Twelve episodes confirmed; no invented final broadcast date",
+    "Exactly three related cards; genuine artwork inspected",
+    "Local hero decoded and nonempty before upload",
+    "SEO/schema metadata and calendar/index/sitemap/homepage inclusion"
+  ],
+  "visual_review": {
+    "desktop": "PENDING PREVIEW",
+    "mobile": "NOT TESTED — device emulation unavailable in advertised API"
+  },
+  "authorization": "Owner explicitly instructed PUBLICALO for this specific article on November 1, 2026.",
+  "limitations": [
+    "No full-episode or full-manga review claimed",
+    "No invented anime streaming rights from manga publication",
+    "No ranking or traffic promises"
+  ]
+}
