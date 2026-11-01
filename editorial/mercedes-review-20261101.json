@@ -1,0 +1,143 @@
+{
+  "slug": "mercedes-and-the-waning-moon-anime",
+  "status": "OWNER AUTHORIZED; EDITORIAL AND TARGETED DESKTOP REVIEW PASSED; PRODUCTION DEPLOYMENT PENDING",
+  "main_editorial_word_count": 1432,
+  "word_count_scope": "lead and substantive paragraphs; excludes headings, sources, captions, metadata, navigation, related cards and video controls",
+  "intent": "Confirm the January 2027 release, watch the second trailer, identify the new cast and choose a starting English edition",
+  "keyword_cluster": [
+    "Mercedes and the Waning Moon",
+    "January 2027 release",
+    "second trailer",
+    "cast",
+    "English novel manga"
+  ],
+  "original_value": [
+    "Interpretation of reincarnation regret, aristocratic insecurity and agency through dungeon work",
+    "Close reading of the official second key visual",
+    "Spoiler-conscious introduction to four supporting characters",
+    "Format-aware English reading route, with separate novel and manga links"
+  ],
+  "sources": [
+    "https://mercedes-anime.com/news/post-62",
+    "https://mercedes-anime.com/",
+    "https://mercedes-anime.com/staffcast/",
+    "https://mercedes-anime.com/chara/",
+    "https://mercedes-anime.com/books/",
+    "https://mercedes-anime.com/movie/",
+    "https://www.youtube.com/watch?v=BeBqd3yuV9U",
+    "https://j-novel.club/series/mercedes-and-the-waning-moon-the-dungeoneering-feats-of-a-discarded-vampire-aristocrat",
+    "https://j-novel.club/series/mercedes-and-the-waning-moon-the-dungeoneering-feats-of-a-discarded-vampire-aristocrat-manga"
+  ],
+  "duplicate_review": "127 main articles, data.js, sitemap and open editorial PRs checked; no matching series/aliases",
+  "assets": [
+    {
+      "key": "hero",
+      "url": "https://mercedes-anime.com/assets/images/top/mv/mv02.jpg",
+      "status": 200,
+      "mime": "image/jpeg",
+      "dimensions": [
+        1460,
+        2062
+      ],
+      "file": "publish-work/research/mercedes-check-hero.png"
+    },
+    {
+      "key": "thumb",
+      "url": "https://img.youtube.com/vi/BeBqd3yuV9U/hqdefault.jpg",
+      "status": 200,
+      "mime": "image/jpeg",
+      "dimensions": [
+        480,
+        360
+      ],
+      "file": "publish-work/research/mercedes-check-thumb.png"
+    },
+    {
+      "key": "video",
+      "title": "TVアニメ「欠けた月のメルセデス」PV第2弾｜2027年1月放送開始",
+      "channel": "博報堂DY ミュージック&ピクチャーズ【Showgate】ch",
+      "seconds": "90",
+      "uploadDate": "2026-10-30T02:00:25-07:00",
+      "description": "もう欠けたままでは終われない――\n\nTVアニメ「欠けた月のメルセデス」2027年1月放送開始❕\n\n【イントロダクション】\n現代日本の会社員から吸血鬼に転生した少女・メルセデス。\n彼女は目的もなく空っぽなまま人生を終えてしまった前世に対して、\n深い後悔を抱えていた。\n\n貧乏貴族の吸血鬼として二度目の生"
+    },
+    {
+      "key": "pv",
+      "youtube": [
+        "BeBqd3yuV9U",
+        "JXLbivdiGLc"
+      ]
+    },
+    {
+      "key": "related-0",
+      "url": "https://raw.githubusercontent.com/redessmartonline/aninextup/main/assets/images/covers/record-of-a-fallen-vampire-teaser.webp",
+      "status": 200,
+      "mime": "image/webp",
+      "dimensions": [
+        696,
+        940
+      ],
+      "file": "publish-work/research/mercedes-check-related-0.png"
+    },
+    {
+      "key": "related-1",
+      "url": "https://raw.githubusercontent.com/redessmartonline/aninextup/main/assets/images/external/a680b9abc06dd5380a50a0abba035bf12f54321863ebe8317a343bed5391514f.webp",
+      "status": 200,
+      "mime": "image/webp",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "file": "publish-work/research/mercedes-check-related-1.png"
+    },
+    {
+      "key": "related-2",
+      "url": "https://raw.githubusercontent.com/redessmartonline/aninextup/main/assets/images/external/a7a27c69b44ed72413a9175d32cf3300d5da6394a53d69ce6050ce1928c21990.webp",
+      "status": 200,
+      "mime": "image/webp",
+      "dimensions": [
+        1200,
+        630
+      ],
+      "file": "publish-work/research/mercedes-check-related-2.png"
+    }
+  ],
+  "video": {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Mercedes and the Waning Moon — Official Second Trailer",
+    "description": "Official second Japanese promotional video, linked by the production website and hosted by Showgate.",
+    "thumbnailUrl": "https://aninextup.com/assets/images/covers/mercedes-thumb.webp",
+    "uploadDate": "2026-10-30T02:00:25-07:00",
+    "duration": "PT1M30S",
+    "embedUrl": "https://www.youtube-nocookie.com/embed/BeBqd3yuV9U",
+    "url": "https://www.youtube.com/watch?v=BeBqd3yuV9U"
+  },
+  "checks": [
+    "Word range 1,200–2,000",
+    "No invented exact date: metadata date is null and dateLabel January 2027",
+    "Official hero, trailer thumbnail and three relevant related images inspected",
+    "Image files hosted locally",
+    "Full shared article template preserved",
+    "Crawlable homepage and latest-news inclusion: indexability CI passed",
+    "Hero nonempty encoding and local Git blob SHA verified after fix"
+  ],
+  "visual_review": {
+    "desktop": "PASSED: preview homepage card and internal hero load at natural dimensions 1000x1412; official trailer opens the correct Showgate YouTube player at 1:30 duration; three related images load in one row with matching cards; layout compared with the existing Ms. Isshiki article.",
+    "mobile": "NOT TESTED — device-width emulation unavailable in advertised browser API",
+    "preview_url": "https://editorial-mercedes-anime-20261101-aninextup.redessmartonline.workers.dev/articles/mercedes-and-the-waning-moon-anime"
+  },
+  "authorization": "Owner explicitly instructed PUBLICALO for this specific article on November 1, 2026. No further permission needed.",
+  "limitations": [
+    "No full-episode or full-source review claimed",
+    "No search-volume, ranking or traffic forecasts"
+  ],
+  "preview_fixes": [
+    "Re-encoded hero after preview exposed an empty WebP; verified nonzero bytes and actual dimensions 1000x1412",
+    "Generated crawlable homepage and latest-news entry before merge",
+    "Renamed hero asset to avoid stale cached empty response after correcting the encoding"
+  ],
+  "baseline_ci_findings": [
+    "All-articles preflight: existing anime-releasing-november-2026 visible update date is October 29 while schema says October 30; Mercedes dates match November 1",
+    "Sitewide visual workflow: existing full-clearing-another-world-zero-believers-premiere card lookup fails; manual Mercedes desktop inspection performed separately"
+  ]
+}
