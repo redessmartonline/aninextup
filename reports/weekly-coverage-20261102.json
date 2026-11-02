@@ -1,0 +1,109 @@
+{
+  "checkedAt": "2026-11-02T12:14:00.357Z",
+  "status": "coverage_expired_source_reverification_blocked",
+  "changesToSchedule": false,
+  "mainAtReview": "3565ffe1788531cabdb44da3e7d6c353ec621ae8",
+  "filesReadFromMain": [
+    "assets/weekly-episodes.js",
+    "assets/weekly-episodes-ui.js",
+    "today.html",
+    "this-week.html",
+    "reports/weekly-coverage-20261101.json"
+  ],
+  "recordedCoverage": {
+    "validFrom": "2026-10-26",
+    "validThrough": "2026-11-01",
+    "sourceUpdated": "2026-10-26T11:12:00Z",
+    "updated": "2026-10-28",
+    "region": "Brazil",
+    "timezone": "America/Sao_Paulo",
+    "language": "Japanese audio · Portuguese subtitles",
+    "scope": "49 selected slots; not worldwide or complete",
+    "expired": true,
+    "independentlyReverified": false
+  },
+  "sources": [
+    {
+      "url": "https://www.crunchyroll.com/pt-pt/news/seasonal-lineup/2026/10/7/programacao-calendario-crunchyroll-semana-temporada-outubro-2026",
+      "method": "Web open and direct HTTP HTML",
+      "httpStatus": 200,
+      "htmlBytes": 13802,
+      "result": "Web returned zero readable lines; HTML shows This page could not be found. No current calendar body or update date recoverable. Not a successful live calendar inspection."
+    },
+    {
+      "url": "https://www.crunchyroll.com/pt-br/news/seasonal-lineup/2026/10/7/programacao-calendario-crunchyroll-semana-temporada-outubro-2026",
+      "method": "Web open",
+      "result": "Zero readable lines; no verified replacement calendar."
+    },
+    {
+      "url": "https://www.crunchyroll.com/pt-br/simulcastcalendar?date=2026-11-02",
+      "method": "Web open",
+      "result": "Not accessible through web tool."
+    },
+    {
+      "url": "https://www.crunchyroll.com/es/news/seasonal-lineup/2026/10/11/crunchyroll-calendario-semanal-otono-2026",
+      "method": "Indexed official text via search",
+      "indexedCoverage": "2026-10-26 to 2026-11-01",
+      "indexedUpdated": "2026-10-26T19:46:00Z",
+      "result": "Expired week; region flags appear only as Image; cannot establish Brazil Portuguese-subtitle scope. Not used for November 2–8 dates or times."
+    },
+    {
+      "url": "https://www.crunchyroll.com/pt-br/simulcasts",
+      "method": "Indexed official text via search",
+      "result": "Seasonal catalog has no episode date/time verification for November 2–8. Not sufficient for updating slots."
+    }
+  ],
+  "checks": {
+    "syntaxBothAssets": true,
+    "slots": 49,
+    "dailyCounts": {
+      "2026-10-26": 3,
+      "2026-10-27": 7,
+      "2026-10-28": 8,
+      "2026-10-29": 3,
+      "2026-10-30": 6,
+      "2026-10-31": 11,
+      "2026-11-01": 11
+    },
+    "duplicates": 0,
+    "allEpisodesNull": true,
+    "timezone": "America/Sao_Paulo",
+    "boundaries": {
+      "beforeExpiry": {
+        "instant": "2026-11-02T02:59:59Z",
+        "state": "verified",
+        "todayCards": 11,
+        "weekCards": 49,
+        "todayNotice": false,
+        "weekNotice": false,
+        "nullLabel": true
+      },
+      "atExpiry": {
+        "instant": "2026-11-02T03:00:00Z",
+        "state": "awaiting-verification",
+        "todayCards": 0,
+        "weekCards": 0,
+        "todayNotice": true,
+        "weekNotice": true,
+        "nullLabel": false
+      },
+      "current": {
+        "instant": "2026-11-02T12:12:13Z",
+        "state": "awaiting-verification",
+        "todayCards": 0,
+        "weekCards": 0,
+        "todayNotice": true,
+        "weekNotice": true,
+        "nullLabel": false
+      }
+    },
+    "publicPagesVerified": false
+  },
+  "freshMainFilesUnchangedBeforeReport": true,
+  "decision": "Preserve all data, sourceUpdated, validThrough, episode:null labels, exclusions, UI and script versions. Expiry notice works at Brazil midnight in fresh-source Node VM. No calendar deployment. Save report only. Recurring monitoring remains needed because official source availability may recover.",
+  "limitations": [
+    "Could not verify an official current November 2–8 Brazil schedule, its update date, pauses or regional/language changes.",
+    "Public /today and /this-week HTTP requests returned 403 Forbidden; no live rendered-page verification claimed.",
+    "No new regions, licenses, episode numbers or times inferred."
+  ]
+}
