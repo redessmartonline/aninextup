@@ -1,6 +1,6 @@
 {
   "slug": "bocchi-the-rock-starry-footprints-movie",
-  "status": "OWNER AUTHORIZED PUBLICATION; PREVIEW VISUAL REVIEW PENDING",
+  "status": "PUBLISHED; PRODUCTION DEPLOYMENT SUCCESS; PUBLIC DESKTOP VERIFIED",
   "main_editorial_word_count": 1397,
   "word_count_scope": "Lead and substantive paragraphs; excludes headings, metadata, sources, captions, video controls, cards and footer",
   "intent": "Find the 2027 Bocchi prequel movie release and teaser, understand the Ijichi sisters story and separate it from Season 2 and compilations",
@@ -98,7 +98,7 @@
   },
   "video_verification": "ID linked by Aniplex and production site; original ytInitialPlayerResponse confirms official channel, 33 seconds, uploadDate with timezone",
   "visual_review": {
-    "desktop": "PENDING PREVIEW",
+    "desktop": "PASSED: preview and public header/hero/homepage card; three genuine related images decoded in browser and all three article destinations opened",
     "mobile": "NOT TESTED — device emulation unavailable in advertised browser API"
   },
   "authorization": "Owner explicitly instructed PUBLICALO for this specific proposed article on November 2, 2026",
@@ -107,5 +107,20 @@
     "Starry Footprints identified as English coverage wording, not an asserted licensed title",
     "No unseen film or complete manga review claimed",
     "No invented search metrics or ranking promises"
-  ]
+  ],
+  "video_playback": "LIMITED: official player initialized with matching video ID/title/duration and no media error; cloud browser remained readyState=0/currentTime=0 both on the official production page and the AniNextUp embed. Playback not claimed verified. Direct original YouTube fallback remains visible.",
+  "deployment": {
+    "merge_sha": "0140f54d086b99fa869c271c01cb6554281999cb",
+    "run": 41440020408,
+    "conclusion": "success",
+    "public_url": "https://aninextup.com/articles/bocchi-the-rock-starry-footprints-movie"
+  },
+  "sitewide_checks": {
+    "targeted_preflight": "passed with no findings",
+    "indexability": "passed",
+    "editorial_audit": "passed",
+    "existing_preflight": "visible_article_update_mismatch in another existing article",
+    "existing_visual": "hardcoded full-clearing homepage-card expectation unrelated to this article",
+    "discovery": "Refresh discovery workflow failed calendar.html no prerendered cards; main production deployment itself passed. No calendar code changed in this PR."
+  }
 }
