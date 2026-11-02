@@ -93,6 +93,7 @@ anime:[
 {id:"psyren",newsCategory:"new-anime",image:"assets/images/psyren.jpg",title:"PSYREN",date:"2026-10-05",platform:"Crunchyroll",article:"articles/psyren-release-date",category:"Premiere",status:"confirmed"},
 ],
 guides:[
+{image:"/assets/images/covers/bocchi-starry-footprints-official.webp",title:"Bocchi the Rock! Starry Footprints Movie: 2027 Release, Teaser & Story",tag:"2027 · NEW PREQUEL MOVIE",article:"articles/bocchi-the-rock-starry-footprints-movie",newsCategory:"new-anime",description:"Bocchi the Rock! Hoshi no Ashiato opens in Japan in 2027. Watch the official teaser and explore the Ijichi sisters’ prequel, staff and manga connection."},
 {image:"/assets/images/covers/irumafia-official-main-visual.webp",title:"Iruma-kun: IruMafia Edition Release Date, 12 Episodes & Official Teaser",tag:"JANUARY 4, 2027 · MAFIA SPIN-OFF",article:"articles/iruma-kun-irumafia-edition-release-date",newsCategory:"new-anime",description:"IruMafia Edition premieres January 4, 2027 on NHK General. Watch the official teaser and explore the 12-episode run, returning cast and alternate-world story."},
 {image:"/assets/images/covers/mercedes-official-main-visual.webp",title:"Mercedes and the Waning Moon: January 2027 Release, Trailer & Cast",tag:"JANUARY 2027 · OFFICIAL TRAILER",article:"articles/mercedes-and-the-waning-moon-anime",newsCategory:"new-anime",description:"Mercedes and the Waning Moon premieres in January 2027. Watch the second trailer, meet the cast and compare the English novel and manga before the anime."},
 {image:"/assets/images/covers/ms-isshiki-official.webp",title:"Ms. Isshiki Wants to Know About Love: January 2027 Release, Trailer & Cast",tag:"JANUARY 2027 · OFFICIAL TRAILER",article:"articles/ms-isshiki-wants-to-know-about-love",newsCategory:"new-anime",description:"Ms. Isshiki premieres in Japan in January 2027. Watch the official main trailer and check cast, Enako's opening, December preview and streaming status."},
@@ -182,6 +183,7 @@ guides:[
 {image:"assets/images/netflix-october-2026.jpg",title:"New Anime on Netflix in October 2026",tag:"NETFLIX",article:"articles/netflix-october-2026",newsCategory:"release-news",description:"Notable anime arriving on Netflix this month."},
 {image:"assets/images/fall-2026-calendar.jpeg",title:"Fall 2026 Anime Calendar",tag:"FALL 2026",article:"articles/fall-2026-anime-calendar",newsCategory:"release-news",description:"October premieres and where to watch them."}
 ]};
+
 
 
 
