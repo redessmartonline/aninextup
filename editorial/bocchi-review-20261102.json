@@ -1,0 +1,111 @@
+{
+  "slug": "bocchi-the-rock-starry-footprints-movie",
+  "status": "OWNER AUTHORIZED PUBLICATION; PREVIEW VISUAL REVIEW PENDING",
+  "main_editorial_word_count": 1397,
+  "word_count_scope": "Lead and substantive paragraphs; excludes headings, metadata, sources, captions, video controls, cards and footer",
+  "intent": "Find the 2027 Bocchi prequel movie release and teaser, understand the Ijichi sisters story and separate it from Season 2 and compilations",
+  "keyword_cluster": [
+    "Bocchi the Rock movie",
+    "Hoshi no Ashiato",
+    "Starry Footprints",
+    "2027 release date",
+    "official teaser",
+    "Seika Nijika prequel"
+  ],
+  "questions_answered": [
+    "When is the Bocchi the Rock! prequel movie coming out?",
+    "Whose story does Hoshi no Ashiato tell?",
+    "How is it different from Season 2 and the compilation films?",
+    "Watch the official announcement teaser",
+    "What the first visual tells us",
+    "Who is making the film?",
+    "Which manga volume contains the source story?",
+    "Tickets, concerts and the next release details to watch"
+  ],
+  "original_value": [
+    "Reading the car composition through the guitar case, toy and shared confined space",
+    "Why a supporting place and its people change a story about belonging",
+    "Spoiler-conscious TV-first viewing suggestion, explicitly editorial",
+    "Volume versus one-shot and adaptation-expansion distinctions",
+    "Separate advance-ticket, concert, TV and theatrical schedules"
+  ],
+  "sources": [
+    "https://www.aniplex.co.jp/lineup/bocchi/news/detail/?id=71600",
+    "https://bocchi.rocks/hoshinoashiato/",
+    "https://www.youtube.com/watch?v=4pYw8hZRVCM",
+    "https://bocchi.rocks/tv/introduction/",
+    "https://yenpress.com/titles/9781975378097-bocchi-the-rock-vol-5",
+    "https://www.aniplex.co.jp/lineup/bocchi/news/detail/?id=71601"
+  ],
+  "duplicate_review": "129 complete current article texts, central data, sitemap and both open PRs checked before drafting; no canonical or alias match",
+  "media": [
+    {
+      "source": "https://bocchi.rocks/hoshinoashiato/assets/img/page/top/mainvisual/ph_main.webp",
+      "status": 200,
+      "mime": "application/octet-stream; decoded as WebP",
+      "original_dimensions": [
+        4368,
+        6200
+      ],
+      "local": "publish-work/assets/images/covers/bocchi-starry-footprints-official.webp",
+      "bytes": 256050,
+      "dimensions": [
+        1200,
+        1703
+      ]
+    },
+    {
+      "source": "https://raw.githubusercontent.com/redessmartonline/aninextup/main/assets/images/external/dc034acbcfc81bee304fa78c483e4bd916367cc51a87ee0bffe8c91dc68f7aad.webp",
+      "status": 200,
+      "mime": "image/webp",
+      "dimensions": [
+        480,
+        360
+      ],
+      "local": "publish-work/research/bocchi-related-0.webp"
+    },
+    {
+      "source": "https://raw.githubusercontent.com/redessmartonline/aninextup/main/assets/images/external/582cef8b1b9429dee6c4489009b16fd1cba9bb8396e9fcb2eeb08f7804caa868.webp",
+      "status": 200,
+      "mime": "image/webp",
+      "dimensions": [
+        1920,
+        1440
+      ],
+      "local": "publish-work/research/bocchi-related-1.webp"
+    },
+    {
+      "source": "https://raw.githubusercontent.com/redessmartonline/aninextup/main/assets/images/covers/irumafia-official-main-visual.webp",
+      "status": 200,
+      "mime": "image/webp",
+      "dimensions": [
+        1000,
+        1432
+      ],
+      "local": "publish-work/research/bocchi-related-2.webp"
+    }
+  ],
+  "video": {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Bocchi the Rock! Hoshi no Ashiato — Official Announcement Teaser",
+    "description": "Official Bocchi the Rock! channel announcement teaser linked by Aniplex and the production website.",
+    "thumbnailUrl": "https://aninextup.com/assets/images/covers/bocchi-starry-footprints-teaser.webp",
+    "uploadDate": "2026-11-01T03:55:06-08:00",
+    "duration": "PT33S",
+    "embedUrl": "https://www.youtube-nocookie.com/embed/4pYw8hZRVCM",
+    "url": "https://www.youtube.com/watch?v=4pYw8hZRVCM"
+  },
+  "video_verification": "ID linked by Aniplex and production site; original ytInitialPlayerResponse confirms official channel, 33 seconds, uploadDate with timezone",
+  "visual_review": {
+    "desktop": "PENDING PREVIEW",
+    "mobile": "NOT TESTED — device emulation unavailable in advertised browser API"
+  },
+  "authorization": "Owner explicitly instructed PUBLICALO for this specific proposed article on November 2, 2026",
+  "limits": [
+    "No exact film opening day or international distributor invented",
+    "Starry Footprints identified as English coverage wording, not an asserted licensed title",
+    "No unseen film or complete manga review claimed",
+    "No invented search metrics or ranking promises"
+  ]
+}
