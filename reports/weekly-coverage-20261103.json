@@ -1,0 +1,111 @@
+{
+  "checkedAt": "2026-11-03T12:19:34.084Z",
+  "status": "coverage_expired_source_reverification_blocked",
+  "changesToSchedule": false,
+  "mainAtReview": "ba671ccf57389d1eaa4aa3def5453ee35a6e8bc5",
+  "filesReadFromMain": [
+    "assets/weekly-episodes.js",
+    "assets/weekly-episodes-ui.js",
+    "today.html",
+    "this-week.html",
+    "reports/weekly-coverage-20261102.json"
+  ],
+  "recordedCoverage": {
+    "validFrom": "2026-10-26",
+    "validThrough": "2026-11-01",
+    "lastRecordedSourceUpdated": "2026-10-26T11:12:00Z",
+    "lastDataUpdated": "2026-10-28",
+    "region": "Brazil",
+    "timezone": "America/Sao_Paulo",
+    "language": "Japanese audio · Portuguese subtitles",
+    "scope": "49 selected slots; not a complete or worldwide calendar",
+    "expired": true,
+    "independentlyReverified": false
+  },
+  "sources": [
+    {
+      "url": "https://www.crunchyroll.com/pt-pt/news/seasonal-lineup/2026/10/7/programacao-calendario-crunchyroll-semana-temporada-outubro-2026",
+      "method": "Web open and direct HTTP HTML",
+      "httpStatus": 200,
+      "htmlBytes": 13802,
+      "result": "No readable web lines; HTML contains This page could not be found and no dateModified. Calendar itself not successfully inspected live."
+    },
+    {
+      "url": "https://www.crunchyroll.com/pt-br/simulcastcalendar?date=2026-11-03",
+      "method": "Web open",
+      "result": "Inaccessible via web tool."
+    },
+    {
+      "url": "https://www.crunchyroll.com/pt-br/simulcastcalendar",
+      "method": "Indexed official text through search",
+      "indexedCoverage": "2026-10-19 to 2026-10-25",
+      "result": "Old dates and upcoming placeholders; insufficient for November 2–8."
+    },
+    {
+      "url": "https://www.crunchyroll.com/es/news/seasonal-lineup/2026/10/11/crunchyroll-calendario-semanal-otono-2026",
+      "method": "Indexed official text through search",
+      "indexedCoverage": "2026-10-26 to 2026-11-01",
+      "indexedUpdated": "2026-10-26T19:46:00Z",
+      "result": "Expired week; Image placeholders prevent reliable regional flag mapping. Cannot verify Brazil Portuguese-subtitle scope or new week."
+    }
+  ],
+  "checks": {
+    "syntaxBothAssets": true,
+    "slots": 49,
+    "dailyCounts": {
+      "2026-10-26": 3,
+      "2026-10-27": 7,
+      "2026-10-28": 8,
+      "2026-10-29": 3,
+      "2026-10-30": 6,
+      "2026-10-31": 11,
+      "2026-11-01": 11
+    },
+    "duplicates": 0,
+    "allEpisodesNull": true,
+    "allDatesWithinCoverage": true,
+    "timezone": "America/Sao_Paulo",
+    "boundaries": {
+      "beforeExpiry": {
+        "instant": "2026-11-02T02:59:59Z",
+        "state": "verified",
+        "todayCards": 11,
+        "weekCards": 49,
+        "todayNotice": false,
+        "weekNotice": false,
+        "nullLabel": true
+      },
+      "atExpiry": {
+        "instant": "2026-11-02T03:00:00Z",
+        "state": "awaiting-verification",
+        "todayCards": 0,
+        "weekCards": 0,
+        "todayNotice": true,
+        "weekNotice": true,
+        "nullLabel": false
+      },
+      "current": {
+        "instant": "2026-11-03T12:17:59Z",
+        "state": "awaiting-verification",
+        "todayCards": 0,
+        "weekCards": 0,
+        "todayNotice": true,
+        "weekNotice": true,
+        "nullLabel": false
+      }
+    },
+    "method": "Fresh main JavaScript executed in Node VM with fixed Date and minimal DOM; not live browser verification"
+  },
+  "freshMainFilesUnchangedBeforeReport": true,
+  "publicVerification": {
+    "today": "HTTP 403 Forbidden",
+    "thisWeek": "HTTP 403 Forbidden",
+    "liveRenderedPagesVerified": false
+  },
+  "decision": "Preserve last verified version: all 49 slots, episode:null, exclusions, region/language, sourceUpdated, validThrough, UI and cache versions. No schedule deployment. Save review report. Continue recurring monitoring because official source availability can recover.",
+  "limitations": [
+    "No sufficient current official Brazil schedule for November 2–8; update date, changes and pauses cannot be confirmed.",
+    "Only expired indexed official calendar text available; no new dates, episodes, regions, licenses or languages inferred.",
+    "Expiry verified in fresh-source Node VM, not on public rendered pages."
+  ]
+}
