@@ -1,0 +1,45 @@
+name: Sync current article search index
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'articles/**.html'
+      - 'assets/search-aliases.json'
+      - 'scripts/build_search_index.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: aninextup-search-index-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Regenerate and save search index independently of calendar checks
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            python scripts/build_search_index.py
+            python -m unittest discover -s tests -p test_search_index.py
+            git add assets/search-index.json
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m "Refresh current article search index"
+            if git push origin HEAD:main; then exit 0; fi
+            echo "main advanced; regenerating current search index (attempt $attempt)"
+          done
+          echo "Could not save current search index after three attempts" >&2
+          exit 1
