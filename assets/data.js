@@ -93,6 +93,7 @@ anime:[
 {id:"psyren",newsCategory:"new-anime",image:"assets/images/psyren.jpg",title:"PSYREN",date:"2026-10-05",platform:"Crunchyroll",article:"articles/psyren-release-date",category:"Premiere",status:"confirmed"},
 ],
 guides:[
+{image:"/assets/images/covers/anime-vs-anime-official-roblox.webp",title:"Anime vs Anime Codes (November 2026): Rewards & Redeem Guide",tag:"ROBLOX CODES · NOVEMBER 2026",article:"articles/anime-vs-anime-codes",newsCategory:"release-news",description:"Find reported Anime vs Anime Roblox codes for November 2026, copy the latest strings and check rewards, disputed spellings and the Summon redemption steps."},
 {image:"/assets/images/external/bb1523e94d99b1b2d086dbd5a70c91dfd9061dfa5c401f9298f2d74ec1a34882.webp",title:"Brian Tyree Henry’s New Netflix Anime: Bass X Machina Explained",tag:"NOW STREAMING · BRIAN TYREE HENRY",article:"articles/bass-x-machina-release-date",newsCategory:"trailers-cast",description:"Brian Tyree Henry stars in Bass X Machina, now on Netflix. Explore his role, the six episodes, official trailer and the real Bass Reeves behind the fantasy."},
 {image:"/assets/images/covers/bocchi-starry-footprints-official.webp",title:"Bocchi the Rock! Starry Footprints Movie: 2027 Release, Teaser & Story",tag:"2027 · NEW PREQUEL MOVIE",article:"articles/bocchi-the-rock-starry-footprints-movie",newsCategory:"new-anime",description:"Bocchi the Rock! Hoshi no Ashiato opens in Japan in 2027. Watch the official teaser and explore the Ijichi sisters’ prequel, staff and manga connection."},
 {image:"/assets/images/covers/irumafia-official-main-visual.webp",title:"Iruma-kun: IruMafia Edition Release Date, 12 Episodes & Official Teaser",tag:"JANUARY 4, 2027 · MAFIA SPIN-OFF",article:"articles/iruma-kun-irumafia-edition-release-date",newsCategory:"new-anime",description:"IruMafia Edition premieres January 4, 2027 on NHK General. Watch the official teaser and explore the 12-episode run, returning cast and alternate-world story."},
@@ -184,6 +185,7 @@ guides:[
 {image:"assets/images/netflix-october-2026.jpg",title:"New Anime on Netflix in October 2026",tag:"NETFLIX",article:"articles/netflix-october-2026",newsCategory:"release-news",description:"Notable anime arriving on Netflix this month."},
 {image:"assets/images/fall-2026-calendar.jpeg",title:"Fall 2026 Anime Calendar",tag:"FALL 2026",article:"articles/fall-2026-anime-calendar",newsCategory:"release-news",description:"October premieres and where to watch them."}
 ]};
+
 
 
 
