@@ -1,6 +1,6 @@
 {
   "slug": "anime-vs-anime-codes",
-  "status": "PREPARED; OWNER REQUESTED PUBLICATION; DESKTOP CHECK PENDING",
+  "status": "PUBLISHED; PUBLIC ARTICLE, HOMEPAGE AND SEARCH VERIFIED",
   "main_editorial_word_count": 1295,
   "count_scope": "lead and substantive paragraphs only; excludes tables, headings, metadata, captions, sources, cards, buttons and navigation",
   "intent": "Find Anime vs Anime Roblox code strings, reported rewards and the correct redemption location",
@@ -198,7 +198,7 @@
   ],
   "video": "No verified official game trailer found in targeted title/developer searches; no video ID or VideoObject fabricated. Game-code guide uses official Roblox artwork.",
   "visual_review": {
-    "desktop": "PENDING",
+    "desktop": "PASSED: public article header/lead/official hero, preview homepage lead card and all related art; all three related destinations opened",
     "mobile": "NOT TESTED — device emulation unavailable"
   },
   "authorization": "Owner explicitly requested VAMOS A PUBLICAR UN ARTICULO SOBRE anime vs anime codes roblox on November 4, 2026",
@@ -207,5 +207,19 @@
     "Search/open snapshots differed for Game.Guide; newest batch attributed to RoCodes rather than treating snapshots as independent validation",
     "No exact expiry time, drop odds or spending order invented",
     "No claim that source agreement proves developer confirmation"
-  ]
+  ],
+  "copy_verification": {
+    "preview": "Reversed code with leading ! copied to browser clipboard exactly; visible success message confirmed",
+    "production": "dnekeewnosretcarahcwen02 copied exactly from public button and confirmed in clipboard",
+    "redemption": "NOT TESTED — these are UI copy checks, not Roblox code redemptions"
+  },
+  "search_verification": "Public homepage search for anime vs anime returns the new guide; result opened the correct canonical URL after persisting the 131-entry search index",
+  "deployment": {
+    "article_merge": "625ebde4dd6c0c270c5626738daa4c1f4e4d71bc",
+    "article_run": 41846519515,
+    "search_merge": "3e27a2acf56bebbbbb39424340ffbcaf588538e8",
+    "search_run": 41847065542,
+    "conclusion": "both production deployments successful",
+    "public_url": "https://aninextup.com/articles/anime-vs-anime-codes"
+  }
 }
