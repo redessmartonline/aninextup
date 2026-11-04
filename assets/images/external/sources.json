@@ -1,6 +1,6 @@
 {
-  "count": 243,
-  "last_run_count": 6,
+  "count": 244,
+  "last_run_count": 7,
   "failed_count": 0,
   "failed": [],
   "images": [
@@ -522,6 +522,11 @@
       "source": "https://i.ytimg.com/vi/4H3qrB9yaJA/maxresdefault.jpg",
       "local": "/assets/images/external/27277b3aa3c3af637a5004c6465fd3d314cc5ef0c81bd25e84fc0b77ab9475f6.webp",
       "evidence_commit": "bb6f35692b6ad2c3b187e0620c5299f0dd708bba"
+    },
+    {
+      "source": "https://i.ytimg.com/vi/5JO4G4NRRx0/hqdefault.jpg",
+      "local": "/assets/images/external/f04ecff006ed1a2ca5a3348a6041824e2288f2e62286e8dbd00770b807b095f8.webp",
+      "download_url": "https://i.ytimg.com/vi/5JO4G4NRRx0/hqdefault.jpg"
     },
     {
       "source": "https://i.ytimg.com/vi/67GqhfLw3ys/maxresdefault.jpg",
