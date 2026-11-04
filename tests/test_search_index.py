@@ -22,9 +22,12 @@ class SearchIndexTests(unittest.TestCase):
 
     def test_generated_index_covers_every_indexable_article(self):
         result=builder.build();urls=[x['url'] for x in result['entries']]
+        self.assertEqual(json.loads((builder.ROOT/'assets/search-index.json').read_text()),result,
+                         'Search index is stale; regenerate it from current article HTML before deployment')
         self.assertEqual(len(urls),len(set(urls)))
         self.assertEqual(len(urls),len(list((builder.ROOT/'articles').glob('*.html'))))
         for row in result['entries']:
             self.assertTrue(row['title']);self.assertTrue(row['content'])
 
 if __name__=='__main__':unittest.main()
+
