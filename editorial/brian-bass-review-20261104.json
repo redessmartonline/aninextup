@@ -1,6 +1,6 @@
 {
   "canonical_url": "https://aninextup.com/articles/bass-x-machina-release-date",
-  "status": "PREPARED; OWNER REQUESTED PUBLICATION; DESKTOP REVIEW PENDING",
+  "status": "PUBLISHED UPDATE; PRODUCTION DEPLOYMENT SUCCESS; PUBLIC ARTICLE VERIFIED",
   "main_editorial_word_count": 1310,
   "count_scope": "lead and substantive paragraphs; excludes headings, captions, sources, metadata, cards, video controls and navigation",
   "primary_intent": "Identify Brian Tyree Henry’s new Netflix anime and its viewing information",
@@ -92,12 +92,20 @@
     "updated": "2026-11-04"
   },
   "visual_review": {
-    "desktop": "PENDING",
+    "desktop": "PASSED: public article heading/lead/official hero; preview related row and all three destinations inspected",
     "mobile": "NOT TESTED — device emulation unavailable"
   },
   "authorization": "Owner asked VAMOS A PUBLICAR UN ARTICULO SOBRE brian tyree henry new netflix anime; update the existing same-series canonical guide.",
   "limits": [
     "No complete-season review or unseen performance evaluation",
     "No invented renewal, release hour, ranking or search-volume promise"
-  ]
+  ],
+  "video_playback": "Official player initialized with verified full-trailer ID, Netflix channel and 137-second metadata. Cloud playback remained readyState=0; playback not claimed verified. Visible YouTube and Netflix links retained.",
+  "deployment": {
+    "merge_sha": "e5557fa77e4c28af52820b1094d54bacc1625db2",
+    "run": 41841926498,
+    "conclusion": "success",
+    "public_url": "https://aninextup.com/articles/bass-x-machina-release-date"
+  },
+  "homepage": "Updated title/image confirmed in server-rendered homepage link and existing central catalogue; original publication order preserved."
 }
