@@ -38,3 +38,9 @@ The queues are a snapshot and must be regenerated/reconciled when new articles o
 ## Submission status
 
 Technical/editorial cleanup is implemented. Certified CMP migration and media-rights evidence remain unresolved. Do not describe the site as fully cleared or guaranteed for AdSense on this basis.
+
+## Verification
+
+- Cleanup is idempotent across 132 articles; JSON-LD parses successfully. Article edits were compared against their original source, preserving consent-gated scripts and removing only generated spans except for the documented Demons' Crest correction.
+- Remediation commit 079eb6b87a88b7dfd5553d8ab1ef0437f6acb9da deployed successfully in run 41902492820. AdSense readiness, indexability and all-articles preflight audits passed. The live Demons' Crest page displays the corrected third-party attribution.
+- Discovery refresh exposed a stale test expecting the former calendar markup and treating site-root article links as filesystem-root paths. The test now invokes the existing expanded-calendar suite and resolves site-root links correctly. Both calendar and discovery/navigation tests pass locally after the workflow's normal prerender/navigation steps. The refresh workflow now watches these test files.

@@ -12,6 +12,8 @@ on:
       - 'scripts/standardize_article_bylines.py'
       - 'scripts/build_search_index.py'
       - 'scripts/build_news_dates.py'
+      - 'tests/test_discovery.js'
+      - 'tests/calendar-expanded.test.cjs'
       - 'tests/test_news_order.cjs'
       - 'tests/test_link_analytics.cjs'
       - 'tests/test_search_progressive.cjs'

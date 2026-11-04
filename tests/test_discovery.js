@@ -35,7 +35,9 @@ assert(model.matchesPlatform({platform:'Disney+ / Hulu (U.S.)'},'Disney+'));
 assert(model.matchesPlatform({platform:'Netflix (U.S.)'},'Netflix'));
 assert(model.matchesPlatform({platform:'Crunchyroll (supported territories)'},'Crunchyroll'));
 assert(!model.matchesPlatform({platform:'NetflixOther'},'Netflix'));
-for(const name of ['calendar.html','where-to-watch.html','today.html','this-week.html']){
+// The expanded calendar has its own model and crawlable-card contract.
+require('./calendar-expanded.test.cjs');
+for(const name of ['where-to-watch.html','today.html','this-week.html']){
   const html=fs.readFileSync(name,'utf8');
   assert(html.includes('data-card'),`${name}: no prerendered cards`);
   assert(html.includes('assets/release-model.js'),`${name}: missing shared date rules`);
@@ -55,7 +57,8 @@ for(const name of fs.readdirSync('articles').filter(n=>n.endsWith('.html'))){
   const sections=html.match(/<section class="related-releases"[\s\S]*?<\/section>/g)||[];
   for(const section of sections)for(const link of section.matchAll(/href="([^"]+)"/g)){
     if(/^https?:/.test(link[1]))continue;
-    const target=path.resolve('articles',link[1].split('#')[0]);
+    const href=link[1].split('#')[0];
+    const target=href.startsWith('/')?path.resolve('.',href.slice(1)):path.resolve('articles',href);
     assert(fs.existsSync(target)||fs.existsSync(target+'.html'),`${name}: broken related link ${link[1]}`);
   }
 }
