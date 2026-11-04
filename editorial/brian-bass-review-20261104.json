@@ -1,0 +1,103 @@
+{
+  "canonical_url": "https://aninextup.com/articles/bass-x-machina-release-date",
+  "status": "PREPARED; OWNER REQUESTED PUBLICATION; DESKTOP REVIEW PENDING",
+  "main_editorial_word_count": 1310,
+  "count_scope": "lead and substantive paragraphs; excludes headings, captions, sources, metadata, cards, video controls and navigation",
+  "primary_intent": "Identify Brian Tyree Henry’s new Netflix anime and its viewing information",
+  "keywords": [
+    "Brian Tyree Henry Netflix anime",
+    "Bass X Machina",
+    "six episodes",
+    "Bass Reeves",
+    "official trailer"
+  ],
+  "original_value": [
+    "Protection versus trust as the premise’s central tension",
+    "Clear actor/producer/creator distinctions",
+    "Real lawman context from two institutional histories; corrects exaggerated first-Black-marshal claim",
+    "Practical rounded season-length calculation and spoiler-conscious starting advice"
+  ],
+  "sources": [
+    "https://www.netflix.com/title/81088875",
+    "https://www.netflix.com/tudum/articles/adult-animated-shows-on-netflix",
+    "https://about.netflix.com/en/news/netflix-unveils-upcoming-anime-slate-out-of-annecy-festival",
+    "https://www.youtube.com/watch?v=jjr5mf9i42Q",
+    "https://www.nps.gov/articles/000/bass-reeves-site-bulletin.htm",
+    "https://www.usmarshals.gov/es/node/2161"
+  ],
+  "video": {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Bass X Machina | Official Trailer | Netflix",
+    "description": "Official full Netflix trailer for Bass X Machina, starring Brian Tyree Henry.",
+    "thumbnailUrl": "https://aninextup.com/assets/images/external/bb1523e94d99b1b2d086dbd5a70c91dfd9061dfa5c401f9298f2d74ec1a34882.webp",
+    "uploadDate": "2026-10-14T12:04:00-07:00",
+    "duration": "PT137S",
+    "embedUrl": "https://www.youtube-nocookie.com/embed/jjr5mf9i42Q",
+    "url": "https://www.youtube.com/watch?v=jjr5mf9i42Q"
+  },
+  "media": [
+    {
+      "path": "/assets/images/external/bb1523e94d99b1b2d086dbd5a70c91dfd9061dfa5c401f9298f2d74ec1a34882.webp",
+      "source": "https://raw.githubusercontent.com/redessmartonline/aninextup/main/assets/images/external/bb1523e94d99b1b2d086dbd5a70c91dfd9061dfa5c401f9298f2d74ec1a34882.webp",
+      "status": 200,
+      "mime": "image/webp",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "local": "publish-work/research/brian-hero.webp",
+      "bytes": 38876
+    },
+    {
+      "path": "/assets/images/external/1a6702c920649f1624933a5e78133acb7f21d6584de19a1c2d30b9e6d0732efd.webp",
+      "source": "https://raw.githubusercontent.com/redessmartonline/aninextup/main/assets/images/external/1a6702c920649f1624933a5e78133acb7f21d6584de19a1c2d30b9e6d0732efd.webp",
+      "status": 200,
+      "mime": "image/webp",
+      "dimensions": [
+        955,
+        1427
+      ],
+      "local": "publish-work/research/brian-fool-night-release-date.webp",
+      "bytes": 274740
+    },
+    {
+      "path": "/assets/images/external/c4f2cc6d5f8ac21faebf17af4b85809180c1e79110339e92e9d4848a2cfce055.webp",
+      "source": "https://raw.githubusercontent.com/redessmartonline/aninextup/main/assets/images/external/c4f2cc6d5f8ac21faebf17af4b85809180c1e79110339e92e9d4848a2cfce055.webp",
+      "status": 200,
+      "mime": "image/webp",
+      "dimensions": [
+        495,
+        278
+      ],
+      "local": "publish-work/research/brian-cyberpunk-edgerunners-2.webp",
+      "bytes": 20280
+    },
+    {
+      "path": "/assets/images/external/821605091a2185f8e5e09f3b951d012c368ffb2e51cd248932ee46f2937285ba.webp",
+      "source": "https://raw.githubusercontent.com/redessmartonline/aninextup/main/assets/images/external/821605091a2185f8e5e09f3b951d012c368ffb2e51cd248932ee46f2937285ba.webp",
+      "status": 200,
+      "mime": "image/webp",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "local": "publish-work/research/brian-sakamoto-days-season-2.webp",
+      "bytes": 59618
+    }
+  ],
+  "duplicate_decision": "Update existing Bass X Machina canonical URL; no new competing article. Open editorial PRs unrelated.",
+  "publication_dates": {
+    "original": "2026-10-04",
+    "updated": "2026-11-04"
+  },
+  "visual_review": {
+    "desktop": "PENDING",
+    "mobile": "NOT TESTED — device emulation unavailable"
+  },
+  "authorization": "Owner asked VAMOS A PUBLICAR UN ARTICULO SOBRE brian tyree henry new netflix anime; update the existing same-series canonical guide.",
+  "limits": [
+    "No complete-season review or unseen performance evaluation",
+    "No invented renewal, release hour, ranking or search-volume promise"
+  ]
+}
