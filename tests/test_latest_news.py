@@ -1,9 +1,29 @@
+import tempfile
 import json
 import unittest
 from pathlib import Path
 import sys
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from scripts import build_latest_news
+
+class ArticleMetadataTests(unittest.TestCase):
+    def extract_fixture(self, source):
+        with tempfile.TemporaryDirectory() as folder:
+            path=Path(folder)/"new-story.html"
+            path.write_text(source)
+            return build_latest_news.extract(path)
+
+    def test_standard_article_without_internal_index_is_included(self):
+        row=self.extract_fixture('<meta property="og:title" content="New story"><meta name="description" content="Verified announcement"><meta property="og:image" content="/cover.jpg"><script type="application/ld+json">{"@type":"NewsArticle","datePublished":"2026-11-04"}</script>')
+        self.assertEqual(row["title"],"New story")
+        self.assertEqual(row["published"],"2026-11-04")
+        self.assertEqual(row["article"],"articles/new-story")
+
+    def test_non_article_page_is_excluded(self):
+        self.assertIsNone(self.extract_fixture('<meta property="og:title" content="Utility page">'))
+
+    def test_noindex_article_is_excluded(self):
+        self.assertIsNone(self.extract_fixture('<meta name="robots" content="noindex,follow"><meta property="og:title" content="Draft"><script type="application/ld+json">{"@type":"NewsArticle","datePublished":"2026-11-04"}</script>'))
 
 class LatestNewsArchiveTests(unittest.TestCase):
     def test_every_published_story_remains_discoverable(self):
