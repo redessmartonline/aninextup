@@ -1,7 +1,7 @@
 {
-  "articles": 119,
+  "articles": 132,
   "changed": 0,
-  "standardized": 119,
+  "standardized": 132,
   "unresolved": [],
   "records": [
     {
@@ -26,6 +26,12 @@
       "status": "ok",
       "published": "2026-10-27",
       "path": "articles/akane-banashi-season-2-release-date.html",
+      "changed": false
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-29",
+      "path": "articles/anime-expeditions-codes.html",
       "changed": false
     },
     {
@@ -56,6 +62,12 @@
       "status": "ok",
       "published": "2026-10-04",
       "path": "articles/anime-releasing-november-2026.html",
+      "changed": false
+    },
+    {
+      "status": "ok",
+      "published": "2026-11-04",
+      "path": "articles/anime-vs-anime-codes.html",
       "changed": false
     },
     {
@@ -132,6 +144,18 @@
     },
     {
       "status": "ok",
+      "published": "2026-11-02",
+      "path": "articles/bocchi-the-rock-starry-footprints-movie.html",
+      "changed": false
+    },
+    {
+      "status": "ok",
+      "published": "2026-11-04",
+      "path": "articles/charisma-anime-release-date.html",
+      "changed": false
+    },
+    {
+      "status": "ok",
       "published": "2026-10-04",
       "path": "articles/chitose-ramune-bottle-cour-2.html",
       "changed": false
@@ -164,6 +188,12 @@
       "status": "ok",
       "published": "2026-10-04",
       "path": "articles/dark-machine-the-animation.html",
+      "changed": false
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-30",
+      "path": "articles/death-stranding-isolations-anime.html",
       "changed": false
     },
     {
@@ -264,6 +294,12 @@
     },
     {
       "status": "ok",
+      "published": "2026-10-29",
+      "path": "articles/glasses-with-a-chance-of-delinquent-anime.html",
+      "changed": false
+    },
+    {
+      "status": "ok",
       "published": "2026-10-17",
       "path": "articles/granite-waves-anime.html",
       "changed": false
@@ -284,6 +320,12 @@
       "status": "ok",
       "published": "2026-10-05",
       "path": "articles/hello-witch-love-potion-release-date.html",
+      "changed": false
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-31",
+      "path": "articles/hiragi-san-house-of-vampires-anime.html",
       "changed": false
     },
     {
@@ -332,6 +374,12 @@
       "status": "ok",
       "published": "2026-10-13",
       "path": "articles/inherit-the-winds-anime-january-2027.html",
+      "changed": false
+    },
+    {
+      "status": "ok",
+      "published": "2026-11-01",
+      "path": "articles/iruma-kun-irumafia-edition-release-date.html",
       "changed": false
     },
     {
@@ -414,14 +462,32 @@
     },
     {
       "status": "ok",
+      "published": "2026-10-30",
+      "path": "articles/medaka-kuroiwa-season-2-release-date.html",
+      "changed": false
+    },
+    {
+      "status": "ok",
       "published": "2026-10-27",
       "path": "articles/medalist-movie-release-date.html",
       "changed": false
     },
     {
       "status": "ok",
+      "published": "2026-11-01",
+      "path": "articles/mercedes-and-the-waning-moon-anime.html",
+      "changed": false
+    },
+    {
+      "status": "ok",
       "published": "2026-10-13",
       "path": "articles/mobile-suit-gundam-seed-freedom-zero-release-date.html",
+      "changed": false
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-31",
+      "path": "articles/ms-isshiki-wants-to-know-about-love.html",
       "changed": false
     },
     {
@@ -458,6 +524,12 @@
       "status": "ok",
       "published": "2026-10-04",
       "path": "articles/nia-liston-release-date.html",
+      "changed": false
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-29",
+      "path": "articles/no-clipping-my-way-to-supremacy-anime.html",
       "changed": false
     },
     {
@@ -680,6 +752,12 @@
       "status": "ok",
       "published": "2026-10-04",
       "path": "articles/vermilion-mask-release-date.html",
+      "changed": false
+    },
+    {
+      "status": "ok",
+      "published": "2026-10-30",
+      "path": "articles/vertex-force-anime-release-date.html",
       "changed": false
     },
     {
