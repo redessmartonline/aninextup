@@ -142,7 +142,30 @@ def site_files() -> list[Path]:
             and not any(part in SKIP_DIRS for part in p.relative_to(ROOT).parts)]
 
 
+def merge_source_history(previous: dict, mapping: dict[str, str]) -> list[dict]:
+    """Preserve origin evidence even when a later run finds no remote images."""
+    records = {(row["source"], row["local"]): dict(row)
+               for row in previous.get("images", [])}
+    for source, target in mapping.items():
+        row = records.setdefault((source, target), {"source": source, "local": target})
+        row.setdefault("download_url", SOURCE_OVERRIDES.get(source, source))
+    return [records[key] for key in sorted(records)]
+
+
+def rewrite_image_urls(body: str, mapping: dict[str, str]) -> str:
+    """Keep attribution links pointing to suppliers rather than our local copy."""
+    credit = re.compile(r'(<figcaption\b[^>]*>.*?</figcaption>|<p\b[^>]*class=["\'][^"\']*\b(?:image-credit|image-caption|hero-caption|caption)\b[^"\']*["\'][^>]*>.*?</p>)', re.I | re.S)
+    chunks = credit.split(body)
+    for index in range(0, len(chunks), 2):
+        for source, target in sorted(mapping.items(), key=lambda item: len(item[0]), reverse=True):
+            chunks[index] = chunks[index].replace(source, target).replace(html.escape(source, quote=False), target)
+    return "".join(chunks)
+
+
 def main() -> int:
+    # Read before rewriting site files: the manifest itself is under assets/.
+    manifest_path = OUT / "sources.json"
+    previous = json.loads(manifest_path.read_text(encoding="utf-8")) if manifest_path.exists() else {}
     files = site_files()
     originals = {p: p.read_text(encoding="utf-8") for p in files}
     refs: set[str] = set()
@@ -187,22 +210,19 @@ def main() -> int:
             print(f"- {source}: {error}", file=sys.stderr)
 
     changed = 0
-    # Longest first avoids replacing a URL prefix before a URL with a query string.
-    replacements = sorted(mapping.items(), key=lambda item: len(item[0]), reverse=True)
     for path, body in originals.items():
-        updated = body
-        for source, target in replacements:
-            updated = updated.replace(source, target)
-            updated = updated.replace(html.escape(source, quote=False), target)
+        updated = rewrite_image_urls(body, mapping)
         if updated != body:
             path.write_text(updated, encoding="utf-8")
             changed += 1
 
+    history = merge_source_history(previous, mapping)
     manifest = {
-        "count": len(mapping),
+        "count": len(history),
+        "last_run_count": len(mapping),
         "failed_count": len(errors),
         "failed": [{"source": source, "error": error} for source, error in errors],
-        "images": [{"source": source, "local": target} for source, target in sorted(mapping.items())],
+        "images": history,
     }
     (OUT / "sources.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Mirrored {len(mapping)} image URLs; updated {changed} site files.", flush=True)
@@ -211,3 +231,4 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+

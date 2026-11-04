@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "instructions": "Record only asset-specific permission evidence. Provenance, credit and official publication are not reuse authorization. Do not infer commercial permission from a non-commercial press license.",
+  "assets": {
+    "/assets/images/external/49e31d4758930a93fcc1ffae88b8fea573562730264670e3e5e43bd3e0656e74.webp": {
+      "permission_status": "UNVERIFIED",
+      "rights_holder": "Project Carbuncle / DARK MACHINE Committee (published copyright credit)",
+      "rights_holder_evidence": ["https://www.fujitv.co.jp/fujitv/news/20251389.html"],
+      "license_evidence": [],
+      "permission_scope": "",
+      "review_notes": "Copyright credit checked against the Fuji TV announcement on 2026-11-04. This identifies the published credit, not a permission to reuse the image."
+    },
+    "/assets/images/external/d511f193e5b3776f16dad179ded08e2cd573fcf0bd5b23b8fa686f5ebdf19aa2.webp": {
+      "permission_status": "UNVERIFIED",
+      "rights_holder": "鎌池和馬 / KADOKAWA / PROJECT-ITEM (published copyright credit)",
+      "rights_holder_evidence": ["https://toaru-project.com/item/"],
+      "license_evidence": [],
+      "permission_scope": "",
+      "review_notes": "Copyright credit checked against the official production website on 2026-11-04. The official site publishes the visual; no asset-specific reuse permission was established."
+    }
+  }
+}

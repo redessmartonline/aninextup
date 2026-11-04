@@ -7,6 +7,8 @@ on:
     paths:
       - '.github/workflows/mirror-site-images.yml'
       - 'scripts/mirror_site_images.py'
+      - 'scripts/build_image_rights_register.py'
+      - 'tests/test_media_provenance.py'
       - 'articles/**'
       - 'assets/data.js'
 
@@ -32,6 +34,8 @@ jobs:
           python-version: '3.x'
       - name: Install image validation tools
         run: python -m pip install --disable-pip-version-check Pillow
+      - name: Verify source history and rights evidence preservation
+        run: PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s tests -p test_media_provenance.py
       - id: commit
         name: Mirror images and commit from the latest branch
         run: |
@@ -59,3 +63,4 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh workflow run deploy-cloudflare-worker.yml --ref main
+

@@ -10,6 +10,8 @@ on:
       - 'robots.txt'
       - 'ads.txt'
       - 'scripts/audit_adsense_readiness.py'
+      - 'scripts/build_image_rights_register.py'
+      - 'audits/media-permissions.json'
       - '.github/workflows/adsense-readiness-audit.yml'
   push:
     branches: [main]
@@ -21,6 +23,8 @@ on:
       - 'robots.txt'
       - 'ads.txt'
       - 'scripts/audit_adsense_readiness.py'
+      - 'scripts/build_image_rights_register.py'
+      - 'audits/media-permissions.json'
       - '.github/workflows/adsense-readiness-audit.yml'
 permissions:
   contents: read
@@ -29,6 +33,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Build image provenance and separate permission register
+        run: python3 scripts/build_image_rights_register.py
       - name: Check links, metadata, images and sitemap
         run: |
           python3 scripts/audit_adsense_readiness.py 2>&1 | tee adsense_readiness_audit.log
@@ -38,5 +44,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: adsense-readiness-audit-log
-          path: adsense_readiness_audit.log
+          path: |
+            adsense_readiness_audit.log
+            audits/generated/media-rights-register.json
+            audits/generated/media-rights-register.csv
           if-no-files-found: warn
+
