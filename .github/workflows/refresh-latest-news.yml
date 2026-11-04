@@ -5,6 +5,7 @@ on:
     paths:
       - 'articles/**'
       - 'scripts/build_latest_news.py'
+      - 'tests/test_latest_news.py'
       - 'scripts/optimize_news_images.py'
       - '.github/workflows/refresh-latest-news.yml'
   workflow_dispatch:
@@ -37,6 +38,7 @@ jobs:
             git reset --hard origin/main
             python scripts/optimize_news_images.py
             python scripts/build_latest_news.py
+            python -m unittest discover -s tests -p test_latest_news.py
             git add index.html assets/latest-news.json
             git add -A assets/images/news/
             if git diff --cached --quiet; then exit 0; fi
