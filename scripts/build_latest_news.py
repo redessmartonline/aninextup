@@ -18,11 +18,17 @@ def meta(source, name):
 def extract(path):
     source = path.read_text(encoding="utf-8")
     block = re.search(r'<script\s+type=["\']application/json["\']\s+id=["\']aninextup-index["\']\s*>(.*?)</script>', source, re.S | re.I)
-    if not block:
+    # Standard article metadata is sufficient; legacy publications may not have
+    # the optional AniNextUp index block.
+    if "noindex" in meta(source, "robots").lower():
         return None
-    try:
-        data = json.loads(block.group(1))
-    except json.JSONDecodeError:
+    data = {}
+    if block:
+        try:
+            data = json.loads(block.group(1))
+        except json.JSONDecodeError:
+            pass
+    if not data and not any('"' + kind + '"' in source for kind in ("NewsArticle", "Article", "BlogPosting")):
         return None
     title = data.get("title") or meta(source, "og:title")
     if not title:
