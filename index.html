@@ -64,6 +64,29 @@
 .home-social-follow a:focus-visible{outline:2px solid #c4b5fd;outline-offset:2px}
 @media(max-width:540px){.home-social-follow{justify-content:center;gap:12px;margin:0 0 6px;padding-bottom:0}.home-social-follow>span{font-size:9px;letter-spacing:.12em}.home-social-follow a{padding:6px;min-width:40px}.home-social-follow a>span{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}}
 </style>
+<style id="home-more-coverage-design">
+.more-coverage{width:100%;border-top:1px solid var(--line);padding-left:0;padding-right:0}
+.more-coverage .coverage-heading{margin-bottom:24px}
+.more-coverage .coverage-heading h2{font-size:clamp(26px,3.4vw,36px);letter-spacing:-.035em;line-height:1.15;margin:8px 0 12px}
+.more-coverage .coverage-heading p{color:var(--muted);font-size:15px;margin:0;max-width:680px}
+.more-coverage .coverage-panels{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2.4fr);gap:18px;align-items:stretch}
+.more-coverage .coverage-group{min-width:0;padding:24px;background:linear-gradient(145deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:16px}
+.more-coverage .coverage-label{display:block;color:var(--purple);font-size:10px;font-weight:800;letter-spacing:.14em;margin-bottom:10px}
+.more-coverage .coverage-group h3{font-size:18px;line-height:1.35;letter-spacing:-.02em;margin:0 0 18px}
+.more-coverage ul{list-style:none;padding:0;margin:0;display:grid;gap:0}
+.more-coverage li{min-width:0;margin:0}
+.more-coverage li a{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:60px;padding:12px 10px;border-radius:8px;color:#d5dbea;font-size:13px;line-height:1.45;transition:background .18s,color .18s}
+.more-coverage li a::after{content:"↗";flex:none;color:var(--purple);font-size:16px}
+.more-coverage li a:hover{background:#a78bfa10;color:#fff}
+.more-coverage li a:focus-visible{outline:2px solid var(--purple);outline-offset:2px;background:#a78bfa10;color:#fff}
+.more-coverage .coverage-guides li+li{border-top:1px solid var(--line)}
+.more-coverage .coverage-updates ul{grid-template-columns:repeat(3,minmax(0,1fr));column-gap:18px}
+.more-coverage .coverage-updates li{border-top:1px solid var(--line)}
+@media(max-width:1000px){.more-coverage .coverage-panels{grid-template-columns:minmax(0,1fr) minmax(0,1.8fr)}.more-coverage .coverage-updates ul{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:680px){.more-coverage .coverage-panels{grid-template-columns:minmax(0,1fr)}.more-coverage .coverage-group{padding:20px}.more-coverage .coverage-heading{margin-bottom:18px}.more-coverage li a{min-height:54px;padding:10px 6px}.more-coverage .coverage-updates ul{column-gap:14px}}
+@media(max-width:380px){.more-coverage .coverage-updates ul{grid-template-columns:minmax(0,1fr)}}
+@media(prefers-reduced-motion:reduce){.more-coverage li a{transition:none}}
+</style>
 </head>
 <body>
 <noscript>Free cookie consent management tool by <a href="https://www.termsfeed.com/">TermsFeed Generator</a></noscript><header class="site-header"><a class="brand" href="/">ANI<span>NEXTUP</span></a><button class="menu" aria-label="Open menu" aria-expanded="false">☰</button><nav><a class="active" href="/">HOME</a><a href="today">TODAY</a><a href="this-week">THIS WEEK</a><a href="calendar">CALENDAR</a><a href="where-to-watch">WHERE TO WATCH</a><a href="news">NEWS</a></nav><button class="global-search-toggle" type="button" aria-label="Search articles" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg><span class="sr-only">Search</span></button></header>
@@ -79,18 +102,13 @@
 <section><div class="section-head"><div><span class="kicker">STREAMING HIGHLIGHTS</span><h2>Browse by Streaming Platform</h2><p>Jump into the services carrying Fall 2026 anime tracked by AniNextUp.</p></div><a href="where-to-watch">STREAMING HUB →</a></div><div class="grid four home-platforms"><a class="feature" href="where-to-watch#crunchyroll"><span>01</span><h3>Crunchyroll</h3><p><b data-platform-count="Crunchyroll">· 25 TRACKED</b> Fall 2026 titles tracked.</p></a><a class="feature" href="where-to-watch#netflix"><span>02</span><h3>Netflix</h3><p><b data-platform-count="Netflix">· 8 TRACKED</b> releases and specials tracked.</p></a><a class="feature" href="where-to-watch#disney-plus"><span>03</span><h3>Disney+</h3><p><b data-platform-count="Disney+">· 1 TRACKED</b> confirmed releases tracked.</p></a><a class="feature" href="where-to-watch#prime-video"><span>04</span><h3>Prime Video</h3><p><b data-platform-count="Prime Video">· 3 TRACKED</b> releases tracked.</p></a></div></section>
 <section><div class="section-head"><div><span class="kicker">EXPLORE</span><h2>Plan Your Fall 2026 Watchlist</h2></div></div><div class="grid three"><a class="feature" href="this-week"><span>01</span><h3>This Week</h3><p>See the current week's confirmed premieres.</p></a><a class="feature" href="calendar"><span>02</span><h3>Fall 2026 Calendar</h3><p>Browse October, November and December releases.</p></a><a class="feature" href="articles/anime-releasing-november-2026"><span>03</span><h3>November 2026</h3><p>Streaming premieres and theatrical releases coming next month.</p></a></div></section>
 
-<section class="more-coverage" aria-labelledby="more-coverage-heading" style="max-width:1180px;margin:32px auto;padding:20px 24px;border-top:1px solid #7775">
-<h2 id="more-coverage-heading">Explore more anime coverage</h2>
-<p>Browse additional release guides, anime announcements and streaming updates from AniNextUp.</p>
-<h3>Release calendars and streaming guides</h3>
-<ul style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px 22px;padding-left:22px">
-<li><a href="/articles/fall-2026-anime-calendar">Fall 2026 anime calendar</a></li>
+<section class="more-coverage" aria-labelledby="more-coverage-heading">
+<div class="coverage-heading"><span class="kicker">KEEP EXPLORING</span><h2 id="more-coverage-heading">Explore more anime coverage</h2><p>Browse additional release guides, anime announcements and streaming updates from AniNextUp.</p></div>
+<div class="coverage-panels">
+<div class="coverage-group coverage-guides"><span class="coverage-label">PLAN YOUR WATCHLIST</span><h3>Release calendars and streaming guides</h3><ul><li><a href="/articles/fall-2026-anime-calendar">Fall 2026 anime calendar</a></li>
 <li><a href="/articles/anime-releasing-december-2026">December 2026 anime releases</a></li>
-<li><a href="/articles/netflix-october-2026">Netflix October 2026 anime</a></li>
-</ul>
-<h3>Anime updates and upcoming projects</h3>
-<ul style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px 22px;padding-left:22px">
-<li><a href="/articles/firefly-wedding">Firefly Wedding</a></li>
+<li><a href="/articles/netflix-october-2026">Netflix October 2026 anime</a></li></ul></div>
+<div class="coverage-group coverage-updates"><span class="coverage-label">DISCOVER WHAT’S NEXT</span><h3>Anime updates and upcoming projects</h3><ul><li><a href="/articles/firefly-wedding">Firefly Wedding</a></li>
 <li><a href="/articles/im-looking-for-a-zombie">I'm Looking for a Zombie</a></li>
 <li><a href="/articles/iceblade-sorcerer-ii">Iceblade Sorcerer II</a></li>
 <li><a href="/articles/dragon-ball-super-beerus">Dragon Ball Super: Beerus</a></li>
@@ -104,8 +122,8 @@
 <li><a href="/articles/the-moon-on-a-rainy-night-anime">The Moon on a Rainy Night</a></li>
 <li><a href="/articles/full-clearing-another-world-zero-believers-premiere">Full Clearing Another World: Zero Believers</a></li>
 <li><a href="/articles/in-a-world-full-of-zombies-january-2027">In a World Full of Zombies</a></li>
-<li><a href="/articles/bless-anime-akiharu-nakano-koki-uchiyama-january-2027">Bless anime</a></li>
-</ul>
+<li><a href="/articles/bless-anime-akiharu-nakano-koki-uchiyama-january-2027">Bless anime</a></li></ul></div>
+</div>
 </section>
 </main><footer><b>ANINEXTUP</b><p>Anime releases, streaming guides, calendars and news.</p><small>Release dates and availability can vary by region.</small><p><a href="about">About</a> · <a href="contact">Contact</a> · <a href="privacy">Privacy</a> · <a href="terms">Terms</a></p><p><a href="#" id="open_preferences_center">Update cookies preferences</a></p></footer><script src="assets/data.js?v=717ec0f6e2775d70"></script><script src="assets/release-model.js?v=9beee3cce986a71b"></script><script src="assets/news-dates.js?v=9237b6ad340b58a3"></script><script src="assets/app.js?v=64fc3baad8be09e8"></script><script src="assets/weekly-episodes.js?v=15368f2bc04fbd6c"></script><script src="assets/weekly-episodes-ui.js?v=092a367787456a70"></script><script defer src="/assets/article-search.js?v=20261024-independent-search"></script><script defer src="/assets/mobile-menu.js?v=20261025-news-category-routing"></script><script defer src="/assets/newsletter.js?v=20261030b"></script></body></html>
 
