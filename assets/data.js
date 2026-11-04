@@ -1,5 +1,5 @@
 window.ANINEXTUP_DATA={
-updated:"2026-11-02",
+updated:"2026-11-04",
 site:{timezone:"America/Santo_Domingo",season:"Fall 2026"},
 anime:[
 {id:"vertex-force-anime-release-date",image:"/assets/images/news/vertex-force-anime-release-date.webp",title:"VERTEX FORCE: Release Date, Streaming & Official Trailer",date:"2026-10-03",dateLabel:"October 3, 2026 · Japan",platform:"Japan services: U-NEXT / ABEMA and others",article:"articles/vertex-force-anime-release-date",newsCategory:"new-anime",category:"Japan TV premiere",status:"confirmed"},
@@ -93,6 +93,7 @@ anime:[
 {id:"psyren",newsCategory:"new-anime",image:"assets/images/psyren.jpg",title:"PSYREN",date:"2026-10-05",platform:"Crunchyroll",article:"articles/psyren-release-date",category:"Premiere",status:"confirmed"},
 ],
 guides:[
+{image:"/assets/images/external/bb1523e94d99b1b2d086dbd5a70c91dfd9061dfa5c401f9298f2d74ec1a34882.webp",title:"Brian Tyree Henry’s New Netflix Anime: Bass X Machina Explained",tag:"NOW STREAMING · BRIAN TYREE HENRY",article:"articles/bass-x-machina-release-date",newsCategory:"trailers-cast",description:"Brian Tyree Henry stars in Bass X Machina, now on Netflix. Explore his role, the six episodes, official trailer and the real Bass Reeves behind the fantasy."},
 {image:"/assets/images/covers/bocchi-starry-footprints-official.webp",title:"Bocchi the Rock! Starry Footprints Movie: 2027 Release, Teaser & Story",tag:"2027 · NEW PREQUEL MOVIE",article:"articles/bocchi-the-rock-starry-footprints-movie",newsCategory:"new-anime",description:"Bocchi the Rock! Hoshi no Ashiato opens in Japan in 2027. Watch the official teaser and explore the Ijichi sisters’ prequel, staff and manga connection."},
 {image:"/assets/images/covers/irumafia-official-main-visual.webp",title:"Iruma-kun: IruMafia Edition Release Date, 12 Episodes & Official Teaser",tag:"JANUARY 4, 2027 · MAFIA SPIN-OFF",article:"articles/iruma-kun-irumafia-edition-release-date",newsCategory:"new-anime",description:"IruMafia Edition premieres January 4, 2027 on NHK General. Watch the official teaser and explore the 12-episode run, returning cast and alternate-world story."},
 {image:"/assets/images/covers/mercedes-official-main-visual.webp",title:"Mercedes and the Waning Moon: January 2027 Release, Trailer & Cast",tag:"JANUARY 2027 · OFFICIAL TRAILER",article:"articles/mercedes-and-the-waning-moon-anime",newsCategory:"new-anime",description:"Mercedes and the Waning Moon premieres in January 2027. Watch the second trailer, meet the cast and compare the English novel and manga before the anime."},
