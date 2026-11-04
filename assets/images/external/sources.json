@@ -1,11 +1,6 @@
 {
-  "count": 1,
+  "count": 0,
   "failed_count": 0,
   "failed": [],
-  "images": [
-    {
-      "source": "https://anime.charisma-house.com/wp-content/themes/charisma/assets/img/top/visual/visual2.jpg?ver=3.26",
-      "local": "/assets/images/external/a5e25468f28d6065d4595963b6ba154b3e56e68e8ab7f22c5a07bd63015a3302.webp"
-    }
-  ]
+  "images": []
 }
