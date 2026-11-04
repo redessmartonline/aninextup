@@ -56,7 +56,7 @@ anime:[
 {id:"witch-on-the-holy-night",image:"/assets/images/news/witch-on-the-holy-night-official-trailer.webp",title:"Witch on the Holy Night",date:"2026-11-20",platform:"Japanese Theaters",article:"articles/witch-on-the-holy-night-movie",category:"Anime Movie",status:"confirmed"},
 {id:"rakuen-tsuihou-resonance",image:"/assets/images/news/rakuen-tsuihou-kokoro-no-resonance.webp",title:"Rakuen Tsuihou: Kokoro no Resonance",date:"2026-11-13",platform:"Japanese Theaters",article:"articles/rakuen-tsuihou-kokoro-no-resonance",category:"Anime Movie",status:"confirmed"},
 {id:"demons-crest",image:"/assets/images/external/0df63a485f0e012f9a966e043e8a440114ffdbf63be0e7e0baa7972f5e74ed80.webp",title:"Demon's Crest",date:"2026-11-06",platform:"Prime Video",article:"articles/demons-crest-release-date",category:"Premiere",status:"confirmed"},
-{id:"bass-x-machina",image:"/assets/images/external/1987bb7e6725738370c9ddc7f1e4212a4dbd3d2d90f99b5d631921b3194e392b.webp",title:"Bass X Machina",date:"2026-11-03",platform:"Netflix",article:"articles/bass-x-machina-release-date",category:"Premiere",status:"confirmed"},
+{id:"bass-x-machina",image:"/assets/images/external/1987bb7e6725738370c9ddc7f1e4212a4dbd3d2d90f99b5d631921b3194e392b.webp",title:"Brian Tyree Henry’s New Netflix Anime: Bass X Machina Explained",date:"2026-11-03",platform:"Netflix",article:"articles/bass-x-machina-release-date",category:"Premiere",status:"confirmed"},
 {id:"dreamland",image:"/assets/images/external/464fe8b443351afa19e3034fb79825f137bd4119d17554ffd1f1fb6cb393c825.webp",title:"Dreamland Anime: Release Date, Episodes & Where to Watch",date:"2026-10-17",platform:"ADN (France); check local catalog",article:"articles/dreamland-release-date",category:"Premiere",status:"released"},
 {id:"dark-machine",image:"/assets/images/external/49e31d4758930a93fcc1ffae88b8fea573562730264670e3e5e43bd3e0656e74.webp",title:"DARK MACHINE THE ANIMATION",date:"2026-10-13",platform:"Crunchyroll",article:"articles/dark-machine-the-animation",category:"Premiere",status:"confirmed"},
 {id:"chitose-ramune-cour-2",image:"/assets/images/external/b9c8c933e8decca8a0c65033171bacafc43b27f76c2de80e048900896f45881f.webp",title:"Chitose Is in the Ramune Bottle 2nd Cour",date:"2026-10-13",platform:"Crunchyroll",article:"articles/chitose-ramune-bottle-cour-2",category:"Cour 2",status:"confirmed"},
@@ -183,6 +183,7 @@ guides:[
 {image:"assets/images/netflix-october-2026.jpg",title:"New Anime on Netflix in October 2026",tag:"NETFLIX",article:"articles/netflix-october-2026",newsCategory:"release-news",description:"Notable anime arriving on Netflix this month."},
 {image:"assets/images/fall-2026-calendar.jpeg",title:"Fall 2026 Anime Calendar",tag:"FALL 2026",article:"articles/fall-2026-anime-calendar",newsCategory:"release-news",description:"October premieres and where to watch them."}
 ]};
+
 
 
 
