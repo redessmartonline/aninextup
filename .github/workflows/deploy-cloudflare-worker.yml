@@ -1,6 +1,9 @@
 name: Deploy AniNextUp Worker
 
 on:
+  # Refresh This Week and Calendar daily at 7 a.m. in Santo Domingo.
+  schedule:
+    - cron: '0 11 * * *'
   push:
     branches:
       - main

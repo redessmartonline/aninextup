@@ -1,7 +1,5 @@
 name: Refresh AniNextUp discovery HTML
 on:
-  schedule:
-    - cron: '0 12 * * *'
   workflow_dispatch:
   push:
     branches: [main]
