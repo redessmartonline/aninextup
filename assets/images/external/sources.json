@@ -1,6 +1,6 @@
 {
-  "count": 245,
-  "last_run_count": 6,
+  "count": 246,
+  "last_run_count": 7,
   "failed_count": 0,
   "failed": [],
   "images": [
@@ -73,6 +73,11 @@
       "source": "https://aninextup.com/assets/images/covers/bocchi-starry-footprints-teaser.webp",
       "local": "/assets/images/covers/bocchi-starry-footprints-teaser.webp",
       "evidence_commit": "6d7334ae28c7e64baf118310d4d372251428232a"
+    },
+    {
+      "source": "https://aninextup.com/assets/images/covers/bokuyaba-season-3-teaser.webp",
+      "local": "/assets/images/covers/bokuyaba-season-3-teaser.webp",
+      "download_url": "https://aninextup.com/assets/images/covers/bokuyaba-season-3-teaser.webp"
     },
     {
       "source": "https://aninextup.com/assets/images/covers/detective-is-already-dead-season-2.jpg",
