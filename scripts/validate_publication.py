@@ -20,9 +20,39 @@ class Audit(HTMLParser):
         if tag == "img": self.images.append(d)
         if tag == "a": self.links.append(d)
 
+class EditorialWords(HTMLParser):
+    """Count editorial body text, excluding navigation and video controls."""
+    def __init__(self):
+        super().__init__()
+        self.stack = []
+        self.words = []
+    def handle_starttag(self, tag, attrs):
+        if tag in {"img", "br", "hr", "meta", "link", "input", "source", "wbr"}:
+            return
+        classes = dict(attrs).get("class", "").split()
+        inside, excluded = self.stack[-1][1:] if self.stack else (False, False)
+        self.stack.append((tag, inside or "prose" in classes,
+                           excluded or tag in {"nav", "script", "style"} or "lite-trailer" in classes))
+    def handle_endtag(self, tag):
+        for i in range(len(self.stack) - 1, -1, -1):
+            if self.stack[i][0] == tag:
+                del self.stack[i:]
+                break
+    def handle_data(self, data):
+        if self.stack and self.stack[-1][1] and not self.stack[-1][2]:
+            self.words.append(data)
+
+def editorial_word_count(source):
+    parser = EditorialWords()
+    parser.feed(source)
+    return len(re.findall(r"\b\w+(?:[’'-]\w+)*\b", " ".join(parser.words)))
+
 def validate(path):
     errors = []
     s = path.read_text(encoding="utf-8")
+    word_count = editorial_word_count(s)
+    if not 1200 <= word_count <= 2000:
+        errors.append(f"Editorial body has {word_count} words; required range is 1200–2000 (excluding menus, video controls and related articles)")
     errors.extend(video_schema_errors(s))
     dom = Audit()
     dom.feed(s)
