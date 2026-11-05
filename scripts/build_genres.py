@@ -18,6 +18,41 @@ GENRES = [
  ('slice-of-life','Slice of Life','Everyday experiences, friendships and quieter character stories.',['hirayasumi-anime-release-date','bocchi-the-rock-starry-footprints-movie','chitose-ramune-bottle-cour-2'])
 ]
 
+def article_cover(source, slug):
+    match = re.search(r'<meta\s+property="og:image"\s+content="([^"]+)"', source)
+    if not match:
+        raise ValueError(f'{slug}: missing article cover')
+    image = html.unescape(match[1]).removeprefix('https://aninextup.com')
+    if not image.startswith('/assets/') or not (ROOT / image.lstrip('/')).is_file():
+        raise ValueError(f'{slug}: cover must be an existing local image')
+    return f'<img src="{html.escape(image, quote=True)}" alt="" width="640" height="360" loading="lazy" decoding="async">'
+
+
+def guide_card(url, title, summary, action, media):
+    return (
+        f'<a class="genre-guide genre-visual-card" href="{html.escape(url, quote=True)}">{media}'
+        f'<div class="genre-card-copy"><h3>{html.escape(title)}</h3>'
+        f'<p>{html.escape(summary)}</p><span>{html.escape(action)}</span></div></a>'
+    )
+
+
+def beginner_cards():
+    one_piece = (ROOT / 'articles/where-to-watch-one-piece.html').read_text()
+    watch_icon = '<div class="genre-card-art" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"><rect x="7" y="13" width="50" height="38" rx="6"/><path d="M27 24l14 8-14 8z"/></svg></div>'
+    calendar_icon = '<div class="genre-card-art" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><rect x="10" y="14" width="44" height="41" rx="6"/><path d="M21 9v11m22-11v11M10 28h44M21 37h4m14 0h4m-22 9h4m14 0h4"/></svg></div>'
+    return ''.join((
+        guide_card('/articles/where-to-watch-one-piece', 'Understand the viewing options',
+                   'See which platforms carry One Piece and what to check before starting a long-running series.',
+                   'READ VIEWING GUIDE →', article_cover(one_piece, 'where-to-watch-one-piece')),
+        guide_card('/where-to-watch', 'Check your streaming service',
+                   'Browse streaming platforms and check which anime are available in your region.',
+                   'WHERE TO WATCH →', watch_icon),
+        guide_card('/calendar', 'Check the release calendar',
+                   'See which anime are airing and when upcoming titles are scheduled to premiere.',
+                   'OPEN CALENDAR →', calendar_icon),
+    ))
+
+
 def build():
     home = (ROOT/'index.html').read_text()
     cards=[]
@@ -30,15 +65,7 @@ def build():
             title=html.unescape(re.sub('<[^>]+>','',match[1])).strip()
             desc=re.search(r'<meta\s+name="description"\s+content="([^"]+)"',source)
             summary=html.unescape(desc[1]) if desc else 'Read our release and viewing guide.'
-            image_match=re.search(r'<meta\s+property="og:image"\s+content="([^"]+)"',source)
-            if not image_match:
-                raise ValueError(f'{slug}: missing article cover')
-            image=html.unescape(image_match[1])
-            if image.startswith('https://aninextup.com/'):
-                image=image.removeprefix('https://aninextup.com')
-            if not image.startswith('/assets/') or not (ROOT/image.lstrip('/')).is_file():
-                raise ValueError(f'{slug}: cover must be an existing local image')
-            links.append(f'<a class="genre-guide genre-visual-card" href="/articles/{slug}"><img src="{html.escape(image,quote=True)}" alt="{html.escape(title,quote=True)}" width="640" height="360" loading="lazy" decoding="async"><div class="genre-card-copy"><h3>{html.escape(title)}</h3><p>{html.escape(summary)}</p><span>READ GUIDE →</span></div></a>')
+            links.append(guide_card(f'/articles/{slug}', title, summary, 'READ GUIDE →', article_cover(source, slug)))
         sections.append(f'<section class="genre-section"{' hidden' if key != 'action' else ''} id="{key}" aria-labelledby="genre-{key}"><div class="section-head"><div><h2 id="genre-{key}">{label} Anime</h2><p>{description}</p></div><a href="#genre-index">ALL GENRES ↑</a></div><div class="genre-guides">'+''.join(links)+'</div></section>')
         if len(cards)<6:
             cards.append(f'<a class="genre-tile" href="/genres#{key}"><h3>{label}</h3><p>{description}</p><span>EXPLORE →</span></a>')
@@ -62,7 +89,7 @@ def build():
     footer=re.search(r'<footer>.*?</footer>',template,re.S)[0]
     scripts=''.join(re.findall(r'<script[^>]+src="/assets/(?:mobile-menu|article-search)[^"]*"[^>]*></script>',template))
     anchors=''.join(f'<a href="#{key}">{label}</a>' for key,label,_,_ in GENRES)
-    beginner='<section class="genre-section" id="beginners" hidden><span class="kicker">NEW TO ANIME?</span><h2>Choose Your First Anime Guide</h2><p>Start with the kind of story you already enjoy. Romance can focus on relationships; adventure follows a journey; slice of life explores everyday experiences. Genres overlap, so a title may appear in more than one section.</p><p>These links lead to release news and viewing guides, rather than a list of standalone first seasons. For a sequel or film, check the earlier entries before watching. A confirmed Japanese release date does not automatically mean streaming is available in your country.</p><div class="genre-guides"><a class="genre-guide" href="/articles/where-to-watch-one-piece"><h3>Understand the viewing options</h3><p>Our One Piece viewing guide explains platforms and the practical questions to check before starting a long-running series.</p><span>READ VIEWING GUIDE →</span></a><a class="genre-guide" href="/where-to-watch"><h3>Check your streaming service</h3><p>Browse platform information and check regional availability before subscribing.</p><span>WHERE TO WATCH →</span></a><a class="genre-guide" href="/calendar"><h3>Check the release calendar</h3><p>Separate upcoming premieres from titles already airing and open the individual guide for context.</p><span>OPEN CALENDAR →</span></a></div></section>'
+    beginner='<section class="genre-section" id="beginners" hidden><span class="kicker">NEW TO ANIME?</span><h2>Choose Your First Anime Guide</h2><p>Start with the kind of story you already enjoy. Romance can focus on relationships; adventure follows a journey; slice of life explores everyday experiences. Genres overlap, so a title may appear in more than one section.</p><p>These links lead to release news and viewing guides, rather than a list of standalone first seasons. For a sequel or film, check the earlier entries before watching. A confirmed Japanese release date does not automatically mean streaming is available in your country.</p><div class="genre-guides">'+beginner_cards()+'</div></section>'
     schema={'@context':'https://schema.org','@type':'CollectionPage','name':'Anime Genres','url':'https://aninextup.com/genres','description':desc}
     page=head+'<body>'+header+'<main class="genres-page"><section class="genre-header"><span class="kicker">ANIME DISCOVERY</span><h1>Browse Anime by Genre</h1><p>Choose a genre. Explore release news and viewing guides.</p><nav class="genre-index" id="genre-index" aria-label="Browse anime genres">'+anchors+'</nav><div class="genre-starter-link"><span>New to anime? Find your starting point.</span><a href="#beginners">ANIME FOR BEGINNERS →</a></div></section>'+''.join(sections)+beginner+'</main>'+footer+scripts+'<script defer src="/assets/genres-ui.js?v=20261105a"></script><noscript><style>.genres-page .genre-section[hidden]{display:block!important}</style></noscript><script type="application/ld+json">'+json.dumps(schema)+'</script></body></html>'
     (ROOT/'genres.html').write_text(page)
@@ -76,8 +103,8 @@ def build():
             return re.sub(r'(<a\b[^>]*href="[^\"]*where-to-watch(?:\.html)?"[^>]*>.*?</a>)',lambda x:x[1]+f'<a{active} href="/genres">GENRES</a>',section,count=1,flags=re.S)
         text=re.sub(r'<header class="site-header">.*?</header>',nav,text,flags=re.S)
         if '<header class="site-header">' in text and '/assets/genres.css' not in text:
-            text=text.replace('</head>','<link rel="stylesheet" href="/assets/genres.css?v=20261105d"></head>',1)
-        text=re.sub(r'(/assets/genres\.css)(?:\?[^" ]*)?',r'\1?v=20261105d',text)
+            text=text.replace('</head>','<link rel="stylesheet" href="/assets/genres.css?v=20261105e"></head>',1)
+        text=re.sub(r'(/assets/genres\.css)(?:\?[^" ]*)?',r'\1?v=20261105e',text)
         if text!=path.read_text():path.write_text(text)
     print('Built Genres directory, homepage discovery and static site navigation.')
 
