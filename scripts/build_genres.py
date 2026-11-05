@@ -30,7 +30,15 @@ def build():
             title=html.unescape(re.sub('<[^>]+>','',match[1])).strip()
             desc=re.search(r'<meta\s+name="description"\s+content="([^"]+)"',source)
             summary=html.unescape(desc[1]) if desc else 'Read our release and viewing guide.'
-            links.append(f'<a class="genre-guide" href="/articles/{slug}"><h3>{html.escape(title)}</h3><p>{html.escape(summary)}</p><span>READ GUIDE →</span></a>')
+            image_match=re.search(r'<meta\s+property="og:image"\s+content="([^"]+)"',source)
+            if not image_match:
+                raise ValueError(f'{slug}: missing article cover')
+            image=html.unescape(image_match[1])
+            if image.startswith('https://aninextup.com/'):
+                image=image.removeprefix('https://aninextup.com')
+            if not image.startswith('/assets/') or not (ROOT/image.lstrip('/')).is_file():
+                raise ValueError(f'{slug}: cover must be an existing local image')
+            links.append(f'<a class="genre-guide genre-visual-card" href="/articles/{slug}"><img src="{html.escape(image,quote=True)}" alt="{html.escape(title,quote=True)}" width="640" height="360" loading="lazy" decoding="async"><div class="genre-card-copy"><h3>{html.escape(title)}</h3><p>{html.escape(summary)}</p><span>READ GUIDE →</span></div></a>')
         sections.append(f'<section class="genre-section"{' hidden' if key != 'action' else ''} id="{key}" aria-labelledby="genre-{key}"><div class="section-head"><div><h2 id="genre-{key}">{label} Anime</h2><p>{description}</p></div><a href="#genre-index">ALL GENRES ↑</a></div><div class="genre-guides">'+''.join(links)+'</div></section>')
         if len(cards)<6:
             cards.append(f'<a class="genre-tile" href="/genres#{key}"><h3>{label}</h3><p>{description}</p><span>EXPLORE →</span></a>')
@@ -68,8 +76,8 @@ def build():
             return re.sub(r'(<a\b[^>]*href="[^\"]*where-to-watch(?:\.html)?"[^>]*>.*?</a>)',lambda x:x[1]+f'<a{active} href="/genres">GENRES</a>',section,count=1,flags=re.S)
         text=re.sub(r'<header class="site-header">.*?</header>',nav,text,flags=re.S)
         if '<header class="site-header">' in text and '/assets/genres.css' not in text:
-            text=text.replace('</head>','<link rel="stylesheet" href="/assets/genres.css?v=20261105c"></head>',1)
-        text=re.sub(r'(/assets/genres\.css)(?:\?[^" ]*)?',r'\1?v=20261105c',text)
+            text=text.replace('</head>','<link rel="stylesheet" href="/assets/genres.css?v=20261105d"></head>',1)
+        text=re.sub(r'(/assets/genres\.css)(?:\?[^" ]*)?',r'\1?v=20261105d',text)
         if text!=path.read_text():path.write_text(text)
     print('Built Genres directory, homepage discovery and static site navigation.')
 

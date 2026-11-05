@@ -50,3 +50,14 @@
 .genres-page .genre-guide p{display:none}
 .genres-page .genre-guide span{flex-shrink:0;font-size:.75rem}
 @media(max-width:600px){.genres-page .genre-header{padding-top:24px}.genres-page .genre-index{grid-template-columns:repeat(2,minmax(0,1fr))}.genres-page .genre-guide{align-items:flex-start;gap:12px}.genres-page .genre-guide h3{font-size:.9rem}.genres-page .genre-guide span{font-size:.7rem}}
+
+/* Image-led genre guides match the site's editorial news cards. */
+.genres-page .genre-section:not(#beginners) .genre-guides{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.genres-page .genre-visual-card{display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:0;padding:0;overflow:hidden;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
+.genres-page .genre-visual-card:hover{border-color:var(--purple)}
+.genres-page .genre-visual-card>img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;background:var(--panel2)}
+.genres-page .genre-card-copy{display:flex;flex-direction:column;flex:1;padding:18px;min-width:0}
+.genres-page .genre-visual-card h3{font-size:1.02rem;line-height:1.5;margin:0 0 10px}
+.genres-page .genre-visual-card p{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;font-size:.86rem;line-height:1.6;color:var(--muted);margin:0 0 16px}
+.genres-page .genre-visual-card span{margin-top:auto;font-size:.75rem}
+@media(max-width:780px){.genres-page .genre-section:not(#beginners) .genre-guides{grid-template-columns:1fr;gap:16px}.genres-page .genre-card-copy{padding:16px}}
