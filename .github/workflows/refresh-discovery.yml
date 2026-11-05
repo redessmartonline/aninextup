@@ -7,6 +7,8 @@ on:
     branches: [main]
     paths:
       - 'assets/data.js'
+      - 'assets/verified-broadcasts.js'
+      - 'tests/test_verified_broadcasts.cjs'
       - 'assets/app.js'
       - 'assets/search-aliases.json'
       - 'scripts/standardize_article_bylines.py'
@@ -48,6 +50,7 @@ jobs:
             python scripts/build_search_index.py
             node scripts/prerender_discovery.js
             python scripts/complete_article_navigation.py
+            node tests/test_verified_broadcasts.cjs
             node tests/test_discovery.js
             node tests/test_news_order.cjs
             node tests/test_link_analytics.cjs

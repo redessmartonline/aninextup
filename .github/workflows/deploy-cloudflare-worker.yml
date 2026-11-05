@@ -92,7 +92,9 @@ jobs:
         run: node scripts/prerender_discovery.js
 
       - name: Verify homepage first render matches latest publications
-        run: node tests/test_homepage_first_render.cjs
+        run: |
+          node tests/test_homepage_first_render.cjs
+          node tests/test_verified_broadcasts.cjs
 
       - name: Set up Node for newsletter validation
         uses: actions/setup-node@v4

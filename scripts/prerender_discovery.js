@@ -4,6 +4,7 @@ const root=path.resolve(__dirname,'..');
 const model=require('../assets/release-model.js');
 const newsDates=require('../assets/news-dates.js');
 const weeklyEpisodes=require('../assets/weekly-episodes.js');
+const verifiedBroadcasts=require('../assets/verified-broadcasts.js');
 const modelVersion=crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'assets/release-model.js'))).digest('hex').slice(0,16);
 const newsDatesVersion=crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'assets/news-dates.js'))).digest('hex').slice(0,16);
 const dataSource=fs.readFileSync(path.join(root,'assets/data.js'),'utf8');
@@ -53,6 +54,14 @@ for(const name of fs.readdirSync(root).filter(n=>n.endsWith('.html'))){
   const file=path.join(root,name),original=fs.readFileSync(file,'utf8');let html=original;
   html=fill(html,'data-anime-list',mode=>list(model.select(data.anime,mode,ctx),mode==='today','No premieres confirmed for this date. Explore the upcoming releases below.'));
   html=fill(html,'data-weekly-episodes',()=>episodeCards(episodeDay(now)));
+  if(name==='today.html'){
+    const current=verifiedBroadcasts.state(now,'UTC');
+    html=fill(html,'data-verified-broadcasts',()=>verifiedBroadcasts.render(now,'UTC'));
+    html=html.replace(/(<strong[^>]*id="today-count"[^>]*>)[\s\S]*?(<\/strong>)/,(_,a,b)=>a+(current.covered?current.items.length:'Update pending')+b);
+    html=html.replace(/(<strong[^>]*id="today-platforms"[^>]*>)[\s\S]*?(<\/strong>)/,(_,a,b)=>a+(current.covered?[...new Set(current.items.map(e=>e.network))].join(' · '):'Japan TV sources')+b);
+    html=html.replace(/(<p id="broadcast-date">)[\s\S]*?(<\/p>)/,(_,a,b)=>a+verifiedBroadcasts.dayLabel(current.day)+' · UTC'+b);
+    html=html.replace(/assets\/verified-broadcasts\.js(?:\?[^"\s]*)?/g,'assets/verified-broadcasts.js?v='+crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'assets/verified-broadcasts.js'))).digest('hex').slice(0,16));
+  }
   for(const [hook,mode,limit] of [['data-home-next','after-week',6],['data-today-next','next',6],['data-after-week','after-week',6],['data-news-upcoming','upcoming',9]])html=fill(html,hook,()=>list(model.select(data.anime,mode,ctx).slice(0,limit),hook==='data-news-upcoming'));
   html=fill(html,'data-anime-month',month=>list(model.select(data.anime,'calendar',ctx).filter(a=>a.date.startsWith(month))));
   html=fill(html,'data-month-count',month=>{const n=data.anime.filter(a=>a.date?.startsWith(month)).length;return n?'· '+n+' CONFIRMED':'';});
