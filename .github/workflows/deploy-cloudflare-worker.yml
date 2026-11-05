@@ -17,6 +17,7 @@ on:
       - "tests/test_search_index.py"
       - "scripts/build_watch_catalog.js"
       - "scripts/build_genres.py"
+      - "scripts/open_external_links.py"
       - "scripts/check_publication_media.py"
       - "scripts/validate_publication.py"
       - "scripts/validate_video_schema.py"
@@ -108,6 +109,9 @@ jobs:
         run: |
           python scripts/build_genres.py
           python -m unittest discover -s tests -p test_genres.py
+
+      - name: Open external links in new tabs
+        run: python scripts/open_external_links.py
 
       - name: Verify homepage first render matches latest publications
         run: |
