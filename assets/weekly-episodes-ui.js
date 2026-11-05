@@ -15,7 +15,7 @@ const renderCard=(e,date)=>{const next=(e.nextDayRegions||[]).includes(selected)
 function render(){
  const current=today((data.regionTimezones||[])[selected]||tz);
  const outsideCoverage=!!(data.validFrom&&current<data.validFrom||data.validThrough&&current>data.validThrough);
- const coverageNote='<p class="empty" role="status">Episode schedule awaiting verification for this date. Last verified coverage: '+esc(data.validFrom||'unknown')+' to '+esc(data.validThrough||'unknown')+'. This does not mean that no anime episodes are airing. We will list new dates after the official schedule is checked.</p>';
+ const coverageNote='<p class="empty" role="status">Episode schedule awaiting verification for this date. Last verified coverage: '+esc(data.validFrom||'unknown')+' to '+esc(data.validThrough||'unknown')+'. This does not mean that no anime episodes are airing. We will list new dates after the official schedule is checked. <a href="https://www.crunchyroll.com/releasecalendar" target="_blank" rel="noopener noreferrer">Open the official calendar for your region</a>.</p>';
  if(todayRoot){
   const items=data.episodes.map(e=>({...e,localDate:displayDate(e)})).filter(e=>e.localDate===current).sort((a,b)=>(a.times[selected]||'').localeCompare(b.times[selected]||''));
   todayRoot.dataset.scheduleState=outsideCoverage?'awaiting-verification':'verified';

@@ -30,3 +30,18 @@ Mashle live-action film and Otaku Vampire’s Love Bite are research candidates,
 ## Measurement
 
 Compare query/page performance in Search Console after a complete post-publication window is available; compare clicks, impressions and CTR with similar periods. Small samples and changing news demand can obscure the effect of edits. No ranking or traffic increase is promised.
+
+## Second optimization pass
+
+The following existing URLs were expanded and their metadata refreshed without changing original publication dates or paths:
+
+| Page | Target intent | Added reader value |
+| --- | --- | --- |
+| /articles/demons-crest-release-date | release date, release time, where to watch | Date-specific US/UK/Caribbean time conversions; local-account checklist; expired preview-event wording corrected. |
+| /articles/fledgling-demon-lords-starter-shop | release date, English manga, official teaser | January window clearly distinguished from exact date; localized-name mapping against Kodansha; chapter-one starting point; existing official player retained. |
+| /articles/yumeneko-connect-anime-announcement | release status, cast, manga, where to watch | No year invented; distinction between manga/book dates and anime dates; source-reading advice and premise analysis. |
+| /articles/le-college-noir-season-2-trailer-october-2026 | where to watch season 2, episodes, watch order | Removed expired future-premiere framing; territory table; six-by-fifteen-minute runtime calculation and viewing order. |
+
+Today: a new attempt to retrieve the current official schedule did not establish a complete November 5 regional episode list. The expired coverage state remains visible. Both the rendered HTML notice and its client-side counterpart now provide a direct official release-calendar link.
+
+Validation: all four articles have 1,200–2,000 editorial-body words, valid internal destinations, preserved original publication dates and working official-player markup. No new articles were published in this pass.
