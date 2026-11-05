@@ -1,7 +1,7 @@
 {
-  "articles": 132,
+  "articles": 133,
   "changed": 0,
-  "standardized": 132,
+  "standardized": 133,
   "unresolved": [],
   "records": [
     {
@@ -686,6 +686,12 @@
       "status": "ok",
       "published": "2026-10-20",
       "path": "articles/shangri-la-frontier-season-3-release-date.html",
+      "changed": false
+    },
+    {
+      "status": "ok",
+      "published": "2026-11-05",
+      "path": "articles/spirit-circle-anime-release-date.html",
       "changed": false
     },
     {
