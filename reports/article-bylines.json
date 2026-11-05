@@ -1,6 +1,6 @@
 {
   "articles": 133,
-  "changed": 1,
+  "changed": 0,
   "standardized": 133,
   "unresolved": [],
   "records": [
@@ -302,7 +302,7 @@
       "status": "ok",
       "published": "2026-10-17",
       "path": "articles/granite-waves-anime.html",
-      "changed": true
+      "changed": false
     },
     {
       "status": "ok",
