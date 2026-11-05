@@ -1,6 +1,6 @@
 # Popular News daily refresh
 
-The workflow runs daily at 13:23 UTC (9:23 a.m. in Santo Domingo) and can also be run from Actions. It reads property `559369724` through the Google Analytics Data API and uses the GA4 property's own timezone for the 30 complete days. It commits the verified snapshot and deploys when the homepage cards change. A failed query or invalid ranking leaves the published ranking intact.
+The workflow runs daily at 11:00 UTC (7:00 a.m. in Santo Domingo) and can also be run from Actions. It reads property `559369724` through the Google Analytics Data API and uses the GA4 property's own timezone for the 30 complete days. It commits the verified snapshot and deploys when the homepage cards change. A failed query or invalid ranking leaves the published ranking intact.
 
 ## Connect GitHub to Google Analytics
 
