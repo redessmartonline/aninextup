@@ -70,3 +70,20 @@
   color:var(--purple);
 }
 .genres-page .genre-card-art svg{width:56px;height:56px}
+
+.genres-page .genre-visual-card[hidden],
+.genres-page .genre-load-more[hidden]{display:none!important}
+.genres-page .genre-load-more{
+  display:block;
+  margin:20px auto 0;
+  padding:10px 24px;
+  min-height:44px;
+  border:1px solid var(--line);
+  border-radius:8px;
+  background:var(--panel);
+  color:var(--text);
+  font:inherit;
+  cursor:pointer;
+}
+.genres-page .genre-load-more:hover,
+.genres-page .genre-load-more:focus-visible{border-color:var(--purple)}

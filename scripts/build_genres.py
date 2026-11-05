@@ -4,18 +4,21 @@ import html
 import json
 import re
 from pathlib import Path
+
+from build_latest_news import extract, publication_timestamp
+from editorial_dates import article_metadata
 ROOT = Path(__file__).resolve().parents[1]
 GENRES = [
- ('action','Action','Battles, high stakes and fast-moving stories.',['sakamoto-days-season-2','black-clover-season-2','one-punch-man-season-3-part-2-january-2027']),
- ('romance','Romance','Relationships, romantic comedy and emotional connections.',['blue-box-season-2','my-happy-marriage-special-episodes','the-moon-on-a-rainy-night-anime']),
- ('fantasy','Fantasy','Magic, imagined worlds and extraordinary journeys.',['frieren-season-3-release-date','delicious-in-dungeon-season-2-release-date','witch-on-the-holy-night-movie']),
- ('isekai','Isekai','Stories of reincarnation or travel to another world.',['ascendance-of-a-bookworm-part-4','reincarnated-as-a-sword-season-2-english-dub-release-date','sasaki-and-peeps-season-2']),
- ('comedy','Comedy','Comic misunderstandings, playful characters and absurd situations.',['bocchi-the-rock-starry-footprints-movie','ranma-season-3','mashle-season-3-release-date']),
- ('sci-fi','Sci-Fi','Future societies, technology, space and giant robots.',['cyberpunk-edgerunners-2','mobile-suit-gundam-seed-freedom-zero-release-date','cosmoship-yamato-root-2199']),
- ('adventure','Adventure','Journeys, discoveries and new horizons.',['where-to-watch-one-piece','pokemon-horizons-season-4-wonders-ahead','made-in-abyss-awakening-mystery-release-date']),
- ('mystery','Mystery','Secrets, investigations and stories built around unanswered questions.',['apothecary-diaries-season-3','detective-is-already-dead-season-2','red-riding-hood-detective-story']),
- ('horror','Horror','Unsettling mysteries, supernatural danger and darker themes.',['horror-collector-release-date','le-college-noir-season-2-trailer-october-2026','in-a-world-full-of-zombies-january-2027']),
- ('slice-of-life','Slice of Life','Everyday experiences, friendships and quieter character stories.',['hirayasumi-anime-release-date','bocchi-the-rock-starry-footprints-movie','chitose-ramune-bottle-cour-2'])
+ ('action','Action','Battles, high stakes and fast-moving stories.'),
+ ('romance','Romance','Relationships, romantic comedy and emotional connections.'),
+ ('fantasy','Fantasy','Magic, imagined worlds and extraordinary journeys.'),
+ ('isekai','Isekai','Stories of reincarnation or travel to another world.'),
+ ('comedy','Comedy','Comic misunderstandings, playful characters and absurd situations.'),
+ ('sci-fi','Sci-Fi','Future societies, technology, space and giant robots.'),
+ ('adventure','Adventure','Journeys, discoveries and new horizons.'),
+ ('mystery','Mystery','Secrets, investigations and stories built around unanswered questions.'),
+ ('horror','Horror','Unsettling mysteries, supernatural danger and darker themes.'),
+ ('slice-of-life','Slice of Life','Everyday experiences, friendships and quieter character stories.')
 ]
 
 def article_cover(source, slug):
@@ -53,20 +56,67 @@ def beginner_cards():
     ))
 
 
+def articles_by_genre():
+    """Combine the editorial tags for older articles with explicit article metadata."""
+    tags = json.loads((ROOT / 'editorial/genre-tags.json').read_text())
+    grouped = {key: [] for key, _, _ in GENRES}
+    aliases = {'science fiction': 'sci-fi', 'scifi': 'sci-fi'}
+    for path in sorted((ROOT / 'articles').glob('*.html')):
+        source = path.read_text(encoding='utf-8')
+        labels = list(tags.get(path.stem, []))
+        labels.extend(html.unescape(tag) for tag in re.findall(
+            r'<meta\s+property="article:tag"\s+content="([^"]+)"', source, re.I
+        ))
+        for entry in article_metadata(source):
+            genres = entry.get('genre', [])
+            labels.extend(genres if isinstance(genres, list) else [genres])
+        keys = set()
+        for label in labels:
+            if isinstance(label, str):
+                label = label.strip().lower()
+                keys.add(aliases.get(label, label.replace(' ', '-')))
+        keys.intersection_update(grouped)
+        if not keys:
+            continue
+        article = extract(path)
+        if not article:
+            continue
+        article['original_timestamp'] = publication_timestamp(path)
+        image = article['image'].removeprefix('https://aninextup.com')
+        if not image.startswith('/assets/') or not (ROOT / image.lstrip('/')).is_file():
+            image = '/assets/images/anime-image-fallback.svg'
+        article['image'] = image
+        for key in keys:
+            grouped[key].append(article)
+    for articles in grouped.values():
+        articles.sort(key=lambda item: (item['published'], item['original_timestamp'], item['article']),
+                      reverse=True)
+    return grouped
+
+
+def article_card(article):
+    image = html.escape(article['image'], quote=True)
+    media = f'<img src="{image}" alt="" width="640" height="360" loading="lazy" decoding="async">'
+    return guide_card('/' + article['article'], article['title'], article['description'],
+                      'READ GUIDE →', media)
+
+
 def build():
     home = (ROOT/'index.html').read_text()
     cards=[]
     sections=[]
-    for key,label,description,slugs in GENRES:
-        links=[]
-        for slug in slugs:
-            source=(ROOT/'articles'/f'{slug}.html').read_text()
-            match=re.search(r'<h1[^>]*>(.*?)</h1>',source,re.S)
-            title=html.unescape(re.sub('<[^>]+>','',match[1])).strip()
-            desc=re.search(r'<meta\s+name="description"\s+content="([^"]+)"',source)
-            summary=html.unescape(desc[1]) if desc else 'Read our release and viewing guide.'
-            links.append(guide_card(f'/articles/{slug}', title, summary, 'READ GUIDE →', article_cover(source, slug)))
-        sections.append(f'<section class="genre-section"{' hidden' if key != 'action' else ''} id="{key}" aria-labelledby="genre-{key}"><div class="section-head"><div><h2 id="genre-{key}">{label} Anime</h2><p>{description}</p></div><a href="#genre-index">ALL GENRES ↑</a></div><div class="genre-guides">'+''.join(links)+'</div></section>')
+    grouped = articles_by_genre()
+    for key, label, description in GENRES:
+        links = [article_card(article) for article in grouped[key]]
+        more = ('<button type="button" class="genre-load-more" hidden>Load more</button>'
+                if len(links) > 9 else '')
+        visibility = '' if key == 'action' else ' hidden'
+        sections.append(
+            f'<section class="genre-section"{visibility} id="{key}" aria-labelledby="genre-{key}">'
+            f'<div class="section-head"><div><h2 id="genre-{key}">{label} Anime</h2>'
+            f'<p>{description}</p></div><a href="#genre-index">ALL GENRES ↑</a></div>'
+            '<div class="genre-guides">' + ''.join(links) + '</div>' + more + '</section>'
+        )
         if len(cards)<6:
             cards.append(f'<a class="genre-tile" href="/genres#{key}"><h3>{label}</h3><p>{description}</p><span>EXPLORE →</span></a>')
     block='<section class="home-genres" aria-labelledby="home-genres-title"><div class="section-head"><div><span class="kicker">START HERE</span><h2 id="home-genres-title">Find Your Next Anime</h2><p>Explore anime by genre, then open a release or viewing guide.</p></div><a href="/genres">EXPLORE ALL GENRES →</a></div><div class="genre-tiles">'+''.join(cards)+'</div><a class="genre-beginner" href="/genres#beginners"><div><h3>New to anime?</h3><p>Find a starting point by story, mood and viewing order.</p></div><span>BEGINNER’S GUIDE →</span></a></section>'
@@ -88,10 +138,10 @@ def build():
     header=re.sub(r' class="active"','',header)
     footer=re.search(r'<footer>.*?</footer>',template,re.S)[0]
     scripts=''.join(re.findall(r'<script[^>]+src="/assets/(?:mobile-menu|article-search)[^"]*"[^>]*></script>',template))
-    anchors=''.join(f'<a href="#{key}">{label}</a>' for key,label,_,_ in GENRES)
+    anchors=''.join(f'<a href="#{key}">{label}</a>' for key,label,_ in GENRES)
     beginner='<section class="genre-section" id="beginners" hidden><span class="kicker">NEW TO ANIME?</span><h2>Choose Your First Anime Guide</h2><p>Start with the kind of story you already enjoy. Romance can focus on relationships; adventure follows a journey; slice of life explores everyday experiences. Genres overlap, so a title may appear in more than one section.</p><p>These links lead to release news and viewing guides, rather than a list of standalone first seasons. For a sequel or film, check the earlier entries before watching. A confirmed Japanese release date does not automatically mean streaming is available in your country.</p><div class="genre-guides">'+beginner_cards()+'</div></section>'
     schema={'@context':'https://schema.org','@type':'CollectionPage','name':'Anime Genres','url':'https://aninextup.com/genres','description':desc}
-    page=head+'<body>'+header+'<main class="genres-page"><section class="genre-header"><span class="kicker">ANIME DISCOVERY</span><h1>Browse Anime by Genre</h1><p>Choose a genre. Explore release news and viewing guides.</p><nav class="genre-index" id="genre-index" aria-label="Browse anime genres">'+anchors+'</nav><div class="genre-starter-link"><span>New to anime? Find your starting point.</span><a href="#beginners">ANIME FOR BEGINNERS →</a></div></section>'+''.join(sections)+beginner+'</main>'+footer+scripts+'<script defer src="/assets/genres-ui.js?v=20261105a"></script><noscript><style>.genres-page .genre-section[hidden]{display:block!important}</style></noscript><script type="application/ld+json">'+json.dumps(schema)+'</script></body></html>'
+    page=head+'<body>'+header+'<main class="genres-page"><section class="genre-header"><span class="kicker">ANIME DISCOVERY</span><h1>Browse Anime by Genre</h1><p>Choose a genre. Explore release news and viewing guides.</p><nav class="genre-index" id="genre-index" aria-label="Browse anime genres">'+anchors+'</nav><div class="genre-starter-link"><span>New to anime? Find your starting point.</span><a href="#beginners">ANIME FOR BEGINNERS →</a></div></section>'+''.join(sections)+beginner+'</main>'+footer+scripts+'<script defer src="/assets/genres-ui.js?v=20261105b"></script><noscript><style>.genres-page .genre-section[hidden]{display:block!important}</style></noscript><script type="application/ld+json">'+json.dumps(schema)+'</script></body></html>'
     (ROOT/'genres.html').write_text(page)
     # Render navigation at build time, including articles created by the publishing pipeline.
     for path in [*ROOT.glob('*.html'),*(ROOT/'articles').glob('*.html')]:
@@ -103,8 +153,8 @@ def build():
             return re.sub(r'(<a\b[^>]*href="[^\"]*where-to-watch(?:\.html)?"[^>]*>.*?</a>)',lambda x:x[1]+f'<a{active} href="/genres">GENRES</a>',section,count=1,flags=re.S)
         text=re.sub(r'<header class="site-header">.*?</header>',nav,text,flags=re.S)
         if '<header class="site-header">' in text and '/assets/genres.css' not in text:
-            text=text.replace('</head>','<link rel="stylesheet" href="/assets/genres.css?v=20261105e"></head>',1)
-        text=re.sub(r'(/assets/genres\.css)(?:\?[^" ]*)?',r'\1?v=20261105e',text)
+            text=text.replace('</head>','<link rel="stylesheet" href="/assets/genres.css?v=20261105f"></head>',1)
+        text=re.sub(r'(/assets/genres\.css)(?:\?[^" ]*)?',r'\1?v=20261105f',text)
         if text!=path.read_text():path.write_text(text)
     print('Built Genres directory, homepage discovery and static site navigation.')
 
