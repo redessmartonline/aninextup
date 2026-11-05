@@ -189,7 +189,7 @@ def build():
         text = re.sub(r'<header class="site-header">.*?</header>', nav, original, flags=re.S)
         if '<header class="site-header">' in text and '/assets/genres.css' not in text:
             text = text.replace('</head>', '<link rel="stylesheet" href="/assets/genres.css"></head>', 1)
-        text = re.sub(r'(/assets/genres\.css)(?:\?[^" ]*)?', r'\1?v=20261105h', text)
+        text = re.sub(r'(/assets/genres\.css)(?:\?[^" ]*)?', r'\1?v=20261105i', text)
         if 'class="nav-category-item"' in text:
             if '/assets/genres-menu.js' not in text:
                 text = text.replace('</body>', '<script defer src="/assets/genres-menu.js"></script></body>', 1)
