@@ -1,6 +1,6 @@
 {
-  "count": 244,
-  "last_run_count": 0,
+  "count": 245,
+  "last_run_count": 7,
   "failed_count": 0,
   "failed": [],
   "images": [
@@ -323,6 +323,11 @@
       "source": "https://aninextup.com/assets/images/news/rakuen-tsuihou-kokoro-no-resonance.webp",
       "local": "/assets/images/news/rakuen-tsuihou-kokoro-no-resonance.webp",
       "evidence_commit": "66961474da6bcab2b88115797434266294086059"
+    },
+    {
+      "source": "https://aninextup.com/assets/images/news/spirit-circle-anime-release-date.webp",
+      "local": "/assets/images/news/spirit-circle-anime-release-date.webp",
+      "download_url": "https://aninextup.com/assets/images/news/spirit-circle-anime-release-date.webp"
     },
     {
       "source": "https://aninextup.com/assets/images/news/sss-class-revival-hunter-anime-january-2027-official.webp",
