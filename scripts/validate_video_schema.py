@@ -78,6 +78,7 @@ class TrailerMarkup(HTMLParser):
                 self.active_player['button'] = True
             if tag == 'img' and attrs.get('src'):
                 self.active_player['image'] = True
+                self.active_player['imageSrc'] = attrs['src']
             if 'trailer-overlay' in attrs.get('class', '').split():
                 self.active_player['overlay'] = True
 

@@ -55,3 +55,9 @@ A generic site placeholder is **not** a publishable anime image. Before an artic
 6. When a publisher explicitly authorizes publication, report any missing public-browser verification truthfully. Mobile visual inspection is conditional on the browser tooling exposing device-width emulation; no other image verification may be skipped.
 
 The generic fallback may remain an emergency runtime safeguard for unexpected network errors, but it must **never** be configured as the primary editorial artwork.
+
+### Production media check
+
+For a new or substantively revised article, add `editorial/reviews/<article-slug>.json` before publication. Record the search intent, keyword, review date, official source, artwork credit, direct image URLs, local asset paths and SHA-256 hashes. Record the trailer as `available` with matching player metadata, thumbnail and a direct fallback link, or as `not-available` with the official source and reason. The review should also document word count and any limits of visual and playback testing.
+
+Run `python scripts/check_publication_media.py articles/<article-slug>.html` to validate a draft explicitly. The production workflow checks articles added or substantively revised since the media gate baseline before uploading the site. The automated check verifies the review record and the shipped markup and bytes. Editorial review still needs to establish that a source is official and that the visual depicts the right anime.

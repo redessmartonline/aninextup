@@ -1,0 +1,44 @@
+{
+  "intent": "Find the Season 3 premiere window, streaming status and how to catch up.",
+  "keyword": "the dangers in my heart season 3 release date",
+  "secondaryQuestions": [
+    "Where will it stream?",
+    "What does the teaser show?",
+    "Do I need to watch the movie?"
+  ],
+  "editorialWords": 1256,
+  "verifiedOn": "2026-11-05",
+  "sources": [
+    "https://bokuyaba-anime.com/news/detail/?id=1137059",
+    "https://bokuyaba-anime.com/",
+    "https://bokuyaba-anime.com/onair/",
+    "https://shin-ei-animation.jp/works/movie_bokuyaba/",
+    "https://sevenseasentertainment.com/series/the-dangers-in-my-heart/"
+  ],
+  "limits": [
+    "April 2027 applies to Japanese television. Exact day and international streaming are pending."
+  ],
+  "cover": {
+    "path": "/assets/images/covers/bokuyaba-season-3-official.webp",
+    "imageUrl": "https://bokuyaba-anime.com/assets/img/top/3rd/kv.jpg",
+    "sha256": "ee2ec33c58f8f31cbc92b2fd00f048eb31f612726f0410668a5102d1d3891f18",
+    "sourceUrl": "https://bokuyaba-anime.com/news/detail/?id=1137059",
+    "credit": "© Norio Sakurai (Akita Shoten) / BokuYaba Production Committee",
+    "originalDimensions": [
+      1500,
+      2040
+    ],
+    "verification": "Decoded official key visual from the Season 3 section of the anime website and visually checked the characters and swing scene."
+  },
+  "video": {
+    "path": "/assets/images/covers/bokuyaba-season-3-teaser.webp",
+    "imageUrl": "https://i.ytimg.com/vi/_D0hm_akpFw/maxresdefault.jpg",
+    "sha256": "78e6891a6be481cac859235f09022df3ed17d8f355d41dc8a75174dc21c07db0",
+    "status": "available",
+    "sourceUrl": "https://bokuyaba-anime.com/news/detail/?id=1137059",
+    "youtubeId": "_D0hm_akpFw",
+    "channel": "TV Asahi Animation",
+    "uploadDate": "2026-11-05T07:00:19-08:00",
+    "verification": "ID matched production announcement, YouTube oEmbed and original upload. YouTube returned playability status OK; full playback not tested."
+  }
+}

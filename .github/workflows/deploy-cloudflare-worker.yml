@@ -17,6 +17,11 @@ on:
       - "tests/test_search_index.py"
       - "scripts/build_watch_catalog.js"
       - "scripts/build_genres.py"
+      - "scripts/check_publication_media.py"
+      - "scripts/validate_publication.py"
+      - "scripts/validate_video_schema.py"
+      - "tests/test_publication_media.py"
+      - "editorial/reviews/**"
       - "scripts/prerender_discovery.js"
       - "editorial/genre-tags.json"
       - "scripts/build_calendar.js"
@@ -51,6 +56,11 @@ jobs:
         with:
           ref: main
           fetch-depth: 0
+
+      - name: Enforce editorial media review before deployment
+        run: |
+          python -m unittest discover -s tests -p test_publication_media.py
+          python scripts/check_publication_media.py
 
       - name: Check Cloudflare deployment secrets
         shell: bash
