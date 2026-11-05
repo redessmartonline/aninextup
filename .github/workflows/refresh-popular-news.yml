@@ -1,0 +1,77 @@
+name: Refresh Popular News from GA4
+
+on:
+  schedule:
+    - cron: '23 13 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  id-token: write
+  actions: write
+
+concurrency:
+  group: aninextup-popular-news
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    env:
+      GA4_WIF_PROVIDER: ${{ vars.GA4_WIF_PROVIDER }}
+      GA4_SERVICE_ACCOUNT: ${{ vars.GA4_SERVICE_ACCOUNT }}
+    steps:
+      - name: Check GA4 configuration
+        id: config
+        shell: bash
+        run: |
+          if [[ -z "$GA4_WIF_PROVIDER" || -z "$GA4_SERVICE_ACCOUNT" ]]; then
+            echo "::warning::Popular News is waiting for GA4_WIF_PROVIDER and GA4_SERVICE_ACCOUNT. Existing ranking preserved."
+            echo "configured=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "configured=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v6
+        if: steps.config.outputs.configured == 'true'
+
+      - name: Get a read-only GA4 access token
+        if: steps.config.outputs.configured == 'true'
+        id: auth
+        uses: google-github-actions/auth@v3
+        with:
+          workload_identity_provider: ${{ env.GA4_WIF_PROVIDER }}
+          service_account: ${{ env.GA4_SERVICE_ACCOUNT }}
+          token_format: access_token
+          access_token_scopes: https://www.googleapis.com/auth/analytics.readonly
+          create_credentials_file: false
+
+      - name: Validate report and render ranking
+        if: steps.config.outputs.configured == 'true'
+        env:
+          GA4_ACCESS_TOKEN: ${{ steps.auth.outputs.access_token }}
+        run: python scripts/refresh_popular_news.py
+
+      - name: Save verified snapshot and deploy changed cards
+        if: steps.config.outputs.configured == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          deploy=false
+          if ! git diff --quiet -- index.html; then deploy=true; fi
+          # A rerun can recover a failed dispatch after a previous push succeeded.
+          if [[ "$GITHUB_RUN_ATTEMPT" -gt 1 ]]; then deploy=true; fi
+          git add assets/popular-news.json index.html
+          if ! git diff --cached --quiet; then
+            git -c user.name="github-actions[bot]" \
+              -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+              commit -m "Refresh verified Popular News GA4 snapshot"
+            git push origin HEAD:main
+          fi
+          if [[ "$deploy" == true ]]; then
+            gh workflow run deploy-cloudflare-worker.yml --ref main
+          fi

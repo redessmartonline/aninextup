@@ -2,24 +2,29 @@
   "source": "GA4",
   "property": "559369724",
   "metric": "screen_page_views",
-  "dateFrom": "2026-09-29",
-  "dateTo": "2026-10-28",
-  "checkedAt": "2026-10-29",
+  "dateFrom": "2026-10-06",
+  "dateTo": "2026-11-04",
+  "checkedAt": "2026-11-05",
+  "totalRows": 194,
+  "limitations": [
+    "GA4 page views recorded under consent-based analytics; not all readership",
+    "Property timezone not exposed by this export; complete dates selected using America/Santo_Domingo"
+  ],
   "rows": [
     {
       "hostname": "aninextup.com",
-      "page_path": "/articles/prisma-illya-finale-anime-2027",
-      "screen_page_views": 55
+      "page_path": "/articles/granite-waves-anime",
+      "screen_page_views": 56
     },
     {
       "hostname": "aninextup.com",
-      "page_path": "/articles/granite-waves-anime",
-      "screen_page_views": 34
+      "page_path": "/articles/prisma-illya-finale-anime-2027",
+      "screen_page_views": 56
     },
     {
       "hostname": "aninextup.com",
       "page_path": "/articles/one-piece-elbaph-arc-english-dub-october-2026",
-      "screen_page_views": 29
+      "screen_page_views": 35
     },
     {
       "hostname": "aninextup.com",
@@ -43,6 +48,16 @@
     },
     {
       "hostname": "aninextup.com",
+      "page_path": "/articles/anime-releasing-november-2026",
+      "screen_page_views": 20
+    },
+    {
+      "hostname": "aninextup.com",
+      "page_path": "/articles/bass-x-machina-release-date",
+      "screen_page_views": 18
+    },
+    {
+      "hostname": "aninextup.com",
       "page_path": "/articles/the-boxer-anime-announcement",
       "screen_page_views": 18
     },
@@ -63,13 +78,13 @@
     },
     {
       "hostname": "aninextup.com",
-      "page_path": "/articles/anime-releasing-november-2026",
+      "page_path": "/articles/demons-crest-release-date",
       "screen_page_views": 14
     },
     {
       "hostname": "aninextup.com",
-      "page_path": "/articles/bass-x-machina-release-date",
-      "screen_page_views": 14
+      "page_path": "/articles/black-clover-season-2",
+      "screen_page_views": 13
     },
     {
       "hostname": "aninextup.com",
@@ -78,7 +93,12 @@
     },
     {
       "hostname": "aninextup.com",
-      "page_path": "/articles/black-clover-season-2",
+      "page_path": "/articles/anime-releasing-december-2026",
+      "screen_page_views": 12
+    },
+    {
+      "hostname": "aninextup.com",
+      "page_path": "/articles/fall-2026-anime-calendar",
       "screen_page_views": 12
     },
     {
@@ -88,22 +108,32 @@
     },
     {
       "hostname": "aninextup.com",
-      "page_path": "/articles/fall-2026-anime-calendar",
-      "screen_page_views": 11
-    },
-    {
-      "hostname": "aninextup.com",
       "page_path": "/articles/naruto-shadow-rising-manga",
-      "screen_page_views": 11
+      "screen_page_views": 12
     },
     {
       "hostname": "aninextup.com",
       "page_path": "/articles/now-that-we-draw-anime-january-2027",
+      "screen_page_views": 12
+    },
+    {
+      "hostname": "aninextup.com",
+      "page_path": "/articles/where-to-watch-one-piece",
+      "screen_page_views": 12
+    },
+    {
+      "hostname": "editorial-new-anime-releases-20261020-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/prisma-illya-finale-anime-2027",
       "screen_page_views": 11
     },
     {
       "hostname": "aninextup.com",
-      "page_path": "/articles/anime-releasing-december-2026",
+      "page_path": "/articles/apothecary-diaries-season-3",
+      "screen_page_views": 10
+    },
+    {
+      "hostname": "aninextup.com",
+      "page_path": "/articles/made-in-abyss-awakening-mystery-release-date",
       "screen_page_views": 10
     },
     {
@@ -113,7 +143,22 @@
     },
     {
       "hostname": "aninextup.com",
+      "page_path": "/articles/murcielago-anime-january-2027",
+      "screen_page_views": 10
+    },
+    {
+      "hostname": "aninextup.com",
       "page_path": "/articles/sss-class-revival-hunter-anime-january-2027",
+      "screen_page_views": 10
+    },
+    {
+      "hostname": "editorial-otome-survival-depth-20261024-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/otome-heroines-fight-for-survival-anime",
+      "screen_page_views": 10
+    },
+    {
+      "hostname": "editorial-the-boxer-webtoon-context-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/the-boxer-anime-announcement",
       "screen_page_views": 10
     },
     {
@@ -123,7 +168,12 @@
     },
     {
       "hostname": "aninextup.com",
-      "page_path": "/articles/murcielago-anime-january-2027",
+      "page_path": "/articles/jump-festa-2027-schedule-dates-streaming",
+      "screen_page_views": 9
+    },
+    {
+      "hostname": "aninextup.com",
+      "page_path": "/articles/ramparts-of-ice-season-2",
       "screen_page_views": 9
     },
     {
@@ -133,18 +183,33 @@
     },
     {
       "hostname": "aninextup.com",
-      "page_path": "/articles/apothecary-diaries-season-3",
-      "screen_page_views": 8
-    },
-    {
-      "hostname": "aninextup.com",
       "page_path": "/articles/dragon-ball-super-beerus",
       "screen_page_views": 8
     },
     {
       "hostname": "aninextup.com",
-      "page_path": "/articles/jump-festa-2027-schedule-dates-streaming",
+      "page_path": "/articles/eleceed-anime-april-2027-release-date",
       "screen_page_views": 8
+    },
+    {
+      "hostname": "aninextup.com",
+      "page_path": "/articles/no-clipping-my-way-to-supremacy-anime",
+      "screen_page_views": 8
+    },
+    {
+      "hostname": "aninextup.com",
+      "page_path": "/articles/witch-on-the-holy-night-movie",
+      "screen_page_views": 8
+    },
+    {
+      "hostname": "editorial-takopi-oct23-context-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/takopis-original-sin-movie",
+      "screen_page_views": 8
+    },
+    {
+      "hostname": "aninextup.com",
+      "page_path": "/articles/charisma-anime-release-date",
+      "screen_page_views": 7
     },
     {
       "hostname": "aninextup.com",
@@ -153,7 +218,7 @@
     },
     {
       "hostname": "aninextup.com",
-      "page_path": "/articles/eleceed-anime-april-2027-release-date",
+      "page_path": "/articles/firefly-wedding",
       "screen_page_views": 7
     },
     {
@@ -162,13 +227,23 @@
       "screen_page_views": 7
     },
     {
-      "hostname": "aninextup.com",
-      "page_path": "/articles/witch-on-the-holy-night-movie",
+      "hostname": "editorial-chitose-cour2-value-20261024-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/chitose-ramune-bottle-cour-2",
       "screen_page_views": 7
     },
     {
       "hostname": "aninextup.com",
-      "page_path": "/articles/firefly-wedding",
+      "page_path": "/articles/because-i-the-true-saint-was-banished-anime-january-2027",
+      "screen_page_views": 6
+    },
+    {
+      "hostname": "aninextup.com",
+      "page_path": "/articles/bleach-thousand-year-blood-war-graniph-collection-october-2026",
+      "screen_page_views": 6
+    },
+    {
+      "hostname": "aninextup.com",
+      "page_path": "/articles/death-stranding-isolations-anime",
       "screen_page_views": 6
     },
     {
@@ -193,12 +268,12 @@
     },
     {
       "hostname": "aninextup.com",
-      "page_path": "/articles/because-i-the-true-saint-was-banished-anime-january-2027",
-      "screen_page_views": 5
+      "page_path": "/articles/the-one-piece-netflix-february-2027",
+      "screen_page_views": 6
     },
     {
       "hostname": "aninextup.com",
-      "page_path": "/articles/bleach-thousand-year-blood-war-graniph-collection-october-2026",
+      "page_path": "/articles/anime-vs-anime-codes",
       "screen_page_views": 5
     },
     {
@@ -213,12 +288,27 @@
     },
     {
       "hostname": "aninextup.com",
-      "page_path": "/articles/made-in-abyss-awakening-mystery-release-date",
+      "page_path": "/articles/vertex-force-anime-release-date",
       "screen_page_views": 5
     },
     {
-      "hostname": "aninextup.com",
-      "page_path": "/articles/the-one-piece-netflix-february-2027",
+      "hostname": "editorial-apothecary-movie-box-template-20261023-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/apothecary-diaries-movie",
+      "screen_page_views": 5
+    },
+    {
+      "hostname": "editorial-dengeki-daisy-reissue-20261023-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/dengeki-daisy-anime-january-2027-trailer-cast",
+      "screen_page_views": 5
+    },
+    {
+      "hostname": "editorial-maebashi-witches-800-1000-20261025-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/maebashi-witches-emoemories-release-date",
+      "screen_page_views": 5
+    },
+    {
+      "hostname": "editorial-new-anime-releases-20261020-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/because-i-the-true-saint-was-banished-anime-january-2027",
       "screen_page_views": 5
     },
     {
@@ -228,7 +318,22 @@
     },
     {
       "hostname": "aninextup.com",
+      "page_path": "/articles/le-college-noir-season-2-trailer-october-2026",
+      "screen_page_views": 4
+    },
+    {
+      "hostname": "aninextup.com",
       "page_path": "/articles/my-happy-marriage-special-episodes",
+      "screen_page_views": 4
+    },
+    {
+      "hostname": "aninextup.com",
+      "page_path": "/articles/naruto-ninku-anime",
+      "screen_page_views": 4
+    },
+    {
+      "hostname": "aninextup.com",
+      "page_path": "/articles/sekiro-no-defeat-release-date",
       "screen_page_views": 4
     },
     {
@@ -238,7 +343,47 @@
     },
     {
       "hostname": "aninextup.com",
+      "page_path": "/articles/worlds-strongest-witch",
+      "screen_page_views": 4
+    },
+    {
+      "hostname": "editorial-a-certain-dark-item-content-quality-2026102-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/a-certain-dark-item-release-date",
+      "screen_page_views": 4
+    },
+    {
+      "hostname": "editorial-apothecary-season-3-800-1000-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/apothecary-diaries-season-3",
+      "screen_page_views": 4
+    },
+    {
+      "hostname": "editorial-firefly-wedding-800-1000-20261023-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/firefly-wedding",
+      "screen_page_views": 4
+    },
+    {
+      "hostname": "editorial-im-looking-for-zombie-800-1000-20261025-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/im-looking-for-a-zombie",
+      "screen_page_views": 4
+    },
+    {
+      "hostname": "editorial-the-boxer-webtoon-context-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/a-certain-dark-item-release-date",
+      "screen_page_views": 4
+    },
+    {
+      "hostname": "aninextup.com",
       "page_path": "/articles/akane-banashi-season-2-release-date",
+      "screen_page_views": 3
+    },
+    {
+      "hostname": "aninextup.com",
+      "page_path": "/articles/anime-expeditions-codes",
+      "screen_page_views": 3
+    },
+    {
+      "hostname": "aninextup.com",
+      "page_path": "/articles/anime-mysterious-codes-october-2026",
       "screen_page_views": 3
     },
     {
@@ -258,17 +403,22 @@
     },
     {
       "hostname": "aninextup.com",
+      "page_path": "/articles/hiragi-san-house-of-vampires-anime",
+      "screen_page_views": 3
+    },
+    {
+      "hostname": "aninextup.com",
+      "page_path": "/articles/iruma-kun-irumafia-edition-release-date",
+      "screen_page_views": 3
+    },
+    {
+      "hostname": "aninextup.com",
       "page_path": "/articles/kagurabachi-anime-world-tour-finale",
       "screen_page_views": 3
     },
     {
       "hostname": "aninextup.com",
       "page_path": "/articles/laid-off-cheat-granting-mage",
-      "screen_page_views": 3
-    },
-    {
-      "hostname": "aninextup.com",
-      "page_path": "/articles/le-college-noir-season-2-trailer-october-2026",
       "screen_page_views": 3
     },
     {
@@ -293,11 +443,6 @@
     },
     {
       "hostname": "aninextup.com",
-      "page_path": "/articles/sekiro-no-defeat-release-date",
-      "screen_page_views": 3
-    },
-    {
-      "hostname": "aninextup.com",
       "page_path": "/articles/suikoden-anime",
       "screen_page_views": 3
     },
@@ -307,23 +452,53 @@
       "screen_page_views": 3
     },
     {
-      "hostname": "aninextup.com",
-      "page_path": "/articles/where-to-watch-one-piece",
+      "hostname": "editorial-dengeki-daisy-800-1000-20261023-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/dengeki-daisy-anime-january-2027-trailer-cast",
       "screen_page_views": 3
     },
     {
-      "hostname": "aninextup.com",
-      "page_path": "/articles/worlds-strongest-witch",
+      "hostname": "editorial-firefly-wedding-live-action-800-1000-202610-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/live-action-firefly-wedding-tv-drama-announced-for-2027-a1ac1e86",
       "screen_page_views": 3
     },
     {
-      "hostname": "aninextup.com",
-      "page_path": "/articles/anime-mysterious-codes-october-2026",
+      "hostname": "editorial-ghost-legends-800-20261023-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/ghost-of-tsushima-legends-anime-2028",
+      "screen_page_views": 3
+    },
+    {
+      "hostname": "editorial-true-saint-800-1000-single-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/because-i-the-true-saint-was-banished-anime-january-2027",
+      "screen_page_views": 3
+    },
+    {
+      "hostname": "6b1730e7-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/cosmoship-yamato-root-2199",
+      "screen_page_views": 2
+    },
+    {
+      "hostname": "737664ef-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/eleceed-anime-april-2027-release-date",
+      "screen_page_views": 2
+    },
+    {
+      "hostname": "a58d22be-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/sss-class-revival-hunter-anime-january-2027",
       "screen_page_views": 2
     },
     {
       "hostname": "aninextup.com",
-      "page_path": "/articles/demons-crest-release-date",
+      "page_path": "/articles/berserk-of-gluttony-season-2",
+      "screen_page_views": 2
+    },
+    {
+      "hostname": "aninextup.com",
+      "page_path": "/articles/bleach-thousand-year-blood-war-the-last-pv-episodes-49-50",
+      "screen_page_views": 2
+    },
+    {
+      "hostname": "aninextup.com",
+      "page_path": "/articles/bocchi-the-rock-starry-footprints-movie",
       "screen_page_views": 2
     },
     {
@@ -333,7 +508,17 @@
     },
     {
       "hostname": "aninextup.com",
+      "page_path": "/articles/glasses-with-a-chance-of-delinquent-anime",
+      "screen_page_views": 2
+    },
+    {
+      "hostname": "aninextup.com",
       "page_path": "/articles/i-lost-my-adventurers-license-anime-january-2027",
+      "screen_page_views": 2
+    },
+    {
+      "hostname": "aninextup.com",
+      "page_path": "/articles/im-looking-for-a-zombie",
       "screen_page_views": 2
     },
     {
@@ -348,17 +533,17 @@
     },
     {
       "hostname": "aninextup.com",
-      "page_path": "/articles/naruto-ninku-anime",
+      "page_path": "/articles/mercedes-and-the-waning-moon-anime",
+      "screen_page_views": 2
+    },
+    {
+      "hostname": "aninextup.com",
+      "page_path": "/articles/nues-exorcist-anime-summer-2027",
       "screen_page_views": 2
     },
     {
       "hostname": "aninextup.com",
       "page_path": "/articles/pokemon-horizons-season-4-wonders-ahead",
-      "screen_page_views": 2
-    },
-    {
-      "hostname": "aninextup.com",
-      "page_path": "/articles/ramparts-of-ice-season-2",
       "screen_page_views": 2
     },
     {
@@ -373,12 +558,22 @@
     },
     {
       "hostname": "aninextup.com",
+      "page_path": "/articles/tank-chair-release-date",
+      "screen_page_views": 2
+    },
+    {
+      "hostname": "aninextup.com",
       "page_path": "/articles/the-fable-season-2-january-2027",
       "screen_page_views": 2
     },
     {
       "hostname": "aninextup.com",
       "page_path": "/articles/the-moon-on-a-rainy-night-anime",
+      "screen_page_views": 2
+    },
+    {
+      "hostname": "aninextup.com",
+      "page_path": "/articles/votoms-gray-witch-part-1",
       "screen_page_views": 2
     },
     {
@@ -392,18 +587,118 @@
       "screen_page_views": 2
     },
     {
+      "hostname": "editorial-aoashi-box-template-20261023-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/aoashi-season-2",
+      "screen_page_views": 2
+    },
+    {
+      "hostname": "editorial-black-clover-s2-800-1000-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/black-clover-season-2",
+      "screen_page_views": 2
+    },
+    {
+      "hostname": "editorial-dreamland-release-guide-20261024-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/dreamland-release-date",
+      "screen_page_views": 2
+    },
+    {
+      "hostname": "editorial-full-clearing-another-world-refresh-2026-10-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/full-clearing-another-world-zero-believers-premiere",
+      "screen_page_views": 2
+    },
+    {
+      "hostname": "editorial-made-in-abyss-batch-october-2026-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/made-in-abyss-awakening-mystery-release-date",
+      "screen_page_views": 2
+    },
+    {
+      "hostname": "editorial-sss-revival-hunter-800-20261023-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/sss-class-revival-hunter-anime-january-2027",
+      "screen_page_views": 2
+    },
+    {
+      "hostname": "editorial-the-boxer-800-1000-words-20261023-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/the-boxer-anime-announcement",
+      "screen_page_views": 2
+    },
+    {
+      "hostname": "editorial-the-one-piece-800-1000-20261026-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/the-one-piece-netflix-february-2027",
+      "screen_page_views": 2
+    },
+    {
+      "hostname": "115e8215-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/cosmoship-yamato-root-2199",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "1a1de249-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/shangri-la-frontier-season-3-release-date",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "22e5bb41-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/im-looking-for-a-zombie",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "282827d4-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/magic-knight-rayearth-2026",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "282827d4-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/vermilion-mask-release-date",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "282827d4-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/worlds-strongest-witch",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "28b3347a-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/made-in-abyss-awakening-mystery-release-date",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "6365e49a-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/made-in-abyss-awakening-mystery-release-date",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "737664ef-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/psyren-release-date",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "737664ef-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/shangri-la-frontier-season-3-release-date",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "960a8872-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/prisma-illya-finale-anime-2027",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "a1c49f63-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/apothecary-diaries-season-3",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "a58d22be-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/ghost-of-tsushima-legends-anime-2028",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "a58d22be-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/red-riding-hood-detective-story",
+      "screen_page_views": 1
+    },
+    {
       "hostname": "aninextup.com",
       "page_path": "/articles/ascendance-of-a-bookworm-part-4",
-      "screen_page_views": 1
-    },
-    {
-      "hostname": "aninextup.com",
-      "page_path": "/articles/berserk-of-gluttony-season-2",
-      "screen_page_views": 1
-    },
-    {
-      "hostname": "aninextup.com",
-      "page_path": "/articles/bleach-thousand-year-blood-war-the-last-pv-episodes-49-50",
       "screen_page_views": 1
     },
     {
@@ -418,17 +713,17 @@
     },
     {
       "hostname": "aninextup.com",
+      "page_path": "/articles/dr-stone-terraforming-anime",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "aninextup.com",
       "page_path": "/articles/haru-to-gen-anime-january-4-2027",
       "screen_page_views": 1
     },
     {
       "hostname": "aninextup.com",
       "page_path": "/articles/iceblade-sorcerer-ii",
-      "screen_page_views": 1
-    },
-    {
-      "hostname": "aninextup.com",
-      "page_path": "/articles/im-looking-for-a-zombie",
       "screen_page_views": 1
     },
     {
@@ -453,7 +748,17 @@
     },
     {
       "hostname": "aninextup.com",
+      "page_path": "/articles/medaka-kuroiwa-season-2-release-date",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "aninextup.com",
       "page_path": "/articles/mobile-suit-gundam-seed-freedom-zero-release-date",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "aninextup.com",
+      "page_path": "/articles/ms-isshiki-wants-to-know-about-love",
       "screen_page_views": 1
     },
     {
@@ -464,11 +769,6 @@
     {
       "hostname": "aninextup.com",
       "page_path": "/articles/noa-is-my-senior-anime-2027",
-      "screen_page_views": 1
-    },
-    {
-      "hostname": "aninextup.com",
-      "page_path": "/articles/nues-exorcist-anime-summer-2027",
       "screen_page_views": 1
     },
     {
@@ -503,23 +803,183 @@
     },
     {
       "hostname": "aninextup.com",
-      "page_path": "/articles/tank-chair-release-date",
-      "screen_page_views": 1
-    },
-    {
-      "hostname": "aninextup.com",
       "page_path": "/articles/vermilion-mask-release-date",
       "screen_page_views": 1
     },
     {
-      "hostname": "aninextup.com",
-      "page_path": "/articles/votoms-gray-witch-part-1",
+      "hostname": "aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/murcielago-anime-january-2027",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "c04f9330-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/murcielago-anime-january-2027",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "c04f9330-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/the-fable-season-2-january-2027",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "c04f9330-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/vermilion-mask-release-date",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "c07a37fb-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/hello-witch-love-potion-release-date",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "c07a37fb-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/magic-knight-rayearth-2026",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "c07a37fb-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/worlds-strongest-witch",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "editorial-ace-diamond-box-template-20261023-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/ace-of-diamond-second-season",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "editorial-aikatsu-stars-800-1000-20261025-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/aikatsu-stars-hoshiboshi-no-progress-release-date",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "editorial-apothecary-movie-box-template-20261023-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/anime-releasing-december-2026",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "editorial-apothecary-movie-box-template-20261023-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/apothecary-diaries-season-3",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "editorial-bleach-graniph-800-1000-20261025-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/bleach-thousand-year-blood-war-graniph-collection-october-2026",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "editorial-bleach-last-pv-800-1000-20261025-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/bleach-thousand-year-blood-war-the-last-pv-episodes-49-50",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "editorial-demons-crest-800-1000-october-25-2026-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/demons-crest-release-date",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "editorial-dengeki-daisy-final-20261023-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/dengeki-daisy-anime-january-2027-trailer-cast",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "editorial-firefly-wedding-live-action-800-1000-202610-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/apothecary-diaries-movie",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "editorial-firefly-wedding-live-action-800-1000-202610-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/my-happy-marriage-special-episodes",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "editorial-ghost-legends-800-20261023-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/cyberpunk-edgerunners-2",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "editorial-ghost-legends-800-20261023-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/kagurabachi-anime-world-tour-finale",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "editorial-grotesqqque-800-1000-october-25-2026-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/grotesqqque-release-date",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "editorial-inherit-the-winds-800-1000-20261025-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/inherit-the-winds-anime-january-2027",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "editorial-murcielago-800-1000-20261025-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/murcielago-anime-january-2027",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "editorial-naruto-shadow-rising-800-1000-20261026-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/naruto-shadow-rising-manga",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "editorial-nia-liston-800-1000-20261026-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/nia-liston-release-date",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "editorial-november-guide-800-1000-20261025-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/anime-releasing-november-2026",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "editorial-nues-exorcist-800-1000-20261025-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/nues-exorcist-anime-summer-2027",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "editorial-one-punch-man-part-2-reviewed-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/one-punch-man-season-3-part-2-january-2027",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "editorial-prisma-illya-finale-800-1000-single-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/anime-releasing-january-2027",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "editorial-prisma-illya-finale-800-1000-single-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/love-live-hasunosora-release-date",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "editorial-prisma-illya-finale-800-1000-single-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/prisma-illya-finale-anime-2027",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "editorial-sekiro-no-defeat-jan-2027-expanded-20261025-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/sekiro-no-defeat-release-date",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "editorial-shangri-la-frontier-season-3-batch-october-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/shangri-la-frontier-season-3-release-date",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "editorial-takopi-oct23-context-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/anime-releasing-november-2026",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "editorial-takopi-oct23-context-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/walking-home-with-you-anime",
+      "screen_page_views": 1
+    },
+    {
+      "hostname": "editorial-yamato-root-source-review-20261024-aninextup.redessmartonline.workers.dev",
+      "page_path": "/articles/cosmoship-yamato-root-2199",
       "screen_page_views": 1
     }
-  ],
-  "totalRows": 102,
-  "limitations": [
-    "GA4 page views recorded under consent-based analytics; not all readership",
-    "Property timezone not exposed; complete dates selected using America/Santo_Domingo"
   ]
 }
