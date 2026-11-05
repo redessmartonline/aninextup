@@ -143,18 +143,36 @@ def build():
     schema={'@context':'https://schema.org','@type':'CollectionPage','name':'Anime Genres','url':'https://aninextup.com/genres','description':desc}
     page=head+'<body>'+header+'<main class="genres-page"><section class="genre-header"><span class="kicker">ANIME DISCOVERY</span><h1>Browse Anime by Genre</h1><p>Choose a genre. Explore release news and viewing guides.</p><nav class="genre-index" id="genre-index" aria-label="Browse anime genres">'+anchors+'</nav><div class="genre-starter-link"><span>New to anime? Find your starting point.</span><a href="#beginners">ANIME FOR BEGINNERS →</a></div></section>'+''.join(sections)+beginner+'</main>'+footer+scripts+'<script defer src="/assets/genres-ui.js?v=20261105b"></script><noscript><style>.genres-page .genre-section[hidden]{display:block!important}</style></noscript><script type="application/ld+json">'+json.dumps(schema)+'</script></body></html>'
     (ROOT/'genres.html').write_text(page)
+    genre_menu_links = ''.join(
+        f'<a href="/genres#{key}">{label}</a>' for key, label, _ in GENRES
+    )
     # Render navigation at build time, including articles created by the publishing pipeline.
     for path in [*ROOT.glob('*.html'),*(ROOT/'articles').glob('*.html')]:
         text=path.read_text()
         def nav(m):
-            section=m[0]
+            section = re.sub(
+                r'<div class="nav-genres-item">.*?</details></div>', '', m[0], flags=re.S
+            )
             section=re.sub(r'<a[^>]*href="/genres"[^>]*>GENRES</a>','',section)
             active=' class="active" aria-current="page"' if path.name=='genres.html' else ''
-            return re.sub(r'(<a\b[^>]*href="[^\"]*where-to-watch(?:\.html)?"[^>]*>.*?</a>)',lambda x:x[1]+f'<a{active} href="/genres">GENRES</a>',section,count=1,flags=re.S)
+            dropdown = (
+                f'<div class="nav-genres-item"><a{active} href="/genres">GENRES</a>'
+                '<details class="nav-genres-disclosure"><summary aria-label="Browse genre categories">'
+                '<svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true">'
+                '<path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" '
+                'stroke-linecap="round" stroke-linejoin="round"/></svg></summary>'
+                f'<div class="nav-genres-menu">{genre_menu_links}</div></details></div>'
+            )
+            return re.sub(
+                r'(<a\b[^>]*href="[^"]*where-to-watch(?:\.html)?"[^>]*>.*?</a>)',
+                lambda link: link[1] + dropdown, section, count=1, flags=re.S
+            )
         text=re.sub(r'<header class="site-header">.*?</header>',nav,text,flags=re.S)
         if '<header class="site-header">' in text and '/assets/genres.css' not in text:
-            text=text.replace('</head>','<link rel="stylesheet" href="/assets/genres.css?v=20261105f"></head>',1)
-        text=re.sub(r'(/assets/genres\.css)(?:\?[^" ]*)?',r'\1?v=20261105f',text)
+            text=text.replace('</head>','<link rel="stylesheet" href="/assets/genres.css?v=20261105g"></head>',1)
+        text=re.sub(r'(/assets/genres\.css)(?:\?[^" ]*)?',r'\1?v=20261105g',text)
+        if 'class="nav-genres-item"' in text and '/assets/genres-menu.js' not in text:
+            text = text.replace('</body>', '<script defer src="/assets/genres-menu.js"></script></body>', 1)
         if text!=path.read_text():path.write_text(text)
     print('Built Genres directory, homepage discovery and static site navigation.')
 
