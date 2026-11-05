@@ -22,7 +22,15 @@ const date=a=>a.date?new Date(a.date+'T12:00:00Z').toLocaleDateString('en-US',{t
 function card(a,full=false){
   return `<a class="${full?'card story':'mini'} data-card visual-card" href="${escape(a.article)}">${a.image?`<img src="${escape(a.image)}" alt="${escape(a.title)}" loading="lazy">`:''}<div class="visual-body"><b>${escape(date(a))}</b><small class="status">${state(a)}</small><h3>${escape(a.title)}</h3><span>${escape(a.platform)}</span>${full?'<span class="more">READ GUIDE →</span>':''}</div></a>`;
 }
-function guide(g){return `<a class="card story visual-card" href="${escape(g.article)}">${g.image?`<img src="${escape(g.image)}" alt="${escape(g.title)}" loading="lazy">`:''}<div class="visual-body"><span class="tag">${escape(g.tag||'OFFICIAL NEWS')}</span><h3>${escape(g.title)}</h3>${g.description?`<p>${escape(g.description)}</p>`:''}<span class="more">READ UPDATE →</span></div></a>`;}
+const articleDescriptions = new Map(
+  require('../assets/latest-news.json').items
+    .filter(item => item.description?.trim())
+    .map(item => [item.article, item.description.trim()])
+);
+function guide(g) {
+  const description = g.description?.trim() || articleDescriptions.get(g.article);
+  return `<a class="card story visual-card" href="${escape(g.article)}">${g.image?`<img src="${escape(g.image)}" alt="${escape(g.title)}" loading="lazy">`:''}<div class="visual-body"><span class="tag">${escape(g.tag||'OFFICIAL NEWS')}</span><h3>${escape(g.title)}</h3>${description?`<p>${escape(description)}</p>`:''}<span class="more">READ UPDATE →</span></div></a>`;
+}
 // Find matching closing tags, including nested divs, without rewriting the page.
 function fill(html,attribute,render){
   const pattern=new RegExp(`<([a-z][a-z0-9]*)\\b[^>]*\\s${attribute}(?:="([^"]*)")?(?=[\\s>])[^>]*>`,'gi');

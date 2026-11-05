@@ -17,6 +17,7 @@ on:
       - "tests/test_search_index.py"
       - "scripts/build_watch_catalog.js"
       - "scripts/build_genres.py"
+      - "scripts/prerender_discovery.js"
       - "editorial/genre-tags.json"
       - "scripts/build_calendar.js"
       - "tests/calendar-expanded.test.cjs"
