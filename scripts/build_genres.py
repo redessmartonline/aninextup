@@ -101,6 +101,20 @@ def article_card(article):
                       'READ GUIDE →', media)
 
 
+def category_dropdown(name, links, active):
+    route = name.lower()
+    current = ' class="active" aria-current="page"' if active else ''
+    return (
+        f'<div class="nav-category-item" data-category-menu="{route}">'
+        f'<a{current} href="/{route}">{name}</a>'
+        f'<details class="nav-category-disclosure"><summary aria-label="Browse {route} categories">'
+        '<svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true">'
+        '<path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" '
+        'stroke-linecap="round" stroke-linejoin="round"/></svg></summary>'
+        f'<div class="nav-category-menu">{links}</div></details></div>'
+    )
+
+
 def build():
     home = (ROOT/'index.html').read_text()
     cards=[]
@@ -146,34 +160,43 @@ def build():
     genre_menu_links = ''.join(
         f'<a href="/genres#{key}">{label}</a>' for key, label, _ in GENRES
     )
+    news_menu_links = ''.join(
+        f'<a href="/news?category={key}#category-{key}">{label}</a>'
+        for key, label in (
+            ('new-anime', 'New Anime'), ('returning-series', 'Returning Series'),
+            ('trailers-cast', 'Trailers &amp; Cast'), ('release-news', 'Release News'),
+        )
+    )
     # Render navigation at build time, including articles created by the publishing pipeline.
-    for path in [*ROOT.glob('*.html'),*(ROOT/'articles').glob('*.html')]:
-        text=path.read_text()
-        def nav(m):
+    for path in [*ROOT.glob('*.html'), *(ROOT/'articles').glob('*.html')]:
+        original = path.read_text()
+        def nav(match):
             section = re.sub(
-                r'<div class="nav-genres-item">.*?</details></div>', '', m[0], flags=re.S
+                r'<div class="nav-(?:genres|category)-item"[^>]*>(<a[^>]*>[^<]*</a>).*?</details></div>',
+                r'\1', match[0], flags=re.S
             )
-            section=re.sub(r'<a[^>]*href="/genres"[^>]*>GENRES</a>','',section)
-            active=' class="active" aria-current="page"' if path.name=='genres.html' else ''
-            dropdown = (
-                f'<div class="nav-genres-item"><a{active} href="/genres">GENRES</a>'
-                '<details class="nav-genres-disclosure"><summary aria-label="Browse genre categories">'
-                '<svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true">'
-                '<path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" '
-                'stroke-linecap="round" stroke-linejoin="round"/></svg></summary>'
-                f'<div class="nav-genres-menu">{genre_menu_links}</div></details></div>'
+            section = re.sub(r'<a[^>]*href="/genres"[^>]*>GENRES</a>', '', section)
+            genres = category_dropdown('GENRES', genre_menu_links, path.name == 'genres.html')
+            section = re.sub(
+                r'(<a\b[^>]*href="[^"]*where-to-watch(?:\.html)?"[^>]*>.*?</a>)',
+                lambda link: link[1] + genres, section, count=1, flags=re.S
             )
             return re.sub(
-                r'(<a\b[^>]*href="[^"]*where-to-watch(?:\.html)?"[^>]*>.*?</a>)',
-                lambda link: link[1] + dropdown, section, count=1, flags=re.S
+                r'<a\b[^>]*>\s*NEWS\s*</a>',
+                lambda _: category_dropdown('NEWS', news_menu_links, path.name == 'news.html'),
+                section, count=1
             )
-        text=re.sub(r'<header class="site-header">.*?</header>',nav,text,flags=re.S)
+        text = re.sub(r'<header class="site-header">.*?</header>', nav, original, flags=re.S)
         if '<header class="site-header">' in text and '/assets/genres.css' not in text:
-            text=text.replace('</head>','<link rel="stylesheet" href="/assets/genres.css?v=20261105g"></head>',1)
-        text=re.sub(r'(/assets/genres\.css)(?:\?[^" ]*)?',r'\1?v=20261105g',text)
-        if 'class="nav-genres-item"' in text and '/assets/genres-menu.js' not in text:
-            text = text.replace('</body>', '<script defer src="/assets/genres-menu.js"></script></body>', 1)
-        if text!=path.read_text():path.write_text(text)
+            text = text.replace('</head>', '<link rel="stylesheet" href="/assets/genres.css"></head>', 1)
+        text = re.sub(r'(/assets/genres\.css)(?:\?[^" ]*)?', r'\1?v=20261105h', text)
+        if 'class="nav-category-item"' in text:
+            if '/assets/genres-menu.js' not in text:
+                text = text.replace('</body>', '<script defer src="/assets/genres-menu.js"></script></body>', 1)
+            for asset in ('genres-menu', 'mobile-menu'):
+                text = re.sub(rf'(/assets/{asset}\.js)(?:\?[^" ]*)?', r'\1?v=20261105h', text)
+        if text != original:
+            path.write_text(text)
     print('Built Genres directory, homepage discovery and static site navigation.')
 
 if __name__=='__main__':build()

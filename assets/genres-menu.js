@@ -1,29 +1,27 @@
-const genreMenuItem = document.querySelector('.nav-genres-item');
-const genreMenu = genreMenuItem?.querySelector('.nav-genres-disclosure');
-
-if (genreMenu) {
-  const toggle = genreMenu.querySelector('summary');
+for (const item of document.querySelectorAll('[data-category-menu]')) {
+  const menu = item.querySelector('details');
+  const toggle = menu.querySelector('summary');
   const desktop = window.matchMedia('(min-width: 781px) and (hover: hover)');
-  genreMenuItem.addEventListener('pointerenter', event => {
-    if (desktop.matches && event.pointerType === 'mouse') genreMenu.open = true;
+  item.addEventListener('pointerenter', event => {
+    if (desktop.matches && event.pointerType === 'mouse') menu.open = true;
   });
-  genreMenuItem.addEventListener('pointerleave', event => {
+  item.addEventListener('pointerleave', event => {
     if (desktop.matches && event.pointerType === 'mouse' &&
-        !genreMenu.contains(document.activeElement)) genreMenu.open = false;
+        !menu.contains(document.activeElement)) menu.open = false;
   });
-  genreMenuItem.addEventListener('focusout', event => {
-    if (desktop.matches && !genreMenuItem.contains(event.relatedTarget)) genreMenu.open = false;
+  item.addEventListener('focusout', event => {
+    if (desktop.matches && !item.contains(event.relatedTarget)) menu.open = false;
   });
-  genreMenuItem.addEventListener('keydown', event => {
-    if (event.key !== 'Escape' || !genreMenu.open) return;
+  item.addEventListener('keydown', event => {
+    if (event.key !== 'Escape' || !menu.open) return;
     event.stopPropagation();
-    genreMenu.open = false;
+    menu.open = false;
     toggle.focus();
   });
   document.addEventListener('pointerdown', event => {
-    if (!genreMenuItem.contains(event.target)) genreMenu.open = false;
+    if (!item.contains(event.target)) menu.open = false;
   });
-  genreMenu.addEventListener('click', event => {
-    if (event.target.closest('a')) genreMenu.open = false;
+  menu.addEventListener('click', event => {
+    if (event.target.closest('a')) menu.open = false;
   });
 }

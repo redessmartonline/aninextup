@@ -35,5 +35,5 @@ class GenreTests(unittest.TestCase):
             source=path.read_text();header=re.search(r'<header class="site-header">.*?</header>',source,re.S)
             if not header or '<nav' not in header[0]:continue
             self.assertEqual(header[0].count('href="/genres"'),1,path.name)
-            self.assertRegex(header[0],r'WHERE TO WATCH</a><div class="nav-genres-item"><a[^>]*href="/genres">GENRES</a>')
+            self.assertRegex(header[0],r'WHERE TO WATCH</a><div class="nav-category-item" data-category-menu="genres"><a[^>]*href="/genres">GENRES</a>')
 if __name__=='__main__':unittest.main()
