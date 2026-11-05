@@ -27,3 +27,26 @@
 .home-genres .genre-beginner p{font-size:.8rem;line-height:1.4}
 @media(max-width:1050px){.home-genres .genre-tiles{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:600px){.home-page .home-genres{padding:22px 0}.home-genres .genre-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}.home-genres .genre-beginner{flex-direction:row;align-items:center;flex-wrap:wrap}.home-genres .genre-beginner>span{display:inline-flex;align-items:center;min-height:44px}.home-genres .section-head>a{display:inline-flex;align-items:center;min-height:44px}}
+
+/* Genre directory: full-width category picker, no decorative hero layout. */
+.genres-page .genre-header{display:block;position:static;min-height:0;padding:30px 0 20px;background:none;border:0}
+.genres-page .genre-header::before,.genres-page .genre-header::after{display:none;content:none}
+.genres-page .genre-header h1{font-size:clamp(26px,3vw,36px);line-height:1.2;letter-spacing:-.03em;margin:8px 0 10px;max-width:none}
+.genres-page .genre-header>p{font-size:.95rem;line-height:1.6;color:var(--muted);margin:0 0 22px;max-width:none}
+.genres-page .genre-index{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin:0;width:100%}
+.genres-page .genre-index a{justify-content:center;padding:12px 8px;font-size:.85rem;font-weight:700;min-height:46px}
+.genres-page .genre-index a[aria-current]{border-color:var(--purple);background:#25203c;color:#d8cbff}
+.genre-starter-link{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:18px;padding-top:14px;border-top:1px solid var(--line);font-size:.85rem;color:var(--muted)}
+.genre-starter-link a{display:inline-flex;align-items:center;min-height:44px;color:var(--purple);font-size:.75rem;font-weight:700;text-decoration:none}
+.genres-page .genre-section{padding:12px 0 32px;margin:0;min-height:0}
+.genres-page .genre-section[hidden]{display:none!important}
+.genres-page .genre-section .section-head{display:block;margin-bottom:10px}
+.genres-page .genre-section .section-head>a{display:none}
+.genres-page .genre-section h2{font-size:24px;line-height:1.3;margin:0 0 8px;letter-spacing:-.02em}
+.genres-page .genre-section .section-head p{font-size:.9rem;color:var(--muted);margin:0 0 14px;line-height:1.6}
+.genres-page .genre-guides{display:block}
+.genres-page .genre-guide{display:flex;align-items:center;justify-content:space-between;gap:18px;background:none;border:0;border-top:1px solid var(--line);border-radius:0;padding:16px 0}
+.genres-page .genre-guide h3{font-size:1rem;line-height:1.5;margin:0}
+.genres-page .genre-guide p{display:none}
+.genres-page .genre-guide span{flex-shrink:0;font-size:.75rem}
+@media(max-width:600px){.genres-page .genre-header{padding-top:24px}.genres-page .genre-index{grid-template-columns:repeat(2,minmax(0,1fr))}.genres-page .genre-guide{align-items:flex-start;gap:12px}.genres-page .genre-guide h3{font-size:.9rem}.genres-page .genre-guide span{font-size:.7rem}}
