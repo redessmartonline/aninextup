@@ -68,7 +68,8 @@ def build():
             return re.sub(r'(<a\b[^>]*href="[^\"]*where-to-watch(?:\.html)?"[^>]*>.*?</a>)',lambda x:x[1]+f'<a{active} href="/genres">GENRES</a>',section,count=1,flags=re.S)
         text=re.sub(r'<header class="site-header">.*?</header>',nav,text,flags=re.S)
         if '<header class="site-header">' in text and '/assets/genres.css' not in text:
-            text=text.replace('</head>','<link rel="stylesheet" href="/assets/genres.css?v=20261105a"></head>',1)
+            text=text.replace('</head>','<link rel="stylesheet" href="/assets/genres.css?v=20261105b"></head>',1)
+        text=re.sub(r'(/assets/genres\.css)(?:\?[^" ]*)?',r'\1?v=20261105b',text)
         if text!=path.read_text():path.write_text(text)
     print('Built Genres directory, homepage discovery and static site navigation.')
 
