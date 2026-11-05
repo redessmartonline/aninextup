@@ -108,16 +108,15 @@
 .site-header nav .nav-category-menu {
   position:absolute;
   top:100%;
-  right:-12px;
+  left:0;
   z-index:100;
   display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  width:246px;
-  padding:7px;
-  gap:2px;
+  grid-template-columns:1fr;
+  width:174px;
+  padding:5px;
   background:var(--panel);
   border:1px solid var(--line);
-  border-radius:12px;
+  border-radius:8px;
   box-shadow:0 14px 34px #0007;
 }
 .site-header nav .nav-category-disclosure:not([open]) .nav-category-menu {display:none}
@@ -132,6 +131,14 @@
 }
 .site-header nav .nav-category-menu a:hover,
 .site-header nav .nav-category-menu a:focus-visible {background:var(--panel2)}
+/* Keep the longer Genres list reachable on short screens. */
+.site-header nav [data-category-menu="genres"] .nav-category-menu {
+  max-height:min(58dvh,390px);
+  overflow-y:auto;
+}
+@media(min-width:781px) {
+  .site-header nav .nav-category-menu a {min-height:36px}
+}
 @media(max-width:780px) {
   .site-header nav .nav-category-item {display:block;width:100%}
   .site-header nav .nav-category-item>a {display:inline-flex;align-items:center;min-height:44px}
@@ -142,37 +149,15 @@
     width:44px;
     min-height:44px;
   }
+  .site-header nav [data-category-menu="news"] .nav-category-disclosure summary {left:49px}
   .site-header nav .nav-category-menu {
     position:static;
-    width:min(100%,340px);
-    box-shadow:none;
-  }
-}
-
-.site-header nav [data-category-menu="news"] .nav-category-menu {
-  grid-template-columns:1fr;
-  left:0;
-  right:auto;
-  width:174px;
-  padding:5px;
-  gap:0;
-  border-radius:8px;
-}
-@media(min-width:781px) {
-  .site-header nav [data-category-menu="news"] .nav-category-menu a {
-    min-height:36px;
-  }
-}
-@media(max-width:780px) {
-  .site-header nav [data-category-menu="news"] .nav-category-disclosure summary {
-    left:49px;
-  }
-  .site-header nav [data-category-menu="news"] .nav-category-menu {
     width:min(100%,220px);
     padding:0 0 0 8px;
     border:0;
     border-left:1px solid var(--line);
     border-radius:0;
     background:transparent;
+    box-shadow:none;
   }
 }
