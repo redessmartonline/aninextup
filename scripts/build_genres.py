@@ -193,8 +193,8 @@ def build():
         if 'class="nav-category-item"' in text:
             if '/assets/genres-menu.js' not in text:
                 text = text.replace('</body>', '<script defer src="/assets/genres-menu.js"></script></body>', 1)
-            for asset in ('genres-menu', 'mobile-menu'):
-                text = re.sub(rf'(/assets/{asset}\.js)(?:\?[^" ]*)?', r'\1?v=20261105h', text)
+            for asset, version in (('genres-menu', '20261105k'), ('mobile-menu', '20261105h')):
+                text = re.sub(rf'(/assets/{asset}\.js)(?:\?[^" ]*)?', rf'\1?v={version}', text)
         if text != original:
             path.write_text(text)
     print('Built Genres directory, homepage discovery and static site navigation.')
