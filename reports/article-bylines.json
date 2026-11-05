@@ -1,7 +1,7 @@
 {
-  "articles": 133,
+  "articles": 134,
   "changed": 0,
-  "standardized": 133,
+  "standardized": 134,
   "unresolved": [],
   "records": [
     {
@@ -728,6 +728,12 @@
       "status": "ok",
       "published": "2026-10-13",
       "path": "articles/the-boxer-anime-announcement.html",
+      "changed": false
+    },
+    {
+      "status": "ok",
+      "published": "2026-11-05",
+      "path": "articles/the-dangers-in-my-heart-season-3.html",
       "changed": false
     },
     {
