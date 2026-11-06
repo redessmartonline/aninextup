@@ -1,6 +1,6 @@
 {
-  "count": 254,
-  "last_run_count": 6,
+  "count": 256,
+  "last_run_count": 8,
   "failed_count": 0,
   "failed": [],
   "images": [
@@ -143,6 +143,16 @@
       "source": "https://aninextup.com/assets/images/covers/nues-exorcist-official.png",
       "local": "/assets/images/covers/nues-exorcist-official.png",
       "evidence_commit": "66961474da6bcab2b88115797434266294086059"
+    },
+    {
+      "source": "https://aninextup.com/assets/images/covers/rainy-day-serenade-official.webp",
+      "local": "/assets/images/covers/rainy-day-serenade-official.webp",
+      "download_url": "https://aninextup.com/assets/images/covers/rainy-day-serenade-official.webp"
+    },
+    {
+      "source": "https://aninextup.com/assets/images/covers/rainy-day-serenade-teaser.webp",
+      "local": "/assets/images/covers/rainy-day-serenade-teaser.webp",
+      "download_url": "https://aninextup.com/assets/images/covers/rainy-day-serenade-teaser.webp"
     },
     {
       "source": "https://aninextup.com/assets/images/covers/ramparts-of-ice-season-2.jpg",
