@@ -7,17 +7,20 @@
     "Is DOFUS required viewing?",
     "Where are the game rewards?"
   ],
-  "editorialWords": 1206,
-  "verifiedOn": "2026-11-05",
+  "editorialWords": 1327,
+  "verifiedOn": "2026-11-06",
   "sources": [
     "https://www.youtube.com/watch?v=Y86qpxydosM",
     "https://my.worldacg.com/press-release/2026-11-05/ankama-animations-welsh-and-shedar-premieres-today-on-youtube/.243573",
     "https://welshandshedar-anime.com/10/",
     "https://www.anitrendz.com/news/2026/10/19/welsh-shedar-anime-series-begins-streaming-on-youtube-on-november-5",
-    "https://www.youtube.com/watch?v=P14DA8rk7Bc"
+    "https://www.youtube.com/watch?v=P14DA8rk7Bc",
+    "https://x.com/ES_DOFUS/status/2118372778319482890",
+    "https://www.youtube.com/playlist?list=PLQQZ_5MCShus"
   ],
   "limits": [
-    "Dates after the two-day launch do not imply a confirmed premiere hour. No query volume used."
+    "Dates after the two-day launch do not imply a confirmed premiere hour. No query volume used.",
+    "Episode 2 premiere time verified against official DOFUS social announcement; official playlist, channel and live tab did not list a direct Episode 2 upload at verification time. Audio metadata verified for Episode 1 only."
   ],
   "cover": {
     "path": "/assets/images/covers/welsh-shedar-official.webp",
