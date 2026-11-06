@@ -1,7 +1,7 @@
 {
-  "articles": 137,
-  "changed": 0,
-  "standardized": 137,
+  "articles": 138,
+  "changed": 1,
+  "standardized": 138,
   "unresolved": [],
   "records": [
     {
@@ -603,6 +603,12 @@
       "published": "2026-10-03",
       "path": "articles/psyren-release-date.html",
       "changed": false
+    },
+    {
+      "status": "ok",
+      "published": "2026-11-06",
+      "path": "articles/rainy-day-serenade-anime-release-date.html",
+      "changed": true
     },
     {
       "status": "ok",
