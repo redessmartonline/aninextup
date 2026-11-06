@@ -1,6 +1,6 @@
 {
   "articles": 136,
-  "changed": 1,
+  "changed": 0,
   "standardized": 136,
   "unresolved": [],
   "records": [
@@ -812,7 +812,7 @@
       "status": "ok",
       "published": "2026-11-06",
       "path": "articles/wound-and-bandage-anime-release-date.html",
-      "changed": true
+      "changed": false
     },
     {
       "status": "ok",
