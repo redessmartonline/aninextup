@@ -1,6 +1,6 @@
 {
   "articles": 137,
-  "changed": 1,
+  "changed": 0,
   "standardized": 137,
   "unresolved": [],
   "records": [
@@ -194,7 +194,7 @@
       "status": "ok",
       "published": "2026-11-06",
       "path": "articles/dark-summoner-omake-shorts-watch-order.html",
-      "changed": true
+      "changed": false
     },
     {
       "status": "ok",
