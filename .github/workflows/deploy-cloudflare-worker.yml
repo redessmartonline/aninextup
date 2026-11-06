@@ -16,6 +16,7 @@ on:
       - "scripts/test_newsletter_live.mjs"
       - "scripts/test_comments_live.mjs"
       - "scripts/build_article_community.py"
+      - "scripts/build_newsletter_popup.py"
       - "scripts/build_search_index.py"
       - "tests/test_search_index.py"
       - "scripts/build_watch_catalog.js"
@@ -116,6 +117,9 @@ jobs:
         run: |
           python scripts/build_genres.py
           python -m unittest discover -s tests -p test_genres.py
+
+      - name: Install newsletter entry popup
+        run: python scripts/build_newsletter_popup.py
 
       - name: Open external links in new tabs
         run: |

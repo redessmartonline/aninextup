@@ -1,0 +1,48 @@
+#newsletter-popup {
+  box-sizing: border-box;
+  width: min(460px, calc(100% - 32px));
+  max-height: calc(100% - 32px);
+  padding: 30px;
+  border: 1px solid #41365c;
+  border-radius: 18px;
+  background: #141326;
+  color: #f8fafc;
+  box-shadow: 0 20px 70px #0009;
+}
+#newsletter-popup::backdrop { background: #080914bb; }
+#newsletter-popup h2 {
+  margin: 10px 32px 10px 0;
+  font-size: clamp(24px, 6vw, 32px);
+  line-height: 1.12;
+}
+#newsletter-popup p { color: #c5c5d7; }
+#newsletter-popup .newsletter-popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 8px;
+  background: #26213b;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+#newsletter-popup form { display: grid; gap: 10px; margin: 20px 0 12px; }
+#newsletter-popup input[type="email"],
+#newsletter-popup button[type="submit"] {
+  min-height: 44px;
+  border: 1px solid #51486c;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font: inherit;
+}
+#newsletter-popup input[type="email"] { width: 100%; background: #0b0d1b; color: #fff; }
+#newsletter-popup button[type="submit"] { background: #6d37c2; color: #fff; font-weight: 700; }
+#newsletter-popup button:disabled { opacity: .65; }
+#newsletter-popup small, #newsletter-popup [role="status"] { font-size: .85rem; }
+#newsletter-popup small a { text-decoration: underline; }
+@media (max-width: 480px) {
+  #newsletter-popup { padding: 22px; }
+}
