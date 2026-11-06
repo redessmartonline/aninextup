@@ -1,0 +1,45 @@
+{
+  "intent": "Find and watch the free official first episode with spoken English and follow the international schedule.",
+  "keyword": "where to watch Welsh & Shedar episode 1 English dub",
+  "secondaryQuestions": [
+    "How do I enable English audio?",
+    "When do later episodes appear outside Japan?",
+    "Is DOFUS required viewing?",
+    "Where are the game rewards?"
+  ],
+  "editorialWords": 1206,
+  "verifiedOn": "2026-11-05",
+  "sources": [
+    "https://www.youtube.com/watch?v=Y86qpxydosM",
+    "https://my.worldacg.com/press-release/2026-11-05/ankama-animations-welsh-and-shedar-premieres-today-on-youtube/.243573",
+    "https://welshandshedar-anime.com/10/",
+    "https://www.anitrendz.com/news/2026/10/19/welsh-shedar-anime-series-begins-streaming-on-youtube-on-november-5",
+    "https://www.youtube.com/watch?v=P14DA8rk7Bc"
+  ],
+  "limits": [
+    "Dates after the two-day launch do not imply a confirmed premiere hour. No query volume used."
+  ],
+  "cover": {
+    "path": "/assets/images/covers/welsh-shedar-official.webp",
+    "imageUrl": "https://welshandshedar-anime.com/wp/wp-content/themes/theme/images/ogp.jpg",
+    "sha256": "ce58b2dc0fa77c6ec373719a6dfd061930c2187a841ed68921938d07d0c79d5d",
+    "sourceUrl": "https://welshandshedar-anime.com/10/",
+    "credit": "© W&S / Ankama · Dream Catcher",
+    "originalDimensions": [
+      1200,
+      630
+    ],
+    "verification": "Downloaded official site social artwork; decoded and visually verified series characters and logo."
+  },
+  "video": {
+    "path": "/assets/images/covers/welsh-shedar-trailer.webp",
+    "imageUrl": "https://i.ytimg.com/vi/P14DA8rk7Bc/maxresdefault.jpg",
+    "sha256": "95f14b24e5a43c42155720bc9f6e8f95d43931b34cc260de366be4bb94c2a576",
+    "status": "available",
+    "sourceUrl": "https://www.youtube.com/watch?v=P14DA8rk7Bc",
+    "youtubeId": "P14DA8rk7Bc",
+    "channel": "Krosmoz",
+    "uploadDate": "2026-10-19T08:03:41-07:00",
+    "verification": "Original YouTube metadata confirms title, channel, exact upload timestamp, OK playability and embed availability."
+  }
+}
