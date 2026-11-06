@@ -1,7 +1,7 @@
 {
-  "articles": 136,
-  "changed": 0,
-  "standardized": 136,
+  "articles": 137,
+  "changed": 1,
+  "standardized": 137,
   "unresolved": [],
   "records": [
     {
@@ -189,6 +189,12 @@
       "published": "2026-10-04",
       "path": "articles/dark-machine-the-animation.html",
       "changed": false
+    },
+    {
+      "status": "ok",
+      "published": "2026-11-06",
+      "path": "articles/dark-summoner-omake-shorts-watch-order.html",
+      "changed": true
     },
     {
       "status": "ok",
