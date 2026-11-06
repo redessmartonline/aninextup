@@ -181,20 +181,32 @@ def build():
                 r'(<a\b[^>]*href="[^"]*where-to-watch(?:\.html)?"[^>]*>.*?</a>)',
                 lambda link: link[1] + genres, section, count=1, flags=re.S
             )
-            return re.sub(
+            news = category_dropdown('NEWS', news_menu_links, path.name == 'news.html')
+            section, count = re.subn(
                 r'<a\b[^>]*>\s*NEWS\s*</a>',
-                lambda _: category_dropdown('NEWS', news_menu_links, path.name == 'news.html'),
+                lambda _: news,
                 section, count=1
             )
+            if not count:
+                section = section.replace('</nav>', news + '</nav>', 1)
+            if not re.search(r'<a\b[^>]*>\s*CONTACT\s*</a>', section):
+                section = section.replace(news, news + '<a href="/contact">CONTACT</a>', 1)
+            return section
         text = re.sub(r'<header class="site-header">.*?</header>', nav, original, flags=re.S)
         if '<header class="site-header">' in text and '/assets/genres.css' not in text:
             text = text.replace('</head>', '<link rel="stylesheet" href="/assets/genres.css"></head>', 1)
         text = re.sub(r'(/assets/genres\.css)(?:\?[^" ]*)?', r'\1?v=20261105j', text)
         if 'class="nav-category-item"' in text:
-            if '/assets/genres-menu.js' not in text:
-                text = text.replace('</body>', '<script defer src="/assets/genres-menu.js"></script></body>', 1)
-            for asset, version in (('genres-menu', '20261105k'), ('mobile-menu', '20261105h')):
-                text = re.sub(rf'(/assets/{asset}\.js)(?:\?[^" ]*)?', rf'\1?v={version}', text)
+            for asset in ('genres-menu', 'mobile-menu'):
+                script = f'/assets/{asset}.js?v=20261106a'
+                pattern = rf'(?<=src=")(?:/|(?:\.\./)*)assets/{asset}\.js(?:\?[^"]*)?(?=")'
+                text, count = re.subn(pattern, script, text)
+                if not count:
+                    tag = f'<script defer src="{script}"></script>'
+                    if '</body>' in text:
+                        text = text.replace('</body>', tag + '</body>', 1)
+                    else:
+                        text += tag
         if text != original:
             path.write_text(text)
     print('Built Genres directory, homepage discovery and static site navigation.')

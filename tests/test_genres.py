@@ -36,4 +36,7 @@ class GenreTests(unittest.TestCase):
             if not header or '<nav' not in header[0]:continue
             self.assertEqual(header[0].count('href="/genres"'),1,path.name)
             self.assertRegex(header[0],r'WHERE TO WATCH</a><div class="nav-category-item" data-category-menu="genres"><a[^>]*href="/genres">GENRES</a>')
+            self.assertEqual(header[0].count('data-category-menu="news"'), 1, path.name)
+            for asset in ('genres-menu', 'mobile-menu'):
+                self.assertEqual(len(re.findall(rf'src="/assets/{asset}\.js\?v=', source)), 1, path.name)
 if __name__=='__main__':unittest.main()

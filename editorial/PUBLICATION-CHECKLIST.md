@@ -29,6 +29,7 @@ Every new or materially updated article MUST pass these checks **before** asking
 - [ ] Cross-check facts, cast, dates, and staff against official sources; clearly label unconfirmed details.
 - [ ] Search `sitemap.xml`, `assets/data.js`, and article paths to prevent duplicate coverage.
 - [ ] Verify canonical, SEO title/description, structured data, internal links, related cards, and image fallback behavior.
+- [ ] Confirm external web links open in a new tab with `rel="noopener"`. Verify the Genres and News dropdowns and mobile menu on the rendered article. The production build applies and checks this policy for every article.
 - [ ] Ensure new stories appear in the homepage news index and are added to `sitemap.xml` upon approval.
 - [ ] Obtain explicit user approval **after** the cover and all blocking checks pass.
 - [ ] After merge, verify the public URL, homepage card, mobile and desktop image loading. If deployment cannot be confirmed, report that separately instead of claiming the public website was verified.

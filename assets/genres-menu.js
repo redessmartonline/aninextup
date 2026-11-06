@@ -10,7 +10,10 @@ for (const item of document.querySelectorAll('[data-category-menu]')) {
   }
 
   toggle.addEventListener('click', event => {
-    if (!openedByHover) return;
+    if (!openedByHover || event.detail === 0) {
+      openedByHover = false;
+      return;
+    }
     // The pointer may have already opened the menu on its way to the arrow.
     event.preventDefault();
     openedByHover = false;
@@ -23,7 +26,7 @@ for (const item of document.querySelectorAll('[data-category-menu]')) {
     }
   });
   item.addEventListener('pointerleave', event => {
-    if (desktop.matches && event.pointerType === 'mouse' &&
+    if (desktop.matches && event.pointerType === 'mouse' && openedByHover &&
         !menu.contains(document.activeElement)) close();
   });
   item.addEventListener('focusout', event => {

@@ -13,14 +13,22 @@
     }
     if (!['http:', 'https:'].includes(url.protocol) ||
         internalHosts.has(url.hostname.replace(/\.$/, ''))) return;
-    link.target = '_blank';
-    link.relList.remove('opener');
-    link.relList.add('noopener');
+    if (link.target !== '_blank') link.target = '_blank';
+    if (link.relList.contains('opener')) link.relList.remove('opener');
+    if (!link.relList.contains('noopener')) link.relList.add('noopener');
   }
 
   function visit(root) {
     if (root instanceof Element) openExternally(root);
     root.querySelectorAll?.(selector).forEach(openExternally);
+  }
+
+  // Handle a link even if it was inserted immediately before activation.
+  for (const type of ['click', 'auxclick', 'contextmenu']) {
+    document.addEventListener(type, event => {
+      const link = event.target instanceof Element && event.target.closest(selector);
+      if (link) openExternally(link);
+    }, true);
   }
 
   visit(document);
@@ -33,6 +41,6 @@
     childList: true,
     subtree: true,
     attributes: true,
-    attributeFilter: ['href']
+    attributeFilter: ['href', 'target', 'rel', 'download']
   });
 })();
