@@ -1,0 +1,44 @@
+{
+  "intent": "Find the premiere date and understand the Japan TV and streaming timetable, including whether it applies outside Japan.",
+  "keyword": "Wound & Bandage anime release date and where to watch",
+  "secondaryQuestions": [
+    "What does Saturday 26:30 mean?",
+    "Is the ABEMA special Episode 1?",
+    "Is international streaming confirmed?",
+    "What did the November 6 trailer reveal?"
+  ],
+  "editorialWords": 1323,
+  "verifiedOn": "2026-11-06",
+  "sources": [
+    "https://houtaidoumei.com/news/37/",
+    "https://houtaidoumei.com/news/22/",
+    "https://houtaidoumei.com/",
+    "https://www.youtube.com/watch?v=DyimnIi9nJk"
+  ],
+  "limits": [
+    "Japanese time conversions do not establish international availability. International license, subtitles and dub unconfirmed in the reviewed announcements. No query volume used."
+  ],
+  "cover": {
+    "path": "/assets/images/covers/wound-and-bandage-official.webp",
+    "imageUrl": "https://houtaidoumei.com/wp-content/uploads/2026/11/%E5%82%B7%E5%8F%A3%E3%81%A8%E5%8C%85%E5%B8%AF_%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB_1029.jpg",
+    "sha256": "6ae0df5423c1a75358523267ec9679014885e50af561ab72fea7b2410f4421c9",
+    "sourceUrl": "https://houtaidoumei.com/news/37/",
+    "credit": "© Umihoshi Nanai / Kodansha / Houtai Doumei",
+    "originalDimensions": [
+      849,
+      1200
+    ],
+    "verification": "Official November 6 visual downloaded and decoded from the production announcement and visually matched."
+  },
+  "video": {
+    "path": "/assets/images/covers/wound-and-bandage-trailer.webp",
+    "imageUrl": "https://i.ytimg.com/vi/DyimnIi9nJk/maxresdefault.jpg",
+    "sha256": "7609bfe601caaabb393697a8cd996b2003092499b20a0199d98ae0f720fd54c9",
+    "status": "available",
+    "sourceUrl": "https://houtaidoumei.com/news/37/",
+    "youtubeId": "DyimnIi9nJk",
+    "channel": "ABC Animation Channel",
+    "uploadDate": "2026-11-05T23:00:18-08:00",
+    "verification": "Production announcement and original YouTube metadata match ID. Original watch page reports OK playability and embedding enabled."
+  }
+}
