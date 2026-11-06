@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Build a curated, crawlable genre directory and install static navigation."""
+from hashlib import sha256
 import html
 import json
 import re
@@ -115,6 +116,26 @@ def category_dropdown(name, links, active):
     )
 
 
+PRIMARY_NAV = (
+    ('/', 'HOME'), ('/today', 'TODAY'), ('/this-week', 'THIS WEEK'),
+    ('/calendar', 'CALENDAR'), ('/where-to-watch', 'WHERE TO WATCH'),
+    ('/genres', 'GENRES'), ('/news', 'NEWS'), ('/contact', 'CONTACT'),
+)
+
+
+def primary_navigation(page, genre_links, news_links):
+    active = '/' if page == 'index.html' else '/' + Path(page).stem
+    dropdowns = {'/genres': genre_links, '/news': news_links}
+    links = []
+    for route, label in PRIMARY_NAV:
+        if route in dropdowns:
+            links.append(category_dropdown(label, dropdowns[route], route == active))
+        else:
+            current = ' class="active" aria-current="page"' if route == active else ''
+            links.append(f'<a{current} href="{route}">{label}</a>')
+    return ''.join(links)
+
+
 def build():
     home = (ROOT/'index.html').read_text()
     cards=[]
@@ -167,32 +188,21 @@ def build():
             ('trailers-cast', 'Trailers &amp; Cast'), ('release-news', 'Release News'),
         )
     )
+    style_version = sha256((ROOT / 'assets/style.css').read_bytes()).hexdigest()[:12]
+    style_url = f'/assets/style.css?v={style_version}'
     # Render navigation at build time, including articles created by the publishing pipeline.
     for path in [*ROOT.glob('*.html'), *(ROOT/'articles').glob('*.html')]:
         original = path.read_text()
         def nav(match):
-            section = re.sub(
-                r'<div class="nav-(?:genres|category)-item"[^>]*>(<a[^>]*>[^<]*</a>).*?</details></div>',
-                r'\1', match[0], flags=re.S
-            )
-            section = re.sub(r'<a[^>]*href="/genres"[^>]*>GENRES</a>', '', section)
-            genres = category_dropdown('GENRES', genre_menu_links, path.name == 'genres.html')
-            section = re.sub(
-                r'(<a\b[^>]*href="[^"]*where-to-watch(?:\.html)?"[^>]*>.*?</a>)',
-                lambda link: link[1] + genres, section, count=1, flags=re.S
-            )
-            news = category_dropdown('NEWS', news_menu_links, path.name == 'news.html')
-            section, count = re.subn(
-                r'<a\b[^>]*>\s*NEWS\s*</a>',
-                lambda _: news,
-                section, count=1
-            )
-            if not count:
-                section = section.replace('</nav>', news + '</nav>', 1)
-            if not re.search(r'<a\b[^>]*>\s*CONTACT\s*</a>', section):
-                section = section.replace(news, news + '<a href="/contact">CONTACT</a>', 1)
-            return section
+            links = primary_navigation(path.name, genre_menu_links, news_menu_links)
+            return re.sub(r'(<nav\b[^>]*>).*?(</nav>)',
+                          lambda nav: nav[1] + links + nav[2],
+                          match[0], count=1, flags=re.S)
+
         text = re.sub(r'<header class="site-header">.*?</header>', nav, original, flags=re.S)
+        if '<header class="site-header">' in text:
+            text = re.sub(r'(?<=href=")(?:/|(?:\.\./)*)assets/style\.css(?:\?[^"]*)?(?=")',
+                          style_url, text)
         if '<header class="site-header">' in text and '/assets/genres.css' not in text:
             text = text.replace('</head>', '<link rel="stylesheet" href="/assets/genres.css"></head>', 1)
         text = re.sub(r'(/assets/genres\.css)(?:\?[^" ]*)?', r'\1?v=20261105j', text)

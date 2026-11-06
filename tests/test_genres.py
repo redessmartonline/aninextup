@@ -37,6 +37,12 @@ class GenreTests(unittest.TestCase):
             self.assertEqual(header[0].count('href="/genres"'),1,path.name)
             self.assertRegex(header[0],r'WHERE TO WATCH</a><div class="nav-category-item" data-category-menu="genres"><a[^>]*href="/genres">GENRES</a>')
             self.assertEqual(header[0].count('data-category-menu="news"'), 1, path.name)
+            primary = re.findall(r'<a[^>]*href="([^"]+)"[^>]*>([A-Z][A-Z -]+)</a>', header[0])
+            self.assertEqual(primary, [
+                ('/', 'HOME'), ('/today', 'TODAY'), ('/this-week', 'THIS WEEK'),
+                ('/calendar', 'CALENDAR'), ('/where-to-watch', 'WHERE TO WATCH'),
+                ('/genres', 'GENRES'), ('/news', 'NEWS'), ('/contact', 'CONTACT'),
+            ], path.name)
             for asset in ('genres-menu', 'mobile-menu'):
                 self.assertEqual(len(re.findall(rf'src="/assets/{asset}\.js\?v=', source)), 1, path.name)
 if __name__=='__main__':unittest.main()
