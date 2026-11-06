@@ -1,7 +1,8 @@
 window.ANINEXTUP_DATA={
-updated:"2026-11-05",
+updated:"2026-11-06",
 site:{timezone:"America/Santo_Domingo",season:"Fall 2026"},
 anime:[
+{id:"welsh-shedar-episode-1-english-dub",image:"/assets/images/covers/welsh-shedar-official.webp",title:"Where to Watch Welsh & Shedar Episode 1 Free in English",date:"2026-11-05",dateLabel:"November 5, 2026",platform:"YouTube (Krosmoz)",article:"articles/welsh-shedar-episode-1-english-dub",category:"New series",status:"exact-date"},
 {id:"the-dangers-in-my-heart-season-3",image:"/assets/images/covers/bokuyaba-season-3-official.webp",title:"The Dangers in My Heart Season 3: April 2027 Release & Watch Order",date:null,dateLabel:"April 2027",platform:"Japanese TV; international streaming not announced",article:"articles/the-dangers-in-my-heart-season-3",newsCategory:"returning-series",category:"Returning series",status:"month-confirmed"},
 {id:"fool-night",image:"/assets/images/external/1a6702c920649f1624933a5e78133acb7f21d6584de19a1c2d30b9e6d0732efd.webp",title:"Fool Night",date:"2026-11-26",platform:"Netflix",article:"articles/fool-night-release-date",newsCategory:"trailers-cast",category:"Premiere",status:"confirmed"},
 {id:"spirit-circle-anime-release-date",image:"/assets/images/news/spirit-circle-anime-release-date.webp",title:"Spirit Circle Anime: December 2026 Release, 18 Episodes & First Trailer",date:null,dateLabel:"December 2026",platform:"Streaming services not announced",article:"articles/spirit-circle-anime-release-date",newsCategory:"new-anime",category:"New series",status:"month-confirmed"},
