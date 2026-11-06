@@ -62,6 +62,13 @@ for(const name of fs.readdirSync(root).filter(n=>n.endsWith('.html'))){
   const file=path.join(root,name),original=fs.readFileSync(file,'utf8');let html=original;
   html=fill(html,'data-anime-list',mode=>list(model.select(data.anime,mode,ctx),mode==='today','No premieres confirmed for this date. Explore the upcoming releases below.'));
   html=fill(html,'data-weekly-episodes',()=>episodeCards(episodeDay(now)));
+  if(name==='this-week.html'){
+    const week=model.context(now,weeklyEpisodes.regionTimezones?.[0]||weeklyEpisodes.timezone||data.site.timezone);
+    if(!weeklyEpisodes.validFrom||!weeklyEpisodes.validThrough||weeklyEpisodes.validFrom>week.weekStart||weeklyEpisodes.validThrough<week.weekEnd){
+      const warning='Crunchyroll Brazil episode coverage is incomplete for '+week.weekStart+' through '+week.weekEnd+'; This Week will show the official-calendar link until verified data is available.';
+      console.warn(process.env.GITHUB_ACTIONS==='true'?'::warning::'+warning:warning);
+    }
+  }
   if(name==='today.html'){
     const current=verifiedBroadcasts.state(now,'UTC');
     html=fill(html,'data-verified-broadcasts',()=>verifiedBroadcasts.render(now,'UTC'));
