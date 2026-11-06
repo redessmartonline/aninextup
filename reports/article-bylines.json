@@ -1,6 +1,6 @@
 {
   "articles": 136,
-  "changed": 1,
+  "changed": 0,
   "standardized": 136,
   "unresolved": [],
   "records": [
@@ -230,7 +230,7 @@
       "status": "ok",
       "published": "2026-10-03",
       "path": "articles/dragon-ball-super-beerus.html",
-      "changed": true
+      "changed": false
     },
     {
       "status": "ok",
