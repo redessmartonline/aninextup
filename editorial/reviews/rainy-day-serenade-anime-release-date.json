@@ -1,0 +1,43 @@
+{
+  "intent": "Compare the anime premiere and English manga publication dates, and find the correct first volume.",
+  "keyword": "Rainy Day Serenade anime release date and English manga",
+  "secondaryQuestions": [
+    "Where can I read in English?",
+    "What volumes are in the first omnibus?",
+    "Is international streaming confirmed?"
+  ],
+  "editorialWords": 1265,
+  "verifiedOn": "2026-11-06",
+  "sources": [
+    "https://namidaame-anime.com/",
+    "https://namidaame-anime.com/news/26",
+    "https://www.penguinrandomhouse.com/books/826316/rainy-day-serenade-omnibus-1-vol-1-2-by-haruka-kawachi/",
+    "https://www.youtube.com/watch?v=UoP07Op8NSw"
+  ],
+  "limits": [
+    "April is a month-only Japanese broadcast window. No international streaming or English dub was confirmed. No search volume was assumed."
+  ],
+  "cover": {
+    "path": "/assets/images/covers/rainy-day-serenade-official.webp",
+    "imageUrl": "https://namidaame-anime.com/common/images/kv01.jpg",
+    "sha256": "8d100cb2fbf2db8e6db75e7c172284eb19df9bf6e279c15e91bfa7c093410331",
+    "sourceUrl": "https://namidaame-anime.com/news/26",
+    "credit": "© Haruka Kawachi / Kodansha / Rainy Day Serenade Production Committee",
+    "originalDimensions": [
+      1152,
+      1620
+    ],
+    "verification": "Official key visual downloaded and decoded."
+  },
+  "video": {
+    "path": "/assets/images/covers/rainy-day-serenade-teaser.webp",
+    "imageUrl": "https://i.ytimg.com/vi/UoP07Op8NSw/maxresdefault.jpg",
+    "sha256": "ec55f13001ebceacd68f52693a82958458f3ce17cde7727b505d117f2056b42a",
+    "status": "available",
+    "sourceUrl": "https://namidaame-anime.com/news/26",
+    "youtubeId": "UoP07Op8NSw",
+    "channel": "Bandai Namco Filmworks",
+    "uploadDate": "2026-11-06T03:00:25-08:00",
+    "verification": "Official announcement matches the original YouTube watch metadata and embeddable status."
+  }
+}
