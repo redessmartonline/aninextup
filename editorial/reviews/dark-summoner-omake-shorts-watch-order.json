@@ -1,0 +1,45 @@
+{
+  "intent": "Find the correct HIDIVE listing for the shorts and decide whether to watch the main anime first.",
+  "keyword": "I’m Dating a Dark Summoner Omake Shorts watch order and where to watch",
+  "secondaryQuestions": [
+    "Which day do the shorts stream?",
+    "Is the main anime required?",
+    "Which territories did HIDIVE name?",
+    "Does the official trailer have English subtitles?"
+  ],
+  "editorialWords": 1291,
+  "verifiedOn": "2026-11-06",
+  "sources": [
+    "https://news.hidive.com/2026/11/3/chibi-fun-heads-to-HIDIVE-with-i-m-dating-a-dark-summoner-omake-shorts-premiere-on-november-6",
+    "https://news.hidive.com/2026/11/3/heres-the-anime-coming-to-and-leaving-hidive-in-november-2026",
+    "https://news.hidive.com/2026/9/30/heres-the-anime-coming-to-and-leaving-hidive-in-october-2026",
+    "https://animecorner.me/exclusive-im-dating-a-dark-summoner-omake-shorts-premieres-on-hidive-on-november-6-key-visual-and-trailer-revealed/",
+    "https://www.youtube.com/watch?v=at1PXP-VYgc"
+  ],
+  "limits": [
+    "Dedicated playback URL, exact streaming hour and a dub date were not verified. Suggested viewing order is editorial guidance. No query volume used."
+  ],
+  "cover": {
+    "path": "/assets/images/covers/dark-summoner-omake-official.webp",
+    "imageUrl": "https://static.animecorner.me/2026/11/1793716286-f66f69e94e6dff4669c2e3049654cf0a.jpg",
+    "sha256": "d58b7d829ea2a254f5c87494f39ea0f7259fd152a53d30c7628aba8f7bb0b78a",
+    "sourceUrl": "https://animecorner.me/exclusive-im-dating-a-dark-summoner-omake-shorts-premieres-on-hidive-on-november-6-key-visual-and-trailer-revealed/",
+    "credit": "© Shaoh / KADOKAWA / WWWave",
+    "originalDimensions": [
+      1000,
+      1440
+    ],
+    "verification": "Official key visual distributed by HIDIVE to Anime Corner, decoded and checked for the Omake Shorts title and cast."
+  },
+  "video": {
+    "path": "/assets/images/covers/dark-summoner-omake-trailer.webp",
+    "imageUrl": "https://i.ytimg.com/vi/at1PXP-VYgc/maxresdefault.jpg",
+    "sha256": "decf3f7a4d8d6b691e67ce4b9ddff7a2960334d79aa68632134f146c4f0855fe",
+    "status": "available",
+    "sourceUrl": "https://news.hidive.com/2026/11/3/chibi-fun-heads-to-HIDIVE-with-i-m-dating-a-dark-summoner-omake-shorts-premiere-on-november-6",
+    "youtubeId": "at1PXP-VYgc",
+    "channel": "HIDIVE",
+    "uploadDate": "2026-11-03T09:01:59-08:00",
+    "verification": "Production announcement and original YouTube metadata match ID. Original watch page reports OK playability and embedding enabled."
+  }
+}
