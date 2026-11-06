@@ -91,7 +91,9 @@ jobs:
         run: python scripts/standardize_article_bylines.py
 
       - name: Install sharing and comments on published articles
-        run: python scripts/build_article_community.py
+        run: |
+          python scripts/build_article_community.py
+          python scripts/build_article_community.py --check
 
       - name: Build and validate current article search index
         run: |
