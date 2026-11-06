@@ -1,5 +1,5 @@
 {
-  "count": 248,
+  "count": 250,
   "last_run_count": 8,
   "failed_count": 0,
   "failed": [],
@@ -173,6 +173,16 @@
       "source": "https://aninextup.com/assets/images/covers/welsh-shedar-trailer.webp",
       "local": "/assets/images/covers/welsh-shedar-trailer.webp",
       "download_url": "https://aninextup.com/assets/images/covers/welsh-shedar-trailer.webp"
+    },
+    {
+      "source": "https://aninextup.com/assets/images/covers/wound-and-bandage-official.webp",
+      "local": "/assets/images/covers/wound-and-bandage-official.webp",
+      "download_url": "https://aninextup.com/assets/images/covers/wound-and-bandage-official.webp"
+    },
+    {
+      "source": "https://aninextup.com/assets/images/covers/wound-and-bandage-trailer.webp",
+      "local": "/assets/images/covers/wound-and-bandage-trailer.webp",
+      "download_url": "https://aninextup.com/assets/images/covers/wound-and-bandage-trailer.webp"
     },
     {
       "source": "https://aninextup.com/assets/images/external/005fbcefe4e9fd52d2fc8c2a2a5e03df023625940480a9e0d7c54fe810a2e89e.webp",
