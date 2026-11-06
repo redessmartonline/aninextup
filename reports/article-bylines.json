@@ -1,7 +1,7 @@
 {
-  "articles": 134,
-  "changed": 0,
-  "standardized": 134,
+  "articles": 135,
+  "changed": 1,
+  "standardized": 135,
   "unresolved": [],
   "records": [
     {
@@ -783,6 +783,12 @@
       "published": "2026-10-07",
       "path": "articles/walking-home-with-you-anime.html",
       "changed": false
+    },
+    {
+      "status": "ok",
+      "published": "2026-11-05",
+      "path": "articles/welsh-shedar-episode-1-english-dub.html",
+      "changed": true
     },
     {
       "status": "ok",
