@@ -1,6 +1,6 @@
 {
-  "count": 246,
-  "last_run_count": 7,
+  "count": 248,
+  "last_run_count": 8,
   "failed_count": 0,
   "failed": [],
   "images": [
@@ -163,6 +163,16 @@
       "source": "https://aninextup.com/assets/images/covers/tale-secret-saint.jpg",
       "local": "/assets/images/covers/tale-secret-saint.jpg",
       "evidence_commit": "66961474da6bcab2b88115797434266294086059"
+    },
+    {
+      "source": "https://aninextup.com/assets/images/covers/welsh-shedar-official.webp",
+      "local": "/assets/images/covers/welsh-shedar-official.webp",
+      "download_url": "https://aninextup.com/assets/images/covers/welsh-shedar-official.webp"
+    },
+    {
+      "source": "https://aninextup.com/assets/images/covers/welsh-shedar-trailer.webp",
+      "local": "/assets/images/covers/welsh-shedar-trailer.webp",
+      "download_url": "https://aninextup.com/assets/images/covers/welsh-shedar-trailer.webp"
     },
     {
       "source": "https://aninextup.com/assets/images/external/005fbcefe4e9fd52d2fc8c2a2a5e03df023625940480a9e0d7c54fe810a2e89e.webp",
