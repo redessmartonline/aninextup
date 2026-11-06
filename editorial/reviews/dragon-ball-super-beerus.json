@@ -1,0 +1,43 @@
+{
+  "intent": "Find the English dub premiere time and Crunchyroll territories for the enhanced Beerus edition.",
+  "keyword": "Dragon Ball Super Beerus English dub release date and schedule",
+  "secondaryQuestions": [
+    "Where is the dub available?",
+    "How does the dub differ from the October simulcast?",
+    "Which actors return?"
+  ],
+  "editorialWords": 1274,
+  "verifiedOn": "2026-11-06",
+  "sources": [
+    "https://www.crunchyroll.com/news/announcements/2026/11/5/dragon-ball-super-beerus-english-spanish-portuguese-dubs-stream-november-12",
+    "https://www.theouterhaven.net/dragon-ball-super-beerus-english-spanish-and-portuguese-dubs-arrive-november-12-on-crunchyroll/",
+    "https://dragonball-super.com/en/",
+    "https://www.youtube.com/watch?v=4QE8zlsU_D4"
+  ],
+  "limits": [
+    "Weekly cadence announced; later individual episode times were not verified. Crunchyroll original announcement blocked direct text access in the verification environment; joint press release and official video checked."
+  ],
+  "cover": {
+    "path": "/assets/images/external/7d7b33621b4a2237a7a06c78c52125800a86a1194508f4657363639745cad120.webp",
+    "imageUrl": "https://dragonball-super.com/en/updates/img/20260903-1.jpg",
+    "sha256": "22ca1aa95983c952073881ca2123d1131eb6529e9284541f6ce311485b7b9caa",
+    "sourceUrl": "https://dragonball-super.com/en/",
+    "credit": "© BIRD STUDIO/SHUEISHA, TOEI ANIMATION",
+    "originalDimensions": [
+      800,
+      1132
+    ],
+    "verification": "Existing series cover compared with official Super Surge artwork."
+  },
+  "video": {
+    "path": "/assets/images/covers/dragon-ball-super-beerus-dub-trailer.webp",
+    "imageUrl": "https://i.ytimg.com/vi/4QE8zlsU_D4/maxresdefault.jpg",
+    "sha256": "0a74cafb7ecb06c0ac2d14a102b5346b27052df132424d44d69542996b672c9d",
+    "status": "available",
+    "sourceUrl": "https://www.youtube.com/watch?v=4QE8zlsU_D4",
+    "youtubeId": "4QE8zlsU_D4",
+    "channel": "Crunchyroll",
+    "uploadDate": "2026-11-05T09:00:27-08:00",
+    "verification": "Original YouTube watch metadata matches the joint press release embed and reports embeddable."
+  }
+}
