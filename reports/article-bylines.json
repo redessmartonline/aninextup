@@ -1,7 +1,7 @@
 {
-  "articles": 135,
+  "articles": 136,
   "changed": 1,
-  "standardized": 135,
+  "standardized": 136,
   "unresolved": [],
   "records": [
     {
@@ -788,7 +788,7 @@
       "status": "ok",
       "published": "2026-11-05",
       "path": "articles/welsh-shedar-episode-1-english-dub.html",
-      "changed": true
+      "changed": false
     },
     {
       "status": "ok",
@@ -807,6 +807,12 @@
       "published": "2026-10-04",
       "path": "articles/worlds-strongest-witch.html",
       "changed": false
+    },
+    {
+      "status": "ok",
+      "published": "2026-11-06",
+      "path": "articles/wound-and-bandage-anime-release-date.html",
+      "changed": true
     },
     {
       "status": "ok",
