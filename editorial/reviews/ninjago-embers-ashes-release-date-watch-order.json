@@ -1,0 +1,48 @@
+{
+  "intent": "Find the official NINJAGO anime teaser, verify the release window and watch the closest lead-in.",
+  "keyword": "Ninjago anime 2027 Embers + Ashes release date and watch order",
+  "secondaryQuestions": [
+    "Where can I watch the teaser?",
+    "Is March officially confirmed?",
+    "What should I watch before Embers + Ashes?"
+  ],
+  "editorialWords": 1332,
+  "verifiedOn": "2026-11-07",
+  "sources": [
+    "https://www.youtube.com/watch?v=9izcokE_v0k",
+    "https://www.lego.com/en-us/themes/ninjago/legends",
+    "https://kids.lego.com/en-us/ninjago",
+    "https://www.lego.com/en-us/product/ivos-ninja-dojo-71888",
+    "https://www.lego.com/en-nz/aboutus/news/2026/september/lego-ninjago-and-futura-reveal-creative-partnership"
+  ],
+  "limits": [
+    "LEGO confirms 2027. March is attributed to The Brick Post. Exact date, full streaming service, episode count and production studio are unverified."
+  ],
+  "cover": {
+    "path": "/assets/images/covers/ninjago-embers-ashes-official-teaser.webp",
+    "imageUrl": "https://i.ytimg.com/vi/9izcokE_v0k/maxresdefault.jpg",
+    "sha256": "616f3aecbf45ebc763419907d9aba6539e364acb59c22ceeabcb8452c91e4532",
+    "originalDimensions": [
+      1280,
+      720
+    ],
+    "sourceUrl": "https://www.youtube.com/watch?v=9izcokE_v0k",
+    "credit": "© The LEGO Group",
+    "verification": "Official thumbnail from the exact verified LEGO YouTube video, decoded and credited."
+  },
+  "video": {
+    "path": "/assets/images/covers/ninjago-embers-ashes-official-teaser.webp",
+    "imageUrl": "https://i.ytimg.com/vi/9izcokE_v0k/maxresdefault.jpg",
+    "sha256": "616f3aecbf45ebc763419907d9aba6539e364acb59c22ceeabcb8452c91e4532",
+    "originalDimensions": [
+      1280,
+      720
+    ],
+    "sourceUrl": "https://www.youtube.com/watch?v=9izcokE_v0k",
+    "status": "available",
+    "youtubeId": "9izcokE_v0k",
+    "channel": "LEGO",
+    "uploadDate": "2026-11-06T07:00:39-08:00",
+    "verification": "Official LEGO upload with public and embeddable playback status and a 78-second runtime."
+  }
+}
