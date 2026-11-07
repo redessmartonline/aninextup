@@ -1,6 +1,6 @@
 {
-  "count": 257,
-  "last_run_count": 7,
+  "count": 259,
+  "last_run_count": 8,
   "failed_count": 0,
   "failed": [],
   "images": [
@@ -63,6 +63,16 @@
       "source": "https://aninextup.com/assets/images/covers/aoashi-season-2-official.jpg",
       "local": "/assets/images/covers/aoashi-season-2-official.jpg",
       "evidence_commit": "66961474da6bcab2b88115797434266294086059"
+    },
+    {
+      "source": "https://aninextup.com/assets/images/covers/bless-first-full-trailer.webp",
+      "local": "/assets/images/covers/bless-first-full-trailer.webp",
+      "download_url": "https://aninextup.com/assets/images/covers/bless-first-full-trailer.webp"
+    },
+    {
+      "source": "https://aninextup.com/assets/images/covers/bless-main-key-visual.webp",
+      "local": "/assets/images/covers/bless-main-key-visual.webp",
+      "download_url": "https://aninextup.com/assets/images/covers/bless-main-key-visual.webp"
     },
     {
       "source": "https://aninextup.com/assets/images/covers/bocchi-starry-footprints-official.webp",
