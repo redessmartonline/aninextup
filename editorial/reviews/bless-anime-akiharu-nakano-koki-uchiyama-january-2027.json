@@ -1,0 +1,50 @@
+{
+  "intent": "Find the exact BLESS anime premiere date, streaming platform and official English manga starting point.",
+  "keyword": "BLESS anime release date and Crunchyroll streaming",
+  "secondaryQuestions": [
+    "When does BLESS premiere in Japan?",
+    "Where does BLESS stream?",
+    "Where can I read the BLESS manga in English?"
+  ],
+  "editorialWords": 1248,
+  "verifiedOn": "2026-11-07",
+  "sources": [
+    "https://bless-anime.com/#onair",
+    "https://bless-anime.com/news/?id=71652",
+    "https://bless-anime.com/news/?id=71653",
+    "https://www.youtube.com/watch?v=1IcjukAV03Q",
+    "https://www.crunchyroll.com/es-es/news/announcements/2026/10/22/bless-anime-enero-2027-crunchyroll",
+    "https://kodansha.us/series/bless/",
+    "https://www.aniplex.co.jp/lineup/bless/"
+  ],
+  "limits": [
+    "January 8 at 11:30 p.m. JST applies to Japanese TV. Crunchyroll confirms January and territories, with exact streaming time, episode count and dub details unverified."
+  ],
+  "cover": {
+    "path": "/assets/images/covers/bless-main-key-visual.webp",
+    "imageUrl": "https://bless-anime.com/assets/img/top/visual/visual2.webp",
+    "sha256": "eaf7b2a856351d6bd1abe11037c59516f74cbb9ffd4c8fa7a355bb0682312cc8",
+    "originalDimensions": [
+      1556,
+      2192
+    ],
+    "sourceUrl": "https://bless-anime.com/news/?id=71652",
+    "credit": "© Yukino Sonoyama, Kodansha / Bless Production Committee",
+    "verification": "Downloaded and decoded from the official anime site and matched to the November 7 key visual."
+  },
+  "video": {
+    "path": "/assets/images/covers/bless-first-full-trailer.webp",
+    "imageUrl": "https://i.ytimg.com/vi/1IcjukAV03Q/maxresdefault.jpg",
+    "sha256": "c57fd2035aa69bd198a43dedbe83b40215e82a7ba34c9be82ff942a08df7a4f7",
+    "originalDimensions": [
+      1280,
+      720
+    ],
+    "status": "available",
+    "sourceUrl": "https://bless-anime.com/news/?id=71653",
+    "youtubeId": "1IcjukAV03Q",
+    "channel": "Aniplex",
+    "uploadDate": "2026-11-07T00:00:32-08:00",
+    "verification": "Matched to official PV announcement and public embeddable YouTube metadata."
+  }
+}
