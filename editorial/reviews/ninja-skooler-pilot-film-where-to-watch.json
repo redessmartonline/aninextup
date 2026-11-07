@@ -1,0 +1,43 @@
+{
+  "intent": "Watch the official pilot, check English captions, and distinguish the pilot from a full series.",
+  "keyword": "where to watch Ninja Skooler pilot film",
+  "secondaryQuestions": [
+    "Is the pilot free?",
+    "Does it have English subtitles?",
+    "Is there a full anime series?"
+  ],
+  "editorialWords": 1245,
+  "verifiedOn": "2026-11-07",
+  "sources": [
+    "https://prtimes.jp/main/html/rd/p/000000011.000141283.html",
+    "https://www.youtube.com/watch?v=hfrbzeG6v2I",
+    "https://www.youtube.com/@bluerights_official",
+    "https://iwami-takashi.bfan.link/Knots"
+  ],
+  "limits": [
+    "The official video response lists a Japanese ASR caption track and no English track. Availability of auto-translate depends on the player. No full series premiere is announced."
+  ],
+  "cover": {
+    "path": "/assets/images/covers/ninja-skooler-pilot-official.webp",
+    "imageUrl": "https://prcdn.freetls.fastly.net/release_image/141283/11/141283-11-d94cd097949935fce97b20febe526949-1920x1080.png?width=900&format=jpeg&quality=82",
+    "sha256": "15b8982979f86a8537e4ad0c4465c3a836fd1b0b68f03e70cbf3d39056b99478",
+    "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000011.000141283.html",
+    "credit": "©NINJA SKOOLER",
+    "originalDimensions": [
+      1920,
+      1080
+    ],
+    "verification": "Producer-issued artwork downloaded and decoded. The press announcement invites coverage and provides the required image credit."
+  },
+  "video": {
+    "path": "/assets/images/covers/ninja-skooler-pilot-official.webp",
+    "imageUrl": "https://prcdn.freetls.fastly.net/release_image/141283/11/141283-11-d94cd097949935fce97b20febe526949-1920x1080.png?width=900&format=jpeg&quality=82",
+    "sha256": "15b8982979f86a8537e4ad0c4465c3a836fd1b0b68f03e70cbf3d39056b99478",
+    "status": "available",
+    "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000011.000141283.html",
+    "youtubeId": "hfrbzeG6v2I",
+    "channel": "BLUE RIGHTS channel",
+    "uploadDate": "2026-11-05T17:00:08-08:00",
+    "verification": "Matched the official announcement with YouTube watch metadata. Public and embeddable, 537 seconds, Japanese automatic captions only. Press artwork matches the official video thumbnail."
+  }
+}
