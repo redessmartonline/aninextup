@@ -1,7 +1,7 @@
 {
-  "articles": 138,
-  "changed": 1,
-  "standardized": 138,
+  "articles": 139,
+  "changed": 0,
+  "standardized": 139,
   "unresolved": [],
   "records": [
     {
@@ -534,6 +534,12 @@
     },
     {
       "status": "ok",
+      "published": "2026-11-07",
+      "path": "articles/ninja-skooler-pilot-film-where-to-watch.html",
+      "changed": false
+    },
+    {
+      "status": "ok",
       "published": "2026-10-29",
       "path": "articles/no-clipping-my-way-to-supremacy-anime.html",
       "changed": false
@@ -608,7 +614,7 @@
       "status": "ok",
       "published": "2026-11-06",
       "path": "articles/rainy-day-serenade-anime-release-date.html",
-      "changed": true
+      "changed": false
     },
     {
       "status": "ok",
