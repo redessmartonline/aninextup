@@ -1,6 +1,6 @@
 {
-  "count": 259,
-  "last_run_count": 8,
+  "count": 260,
+  "last_run_count": 1,
   "failed_count": 0,
   "failed": [],
   "images": [
@@ -153,6 +153,11 @@
       "source": "https://aninextup.com/assets/images/covers/ninja-skooler-pilot-official.webp",
       "local": "/assets/images/covers/ninja-skooler-pilot-official.webp",
       "download_url": "https://aninextup.com/assets/images/covers/ninja-skooler-pilot-official.webp"
+    },
+    {
+      "source": "https://aninextup.com/assets/images/covers/ninjago-embers-ashes-official-teaser.webp",
+      "local": "/assets/images/covers/ninjago-embers-ashes-official-teaser.webp",
+      "download_url": "https://aninextup.com/assets/images/covers/ninjago-embers-ashes-official-teaser.webp"
     },
     {
       "source": "https://aninextup.com/assets/images/covers/nues-exorcist-official.png",
