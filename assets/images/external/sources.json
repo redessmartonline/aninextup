@@ -1,6 +1,6 @@
 {
-  "count": 256,
-  "last_run_count": 8,
+  "count": 257,
+  "last_run_count": 7,
   "failed_count": 0,
   "failed": [],
   "images": [
@@ -138,6 +138,11 @@
       "source": "https://aninextup.com/assets/images/covers/ms-isshiki-official.webp",
       "local": "/assets/images/covers/ms-isshiki-official.webp",
       "evidence_commit": "017f802e6438ddc25976212af14dbb13804edbd1"
+    },
+    {
+      "source": "https://aninextup.com/assets/images/covers/ninja-skooler-pilot-official.webp",
+      "local": "/assets/images/covers/ninja-skooler-pilot-official.webp",
+      "download_url": "https://aninextup.com/assets/images/covers/ninja-skooler-pilot-official.webp"
     },
     {
       "source": "https://aninextup.com/assets/images/covers/nues-exorcist-official.png",
