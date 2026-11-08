@@ -1,7 +1,7 @@
 {
-  "articles": 140,
+  "articles": 141,
   "changed": 0,
-  "standardized": 140,
+  "standardized": 141,
   "unresolved": [],
   "records": [
     {
@@ -482,6 +482,12 @@
       "status": "ok",
       "published": "2026-11-01",
       "path": "articles/mercedes-and-the-waning-moon-anime.html",
+      "changed": false
+    },
+    {
+      "status": "ok",
+      "published": "2026-11-08",
+      "path": "articles/minami-ke-season-5-korekara-release-date-watch-order.html",
       "changed": false
     },
     {
