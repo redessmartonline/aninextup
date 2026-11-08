@@ -1,6 +1,6 @@
 {
-  "count": 260,
-  "last_run_count": 1,
+  "count": 262,
+  "last_run_count": 8,
   "failed_count": 0,
   "failed": [],
   "images": [
@@ -138,6 +138,16 @@
       "source": "https://aninextup.com/assets/images/covers/mercedes-thumb.webp",
       "local": "/assets/images/covers/mercedes-thumb.webp",
       "evidence_commit": "71f65735104c41f37c2c6d54916a02b014cafce6"
+    },
+    {
+      "source": "https://aninextup.com/assets/images/covers/minami-ke-korekara-official-visual.webp",
+      "local": "/assets/images/covers/minami-ke-korekara-official-visual.webp",
+      "download_url": "https://aninextup.com/assets/images/covers/minami-ke-korekara-official-visual.webp"
+    },
+    {
+      "source": "https://aninextup.com/assets/images/covers/minami-ke-korekara-teaser.webp",
+      "local": "/assets/images/covers/minami-ke-korekara-teaser.webp",
+      "download_url": "https://aninextup.com/assets/images/covers/minami-ke-korekara-teaser.webp"
     },
     {
       "source": "https://aninextup.com/assets/images/covers/ms-isshiki-main-trailer.webp",
