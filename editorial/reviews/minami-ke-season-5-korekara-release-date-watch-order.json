@@ -1,0 +1,48 @@
+{
+  "intent": "Verify the fifth season release window and watch the previous Minami-ke TV seasons in order.",
+  "keyword": "Minami-ke season 5 release date and watch order",
+  "secondaryQuestions": [
+    "Is Korekara season 5?",
+    "Where do the Minami-ke OVAs fit?",
+    "Is international streaming confirmed?"
+  ],
+  "editorialWords": 1232,
+  "verifiedOn": "2026-11-08",
+  "sources": [
+    "https://minami-ke-5.com/",
+    "https://prtimes.jp/main/html/rd/p/000000164.000084062.html",
+    "https://www.youtube.com/watch?v=3x5HMpHPbqE",
+    "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=21422",
+    "https://yanmaga.jp/columns/articles/7904"
+  ],
+  "limits": [
+    "April 2027 is a Japanese broadcast month. No exact day, international platform, dub or episode count was established."
+  ],
+  "cover": {
+    "path": "/assets/images/covers/minami-ke-korekara-official-visual.webp",
+    "imageUrl": "https://prcdn.freetls.fastly.net/release_image/84062/164/84062-164-972485da1a79e9830f64bfa45072cb91-960x1280.png?width=720&format=jpeg&quality=85",
+    "sha256": "06a3d0bf04e695047d57f8eaf85244c211612e42a1c0479c1a308c1af37eeb3d",
+    "originalDimensions": [
+      720,
+      960
+    ],
+    "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000164.000084062.html",
+    "credit": "© Koharu Sakuraba, Kodansha / Minami-ke Korekara Production Committee",
+    "verification": "Official teaser visual from the production company announcement downloaded and decoded."
+  },
+  "video": {
+    "path": "/assets/images/covers/minami-ke-korekara-teaser.webp",
+    "imageUrl": "https://i.ytimg.com/vi/3x5HMpHPbqE/maxresdefault.jpg",
+    "sha256": "04ddebfc073959d999ee8031d8fe61a54dbd3866cf5221c83a5c7b9ae6ef043d",
+    "originalDimensions": [
+      1280,
+      720
+    ],
+    "status": "available",
+    "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000164.000084062.html",
+    "youtubeId": "3x5HMpHPbqE",
+    "channel": "Hakuhodo DY Music & Pictures / Showgate",
+    "uploadDate": "2026-11-07T22:01:37-08:00",
+    "verification": "Matches production announcement and official site. Original video metadata shows public embeddable playback and an 85-second runtime."
+  }
+}
