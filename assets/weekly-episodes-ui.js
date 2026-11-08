@@ -4,6 +4,7 @@ const todayRoot=document.querySelector('[data-weekly-episodes]');
 const weekRoot=document.querySelector('[data-weekly-episodes-week]');
 const select=document.querySelector('[data-episode-region]');
 const weekSource=document.querySelector('[data-weekly-episode-source]');
+const highlights=document.querySelector('[data-week-streaming]');
 if(!data||(!todayRoot&&!weekRoot))return;
 const tz=window.ANINEXTUP_DATA&&window.ANINEXTUP_DATA.site&&window.ANINEXTUP_DATA.site.timezone||data.timezone||'America/Santo_Domingo';
 const regions=data.regions||[];let selected=select?Number(select.value):0;if(!Number.isInteger(selected)||selected<0||selected>=regions.length)selected=0;
@@ -26,6 +27,9 @@ function render(){
   const start=new Date(current+'T12:00:00Z');start.setUTCDate(start.getUTCDate()-((start.getUTCDay()+6)%7));
   const end=new Date(start);end.setUTCDate(start.getUTCDate()+6);
   const iso=d=>d.toISOString().slice(0,10),startIso=iso(start),endIso=iso(end);
+  if(highlights&&data.renderHighlights&&window.ANINEXTUP_RELEASES){
+   highlights.innerHTML=data.renderHighlights(window.ANINEXTUP_RELEASES.context(new Date(),tz));
+  }
   const covered=!outsideCoverage&&data.validFrom<=startIso&&data.validThrough>=endIso;
   const officialCalendar='https://www.crunchyroll.com/pt-br/simulcastcalendar?date='+startIso;
   const calendarLink='<a href="'+officialCalendar+'" target="_blank" rel="noopener noreferrer">Check Crunchyroll’s official Brazil calendar</a>.';
@@ -36,7 +40,7 @@ function render(){
    weekSource.innerHTML=covered?'Verified coverage: '+esc(startIso)+' to '+esc(endIso)+'. <a href="'+esc(data.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Official source</a>. Times may change.':'';
   }
   if(!covered){
-   weekRoot.innerHTML='<p class="empty" role="status">The episode schedule for '+esc(dayLabel(startIso))+' to '+esc(dayLabel(endIso))+' is awaiting verification. '+calendarLink+'</p>';
+   weekRoot.innerHTML='<p class="empty" role="status">The episode schedule for '+esc(dayLabel(startIso))+' to '+esc(dayLabel(endIso))+' is awaiting verification. '+calendarLink+' See <a href="/today">Today</a> for verified Japanese TV airings.</p>';
    return;
   }
   const items=data.episodes.map(e=>({...e,localDate:displayDate(e)})).filter(e=>e.localDate>=startIso&&e.localDate<=endIso).sort((a,b)=>a.localDate.localeCompare(b.localDate)||(a.times[selected]||'').localeCompare(b.times[selected]||''));
