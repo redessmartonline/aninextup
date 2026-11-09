@@ -20,5 +20,11 @@
   tag.id = 'aninextup-google-ads';
   tag.async = true;
   tag.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-NL276DVG';
+  const robots = document.querySelector('meta[name="robots"]')?.content || '';
+  if (!/\bnoindex\b/i.test(robots)) {
+    tag.addEventListener('load', () => {
+      gtag('event', 'conversion', {send_to: 'AW-18543289744/bL0sCNDmh7UdEJDLkIpF'});
+    }, {once: true});
+  }
   document.head.appendChild(tag);
 })();

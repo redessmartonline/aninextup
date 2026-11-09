@@ -199,7 +199,7 @@ jobs:
               | cmp -s assets/latest-news.json - || return 1
             curl --fail --silent --show-error --max-time 15 \
               "https://aninextup.com/?deploy=$GITHUB_RUN_ID-$(date +%s%N)" \
-              | grep -F 'data-cookie-consent="targeting" data-aninextup-ads' >/dev/null
+              | grep -F 'AW-18543289744/bL0sCNDmh7UdEJDLkIpF' >/dev/null
           }
           if production_matches; then exit 0; fi
           version=$(printf '%s\n' "$DEPLOY_OUTPUT" | sed -nE 's/.*Current Version ID: ([[:xdigit:]-]{36}).*/\1/p' | tail -1)

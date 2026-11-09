@@ -17,11 +17,20 @@ for (const name of pages) {
 
 const tags = [];
 const existingTag = function () {};
+let onLoad;
+let robots = 'index,follow';
 const context = vm.createContext({
   window: {dataLayer: [{event: 'existing-event'}], gtag: existingTag},
   document: {
     getElementById: id => tags.find(tag => tag.id === id),
-    createElement: () => ({}),
+    querySelector: () => ({content: robots}),
+    createElement: () => ({
+      addEventListener(event, handler, options) {
+        assert.equal(event, 'load');
+        assert.equal(options.once, true);
+        onLoad = handler;
+      },
+    }),
     head: {appendChild: tag => tags.push(tag)},
   },
 });
@@ -40,4 +49,18 @@ for (const key of ['ad_storage', 'ad_user_data', 'ad_personalization']) {
 }
 assert.equal(start.event, 'gtm.js');
 assert.equal(context.window.dataLayer.length, 4);
-console.log('PASS: targeting consent markup on all pages, Ads initialized once, Analytics preserved.');
+assert.equal(typeof onLoad, 'function');
+onLoad();
+const conversion = Array.from(context.window.dataLayer.at(-1));
+assert.equal(context.window.dataLayer.length, 5);
+assert.deepEqual(conversion.slice(0, 2), ['event', 'conversion']);
+assert.equal(conversion[2].send_to, 'AW-18543289744/bL0sCNDmh7UdEJDLkIpF');
+
+robots = 'noindex';
+onLoad = undefined;
+tags.length = 0;
+context.window.dataLayer.length = 0;
+vm.runInContext(loader, context);
+assert.equal(onLoad, undefined);
+assert.equal(context.window.dataLayer.length, 3);
+console.log('PASS: targeting consent, one post-load Ads conversion on public pages, no conversion on noindex pages, GA4 preserved.');
