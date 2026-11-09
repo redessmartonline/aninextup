@@ -35,6 +35,7 @@ on:
       - "scripts/build_calendar.js"
       - "tests/calendar-expanded.test.cjs"
       - "tests/test_weekly_episode_expiry.cjs"
+      - "tests/test_article_broadcasts.cjs"
       - "scripts/build_popular_news.py"
       - "scripts/standardize_article_bylines.py"
       - "_headers"
@@ -133,6 +134,7 @@ jobs:
           node tests/test_homepage_first_render.cjs
           node tests/test_verified_broadcasts.cjs
           node tests/test_weekly_episode_expiry.cjs
+          node tests/test_article_broadcasts.cjs
 
       - name: Set up Node for newsletter validation
         uses: actions/setup-node@v4

@@ -54,6 +54,10 @@ def validate(path):
     if not 1200 <= word_count <= 2000:
         errors.append(f"Editorial body has {word_count} words; required range is 1200–2000 (excluding menus, video controls and related articles)")
     errors.extend(video_schema_errors(s))
+    if re.search(r'<dt\b[^>]*>\s*Next\b[^<]*\b(?:episode|broadcast)\b', s, re.I):
+        errors.append("Use a dated data-broadcast-at label for upcoming episodes or broadcasts")
+    if "data-broadcast-at=" in s and not re.search(r'<script\b[^>]*src="/assets/article-broadcasts\.js(?:[?"][^>]*)>', s):
+        errors.append("A dated broadcast label requires the article-broadcasts script")
     dom = Audit()
     dom.feed(s)
     has = lambda tag, cls: any(t == tag and cls in a.get("class", "").split() for t, a in dom.tags)
