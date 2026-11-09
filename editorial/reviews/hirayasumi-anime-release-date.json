@@ -1,0 +1,52 @@
+{
+  "intent": "Find the confirmed Netflix window for the Hirayasumi anime and the first English manga volume.",
+  "keyword": "Hirayasumi anime Netflix release date",
+  "secondaryQuestions": [
+    "Where can I watch Hirayasumi in Japan?",
+    "Is there an exact Netflix release date?",
+    "Where can I read the English manga?"
+  ],
+  "editorialWords": 1244,
+  "verifiedOn": "2026-11-09",
+  "sources": [
+    "https://hirayasumi-anime.jp/news/61me3iapu/",
+    "https://hirayasumi-anime.jp/en/",
+    "https://hirayasumi-anime.jp/news/mainvisual/",
+    "https://www.youtube.com/watch?v=ZoVtjJsdyB4",
+    "https://hirayasumi-anime.jp/news/rdhlz7kvk1/",
+    "https://hirayasumi-anime.jp/news/ed-artist/",
+    "https://hirayasumi-anime.jp/news/add-cast-01/",
+    "https://www.viz.com/blog/posts/a-first-look-at-the-hirayasumi-anime",
+    "https://www.viz.com/manga-books/manga/hirayasumi-volume-1-0/product/7855"
+  ],
+  "limits": [
+    "January 2027 is a month window for Netflix, NHK General and U-NEXT. Exact days, episode schedule and dub details are unannounced."
+  ],
+  "cover": {
+    "path": "/assets/images/external/64187cad3e8f87e4c7953fe9827452236809b69fa67435cb1bc7216b60d2ba2d.webp",
+    "imageUrl": "https://images.microcms-assets.io/assets/c44392189a8b469a9081892cfb643293/748b8a300806461a98622f11dad150f1/kv_photo.jpg?w=900",
+    "sourceUrl": "https://hirayasumi-anime.jp/news/mainvisual/",
+    "sha256": "50e8cc0dafc8c2be18a93a9b1a644a06fe8464b4f145747b7fd56f59f7bb6e16",
+    "originalDimensions": [
+      900,
+      1248
+    ],
+    "credit": "© Keigo Shinzo / Shogakukan / Hirayasumi Production Committee",
+    "verification": "Existing local cover compared to the official September key visual, decoded and matched."
+  },
+  "video": {
+    "path": "/assets/images/covers/hirayasumi-official-teaser.webp",
+    "imageUrl": "https://i.ytimg.com/vi/ZoVtjJsdyB4/maxresdefault.jpg",
+    "sourceUrl": "https://hirayasumi-anime.jp/news/mainvisual/",
+    "sha256": "2495558b78806efcf105bc37e6d4d51ba5dae7eca36f4bbf6381ea9191267a5d",
+    "originalDimensions": [
+      1280,
+      720
+    ],
+    "status": "available",
+    "youtubeId": "ZoVtjJsdyB4",
+    "channel": "ShoPro Anime Channel",
+    "uploadDate": "2026-09-28T16:00:07-07:00",
+    "verification": "The official anime announcement links this 42-second ShoPro upload. YouTube metadata confirms public embedded playback."
+  }
+}
