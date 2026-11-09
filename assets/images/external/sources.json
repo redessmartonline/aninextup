@@ -1,6 +1,6 @@
 {
-  "count": 266,
-  "last_run_count": 6,
+  "count": 268,
+  "last_run_count": 8,
   "failed_count": 0,
   "failed": [],
   "images": [
@@ -88,6 +88,16 @@
       "source": "https://aninextup.com/assets/images/covers/bokuyaba-season-3-teaser.webp",
       "local": "/assets/images/covers/bokuyaba-season-3-teaser.webp",
       "download_url": "https://aninextup.com/assets/images/covers/bokuyaba-season-3-teaser.webp"
+    },
+    {
+      "source": "https://aninextup.com/assets/images/covers/chao-uk-official-poster.webp",
+      "local": "/assets/images/covers/chao-uk-official-poster.webp",
+      "download_url": "https://aninextup.com/assets/images/covers/chao-uk-official-poster.webp"
+    },
+    {
+      "source": "https://aninextup.com/assets/images/covers/chao-uk-trailer.webp",
+      "local": "/assets/images/covers/chao-uk-trailer.webp",
+      "download_url": "https://aninextup.com/assets/images/covers/chao-uk-trailer.webp"
     },
     {
       "source": "https://aninextup.com/assets/images/covers/dark-summoner-omake-official.webp",
