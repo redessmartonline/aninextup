@@ -1,7 +1,7 @@
 {
-  "articles": 141,
+  "articles": 142,
   "changed": 0,
-  "standardized": 141,
+  "standardized": 142,
   "unresolved": [],
   "records": [
     {
@@ -506,6 +506,12 @@
       "status": "ok",
       "published": "2026-10-17",
       "path": "articles/murcielago-anime-january-2027.html",
+      "changed": false
+    },
+    {
+      "status": "ok",
+      "published": "2026-11-09",
+      "path": "articles/my-crushs-crush-anime-release-date.html",
       "changed": false
     },
     {
