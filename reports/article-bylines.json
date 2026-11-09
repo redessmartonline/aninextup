@@ -1,7 +1,7 @@
 {
-  "articles": 142,
+  "articles": 143,
   "changed": 0,
-  "standardized": 142,
+  "standardized": 143,
   "unresolved": [],
   "records": [
     {
@@ -146,6 +146,12 @@
       "status": "ok",
       "published": "2026-11-02",
       "path": "articles/bocchi-the-rock-starry-footprints-movie.html",
+      "changed": false
+    },
+    {
+      "status": "ok",
+      "published": "2026-11-09",
+      "path": "articles/chao-uk-ireland-cinema-release-date.html",
       "changed": false
     },
     {
