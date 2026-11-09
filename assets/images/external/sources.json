@@ -1,6 +1,6 @@
 {
   "count": 266,
-  "last_run_count": 2,
+  "last_run_count": 7,
   "failed_count": 0,
   "failed": [],
   "images": [
@@ -287,7 +287,8 @@
     {
       "source": "https://aninextup.com/assets/images/external/37dbd40f1207408df4bf1ace84617157880809abc097ae614eb10f335c4f5b63.webp",
       "local": "/assets/images/external/37dbd40f1207408df4bf1ace84617157880809abc097ae614eb10f335c4f5b63.webp",
-      "evidence_commit": "c3433443478df98b2b1e0a4e7275bd6b8a11c12b"
+      "evidence_commit": "c3433443478df98b2b1e0a4e7275bd6b8a11c12b",
+      "download_url": "https://aninextup.com/assets/images/external/37dbd40f1207408df4bf1ace84617157880809abc097ae614eb10f335c4f5b63.webp"
     },
     {
       "source": "https://aninextup.com/assets/images/external/5b99045ade93940fa12b44de70038e19402fa31801833eaf54b64c39696a6b89.webp",
