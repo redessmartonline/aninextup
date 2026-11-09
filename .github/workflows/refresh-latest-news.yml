@@ -5,6 +5,7 @@ on:
     paths:
       - 'articles/**'
       - 'scripts/build_latest_news.py'
+      - 'scripts/editorial_dates.py'
       - 'tests/test_latest_news.py'
       - 'scripts/optimize_news_images.py'
       - '.github/workflows/refresh-latest-news.yml'

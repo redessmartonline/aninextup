@@ -6,6 +6,11 @@ import html, json, re, subprocess
 from datetime import date
 from pathlib import Path
 
+if __package__:
+    from .editorial_dates import article_metadata, iso_day
+else:
+    from editorial_dates import article_metadata, iso_day
+
 ROOT = Path(__file__).resolve().parents[1]
 ARTICLES = ROOT / "articles"
 OUT = ROOT / "assets" / "latest-news.json"
@@ -61,7 +66,19 @@ def publication_timestamp(path):
     except (OSError, ValueError, subprocess.CalledProcessError):
         return 0
 
-def homepage_cards(items):
+def updated_guide(path, item):
+    source = path.read_text(encoding="utf-8")
+    if not re.search(r'<section\b[^>]*\bclass=["\'][^"\']*\brelease-summary\b', source, re.I):
+        return None
+    for metadata in article_metadata(source):
+        published = iso_day(metadata.get("datePublished"))
+        updated = iso_day(metadata.get("dateModified"))
+        if published and updated and updated > published:
+            return dict(item, title=meta(source, "og:title") or item["title"],
+                        updated=updated, tag="UPDATED VIEWING GUIDE")
+    return None
+
+def homepage_cards(items, link_label="READ UPDATE"):
     cards = []
     for item in items:
         href = "/" + html.escape(item["article"], quote=True)
@@ -74,14 +91,14 @@ def homepage_cards(items):
             f'<img src="{image}" alt="{title}" loading="lazy">'
             f'<div class="visual-body"><span class="tag">{tag}</span>'
             f'<h3>{title}</h3><p>{description}</p>'
-            f'<span class="more">READ UPDATE →</span></div></a>'
+            f'<span class="more">{link_label} →</span></div></a>'
         )
     return "".join(cards)
 
-def replace_cards(source, attribute, items):
+def replace_cards(source, attribute, items, link_label="READ UPDATE"):
     opening = re.search(r'<div\b(?=[^>]*\b' + re.escape(attribute) + r'\b)[^>]*>', source, re.I)
     if not opening:
-        raise SystemExit("Could not find the homepage latest-news container")
+        raise SystemExit(f"Could not find the homepage container {attribute}")
     depth = 1
     content_start = opening.end()
     end = None
@@ -94,15 +111,16 @@ def replace_cards(source, attribute, items):
         else:
             depth += 1
     if end is None:
-        raise SystemExit("Could not find the end of the homepage latest-news container")
-    return source[:content_start] + homepage_cards(items) + source[end:]
+        raise SystemExit(f"Could not find the end of the homepage container {attribute}")
+    return source[:content_start] + homepage_cards(items, link_label) + source[end:]
 
 
-def update_homepage(items):
+def update_homepage(items, guides):
     homepage = ROOT / "index.html"
     source = homepage.read_text(encoding="utf-8")
     source = replace_cards(source, "data-home-latest", items[:4])
     source = replace_cards(source, "data-home-more", items[4:])
+    source = replace_cards(source, "data-home-updated-guides", guides[:6], "READ GUIDE")
     homepage.write_text(source, encoding="utf-8")
 
 def main():
@@ -117,7 +135,10 @@ def main():
     # Edits and previous editorial pins do not promote an older publication.
     latest = items
     OUT.write_text(json.dumps({"generated":date.today().isoformat(),"items":latest}, ensure_ascii=False, separators=(",",":"))+"\n", encoding="utf-8")
-    update_homepage(latest)
+    guides = [guide for item in latest
+              if (guide := updated_guide(ROOT / (item["article"] + ".html"), item))]
+    guides.sort(key=lambda guide: guide["updated"], reverse=True)
+    update_homepage(latest, guides)
     print("Generated latest news:", len(items), "articles,", len(latest), "homepage cards")
 
 if __name__ == "__main__":

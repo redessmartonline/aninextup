@@ -25,6 +25,28 @@ class ArticleMetadataTests(unittest.TestCase):
     def test_noindex_article_is_excluded(self):
         self.assertIsNone(self.extract_fixture('<meta name="robots" content="noindex,follow"><meta property="og:title" content="Draft"><script type="application/ld+json">{"@type":"NewsArticle","datePublished":"2026-11-04"}</script>'))
 
+class UpdatedGuideTests(unittest.TestCase):
+    def test_only_editorial_updates_to_release_guides_qualify(self):
+        page = (
+            '<meta property="og:title" content="Anime Viewing Guide">'
+            '<script type="application/ld+json">{"@type":"VideoObject",'
+            '"dateModified":"2026-11-10"}</script>'
+            '<script type="application/ld+json">{"@type":"NewsArticle",'
+            '"datePublished":"2026-11-08","dateModified":"EDITORIAL_DATE"}</script>'
+        )
+        item = {"title": "Anime"}
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / "guide.html"
+            path.write_text(page.replace("EDITORIAL_DATE", "2026-11-09"))
+            self.assertIsNone(build_latest_news.updated_guide(path, item))
+            summary = '<section class="release-summary"></section>'
+            path.write_text(summary + page.replace("EDITORIAL_DATE", "2026-11-08"))
+            self.assertIsNone(build_latest_news.updated_guide(path, item))
+            path.write_text(summary + page.replace("EDITORIAL_DATE", "2026-11-09"))
+            guide = build_latest_news.updated_guide(path, item)
+            self.assertEqual(guide["updated"], "2026-11-09")
+            self.assertEqual(guide["title"], "Anime Viewing Guide")
+
 class LatestNewsArchiveTests(unittest.TestCase):
     def test_every_published_story_remains_discoverable(self):
         expected={row["article"] for path in build_latest_news.ARTICLES.glob("*.html") if (row:=build_latest_news.extract(path))}

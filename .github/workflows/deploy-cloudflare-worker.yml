@@ -17,6 +17,8 @@ on:
       - "scripts/test_comments_live.mjs"
       - "scripts/build_article_community.py"
       - "scripts/build_newsletter_popup.py"
+      - "scripts/build_latest_news.py"
+      - "scripts/editorial_dates.py"
       - "scripts/build_search_index.py"
       - "tests/test_search_index.py"
       - "scripts/build_watch_catalog.js"
