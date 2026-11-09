@@ -170,11 +170,38 @@ jobs:
           fi
 
       - name: Deploy with Wrangler
+        id: deploy
         uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: deploy
+
+      - name: Verify production serves the deployed news feed
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          DEPLOY_OUTPUT: ${{ steps.deploy.outputs.command-output }}
+        shell: bash
+        run: |
+          feed_matches() {
+            curl --fail --silent --show-error --max-time 15 \
+              "https://aninextup.com/assets/latest-news.json?deploy=$GITHUB_RUN_ID-$(date +%s%N)" \
+              | cmp -s assets/latest-news.json -
+          }
+          if feed_matches; then exit 0; fi
+          version=$(printf '%s\n' "$DEPLOY_OUTPUT" | sed -nE 's/.*Current Version ID: ([[:xdigit:]-]{36}).*/\1/p' | tail -1)
+          if [[ ! "$version" =~ ^[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}$ ]]; then
+            echo "::error::Could not identify the version just built."
+            exit 1
+          fi
+          npx --yes wrangler@4 versions deploy "${version}@100%" --yes --message "Activate the verified production build"
+          for attempt in 1 2 3 4 5 6; do
+            if feed_matches; then exit 0; fi
+            sleep 5
+          done
+          echo "::error::Production still serves a different news feed."
+          exit 1
 
       - name: Verify live immediate newsletter signup and unsubscribe
         env:
