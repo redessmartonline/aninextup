@@ -1,6 +1,6 @@
 {
-  "count": 264,
-  "last_run_count": 6,
+  "count": 266,
+  "last_run_count": 2,
   "failed_count": 0,
   "failed": [],
   "images": [
@@ -113,6 +113,11 @@
       "source": "https://aninextup.com/assets/images/covers/firefly-wedding.jpg",
       "local": "/assets/images/covers/firefly-wedding.jpg",
       "evidence_commit": "66961474da6bcab2b88115797434266294086059"
+    },
+    {
+      "source": "https://aninextup.com/assets/images/covers/hirayasumi-official-teaser.webp",
+      "local": "/assets/images/covers/hirayasumi-official-teaser.webp",
+      "download_url": "https://aninextup.com/assets/images/covers/hirayasumi-official-teaser.webp"
     },
     {
       "source": "https://aninextup.com/assets/images/covers/im-looking-for-a-zombie.jpg",
@@ -293,6 +298,11 @@
       "source": "https://aninextup.com/assets/images/external/5f80028e33c806f976c9cea58313b60ee8b507d93c338d7320c48105e37bacf6.webp",
       "local": "/assets/images/external/5f80028e33c806f976c9cea58313b60ee8b507d93c338d7320c48105e37bacf6.webp",
       "evidence_commit": "c3433443478df98b2b1e0a4e7275bd6b8a11c12b"
+    },
+    {
+      "source": "https://aninextup.com/assets/images/external/64187cad3e8f87e4c7953fe9827452236809b69fa67435cb1bc7216b60d2ba2d.webp",
+      "local": "/assets/images/external/64187cad3e8f87e4c7953fe9827452236809b69fa67435cb1bc7216b60d2ba2d.webp",
+      "download_url": "https://aninextup.com/assets/images/external/64187cad3e8f87e4c7953fe9827452236809b69fa67435cb1bc7216b60d2ba2d.webp"
     },
     {
       "source": "https://aninextup.com/assets/images/external/67b9b7f3d42e3f9ec613e43732be4007bf25ff2dbb065594fdc2d8c895c87055.webp",
