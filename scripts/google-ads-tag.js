@@ -20,11 +20,5 @@
   tag.id = 'aninextup-google-ads';
   tag.async = true;
   tag.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-NL276DVG';
-  const robots = document.querySelector('meta[name="robots"]')?.content || '';
-  if (!/\bnoindex\b/i.test(robots)) {
-    tag.addEventListener('load', () => {
-      gtag('event', 'conversion', {send_to: 'AW-18543289744/bL0sCNDmh7UdEJDLkIpF'});
-    }, {once: true});
-  }
-  document.head.appendChild(tag);
+  // TermsFeed executes this block only after targeting consent.\n  // A page view is traffic, not a Google Ads conversion.\n  // Keep the Ads container for measurement without firing a conversion on every load.\n  document.head.appendChild(tag);
 })();
