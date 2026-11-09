@@ -20,5 +20,8 @@
   tag.id = 'aninextup-google-ads';
   tag.async = true;
   tag.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-NL276DVG';
-  // TermsFeed executes this block only after targeting consent.\n  // A page view is traffic, not a Google Ads conversion.\n  // Keep the Ads container for measurement without firing a conversion on every load.\n  document.head.appendChild(tag);
+  // TermsFeed executes this block only after targeting consent.
+  // A page view is traffic, not a Google Ads conversion.
+  // Keep the Ads container for measurement without firing a conversion on every load.
+  document.head.appendChild(tag);
 })();
