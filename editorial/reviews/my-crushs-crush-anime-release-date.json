@@ -1,0 +1,49 @@
+{
+  "intent": "Find the official anime premiere window and teaser, and learn where to start the English manga.",
+  "keyword": "My Crush’s Crush anime release date",
+  "secondaryQuestions": [
+    "Where can I watch My Crush’s Crush?",
+    "When does the English manga come out?",
+    "Who voices Sora, Miya and Asahi?"
+  ],
+  "editorialWords": 1311,
+  "verifiedOn": "2026-11-09",
+  "sources": [
+    "https://bokusuki.com/news/detail.php?id=1137168",
+    "https://bokusuki.com/",
+    "https://www.youtube.com/watch?v=_iOewgdlvMM",
+    "https://yenpress.com/titles/9798855429411-my-crush-s-crush-vol-1",
+    "https://yenpress.com/titles/9798855429428-my-crush-s-crush-vol-1"
+  ],
+  "limits": [
+    "April 2027 applies to Japanese TV. Exact day, episode count and international streaming are unannounced.",
+    "February 23, 2027 is the Yen Press English Volume 1 date."
+  ],
+  "cover": {
+    "path": "/assets/images/covers/my-crushs-crush-official-visual.webp",
+    "imageUrl": "https://bokusuki.com/assets/images/top/mv/mv01.jpg?202611081531",
+    "sha256": "f0be4b1c42e117dc4cb16beb25094171ca752a1ef4f2e723a910e6db1335b4f8",
+    "originalDimensions": [
+      5788,
+      8186
+    ],
+    "sourceUrl": "https://bokusuki.com/",
+    "credit": "© Sekina Aoi, Ryo Tsuzura / Hakusensha / My Crush’s Crush Production Committee",
+    "verification": "Official rooftop teaser visual verified against the anime site and decoded locally."
+  },
+  "video": {
+    "path": "/assets/images/covers/my-crushs-crush-official-teaser.webp",
+    "imageUrl": "https://i.ytimg.com/vi/_iOewgdlvMM/maxresdefault.jpg",
+    "sha256": "b0171607f8ecb86f516efdd36f6af9da4a670bdff560b71737812aacbdbead9c",
+    "originalDimensions": [
+      1280,
+      720
+    ],
+    "status": "available",
+    "sourceUrl": "https://bokusuki.com/news/detail.php?id=1137168",
+    "youtubeId": "_iOewgdlvMM",
+    "channel": "avex pictures",
+    "uploadDate": "2026-11-08T07:00:39-08:00",
+    "verification": "Production-site video ID matches avex pictures upload. YouTube metadata confirms public embedded playback and a 49-second runtime."
+  }
+}
