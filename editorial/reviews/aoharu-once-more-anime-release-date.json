@@ -1,0 +1,52 @@
+{
+  "intent": "Find the TV broadcast window, official teaser and legal viewing status for Aoharu Once More.",
+  "keyword": "Aoharu Once More anime release date",
+  "secondaryQuestions": [
+    "Where can I watch the anime?",
+    "Who voices Hayato and Ritsu?",
+    "Where can I read the English manga?"
+  ],
+  "editorialWords": 1253,
+  "verifiedOn": "2026-11-11",
+  "sources": [
+    "https://animationid.com/post-3993/",
+    "https://animationid.com/aoharuoncemore/",
+    "https://www.tv-tokyo.co.jp/anime/aoharuoncemore/",
+    "https://prtimes.jp/main/html/rd/p/000001831.000007785.html",
+    "https://animationid.com/post-3995/",
+    "https://livepocket.jp/e/cvquw",
+    "https://tokyopop.com/products/9781427888174_aoharu-once-more",
+    "https://www.penguinrandomhouse.com/books/833340/aoharu-once-more-by-toworu-miyata/",
+    "https://www.ebookrenta.com/renta/sc/frm/item/155703/"
+  ],
+  "limits": [
+    "January 2027 is the Japanese TV Tokyo window. No exact day or international streaming was announced. The advance screening notice has a weekday discrepancy; consult the ticket listing."
+  ],
+  "cover": {
+    "path": "/assets/images/covers/aoharu-once-more-official-visual.webp",
+    "imageUrl": "https://animationid.com/all/wp-content/uploads/2026/11/img_KV-2.png",
+    "sourceUrl": "https://animationid.com/aoharuoncemore/",
+    "originalDimensions": [
+      768,
+      1300
+    ],
+    "sha256": "2ab3c8cadd6cf27212f5b93db334a8107a6ad8d5b9fde513bd2e3529cd8d8233",
+    "credit": "© Toworu Miyata, ShuCream / Aoharu Once More Production Committee",
+    "verification": "Official vertical visual displayed on the Animation ID project site, with TV Tokyo and January 2027 printed on it."
+  },
+  "video": {
+    "path": "/assets/images/covers/aoharu-once-more-teaser.webp",
+    "imageUrl": "https://i.ytimg.com/vi/zydSyuyy0q8/maxresdefault.jpg",
+    "sourceUrl": "https://www.youtube.com/watch?v=zydSyuyy0q8",
+    "originalDimensions": [
+      1280,
+      720
+    ],
+    "sha256": "fdf533accf029ca3054f14c299c4267ede2e35a6a5f7412a6b53d2a271f44c6b",
+    "status": "available",
+    "youtubeId": "zydSyuyy0q8",
+    "channel": "BALLOON",
+    "uploadDate": "2026-11-10T16:00:11-08:00",
+    "verification": "Animation ID links the BALLOON upload. YouTube page metadata confirms a 33-second video, embed playback and the publication timestamp."
+  }
+}
