@@ -1,5 +1,5 @@
 {
-  "count": 270,
+  "count": 272,
   "last_run_count": 2,
   "failed_count": 0,
   "failed": [],
@@ -193,6 +193,16 @@
       "source": "https://aninextup.com/assets/images/covers/my-crushs-crush-official-visual.webp",
       "local": "/assets/images/covers/my-crushs-crush-official-visual.webp",
       "download_url": "https://aninextup.com/assets/images/covers/my-crushs-crush-official-visual.webp"
+    },
+    {
+      "source": "https://aninextup.com/assets/images/covers/nanatsuya-shinobu-official-visual.webp",
+      "local": "/assets/images/covers/nanatsuya-shinobu-official-visual.webp",
+      "download_url": "https://aninextup.com/assets/images/covers/nanatsuya-shinobu-official-visual.webp"
+    },
+    {
+      "source": "https://aninextup.com/assets/images/covers/nanatsuya-shinobu-teaser.webp",
+      "local": "/assets/images/covers/nanatsuya-shinobu-teaser.webp",
+      "download_url": "https://aninextup.com/assets/images/covers/nanatsuya-shinobu-teaser.webp"
     },
     {
       "source": "https://aninextup.com/assets/images/covers/ninja-skooler-pilot-official.webp",
