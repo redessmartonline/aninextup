@@ -1,0 +1,50 @@
+{
+  "intent": "Find the TV broadcast window, official teaser and legal viewing status for Nanatsu-ya: Shinobu and Her Jewelry Box.",
+  "keyword": "Nanatsu-ya: Shinobu and Her Jewelry Box anime release date",
+  "secondaryQuestions": [
+    "Where can I watch the anime?",
+    "Who is making the anime?",
+    "Where can I read the English manga?"
+  ],
+  "editorialWords": 1252,
+  "verifiedOn": "2026-11-11",
+  "sources": [
+    "https://news.ponycanyon.co.jp/2026/11/127721",
+    "https://nanatsuya-shinobu-anime.com/",
+    "https://kisscomic.com/c/nanatsuya/",
+    "https://www.kodansha.co.jp/titles/1000020666",
+    "https://kmanga.kodansha.com/title/10638/episode/360082",
+    "https://mangaplaza.com/title/0303012343/",
+    "https://animetv-jp.net/nanatsu-ya-shinobu-and-her-jewelry-box-anime-set-for-2027/"
+  ],
+  "limits": [
+    "2027 is the confirmed Japanese TV window. Month, broadcaster, cast and international streaming are pending. The November 13 date belongs to Japanese manga volume 28."
+  ],
+  "cover": {
+    "path": "/assets/images/covers/nanatsuya-shinobu-official-visual.webp",
+    "imageUrl": "https://animetv-jp.net/wp-content/uploads/2026/11/Teaser-Visual-Nanatsu-ya_-Shinobu-and-Her-Jewelry-Box-1068x1508.png",
+    "sourceUrl": "https://news.ponycanyon.co.jp/2026/11/127721",
+    "originalDimensions": [
+      1068,
+      1508
+    ],
+    "sha256": "bb24db2bdd4bd8d8e21c4f9b9ed7ef75bfdffb548b92ab1736e993ae8cabd969",
+    "credit": "© Tomoko Ninomiya, KODANSHA / Nanatsuya Partners",
+    "verification": "Official teaser visual reproduced in AnimeTV’s coverage of the Pony Canyon announcement."
+  },
+  "video": {
+    "path": "/assets/images/covers/nanatsuya-shinobu-teaser.webp",
+    "imageUrl": "https://i.ytimg.com/vi/91yBQCHHjZ8/maxresdefault.jpg",
+    "sourceUrl": "https://www.youtube.com/watch?v=91yBQCHHjZ8",
+    "originalDimensions": [
+      1280,
+      720
+    ],
+    "sha256": "f83bbb14527d6d00bc14621cfe4fcec5404fcc0c3585f1f47b31bfd3344545d2",
+    "status": "available",
+    "youtubeId": "91yBQCHHjZ8",
+    "channel": "PONY CANYON",
+    "uploadDate": "2026-11-11T01:00:34-08:00",
+    "verification": "Pony Canyon’s announcement links this upload. YouTube page metadata confirms embed playback and the publication timestamp."
+  }
+}
