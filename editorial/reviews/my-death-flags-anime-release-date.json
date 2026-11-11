@@ -1,0 +1,38 @@
+{
+  "intent": "Find the 2027 TV anime release status and identify the official English manga starting volume.",
+  "keyword": "My Death Flags Show No Sign of Ending anime release date",
+  "secondaryQuestions": [
+    "Where can I read the English manga?",
+    "Will the anime stream outside Japan?",
+    "Is the original story a novel or a manga?"
+  ],
+  "editorialWords": 1234,
+  "verifiedOn": "2026-11-11",
+  "sources": [
+    "https://prtimes.jp/main/html/rd/p/000000054.000070922.html",
+    "https://mangabox.ink/special/orefura",
+    "https://onepeacebooks.com/jt/DeathFlags.html",
+    "https://www.onepeacebooks.com/blog/?p=388",
+    "https://www.mangabox.me/reader/127460/episodes/52977/"
+  ],
+  "limits": [
+    "Only the 2027 TV anime window is confirmed. Premiere month, broadcaster, studio, cast, episode count and international streaming were not announced."
+  ],
+  "cover": {
+    "path": "/assets/images/covers/my-death-flags-official-announcement.webp",
+    "imageUrl": "https://prcdn.freetls.fastly.net/release_image/70922/54/70922-54-4b2a94241a5948aade4648e28c02e1ca-1906x2700.png?width=900&format=jpeg&quality=90",
+    "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000054.000070922.html",
+    "sha256": "0287822c57bd73765545ccd1e82eabc9cd5e947071b883c2cec0c47d9ec7b32c",
+    "originalDimensions": [
+      900,
+      1275
+    ],
+    "credit": "© Mitsuya Otosu, Izumi / Manga Box",
+    "verification": "Manga Box’s announcement artwork depicting Harold on a throne, downloaded from its press image link and reviewed visually."
+  },
+  "video": {
+    "status": "not-available",
+    "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000054.000070922.html",
+    "reason": "The initial announcement contains the commemorative illustration and creator messages but no official anime trailer."
+  }
+}
