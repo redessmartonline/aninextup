@@ -1,7 +1,7 @@
 {
-  "articles": 143,
+  "articles": 144,
   "changed": 0,
-  "standardized": 143,
+  "standardized": 144,
   "unresolved": [],
   "records": [
     {
@@ -518,6 +518,12 @@
       "status": "ok",
       "published": "2026-11-09",
       "path": "articles/my-crushs-crush-anime-release-date.html",
+      "changed": false
+    },
+    {
+      "status": "ok",
+      "published": "2026-11-11",
+      "path": "articles/my-death-flags-anime-release-date.html",
       "changed": false
     },
     {
