@@ -1,0 +1,47 @@
+{
+  "intent": "Find the North American premiere, the HIDIVE distribution status and the viewing order for Made in Abyss: Awakening Mystery.",
+  "keyword": "Made in Abyss Awakening Mystery release date",
+  "secondaryQuestions": [
+    "When is the Anime Frontier premiere?",
+    "When will HIDIVE release the film?",
+    "What should I watch first?"
+  ],
+  "editorialWords": 1357,
+  "verifiedOn": "2026-11-11",
+  "sources": [
+    "https://news.hidive.com/2026/11/10/new-movie-made-in-abyss-awakening-mystery-comes-to-hidive",
+    "https://animefrontier.com/",
+    "https://miabyss.com/movie_part1/movie.html",
+    "https://miabyss.com/news_movie/article041.html",
+    "https://miabyss.com/news_movie/article032.html"
+  ],
+  "limits": [
+    "December 5 is the convention premiere. Exact 2027 date, territories and release format are unannounced. Part 2 is in production and undated."
+  ],
+  "cover": {
+    "path": "/assets/images/external/7e30c3f12611facbe83d725de99491a406e26519af7286c199b3961221ad816e.webp",
+    "imageUrl": "https://miabyss.com/part1_images/movie/tmb_003.jpg",
+    "sourceUrl": "https://miabyss.com/movie_part1/movie.html",
+    "originalDimensions": [
+      720,
+      405
+    ],
+    "sha256": "924e358fe768b38eed2dc8423c2ec939febf32181ab06739554d605776fd8358",
+    "credit": "© Akihito Tsukushi, Takeshobo / Made in Abyss Theatrical Series Production Committee",
+    "verification": "Existing production still credited to the official Part 1 movie page."
+  },
+  "video": {
+    "path": "/assets/images/external/e323f4bda516f9b428fd9536cbadb2a74c23e78205c6e38f0a6d86d0e5139c29.webp",
+    "imageUrl": "https://i.ytimg.com/vi/Sy7cLG6XHRY/hqdefault.jpg",
+    "sourceUrl": "https://www.youtube.com/watch?v=Sy7cLG6XHRY",
+    "originalDimensions": [
+      480,
+      360
+    ],
+    "sha256": "25e457d6d4965bf583d3253f8cd9dc9fd689a424c55733560c25c05852c3bab3",
+    "status": "available",
+    "youtubeId": "Sy7cLG6XHRY",
+    "channel": "KADOKAWAanime",
+    "verification": "Existing official Japanese Part 1 trailer, sourced to the film’s production video page."
+  }
+}
