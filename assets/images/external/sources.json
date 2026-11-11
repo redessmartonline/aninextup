@@ -1,6 +1,6 @@
 {
-  "count": 268,
-  "last_run_count": 6,
+  "count": 270,
+  "last_run_count": 2,
   "failed_count": 0,
   "failed": [],
   "images": [
@@ -63,6 +63,16 @@
       "source": "https://aninextup.com/assets/images/covers/aoashi-season-2-official.jpg",
       "local": "/assets/images/covers/aoashi-season-2-official.jpg",
       "evidence_commit": "66961474da6bcab2b88115797434266294086059"
+    },
+    {
+      "source": "https://aninextup.com/assets/images/covers/aoharu-once-more-official-visual.webp",
+      "local": "/assets/images/covers/aoharu-once-more-official-visual.webp",
+      "download_url": "https://aninextup.com/assets/images/covers/aoharu-once-more-official-visual.webp"
+    },
+    {
+      "source": "https://aninextup.com/assets/images/covers/aoharu-once-more-teaser.webp",
+      "local": "/assets/images/covers/aoharu-once-more-teaser.webp",
+      "download_url": "https://aninextup.com/assets/images/covers/aoharu-once-more-teaser.webp"
     },
     {
       "source": "https://aninextup.com/assets/images/covers/bless-first-full-trailer.webp",
