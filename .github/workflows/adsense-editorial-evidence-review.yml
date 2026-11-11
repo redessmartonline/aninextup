@@ -1,0 +1,23 @@
+name: AdSense Editorial Evidence Review
+on:
+  push:
+    branches:
+      - audit/adsense-content-policy-20261016
+  workflow_dispatch:
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compare articles and inventory image rights
+        run: python scripts/audit_adsense_originality_and_rights.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: adsense-editorial-evidence
+          path: audits/generated/*.csv
+          retention-days: 30
