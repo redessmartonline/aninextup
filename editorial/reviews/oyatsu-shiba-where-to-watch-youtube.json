@@ -1,0 +1,37 @@
+{
+  "intent": "Find the official free YouTube channel, premiere time and weekly release schedule for Oyatsu Shiba.",
+  "keyword": "where to watch Oyatsu Shiba",
+  "secondaryQuestions": [
+    "What time does episode 1 premiere?",
+    "How many shorts are planned?",
+    "Are English subtitles confirmed?"
+  ],
+  "editorialWords": 1245,
+  "verifiedOn": "2026-11-12",
+  "sources": [
+    "https://prtimes.jp/main/html/rd/p/000000019.000132834.html",
+    "https://www.youtube.com/@oyatsushiba",
+    "https://x.com/oyatsushiba",
+    "https://www.tiktok.com/@oyatsushiba_official"
+  ],
+  "limits": [
+    "No standalone episode link, subtitle list or regional availability details were confirmed at publication. Future dates follow the planned weekly slot."
+  ],
+  "cover": {
+    "path": "/assets/images/covers/oyatsu-shiba-official-visual.webp",
+    "imageUrl": "https://prcdn.freetls.fastly.net/release_image/132834/19/132834-19-8b81207a8fa30efcf12abcc35a6cf01a-1920x1080.jpg?width=1200&format=jpeg",
+    "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000019.000132834.html",
+    "originalDimensions": [
+      1200,
+      675
+    ],
+    "sha256": "36154e1893a1867de123c038aac4875e1f3f7c9ba08b5bc5ff69fb28e7236553",
+    "credit": "© Mameshiba / Oyatsu Shiba Production Committee",
+    "verification": "Lead image supplied in KaKa Creation’s dated press announcement."
+  },
+  "video": {
+    "status": "not-available",
+    "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000019.000132834.html",
+    "reason": "The announcement provides the official channel rather than an individual verified trailer or episode URL."
+  }
+}
