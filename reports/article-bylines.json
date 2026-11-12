@@ -1,7 +1,7 @@
 {
-  "articles": 148,
+  "articles": 149,
   "changed": 0,
-  "standardized": 148,
+  "standardized": 149,
   "unresolved": [],
   "records": [
     {
@@ -308,6 +308,12 @@
       "status": "ok",
       "published": "2026-10-10",
       "path": "articles/full-clearing-another-world-zero-believers-premiere.html",
+      "changed": false
+    },
+    {
+      "status": "ok",
+      "published": "2026-11-12",
+      "path": "articles/getting-shots-on-a-frying-pan-anime-release-date.html",
       "changed": false
     },
     {
