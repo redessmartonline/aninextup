@@ -1,6 +1,6 @@
 {
-  "count": 274,
-  "last_run_count": 7,
+  "count": 276,
+  "last_run_count": 8,
   "failed_count": 0,
   "failed": [],
   "images": [
@@ -198,6 +198,16 @@
       "source": "https://aninextup.com/assets/images/covers/my-crushs-crush-official-visual.webp",
       "local": "/assets/images/covers/my-crushs-crush-official-visual.webp",
       "download_url": "https://aninextup.com/assets/images/covers/my-crushs-crush-official-visual.webp"
+    },
+    {
+      "source": "https://aninextup.com/assets/images/covers/nabetama-official-visual.webp",
+      "local": "/assets/images/covers/nabetama-official-visual.webp",
+      "download_url": "https://aninextup.com/assets/images/covers/nabetama-official-visual.webp"
+    },
+    {
+      "source": "https://aninextup.com/assets/images/covers/nabetama-teaser.webp",
+      "local": "/assets/images/covers/nabetama-teaser.webp",
+      "download_url": "https://aninextup.com/assets/images/covers/nabetama-teaser.webp"
     },
     {
       "source": "https://aninextup.com/assets/images/covers/nanatsuya-shinobu-official-visual.webp",
