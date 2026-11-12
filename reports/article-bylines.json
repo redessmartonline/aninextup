@@ -1,7 +1,7 @@
 {
-  "articles": 147,
+  "articles": 148,
   "changed": 0,
-  "standardized": 147,
+  "standardized": 148,
   "unresolved": [],
   "records": [
     {
@@ -626,6 +626,12 @@
       "status": "ok",
       "published": "2026-10-06",
       "path": "articles/otome-heroines-fight-for-survival-anime.html",
+      "changed": false
+    },
+    {
+      "status": "ok",
+      "published": "2026-11-12",
+      "path": "articles/oyatsu-shiba-where-to-watch-youtube.html",
       "changed": false
     },
     {
