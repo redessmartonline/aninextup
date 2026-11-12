@@ -1,0 +1,47 @@
+{
+  "intent": "Find the Japanese broadcast window, official teaser, dual casting and manga source for Nabetama.",
+  "keyword": "Getting Shots on a Frying Pan anime release date",
+  "secondaryQuestions": [
+    "Why do two actors play Juntaro?",
+    "Where can I read the original manga?"
+  ],
+  "editorialWords": 1222,
+  "verifiedOn": "2026-11-12",
+  "sources": [
+    "https://nabetama.asmik-ace.co.jp/news/news01/",
+    "https://nabetama.asmik-ace.co.jp/",
+    "https://www.asmik-ace.co.jp/news/contents/19607/",
+    "https://comic-walker.com/detail/KC_003969_S",
+    "https://comic-walker.com/detail/KC_008545_S"
+  ],
+  "limits": [
+    "January 2027 is the confirmed Japanese window. Exact day, international streaming and an English manga edition remain unverified."
+  ],
+  "cover": {
+    "path": "/assets/images/covers/nabetama-official-visual.webp",
+    "imageUrl": "https://nabetama.asmik-ace.co.jp/wp2026/wp-content/themes/nabetama/img/ogp.jpg",
+    "sourceUrl": "https://nabetama.asmik-ace.co.jp/",
+    "originalDimensions": [
+      1200,
+      630
+    ],
+    "sha256": "5b2b759fb0815743af03a8513b8d7223bd4204f3277d9b5d828153fd934ecaeb",
+    "credit": "© Juntaro Aoki, Shin Moriyama / KADOKAWA / Nabetama Production Committee",
+    "verification": "Official social artwork supplied by the anime website."
+  },
+  "video": {
+    "path": "/assets/images/covers/nabetama-teaser.webp",
+    "imageUrl": "https://i.ytimg.com/vi/fmafMZNXeHw/maxresdefault.jpg",
+    "sourceUrl": "https://www.youtube.com/watch?v=fmafMZNXeHw",
+    "originalDimensions": [
+      1280,
+      720
+    ],
+    "sha256": "4914713b558eb7d97b38499af251167a2fbb86d12a9607b5190b937e17784ca2",
+    "status": "available",
+    "youtubeId": "fmafMZNXeHw",
+    "channel": "Asmik Ace",
+    "uploadDate": "2026-11-12T01:00:03-08:00",
+    "verification": "The official November 12 announcement embeds this video. YouTube metadata confirms the upload date and embed playback."
+  }
+}
