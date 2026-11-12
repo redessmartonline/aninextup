@@ -1,7 +1,7 @@
 {
-  "articles": 149,
+  "articles": 150,
   "changed": 0,
-  "standardized": 149,
+  "standardized": 150,
   "unresolved": [],
   "records": [
     {
@@ -836,6 +836,12 @@
       "status": "ok",
       "published": "2026-10-03",
       "path": "articles/tokyo-revengers-war-three-titans.html",
+      "changed": false
+    },
+    {
+      "status": "ok",
+      "published": "2026-11-12",
+      "path": "articles/tsugumi-project-anime-release-date.html",
       "changed": false
     },
     {
