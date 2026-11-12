@@ -1,7 +1,7 @@
 {
-  "articles": 144,
+  "articles": 147,
   "changed": 0,
-  "standardized": 144,
+  "standardized": 147,
   "unresolved": [],
   "records": [
     {
@@ -32,6 +32,12 @@
       "status": "ok",
       "published": "2026-10-29",
       "path": "articles/anime-expeditions-codes.html",
+      "changed": false
+    },
+    {
+      "status": "ok",
+      "published": "2026-11-12",
+      "path": "articles/anime-frontier-2026-crunchyroll-premieres-schedule.html",
       "changed": false
     },
     {
@@ -74,6 +80,12 @@
       "status": "ok",
       "published": "2026-10-03",
       "path": "articles/aoashi-season-2.html",
+      "changed": false
+    },
+    {
+      "status": "ok",
+      "published": "2026-11-11",
+      "path": "articles/aoharu-once-more-anime-release-date.html",
       "changed": false
     },
     {
@@ -530,6 +542,12 @@
       "status": "ok",
       "published": "2026-10-03",
       "path": "articles/my-happy-marriage-special-episodes.html",
+      "changed": false
+    },
+    {
+      "status": "ok",
+      "published": "2026-11-11",
+      "path": "articles/nanatsuya-shinobu-jewelry-box-anime-release-date.html",
       "changed": false
     },
     {
