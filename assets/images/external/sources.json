@@ -1,6 +1,6 @@
 {
-  "count": 276,
-  "last_run_count": 8,
+  "count": 277,
+  "last_run_count": 7,
   "failed_count": 0,
   "failed": [],
   "images": [
@@ -283,6 +283,11 @@
       "source": "https://aninextup.com/assets/images/covers/tale-secret-saint.jpg",
       "local": "/assets/images/covers/tale-secret-saint.jpg",
       "evidence_commit": "66961474da6bcab2b88115797434266294086059"
+    },
+    {
+      "source": "https://aninextup.com/assets/images/covers/tsugumi-project-official-visual.webp",
+      "local": "/assets/images/covers/tsugumi-project-official-visual.webp",
+      "download_url": "https://aninextup.com/assets/images/covers/tsugumi-project-official-visual.webp"
     },
     {
       "source": "https://aninextup.com/assets/images/covers/welsh-shedar-official.webp",
