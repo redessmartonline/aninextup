@@ -1,5 +1,5 @@
 window.ANINEXTUP_DATA={
-updated:"2026-11-11",
+updated:"2026-11-12",
 site:{timezone:"America/Santo_Domingo",season:"Fall 2026"},
 anime:[
 {id:"nanatsuya-shinobu-jewelry-box-anime-release-date",image:"/assets/images/covers/nanatsuya-shinobu-official-visual.webp",title:"Nanatsu-ya: Shinobu and Her Jewelry Box Anime — 2027 Release, Trailer & Manga Guide",date:null,dateLabel:"2027 · Japan",platform:"Japanese TV; broadcaster unannounced",article:"articles/nanatsuya-shinobu-jewelry-box-anime-release-date",newsCategory:"new-anime",category:"New series",status:"year-confirmed"},
@@ -116,6 +116,7 @@ anime:[
 {id:"psyren",newsCategory:"new-anime",image:"assets/images/psyren.jpg",title:"PSYREN",date:"2026-10-05",platform:"Crunchyroll",article:"articles/psyren-release-date",category:"Premiere",status:"confirmed"},
 ],
 guides:[
+{image:"/assets/images/covers/anime-frontier-2026-official-event-art.webp",title:"Anime Frontier 2026 Crunchyroll Premieres: Schedule, Rooms & What to Watch",tag:"ANIME FRONTIER",article:"articles/anime-frontier-2026-crunchyroll-premieres-schedule",newsCategory:"release-news",description:"Find Crunchyroll’s Anime Frontier 2026 screening times, rooms and premieres for December 4 and 6 in Fort Worth, including the Aniplex block."},
 {id:"wound-and-bandage-anime-release-date",image:"/assets/images/covers/wound-and-bandage-official.webp",title:"Wound & Bandage Anime Release Date, Japan Schedule & Streaming",date:"2027-01-09",dateLabel:"January 9, 2027",platform:"AT-X / ABC TV / ABEMA (Japan)",article:"articles/wound-and-bandage-anime-release-date",newsCategory:"new-anime",description:"Wound & Bandage premieres January 9, 2027. See the official trailer, the AT-X and ABEMA schedule, and what is confirmed about streaming outside Japan.",tag:"NEW SERIES"},
 {id:"welsh-shedar-episode-1-english-dub",image:"/assets/images/covers/welsh-shedar-official.webp",title:"Where to Watch Welsh & Shedar Episode 1 Free in English",date:"2026-11-05",dateLabel:"November 5, 2026",platform:"YouTube (Krosmoz)",article:"articles/welsh-shedar-episode-1-english-dub",newsCategory:"new-series",description:"Watch Welsh & Shedar Episode 1 free on Krosmoz, switch to the English dub and check all 12 international YouTube release dates.",tag:"NEW SERIES"},
 {image:"/assets/images/external/a5e25468f28d6065d4595963b6ba154b3e56e68e8ab7f22c5a07bd63015a3302.webp",title:"Charisma Anime: Short Episodes Begin Ahead of January 2027 Premiere",tag:"NOVEMBER 4 · SHORT ANIME",article:"articles/charisma-anime-release-date",newsCategory:"release-news",description:"Charisma shorts begin November 4 on TBS before the January 7, 2027 TV premiere. See the official teaser, Japanese schedule, cast and streaming status."},
