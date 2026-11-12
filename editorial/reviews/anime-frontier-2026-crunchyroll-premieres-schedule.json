@@ -1,0 +1,38 @@
+{
+  "intent": "Find the Crunchyroll screening schedule, rooms and entry information for Anime Frontier 2026.",
+  "keyword": "Anime Frontier 2026 Crunchyroll schedule",
+  "secondaryQuestions": [
+    "What screens on Sunday?",
+    "Where are the screenings?",
+    "Are the December dates streaming releases?"
+  ],
+  "editorialWords": 1243,
+  "verifiedOn": "2026-11-12",
+  "sources": [
+    "https://www.crunchyroll.com/news/announcements/2026/11/11/anime-frontier-2026-crunchyroll-programming-schedule",
+    "https://animefrontier.com/",
+    "https://animefrontier.com/programming/highlights/",
+    "https://animefrontier.com/about/faqs/",
+    "https://news.hidive.com/2026/11/10/new-movie-made-in-abyss-awakening-mystery-comes-to-hidive"
+  ],
+  "limits": [
+    "Friday’s first block titles and the order within the Sunday blocks were not announced. This is a convention schedule in Fort Worth local time."
+  ],
+  "cover": {
+    "path": "/assets/images/covers/anime-frontier-2026-official-event-art.webp",
+    "imageUrl": "https://pbs.twimg.com/ext_tw_video_thumb/2000325100441161729/pu/img/_9hOLnrIvYkBWsH2.jpg",
+    "sourceUrl": "https://x.com/AnimeFrontierTX/status/2000325232209400145",
+    "originalDimensions": [
+      720,
+      900
+    ],
+    "sha256": "d50545975b4acd21caaf5e8902541dd1b6ba92f130cc0dd936c42d337b20bfa5",
+    "credit": "© Anime Frontier",
+    "verification": "Promotional artwork distributed by the Anime Frontier convention account."
+  },
+  "video": {
+    "status": "not-available",
+    "sourceUrl": "https://www.crunchyroll.com/news/announcements/2026/11/11/anime-frontier-2026-crunchyroll-programming-schedule",
+    "reason": "The schedule announcement covers multiple series and does not supply a trailer for the four screening blocks."
+  }
+}
