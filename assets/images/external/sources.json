@@ -1,6 +1,6 @@
 {
-  "count": 277,
-  "last_run_count": 7,
+  "count": 279,
+  "last_run_count": 8,
   "failed_count": 0,
   "failed": [],
   "images": [
@@ -233,6 +233,16 @@
       "source": "https://aninextup.com/assets/images/covers/nues-exorcist-official.png",
       "local": "/assets/images/covers/nues-exorcist-official.png",
       "evidence_commit": "66961474da6bcab2b88115797434266294086059"
+    },
+    {
+      "source": "https://aninextup.com/assets/images/covers/orochi-seventh-echoes-official-visual.webp",
+      "local": "/assets/images/covers/orochi-seventh-echoes-official-visual.webp",
+      "download_url": "https://aninextup.com/assets/images/covers/orochi-seventh-echoes-official-visual.webp"
+    },
+    {
+      "source": "https://aninextup.com/assets/images/covers/orochi-seventh-echoes-pilot.webp",
+      "local": "/assets/images/covers/orochi-seventh-echoes-pilot.webp",
+      "download_url": "https://aninextup.com/assets/images/covers/orochi-seventh-echoes-pilot.webp"
     },
     {
       "source": "https://aninextup.com/assets/images/covers/oyatsu-shiba-official-visual.webp",
