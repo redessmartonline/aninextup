@@ -1,0 +1,46 @@
+{
+  "intent": "Watch the free official OROCHI pilot and check the full feature release status.",
+  "keyword": "where to watch Orochi Seventh Echoes",
+  "secondaryQuestions": [
+    "Is the full movie out?",
+    "Does the pilot have English subtitles?",
+    "Who is making the film?"
+  ],
+  "editorialWords": 1254,
+  "verifiedOn": "2026-11-13",
+  "sources": [
+    "https://bluerights.jp/news/%E3%80%8E%E3%82%AA%E3%83%AD%E3%83%81-seventh-echoes-%E3%80%8F%E3%83%91%E3%82%A4%E3%83%AD%E3%83%83%E3%83%88%E3%83%95%E3%82%A3%E3%83%AB%E3%83%A0%E5%85%AC%E9%96%8B%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89/",
+    "https://prtimes.jp/main/html/rd/p/000000013.000141283.html",
+    "https://www.youtube.com/watch?v=p4TQLRaQZH4"
+  ],
+  "limits": [
+    "The official YouTube upload is the pilot. No full feature date or streaming platform was announced. The checked upload listed Japanese automatic captions."
+  ],
+  "cover": {
+    "path": "/assets/images/covers/orochi-seventh-echoes-official-visual.webp",
+    "imageUrl": "https://prcdn.freetls.fastly.net/release_image/141283/13/141283-13-517d0f51e6b27c61ef8abc2596d7a9ad-1907x2700.png?width=950&format=jpeg",
+    "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000013.000141283.html",
+    "originalDimensions": [
+      950,
+      1345
+    ],
+    "sha256": "a724e3b80f9f5c8f93dfa424567d034b2dd9fa484a1b5d26c1a333eed25c5b61",
+    "credit": "© 2026 BLUE RIGHTS / OROCHI",
+    "verification": "Official teaser art reproduced from BLUE RIGHTS press announcement."
+  },
+  "video": {
+    "path": "/assets/images/covers/orochi-seventh-echoes-pilot.webp",
+    "imageUrl": "https://i.ytimg.com/vi/p4TQLRaQZH4/maxresdefault.jpg",
+    "sourceUrl": "https://www.youtube.com/watch?v=p4TQLRaQZH4",
+    "originalDimensions": [
+      1280,
+      720
+    ],
+    "sha256": "9f220988c6bf8db11222815330ff64575f719250335f52993341cf040fca121c",
+    "status": "available",
+    "youtubeId": "p4TQLRaQZH4",
+    "channel": "BLUE RIGHTS channel",
+    "uploadDate": "2026-11-12T17:00:32-08:00",
+    "verification": "BLUE RIGHTS links this upload. YouTube metadata confirms duration, timestamp and embeddability."
+  }
+}
