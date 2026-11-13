@@ -1,7 +1,7 @@
 {
-  "articles": 150,
+  "articles": 151,
   "changed": 0,
-  "standardized": 150,
+  "standardized": 151,
   "unresolved": [],
   "records": [
     {
@@ -626,6 +626,12 @@
       "status": "ok",
       "published": "2026-10-12",
       "path": "articles/one-punch-man-season-3-part-2-january-2027.html",
+      "changed": false
+    },
+    {
+      "status": "ok",
+      "published": "2026-11-13",
+      "path": "articles/orochi-seventh-echoes-pilot-where-to-watch.html",
       "changed": false
     },
     {
