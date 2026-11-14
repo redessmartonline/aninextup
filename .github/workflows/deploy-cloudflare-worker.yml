@@ -29,6 +29,7 @@ on:
       - "scripts/google-ads-tag.js"
       - "tests/test_google_ads_tag.cjs"
       - "scripts/check_publication_media.py"
+      - "scripts/prepare_public_media.py"
       - "scripts/validate_publication.py"
       - "scripts/validate_video_schema.py"
       - "tests/test_publication_media.py"
@@ -177,6 +178,9 @@ jobs:
           else
             echo "Newsletter delivery awaits the RESEND_API_KEY repository secret."
           fi
+
+      - name: Prepare public review media
+        run: python scripts/prepare_public_media.py
 
       - name: Deploy with Wrangler
         id: deploy
