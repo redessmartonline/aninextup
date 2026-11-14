@@ -1,5 +1,6 @@
 """Make original title cards from the article headlines in the deployment."""
 from base64 import b64decode
+from hashlib import sha256
 from html import unescape
 from io import BytesIO
 import json
@@ -107,7 +108,14 @@ def main():
         href = re.search(r'href="(?:https://aninextup\.com/)?(?:\.\./|/)?articles/([^"?#]+)', tag)
         if href and Path(href[1]).stem in artwork:
             cover = f"/assets/article-covers/{Path(href[1]).stem}.png"
-            body = re.sub(r'(<img\b[^>]*?\bsrc=")[^"]+', lambda image: image[1] + cover, body, count=1)
+            image_tag = re.compile(r"<img\b[^>]*>", re.I)
+            def replace_image(image):
+                img = re.sub(r'\s+(?:srcset|sizes|width|height|alt)="[^"]*"', "", image[0], flags=re.I)
+                img = re.sub(r'\bsrc="[^"]*"', f'src="{cover}"', img, count=1, flags=re.I)
+                return img[:-1] + ' width="1200" height="630" alt="" data-illustrated-cover>'
+            body, count = image_tag.subn(replace_image, body, count=1)
+            if not count and re.search(r'class="[^"]*\bvisual-card\b', tag):
+                body = f'<img src="{cover}" width="1200" height="630" alt="" loading="lazy" data-illustrated-cover>' + body
         return tag + body + "</a>"
 
     for page in [*ROOT.glob("*.html"), *pages]:
@@ -125,6 +133,13 @@ def main():
         cover = f"/assets/article-covers/{Path(article[1]).stem}.png"
         return re.sub(r'((?:"image"|image):")[^"]+', lambda image: image[1] + cover, entry, count=1)
     catalog.write_text(re.sub(r'^\{[^\n]+', replace_catalog_image, catalog.read_text(encoding="utf-8"), flags=re.M), encoding="utf-8")
+    # The published catalog differs from the pre-render input after artwork is assigned.
+    version = sha256(catalog.read_bytes()).hexdigest()[:16]
+    for page in [*ROOT.glob("*.html"), *pages]:
+        source = page.read_text(encoding="utf-8")
+        updated = re.sub(r'(src="(?:/|\.\./)?assets/data\.js)(?:\?[^"]*)?"', rf'\1?v={version}"', source)
+        if updated != source:
+            page.write_text(updated, encoding="utf-8")
     # Keep the dynamically rendered discovery cards aligned with their articles.
     for name in ("latest-news.json", "popular-news.json", "search-index.json", "calendar-releases.json"):
         path = ROOT / "assets" / name
@@ -146,7 +161,7 @@ def main():
         refresh(data)
         path.write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
     with (ROOT / "assets" / "style.css").open("a", encoding="utf-8") as css:
-        css.write("\n.article-original-cover{display:block;width:100%;height:auto;border-radius:12px;margin:1.25rem 0}\n")
+        css.write("\n.article-original-cover{display:block;width:100%;height:auto;border-radius:12px;margin:1.25rem 0}\nimg[data-illustrated-cover]{aspect-ratio:1200/630;object-fit:contain!important;height:auto}\n")
     print(f"Built {len(list(OUT.glob('*.png')))} original article covers")
 
 
