@@ -55,6 +55,15 @@ def prepare(path):
             return '<p><a href="' + url + '" target="_blank" rel="noopener noreferrer">Watch on YouTube</a></p>'
         content = PLAYER.sub(link_to_video, content)
         content = EMBED.sub("", content)
+        content = re.sub(
+            r'<script\b[^>]*>(?:(?!</script>).)*youtube-nocookie\.com/embed/(?:(?!</script>).)*</script>',
+            "",
+            content,
+            flags=re.I | re.S,
+        )
+        content = content.replace("embedded player below", "video link below")
+        content = content.replace("player below", "video link below")
+        content = content.replace("The embedded player loads only when selected.", "The link opens the video on YouTube.")
         content = VIDEO_SCHEMA.sub(remove_video_schema, content)
         # Keep links to the cited publisher pages. Replace only image-loading
         # attributes and social previews so citations still lead to their source.
@@ -62,6 +71,12 @@ def prepare(path):
             tag = match[0]
             if tag.lower().startswith("<img"):
                 tag = re.sub(r'\s+srcset="[^"]*"', "", tag, flags=re.I)
+                tag = re.sub(
+                    r'(\s(?:src|data-src)=")(?:https?:)?//[^"]+',
+                    lambda image: image[1] + FALLBACK,
+                    tag,
+                    flags=re.I,
+                )
                 if IMAGE_PATH.search(tag) or REMOTE_IMAGE.search(tag):
                     tag = re.sub(r'(\salt=)"[^"]*"', r'\1""', tag, flags=re.I)
             tag = REMOTE_IMAGE.sub(use_fallback, IMAGE_PATH.sub(use_fallback, tag))
