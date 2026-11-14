@@ -13,3 +13,9 @@ wrangler.jsonc
 
 src/
 db/
+
+# Keep draft previews and per-article editorial verification out of production.
+previews/
+editorial/previews/
+editorial/drafts/
+editorial/reviews/
