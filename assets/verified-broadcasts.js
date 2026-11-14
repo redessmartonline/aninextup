@@ -19,7 +19,7 @@
  setInterval(update,60000);document.addEventListener('visibilitychange',()=>{if(!document.hidden)update();});
 })(typeof window!=='undefined'?window:null,function(){
  const data={
-  verifiedOn:'2026-11-08',defaultZone:'UTC',
+  verifiedOn:'2026-11-14',defaultZone:'UTC',
   scope:'Selected Japanese television broadcasts verified against date-specific broadcaster listings. This is not a complete anime schedule or an international streaming timetable.',
   zones:[['UTC','UTC'],['America/New_York','US Eastern'],['America/Los_Angeles','US Pacific'],['Europe/London','United Kingdom'],['Asia/Tokyo','Japan · JST'],['America/Sao_Paulo','Brazil · Brasília']],
   episodes:[
@@ -32,7 +32,9 @@
    {id:'yozakura-44',title:'Mission: Yozakura Family Season 2',episode:'Episode 44 · series numbering',scheduledAt:'2026-11-08T17:00:00+09:00',network:'TBS',url:null,sourceUrl:'https://www.tbs.co.jp/tv/20261108_C455.html',sourceLabel:'TBS · November 8 program listing'},
    {id:'ace-of-diamond-act-ii-s2-18',title:'Ace of the Diamond act II -Second Season-',episode:'Episode 18',scheduledAt:'2026-11-08T17:30:00+09:00',network:'TV Tokyo',url:'/articles/ace-of-diamond-second-season',sourceUrl:'https://www.tv-tokyo.co.jp/broad_tvtokyo/program/detail/202611/29059_202611081730.html',sourceLabel:'TV Tokyo · November 8 program listing'},
    {id:'appraisal-skill-31',title:"As a Reincarnated Aristocrat, I'll Use My Appraisal Skill to Rise in the World Season 3",episode:'Episode 31 · series numbering',scheduledAt:'2026-11-08T23:40:00+09:00',network:'TBS',url:null,sourceUrl:'https://www.tbs.co.jp/tv/20261108_C462.html',sourceLabel:'TBS · November 8 program listing'},
-   {id:'dark-summoner-6',title:"I'm Dating a Dark Summoner!",episode:'Episode 6',scheduledAt:'2026-11-09T01:20:00+09:00',network:'TOKYO MX',url:null,sourceUrl:'https://darksummoner.deregula.com/onair/',sourceLabel:'Official Dark Summoner · Sunday late-night TV slot'}
+   {id:'dark-summoner-6',title:"I'm Dating a Dark Summoner!",episode:'Episode 6',scheduledAt:'2026-11-09T01:20:00+09:00',network:'TOKYO MX',url:null,sourceUrl:'https://darksummoner.deregula.com/onair/',sourceLabel:'Official Dark Summoner · Sunday late-night TV slot'},
+   {id:'vanguard-divinez-14',title:'Cardfight!! Vanguard Divinez',episode:'Episode 14 · current arc',scheduledAt:'2026-11-14T08:00:00+09:00',network:'TV Tokyo',url:null,sourceUrl:'https://www.tv-tokyo.co.jp/broad_tvtokyo/program/detail/202611/26481_202611140800.html',sourceLabel:'TV Tokyo · November 14 program listing'},
+   {id:'detective-conan-1220',title:'Detective Conan',episode:'Episode 1220',scheduledAt:'2026-11-14T18:00:00+09:00',network:'Yomiuri TV / Nippon TV',url:null,sourceUrl:'https://www.ytv.co.jp/webmagazine/anime/940_tbpyg75p8watavcr.html',sourceLabel:'Yomiuri TV · November 14 broadcast notice'}
   ]
  };
  const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
