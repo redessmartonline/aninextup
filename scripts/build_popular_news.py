@@ -47,17 +47,16 @@ def select(snapshot, root):
         if not match:
             continue
         item = json.loads(match.group(1))
-        image = item.get('image', '')
-        if not item.get('title') or not image.startswith('/assets/') or not (root/image.lstrip('/')).is_file():
+        if not item.get('title'):
             continue
-        selected.append(dict(url=path, title=item['title'], image=image, views=totals[path]))
+        selected.append(dict(url=path, title=item['title'], views=totals[path]))
         if len(selected) == 3:
             return selected
     raise ValueError('Fewer than three eligible articles with positive views')
 
 def render(source, snapshot, selected):
     esc = lambda value: html.escape(str(value), quote=True)
-    cards = ''.join(f'<a class="popular-news-card" href="{esc(i["url"])}"><img src="{esc(i["image"])}" alt="{esc(i["title"])}" loading="lazy"><div class="popular-news-copy"><span class="popular-news-rank">#{rank} · MOST VIEWED</span><h3>{esc(i["title"])}</h3><span class="more">READ ARTICLE →</span></div></a>' for rank, i in enumerate(selected, 1))
+    cards = ''.join(f'<a class="popular-news-card" href="{esc(i["url"])}"><div class="popular-news-copy"><span class="popular-news-rank">#{rank} · MOST VIEWED</span><h3>{esc(i["title"])}</h3><span class="more">READ ARTICLE →</span></div></a>' for rank, i in enumerate(selected, 1))
     section = '<section class="home-popular-news" aria-labelledby="popular-news-title"><div class="section-head"><div><span class="kicker">MOST VIEWED · LAST 30 COMPLETE DAYS</span><h2 id="popular-news-title">Popular News</h2></div></div><div class="home-popular-news-grid">'+cards+'</div></section>'
     result, count = re.subn(r'<section class="home-popular-news".*?</section>', lambda _:section, source, flags=re.S)
     if count != 1:

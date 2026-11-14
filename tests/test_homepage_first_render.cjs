@@ -16,3 +16,6 @@ assert(!app.includes("fetch('/assets/latest-news.json"),'Do not replace initial 
 assert(!app.includes('latestNewsNodes.forEach'),'Do not rewrite lead container asynchronously');
 assert.equal(new Set(links).size,4,'No duplicate lead stories');
 console.log('PASS: initial homepage contains exactly the latest four feed stories and has no async lead replacement.');
+const artwork=[...html.matchAll(/<img\b[^>]*\bsrc="([^"]+)"/g)].map(match=>match[1]);
+assert.deepEqual(artwork,['/assets/images/anime-image-fallback.svg'],'The homepage should only use AniNextUp’s own lead artwork');
+assert(!/url\(['"]?\/?assets\/images\//.test(html),'Do not use article artwork as a homepage background');

@@ -19,8 +19,8 @@ const ctx=model.context(now,data.site.timezone);
 const escape=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const state=a=>a.status==='month-confirmed'?'MONTH CONFIRMED':a.status==='tba'?'DATE TBA':'CONFIRMED';
 const date=a=>a.date?new Date(a.date+'T12:00:00Z').toLocaleDateString('en-US',{timeZone:'UTC',month:'short',day:'2-digit'}).toUpperCase():(a.dateLabel||'DATE TBA').toUpperCase();
-function card(a,full=false){
-  return `<a class="${full?'card story':'mini'} data-card visual-card" href="${escape(a.article)}">${a.image?`<img src="${escape(a.image)}" alt="${escape(a.title)}" loading="lazy">`:''}<div class="visual-body"><b>${escape(date(a))}</b><small class="status">${state(a)}</small><h3>${escape(a.title)}</h3><span>${escape(a.platform)}</span>${full?'<span class="more">READ GUIDE →</span>':''}</div></a>`;
+function card(a,full=false,showImage=true){
+  return `<a class="${full?'card story':'mini'} data-card visual-card" href="${escape(a.article)}">${showImage&&a.image?`<img src="${escape(a.image)}" alt="${escape(a.title)}" loading="lazy">`:''}<div class="visual-body"><b>${escape(date(a))}</b><small class="status">${state(a)}</small><h3>${escape(a.title)}</h3><span>${escape(a.platform)}</span>${full?'<span class="more">READ GUIDE →</span>':''}</div></a>`;
 }
 const articleDescriptions = new Map(
   require('../assets/latest-news.json').items
@@ -48,7 +48,7 @@ const editorialStories=()=>{const seen=new Set();return [...data.anime.filter(a=
 // Match the browser's category rules, including releases without a guide tag.
 const newsCategories=new Set(['new-anime','returning-series','trailers-cast','release-news']);
 const newsStories=()=>{const seen=new Set();return model.sortNews([...data.anime,...data.guides].filter(g=>{if(!g.article||seen.has(g.article)||!newsCategories.has(g.newsCategory))return false;seen.add(g.article);return true;}),newsDates);};
-const list=(items,full=false,empty='No confirmed releases yet.')=>items.map(a=>card(a,full)).join('')||`<p class="empty">${escape(empty)}</p>`;
+const list=(items,full=false,empty='No confirmed releases yet.',showImage=true)=>items.map(a=>card(a,full,showImage)).join('')||`<p class="empty">${escape(empty)}</p>`;
 const episodeDate=d=>new Date(d+'T12:00:00Z').toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric',timeZone:'UTC'});
 const episodeTime=t=>{const [h,m]=t.split(':').map(Number);return (h%12||12)+':'+String(m).padStart(2,'0')+' '+(h>=12?'PM':'AM');};
 const episodeDay=now=>{const parts=new Intl.DateTimeFormat('en-US',{timeZone:weeklyEpisodes.regionTimezones?.[0]||weeklyEpisodes.timezone||data.site.timezone,year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(now);const get=t=>parts.find(p=>p.type===t).value;return get('year')+'-'+get('month')+'-'+get('day');};
@@ -78,7 +78,7 @@ for(const name of fs.readdirSync(root).filter(n=>n.endsWith('.html'))){
     html=html.replace(/(<p id="broadcast-date">)[\s\S]*?(<\/p>)/,(_,a,b)=>a+verifiedBroadcasts.dayLabel(current.day)+' · UTC'+b);
     html=html.replace(/assets\/verified-broadcasts\.js(?:\?[^"\s]*)?/g,'assets/verified-broadcasts.js?v='+crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'assets/verified-broadcasts.js'))).digest('hex').slice(0,16));
   }
-  for(const [hook,mode,limit] of [['data-home-next','after-week',6],['data-today-next','next',6],['data-after-week','after-week',6],['data-news-upcoming','upcoming',9]])html=fill(html,hook,()=>list(model.select(data.anime,mode,ctx).slice(0,limit),hook==='data-news-upcoming'));
+  for(const [hook,mode,limit] of [['data-home-next','after-week',6],['data-today-next','next',6],['data-after-week','after-week',6],['data-news-upcoming','upcoming',9]])html=fill(html,hook,()=>list(model.select(data.anime,mode,ctx).slice(0,limit),hook==='data-news-upcoming',undefined,hook!=='data-home-next'));
   html=fill(html,'data-anime-month',month=>list(model.select(data.anime,'calendar',ctx).filter(a=>a.date.startsWith(month))));
   html=fill(html,'data-month-count',month=>{const n=data.anime.filter(a=>a.date?.startsWith(month)).length;return n?'· '+n+' CONFIRMED':'';});
   html=fill(html,'data-anime-platform',platform=>list(model.select(data.anime.filter(a=>model.matchesPlatform(a,platform)),'all',ctx)));

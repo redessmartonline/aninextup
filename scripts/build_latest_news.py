@@ -78,24 +78,25 @@ def updated_guide(path, item):
                         updated=updated, tag="UPDATED VIEWING GUIDE")
     return None
 
-def homepage_cards(items, link_label="READ UPDATE"):
+def homepage_cards(items, link_label="READ UPDATE", show_lead=False):
     cards = []
-    for item in items:
+    for position, item in enumerate(items):
         href = "/" + html.escape(item["article"], quote=True)
-        image = html.escape(item["image"], quote=True)
         title = html.escape(item["title"], quote=True)
         tag = html.escape(item["tag"], quote=True)
         description = html.escape(item["description"], quote=True)
+        artwork = ('<img src="/assets/images/anime-image-fallback.svg" alt="" width="640" height="360">'
+                   if show_lead and position == 0 else "")
         cards.append(
-            f'<a class="card story visual-card" href="{href}">'
-            f'<img src="{image}" alt="{title}" loading="lazy">'
+            f'<a class="card story visual-card" href="{href}">' +
+            artwork +
             f'<div class="visual-body"><span class="tag">{tag}</span>'
             f'<h3>{title}</h3><p>{description}</p>'
             f'<span class="more">{link_label} →</span></div></a>'
         )
     return "".join(cards)
 
-def replace_cards(source, attribute, items, link_label="READ UPDATE"):
+def replace_cards(source, attribute, items, link_label="READ UPDATE", show_lead=False):
     opening = re.search(r'<div\b(?=[^>]*\b' + re.escape(attribute) + r'\b)[^>]*>', source, re.I)
     if not opening:
         raise SystemExit(f"Could not find the homepage container {attribute}")
@@ -112,13 +113,13 @@ def replace_cards(source, attribute, items, link_label="READ UPDATE"):
             depth += 1
     if end is None:
         raise SystemExit(f"Could not find the end of the homepage container {attribute}")
-    return source[:content_start] + homepage_cards(items, link_label) + source[end:]
+    return source[:content_start] + homepage_cards(items, link_label, show_lead) + source[end:]
 
 
 def update_homepage(items, guides):
     homepage = ROOT / "index.html"
     source = homepage.read_text(encoding="utf-8")
-    source = replace_cards(source, "data-home-latest", items[:4])
+    source = replace_cards(source, "data-home-latest", items[:4], show_lead=True)
     source = replace_cards(source, "data-home-more", items[4:])
     source = replace_cards(source, "data-home-updated-guides", guides[:6], "READ GUIDE")
     homepage.write_text(source, encoding="utf-8")
