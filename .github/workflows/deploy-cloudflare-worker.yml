@@ -30,6 +30,8 @@ on:
       - "tests/test_google_ads_tag.cjs"
       - "scripts/check_publication_media.py"
       - "scripts/prepare_public_media.py"
+      - "scripts/prepare_google_cmp.py"
+      - "scripts/build_public_article_covers.py"
       - "scripts/validate_publication.py"
       - "scripts/validate_video_schema.py"
       - "tests/test_publication_media.py"
@@ -179,8 +181,13 @@ jobs:
             echo "Newsletter delivery awaits the RESEND_API_KEY repository secret."
           fi
 
-      - name: Prepare public review media
-        run: python scripts/prepare_public_media.py
+      - name: Prepare Google consent and original cover artwork
+        run: |
+          python -m pip install Pillow==11.3.0
+          python scripts/prepare_public_media.py
+          python scripts/build_public_article_covers.py
+          python scripts/prepare_google_cmp.py
+          python scripts/audit_adsense_readiness.py
 
       - name: Deploy with Wrangler
         id: deploy
@@ -203,7 +210,10 @@ jobs:
               | cmp -s assets/latest-news.json - || return 1
             curl --fail --silent --show-error --max-time 15 \
               "https://aninextup.com/?deploy=$GITHUB_RUN_ID-$(date +%s%N)" \
-              | grep -F 'GTM-NL276DVG' >/dev/null
+              | grep -F 'data-aninextup-cmp' >/dev/null || return 1
+            curl --fail --silent --show-error --max-time 15 \
+              "https://aninextup.com/articles/orochi-seventh-echoes-pilot-where-to-watch?deploy=$GITHUB_RUN_ID-$(date +%s%N)" \
+              | grep -F 'article-original-cover' >/dev/null
           }
           if production_matches; then exit 0; fi
           version=$(printf '%s\n' "$DEPLOY_OUTPUT" | sed -nE 's/.*Current Version ID: ([[:xdigit:]-]{36}).*/\1/p' | tail -1)
