@@ -213,9 +213,11 @@ jobs:
               | grep -F 'data-aninextup-cmp' >/dev/null || return 1
             curl --fail --silent --show-error --max-time 15 \
               "https://aninextup.com/articles/orochi-seventh-echoes-pilot-where-to-watch?deploy=$GITHUB_RUN_ID-$(date +%s%N)" \
-              | grep -F 'article-original-cover' >/dev/null
+              | grep -F 'article-original-cover' >/dev/null || return 1
+            curl --fail --silent --show-error --max-time 15 \
+              "https://aninextup.com/assets/article-covers/a-certain-dark-item-release-date.png" \
+              | cmp -s assets/article-covers/a-certain-dark-item-release-date.png -
           }
-          if production_matches; then exit 0; fi
           version=$(printf '%s\n' "$DEPLOY_OUTPUT" | sed -nE 's/.*Current Version ID: ([[:xdigit:]-]{36}).*/\1/p' | tail -1)
           if [[ ! "$version" =~ ^[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}$ ]]; then
             echo "::error::Could not identify the version just built."
@@ -226,7 +228,7 @@ jobs:
             if production_matches; then exit 0; fi
             sleep 5
           done
-          echo "::error::Production has not served the expected news feed and Google Ads consent block."
+          echo "::error::Production has not served the expected news feed, consent tag, and article cover."
           exit 1
 
       - name: Verify live immediate newsletter signup and unsubscribe
