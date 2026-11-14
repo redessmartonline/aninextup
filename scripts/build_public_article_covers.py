@@ -49,7 +49,6 @@ def draw_title(image, title, illustrated):
     else:
         draw.rectangle((68, 70, 1132, 560), outline="#604393", width=2)
         draw.rectangle((68, 70, 77, 560), fill="#a78bfa")
-    draw = ImageDraw.Draw(image, "RGBA")
     draw.text((111, 115), "ANI NEXTUP", font=ImageFont.truetype(str(FONT), 24), fill="#c4b5fd")
     width = 700 if illustrated else 1010
     for size in range(64, 25, -2):
@@ -102,6 +101,30 @@ def main():
         artwork.update(batch)
     for page in pages:
         build(page, artwork)
+    # Static discovery cards and article recommendations share the same artwork.
+    def replace_card(match):
+        tag, body = match.groups()
+        href = re.search(r'href="(?:https://aninextup\.com/)?(?:\.\./|/)?articles/([^"?#]+)', tag)
+        if href and Path(href[1]).stem in artwork:
+            cover = f"/assets/article-covers/{Path(href[1]).stem}.png"
+            body = re.sub(r'(<img\b[^>]*?\bsrc=")[^"]+', lambda image: image[1] + cover, body, count=1)
+        return tag + body + "</a>"
+
+    for page in [*ROOT.glob("*.html"), *pages]:
+        source = page.read_text(encoding="utf-8")
+        updated = re.sub(r'(<a\b[^>]*>)(.*?)</a>', replace_card, source, flags=re.S)
+        if updated != source:
+            page.write_text(updated, encoding="utf-8")
+
+    catalog = ROOT / "assets" / "data.js"
+    def replace_catalog_image(match):
+        entry = match[0]
+        article = re.search(r'(?:"article"|article):"articles/([^"]+)"', entry)
+        if not article or Path(article[1]).stem not in artwork:
+            return entry
+        cover = f"/assets/article-covers/{Path(article[1]).stem}.png"
+        return re.sub(r'((?:"image"|image):")[^"]+', lambda image: image[1] + cover, entry, count=1)
+    catalog.write_text(re.sub(r'^\{[^\n]+', replace_catalog_image, catalog.read_text(encoding="utf-8"), flags=re.M), encoding="utf-8")
     # Keep the dynamically rendered discovery cards aligned with their articles.
     for name in ("latest-news.json", "popular-news.json", "search-index.json", "calendar-releases.json"):
         path = ROOT / "assets" / name
