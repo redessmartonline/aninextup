@@ -32,6 +32,7 @@ on:
       - "scripts/prepare_public_media.py"
       - "scripts/prepare_google_cmp.py"
       - "scripts/build_public_article_covers.py"
+      - "scripts/cover-artwork/**"
       - "scripts/validate_publication.py"
       - "scripts/validate_video_schema.py"
       - "tests/test_publication_media.py"
@@ -216,7 +217,10 @@ jobs:
               | grep -F 'article-original-cover' >/dev/null || return 1
             curl --fail --silent --show-error --max-time 15 \
               "https://aninextup.com/assets/article-covers/a-certain-dark-item-release-date.png" \
-              | cmp -s assets/article-covers/a-certain-dark-item-release-date.png -
+              | cmp -s assets/article-covers/a-certain-dark-item-release-date.png - || return 1
+            curl --fail --silent --show-error --max-time 15 \
+              "https://aninextup.com/assets/article-covers/dark-summoner-omake-shorts-watch-order.png" \
+              | cmp -s assets/article-covers/dark-summoner-omake-shorts-watch-order.png -
           }
           version=$(printf '%s\n' "$DEPLOY_OUTPUT" | sed -nE 's/.*Current Version ID: ([[:xdigit:]-]{36}).*/\1/p' | tail -1)
           if [[ ! "$version" =~ ^[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}$ ]]; then
