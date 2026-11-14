@@ -1,0 +1,30 @@
+{
+  "intent": "Find the A Certain Dark Item anime release schedule, local streaming availability and viewing order.",
+  "keyword": "A Certain Dark Item where to watch",
+  "sources": [
+    "https://toaru-project.com/item/onair/",
+    "https://toaru-project.com/item/story/",
+    "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll"
+  ],
+  "editorialWords": 1234,
+  "verifiedOn": "2026-11-14",
+  "cover": {
+    "path": "/assets/images/generated/a-certain-dark-item-release-date.webp",
+    "imageUrl": "https://aninextup.com/assets/images/generated/a-certain-dark-item-release-date.webp",
+    "sha256": "cabccbf0bd917a03054c10c3cc1c25c4642525509e55e19bc860a8e251d3e309",
+    "credit": "AniNextUp",
+    "verification": "Original AniNextUp typography and geometric artwork. No third-party visual is used.",
+    "sourceUrl": "https://aninextup.com/assets/images/generated/a-certain-dark-item-release-date.webp"
+  },
+  "video": {
+    "path": "/assets/images/generated/a-certain-dark-item-release-date-trailer.webp",
+    "imageUrl": "https://aninextup.com/assets/images/generated/a-certain-dark-item-release-date-trailer.webp",
+    "sha256": "1f5bb62b569b92831e9afe612850a9ac62a60c3a2a33d03677322175accceaa3",
+    "credit": "AniNextUp",
+    "verification": "Original AniNextUp typography and geometric artwork. No third-party visual is used.",
+    "sourceUrl": "https://www.youtube.com/watch?v=bf6XcU3uL9I",
+    "status": "available",
+    "youtubeId": "bf6XcU3uL9I",
+    "channel": "Toaru Project"
+  }
+}

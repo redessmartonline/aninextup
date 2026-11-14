@@ -19,29 +19,22 @@
     "The launch and simulcast times apply to Japan. The official materials do not name an international platform or English dub."
   ],
   "cover": {
-    "path": "/assets/images/covers/multi-mind-mayhem-official-visual.webp",
-    "imageUrl": "https://prcdn.freetls.fastly.net/release_image/4331/226/4331-226-a13cef2704e5eb0d266ec59f21ad68f4-1909x2700.jpg?width=960&format=jpeg",
-    "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000226.000004331.html",
-    "originalDimensions": [
-      960,
-      1358
-    ],
-    "sha256": "e819b1cb8739f1137d7f48628d30c8d7ba1ad40631501a04a9d84a2582d1e0fc",
-    "credit": "© Ryousen Takami / AlphaPolis / Multi-Mind Mayhem Production Committee",
-    "verification": "Key visual from the November 13 AlphaPolis press release."
+    "path": "/assets/images/generated/multi-mind-mayhem-anime-release-date.webp",
+    "imageUrl": "https://aninextup.com/assets/images/generated/multi-mind-mayhem-anime-release-date.webp",
+    "sha256": "797dcf9a1b0ae49545984f3eed64d503aa7764f6857b6c93c8de07aab47fc727",
+    "credit": "AniNextUp",
+    "verification": "Original AniNextUp typography and geometric artwork. No third-party visual is used.",
+    "sourceUrl": "https://aninextup.com/assets/images/generated/multi-mind-mayhem-anime-release-date.webp"
   },
   "video": {
-    "path": "/assets/images/covers/multi-mind-mayhem-trailer.webp",
-    "imageUrl": "https://i.ytimg.com/vi/GdakXIvTowI/maxresdefault.jpg",
+    "path": "/assets/images/generated/multi-mind-mayhem-anime-release-date-trailer.webp",
+    "imageUrl": "https://aninextup.com/assets/images/generated/multi-mind-mayhem-anime-release-date-trailer.webp",
+    "sha256": "e51dd05dcff21d1047cf2e89042440375456aafddc25e39584ccefcb149e2102",
+    "credit": "AniNextUp",
+    "verification": "Original AniNextUp typography and geometric artwork. No third-party visual is used.",
     "sourceUrl": "https://www.youtube.com/watch?v=GdakXIvTowI",
-    "originalDimensions": [
-      1280,
-      720
-    ],
-    "sha256": "9810dd61a7627cfb26cefdd3e4496a43a2b41001ef82dcdd79bc2cf31758e814",
     "status": "available",
     "youtubeId": "GdakXIvTowI",
-    "channel": "AlphaPolis",
-    "verification": "AlphaPolis press release links to this video. YouTube oEmbed confirmed the official channel and title."
+    "channel": "AlphaPolis"
   }
 }
