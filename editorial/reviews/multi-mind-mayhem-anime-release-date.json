@@ -1,0 +1,47 @@
+{
+  "intent": "Find the Japanese release date, episode 1 and 2 streaming time, official trailer and international availability for Multi-Mind Mayhem.",
+  "keyword": "Multi-Mind Mayhem anime release date",
+  "secondaryQuestions": [
+    "When do episodes 1 and 2 come out?",
+    "Where can I watch in Japan or internationally?",
+    "Where can I read the manga in English?"
+  ],
+  "editorialWords": 1288,
+  "verifiedOn": "2026-11-14",
+  "sources": [
+    "https://www.soudouki.com/onair/index.html",
+    "https://prtimes.jp/main/html/rd/p/000000226.000004331.html",
+    "https://www.youtube.com/watch?v=GdakXIvTowI",
+    "https://www.alpha-manga.com/manga/552000104",
+    "https://www.onepeacebooks.com/jt/MultiMind.html"
+  ],
+  "limits": [
+    "The launch and simulcast times apply to Japan. The official materials do not name an international platform or English dub."
+  ],
+  "cover": {
+    "path": "/assets/images/covers/multi-mind-mayhem-official-visual.webp",
+    "imageUrl": "https://prcdn.freetls.fastly.net/release_image/4331/226/4331-226-a13cef2704e5eb0d266ec59f21ad68f4-1909x2700.jpg?width=960&format=jpeg",
+    "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000226.000004331.html",
+    "originalDimensions": [
+      960,
+      1358
+    ],
+    "sha256": "e819b1cb8739f1137d7f48628d30c8d7ba1ad40631501a04a9d84a2582d1e0fc",
+    "credit": "© Ryousen Takami / AlphaPolis / Multi-Mind Mayhem Production Committee",
+    "verification": "Key visual from the November 13 AlphaPolis press release."
+  },
+  "video": {
+    "path": "/assets/images/covers/multi-mind-mayhem-trailer.webp",
+    "imageUrl": "https://i.ytimg.com/vi/GdakXIvTowI/maxresdefault.jpg",
+    "sourceUrl": "https://www.youtube.com/watch?v=GdakXIvTowI",
+    "originalDimensions": [
+      1280,
+      720
+    ],
+    "sha256": "9810dd61a7627cfb26cefdd3e4496a43a2b41001ef82dcdd79bc2cf31758e814",
+    "status": "available",
+    "youtubeId": "GdakXIvTowI",
+    "channel": "AlphaPolis",
+    "verification": "AlphaPolis press release links to this video. YouTube oEmbed confirmed the official channel and title."
+  }
+}
