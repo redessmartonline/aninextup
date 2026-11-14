@@ -1,10 +1,12 @@
 """Make original title cards from the article headlines in the deployment."""
+from base64 import b64decode
 from html import unescape
+from io import BytesIO
 import json
 from pathlib import Path
 import re
 
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFont, ImageOps
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "assets" / "article-covers"
@@ -12,38 +14,58 @@ FONT = Path("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf")
 ORIGIN = "https://aninextup.com"
 
 
-def title_lines(title, font):
+def title_lines(title, font, width):
     lines = [""]
     for word in title.split():
         candidate = (lines[-1] + " " + word).strip()
-        if lines[-1] and font.getlength(candidate) > 1010:
+        if lines[-1] and font.getlength(candidate) > width:
             lines.append(word)
         else:
             lines[-1] = candidate
     return lines
 
 
-def build(page):
+def build(page, artwork):
     source = page.read_text(encoding="utf-8")
     title = unescape(re.search(r"<title>(.*?)</title>", source, re.S)[1])
     title = re.sub(r"\s+(?:[|—–]|-)\s+AniNextUp\s*$", "", title).strip()
+    illustration = artwork.get(page.stem)
     image = Image.new("RGB", (1200, 630), "#111930")
-    draw = ImageDraw.Draw(image)
-    draw.rectangle((68, 70, 1132, 560), outline="#604393", width=2)
-    draw.rectangle((68, 70, 77, 560), fill="#a78bfa")
+    if illustration:
+        art = Image.open(BytesIO(b64decode(illustration["image"], validate=True))).convert("RGB")
+        image = ImageOps.fit(art, (1200, 630), Image.Resampling.LANCZOS)
+    if not illustration or not illustration.get("lettered"):
+        draw_title(image, title, bool(illustration))
+    image.save(OUT / (page.stem + ".png"), optimize=True)
+    update_article(page, source)
+
+
+def draw_title(image, title, illustrated):
+    draw = ImageDraw.Draw(image, "RGBA")
+    if illustrated:
+        for x in range(850):
+            shade = max(0, int(218 * (1 - (x / 850) ** 3)))
+            draw.line((x, 0, x, 630), fill=(9, 12, 27, shade))
+    else:
+        draw.rectangle((68, 70, 1132, 560), outline="#604393", width=2)
+        draw.rectangle((68, 70, 77, 560), fill="#a78bfa")
+    draw = ImageDraw.Draw(image, "RGBA")
     draw.text((111, 115), "ANI NEXTUP", font=ImageFont.truetype(str(FONT), 24), fill="#c4b5fd")
-    for size in range(68, 25, -2):
+    width = 700 if illustrated else 1010
+    for size in range(64, 25, -2):
         font = ImageFont.truetype(str(FONT), size)
-        lines = title_lines(title, font)
-        if len(lines) <= 5 and all(font.getlength(line) <= 1010 for line in lines):
+        lines = title_lines(title, font, width)
+        if len(lines) <= 5 and all(font.getlength(line) <= width for line in lines):
             break
-    if len(lines) > 5 or any(font.getlength(line) > 1010 for line in lines):
+    if len(lines) > 5 or any(font.getlength(line) > width for line in lines):
         raise ValueError(f"Cover title does not fit: {page}")
     step = size + 10
     top = 337 - len(lines) * step // 2
     for number, line in enumerate(lines):
         draw.text((111, top + number * step), line, font=font, fill="#f5f2ff")
-    image.save(OUT / (page.stem + ".png"), optimize=True)
+
+
+def update_article(page, source):
     path = "/assets/article-covers/" + page.stem + ".png"
     source = re.sub(r'<meta\b(?=[^>]*(?:property|name)="(?:og:image(?::[^"]+)?|twitter:image(?::[^"]+)?)")[^>]*>', "", source, flags=re.I)
     metadata = (
@@ -72,8 +94,14 @@ def build(page):
 def main():
     OUT.mkdir(exist_ok=True)
     pages = sorted((ROOT / "articles").glob("*.html"))
+    artwork = {}
+    for manifest in sorted(Path(__file__).with_name("cover-artwork").glob("*.json")):
+        batch = json.loads(manifest.read_text(encoding="utf-8"))
+        if artwork.keys() & batch.keys():
+            raise ValueError(f"Duplicate cover artwork in {manifest}")
+        artwork.update(batch)
     for page in pages:
-        build(page)
+        build(page, artwork)
     # Keep the dynamically rendered discovery cards aligned with their articles.
     for name in ("latest-news.json", "popular-news.json", "search-index.json", "calendar-releases.json"):
         path = ROOT / "assets" / name
