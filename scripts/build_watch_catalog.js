@@ -39,11 +39,11 @@ let html=fs.readFileSync(path.join(root,'where-to-watch.html'),'utf8');
 html=html.replaceAll('data-anime-platform','data-watch-catalog-platform').replaceAll('data-platform-count','data-watch-catalog-count');
 const lists={};
 for(const p of platforms){
- lists[p]=[...entries.values()].filter(a=>a.platform===p||a.platform.startsWith(p+' ')||a.platform.startsWith(p+'/')).sort((a,b)=>(a.date||'9999').localeCompare(b.date||'9999')||a.title.localeCompare(b.title));
+ lists[p]=[...entries.values()].filter(a=>a.platform===p||a.platform.startsWith(p+' ')||a.platform.startsWith(p+'/')||a.platform.startsWith(p+';')).sort((a,b)=>(a.date||'9999').localeCompare(b.date||'9999')||a.title.localeCompare(b.title));
 }
 html=replaceContents(html,'data-watch-catalog-platform',p=>(lists[p]||[]).map(a=>{
  const label=a.dateLabel||(a.date&&/^\d{4}-\d{2}-\d{2}$/.test(a.date)?a.date:'DATE TBA');
- return '<a class="mini data-card visual-card" href="'+esc(a.article)+'">'+(a.image?'<img src="'+esc(a.image)+'" alt="'+esc(a.title)+'" loading="lazy">':'')+'<div class="visual-body"><b>'+esc(label)+'</b><h3>'+esc(a.title)+'</h3><span>'+esc(a.platform)+'</span></div></a>';
+ return '<a class="mini data-card visual-card" href="'+esc(a.article)+'">'+'<div class="visual-body"><b>'+esc(label)+'</b><h3>'+esc(a.title)+'</h3><span>'+esc(a.platform)+'</span></div></a>';
 }).join('')||'<p class="empty">No confirmed releases listed yet.</p>');
 html=replaceContents(html,'data-watch-catalog-count',p=>'· '+(lists[p]||[]).length+' TRACKED');
 html=replaceContents(html,'data-watch-total',p=>String((lists[p]||[]).length));
