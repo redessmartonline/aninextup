@@ -1,0 +1,30 @@
+{
+  "intent": "Find where Demons’ Crest streams, its launch time and weekly release cadence.",
+  "keyword": "Demons’ Crest where to watch",
+  "editorialWords": 1646,
+  "verifiedOn": "2026-11-14",
+  "sources": [
+    "https://demonscrest-anime.com/",
+    "https://demonscrest-anime.com/news/index00050000.html",
+    "https://demonscrest-anime.com/news/index00150000.html",
+    "https://prtimes.jp/main/html/rd/p/000002152.000004612.html"
+  ],
+  "cover": {
+    "path": "/assets/images/external/0df63a485f0e012f9a966e043e8a440114ffdbf63be0e7e0baa7972f5e74ed80.webp",
+    "imageUrl": "https://demonscrest-anime.com/core_sys/images/news/00000005/block/00000016/00000016.jpg",
+    "sourceUrl": "https://demonscrest-anime.com/news/index00050000.html",
+    "sha256": "f27e51e068191bb2077e14d75512b91cd178311cba060891842a5a95dbd82141",
+    "credit": "© Reki Kawahara / Straight Edge / Demons’ Crest Project",
+    "verification": "Official source and local asset mapping. Reuse permission is unverified."
+  },
+  "video": {
+    "path": "/assets/images/external/f01770536406765b06bd7641a9126565c1b20e5af54c626a49a8a41e8bcc8017.webp",
+    "imageUrl": "https://i.ytimg.com/vi/Sj4Pu2qu43A/hqdefault.jpg",
+    "sourceUrl": "https://www.youtube.com/watch?v=Sj4Pu2qu43A",
+    "sha256": "22916c7edfe826a05ced61edbcae587006b36582a31e853d24f6d4cc05db5249",
+    "status": "available",
+    "channel": "Prime Video JP",
+    "youtubeId": "Sj4Pu2qu43A",
+    "verification": "Amazon Japan press release links this trailer ID. Standalone thumbnail reuse permission is unverified."
+  }
+}
