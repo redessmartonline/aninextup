@@ -1,7 +1,7 @@
 {
-  "articles": 151,
+  "articles": 152,
   "changed": 0,
-  "standardized": 151,
+  "standardized": 152,
   "unresolved": [],
   "records": [
     {
@@ -524,6 +524,12 @@
       "status": "ok",
       "published": "2026-10-31",
       "path": "articles/ms-isshiki-wants-to-know-about-love.html",
+      "changed": false
+    },
+    {
+      "status": "ok",
+      "published": "2026-11-14",
+      "path": "articles/multi-mind-mayhem-anime-release-date.html",
       "changed": false
     },
     {
