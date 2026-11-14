@@ -19,3 +19,7 @@ previews/
 editorial/previews/
 editorial/drafts/
 editorial/reviews/
+
+# Only the branded fallback artwork is included in the AdSense review deployment.
+assets/images/*
+!assets/images/anime-image-fallback.svg
