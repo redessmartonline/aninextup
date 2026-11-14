@@ -1,6 +1,6 @@
 {
-  "count": 279,
-  "last_run_count": 8,
+  "count": 280,
+  "last_run_count": 7,
   "failed_count": 0,
   "failed": [],
   "images": [
@@ -188,6 +188,11 @@
       "source": "https://aninextup.com/assets/images/covers/ms-isshiki-official.webp",
       "local": "/assets/images/covers/ms-isshiki-official.webp",
       "evidence_commit": "017f802e6438ddc25976212af14dbb13804edbd1"
+    },
+    {
+      "source": "https://aninextup.com/assets/images/covers/multi-mind-mayhem-official-visual.webp",
+      "local": "/assets/images/covers/multi-mind-mayhem-official-visual.webp",
+      "download_url": "https://aninextup.com/assets/images/covers/multi-mind-mayhem-official-visual.webp"
     },
     {
       "source": "https://aninextup.com/assets/images/covers/my-crushs-crush-official-teaser.webp",
