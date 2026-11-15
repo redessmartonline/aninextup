@@ -211,7 +211,7 @@ def main():
         css.write("""
 /* Match the article cover proportions in both homepage news sections. */
 .home-page .popular-news-card > img,
-.home-page .home-more-news-list > .card.story.visual-card > img {
+[data-home-more] > a.card.story.visual-card > img {
   display: block;
   width: 100%;
   height: auto;
@@ -219,21 +219,31 @@ def main():
   aspect-ratio: 1200 / 630;
   object-fit: contain;
 }
-.home-page .home-more-news-list > .card.story.visual-card {
-  grid-template-columns: 168px minmax(0, 1fr);
+[data-home-more] > a.card.story.visual-card {
+  grid-template-columns: 116px minmax(0, 1fr);
   gap: clamp(14px, 2vw, 24px);
+}
+[data-home-more] > a.card.story.visual-card:not([hidden]) {
+  display: grid !important;
+}
+[data-home-more] > a.card.story.visual-card > img {
+  max-width: 116px;
+  grid-column: 1;
+}
+[data-home-more] > a.card.story.visual-card > .visual-body {
+  grid-column: 2;
 }
 @media (max-width: 700px) {
   .home-page .popular-news-card { flex-direction: column; }
 }
 @media (max-width: 580px) {
-  .home-page .home-more-news-list > .card.story.visual-card {
-    grid-template-columns: clamp(90px, 28vw, 120px) minmax(0, 1fr);
-    gap: 12px;
+  [data-home-more] > a.card.story.visual-card {
+    grid-template-columns: 80px minmax(0, 1fr);
+    gap: 10px;
     align-items: start;
     padding: 12px 0 !important;
   }
-  .home-page .home-more-news-list > .card.story.visual-card p {
+  [data-home-more] > a.card.story.visual-card p {
     display: -webkit-box;
   }
 }
