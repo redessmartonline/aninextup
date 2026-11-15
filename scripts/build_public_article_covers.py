@@ -89,7 +89,7 @@ def draw_title(image, title, illustrated):
     else:
         draw.rectangle((68, 70, 1132, 560), outline="#604393", width=2)
         draw.rectangle((68, 70, 77, 560), fill="#a78bfa")
-    draw.text((111, 115), "ANI NEXTUP", font=ImageFont.truetype(str(FONT), 24), fill="#c4b5fd")
+    draw.text((111, 115), "ANINEXTUP", font=ImageFont.truetype(str(FONT), 24), fill="#c4b5fd")
     width = 700 if illustrated else 1010
     for size in range(64, 25, -2):
         font = ImageFont.truetype(str(FONT), size)
