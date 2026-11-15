@@ -209,9 +209,8 @@ def main():
     with (ROOT / "assets" / "style.css").open("a", encoding="utf-8") as css:
         css.write("\n.article-original-cover{display:block;width:100%;height:auto;border-radius:12px;margin:1.25rem 0}\nimg[data-illustrated-cover]{aspect-ratio:1200/630;object-fit:contain!important;height:auto}\n")
         css.write("""
-/* Match the article cover proportions in both homepage news sections. */
-.home-page .popular-news-card > img,
-[data-home-more] > a.card.story.visual-card > img {
+/* Keep a fixed image and text column in the homepage news archive. */
+.home-page .popular-news-card > img {
   display: block;
   width: 100%;
   height: auto;
@@ -219,33 +218,67 @@ def main():
   aspect-ratio: 1200 / 630;
   object-fit: contain;
 }
-[data-home-more] > a.card.story.visual-card {
-  grid-template-columns: 116px minmax(0, 1fr);
-  gap: clamp(14px, 2vw, 24px);
+#more-anime-news [data-home-more] > a.card.story.visual-card {
+  --news-cover-width: 116px;
+  gap: 16px !important;
+  align-items: start;
+  padding: 12px 0 !important;
+  border-bottom: 1px solid var(--line);
 }
-[data-home-more] > a.card.story.visual-card:not([hidden]) {
+#more-anime-news [data-home-more] > a.card.story.visual-card:not([hidden]) {
   display: grid !important;
+  grid-template-columns: var(--news-cover-width) minmax(0, 1fr) !important;
 }
-[data-home-more] > a.card.story.visual-card > img {
-  max-width: 116px;
-  grid-column: 1;
+#more-anime-news [data-home-more] > a.card.story.visual-card > img {
+  grid-area: 1 / 1;
+  display: block;
+  width: var(--news-cover-width) !important;
+  min-width: var(--news-cover-width);
+  max-width: var(--news-cover-width);
+  height: auto !important;
+  aspect-ratio: 1200 / 630;
+  margin: 0;
+  border-radius: 6px;
+  object-fit: contain;
 }
-[data-home-more] > a.card.story.visual-card > .visual-body {
-  grid-column: 2;
+#more-anime-news [data-home-more] > a.card.story.visual-card > .visual-body {
+  grid-area: 1 / 2;
+  min-width: 0;
+  align-self: start;
+  padding: 0;
+}
+#more-anime-news [data-home-more] .tag {
+  font-size: .68rem;
+  color: #c4aaff;
+}
+#more-anime-news [data-home-more] h3 {
+  margin: 4px 0;
+  font-size: 1rem;
+  line-height: 1.28;
+}
+#more-anime-news [data-home-more] p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  margin: 0;
+  font-size: .88rem;
+  line-height: 1.35;
+  color: #b8c1d4;
+}
+#more-anime-news [data-home-more] .more {
+  display: none;
 }
 @media (max-width: 700px) {
   .home-page .popular-news-card { flex-direction: column; }
 }
 @media (max-width: 580px) {
-  [data-home-more] > a.card.story.visual-card {
-    grid-template-columns: 80px minmax(0, 1fr);
-    gap: 10px;
-    align-items: start;
-    padding: 12px 0 !important;
+  #more-anime-news [data-home-more] > a.card.story.visual-card {
+    --news-cover-width: 80px;
+    gap: 10px !important;
   }
-  [data-home-more] > a.card.story.visual-card p {
-    display: -webkit-box;
-  }
+  #more-anime-news [data-home-more] h3 { font-size: .94rem; }
+  #more-anime-news [data-home-more] p { font-size: .82rem; }
 }
 """)
     stylesheet = ROOT / "assets" / "style.css"
