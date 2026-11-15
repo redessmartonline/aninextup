@@ -1,0 +1,18 @@
+{
+  "intent": "Which date should go in your calendar?",
+  "keyword": "The Fable Season 2: January 9, 2027 Premiere, Cast and Visual",
+  "verifiedOn": "2026-11-15",
+  "editorialWords": 1204,
+  "cover": {
+    "path": "/assets/images/external/f8b01e904b2f530e4f6e06c618a3c271d28a5853fde6708f4cc4e7a308436059.webp",
+    "imageUrl": "https://aninextup.com/assets/images/external/f8b01e904b2f530e4f6e06c618a3c271d28a5853fde6708f4cc4e7a308436059.webp",
+    "sha256": "b469d8305d3056a87e08aeb91a90fcd81871dbed3c60e6a1972566343d8476e9",
+    "credit": "Official Season 2 teaser artwork via VAP / The Fable anime production. © Katsuhisa Minami / Kodansha / The Fable production committee.",
+    "sourceUrl": "https://www.vap.co.jp/the-fable-anime/"
+  },
+  "video": {
+    "status": "not-available",
+    "sourceUrl": "https://www.vap.co.jp/the-fable-anime/",
+    "reason": "This edition does not embed a video player. Official previews, when listed, are linked from the article."
+  }
+}
