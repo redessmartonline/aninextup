@@ -185,8 +185,8 @@ jobs:
       - name: Prepare Google consent and original cover artwork
         run: |
           python -m pip install Pillow==11.3.0
-          python scripts/prepare_public_media.py
           python scripts/build_public_article_covers.py
+          python scripts/prepare_public_media.py
           python scripts/prepare_google_cmp.py
           python scripts/audit_adsense_readiness.py
 
