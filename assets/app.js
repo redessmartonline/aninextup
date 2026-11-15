@@ -3,11 +3,19 @@ const cardImageSelector='.visual-card > img, .news-featured > img, .news-side-ca
 function useCardImageFallback(image){
   if(!(image instanceof HTMLImageElement))return;
   // Only stop when the current request already is the fallback.
-  // A later external request must still be able to recover.
   if(image.src===new URL(cardImageFallback,location.origin).href)return;
   image.dataset.fallbackApplied='true';
   image.classList.add('image-fallback');
-  image.src=image.src==="/assets/images/external/64187cad3e8f87e4c7953fe9827452236809b69fa67435cb1bc7216b60d2ba2d.webp"?"https://hirayasumi-anime.jp/img/top/kv_main.jpg":cardImageFallback;
+  image.src=cardImageFallback;
+}
+function publicArticleCover(value){
+  if(!value)return null;
+  try{
+    const image=new URL(value,location.origin+'/');
+    return image.origin===location.origin&&/^\/assets\/article-covers\/[a-z0-9-]+\.png$/.test(image.pathname)
+      ? image.href
+      : null;
+  }catch{return null;}
 }
 // Keep cards composed when an external artwork host is unavailable.
 document.addEventListener('error',event=>{
@@ -402,10 +410,10 @@ const renderRelatedReleases=data=>{
   }).slice(0,Math.max(0,3-existing.length));
   ranked.forEach(a=>{
     const link=document.createElement('a');link.className='mini data-card related-card';link.href='../'+a.article.replace(/^\//,'');
-    const source=new URL(a.image,location.origin+'/');
-    if((source.protocol==='https:'||source.origin===location.origin)&&source.pathname!=='/assets/images/covers/aoashi-season-2.jpg'&&!/(?:favicon|\.svg(?:$|\?))/i.test(source.href)){
+    const source=publicArticleCover(a.image);
+    if(source){
       const media=document.createElement('span');media.className='related-card-media';
-      const image=document.createElement('img');image.className='related-card-image';image.alt=a.title;image.width=160;image.height=90;image.loading='lazy';image.decoding='async';image.src=source.href;media.append(image);link.append(media);
+      const image=document.createElement('img');image.className='related-card-image';image.alt=a.title;image.width=160;image.height=90;image.loading='lazy';image.decoding='async';image.src=source;media.append(image);link.append(media);
     }
     const copy=document.createElement('div');copy.className='related-card-copy';
     const label=document.createElement('b');label.textContent=a.dateLabel||a.date||'ANIME RELEASE';
@@ -498,7 +506,7 @@ async function ensureRelatedReleaseCovers(){
       const destination=new URL(link.getAttribute('href'),location.href);
       const slug=destination.pathname.split('/').pop().replace(/\.html$/,'');
       let img=link.querySelector('img');
-      if(img?.dataset.verifiedArtwork==='true'&&img.getAttribute('src'))continue;
+      if(img?.dataset.verifiedArtwork==='true'&&publicArticleCover(img.getAttribute('src')))continue;
       if(!img){
         img=document.createElement('img');
         img.className='related-card-image';
@@ -511,18 +519,17 @@ async function ensureRelatedReleaseCovers(){
       }
       img.removeAttribute('onerror');
       if(img.complete&&!img.naturalWidth)useCardImageFallback(img);
-      const known=coverBySlug.get(slug);
-      if(known){
-        try{const expected=new URL(known,location.origin+'/').href;if(img.src!==expected)img.src=expected;}catch{useCardImageFallback(img);}
-      }
+      const known=publicArticleCover(coverBySlug.get(slug));
+      if(known&&img.src!==known)img.src=known;
+      if(!known&&!publicArticleCover(img.getAttribute('src')))useCardImageFallback(img);
       if(!known&&destination.origin===location.origin&&destination.pathname.startsWith('/articles/')){
         try{
           const response=await fetch(destination.href,{credentials:'omit'});
           if(!response.ok)continue;
           const html=await response.text();
           const parsed=new DOMParser().parseFromString(html,'text/html');
-          const cover=parsed.querySelector('meta[property="og:image"]')?.content;
-          if(cover&&/^https?:\/\//.test(cover)&&img.src!==cover)img.src=cover;
+          const cover=publicArticleCover(parsed.querySelector('meta[property="og:image"]')?.content);
+          if(cover&&img.src!==cover)img.src=cover;
         }catch{/* Keep the branded fallback when destination metadata is unavailable. */}
       }
     }
