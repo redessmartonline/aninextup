@@ -1,0 +1,17 @@
+{
+  "intent": "Find the watch order, first English novel and confirmed status of the Royal Academy anime.",
+  "keyword": "Ascendance of a Bookworm Part 4 anime",
+  "verifiedOn": "2026-11-15",
+  "cover": {
+    "path": "/assets/images/external/2ca9757745317315ad9bd2266c92716d1f8d96890f355a89c8b840c521000ba4.webp",
+    "imageUrl": "https://aninextup.com/assets/images/external/2ca9757745317315ad9bd2266c92716d1f8d96890f355a89c8b840c521000ba4.webp",
+    "sha256": "123c0a2244e0edb1e7344c435aef9f8ac566613cc9aa51b58e9dc93a71b480fd",
+    "credit": "Ascendance of a Bookworm anime production",
+    "sourceUrl": "https://www.witstudio.co.jp/news/post-45"
+  },
+  "video": {
+    "status": "not-available",
+    "sourceUrl": "https://www.witstudio.co.jp/news/post-45",
+    "reason": "The studio announcement does not provide a dedicated Part 4 trailer."
+  }
+}
