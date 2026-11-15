@@ -219,7 +219,7 @@ def main():
   object-fit: contain;
 }
 #more-anime-news [data-home-more] > a.card.story.visual-card {
-  --news-cover-width: 132px;
+  --news-cover-width: 160px;
   gap: 16px !important;
   align-items: start;
   padding: 12px 0 !important;
@@ -274,7 +274,7 @@ def main():
 }
 @media (max-width: 580px) {
   #more-anime-news [data-home-more] > a.card.story.visual-card {
-    --news-cover-width: 88px;
+    --news-cover-width: clamp(96px, 27vw, 108px);
     gap: 10px !important;
   }
   #more-anime-news [data-home-more] h3 { font-size: .94rem; }
