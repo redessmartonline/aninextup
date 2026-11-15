@@ -220,7 +220,7 @@ def main():
   object-fit: contain;
 }
 .home-page .home-more-news-list > .card.story.visual-card {
-  grid-template-columns: minmax(0, 230px) minmax(0, 1fr);
+  grid-template-columns: 168px minmax(0, 1fr);
   gap: clamp(14px, 2vw, 24px);
 }
 @media (max-width: 700px) {
@@ -228,8 +228,10 @@ def main():
 }
 @media (max-width: 580px) {
   .home-page .home-more-news-list > .card.story.visual-card {
-    grid-template-columns: minmax(0, 1fr);
-    padding: 18px 0 !important;
+    grid-template-columns: clamp(90px, 28vw, 120px) minmax(0, 1fr);
+    gap: 12px;
+    align-items: start;
+    padding: 12px 0 !important;
   }
   .home-page .home-more-news-list > .card.story.visual-card p {
     display: -webkit-box;
