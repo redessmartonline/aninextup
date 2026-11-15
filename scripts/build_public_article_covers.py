@@ -115,13 +115,20 @@ def update_article(page, source):
     )
     source = re.sub(r"</head>", metadata + "</head>", source, count=1, flags=re.I)
     cover = f'<img src="{path}" width="1200" height="630" alt="" decoding="async" class="article-original-cover">'
-    source, count = re.subn(
-        r'(<article\b[^>]*>\s*(?:<header\b[^>]*>.*?</header>\s*)?)',
-        lambda m: m[0] + cover,
-        source, count=1, flags=re.I | re.S,
-    )
-    if not count:
+    article = re.search(r"<article\b[^>]*>(.*?)</article\s*>", source, flags=re.I | re.S)
+    if not article:
         raise ValueError(f"No article element: {page}")
+    body = article[1]
+    heading = re.search(r"</h1\s*>", body, flags=re.I)
+    if not heading:
+        raise ValueError(f"No article heading: {page}")
+    intro = re.match(
+        r"""(?:\s*<p\b(?=[^>]*class=["'][^"']*\b(?:lead|byline)\b)[^>]*>.*?</p\s*>)*\s*(?:</(?:header|div)\s*>)?""",
+        body[heading.end():],
+        flags=re.I | re.S,
+    )
+    insert_at = article.start(1) + heading.end() + intro.end()
+    source = source[:insert_at] + "\n" + cover + "\n" + source[insert_at:]
     # Remove the old lead artwork placeholder if it follows the new card.
     source = re.sub(
         r'(<img[^>]+class="article-original-cover">)(\s*)(?:<figure\b[^>]*>\s*<img\b[^>]*anime-image-fallback\.svg[^>]*>.*?</figure>|<img\b[^>]*anime-image-fallback\.svg[^>]*>)',
