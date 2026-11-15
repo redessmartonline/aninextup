@@ -9,6 +9,8 @@ import re
 
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 
+from draw_editorial_cover import draw_scene
+
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "assets" / "article-covers"
 FONT = Path("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf")
@@ -32,16 +34,18 @@ def build(page, artwork):
     title = re.sub(r"\s+(?:[|—–]|-)\s+AniNextUp\s*$", "", title).strip()
     illustration = artwork.get(page.stem)
     image = Image.new("RGB", (1200, 630), "#111930")
-    if illustration:
+    if illustration and "scene" in illustration:
+        image = draw_scene(page.stem, illustration["scene"])
+    elif illustration:
         art = Image.open(BytesIO(b64decode(illustration["image"], validate=True))).convert("RGB")
         image = ImageOps.fit(art, (1200, 630), Image.Resampling.LANCZOS)
     if not illustration or not illustration.get("lettered"):
-        draw_title(image, title, bool(illustration))
+        draw_title(image, title, bool(illustration), page, bool(illustration and "scene" in illustration))
     image.save(OUT / (page.stem + ".png"), optimize=True)
     update_article(page, source)
 
 
-def draw_title(image, title, illustrated):
+def draw_title(image, title, illustrated, page, editorial_scene=False):
     draw = ImageDraw.Draw(image, "RGBA")
     if illustrated:
         for x in range(850):
@@ -51,7 +55,7 @@ def draw_title(image, title, illustrated):
         draw.rectangle((68, 70, 1132, 560), outline="#604393", width=2)
         draw.rectangle((68, 70, 77, 560), fill="#a78bfa")
     draw.text((111, 115), "ANINEXTUP", font=ImageFont.truetype(str(FONT), 24), fill="#c4b5fd")
-    width = 700 if illustrated else 1010
+    width = 645 if editorial_scene else (700 if illustrated else 1010)
     for size in range(64, 25, -2):
         font = ImageFont.truetype(str(FONT), size)
         lines = title_lines(title, font, width)
