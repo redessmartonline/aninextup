@@ -1,0 +1,17 @@
+{
+  "intent": "Plan a January anime watchlist with verified release scope, local viewing options and cinema dates.",
+  "keyword": "January 2027 anime releases",
+  "verifiedOn": "2026-11-15",
+  "cover": {
+    "path": "/assets/images/shangri-la-frontier-season-3-official-visual.webp",
+    "imageUrl": "https://aninextup.com/assets/images/shangri-la-frontier-season-3-official-visual.webp",
+    "sha256": "cc6379b64e5a77e4152aa08214de76e031ee6884b28efd4f87aed6494952ce4b",
+    "credit": "Katarina, Ryosuke Fuji, Kodansha / Shangri-La Frontier Production Committee, MBS",
+    "sourceUrl": "https://anime.shangrilafrontier.com/topics/32/"
+  },
+  "video": {
+    "status": "not-available",
+    "sourceUrl": "https://www.netflix.com/tudum/articles/sakamoto-days-season-2-release-date-news",
+    "reason": "The multi-title guide has no dedicated trailer. The individual Sakamoto Days trailer is provided as a link to the official upload."
+  }
+}
