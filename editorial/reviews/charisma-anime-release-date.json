@@ -1,0 +1,17 @@
+{
+  "intent": "Find the separate viewing schedules for the shorts and the January TV anime.",
+  "keyword": "Charisma anime release date",
+  "verifiedOn": "2026-11-15",
+  "cover": {
+    "path": "/assets/images/external/a5e25468f28d6065d4595963b6ba154b3e56e68e8ab7f22c5a07bd63015a3302.webp",
+    "imageUrl": "https://aninextup.com/assets/images/external/a5e25468f28d6065d4595963b6ba154b3e56e68e8ab7f22c5a07bd63015a3302.webp",
+    "sha256": "30e24de27d2d27bcb1536bf45e24f88108f357853f45ae4fddf97f606a915e14",
+    "credit": "CHARISMA ANIME",
+    "sourceUrl": "https://anime.charisma-house.com/"
+  },
+  "video": {
+    "status": "not-available",
+    "sourceUrl": "https://anime.charisma-house.com/news/66/",
+    "reason": "The official teaser is provided as a link to the original upload; no embedded player is offered."
+  }
+}
