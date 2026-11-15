@@ -152,7 +152,7 @@ def main():
     def replace_card(match):
         tag, body = match.groups()
         href = re.search(r'href="(?:https://aninextup\.com/)?(?:\.\./|/)?articles/([^"?#]+)', tag)
-        if href and Path(href[1]).stem in artwork:
+        if href and (OUT / (Path(href[1]).stem + ".png")).is_file():
             cover = f"/assets/article-covers/{Path(href[1]).stem}.png"
             image_tag = re.compile(r"<img\b[^>]*>", re.I)
             def replace_image(image):
@@ -160,7 +160,7 @@ def main():
                 img = re.sub(r'\bsrc="[^"]*"', f'src="{cover}"', img, count=1, flags=re.I)
                 return img[:-1] + ' width="1200" height="630" alt="" data-illustrated-cover>'
             body, count = image_tag.subn(replace_image, body, count=1)
-            if not count and re.search(r'class="[^"]*\bvisual-card\b', tag):
+            if not count and re.search(r'class="[^"]*\b(?:visual-card|popular-news-card)\b', tag):
                 body = f'<img src="{cover}" width="1200" height="630" alt="" loading="lazy" data-illustrated-cover>' + body
         return tag + body + "</a>"
 
@@ -208,6 +208,40 @@ def main():
         path.write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
     with (ROOT / "assets" / "style.css").open("a", encoding="utf-8") as css:
         css.write("\n.article-original-cover{display:block;width:100%;height:auto;border-radius:12px;margin:1.25rem 0}\nimg[data-illustrated-cover]{aspect-ratio:1200/630;object-fit:contain!important;height:auto}\n")
+        css.write("""
+/* Match the article cover proportions in both homepage news sections. */
+.home-page .popular-news-card > img,
+.home-page .home-more-news-list > .card.story.visual-card > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 1200 / 630;
+  object-fit: contain;
+}
+.home-page .home-more-news-list > .card.story.visual-card {
+  grid-template-columns: minmax(0, 230px) minmax(0, 1fr);
+  gap: clamp(14px, 2vw, 24px);
+}
+@media (max-width: 700px) {
+  .home-page .popular-news-card { flex-direction: column; }
+}
+@media (max-width: 580px) {
+  .home-page .home-more-news-list > .card.story.visual-card {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 18px 0 !important;
+  }
+  .home-page .home-more-news-list > .card.story.visual-card p {
+    display: -webkit-box;
+  }
+}
+""")
+    stylesheet = ROOT / "assets" / "style.css"
+    style_version = sha256(stylesheet.read_bytes()).hexdigest()[:16]
+    home = ROOT / "index.html"
+    home_source = home.read_text(encoding="utf-8")
+    home_source = re.sub(r'(href="(?:/)?assets/style\.css)(?:\?[^"]*)?"', rf'\1?v={style_version}"', home_source)
+    home.write_text(home_source, encoding="utf-8")
     print(f"Built {len(list(OUT.glob('*.png')))} original article covers")
 
 
