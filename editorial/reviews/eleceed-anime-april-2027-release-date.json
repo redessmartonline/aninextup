@@ -1,0 +1,18 @@
+{
+  "intent": "How to match the anime and webcomic names",
+  "keyword": "ELECEED Anime Release Date: April 2027 and English Trailer",
+  "verifiedOn": "2026-11-15",
+  "editorialWords": 1227,
+  "cover": {
+    "path": "/assets/images/external/2ce4e0ada68e7052014b541ac90ec06f813ab55e5ab5bd29d68256eb60e3d9f3.webp",
+    "imageUrl": "https://aninextup.com/assets/images/external/2ce4e0ada68e7052014b541ac90ec06f813ab55e5ab5bd29d68256eb60e3d9f3.webp",
+    "sha256": "e897c7a2dd564236385f1d020e4955f4970600c3a4a33a834c936753a110f5b2",
+    "credit": "Official promotional visual. © Jeho Son·ZHENA | WEBTOON © ELECEED Animation Partners. · Official source",
+    "sourceUrl": "https://eleceed-anime.com/news/2027%E5%B9%B44%E6%9C%88%E6%94%BE%E9%80%81%E6%B1%BA%E5%AE%9A%EF%BC%81/"
+  },
+  "video": {
+    "status": "not-available",
+    "sourceUrl": "https://eleceed-anime.com/news/2027%E5%B9%B44%E6%9C%88%E6%94%BE%E9%80%81%E6%B1%BA%E5%AE%9A%EF%BC%81/",
+    "reason": "This edition does not embed a video player. Official previews, when listed, are linked from the article."
+  }
+}
