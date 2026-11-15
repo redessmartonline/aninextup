@@ -1,0 +1,18 @@
+{
+  "intent": "What to enter in your calendar for January 7",
+  "keyword": "Are You a Landmine, Chihara-san? Anime Release Date: January 7, 2027",
+  "verifiedOn": "2026-11-15",
+  "editorialWords": 1217,
+  "cover": {
+    "path": "/assets/images/news/jirai-girl-chihara-san-anime-january-2027-official.webp",
+    "imageUrl": "https://aninextup.com/assets/images/news/jirai-girl-chihara-san-anime-january-2027-official.webp",
+    "sha256": "da1eaa362edc64b8873f32fd43522c82019b57e0a858d757b2bc75d4f4a78d38",
+    "credit": "Official promotional visual. Source and artwork credit: official anime website.",
+    "sourceUrl": "https://chiharasan-anime.com/"
+  },
+  "video": {
+    "status": "not-available",
+    "sourceUrl": "https://chiharasan-anime.com/",
+    "reason": "This edition does not embed a video player. Official previews, when listed, are linked from the article."
+  }
+}
