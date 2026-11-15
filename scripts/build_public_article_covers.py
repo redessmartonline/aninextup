@@ -3,6 +3,7 @@ from base64 import b64decode
 from hashlib import sha256
 from html import unescape
 from io import BytesIO
+from urllib.parse import unquote, urlparse
 import json
 from pathlib import Path
 import re
@@ -26,6 +27,41 @@ def title_lines(title, font, width):
     return lines
 
 
+def local_article_art(page, source):
+    """Find a locally mirrored lead image before public-media sanitization."""
+    article = re.search(r"<article\b[^>]*>(.*?)</article\s*>", source, flags=re.I | re.S)
+    if not article:
+        return None
+    root = ROOT.resolve()
+    for match in re.finditer(r"<img\b[^>]*>", article[1], flags=re.I):
+        tag = match[0]
+        if re.search(r'class="[^"]*\b(?:related-card|article-original-cover|avatar|logo)\b', tag, flags=re.I):
+            continue
+        src = re.search(r'\b(?:src|data-src)="([^"]+)"', tag, flags=re.I)
+        if not src:
+            continue
+        value = unescape(src[1]).strip()
+        if not value or value.startswith("data:") or "anime-image-fallback.svg" in value:
+            continue
+        parsed = urlparse(value if not value.startswith("//") else "https:" + value)
+        if parsed.scheme and parsed.netloc and parsed.netloc.lower().removeprefix("www.") not in {"aninextup.com"}:
+            continue
+        image_path = unquote(parsed.path)
+        if not image_path:
+            continue
+        candidate = (root / image_path.lstrip("/")) if image_path.startswith("/") or image_path.startswith("assets/") else (page.parent / image_path)
+        try:
+            candidate = candidate.resolve()
+            candidate.relative_to(root)
+            if candidate.is_file():
+                with Image.open(candidate) as check:
+                    check.verify()
+                return candidate
+        except (OSError, ValueError):
+            continue
+    return None
+
+
 def build(page, artwork):
     source = page.read_text(encoding="utf-8")
     title = unescape(re.search(r"<title>(.*?)</title>", source, re.S)[1])
@@ -33,7 +69,10 @@ def build(page, artwork):
     illustration = artwork.get(page.stem)
     image = Image.new("RGB", (1200, 630), "#111930")
     if illustration:
-        art = Image.open(BytesIO(b64decode(illustration["image"], validate=True))).convert("RGB")
+        if "path" in illustration:
+            art = Image.open(illustration["path"]).convert("RGB")
+        else:
+            art = Image.open(BytesIO(b64decode(illustration["image"], validate=True))).convert("RGB")
         image = ImageOps.fit(art, (1200, 630), Image.Resampling.LANCZOS)
     if not illustration or not illustration.get("lettered"):
         draw_title(image, title, bool(illustration))
@@ -100,8 +139,15 @@ def main():
         if artwork.keys() & batch.keys():
             raise ValueError(f"Duplicate cover artwork in {manifest}")
         artwork.update(batch)
+    local_art_count = 0
     for page in pages:
+        if page.stem not in artwork:
+            local_art = local_article_art(page, page.read_text(encoding="utf-8"))
+            if local_art:
+                artwork[page.stem] = {"path": str(local_art)}
+                local_art_count += 1
         build(page, artwork)
+    print(f"Reused {local_art_count} existing lead images for remaining article covers")
     # Static discovery cards and article recommendations share the same artwork.
     def replace_card(match):
         tag, body = match.groups()
