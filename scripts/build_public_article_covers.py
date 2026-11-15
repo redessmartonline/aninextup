@@ -129,11 +129,22 @@ def update_article(page, source):
     )
     insert_at = article.start(1) + heading.end() + intro.end()
     source = source[:insert_at] + "\n" + cover + "\n" + source[insert_at:]
-    # Remove the old lead artwork placeholder if it follows the new card.
-    source = re.sub(
-        r'(<img[^>]+class="article-original-cover">)(\s*)(?:<figure\b[^>]*>\s*<img\b[^>]*anime-image-fallback\.svg[^>]*>.*?</figure>|<img\b[^>]*anime-image-fallback\.svg[^>]*>)',
-        r'\1\2', source, count=1, flags=re.I | re.S,
+    # Replace the legacy lead image immediately after the new cover.
+    # Keep its source links without displaying a second hero.
+    legacy_hero = re.compile(
+        r'(<img[^>]+class="article-original-cover">)\s*'
+        r'(?:<figure\b[^>]*>\s*<img\b[^>]*>\s*(?:<figcaption\b[^>]*>(.*?)</figcaption\s*>)?\s*</figure\s*>'
+        r'|<img\b[^>]*>)',
+        flags=re.I | re.S,
     )
+
+    def keep_hero_sources(match):
+        links = re.findall(r'<a\b[^>]*>.*?</a\s*>', match[2] or "", flags=re.I | re.S)
+        if not links:
+            return match[1] + "\n"
+        return match[1] + '\n<p class="article-image-sources">' + " · ".join(links) + "</p>\n"
+
+    source = legacy_hero.sub(keep_hero_sources, source, count=1)
     page.write_text(source, encoding="utf-8")
 
 
