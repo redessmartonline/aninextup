@@ -79,7 +79,13 @@ def audit():
                 continue
             image_path = urllib.parse.unquote(urllib.parse.urlsplit(src).path)
             local = ((ROOT / image_path.lstrip("/")) if image_path.startswith("/") else (path.parent / image_path)).resolve()
-            if local.is_relative_to(ROOT) and not local.is_file():
+            # The deployment generates one PNG per article; source checkouts omit these files.
+            generated_cover = (
+                local.parent == ROOT / "assets" / "article-covers"
+                and local.suffix == ".png"
+                and (ROOT / "articles" / (local.stem + ".html")).is_file()
+            )
+            if local.is_relative_to(ROOT) and not local.is_file() and not generated_cover:
                 issues.append(f"BROKEN IMAGE {rel}: {src}")
         for href in p.links:
             if href.startswith(("mailto:", "tel:", "#", "javascript:", "http:", "https:", "//")):

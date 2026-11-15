@@ -11,8 +11,11 @@
     "sourceUrl": "https://mashle.pw/news/?id=70740"
   },
   "video": {
-    "status": "not-available",
+    "status": "available",
+    "youtubeId": "Ak8DnZUIPSk",
     "sourceUrl": "https://mashle.pw/news/?id=70740",
-    "reason": "This edition does not embed a video player. Official previews, when listed, are linked from the article."
+    "path": "/assets/images/news/mashle-season-3-official.webp",
+    "imageUrl": "https://aninextup.com/assets/images/news/mashle-season-3-official.webp",
+    "sha256": "2d8921b5dee8463c1125157bd6307d7bdb01219da0a6673ff084f3de3e0c6f09"
   }
 }
