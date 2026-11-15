@@ -1,0 +1,18 @@
+{
+  "intent": "Find your place when episode numbers differ",
+  "keyword": "Black Clover Season 2 Schedule & Where to Watch",
+  "verifiedOn": "2026-11-15",
+  "editorialWords": 1218,
+  "cover": {
+    "path": "/assets/images/black-clover-season-2.jpg",
+    "imageUrl": "https://aninextup.com/assets/images/black-clover-season-2.jpg",
+    "sha256": "1c57f3ec0c01b1757b72f3df9f4a4e2f203c6454c1201577b8c68ec4587d1ae3",
+    "credit": "Official Season 2 campaign visual. Source: Black Clover anime portal. © Yūki Tabata / Shueisha, TV Tokyo, Black Clover Production Committee.",
+    "sourceUrl": "https://bclover.jp/"
+  },
+  "video": {
+    "status": "not-available",
+    "sourceUrl": "https://bclover.jp/",
+    "reason": "This edition does not embed a video player. Official previews, when listed, are linked from the article."
+  }
+}

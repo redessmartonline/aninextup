@@ -1,0 +1,18 @@
+{
+  "intent": "Which Aikatsu Stars screening should you book?",
+  "keyword": "Aikatsu Stars! Movie: January 22, 2027 Release Date & Trailer",
+  "verifiedOn": "2026-11-15",
+  "editorialWords": 1202,
+  "cover": {
+    "path": "/assets/images/external/20fc54cb5c2a0f2bdb790734392351dfa7d1524f54083aa2ee86898a0906096f.webp",
+    "imageUrl": "https://aninextup.com/assets/images/external/20fc54cb5c2a0f2bdb790734392351dfa7d1524f54083aa2ee86898a0906096f.webp",
+    "sha256": "5e894f809910b4b22d879cbee54e903935178b350de985a4e68ec14c7b33a77b",
+    "credit": "Official promotional artwork · ©BNP/AIKATSU STARS 10TH PROJECT. Source: BN Pictures’ press release.",
+    "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000181.000120737.html"
+  },
+  "video": {
+    "status": "not-available",
+    "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000181.000120737.html",
+    "reason": "This edition does not embed a video player. Official previews, when listed, are linked from the article."
+  }
+}
