@@ -1,6 +1,6 @@
 {
-  "count": 280,
-  "last_run_count": 6,
+  "count": 281,
+  "last_run_count": 1,
   "failed_count": 0,
   "failed": [],
   "images": [
@@ -28,6 +28,11 @@
       "source": "https://anime.prisma-illya.jp/finale/img/ogp.jpg",
       "local": "/assets/images/external/bc2edb554b60a9a865476c50863585cf7cb8d383b9cb61c90d741e503ab601fd.webp",
       "evidence_commit": "c3433443478df98b2b1e0a4e7275bd6b8a11c12b"
+    },
+    {
+      "source": "https://aninextup.com/assets/article-covers/skip-and-loafer-season-2-release-date.png",
+      "local": "https://aninextup.com/assets/article-covers/skip-and-loafer-season-2-release-date.png",
+      "download_url": "https://aninextup.com/assets/article-covers/skip-and-loafer-season-2-release-date.png"
     },
     {
       "source": "https://aninextup.com/assets/images/anime-news-october-2026.jpeg",
