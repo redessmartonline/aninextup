@@ -30,6 +30,15 @@ def title_lines(title, font, width):
 
 def build(page, artwork):
     source = page.read_text(encoding="utf-8")
+    editorial = OUT / (page.stem + "-editorial.png")
+    if editorial.is_file():
+        with Image.open(editorial) as cover:
+            if cover.format != "PNG" or cover.size != (1200, 675):
+                raise ValueError(f"Invalid editorial cover dimensions or format: {editorial}")
+            cover.load()
+        update_article(page, source, editorial.name, 675)
+        return editorial.name, 675
+
     title = unescape(re.search(r"<title>(.*?)</title>", source, re.S)[1])
     title = re.sub(r"\s+(?:[|—–]|-)\s+AniNextUp\s*$", "", title).strip()
     illustration = artwork.get(page.stem)
@@ -47,7 +56,9 @@ def build(page, artwork):
     if not illustration or not illustration.get("lettered"):
         draw_title(image, title, bool(illustration), page, bool(illustration and "scene" in illustration))
     image.save(OUT / (page.stem + ".png"), optimize=True)
-    update_article(page, source)
+    filename = page.stem + ".png"
+    update_article(page, source, filename, 630)
+    return filename, 630
 
 
 def draw_title(image, title, illustrated, page, editorial_scene=False):
@@ -74,17 +85,35 @@ def draw_title(image, title, illustrated, page, editorial_scene=False):
         draw.text((111, top + number * step), line, font=font, fill="#f5f2ff")
 
 
-def update_article(page, source):
-    path = "/assets/article-covers/" + page.stem + ".png"
+def update_article(page, source, filename, height):
+    path = "/assets/article-covers/" + filename
     source = re.sub(r'<meta\b(?=[^>]*(?:property|name)="(?:og:image(?::[^"]+)?|twitter:image(?::[^"]+)?)")[^>]*>', "", source, flags=re.I)
     metadata = (
         f'<meta property="og:image" content="{ORIGIN}{path}">'
         '<meta property="og:image:width" content="1200">'
-        '<meta property="og:image:height" content="630">'
+        f'<meta property="og:image:height" content="{height}">'
         f'<meta name="twitter:image" content="{ORIGIN}{path}">'
     )
     source = re.sub(r"</head>", metadata + "</head>", source, count=1, flags=re.I)
-    cover = f'<img src="{path}" width="1200" height="630" alt="" decoding="async" class="article-original-cover">'
+    if height == 675:
+        def update_image(match):
+            data = json.loads(match[1])
+            if 'id="aninextup-index"' in match[0].split(">", 1)[0]:
+                data["image"] = path
+            elif isinstance(data, dict) and data.get("@type") in {"Article", "NewsArticle", "BlogPosting"}:
+                image = ORIGIN + path
+                data["image"] = [image] if isinstance(data.get("image"), list) else image
+            else:
+                return match[0]
+            payload = json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("<", r"\u003c")
+            return match[0].replace(match[1], payload, 1)
+
+        source = re.sub(
+            r'<script\b(?=[^>]*(?:type="application/ld\+json"|id="aninextup-index"))[^>]*>(.*?)</script>',
+            update_image, source, flags=re.I | re.S,
+        )
+
+    cover = f'<img src="{path}" width="1200" height="{height}" alt="" decoding="async" class="article-original-cover">'
     article = re.search(r"<article\b[^>]*>(.*?)</article\s*>", source, flags=re.I | re.S)
     if not article:
         raise ValueError(f"No article element: {page}")
@@ -120,22 +149,22 @@ def main():
         if artwork.keys() & batch.keys():
             raise ValueError(f"Duplicate cover artwork in {manifest}")
         artwork.update(batch)
-    for page in pages:
-        build(page, artwork)
+    covers = {page.stem: build(page, artwork) for page in pages}
     # Static discovery cards and article recommendations share the same artwork.
     def replace_card(match):
         tag, body = match.groups()
         href = re.search(r'href="(?:https://aninextup\.com/)?(?:\.\./|/)?articles/([^"?#]+)', tag)
-        if href and (OUT / (Path(href[1]).stem + ".png")).is_file():
-            cover = f"/assets/article-covers/{Path(href[1]).stem}.png"
+        if href and Path(href[1]).stem in covers:
+            filename, height = covers[Path(href[1]).stem]
+            cover = f"/assets/article-covers/{filename}"
             image_tag = re.compile(r"<img\b[^>]*>", re.I)
             def replace_image(image):
                 img = re.sub(r'\s+(?:srcset|sizes|width|height|alt)="[^"]*"', "", image[0], flags=re.I)
                 img = re.sub(r'\bsrc="[^"]*"', f'src="{cover}"', img, count=1, flags=re.I)
-                return img[:-1] + ' width="1200" height="630" alt="" data-illustrated-cover>'
+                return img[:-1] + f' width="1200" height="{height}" alt="" data-illustrated-cover>'
             body, count = image_tag.subn(replace_image, body, count=1)
             if not count and re.search(r'class="[^"]*\b(?:visual-card|popular-news-card)\b', tag):
-                body = f'<img src="{cover}" width="1200" height="630" alt="" loading="lazy" data-illustrated-cover>' + body
+                body = f'<img src="{cover}" width="1200" height="{height}" alt="" loading="lazy" data-illustrated-cover>' + body
         return tag + body + "</a>"
 
     for page in [*ROOT.glob("*.html"), *pages]:
@@ -148,9 +177,10 @@ def main():
     def replace_catalog_image(match):
         entry = match[0]
         article = re.search(r'(?:"article"|article):"articles/([^"]+)"', entry)
-        if not article or not (OUT / (Path(article[1]).stem + ".png")).is_file():
+        if not article or Path(article[1]).stem not in covers:
             return entry
-        cover = f"/assets/article-covers/{Path(article[1]).stem}.png"
+        filename, _ = covers[Path(article[1]).stem]
+        cover = f"/assets/article-covers/{filename}"
         return re.sub(r'((?:"image"|image):")[^"]+', lambda image: image[1] + cover, entry, count=1)
     catalog.write_text(re.sub(r'^\{[^\n]+', replace_catalog_image, catalog.read_text(encoding="utf-8"), flags=re.M), encoding="utf-8")
     # The published catalog differs from the pre-render input after artwork is assigned.
@@ -172,10 +202,11 @@ def main():
                 destination = value.get("article") or value.get("url") or value.get("href")
                 if isinstance(destination, str) and destination.lstrip("/").startswith("articles/"):
                     slug = Path(destination).stem
-                    if (OUT / (slug + ".png")).is_file():
+                    if slug in covers:
+                        filename, _ = covers[slug]
                         for key in ("image", "cover"):
                             if key in value:
-                                value[key] = f"/assets/article-covers/{slug}.png"
+                                value[key] = f"/assets/article-covers/{filename}"
                 for item in value.values():
                     refresh(item)
         refresh(data)
@@ -255,6 +286,7 @@ def main():
   #more-anime-news [data-home-more] p { font-size: .82rem; }
 }
 """)
+        css.write('\nimg[src$="-editorial.png"]{aspect-ratio:16/9!important}\n')
     stylesheet = ROOT / "assets" / "style.css"
     style_version = sha256(stylesheet.read_bytes()).hexdigest()[:16]
     home = ROOT / "index.html"
