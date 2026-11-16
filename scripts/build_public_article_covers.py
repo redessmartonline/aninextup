@@ -15,32 +15,6 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "assets" / "article-covers"
 FONT = Path("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf")
 ORIGIN = "https://aninextup.com"
-# Publisher-issued reporting materials. Keep each visual complete and credit it.
-PRESS_COVERS = {
-    "ninja-skooler-pilot-film-where-to-watch": (
-        "https://prtimes.jp/main/html/rd/p/000000011.000141283.html",
-        "©NINJA SKOOLER",
-    ),
-    "orochi-seventh-echoes-pilot-where-to-watch": (
-        "https://prtimes.jp/main/html/rd/p/000000013.000141283.html",
-        "© 2026 BLUE RIGHTS / OROCHI",
-    ),
-}
-
-
-def press_cover(slug):
-    source_url, credit = PRESS_COVERS[slug]
-    review_path = ROOT / "editorial" / "reviews" / (slug + ".json")
-    cover = json.loads(review_path.read_text(encoding="utf-8"))["cover"]
-    images = ROOT / "assets" / "images" / "covers"
-    source = (ROOT / cover["path"].lstrip("/")).resolve()
-    if cover["sourceUrl"] != source_url or cover["credit"] != credit or not source.is_relative_to(images):
-        raise ValueError(f"Press cover source or credit changed: {slug}")
-    data = source.read_bytes()
-    if sha256(data).hexdigest() != cover["sha256"]:
-        raise ValueError(f"Press cover bytes changed: {slug}")
-    art = Image.open(BytesIO(data)).convert("RGB")
-    return ImageOps.contain(art, (400, 530), Image.Resampling.LANCZOS), credit
 
 
 def title_lines(title, font, width):
@@ -60,21 +34,12 @@ def build(page, artwork):
     title = re.sub(r"\s+(?:[|—–]|-)\s+AniNextUp\s*$", "", title).strip()
     illustration = artwork.get(page.stem)
     image = Image.new("RGB", (1200, 630), "#111930")
-    if page.stem in PRESS_COVERS:
-        art, credit = press_cover(page.stem)
-        draw_title(image, title, True, page, editorial_scene=True)
-        x = 765 + (400 - art.width) // 2
-        y = 32 + (530 - art.height) // 2
-        image.paste(art, (x, y))
-        draw = ImageDraw.Draw(image)
-        font = ImageFont.truetype(str(FONT), 17)
-        draw.text((965, min(y + art.height + 13, 583)), credit, font=font, fill="#ded9ea", anchor="mt")
-    elif illustration and "scene" in illustration:
+    if illustration and "scene" in illustration:
         image = draw_scene(page.stem, illustration["scene"])
     elif illustration:
         art = Image.open(BytesIO(b64decode(illustration["image"], validate=True))).convert("RGB")
         image = ImageOps.fit(art, (1200, 630), Image.Resampling.LANCZOS)
-    if page.stem not in PRESS_COVERS and (not illustration or not illustration.get("lettered")):
+    if not illustration or not illustration.get("lettered"):
         draw_title(image, title, bool(illustration), page, bool(illustration and "scene" in illustration))
     image.save(OUT / (page.stem + ".png"), optimize=True)
     update_article(page, source)
