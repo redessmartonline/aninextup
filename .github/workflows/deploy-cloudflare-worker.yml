@@ -234,7 +234,23 @@ jobs:
               | cmp -s assets/article-covers/a-certain-dark-item-release-date.png - || return 1
             curl --fail --silent --show-error --max-time 15 \
               "https://aninextup.com/assets/article-covers/dark-summoner-omake-shorts-watch-order.png" \
-              | cmp -s assets/article-covers/dark-summoner-omake-shorts-watch-order.png -
+              | cmp -s assets/article-covers/dark-summoner-omake-shorts-watch-order.png - || return 1
+            local cover_file slug article asset
+            for cover_file in assets/article-covers/*-editorial.png; do
+              [[ -f "$cover_file" ]] || continue
+              asset="/${cover_file}"
+              slug=${cover_file##*/}
+              slug=${slug%-editorial.png}
+              curl --fail --silent --show-error --max-time 15 "https://aninextup.com${asset}" \
+                | cmp -s "$cover_file" - || return 1
+              article=$(curl --fail --silent --show-error --max-time 15 \
+                "https://aninextup.com/articles/${slug}?deploy=$GITHUB_RUN_ID-$(date +%s%N)") || return 1
+              [[ "$article" == *"src=\"$asset\" width=\"1200\" height=\"675\""* &&
+                 "$article" == *"property=\"og:image\" content=\"https://aninextup.com$asset\""* &&
+                 "$article" == *"name=\"twitter:image\" content=\"https://aninextup.com$asset\""* &&
+                 ( "$article" == *"\"image\":\"https://aninextup.com$asset\""* ||
+                   "$article" == *"\"image\":[\"https://aninextup.com$asset\"]"* ) ]] || return 1
+            done
           }
           version=$(printf '%s\n' "$DEPLOY_OUTPUT" | sed -nE 's/.*Current Version ID: ([[:xdigit:]-]{36}).*/\1/p' | tail -1)
           if [[ ! "$version" =~ ^[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}$ ]]; then
