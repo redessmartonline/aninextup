@@ -40,6 +40,8 @@ def remove_video_schema(match):
 
 def use_fallback(match):
     url = match[0]
+    if re.fullmatch(r"https://aninextup\.com/assets/article-covers/[a-z0-9-]+\.png", url):
+        return url
     return (ORIGIN if url.startswith(("http://", "https://")) else "") + FALLBACK
 
 
