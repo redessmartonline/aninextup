@@ -37,7 +37,12 @@ def build(page, artwork):
     if illustration and "scene" in illustration:
         image = draw_scene(page.stem, illustration["scene"])
     elif illustration:
-        art = Image.open(BytesIO(b64decode(illustration["image"], validate=True))).convert("RGB")
+        if "file" in illustration:
+            file = Path(__file__).with_name("cover-artwork") / illustration["file"]
+            with Image.open(file) as original:
+                art = original.convert("RGB")
+        else:
+            art = Image.open(BytesIO(b64decode(illustration["image"], validate=True))).convert("RGB")
         image = ImageOps.fit(art, (1200, 630), Image.Resampling.LANCZOS)
     if not illustration or not illustration.get("lettered"):
         draw_title(image, title, bool(illustration), page, bool(illustration and "scene" in illustration))
