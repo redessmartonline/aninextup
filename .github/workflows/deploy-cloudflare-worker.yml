@@ -210,9 +210,22 @@ jobs:
             curl --fail --silent --show-error --max-time 15 \
               "https://aninextup.com/assets/latest-news.json?deploy=$GITHUB_RUN_ID-$(date +%s%N)" \
               | cmp -s assets/latest-news.json - || return 1
-            curl --fail --silent --show-error --max-time 15 \
-              "https://aninextup.com/?deploy=$GITHUB_RUN_ID-$(date +%s%N)" \
-              | grep -F 'data-aninextup-cmp' >/dev/null || return 1
+            local live_home live_style cover_url
+            live_home=$(curl --fail --silent --show-error --max-time 15 \
+              "https://aninextup.com/?deploy=$GITHUB_RUN_ID-$(date +%s%N)") || return 1
+            [[ "$live_home" == *data-aninextup-cmp* ]] || return 1
+            live_style=$(grep -oE '/assets/style\.css\?v=[a-z0-9]+' index.html | sed -n '1p')
+            [[ -n "$live_style" ]] || return 1
+            [[ "$live_home" == *"href=\"$live_style\""* && "$live_home" == *'id="more-anime-news"'* ]] || return 1
+            live_home=${live_home#*id=\"more-anime-news\"}
+            [[ "$live_home" == *data-home-more* ]] || return 1
+            live_home=${live_home#*data-home-more}
+            cover_url=$(grep -oE '/assets/article-covers/[a-z0-9-]+\.png' <<< "${live_home%%</section>*}" | sed -n '1p') || return 1
+            [[ -n "$cover_url" && -f ".${cover_url}" ]] || return 1
+            curl --fail --silent --show-error --max-time 15 "https://aninextup.com${cover_url}" \
+              | cmp -s ".${cover_url}" - || return 1
+            curl --fail --silent --show-error --max-time 15 "https://aninextup.com${live_style}" \
+              | cmp -s assets/style.css - || return 1
             curl --fail --silent --show-error --max-time 15 \
               "https://aninextup.com/articles/orochi-seventh-echoes-pilot-where-to-watch?deploy=$GITHUB_RUN_ID-$(date +%s%N)" \
               | grep -F 'article-original-cover' >/dev/null || return 1
@@ -233,7 +246,7 @@ jobs:
             if production_matches; then exit 0; fi
             sleep 5
           done
-          echo "::error::Production has not served the expected news feed, consent tag, and article cover."
+          echo "::error::Production has not served the expected feed, consent tag, cover images or homepage styles."
           exit 1
 
       - name: Verify live immediate newsletter signup and unsubscribe
