@@ -1,0 +1,35 @@
+{
+  "intent": "Find the premiere window, streaming service and the new trailer for Skip and Loafer Season 2.",
+  "keyword": "Skip and Loafer Season 2 release date",
+  "secondaryQuestions": [
+    "Where will Season 2 stream?",
+    "Who are the new cast members?"
+  ],
+  "editorialWords": 1267,
+  "verifiedOn": "2026-11-16",
+  "sources": [
+    "https://skip-and-loafer.com/news.html",
+    "https://www.crunchyroll.com/news/latest/2026/8/16/skip-and-loafer-season-2-anime-april-2027-premiere-teaser-trailer",
+    "https://sevenseasentertainment.com/series/skip-and-loafer/"
+  ],
+  "limits": [
+    "April 2027 is the confirmed Japanese window. Exact premiere day and regional episode schedules remain open."
+  ],
+  "cover": {
+    "path": "/assets/images/covers/skip-and-loafer-season-2-release-date-editorial.webp",
+    "imageUrl": "https://aninextup.com/assets/article-covers/skip-and-loafer-season-2-release-date.png",
+    "sourceUrl": "https://skip-and-loafer.com/news.html",
+    "sha256": "de9499829e4453f88a97608a19385bf6528d5e6968810a6c2789694b8ed9a94b",
+    "credit": "Original AniNextUp illustration",
+    "verification": "Original artwork rendered with the same scene and typography as the production cover."
+  },
+  "video": {
+    "path": "/assets/images/covers/skip-and-loafer-season-2-release-date-trailer.webp",
+    "imageUrl": "https://i.ytimg.com/vi/Mu1bChJEm1c/hqdefault.jpg",
+    "sourceUrl": "https://www.youtube.com/watch?v=Mu1bChJEm1c",
+    "sha256": "9ecc9af0bd5246d3796ef78485a1dfd2453ea612842a940c37fdaad8301ec045",
+    "status": "available",
+    "youtubeId": "Mu1bChJEm1c",
+    "verification": "Linked under the November 16 promotional video heading on the official anime news page."
+  }
+}
