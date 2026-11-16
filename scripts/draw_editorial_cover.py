@@ -364,6 +364,7 @@ def paint_character(draw, x, y, scale, rng, outfit, palette, mirror=False):
 
 # Subjects selected from the premises, rather than from a palette or an article tag.
 COVER_SUBJECTS = {
+    "mercedes-and-the-waning-moon-anime": "vampire-dungeon",
     "yumeneko-connect-anime-announcement": "cat",
     "paw-palaces-creditless-ending-october-2026": "palace-cats",
     "sasaki-and-peeps-season-2": "bird",
@@ -428,6 +429,38 @@ def paint_story_subject(draw, subject, dark, mid, light):
                    (831,500),(777,501)],(214,169,130))
             for x in (784,821):
                 draw.ellipse((x-4,461,x+4,469),fill=ink)
+        return
+
+    if subject == "vampire-dungeon":
+        # Moonlight beyond a stone arch frames an original cloaked explorer.
+        draw.rounded_rectangle((789, 66, 1181, 660), radius=181, fill=shadow, outline=ink, width=6)
+        draw.rounded_rectangle((819, 99, 1151, 660), radius=154, fill=dark, outline=shine, width=4)
+        for y in (264, 340, 416, 492, 568):
+            draw.line((792, y, 816, y), fill=shine, width=3)
+            draw.line((1155, y, 1178, y), fill=shine, width=3)
+        draw.ellipse((956, 126, 1086, 256), fill=light)
+        draw.ellipse((990, 113, 1097, 232), fill=dark)
+        cloak = (123, 50, 92)
+        cloak_light = (185, 83, 122)
+        shape([(959, 304), (1020, 314), (1083, 389), (1149, 631), (804, 631),
+               (873, 454), (909, 363)], cloak, 6)
+        shape([(971, 361), (884, 632), (1017, 632), (1032, 488), (1011, 392)], ink)
+        shape([(904, 376), (934, 337), (964, 357), (981, 390), (915, 415)], cloak_light)
+        shape([(970, 381), (1006, 341), (1058, 376), (1043, 420), (1004, 413)], cloak_light)
+        shape([(904, 330), (900, 259), (934, 214), (979, 203), (1022, 222),
+               (1040, 273), (1027, 331), (995, 362), (941, 355)], ink)
+        shape([(935, 259), (987, 244), (1014, 279), (1010, 315), (984, 345),
+               (957, 335), (938, 310)], (230, 196, 201))
+        shape([(904, 278), (929, 227), (974, 211), (1018, 230), (1028, 271),
+               (990, 256), (960, 284), (956, 263), (929, 304)], (70, 58, 93))
+        draw.line((944, 266, 973, 237, 1005, 246), fill=shine, width=3, joint="curve")
+        draw.line((971, 290, 986, 286, 998, 290), fill=ink, width=4, joint="curve")
+        draw.ellipse((982, 289, 989, 298), fill=cloak)
+        draw.line((980, 319, 995, 316), fill=ink, width=2)
+        ellipse((968, 395, 994, 421), shine)
+        draw.line((1071, 505, 1123, 476), fill=light, width=4)
+        draw.rounded_rectangle((1101, 476, 1144, 530), radius=7, fill=shine, outline=ink, width=4)
+        draw.rectangle((1112, 487, 1133, 519), fill=(250, 204, 136))
         return
 
     if subject == "bird":
@@ -539,7 +572,7 @@ def draw_scene(slug, scene):
     subject = COVER_SUBJECTS.get(slug)
     if subject in {"space-battleship", "starfighter", "mecha", "armored-trooper"}:
         setting = "space"
-    elif subject == "palace-cats":
+    elif subject in {"palace-cats", "vampire-dungeon"}:
         setting = "fantasy"
 
     lighting = Image.new("RGB", (300, 158))
