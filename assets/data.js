@@ -1,5 +1,5 @@
 window.ANINEXTUP_DATA={
-updated:"2026-11-15",
+updated:"2026-11-16",
 site:{timezone:"America/Santo_Domingo",season:"Fall 2026"},
 anime:[
 {id:"ninjago-embers-ashes-release-date-watch-order",image:"/assets/images/covers/ninjago-embers-ashes-official-teaser.webp",title:"NINJAGO Anime 2027: Embers + Ashes Release Window, Trailer and Watch Order",date:null,dateLabel:"2027 · exact date TBA",platform:"Full episodes unannounced; teaser on LEGO YouTube",article:"articles/ninjago-embers-ashes-release-date-watch-order",newsCategory:"returning-series",category:"Returning series",status:"year-confirmed"},
