@@ -43,8 +43,8 @@ def related_stories_section(cards):
         )
     return (
         '<section class="related-releases" aria-labelledby="related-releases-heading">'
-        '<div class="section-head"><div><span class="kicker">MORE ANIME NEWS</span>'
-        '<h2 id="related-releases-heading">Related stories</h2></div></div>'
+        '<div class="section-head"><div><span class="kicker">KEEP WATCHING</span>'
+        '<h2 id="related-releases-heading">Related releases</h2></div></div>'
         '<div class="grid three">' + ''.join(links) + '</div></section>'
     )
 
