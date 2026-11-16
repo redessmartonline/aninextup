@@ -210,6 +210,14 @@ def paint_backdrop(draw, rng, setting, dark, mid, light):
     ground = blend(dark, mid, .28)
     far = blend(dark, mid, .54)
     rim = blend(mid, light, .42)
+    if setting == "space":
+        draw.ellipse((984, 58, 1156, 230), fill=ground, outline=far, width=3)
+        draw.arc((954, 89, 1184, 211), 5, 175, fill=rim, width=2)
+        for _ in range(62):
+            x, y = rng.randrange(690, 1200), rng.randrange(18, 630)
+            if (x-1070)**2 + (y-144)**2 > 86**2:
+                draw.point((x,y), fill=rim)
+        return
     if setting == "school":
         draw.polygon([(625, 630), (805, 65), (1200, 5), (1200, 630)], fill=ground)
         for x in (798, 913, 1040, 1160):
@@ -354,6 +362,162 @@ def paint_character(draw, x, y, scale, rng, outfit, palette, mirror=False):
         line([(56,2),(59,41),(60,79)], hair_shine, 2)
 
 
+# Subjects selected from the premises, rather than from a palette or an article tag.
+COVER_SUBJECTS = {
+    "yumeneko-connect-anime-announcement": "cat",
+    "paw-palaces-creditless-ending-october-2026": "palace-cats",
+    "sasaki-and-peeps-season-2": "bird",
+    "sasaki-and-peeps-season-2-anime-shares-creditless-opening-and-end-a03f04c7": "bird",
+    "takopis-original-sin-movie": "alien",
+    "reincarnated-goblin": "goblin",
+    "reincarnated-as-a-sword-season-2-english-dub-release-date": "sword",
+    "cosmoship-yamato-root-2199": "space-battleship",
+    "reborn-space-mercenary": "starfighter",
+    "mobile-suit-gundam-seed-freedom-zero-release-date": "mecha",
+    "votoms-gray-witch-part-1": "armored-trooper",
+    "dandivine-release-date": "mecha",
+    "dark-machine-the-animation": "armored-trooper",
+    "eleceed-anime-april-2027-release-date": "electric-cat",
+}
+
+
+def paint_story_subject(draw, subject, dark, mid, light):
+    ink = blend(dark, (12, 13, 24), .55)
+    shadow = blend(dark, mid, .73)
+    shine = blend(mid, light, .67)
+
+    def shape(points, fill, width=4):
+        draw.polygon(points, fill=fill, outline=ink, width=width)
+
+    def ellipse(box, fill):
+        draw.ellipse(box, fill=fill, outline=ink, width=4)
+
+    if subject in {"cat", "palace-cats", "electric-cat"}:
+        if subject == "palace-cats":
+            for y in (191, 258):
+                shape([(760,y+18),(799,y+12),(843,y-24),(1085,y-24),
+                       (1129,y+12),(1184,y+16),(1147,y+33),(786,y+33)], shadow)
+                for x in (838, 920, 1010, 1090):
+                    draw.rectangle((x,y+28,x+9,y+85),fill=shine)
+        elif subject == "electric-cat":
+            for dx in (0, 96):
+                draw.line([(835+dx,132),(811+dx,216),(861+dx,205),(827+dx,275)],
+                          fill=light,width=8,joint="curve")
+        fur = (242, 189, 143) if subject != "cat" else (189, 177, 215)
+        # Tail, seated body and forepaws are drawn behind the broad cheek silhouette.
+        draw.arc((982,320,1162,520),325,160,fill=ink,width=35)
+        draw.arc((985,323,1159,517),325,160,fill=fur,width=27)
+        ellipse((866,326,1059,548),fur)
+        ellipse((884,493,955,551),fur)
+        ellipse((967,493,1037,551),fur)
+        shape([(851,279),(846,164),(914,209),(1004,205),(1052,158),(1060,280),
+               (1040,328),(993,359),(911,358),(866,329)],fur)
+        shape([(860,192),(866,246),(899,218)],(224,135,151),2)
+        shape([(1038,184),(1017,216),(1045,240)],(224,135,151),2)
+        for x in (910, 1003):
+            ellipse((x-18,259,x+18,285),light)
+            draw.ellipse((x-5,260,x+6,282),fill=ink)
+        shape([(946,296),(966,296),(956,306)],ink,1)
+        draw.arc((925,297,957,319),5,150,fill=ink,width=3)
+        draw.arc((955,297,987,319),30,175,fill=ink,width=3)
+        for dx in (-1,1):
+            for i in range(3):
+                draw.line((956+dx*47,303+i*7,956+dx*99,294+i*13),fill=ink,width=2)
+        if subject == "palace-cats":
+            shape([(761,473),(758,405),(788,427),(822,428),(849,405),(848,474),
+                   (831,500),(777,501)],(214,169,130))
+            for x in (784,821):
+                draw.ellipse((x-4,461,x+4,469),fill=ink)
+        return
+
+    if subject == "bird":
+        draw.line([(774,508),(932,469),(1148,484)],fill=ink,width=20,joint="curve")
+        draw.line([(774,505),(932,466),(1148,481)],fill=shine,width=8,joint="curve")
+        ellipse((888,268,1082,476),(173,182,200))
+        shape([(1000,361),(1061,373),(1089,501),(1021,481)],(100,117,156))
+        ellipse((855,196,1010,351),(224,223,226))
+        ellipse((869,226,951,319),(239,237,222))
+        shape([(859,264),(816,283),(862,298)],(234,137,152))
+        ellipse((886,239,910,266),ink)
+        draw.ellipse((893,242,900,250),fill=(254,251,239))
+        for x in (927,996):
+            draw.line((x,445,x-5,477,x-23,485),fill=(245,159,159),width=7,joint="curve")
+        return
+
+    if subject == "alien":
+        body = (238, 154, 191)
+        for i in range(5):
+            x=850+i*48
+            ellipse((x,343+(i%2)*28,x+82,490+(i%2)*26),body)
+        ellipse((828,155,1103,421),body)
+        draw.arc((847,177,1074,397),195,277,fill=(255,222,233),width=12)
+        for x in (911,1013):
+            ellipse((x-13,253,x+13,292),ink)
+            draw.ellipse((x-4,254,x+4,264),fill=(255,245,248))
+        draw.arc((933,281,990,329),0,180,fill=ink,width=5)
+        return
+
+    if subject == "sword":
+        shape([(844,478),(870,432),(1067,143),(1129,93),(1111,178),(910,460)],(225,234,246),5)
+        shape([(870,432),(1067,143),(1129,93),(900,443)],(139,191,218),3)
+        shape([(820,429),(845,415),(949,471),(929,491)],shine,5)
+        shape([(860,449),(891,466),(828,557),(797,540)],shadow,5)
+        ellipse((785,531,829,574),shine)
+        return
+
+    if subject in {"space-battleship", "starfighter"}:
+        if subject == "space-battleship":
+            shape([(757,410),(843,323),(989,296),(1045,304),(1167,366),(1131,402),(919,449)],shine)
+            shape([(759,410),(927,420),(1167,366),(1115,429),(916,480),(788,449)],shadow)
+            shape([(900,323),(924,273),(981,256),(1005,301)],shine)
+            shape([(943,284),(954,217),(986,212),(998,270)],shadow)
+            for x,y in ((862,331),(1014,319)):
+                draw.line((x,y,x+19,y-29,x+70,y-36),fill=ink,width=9,joint="curve")
+        else:
+            shape([(744,453),(844,312),(926,342),(1011,207),(1163,290),(1050,427),(930,456)],shine)
+            shape([(792,445),(920,365),(1011,207),(993,388),(1087,378),(1038,461),(921,493)],shadow)
+            shape([(974,278),(1014,243),(1080,274),(1037,304)],light)
+        for y in (424,445):
+            draw.line((775,y,693,y+23),fill=light,width=7)
+        return
+
+    if subject in {"mecha","armored-trooper"}:
+        armored = subject == "armored-trooper"
+        plating = blend(shadow,light,.29 if armored else .67)
+        shape([(766,531),(771,397),(807,338),(898,318),(1021,315),(1100,357),
+               (1168,453),(1200,562),(1106,601),(931,546)],plating)
+        shape([(771,397),(829,375),(929,419),(944,548),(769,531)],shadow)
+        shape([(1031,365),(1104,358),(1177,472),(1158,547),(1050,498)],shadow)
+        shape([(855,190),(894,153),(1015,150),(1067,196),(1072,283),(1026,342),
+               (918,361),(861,319)],plating)
+        shape([(872,222),(1035,195),(1060,239),(1048,299),(938,317),(879,288)],ink)
+        if armored:
+            for x,y,r in ((937,258,35),(1008,238,23),(1012,284,17)):
+                ellipse((x-r,y-r,x+r,y+r),shine)
+                ellipse((x-r//2,y-r//2,x+r//2,y+r//2),ink)
+        else:
+            shape([(889,244),(974,246),(1039,222),(1020,257),(971,274),(903,270)],light)
+            shape([(942,163),(910,99),(956,139),(975,121),(1015,85),(990,156)],shine)
+        for x in (886,942,996):
+            draw.line((x,402,x+39,426),fill=light,width=5)
+        return
+
+    # A non-human adventurer with pointed ears and a leather travel outfit.
+    green = (119, 179, 120)
+    shape([(823,532),(833,391),(906,322),(1016,328),(1091,405),(1125,530)],shadow)
+    shape([(896,221),(804,178),(821,253),(873,289),(897,277)],green)
+    shape([(1006,218),(1115,173),(1093,251),(1047,289),(1018,274)],green)
+    shape([(860,234),(886,166),(948,139),(1017,156),(1066,212),(1052,293),
+           (1010,345),(943,356),(891,320)],green)
+    for x in (918,998):
+        shape([(x-24,220),(x+23,228),(x+15,250),(x-12,251)],(246,218,132))
+        ellipse((x-4,228,x+7,247),ink)
+    draw.line((925,296,961,306,1003,290),fill=ink,width=4,joint="curve")
+    shape([(923,303),(940,304),(929,280)],(245,227,198),2)
+    shape([(990,298),(1004,293),(994,273)],(245,227,198),2)
+    draw.line((876,364,1028,513),fill=shine,width=19)
+
+
 def draw_scene(slug, scene):
     family, main, detail = scene.split("/")
     dark, mid, light = map(rgb, PALETTES[family])
@@ -372,6 +536,12 @@ def draw_scene(slug, scene):
     else:
         setting = "school"
 
+    subject = COVER_SUBJECTS.get(slug)
+    if subject in {"space-battleship", "starfighter", "mecha", "armored-trooper"}:
+        setting = "space"
+    elif subject == "palace-cats":
+        setting = "fantasy"
+
     lighting = Image.new("RGB", (300, 158))
     pixels = []
     for y in range(158):
@@ -383,6 +553,10 @@ def draw_scene(slug, scene):
     image = lighting.resize((1200, 630), Image.Resampling.BICUBIC)
     draw = ImageDraw.Draw(image)
     paint_backdrop(draw, rng, setting, dark, mid, light)
+
+    if subject:
+        paint_story_subject(draw, subject, dark, mid, light)
+        return image
 
     # Integrate the story motifs into the background and foreground of the scene.
     badge(draw, detail, 1124, 108, 38, blend(mid, light, .52), light, dark)
