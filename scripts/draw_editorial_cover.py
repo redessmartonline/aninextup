@@ -572,7 +572,7 @@ def draw_scene(slug, scene):
     subject = COVER_SUBJECTS.get(slug)
     if subject in {"space-battleship", "starfighter", "mecha", "armored-trooper"}:
         setting = "space"
-    elif subject == "palace-cats":
+    elif subject in {"palace-cats", "vampire-dungeon"}:
         setting = "fantasy"
 
     lighting = Image.new("RGB", (300, 158))
