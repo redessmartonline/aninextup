@@ -214,6 +214,9 @@ jobs:
             live_home=$(curl --fail --silent --show-error --max-time 15 \
               "https://aninextup.com/?deploy=$GITHUB_RUN_ID-$(date +%s%N)") || return 1
             [[ "$live_home" == *data-aninextup-cmp* ]] || return 1
+            live_style=$(grep -oE '/assets/style\.css\?v=[a-z0-9]+' index.html | sed -n '1p')
+            [[ -n "$live_style" ]] || return 1
+            [[ "$live_home" == *"href=\"$live_style\""* && "$live_home" == *'id="more-anime-news"'* ]] || return 1
             live_home=${live_home#*id=\"more-anime-news\"}
             [[ "$live_home" == *data-home-more* ]] || return 1
             live_home=${live_home#*data-home-more}
@@ -221,8 +224,6 @@ jobs:
             [[ -n "$cover_url" && -f ".${cover_url}" ]] || return 1
             curl --fail --silent --show-error --max-time 15 "https://aninextup.com${cover_url}" \
               | cmp -s ".${cover_url}" - || return 1
-            live_style=$(grep -oE '/assets/style\.css\?v=[a-z0-9]+' index.html | sed -n '1p')
-            [[ -n "$live_style" ]] || return 1
             curl --fail --silent --show-error --max-time 15 "https://aninextup.com${live_style}" \
               | cmp -s assets/style.css - || return 1
             curl --fail --silent --show-error --max-time 15 \
