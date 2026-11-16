@@ -206,41 +206,200 @@ def badge(draw, kind, x, y, size, ink, accent, dark):
         raise ValueError(f"Unknown cover motif: {kind}")
 
 
+def paint_backdrop(draw, rng, setting, dark, mid, light):
+    ground = blend(dark, mid, .28)
+    far = blend(dark, mid, .54)
+    rim = blend(mid, light, .42)
+    if setting == "school":
+        draw.polygon([(625, 630), (805, 65), (1200, 5), (1200, 630)], fill=ground)
+        for x in (798, 913, 1040, 1160):
+            draw.polygon([(x, 105), (x+94, 88), (x+94, 349), (x-12, 381)], fill=far, outline=rim, width=3)
+            draw.line((x+40, 94, x+34, 366), fill=rim, width=4)
+            draw.line((x-6, 242, x+94, 224), fill=rim, width=4)
+        draw.polygon([(600, 630), (804, 444), (1200, 390), (1200, 630)], fill=blend(dark, mid, .17))
+        for x in range(630, 1250, 94):
+            draw.line((x, 630, 866+(x-630)//3, 438), fill=ground, width=3)
+        return
+    if setting == "sports":
+        draw.polygon([(590, 630), (760, 400), (1200, 362), (1200, 630)], fill=ground)
+        for y in range(324, 402, 14):
+            draw.line((704, y+24, 1200, y), fill=far, width=4)
+        draw.line((606, 625, 1022, 431, 1200, 463), fill=rim, width=4)
+        for x in (775, 1148):
+            draw.line((x, 133, x, 365), fill=far, width=6)
+            for k in range(3):
+                draw.rounded_rectangle((x-24+k*16, 131, x-11+k*16, 151), 3, fill=rim)
+        return
+    if setting == "stage":
+        draw.polygon([(676, 0), (970, 0), (1120, 552), (696, 552)], fill=far)
+        draw.polygon([(1030, 0), (1160, 0), (1200, 480), (884, 480)], fill=blend(mid, light, .19))
+        for x in range(730, 1210, 35):
+            draw.line((x, 0, x-22, 310), fill=ground, width=4)
+        for _ in range(54):
+            x, y = rng.randrange(685, 1200), rng.randrange(410, 635)
+            draw.ellipse((x, y, x+7, y+18), fill=rim if rng.random() < .35 else far)
+        return
+    if setting == "city":
+        for x in range(650, 1200, 49):
+            roof = rng.randrange(110, 404)
+            draw.rectangle((x, roof, x+43, 584), fill=ground, outline=far, width=2)
+            for y in range(roof+14, 470, 23):
+                if rng.random() < .66:
+                    draw.rectangle((x+9, y, x+28, y+4), fill=rim)
+        draw.polygon([(620, 630), (857, 513), (1172, 513), (1200, 630)], fill=dark)
+        for k in range(6):
+            y = 540+k*17
+            draw.line((830-k*21, y, 1124+k*13, y), fill=far, width=2)
+        return
+    draw.ellipse((918, 56, 1101, 239), fill=far, outline=rim, width=3)
+    for layer in range(3):
+        ridge = [(570, 630), (570, 424+layer*34)]
+        ridge.extend((x, rng.randrange(365, 470)+layer*34) for x in range(600, 1250, 48))
+        ridge.append((1250, 630))
+        draw.polygon(ridge, fill=blend(dark, mid, .44-layer*.10))
+    for x in (752, 1080, 1163):
+        height = rng.randrange(68, 151)
+        if setting == "coast":
+            draw.line((x-36, 505, x+44, 498), fill=rim, width=3)
+            draw.polygon([(x, 482-height), (x+24, 488), (x, 483)], fill=far)
+            draw.line((x, 478-height, x, 511), fill=rim, width=2)
+        else:
+            draw.polygon([(x-21, 490), (x-17, 490-height), (x+4, 466-height),
+                          (x+27, 490-height), (x+28, 490)], fill=ground, outline=far, width=2)
+
+
+def paint_character(draw, x, y, scale, rng, outfit, palette, mirror=False):
+    dark, mid, light = palette
+    outline = (25, 21, 39)
+    skin, shade = rng.choice([((244, 197, 164), (193, 126, 126)),
+                              ((230, 177, 145), (178, 111, 100)),
+                              ((187, 130, 108), (126, 77, 82))])
+    hair = rng.choice([(49, 31, 48), (72, 48, 43), (39, 49, 73), (96, 49, 55),
+                       blend(dark, mid, .57), blend(dark, light, .63)])
+    hair_shine = blend(hair, light, .44)
+    coat = blend(dark, mid, .54)
+    coat_light = blend(coat, light, .26)
+    side = -1 if mirror else 1
+
+    def point(a, b):
+        return round(x+a*scale*side), round(y+b*scale)
+
+    def poly(points, color, edge=outline, width=2):
+        draw.polygon([point(a,b) for a,b in points], fill=color, outline=edge,
+                     width=max(1, round(width*scale)))
+
+    def line(points, color=outline, width=2):
+        draw.line([point(a,b) for a,b in points], fill=color, width=max(1, round(width*scale)), joint="curve")
+
+    def oval(a, b, c, d, color):
+        l,t = point(a,b)
+        r,u = point(c,d)
+        draw.ellipse((min(l,r),t,max(l,r),u),fill=color)
+
+    long_hair = rng.random() < .56
+    hair_end = rng.randrange(103, 165) if long_hair else rng.randrange(27, 53)
+    poly([(-60, -59), (-52,-92), (-20,-114), (20,-111), (52,-93), (63,-62),
+          (67,-16), (74,hair_end), (43,hair_end-19), (18,63), (-40,63),
+          (-70,hair_end-13), (-58,4)], hair, width=3)
+    poly([(-78,108), (-53,91), (-24,79), (16,76), (56,86), (79,103), (105,144),
+          (128,260), (88,295), (-91,278), (-126,257), (-112,172)], coat, width=3)
+    poly([(-78,111), (-61,131), (-82,221), (-111,248), (-103,168)], coat_light, None)
+    poly([(58,95), (81,116), (103,166), (114,228), (94,219), (64,143)], coat_light, None)
+    poly([(-21,40), (25,42), (22,78), (40,89), (6,124), (-36,89), (-20,76)], skin)
+    poly([(-21,47), (25,50), (21,70), (-11,80), (-21,72)], shade, None)
+    if outfit == "sports":
+        poly([(-37,90), (4,115), (39,86), (50,102), (7,140), (-49,105)], light)
+        line([(-67,130),(-87,203),(-92,249)], light, 7)
+        line([(66,130),(86,207),(91,246)], light, 7)
+    elif outfit == "fantasy":
+        poly([(-47,84), (-18,102), (7,111), (32,99), (45,83), (67,104),
+              (53,128), (6,147), (-56,118)], mid)
+        poly([(4,130), (31,122), (47,222), (13,209)], mid)
+        line([(-54,126),(5,151),(59,126)], light, 3)
+    else:
+        poly([(-24,82), (3,102), (26,81), (55,97), (29,159), (0,205), (-43,111)], (232,221,219))
+        poly([(-25,83), (3,103), (-17,125), (-41,102)], (255,240,229))
+        poly([(25,82), (5,103), (24,125), (46,101)], (255,240,229))
+        poly([(-4,105), (12,105), (17,118), (13,151), (3,172), (-8,148), (0,120)], mid)
+        line([(-54,100),(-39,146),(-10,190)], coat_light, 3)
+    # Small foreground shoulder or bag strap distinguishes the poses.
+    line([(-70,105),(-61,148),(-50,208),(-26,270)], outline, 9)
+    line([(-68,108),(-58,149),(-46,208),(-24,268)], hair_shine, 4)
+    oval(-61,-15,-38,18,shade)
+    oval(38,-14,61,18,skin)
+    poly([(-47,-55),(-38,-82),(-14,-94),(15,-92),(43,-77),(51,-45),(51,0),
+          (45,23),(28,46),(7,56),(-10,52),(-32,37),(-44,15),(-49,-15)], skin, width=2)
+    poly([(-47,-43),(-33,-22),(-32,12),(-19,42),(1,52),(-11,50),(-32,37),(-45,10)], shade, None)
+    for eye_x in (-23, 24):
+        poly([(eye_x-13,-12),(eye_x-8,-18),(eye_x+4,-19),(eye_x+13,-15),
+              (eye_x+10,-6),(eye_x+4,-1),(eye_x-8,-3)], (255,239,227), None)
+        oval(eye_x-5,-17,eye_x+7,-2,mid)
+        oval(eye_x-2,-17,eye_x+5,-5,outline)
+        oval(eye_x-2,-16,eye_x+2,-12,(255,248,237))
+        line([(eye_x-14,-13),(eye_x-7,-18),(eye_x+4,-19),(eye_x+13,-15)], outline, 3)
+        line([(eye_x-10,-28),(eye_x-1,-31),(eye_x+10,-28)], hair, 2)
+    line([(7,-2),(10,10),(5,13)], shade)
+    line([(-9,27),(1,29),(13,25)], outline)
+    line([(-3,32),(4,33)], shade)
+    # Layer angular locks over the forehead, leaving eyes and expression readable.
+    part = rng.randrange(-16, 23)
+    poly([(-58,-63),(-50,-85),(-30,-103),(0,-112),(30,-108),(56,-86),(64,-59),
+          (53,-23),(43,-39),(38,-62),(19,-35),(part,-55),(part-21,-33),
+          (-28,-46),(-44,-22),(-56,5),(-57,-18)], hair, width=2)
+    line([(-50,-64),(-36,-84),(-16,-97),(4,-100)], hair_shine, 3)
+    line([(14,-99),(38,-93),(53,-73),(56,-49)], hair_shine, 3)
+    line([(part,-80),(part-13,-64),(part-21,-49)], hair_shine, 2)
+    if long_hair:
+        line([(-57,8),(-58,41),(-59,77)], hair_shine, 2)
+        line([(56,2),(59,41),(60,79)], hair_shine, 2)
+
+
 def draw_scene(slug, scene):
     family, main, detail = scene.split("/")
     dark, mid, light = map(rgb, PALETTES[family])
     rng = random.Random(sha256(slug.encode()).digest())
-    image = Image.new("RGB", (1200, 630))
-    # Paint the gradient at reduced resolution; all focal artwork stays sharp.
+    motifs = {main, detail}
+    if motifs & {"ball", "field", "glove"}:
+        setting = "sports"
+    elif motifs & {"music", "film", "clapper", "calendar"}:
+        setting = "stage"
+    elif motifs & {"ship", "wave"}:
+        setting = "coast"
+    elif motifs & {"blade", "skull", "mask", "tower", "flame", "hourglass", "planet", "bottle", "compass"}:
+        setting = "fantasy"
+    elif motifs & {"lightning", "target", "house"}:
+        setting = "city"
+    else:
+        setting = "school"
+
     lighting = Image.new("RGB", (300, 158))
     pixels = []
     for y in range(158):
         for x in range(300):
-            distance = (((x - 243) / 150) ** 2 + ((y - 63) / 113) ** 2) ** .5
-            glow = .69 * max(0, 1 - distance)
+            distance = (((x - 246) / 155)**2 + ((y - 59) / 117)**2)**.5
+            glow = .82 * max(0, 1 - distance)
             pixels.append(blend(dark, mid, glow))
     lighting.putdata(pixels)
-    image.paste(lighting.resize(image.size, Image.Resampling.BICUBIC))
+    image = lighting.resize((1200, 630), Image.Resampling.BICUBIC)
     draw = ImageDraw.Draw(image)
-    cx, cy = rng.randint(938, 976), rng.randint(286, 321)
-    horizon = rng.randint(440, 510)
-    for n in range(4):
-        ridge = [(0, 630), (0, horizon + n * 42)]
-        ridge += [(x, horizon + n * 42 + rng.randint(-40, 39)) for x in range(0, 1241, 65)]
-        ridge += [(1240, 630)]
-        draw.polygon(ridge, fill=blend(dark, mid, .22 - n * .045))
-    for i in range(4):
-        r = 160 + i * 15
-        draw.ellipse((cx-r, cy-r, cx+r, cy+r), outline=blend(dark, light, .31-i*.05), width=2)
-    draw.ellipse((cx-147, cy-147, cx+147, cy+147), fill=blend(dark, mid, .28), outline=mid, width=3)
-    for i in range(80):
-        x,y = rng.randint(700,1190),rng.randint(24,604)
-        if (x-cx)**2+(y-cy)**2 < 155**2:
+    paint_backdrop(draw, rng, setting, dark, mid, light)
+
+    # Integrate the story motifs into the background and foreground of the scene.
+    badge(draw, detail, 1124, 108, 38, blend(mid, light, .52), light, dark)
+    outfit = "sports" if setting == "sports" else "fantasy" if setting in {"fantasy", "coast"} else "school"
+    pair = bool(motifs & {"heart", "window", "music", "flower"}) and "blade" not in motifs
+    if pair:
+        paint_character(draw, 1055, 290, 1.04, rng, outfit, (dark, mid, light), mirror=True)
+    cx = rng.randint(875, 932) if pair else rng.randint(959, 1012)
+    cy = rng.randint(258, 304)
+    paint_character(draw, cx, cy, rng.uniform(1.28, 1.48), rng, outfit, (dark, mid, light))
+    if main != "window":
+        ix, iy = (1115, 494) if main == "blade" else (1122, 505) if not pair else (1083, 519)
+        badge(draw, main, ix, iy, 73, blend(mid, light, .86), light, dark)
+    for _ in range(34):
+        x, y = rng.randrange(738,1200), rng.randrange(25,622)
+        if abs(x-cx) < 92 and abs(y-cy) < 105:
             continue
-        d = rng.choice((1,1,2,2,3))
-        draw.ellipse((x-d,y-d,x+d,y+d), fill=blend(dark, light, rng.uniform(.24,.72)))
-    badge(draw, main, cx, cy, 125, light, mid, dark)
-    dx, dy = cx + rng.randint(101,126), cy + rng.randint(123,150)
-    draw.ellipse((dx-63,dy-63,dx+63,dy+63),fill=dark,outline=mid,width=3)
-    badge(draw, detail, dx, dy, 49, light, mid, dark)
+        size = rng.choice((1,2,2,3))
+        draw.ellipse((x,y,x+size,y+size), fill=blend(mid, light, .52))
     return image
