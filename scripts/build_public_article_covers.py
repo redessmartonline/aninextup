@@ -141,9 +141,11 @@ def main():
         artwork.update(batch)
     covers = {page.stem: build(page, artwork) for page in pages}
     # Static discovery cards and article recommendations share the same artwork.
-    def replace_card(match):
+    def replace_card(match, page):
         tag, body = match.groups()
         href = re.search(r'href="(?:https://aninextup\.com/)?(?:\.\./|/)?articles/([^"?#]+)', tag)
+        if not href and page.parent.name == "articles" and re.search(r'class="[^"]*\brelated-card\b', tag):
+            href = re.search(r'href="(?:\./)?([a-z0-9-]+(?:\.html)?)(?=["?#])', tag)
         if href and Path(href[1]).stem in covers:
             filename, height = covers[Path(href[1]).stem]
             cover = f"/assets/article-covers/{filename}"
@@ -159,7 +161,7 @@ def main():
 
     for page in [*ROOT.glob("*.html"), *pages]:
         source = page.read_text(encoding="utf-8")
-        updated = re.sub(r'(<a\b[^>]*>)(.*?)</a>', replace_card, source, flags=re.S)
+        updated = re.sub(r'(<a\b[^>]*>)(.*?)</a>', lambda match: replace_card(match, page), source, flags=re.S)
         if updated != source:
             page.write_text(updated, encoding="utf-8")
 
