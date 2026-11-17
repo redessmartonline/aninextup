@@ -1,77 +1,173 @@
 {
   "ace-of-diamond-second-season": {
-    "scene": "leaf/field/ball"
+    "file": "cinematic-scenes-01.webp",
+    "panel": [
+      1,
+      0
+    ]
   },
   "anime-expeditions-codes": {
-    "scene": "reef/compass/key"
+    "file": "cinematic-scenes-01.webp",
+    "panel": [
+      0,
+      1
+    ]
   },
   "anime-news-october-2026": {
-    "scene": "ember/film/calendar"
+    "file": "cinematic-scenes-01.webp",
+    "panel": [
+      1,
+      1
+    ]
   },
   "anime-releasing-december-2026": {
-    "scene": "storm/calendar/moon"
+    "file": "cinematic-scenes-01.webp",
+    "panel": [
+      0,
+      2
+    ]
   },
   "anime-releasing-january-2027": {
-    "scene": "moon/calendar/film"
+    "file": "cinematic-scenes-01.webp",
+    "panel": [
+      1,
+      2
+    ]
   },
   "anime-releasing-november-2026": {
-    "scene": "gold/calendar/clapper"
+    "file": "cinematic-scenes-01.webp",
+    "panel": [
+      0,
+      3
+    ]
   },
   "aoashi-season-2": {
-    "scene": "leaf/ball/target"
+    "file": "cinematic-scenes-01.webp",
+    "panel": [
+      1,
+      3
+    ]
   },
   "apothecary-diaries-movie": {
-    "scene": "gold/bottle/lantern"
+    "file": "cinematic-scenes-02.webp",
+    "panel": [
+      0,
+      0
+    ]
   },
   "apothecary-diaries-season-3": {
-    "scene": "leaf/bottle/book"
+    "file": "cinematic-scenes-02.webp",
+    "panel": [
+      1,
+      0
+    ]
   },
   "ascendance-of-a-bookworm-part-4": {
-    "scene": "gold/book/tower"
+    "file": "cinematic-scenes-02.webp",
+    "panel": [
+      0,
+      1
+    ]
   },
   "bass-x-machina-release-date": {
-    "scene": "ember/music/lightning"
+    "file": "cinematic-scenes-02.webp",
+    "panel": [
+      1,
+      1
+    ]
   },
   "because-i-the-true-saint-was-banished-anime-january-2027": {
-    "scene": "leaf/flower/tower"
+    "file": "cinematic-scenes-02.webp",
+    "panel": [
+      0,
+      2
+    ]
   },
   "berserk-of-gluttony-season-2": {
-    "scene": "ember/blade/skull"
+    "file": "cinematic-scenes-02.webp",
+    "panel": [
+      1,
+      2
+    ]
   },
   "black-clover-season-2": {
-    "scene": "leaf/book/lightning"
+    "file": "cinematic-scenes-02.webp",
+    "panel": [
+      0,
+      3
+    ]
   },
   "bleach-thousand-year-blood-war-graniph-collection-october-2026": {
-    "scene": "storm/blade/mask"
+    "file": "cinematic-scenes-02.webp",
+    "panel": [
+      1,
+      3
+    ]
   },
   "bleach-thousand-year-blood-war-the-last-pv-episodes-49-50": {
-    "scene": "ember/blade/clapper"
+    "file": "cinematic-scenes-03.webp",
+    "panel": [
+      0,
+      0
+    ]
   },
   "blue-box-season-2": {
-    "scene": "storm/ball/heart"
+    "file": "cinematic-scenes-03.webp",
+    "panel": [
+      1,
+      0
+    ]
   },
   "chitose-ramune-bottle-cour-2": {
-    "scene": "reef/bottle/heart"
+    "file": "cinematic-scenes-03.webp",
+    "panel": [
+      0,
+      1
+    ]
   },
   "cosmoship-yamato-root-2199": {
-    "scene": "storm/ship/planet"
+    "file": "cinematic-scenes-03.webp",
+    "panel": [
+      1,
+      1
+    ]
   },
   "d-anime-store-81-fall-2026-anime": {
-    "scene": "gold/film/calendar"
+    "file": "cinematic-scenes-03.webp",
+    "panel": [
+      0,
+      2
+    ]
   },
   "dandivine-release-date": {
     "file": "dandivine-cinematic.webp"
   },
   "dark-machine-the-animation": {
-    "scene": "ember/lightning/target"
+    "file": "cinematic-scenes-03.webp",
+    "panel": [
+      1,
+      2
+    ]
   },
   "death-stranding-isolations-anime": {
-    "scene": "storm/mountain/compass"
+    "file": "cinematic-scenes-03.webp",
+    "panel": [
+      0,
+      3
+    ]
   },
   "demons-crest-release-date": {
-    "scene": "moon/tower/lightning"
+    "file": "cinematic-scenes-03.webp",
+    "panel": [
+      1,
+      3
+    ]
   },
   "detective-is-already-dead-season-2": {
-    "scene": "storm/compass/skull"
+    "file": "cinematic-scenes-04.webp",
+    "panel": [
+      0,
+      0
+    ]
   }
 }

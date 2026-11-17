@@ -1,74 +1,170 @@
 {
   "magic-knight-rayearth-2026": {
-    "scene": "reef/blade/flower"
+    "file": "cinematic-scenes-07.webp",
+    "panel": [
+      0,
+      1
+    ]
   },
   "manchuria-opium-squad-anime": {
-    "scene": "gold/window/compass"
+    "file": "cinematic-scenes-07.webp",
+    "panel": [
+      1,
+      1
+    ]
   },
   "mercedes-and-the-waning-moon-anime": {
-    "scene": "moon/moon/flower"
+    "file": "cinematic-scenes-07.webp",
+    "panel": [
+      0,
+      2
+    ]
   },
   "mobile-suit-gundam-seed-freedom-zero-release-date": {
-    "scene": "gold/ship/clapper"
+    "file": "cinematic-scenes-07.webp",
+    "panel": [
+      1,
+      2
+    ]
   },
   "ms-isshiki-wants-to-know-about-love": {
-    "scene": "rose/book/heart"
+    "file": "cinematic-scenes-07.webp",
+    "panel": [
+      0,
+      3
+    ]
   },
   "murcielago-anime-january-2027": {
-    "scene": "ember/mask/target"
+    "file": "cinematic-scenes-07.webp",
+    "panel": [
+      1,
+      3
+    ]
   },
   "naruto-ninku-anime": {
-    "scene": "sun/blade/wave"
+    "file": "cinematic-scenes-08.webp",
+    "panel": [
+      0,
+      0
+    ]
   },
   "naruto-shadow-rising-manga": {
-    "scene": "ember/quill/moon"
+    "file": "cinematic-scenes-08.webp",
+    "panel": [
+      1,
+      0
+    ]
   },
   "netflix-october-2026": {
-    "scene": "rose/film/calendar"
+    "file": "cinematic-scenes-08.webp",
+    "panel": [
+      0,
+      1
+    ]
   },
   "nia-liston-release-date": {
-    "scene": "rose/crown/target"
+    "file": "cinematic-scenes-08.webp",
+    "panel": [
+      1,
+      1
+    ]
   },
   "noa-is-my-senior-anime-2027": {
-    "scene": "sun/window/heart"
+    "file": "cinematic-scenes-08.webp",
+    "panel": [
+      0,
+      2
+    ]
   },
   "now-that-we-draw-anime-january-2027": {
-    "scene": "rose/quill/heart"
+    "file": "cinematic-scenes-08.webp",
+    "panel": [
+      1,
+      2
+    ]
   },
   "nues-exorcist-anime-summer-2027": {
-    "scene": "moon/lantern/mask"
+    "file": "cinematic-scenes-08.webp",
+    "panel": [
+      0,
+      3
+    ]
   },
   "one-punch-man-season-3-part-2-january-2027": {
-    "scene": "gold/glove/lightning"
+    "file": "cinematic-scenes-08.webp",
+    "panel": [
+      1,
+      3
+    ]
   },
   "otome-heroines-fight-for-survival-anime": {
-    "scene": "rose/blade/flower"
+    "file": "cinematic-scenes-09.webp",
+    "panel": [
+      0,
+      0
+    ]
   },
   "paw-palaces-creditless-ending-october-2026": {
-    "scene": "gold/paw/music"
+    "file": "cinematic-scenes-09.webp",
+    "panel": [
+      1,
+      0
+    ]
   },
   "pok-mon-horizons-anime-unseals-treasures-of-ruin-in-latest-wonder-a6b9d2d5": {
-    "scene": "gold/compass/mountain"
+    "file": "cinematic-scenes-09.webp",
+    "panel": [
+      0,
+      1
+    ]
   },
   "pokemon-horizons-season-4-wonders-ahead": {
-    "scene": "reef/mountain/compass"
+    "file": "cinematic-scenes-09.webp",
+    "panel": [
+      1,
+      1
+    ]
   },
   "psyren-release-date": {
-    "scene": "ember/hourglass/key"
+    "file": "cinematic-scenes-09.webp",
+    "panel": [
+      0,
+      2
+    ]
   },
   "rakuen-tsuihou-kokoro-no-resonance": {
-    "scene": "moon/planet/music"
+    "file": "cinematic-scenes-09.webp",
+    "panel": [
+      1,
+      2
+    ]
   },
   "ramparts-of-ice-season-2": {
-    "scene": "storm/mountain/heart"
+    "file": "cinematic-scenes-09.webp",
+    "panel": [
+      0,
+      3
+    ]
   },
   "reborn-space-mercenary": {
-    "scene": "moon/ship/target"
+    "file": "cinematic-scenes-09.webp",
+    "panel": [
+      1,
+      3
+    ]
   },
   "record-of-a-fallen-vampire-anime": {
-    "scene": "ember/moon/crown"
+    "file": "cinematic-scenes-10.webp",
+    "panel": [
+      0,
+      0
+    ]
   },
   "red-riding-hood-detective-story": {
-    "scene": "ember/key/flower"
+    "file": "cinematic-scenes-10.webp",
+    "panel": [
+      1,
+      0
+    ]
   }
 }

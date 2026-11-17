@@ -1,68 +1,156 @@
 {
   "reincarnated-as-a-sword-season-2-english-dub-release-date": {
-    "scene": "reef/blade/music"
+    "file": "cinematic-scenes-10.webp",
+    "panel": [
+      0,
+      1
+    ]
   },
   "reincarnated-goblin": {
-    "scene": "leaf/mask/compass"
+    "file": "cinematic-scenes-10.webp",
+    "panel": [
+      1,
+      1
+    ]
   },
   "returners-magic-season-2": {
-    "scene": "moon/hourglass/book"
+    "file": "cinematic-scenes-10.webp",
+    "panel": [
+      0,
+      2
+    ]
   },
   "romelia-war-chronicle": {
-    "scene": "gold/tower/blade"
+    "file": "cinematic-scenes-10.webp",
+    "panel": [
+      1,
+      2
+    ]
   },
   "sasaki-and-peeps-season-2-anime-shares-creditless-opening-and-end-a03f04c7": {
-    "scene": "rose/music/window"
+    "file": "cinematic-scenes-10.webp",
+    "panel": [
+      1,
+      3
+    ]
   },
   "sasaki-and-peeps-season-2": {
-    "scene": "reef/window/quill"
+    "file": "cinematic-scenes-10.webp",
+    "panel": [
+      0,
+      3
+    ]
   },
   "sss-class-revival-hunter-anime-january-2027": {
-    "scene": "moon/hourglass/blade"
+    "file": "cinematic-scenes-11.webp",
+    "panel": [
+      0,
+      0
+    ]
   },
   "suikoden-anime": {
-    "scene": "storm/tower/compass"
+    "file": "cinematic-scenes-11.webp",
+    "panel": [
+      1,
+      0
+    ]
   },
   "takopis-original-sin-movie": {
-    "scene": "rose/planet/heart"
+    "file": "cinematic-scenes-11.webp",
+    "panel": [
+      0,
+      1
+    ]
   },
   "tale-secret-saint": {
-    "scene": "gold/lantern/flower"
+    "file": "cinematic-scenes-11.webp",
+    "panel": [
+      1,
+      1
+    ]
   },
   "tank-chair-release-date": {
-    "scene": "storm/target/lightning"
+    "file": "cinematic-scenes-11.webp",
+    "panel": [
+      0,
+      2
+    ]
   },
   "the-boxer-anime-announcement": {
-    "scene": "ember/glove/target"
+    "file": "cinematic-scenes-11.webp",
+    "panel": [
+      1,
+      2
+    ]
   },
   "the-fable-season-2-january-2027": {
-    "scene": "gold/target/mask"
+    "file": "cinematic-scenes-11.webp",
+    "panel": [
+      0,
+      3
+    ]
   },
   "the-moon-on-a-rainy-night-anime": {
-    "scene": "storm/umbrella/moon"
+    "file": "cinematic-scenes-11.webp",
+    "panel": [
+      1,
+      3
+    ]
   },
   "tokyo-revengers-war-three-titans": {
-    "scene": "ember/flame/tower"
+    "file": "cinematic-scenes-12.webp",
+    "panel": [
+      0,
+      0
+    ]
   },
   "vermilion-mask-release-date": {
-    "scene": "ember/mask/flame"
+    "file": "cinematic-scenes-12.webp",
+    "panel": [
+      1,
+      0
+    ]
   },
   "votoms-gray-witch-part-1": {
-    "scene": "storm/target/clapper"
+    "file": "cinematic-scenes-12.webp",
+    "panel": [
+      0,
+      1
+    ]
   },
   "walking-home-with-you-anime": {
-    "scene": "sun/compass/heart"
+    "file": "cinematic-scenes-12.webp",
+    "panel": [
+      1,
+      1
+    ]
   },
   "where-to-watch-one-piece": {
-    "scene": "reef/wave/compass"
+    "file": "cinematic-scenes-12.webp",
+    "panel": [
+      0,
+      2
+    ]
   },
   "witch-on-the-holy-night-movie": {
-    "scene": "moon/flame/clapper"
+    "file": "cinematic-scenes-12.webp",
+    "panel": [
+      1,
+      2
+    ]
   },
   "worlds-strongest-witch": {
-    "scene": "leaf/key/bottle"
+    "file": "cinematic-scenes-12.webp",
+    "panel": [
+      0,
+      3
+    ]
   },
   "yumeneko-connect-anime-announcement": {
-    "scene": "moon/paw/moon"
+    "file": "cinematic-scenes-12.webp",
+    "panel": [
+      1,
+      3
+    ]
   }
 }

@@ -44,7 +44,16 @@ def build(page, artwork):
         if "file" in illustration:
             file = Path(__file__).with_name("cover-artwork") / illustration["file"]
             with Image.open(file) as original:
-                art = original.convert("RGB")
+                if "panel" in illustration:
+                    column, row = illustration["panel"]
+                    width, height = original.size
+                    # Trim the panel edges so an adjacent image cannot bleed into the cover.
+                    left, right = width * column // 2, width * (column + 1) // 2
+                    top, bottom = height * row // 4, height * (row + 1) // 4
+                    inset = max(3, min(right - left, bottom - top) // 25)
+                    art = original.crop((left + inset, top + inset, right - inset, bottom - inset)).convert("RGB")
+                else:
+                    art = original.convert("RGB")
         else:
             art = Image.open(BytesIO(b64decode(illustration["image"], validate=True))).convert("RGB")
         image = ImageOps.fit(art, (1200, 630), Image.Resampling.LANCZOS)

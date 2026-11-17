@@ -1,77 +1,177 @@
 {
   "dr-stone-terraforming-anime": {
-    "scene": "leaf/planet/bottle"
+    "file": "cinematic-scenes-04.webp",
+    "panel": [
+      1,
+      0
+    ]
   },
   "dragon-ball-super-beerus": {
-    "scene": "sun/planet/lightning"
+    "file": "cinematic-scenes-04.webp",
+    "panel": [
+      0,
+      1
+    ]
   },
   "dreamland-release-date": {
-    "scene": "rose/moon/window"
+    "file": "cinematic-scenes-04.webp",
+    "panel": [
+      1,
+      1
+    ]
   },
   "eleceed-anime-april-2027-release-date": {
-    "scene": "reef/lightning/paw"
+    "file": "cinematic-scenes-04.webp",
+    "panel": [
+      0,
+      2
+    ]
   },
   "fall-2026-anime-calendar": {
-    "scene": "sun/calendar/flower"
+    "file": "cinematic-scenes-04.webp",
+    "panel": [
+      1,
+      2
+    ]
   },
   "firefly-wedding": {
-    "scene": "gold/lantern/heart"
+    "file": "cinematic-scenes-04.webp",
+    "panel": [
+      0,
+      3
+    ]
   },
   "fledgling-demon-lords-starter-shop": {
-    "scene": "ember/house/crown"
+    "file": "cinematic-scenes-04.webp",
+    "panel": [
+      1,
+      3
+    ]
   },
   "full-clearing-another-world-zero-believers-premiere": {
-    "scene": "reef/compass/tower"
+    "file": "cinematic-scenes-05.webp",
+    "panel": [
+      0,
+      0
+    ]
   },
   "ghost-of-tsushima-legends-anime-2028": {
-    "scene": "ember/mountain/blade"
+    "file": "cinematic-scenes-05.webp",
+    "panel": [
+      1,
+      0
+    ]
   },
   "hello-witch-love-potion-release-date": {
-    "scene": "rose/bottle/heart"
+    "file": "cinematic-scenes-05.webp",
+    "panel": [
+      0,
+      1
+    ]
   },
   "hiragi-san-house-of-vampires-anime": {
-    "scene": "ember/house/moon"
+    "file": "cinematic-scenes-05.webp",
+    "panel": [
+      1,
+      1
+    ]
   },
   "hirayasumi-anime-release-date": {
-    "scene": "sun/house/flower"
+    "file": "cinematic-scenes-05.webp",
+    "panel": [
+      0,
+      2
+    ]
   },
   "horror-collector-release-date": {
-    "scene": "ember/book/skull"
+    "file": "cinematic-scenes-05.webp",
+    "panel": [
+      1,
+      2
+    ]
   },
   "i-got-a-cheat-skill-season-2-january-2027": {
-    "scene": "moon/key/tower"
+    "file": "cinematic-scenes-05.webp",
+    "panel": [
+      0,
+      3
+    ]
   },
   "i-lost-my-adventurers-license-anime-january-2027": {
-    "scene": "gold/compass/book"
+    "file": "cinematic-scenes-05.webp",
+    "panel": [
+      1,
+      3
+    ]
   },
   "iceblade-sorcerer-ii": {
-    "scene": "storm/blade/mountain"
+    "file": "cinematic-scenes-06.webp",
+    "panel": [
+      0,
+      0
+    ]
   },
   "im-looking-for-a-zombie": {
-    "scene": "rose/skull/target"
+    "file": "cinematic-scenes-06.webp",
+    "panel": [
+      1,
+      0
+    ]
   },
   "in-a-world-full-of-zombies-january-2027": {
-    "scene": "leaf/skull/window"
+    "file": "cinematic-scenes-06.webp",
+    "panel": [
+      0,
+      1
+    ]
   },
   "inherit-the-winds-anime-january-2027": {
-    "scene": "sun/blade/lantern"
+    "file": "cinematic-scenes-06.webp",
+    "panel": [
+      1,
+      1
+    ]
   },
   "jump-festa-2027-schedule-dates-streaming": {
-    "scene": "gold/clapper/calendar"
+    "file": "cinematic-scenes-06.webp",
+    "panel": [
+      0,
+      2
+    ]
   },
   "kagurabachi-anime-world-tour-finale": {
-    "scene": "ember/clapper/blade"
+    "file": "cinematic-scenes-06.webp",
+    "panel": [
+      1,
+      2
+    ]
   },
   "kinioto-january-2027": {
-    "scene": "leaf/music/heart"
+    "file": "cinematic-scenes-06.webp",
+    "panel": [
+      0,
+      3
+    ]
   },
   "laid-off-cheat-granting-mage": {
-    "scene": "leaf/quill/lightning"
+    "file": "cinematic-scenes-06.webp",
+    "panel": [
+      1,
+      3
+    ]
   },
   "le-college-noir-season-2-trailer-october-2026": {
-    "scene": "moon/tower/clapper"
+    "file": "cinematic-scenes-07.webp",
+    "panel": [
+      0,
+      0
+    ]
   },
   "live-action-firefly-wedding-tv-drama-announced-for-2027-a1ac1e86": {
-    "scene": "rose/clapper/lantern"
+    "file": "cinematic-scenes-07.webp",
+    "panel": [
+      1,
+      0
+    ]
   }
 }
