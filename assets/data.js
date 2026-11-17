@@ -1,5 +1,5 @@
 window.ANINEXTUP_DATA={
-updated:"2026-11-16",
+updated:"2026-11-17",
 site:{timezone:"America/Santo_Domingo",season:"Fall 2026"},
 anime:[
 {id:"skip-and-loafer-season-2-release-date",image:"/assets/images/covers/skip-and-loafer-season-2-release-date-editorial.webp",title:"Skip and Loafer Season 2: April 2027 Release Window, Trailer & Where to Watch",date:null,dateLabel:"April 2027 · Japan",platform:"Crunchyroll",article:"articles/skip-and-loafer-season-2-release-date",newsCategory:"returning-series",category:"Returning series",status:"month-confirmed"},
@@ -118,6 +118,7 @@ anime:[
 {id:"psyren",newsCategory:"new-anime",image:"assets/images/psyren.jpg",title:"PSYREN",date:"2026-10-05",platform:"Crunchyroll",article:"articles/psyren-release-date",category:"Premiere",status:"confirmed"},
 ],
 guides:[
+{image:"/assets/images/covers/anime-crusaders-x-tier-list-original.webp",title:"Anime Crusaders X Tier List (November 2026): Best Units by Role",tag:"ROBLOX GUIDE · NOVEMBER 2026",article:"articles/anime-crusaders-x-tier-list",newsCategory:"release-news",description:"Find the best Anime Crusaders X units after the Anniversary Update. Compare Hill, Hybrid, Ground and Support picks for Infinite mode."},
 {image:"/assets/images/external/dc034acbcfc81bee304fa78c483e4bd916367cc51a87ee0bffe8c91dc68f7aad.webp",title:"Takopi's Original Sin: Thank You, See You Tomorrow Release Date",tag:"NEW",article:"articles/takopis-original-sin-movie",newsCategory:"release-news",description:"Takopi's Original Sin: Thank You, See You Tomorrow opens in Japanese theaters November 27, 2026, re-editing all six episodes with new scenes."},
 {image:"/assets/images/news/rakuen-tsuihou-kokoro-no-resonance.webp",title:"Expelled from Paradise Sequel Reveals Main Trailer and Beyond the Night Theme Song",tag:"NEW",article:"articles/rakuen-tsuihou-kokoro-no-resonance",newsCategory:"returning-series",description:"Expelled from Paradise sequel reveals a new main trailer and Beyond the Night theme song. Release date, cast, and official video."},
 {image:"/assets/images/external/f5ee7cafded4a5ded2961aa5450d83017ac5980e17b4551216f6a0b2c168cecd.webp",title:"In a World Full of Zombies Anime: January 2027 Premiere, New Trailer, Cast and Music",tag:"NEW",article:"articles/in-a-world-full-of-zombies-january-2027",newsCategory:"new-anime",description:"The zombie-survival anime arrives on AT-X in January 2027. The official October 10 trailer confirms more cast members and opening and ending songs."},
