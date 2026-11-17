@@ -32,6 +32,7 @@ on:
       - "scripts/prepare_public_media.py"
       - "scripts/prepare_google_cmp.py"
       - "scripts/build_public_article_covers.py"
+      - "scripts/build_related_releases.py"
       - "scripts/draw_editorial_cover.py"
       - "scripts/cover-artwork/**"
       - "scripts/validate_publication.py"

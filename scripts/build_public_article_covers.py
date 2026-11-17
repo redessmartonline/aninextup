@@ -10,6 +10,7 @@ import re
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 
 from draw_editorial_cover import draw_scene
+from build_related_releases import render_related_releases
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "assets" / "article-covers"
@@ -150,11 +151,9 @@ def main():
         artwork.update(batch)
     covers = {page.stem: build(page, artwork) for page in pages}
     # Static discovery cards and article recommendations share the same artwork.
-    def replace_card(match, page):
+    def replace_card(match):
         tag, body = match.groups()
         href = re.search(r'href="(?:https://aninextup\.com/)?(?:\.\./|/)?articles/([^"?#]+)', tag)
-        if not href and page.parent.name == "articles" and re.search(r'class="[^"]*\brelated-card\b', tag):
-            href = re.search(r'href="(?:\./)?([a-z0-9-]+(?:\.html)?)(?=["?#])', tag)
         if href and Path(href[1]).stem in covers:
             filename, height = covers[Path(href[1]).stem]
             cover = f"/assets/article-covers/{filename}"
@@ -170,9 +169,11 @@ def main():
 
     for page in [*ROOT.glob("*.html"), *pages]:
         source = page.read_text(encoding="utf-8")
-        updated = re.sub(r'(<a\b[^>]*>)(.*?)</a>', lambda match: replace_card(match, page), source, flags=re.S)
+        updated = re.sub(r'(<a\b[^>]*>)(.*?)</a>', replace_card, source, flags=re.S)
         if updated != source:
             page.write_text(updated, encoding="utf-8")
+
+    render_related_releases(pages, covers, ROOT / "editorial" / "genre-tags.json")
 
     catalog = ROOT / "assets" / "data.js"
     def replace_catalog_image(match):
@@ -289,11 +290,12 @@ def main():
 """)
     stylesheet = ROOT / "assets" / "style.css"
     style_version = sha256(stylesheet.read_bytes()).hexdigest()[:16]
-    home = ROOT / "index.html"
-    home_source = home.read_text(encoding="utf-8")
-    home_source = re.sub(r'(href="(?:/)?assets/style\.css)(?:\?[^"]*)?"', rf'\1?v={style_version}"', home_source)
-    home.write_text(home_source, encoding="utf-8")
-    print(f"Built {len(list(OUT.glob('*.png')))} original article covers")
+    for page in [ROOT / "index.html", *pages]:
+        source = page.read_text(encoding="utf-8")
+        updated = re.sub(r'(href="(?:/|\.\./)?assets/style\.css)(?:\?[^"]*)?"',
+                         rf'\1?v={style_version}"', source)
+        if updated != source:
+            page.write_text(updated, encoding="utf-8")
 
 
 if __name__ == "__main__":

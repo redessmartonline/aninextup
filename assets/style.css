@@ -490,3 +490,8 @@ main:has(> .article) + footer{
 
 /* Contact form */
 .contact-form-section{margin-top:32px;max-width:720px}.contact-form{display:grid;gap:10px;margin-top:18px}.contact-form label{font-weight:700}.contact-form input,.contact-form select,.contact-form textarea{width:100%;box-sizing:border-box;border:1px solid rgba(167,139,250,.4);border-radius:10px;background:#101827;color:#fff;padding:12px;font:inherit}.contact-form button{justify-self:start;border:0;border-radius:10px;background:#8054e8;color:white;font:inherit;font-weight:700;padding:12px 22px;cursor:pointer}.contact-form button:disabled{opacity:.65;cursor:wait}.contact-honeypot{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}#contact-status{min-height:1.5em}
+
+/* Shared heading and description colors for every related-article section. */
+.article .related-releases .section-head .kicker{color:#c4b5fd!important}
+.article .related-releases .section-head h2{color:#f5f2ff!important}
+.article .related-releases .related-card-copy p{margin:0 0 12px;color:#b9c4da;font-size:14px;line-height:1.5}
