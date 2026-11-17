@@ -276,93 +276,6 @@ def paint_backdrop(draw, rng, setting, dark, mid, light):
                           (x+27, 490-height), (x+28, 490)], fill=ground, outline=far, width=2)
 
 
-def paint_character(draw, x, y, scale, rng, outfit, palette, mirror=False):
-    dark, mid, light = palette
-    outline = (25, 21, 39)
-    skin, shade = rng.choice([((244, 197, 164), (193, 126, 126)),
-                              ((230, 177, 145), (178, 111, 100)),
-                              ((187, 130, 108), (126, 77, 82))])
-    hair = rng.choice([(49, 31, 48), (72, 48, 43), (39, 49, 73), (96, 49, 55),
-                       blend(dark, mid, .57), blend(dark, light, .63)])
-    hair_shine = blend(hair, light, .44)
-    coat = blend(dark, mid, .54)
-    coat_light = blend(coat, light, .26)
-    side = -1 if mirror else 1
-
-    def point(a, b):
-        return round(x+a*scale*side), round(y+b*scale)
-
-    def poly(points, color, edge=outline, width=2):
-        draw.polygon([point(a,b) for a,b in points], fill=color, outline=edge,
-                     width=max(1, round(width*scale)))
-
-    def line(points, color=outline, width=2):
-        draw.line([point(a,b) for a,b in points], fill=color, width=max(1, round(width*scale)), joint="curve")
-
-    def oval(a, b, c, d, color):
-        l,t = point(a,b)
-        r,u = point(c,d)
-        draw.ellipse((min(l,r),t,max(l,r),u),fill=color)
-
-    long_hair = rng.random() < .56
-    hair_end = rng.randrange(103, 165) if long_hair else rng.randrange(27, 53)
-    poly([(-60, -59), (-52,-92), (-20,-114), (20,-111), (52,-93), (63,-62),
-          (67,-16), (74,hair_end), (43,hair_end-19), (18,63), (-40,63),
-          (-70,hair_end-13), (-58,4)], hair, width=3)
-    poly([(-78,108), (-53,91), (-24,79), (16,76), (56,86), (79,103), (105,144),
-          (128,260), (88,295), (-91,278), (-126,257), (-112,172)], coat, width=3)
-    poly([(-78,111), (-61,131), (-82,221), (-111,248), (-103,168)], coat_light, None)
-    poly([(58,95), (81,116), (103,166), (114,228), (94,219), (64,143)], coat_light, None)
-    poly([(-21,40), (25,42), (22,78), (40,89), (6,124), (-36,89), (-20,76)], skin)
-    poly([(-21,47), (25,50), (21,70), (-11,80), (-21,72)], shade, None)
-    if outfit == "sports":
-        poly([(-37,90), (4,115), (39,86), (50,102), (7,140), (-49,105)], light)
-        line([(-67,130),(-87,203),(-92,249)], light, 7)
-        line([(66,130),(86,207),(91,246)], light, 7)
-    elif outfit == "fantasy":
-        poly([(-47,84), (-18,102), (7,111), (32,99), (45,83), (67,104),
-              (53,128), (6,147), (-56,118)], mid)
-        poly([(4,130), (31,122), (47,222), (13,209)], mid)
-        line([(-54,126),(5,151),(59,126)], light, 3)
-    else:
-        poly([(-24,82), (3,102), (26,81), (55,97), (29,159), (0,205), (-43,111)], (232,221,219))
-        poly([(-25,83), (3,103), (-17,125), (-41,102)], (255,240,229))
-        poly([(25,82), (5,103), (24,125), (46,101)], (255,240,229))
-        poly([(-4,105), (12,105), (17,118), (13,151), (3,172), (-8,148), (0,120)], mid)
-        line([(-54,100),(-39,146),(-10,190)], coat_light, 3)
-    # Small foreground shoulder or bag strap distinguishes the poses.
-    line([(-70,105),(-61,148),(-50,208),(-26,270)], outline, 9)
-    line([(-68,108),(-58,149),(-46,208),(-24,268)], hair_shine, 4)
-    oval(-61,-15,-38,18,shade)
-    oval(38,-14,61,18,skin)
-    poly([(-47,-55),(-38,-82),(-14,-94),(15,-92),(43,-77),(51,-45),(51,0),
-          (45,23),(28,46),(7,56),(-10,52),(-32,37),(-44,15),(-49,-15)], skin, width=2)
-    poly([(-47,-43),(-33,-22),(-32,12),(-19,42),(1,52),(-11,50),(-32,37),(-45,10)], shade, None)
-    for eye_x in (-23, 24):
-        poly([(eye_x-13,-12),(eye_x-8,-18),(eye_x+4,-19),(eye_x+13,-15),
-              (eye_x+10,-6),(eye_x+4,-1),(eye_x-8,-3)], (255,239,227), None)
-        oval(eye_x-5,-17,eye_x+7,-2,mid)
-        oval(eye_x-2,-17,eye_x+5,-5,outline)
-        oval(eye_x-2,-16,eye_x+2,-12,(255,248,237))
-        line([(eye_x-14,-13),(eye_x-7,-18),(eye_x+4,-19),(eye_x+13,-15)], outline, 3)
-        line([(eye_x-10,-28),(eye_x-1,-31),(eye_x+10,-28)], hair, 2)
-    line([(7,-2),(10,10),(5,13)], shade)
-    line([(-9,27),(1,29),(13,25)], outline)
-    line([(-3,32),(4,33)], shade)
-    # Layer angular locks over the forehead, leaving eyes and expression readable.
-    part = rng.randrange(-16, 23)
-    poly([(-58,-63),(-50,-85),(-30,-103),(0,-112),(30,-108),(56,-86),(64,-59),
-          (53,-23),(43,-39),(38,-62),(19,-35),(part,-55),(part-21,-33),
-          (-28,-46),(-44,-22),(-56,5),(-57,-18)], hair, width=2)
-    line([(-50,-64),(-36,-84),(-16,-97),(4,-100)], hair_shine, 3)
-    line([(14,-99),(38,-93),(53,-73),(56,-49)], hair_shine, 3)
-    line([(part,-80),(part-13,-64),(part-21,-49)], hair_shine, 2)
-    if long_hair:
-        line([(-57,8),(-58,41),(-59,77)], hair_shine, 2)
-        line([(56,2),(59,41),(60,79)], hair_shine, 2)
-
-
-# Subjects selected from the premises, rather than from a palette or an article tag.
 COVER_SUBJECTS = {
     "mercedes-and-the-waning-moon-anime": "vampire-dungeon",
     "yumeneko-connect-anime-announcement": "cat",
@@ -591,22 +504,16 @@ def draw_scene(slug, scene):
         paint_story_subject(draw, subject, dark, mid, light)
         return image
 
-    # Integrate the story motifs into the background and foreground of the scene.
-    badge(draw, detail, 1124, 108, 38, blend(mid, light, .52), light, dark)
-    outfit = "sports" if setting == "sports" else "fantasy" if setting in {"fantasy", "coast"} else "school"
-    pair = bool(motifs & {"heart", "window", "music", "flower"}) and "blade" not in motifs
-    if pair:
-        paint_character(draw, 1055, 290, 1.04, rng, outfit, (dark, mid, light), mirror=True)
-    cx = rng.randint(875, 932) if pair else rng.randint(959, 1012)
-    cy = rng.randint(258, 304)
-    paint_character(draw, cx, cy, rng.uniform(1.28, 1.48), rng, outfit, (dark, mid, light))
-    if main != "window":
-        ix, iy = (1115, 494) if main == "blade" else (1122, 505) if not pair else (1083, 519)
-        badge(draw, main, ix, iy, 73, blend(mid, light, .86), light, dark)
-    for _ in range(34):
-        x, y = rng.randrange(738,1200), rng.randrange(25,622)
-        if abs(x-cx) < 92 and abs(y-cy) < 105:
-            continue
-        size = rng.choice((1,2,2,3))
-        draw.ellipse((x,y,x+size,y+size), fill=blend(mid, light, .52))
+    # Use the objects associated with this story as the foreground subject.
+    x, y = rng.randint(978, 1012), rng.randint(287, 327)
+    halo = blend(mid, light, .28)
+    for radius, width in ((176, 2), (151, 3), (126, 1)):
+        draw.ellipse((x-radius, y-radius, x+radius, y+radius), outline=halo, width=width)
+    for _ in range(42):
+        px, py = rng.randrange(762, 1200), rng.randrange(24, 610)
+        if (px-x)**2 + (py-y)**2 > 116**2:
+            size = rng.choice((1, 2, 2, 3))
+            draw.ellipse((px-size, py-size, px+size, py+size), fill=halo)
+    badge(draw, main, x, y, 157, blend(light, (255, 255, 255), .28), light, dark)
+    badge(draw, detail, x+110, y+158, 56, light, blend(mid, light, .64), dark)
     return image

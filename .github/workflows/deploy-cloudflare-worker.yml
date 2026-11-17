@@ -245,7 +245,7 @@ jobs:
                 | cmp -s "$cover_file" - || return 1
               article=$(curl --fail --silent --show-error --max-time 15 \
                 "https://aninextup.com/articles/${slug}?deploy=$GITHUB_RUN_ID-$(date +%s%N)") || return 1
-              [[ "$article" == *"src=\"$asset\" width=\"1200\" height=\"675\""* &&
+              [[ "$article" == *"src=\"$asset\" width=\"1200\" height=\"630\""* &&
                  "$article" == *"property=\"og:image\" content=\"https://aninextup.com$asset\""* &&
                  "$article" == *"name=\"twitter:image\" content=\"https://aninextup.com$asset\""* &&
                  ( "$article" == *"\"image\":\"https://aninextup.com$asset\""* ||

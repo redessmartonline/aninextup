@@ -30,14 +30,9 @@ def title_lines(title, font, width):
 
 def build(page, artwork):
     source = page.read_text(encoding="utf-8")
+    # Keep established image URLs, including covers already shared externally.
     editorial = OUT / (page.stem + "-editorial.png")
-    if editorial.is_file():
-        with Image.open(editorial) as cover:
-            if cover.format != "PNG" or cover.size != (1200, 675):
-                raise ValueError(f"Invalid editorial cover dimensions or format: {editorial}")
-            cover.load()
-        update_article(page, source, editorial.name, 675)
-        return editorial.name, 675
+    filename = editorial.name if editorial.is_file() else page.stem + ".png"
 
     title = unescape(re.search(r"<title>(.*?)</title>", source, re.S)[1])
     title = re.sub(r"\s+(?:[|—–]|-)\s+AniNextUp\s*$", "", title).strip()
@@ -53,25 +48,21 @@ def build(page, artwork):
         else:
             art = Image.open(BytesIO(b64decode(illustration["image"], validate=True))).convert("RGB")
         image = ImageOps.fit(art, (1200, 630), Image.Resampling.LANCZOS)
-    if not illustration or not illustration.get("lettered"):
-        draw_title(image, title, bool(illustration), page, bool(illustration and "scene" in illustration))
-    image.save(OUT / (page.stem + ".png"), optimize=True)
-    filename = page.stem + ".png"
+    if illustration and illustration.get("lettered"):
+        raise ValueError(f"Cover needs an unlettered illustration: {page}")
+    draw_title(image, title, page)
+    image.save(OUT / filename, optimize=True)
     update_article(page, source, filename, 630)
     return filename, 630
 
 
-def draw_title(image, title, illustrated, page, editorial_scene=False):
+def draw_title(image, title, page):
     draw = ImageDraw.Draw(image, "RGBA")
-    if illustrated:
-        for x in range(850):
-            shade = max(0, int(218 * (1 - (x / 850) ** 3)))
-            draw.line((x, 0, x, 630), fill=(9, 12, 27, shade))
-    else:
-        draw.rectangle((68, 70, 1132, 560), outline="#604393", width=2)
-        draw.rectangle((68, 70, 77, 560), fill="#a78bfa")
+    for x in range(850):
+        shade = int(218 * (1 - (x / 850) ** 3))
+        draw.line((x, 0, x, 630), fill=(9, 12, 27, shade))
     draw.text((111, 115), "ANINEXTUP", font=ImageFont.truetype(str(FONT), 24), fill="#c4b5fd")
-    width = 645 if editorial_scene else (700 if illustrated else 1010)
+    width = 700
     for size in range(64, 25, -2):
         font = ImageFont.truetype(str(FONT), size)
         lines = title_lines(title, font, width)
@@ -95,23 +86,22 @@ def update_article(page, source, filename, height):
         f'<meta name="twitter:image" content="{ORIGIN}{path}">'
     )
     source = re.sub(r"</head>", metadata + "</head>", source, count=1, flags=re.I)
-    if height == 675:
-        def update_image(match):
-            data = json.loads(match[1])
-            if 'id="aninextup-index"' in match[0].split(">", 1)[0]:
-                data["image"] = path
-            elif isinstance(data, dict) and data.get("@type") in {"Article", "NewsArticle", "BlogPosting"}:
-                image = ORIGIN + path
-                data["image"] = [image] if isinstance(data.get("image"), list) else image
-            else:
-                return match[0]
-            payload = json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("<", r"\u003c")
-            return match[0].replace(match[1], payload, 1)
+    def update_image(match):
+        data = json.loads(match[1])
+        if 'id="aninextup-index"' in match[0].split(">", 1)[0]:
+            data["image"] = path
+        elif isinstance(data, dict) and data.get("@type") in {"Article", "NewsArticle", "BlogPosting"}:
+            image = ORIGIN + path
+            data["image"] = [image] if isinstance(data.get("image"), list) else image
+        else:
+            return match[0]
+        payload = json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("<", r"\u003c")
+        return match[0].replace(match[1], payload, 1)
 
-        source = re.sub(
-            r'<script\b(?=[^>]*(?:type="application/ld\+json"|id="aninextup-index"))[^>]*>(.*?)</script>',
-            update_image, source, flags=re.I | re.S,
-        )
+    source = re.sub(
+        r'<script\b(?=[^>]*(?:type="application/ld\+json"|id="aninextup-index"))[^>]*>(.*?)</script>',
+        update_image, source, flags=re.I | re.S,
+    )
 
     cover = f'<img src="{path}" width="1200" height="{height}" alt="" decoding="async" class="article-original-cover">'
     article = re.search(r"<article\b[^>]*>(.*?)</article\s*>", source, flags=re.I | re.S)
@@ -286,7 +276,6 @@ def main():
   #more-anime-news [data-home-more] p { font-size: .82rem; }
 }
 """)
-        css.write('\nimg[src$="-editorial.png"]{aspect-ratio:16/9!important}\n')
     stylesheet = ROOT / "assets" / "style.css"
     style_version = sha256(stylesheet.read_bytes()).hexdigest()[:16]
     home = ROOT / "index.html"
