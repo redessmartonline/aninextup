@@ -612,7 +612,7 @@ function classifyPlatformLink(destination){
     try{destination=new URL(link.href,location.href)}catch{return}
     if(destination.origin===location.origin)return;
     const metric=classifyPlatformLink(destination);
-    if(!metric||typeof window.gtag!=='function')return;
+    if(!metric||window['ga-disable-G-TRV5CF738D']===true||typeof window.gtag!=='function')return;
     window.gtag('event',metric.event,{
       platform_name:metric.platform,
       destination_type:metric.kind,
