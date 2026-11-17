@@ -1,0 +1,29 @@
+{
+  "intent": "Find and compare Anime Crusaders X units by role for Infinite after the Anniversary Update.",
+  "keyword": "anime crusaders x tier list",
+  "verifiedOn": "2026-11-17",
+  "editorialWords": 1207,
+  "sources": [
+    "https://www.roblox.com/games/107573139811370/Anime-Crusaders-X",
+    "https://www.mrguider.org/articles/anime-crusaders-tier-list-best-units/",
+    "https://togame.io/b/anime-crusader-x-tier-list/",
+    "https://powerupgaming.co.uk/2026/11/17/anime-crusaders-x-tier-list-best-units-ranked/",
+    "https://vacancybee.com/anime-crusaders-x-tier-list/"
+  ],
+  "limits": [
+    "Editorial source comparison with no independent in-game benchmarking. Launch-week additions remain provisional."
+  ],
+  "cover": {
+    "path": "/assets/images/covers/anime-crusaders-x-tier-list-original.webp",
+    "imageUrl": "https://aninextup.com/assets/article-covers/anime-crusaders-x-tier-list.png",
+    "sourceUrl": "https://aninextup.com/editorial-policy",
+    "sha256": "3c12cca2fb90376d37c38cc03bac76a689fd4ac727bd19c92f68355ad20c9d2a",
+    "credit": "Original editorial artwork by AniNextUp",
+    "verification": "Original generated fantasy illustration, checked for legibility and relevance. No Roblox logos or screenshots."
+  },
+  "video": {
+    "status": "not-available",
+    "sourceUrl": "https://www.roblox.com/games/107573139811370/Anime-Crusaders-X",
+    "reason": "The official experience page verifies the game. The editorial tier list has no corresponding official video."
+  }
+}
