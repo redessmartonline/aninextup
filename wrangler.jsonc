@@ -27,5 +27,8 @@
   ],
   "vars": {
     "CONTACT_FROM_EMAIL": "AniNextUp <newsletter@aninextup.com>"
+  },
+  "build": {
+    "command": "python3 scripts/check_worker_bundle.py"
   }
 }

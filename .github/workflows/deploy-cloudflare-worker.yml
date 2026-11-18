@@ -12,6 +12,8 @@ on:
       - "assets/**"
       - "src/**"
       - "db/**"
+      - "scripts/check_worker_bundle.py"
+      - "tests/test_worker_bundle.py"
       - "scripts/prepare_newsletter_db.mjs"
       - "scripts/test_newsletter_live.mjs"
       - "scripts/test_comments_live.mjs"
@@ -78,6 +80,7 @@ jobs:
 
       - name: Enforce editorial media review before deployment
         run: |
+          python -m unittest discover -s tests -p test_worker_bundle.py
           python -m unittest discover -s tests -p test_publication_media.py
           python scripts/check_publication_media.py
 
@@ -169,20 +172,22 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: node scripts/prepare_newsletter_db.mjs
 
-      # Updating a Worker secret deploys a version. Publish the built assets last.
-      - name: Install newsletter delivery secret when supplied
-        continue-on-error: true
+      # Pass the optional secret to the final deployment without activating an
+      # intermediate version. Keep the file outside the public asset directory.
+      - name: Prepare newsletter secret for the final deployment
         env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
-        shell: bash
         run: |
-          if [ -n "$RESEND_API_KEY" ]; then
-            printf '%s' "$RESEND_API_KEY" | npx --yes wrangler@4 secret put RESEND_API_KEY
-          else
-            echo "Newsletter delivery awaits the RESEND_API_KEY repository secret."
-          fi
+          python - <<'PYSECRET'
+          import json, os
+          from pathlib import Path
+          secrets = {}
+          if os.environ.get('RESEND_API_KEY'):
+              secrets['RESEND_API_KEY'] = os.environ['RESEND_API_KEY']
+          path = Path(os.environ['RUNNER_TEMP']) / 'aninextup-deploy-secrets.json'
+          path.write_text(json.dumps(secrets), encoding='utf-8')
+          path.chmod(0o600)
+          PYSECRET
 
       - name: Prepare Google consent and original cover artwork
         run: |
@@ -191,6 +196,7 @@ jobs:
           python scripts/prepare_public_media.py
           python scripts/prepare_google_cmp.py
           python scripts/audit_adsense_readiness.py
+          python scripts/check_worker_bundle.py
 
       - name: Deploy with Wrangler
         id: deploy
@@ -198,7 +204,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: deploy
+          command: deploy --secrets-file ${{ runner.temp }}/aninextup-deploy-secrets.json
 
       - name: Verify production serves the deployed content
         env:
