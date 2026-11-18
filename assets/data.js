@@ -1,7 +1,8 @@
 window.ANINEXTUP_DATA={
-updated:"2026-11-17",
+updated:"2026-11-18",
 site:{timezone:"America/Santo_Domingo",season:"Fall 2026"},
 anime:[
+{id:"otherworldly-munchkin-release-date",image:"/assets/images/covers/otherworldly-munchkin-release-date-original.webp",title:"Otherworldly Munchkin New Release Date After Delay (2027)",date:"2027-01-08",dateLabel:"January 7 late-night slot / January 8 JST",platform:"Crunchyroll (announced; streaming time TBA)",article:"articles/otherworldly-munchkin-release-date",newsCategory:"release-news",category:"TV Anime",status:"confirmed"},
 {id:"skip-and-loafer-season-2-release-date",image:"/assets/images/covers/skip-and-loafer-season-2-release-date-editorial.webp",title:"Skip and Loafer Season 2: April 2027 Release Window, Trailer & Where to Watch",date:null,dateLabel:"April 2027 · Japan",platform:"Crunchyroll",article:"articles/skip-and-loafer-season-2-release-date",newsCategory:"returning-series",category:"Returning series",status:"month-confirmed"},
 {id:"ninjago-embers-ashes-release-date-watch-order",image:"/assets/images/covers/ninjago-embers-ashes-official-teaser.webp",title:"NINJAGO Anime 2027: Embers + Ashes Release Window, Trailer and Watch Order",date:null,dateLabel:"2027 · exact date TBA",platform:"Full episodes unannounced; teaser on LEGO YouTube",article:"articles/ninjago-embers-ashes-release-date-watch-order",newsCategory:"returning-series",category:"Returning series",status:"year-confirmed"},
 {id:"ninja-skooler-pilot-film-where-to-watch",image:"/assets/images/covers/ninja-skooler-pilot-official.webp",title:"Where to Watch the NINJA SKOOLER Pilot Film Free on YouTube",date:"2026-11-06",dateLabel:"November 6, 2026 · Japan",platform:"YouTube (BLUE RIGHTS)",article:"articles/ninja-skooler-pilot-film-where-to-watch",newsCategory:"release-news",category:"Pilot film",status:"exact-date"},
