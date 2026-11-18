@@ -1,0 +1,39 @@
+{
+  "intent": "Find the new Otherworldly Munchkin release date after its delay, understand January 7 versus January 8, and check streaming availability.",
+  "keyword": "Otherworldly Munchkin new release date",
+  "verifiedOn": "2026-11-18",
+  "editorialWords": 1287,
+  "sources": [
+    "https://www.isekai-munchkin.com/news/topics.php?id=27073",
+    "https://www.isekai-munchkin.com/onair/",
+    "https://www.isekai-munchkin.com/news/topics.php?id=wp208",
+    "https://www.crunchyroll.com/news/latest/2025/9/16/otherworldly-munchkin-lets-speedrun-the-dungeon-with-only-1-hp-anime-premiere-postponed",
+    "https://www.isekai-munchkin.com/movie/",
+    "https://www.youtube.com/watch?v=xQ6qdEHfIaQ",
+    "https://www.isekai-munchkin.com/staff/",
+    "https://www.isekai-munchkin.com/news/topics.php?id=27075",
+    "https://kodansha.us/series/otherworldly-munchkin-lets-speedrun-the-dungeon-with-only-1-hp/"
+  ],
+  "limits": [
+    "Japan TV times are confirmed. Local times are editorial conversions of that broadcast, not streaming release times. Crunchyroll announced the series before the delay; a revised upload time and English dub date were not established by the reviewed sources."
+  ],
+  "cover": {
+    "path": "/assets/images/covers/otherworldly-munchkin-release-date-original.webp",
+    "imageUrl": "https://aninextup.com/assets/article-covers/otherworldly-munchkin-release-date.png",
+    "sourceUrl": "https://aninextup.com/editorial-policy",
+    "credit": "Original editorial artwork by AniNextUp",
+    "sha256": "da91ab4a2e01c2eedbef59e18611c475f81bc8614497d43672c8b587736b2639",
+    "verification": "Original generated cinematic dungeon artwork; no copied promotional illustration, logo or screenshot."
+  },
+  "video": {
+    "path": "/assets/images/covers/otherworldly-munchkin-release-date-original.webp",
+    "imageUrl": "https://aninextup.com/assets/article-covers/otherworldly-munchkin-release-date.png",
+    "sourceUrl": "https://www.isekai-munchkin.com/movie/",
+    "credit": "Original editorial artwork by AniNextUp",
+    "sha256": "da91ab4a2e01c2eedbef59e18611c475f81bc8614497d43672c8b587736b2639",
+    "verification": "Official PV 2 linked from the anime Movie page. Uses original editorial illustration as thumbnail, not a video frame.",
+    "status": "available",
+    "youtubeId": "xQ6qdEHfIaQ",
+    "channel": "Official trailer linked by the anime website"
+  }
+}
