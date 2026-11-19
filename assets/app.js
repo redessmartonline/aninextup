@@ -7,7 +7,7 @@ function useCardImageFallback(image){
   if(/\/assets\/article-covers\/[a-z0-9-]+\.webp(?:[?#]|$)/.test(current)&&image.dataset.losslessFallback!=='true'){
     image.dataset.losslessFallback='true';
     image.removeAttribute('srcset');
-    image.src=current.replace(/\.webp(?=[?#]|$)/,'.png');
+    image.src=current.replace(/-(?:480|800)(?=\.webp(?:[?#]|$))/,'').replace(/\.webp(?=[?#]|$)/,'.png');
     return;
   }
   image.removeAttribute('srcset');
@@ -26,6 +26,21 @@ function publicArticleCover(value){
       : null;
   }catch{return null;}
 }
+function responsiveCover(image){
+  if(!(image instanceof HTMLImageElement)||image.dataset.losslessFallback==='true')return;
+  const url=publicArticleCover(image.getAttribute('src'));
+  if(!url||image.hasAttribute('srcset'))return;
+  const base=url.replace(/(?:-(?:480|800))?\.(?:png|webp)$/,'');
+  const hero=image.classList.contains('article-original-cover');
+  image.sizes=hero?'(max-width: 1200px) 100vw, 1200px':'(max-width: 600px) 92vw, (max-width: 1000px) 45vw, 400px';
+  image.srcset=hero?base+'.webp 1200w':base+'-480.webp 480w, '+base+'-800.webp 800w, '+base+'.webp 1200w';
+}
+document.querySelectorAll(cardImageSelector).forEach(responsiveCover);
+new MutationObserver(records=>records.forEach(record=>record.addedNodes.forEach(node=>{
+  if(node.nodeType!==1)return;
+  if(node.matches(cardImageSelector))responsiveCover(node);
+  node.querySelectorAll(cardImageSelector).forEach(responsiveCover);
+}))).observe(document.documentElement,{childList:true,subtree:true});
 // Keep cards composed when an external artwork host is unavailable.
 document.addEventListener('error',event=>{
   if(event.target instanceof HTMLImageElement&&event.target.matches(cardImageSelector))useCardImageFallback(event.target);

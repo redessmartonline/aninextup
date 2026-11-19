@@ -67,7 +67,7 @@ def bundle_errors(root):
             except OSError:
                 valid_webp = False
             if candidate != expected or not valid_webp:
-                errors.append(f'{page.name}: missing or invalid lossless WebP cover')
+                errors.append(f'{page.name}: missing or invalid WebP cover')
         for key in ('og:image', 'twitter:image'):
             if article.social.get(key) != 'https://aninextup.com' + path:
                 errors.append(f'{page.name}: {key} does not match the generated cover')

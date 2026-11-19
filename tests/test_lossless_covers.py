@@ -5,7 +5,7 @@ import tempfile
 import unittest
 
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
-from optimize_public_covers import encode_lossless, optimize_img, replace_image_values
+from optimize_public_covers import encode_lossless, encode_responsive, optimize_img, replace_image_values
 from PIL import Image
 
 
@@ -25,13 +25,25 @@ class LosslessCoverTests(unittest.TestCase):
                 self.assertEqual(decoded.convert('RGB').tobytes(),image.tobytes())
             self.assertLess(webp.stat().st_size,png.stat().st_size)
 
+    def test_responsive_sizes_and_original_preserved(self):
+        with tempfile.TemporaryDirectory() as directory:
+            png=Path(directory)/'guide.png'
+            Image.new('RGB',(1200,630),'navy').save(png)
+            original=png.read_bytes()
+            variants=encode_responsive(png)
+            sizes=[]
+            for variant in variants:
+                with Image.open(variant) as image:sizes.append(image.size)
+            self.assertEqual(sizes,[(480,252),(800,420),(1200,630)])
+            self.assertEqual(png.read_bytes(),original)
+
     def test_static_src_and_dimensions_remain_unchanged(self):
         import re
         source='<img src="/assets/article-covers/guide.png" width="1200" height="630" loading="lazy">'
         mapping={'/assets/article-covers/guide.png':'/assets/article-covers/guide.webp'}
         result=re.sub(r'<img\b[^>]*>',lambda m:optimize_img(m,mapping),source)
         self.assertIn('src="/assets/article-covers/guide.png"',result)
-        self.assertIn('srcset="/assets/article-covers/guide.webp 1x"',result)
+        self.assertIn('/assets/article-covers/guide-480.webp 480w',result)
         self.assertIn('width="1200" height="630"',result)
 
     def test_webp_error_retries_png_before_generic_fallback(self):

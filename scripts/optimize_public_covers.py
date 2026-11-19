@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Use pixel-identical lossless WebP covers; retain established PNG URLs."""
+"""Build high-quality responsive WebP covers; retain original PNG URLs."""
 from hashlib import sha256
 import json
 from pathlib import Path
@@ -26,15 +26,33 @@ def encode_lossless(png):
     return webp
 
 
+def encode_responsive(png):
+    """Keep full-resolution artwork plus smaller cards at WebP quality 90."""
+    paths = []
+    with Image.open(png) as source:
+        original = source.convert('RGB')
+        for width in (480, 800, 1200):
+            target = png.with_name(png.stem + (f'-{width}' if width < 1200 else '') + '.webp')
+            image = original if width == 1200 else original.resize((width, round(original.height * width / original.width)), Image.Resampling.LANCZOS)
+            image.save(target, format='WEBP', quality=90, method=6)
+            with Image.open(target) as decoded:
+                if decoded.size != image.size:
+                    raise RuntimeError(f'Invalid responsive cover: {target}')
+            paths.append(target)
+    return paths
+
+
 def optimize_img(match, mapping):
     tag = match[0]
     source = re.search(r'\bsrc="([^"]+)"', tag)
     if not source or source[1] not in mapping:
         return tag
-    # A single full-resolution candidate preserves every pixel at every size.
-    # Browsers without srcset support continue using the original PNG src.
-    tag = re.sub(r'\s+srcset="[^"]*"', '', tag)
-    return tag[:-1] + f' srcset="{mapping[source[1]]} 1x">'
+    url = mapping[source[1]]
+    hero = 'article-original-cover' in tag
+    candidates = f'{url} 1200w' if hero else f'{url[:-5]}-480.webp 480w, {url[:-5]}-800.webp 800w, {url} 1200w'
+    sizes = '(max-width: 1200px) 100vw, 1200px' if hero else '(max-width: 600px) 92vw, (max-width: 1000px) 45vw, 400px'
+    tag = re.sub(r'\s+(?:srcset|sizes)="[^"]*"', '', tag)
+    return tag[:-1] + f' srcset="{candidates}" sizes="{sizes}">'
 
 
 def replace_image_values(value, mapping):
@@ -53,11 +71,12 @@ def main():
     mapping = {}
     report = []
     for png in sorted((ROOT / 'assets/article-covers').glob('*.png')):
-        webp = encode_lossless(png)
+        variants = encode_responsive(png)
+        webp = variants[-1]
         before = png.stat().st_size
         after = webp.stat().st_size if webp else before
         report.append({'file':png.name, 'pngBytes':before, 'displayBytes':after,
-                       'pixelIdentical':True})
+                       'quality':90, 'card480Bytes':variants[0].stat().st_size, 'card800Bytes':variants[1].stat().st_size})
         if webp:
             mapping['/' + png.relative_to(ROOT).as_posix()] = '/' + webp.relative_to(ROOT).as_posix()
     if not report:
@@ -86,7 +105,7 @@ def main():
         source = page.read_text(encoding='utf-8')
         source = re.sub(r'(src="(?:/|\.\./)?assets/data\.js)(?:\?[^"]*)?"',rf'\1?v={version}"',source)
         page.write_text(source,encoding='utf-8')
-    out = ROOT / 'reports/lossless-covers.json'
+    out = ROOT / 'reports/responsive-covers.json'
     out.parent.mkdir(exist_ok=True)
     before = sum(x['pngBytes'] for x in report)
     after = sum(x['displayBytes'] for x in report)
@@ -94,9 +113,9 @@ def main():
                              'pngBytes':before,'displayBytes':after,
                              'savedPercent':round(100*(1-after/before),2),
                              'files':report},indent=2)+'\n')
-    print(f'Lossless covers: {len(mapping)}/{len(report)} optimized; '
+    print(f'Responsive covers: {len(mapping)}/{len(report)} optimized; '
           f'{before:,} → {after:,} bytes ({100*(1-after/before):.1f}% less); '
-          'all decoded pixels verified identical. PNGs retained.')
+          'quality 90; 480/800/1200px variants validated. PNGs retained.')
 
 
 if __name__ == '__main__':
