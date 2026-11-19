@@ -28,6 +28,10 @@ class WorkerBundleTests(unittest.TestCase):
     def test_complete_bundle_passes(self):
         self.assertEqual(module.bundle_errors(self.root), [])
 
+    def test_missing_webp_candidate_blocks_deployment(self):
+        self.page.write_text(self.page.read_text().replace('<img ', '<img srcset="/assets/article-covers/guide.webp 1x" '))
+        self.assertTrue(module.bundle_errors(self.root))
+
     def test_raw_source_fails(self):
         self.page.write_text('<figure><img src="/assets/images/guide.webp"></figure>')
         self.assertTrue(module.bundle_errors(self.root))

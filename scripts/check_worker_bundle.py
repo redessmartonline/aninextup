@@ -18,11 +18,13 @@ class ArticleCover(HTMLParser):
         super().__init__()
         self.hero = []
         self.social = {}
+        self.srcsets = []
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
         if tag == 'img' and 'article-original-cover' in attrs.get('class', '').split():
             self.hero.append(attrs.get('src', ''))
+            self.srcsets.append(attrs.get('srcset', ''))
         key = attrs.get('property', attrs.get('name', ''))
         if tag == 'meta' and key in {'og:image', 'twitter:image'}:
             self.social[key] = attrs.get('content', '')
@@ -56,6 +58,16 @@ def bundle_errors(root):
             valid = False
         if not valid:
             errors.append(f'{page.name}: missing or invalid 1200x630 cover {path}')
+        if article.srcsets and article.srcsets[0]:
+            candidate = article.srcsets[0].split()[0]
+            expected = path.removesuffix('.png') + '.webp'
+            try:
+                header = (root / expected.lstrip('/')).read_bytes()[:12]
+                valid_webp = header[:4] == b'RIFF' and header[8:12] == b'WEBP'
+            except OSError:
+                valid_webp = False
+            if candidate != expected or not valid_webp:
+                errors.append(f'{page.name}: missing or invalid lossless WebP cover')
         for key in ('og:image', 'twitter:image'):
             if article.social.get(key) != 'https://aninextup.com' + path:
                 errors.append(f'{page.name}: {key} does not match the generated cover')

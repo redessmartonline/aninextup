@@ -1,7 +1,16 @@
 const cardImageFallback='/assets/images/anime-image-fallback.svg';
-const cardImageSelector='.visual-card > img, .news-featured > img, .news-side-card img, .week-release img, .calendar-day-items img, .related-releases img';
+const cardImageSelector='.article-original-cover, .visual-card > img, .news-featured > img, .news-side-card img, .week-release img, .calendar-day-items img, .related-releases img';
 function useCardImageFallback(image){
   if(!(image instanceof HTMLImageElement))return;
+  // A failed WebP falls back to its retained, full-resolution PNG first.
+  const current=image.currentSrc||image.src;
+  if(/\/assets\/article-covers\/[a-z0-9-]+\.webp(?:[?#]|$)/.test(current)&&image.dataset.losslessFallback!=='true'){
+    image.dataset.losslessFallback='true';
+    image.removeAttribute('srcset');
+    image.src=current.replace(/\.webp(?=[?#]|$)/,'.png');
+    return;
+  }
+  image.removeAttribute('srcset');
   // Only stop when the current request already is the fallback.
   if(image.src===new URL(cardImageFallback,location.origin).href)return;
   image.dataset.fallbackApplied='true';
@@ -12,7 +21,7 @@ function publicArticleCover(value){
   if(!value)return null;
   try{
     const image=new URL(value,location.origin+'/');
-    return image.origin===location.origin&&/^\/assets\/article-covers\/[a-z0-9-]+\.png$/.test(image.pathname)
+    return image.origin===location.origin&&/^\/assets\/article-covers\/[a-z0-9-]+\.(?:png|webp)$/.test(image.pathname)
       ? image.href
       : null;
   }catch{return null;}

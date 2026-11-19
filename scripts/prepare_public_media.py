@@ -42,7 +42,7 @@ def remove_video_schema(match):
 
 def use_fallback(match):
     url = match[0]
-    if re.fullmatch(r"https://aninextup\.com/assets/article-covers/[a-z0-9-]+\.png", url):
+    if re.fullmatch(r"https://aninextup\.com/assets/article-covers/[a-z0-9-]+\.(?:png|webp)", url):
         return url
     return (ORIGIN if url.startswith(("http://", "https://")) else "") + FALLBACK
 
@@ -163,7 +163,7 @@ def public_media_audit(files):
                 if resolved.path in allowed_assets:
                     continue
                 if (len(parts) == 3 and parts[0] == "assets" and parts[1] in asset_dirs
-                        and re.fullmatch(r'[a-z0-9-]+\.png', parts[2])
+                        and re.fullmatch(r'[a-z0-9-]+\.(?:png|webp)', parts[2])
                         and (ROOT / resolved.path.lstrip("/")).is_file()):
                     continue
             findings.append(f"{relative}: image outside the published cover set: {url[:220]}")
