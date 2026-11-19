@@ -1,0 +1,22 @@
+{
+  "intent": "Yumeneko Connect has a TV anime announcement, but no release date or streaming platform in the official pages checked November 19. See cast, teaser and manga.",
+  "keyword": "Yumeneko Connect Anime: Is a Release Date Confirmed?",
+  "verifiedOn": "2026-11-19",
+  "cover": {
+    "path": "/assets/images/external/214a908c106e0f88349a9f2a139a7ba957ec74dafe6f29768644b9af4b4f12aa.webp",
+    "imageUrl": "https://aninextup.com/assets/images/external/214a908c106e0f88349a9f2a139a7ba957ec74dafe6f29768644b9af4b4f12aa.webp",
+    "sha256": "d00b3099d6e241b34440f26f6ddd5caac1f914df676f33117e05c83817bf4017",
+    "credit": "Official anime key visual · © Ko Sawada, Kodansha / Yumeneko Connect Production Committee.  Source: official anime website .",
+    "sourceUrl": "https://sh-anime.shochiku.co.jp/yumeconne-anime/"
+  },
+  "video": {
+    "status": "available",
+    "youtubeId": "LCAL2iL5vLc",
+    "sourceUrl": "https://www.youtube.com/watch?v=LCAL2iL5vLc",
+    "path": "/assets/images/external/b04bd2fd9a5bb46bcc29a18cbe0662243058235fafb8f50471e76b731b591d15.webp",
+    "imageUrl": "https://i.ytimg.com/vi/LCAL2iL5vLc/hqdefault.jpg",
+    "sha256": "abc2a6b48e72d67303927942dce8233460cdd49fa3600a6f42057ec46ff7cc60"
+  },
+  "editorialWords": 1367,
+  "updateNote": "Search Console guided revision: clearer viewing answer and current release status; original publication date retained."
+}

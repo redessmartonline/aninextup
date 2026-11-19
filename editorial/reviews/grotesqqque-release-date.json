@@ -1,8 +1,8 @@
 {
-  "intent": "Should you watch 4649GIRL before the anthology?",
-  "keyword": "GROTESQQQUE Release Date: November 6, Netflix Preview & Stories",
-  "verifiedOn": "2026-11-15",
-  "editorialWords": 1226,
+  "intent": "GROTESQQQUE opened in Japan November 6, 2026. The 4649GIRL Netflix Japan preview window ended November 5. Check current viewing options and all three stories.",
+  "keyword": "GROTESQQQUE: Japan Release Date & Netflix Preview Status",
+  "verifiedOn": "2026-11-19",
+  "editorialWords": 1297,
   "cover": {
     "path": "/assets/images/grotesqqque-official-key-visual.jpg",
     "imageUrl": "https://aninextup.com/assets/images/grotesqqque-official-key-visual.jpg",
@@ -14,5 +14,6 @@
     "status": "not-available",
     "sourceUrl": "https://www.aniplex.co.jp/lineup/movie-gtq123/news/detail/?id=70747",
     "reason": "This edition does not embed a video player. Official previews, when listed, are linked from the article."
-  }
+  },
+  "updateNote": "Search Console guided revision: clearer viewing answer and current release status; original publication date retained."
 }
