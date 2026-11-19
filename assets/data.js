@@ -1,7 +1,8 @@
 window.ANINEXTUP_DATA={
-updated:"2026-11-18",
+updated:"2026-11-19",
 site:{timezone:"America/Santo_Domingo",season:"Fall 2026"},
 anime:[
+{id:"tensei-elf-release-date",image:"/assets/images/covers/tensei-elf-release-date-original.webp",title:"Tensei Elf Release Date: December Streaming vs. January TV Premiere",date:"2026-12-31",dateLabel:"Dec 30, 2026 at 24:00 JST (Japan streaming)",platform:"ABEMA / d Anime Store (Japan); international TBA",article:"articles/tensei-elf-release-date",newsCategory:"release-news",category:"TV Anime",status:"confirmed"},
 {id:"otherworldly-munchkin-release-date",image:"/assets/images/covers/otherworldly-munchkin-release-date-original.webp",title:"Otherworldly Munchkin New Release Date After Delay (2027)",date:"2027-01-08",dateLabel:"January 7 late-night slot / January 8 JST",platform:"Crunchyroll (announced; streaming time TBA)",article:"articles/otherworldly-munchkin-release-date",newsCategory:"release-news",category:"TV Anime",status:"confirmed"},
 {id:"skip-and-loafer-season-2-release-date",image:"/assets/images/covers/skip-and-loafer-season-2-release-date-editorial.webp",title:"Skip and Loafer Season 2: April 2027 Release Window, Trailer & Where to Watch",date:null,dateLabel:"April 2027 · Japan",platform:"Crunchyroll",article:"articles/skip-and-loafer-season-2-release-date",newsCategory:"returning-series",category:"Returning series",status:"month-confirmed"},
 {id:"ninjago-embers-ashes-release-date-watch-order",image:"/assets/images/covers/ninjago-embers-ashes-official-teaser.webp",title:"NINJAGO Anime 2027: Embers + Ashes Release Window, Trailer and Watch Order",date:null,dateLabel:"2027 · exact date TBA",platform:"Full episodes unannounced; teaser on LEGO YouTube",article:"articles/ninjago-embers-ashes-release-date-watch-order",newsCategory:"returning-series",category:"Returning series",status:"year-confirmed"},
