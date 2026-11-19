@@ -1,0 +1,40 @@
+{
+  "intent": "Find when and where Tensei Elf begins streaming before TV, distinguish Japanese midnight dates, and check whether international streaming is confirmed.",
+  "keyword": "Tensei Elf release date",
+  "verifiedOn": "2026-11-19",
+  "editorialWords": 1389,
+  "sources": [
+    "https://prtimes.jp/main/html/rd/p/000002308.000000607.html",
+    "https://tenseielf.asmik-ace.co.jp/onair/",
+    "https://www.crunchyroll.com/news/latest/2026/9/20/majutsu-wo-kiwamete-tabi-ni-deta-tensei-elf-moteamashita-jumyo-de-ikeru-densetsu-to-naru-anime-january-2027-release-date-first-2-minutes",
+    "https://tenseielf.asmik-ace.co.jp/movie/",
+    "https://www.youtube.com/watch?v=zRvOQb5Vic8",
+    "https://tenseielf.asmik-ace.co.jp/",
+    "https://tenseielf.asmik-ace.co.jp/staff/",
+    "https://tenseielf.asmik-ace.co.jp/music/",
+    "https://tenseielf.asmik-ace.co.jp/books/",
+    "https://novema.jp/comic/serial/n105"
+  ],
+  "limits": [
+    "The advance streaming, TV and transactional schedules apply to Japan. Local times are editorial conversions, not international streaming promises. No international platform, English dub date or English book publisher was established from reviewed announcements."
+  ],
+  "cover": {
+    "path": "/assets/images/covers/tensei-elf-release-date-original.webp",
+    "imageUrl": "https://aninextup.com/assets/article-covers/tensei-elf-release-date.png",
+    "sourceUrl": "https://aninextup.com/editorial-policy",
+    "credit": "Original editorial artwork by AniNextUp",
+    "sha256": "487416b98dba91b58f1c2c3a7e13e07b8cfca0139c5b9acdd8a7741cba44e9fe",
+    "verification": "Original generated cinematic elf journey and forest bridge illustration; no copied character design, promotional composition, logo or screenshot."
+  },
+  "video": {
+    "path": "/assets/images/covers/tensei-elf-release-date-original.webp",
+    "imageUrl": "https://aninextup.com/assets/article-covers/tensei-elf-release-date.png",
+    "sourceUrl": "https://tenseielf.asmik-ace.co.jp/movie/",
+    "credit": "Original editorial artwork by AniNextUp",
+    "sha256": "487416b98dba91b58f1c2c3a7e13e07b8cfca0139c5b9acdd8a7741cba44e9fe",
+    "verification": "Main trailer linked and embedded by the official Movie page. The article uses original editorial artwork as its thumbnail.",
+    "status": "available",
+    "youtubeId": "zRvOQb5Vic8",
+    "channel": "Official trailer linked by the anime website"
+  }
+}
