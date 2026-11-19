@@ -65,6 +65,24 @@ assert.strictEqual(image.src,'/assets/images/anime-image-fallback.svg');
         app=Path(__file__).resolve().parents[1]/'assets/app.js'
         subprocess.run(['node','-e',script,str(app)],check=True)
 
+    def test_cover_replacement_across_intro_links_and_repeated_builds(self):
+        from build_public_article_covers import update_article
+        with tempfile.TemporaryDirectory() as directory:
+            page=Path(directory)/'guide.html'
+            source=('<html><head></head><body><article><div class="article-head">'
+                    '<h1>Guide</h1><p class="lead">Introduction</p><p class="byline">Author</p>'
+                    '<p><a href="#trailer">Watch trailer</a></p></div>'
+                    '<figure class="official-hero"><img src="old.jpg"><figcaption>Old cover</figcaption></figure>'
+                    '<section id="trailer"><img src="trailer.jpg"></section></article></body></html>')
+            update_article(page,source,'guide.png',630)
+            prepared=page.read_text()
+            self.assertNotIn('official-hero',prepared)
+            self.assertEqual(prepared.count('class="article-original-cover"'),1)
+            self.assertIn('src="trailer.jpg"',prepared)
+            prepared=prepared.replace('class="article-original-cover"','class="article-original-cover" srcset="guide.webp 1200w"')
+            update_article(page,prepared,'guide.png',630)
+            self.assertEqual(page.read_text().count('class="article-original-cover"'),1)
+
     def test_runtime_feed_changes_images_without_touching_links(self):
         data={'image':'/assets/article-covers/guide.png','url':'/articles/guide',
               'items':[{'cover':'/assets/article-covers/guide.png'}]}

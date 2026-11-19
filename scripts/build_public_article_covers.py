@@ -88,6 +88,16 @@ def draw_title(image, title, page):
 
 def update_article(page, source, filename, height):
     path = "/assets/article-covers/" + filename
+    # Retire the old main hero wherever it sits relative to intro links.
+    # Also make rebuilding already prepared/responsive HTML idempotent.
+    source = re.sub(
+        r'<figure\b(?=[^>]*\bclass=["\'][^"\']*\bofficial-hero\b)[^>]*>.*?</figure\s*>',
+        '', source, flags=re.I | re.S,
+    )
+    source = re.sub(
+        r'<img\b(?=[^>]*\bclass=["\'][^"\']*\barticle-original-cover\b)[^>]*>',
+        '', source, flags=re.I,
+    )
     source = re.sub(r'<meta\b(?=[^>]*(?:property|name)="(?:og:image(?::[^"]+)?|twitter:image(?::[^"]+)?)")[^>]*>', "", source, flags=re.I)
     metadata = (
         f'<meta property="og:image" content="{ORIGIN}{path}">'
