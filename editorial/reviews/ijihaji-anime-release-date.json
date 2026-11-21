@@ -1,0 +1,30 @@
+{
+  "intent": "Find the confirmed 2027 release window, latest cast, story and source manga; separate planned PV date from anime premiere.",
+  "keyword": "IjiHaji anime release date",
+  "verifiedOn": "2026-11-21",
+  "editorialWords": 1233,
+  "sources": [
+    "https://ijihaji-anime.com/",
+    "https://ijihaji-anime.com/news/index00030000.html",
+    "https://x.com/ijihaji_anime/status/2123974682743648350",
+    "https://www.kodansha.co.jp/comic/products/0000379168",
+    "https://www.kodansha.co.jp/titles/1000045099",
+    "https://www.animatetimes.com/news/details.php?id=1795156679"
+  ],
+  "limits": [
+    "Exact TV date, season, streaming platform, English dub, episode count and English manga license not established. PV schedule attributed to Animate Times announcement coverage. Kaori Maeda casting verified through official post via X oEmbed."
+  ],
+  "cover": {
+    "path": "/assets/images/covers/ijihaji-original.webp",
+    "imageUrl": "https://aninextup.com/assets/article-covers/ijihaji-anime-release-date.png",
+    "sourceUrl": "https://aninextup.com/editorial-policy",
+    "credit": "Original editorial artwork by AniNextUp",
+    "sha256": "c67591a03b2cea228a1c9f32228a3d43c706c0e71366744b3599e4ad3cd59145",
+    "verification": "Original generated school-rivalry still life with sports and gaming motifs; no copied character design, logo or official promotional composition."
+  },
+  "video": {
+    "status": "not-available",
+    "sourceUrl": "https://ijihaji-anime.com/news/",
+    "reason": "The announcement PV is scheduled for November 24, after this November 21 publication. Reviewed launch materials provide a teaser visual; no relevant already-published official video was verified."
+  }
+}
