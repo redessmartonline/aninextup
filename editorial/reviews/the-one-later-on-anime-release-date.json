@@ -1,0 +1,30 @@
+{
+  "intent": "Find Sono Mono Nochi ni / The One Later On anime 2027 release window, cast, studio, opening performer, streaming status and legal English manga.",
+  "keyword": "Sono Mono Nochi ni anime release date",
+  "verifiedOn": "2026-11-24",
+  "editorialWords": 1357,
+  "sources": [
+    "https://prtimes.jp/main/html/rd/p/000000742.000101562.html",
+    "https://comic-earthstar.com/article/entry/2026/11/24/100000",
+    "https://news.ponycanyon.co.jp/2026/11/128104",
+    "https://news.ponycanyon.co.jp/2026/11/128093",
+    "https://titan-comics.com/manga/2407-the-one-later-on/",
+    "https://sonomono-anime.com/"
+  ],
+  "limits": [
+    "Exact premiere month and date, streaming, English dub, episode count and opening track title not established. Production site blocked by fetch; official publisher and music-label announcements used. No relevant published anime PV verified; manga previews are not anime trailers."
+  ],
+  "cover": {
+    "path": "/assets/images/covers/the-one-later-on-original.webp",
+    "imageUrl": "https://aninextup.com/assets/article-covers/the-one-later-on-anime-release-date.png",
+    "sourceUrl": "https://aninextup.com/editorial-policy",
+    "credit": "Original editorial artwork by AniNextUp",
+    "sha256": "3d61453c82b2f3e322f9e20b21e9726e038c67b6ba263936d9f5110e6a9bd6af",
+    "verification": "Original generated alpine fantasy journey illustration; no copied promotional composition, official character likeness, logo or screenshot."
+  },
+  "video": {
+    "status": "not-available",
+    "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000742.000101562.html",
+    "reason": "Reviewed anime announcement presents a teaser visual and lead cast; no relevant published television-anime trailer was verified. Book and corporate preview embeds are not treated as anime footage."
+  }
+}
