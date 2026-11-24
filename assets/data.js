@@ -1,7 +1,8 @@
 window.ANINEXTUP_DATA={
-updated:"2026-11-21",
+updated:"2026-11-24",
 site:{timezone:"America/Santo_Domingo",season:"Fall 2026"},
 anime:[
+{id:"classroom-of-the-elite-season-5-release-date",image:"/assets/images/covers/classroom-elite-season-5-original.webp",title:"Classroom of the Elite Season 5: 2027 Release & Two-Part Format",date:null,dateLabel:"2027 · first half · exact date TBA",platform:"Japanese TV; Season 5 streaming TBA",article:"articles/classroom-of-the-elite-season-5-release-date",newsCategory:"release-news",category:"Psychological School Drama",status:"tba"},
 {id:"ijihaji-anime-release-date",image:"/assets/images/covers/ijihaji-original.webp",title:"IjiHaji Anime: 2027 Release Window, Cast & What’s Confirmed",date:null,dateLabel:"2027 · exact date TBA",platform:"TV anime; streaming TBA",article:"articles/ijihaji-anime-release-date",newsCategory:"new-anime",category:"Romantic Comedy",status:"tba"},
 {id:"a-pen-handcuffs-common-law-marriage-release-date",image:"/assets/images/covers/pen-handcuffs-common-law-marriage-original.webp",title:"A Pen, Handcuffs, and a Common-Law Marriage: Release Date & Streaming",date:"2027-01-10",dateLabel:"Jan 9 at 25:00 JST / Jan 10 at 01:00",platform:"TOKYO MX / BS11; streaming TBA",article:"articles/a-pen-handcuffs-common-law-marriage-release-date",newsCategory:"release-news",category:"Mystery / Romantic Comedy",status:"confirmed"},
 {id:"tensei-elf-release-date",image:"/assets/images/covers/tensei-elf-release-date-original.webp",title:"Tensei Elf Release Date: December Streaming vs. January TV Premiere",date:"2026-12-31",dateLabel:"Dec 30, 2026 at 24:00 JST (Japan streaming)",platform:"ABEMA / d Anime Store (Japan); international TBA",article:"articles/tensei-elf-release-date",newsCategory:"release-news",category:"TV Anime",status:"confirmed"},
