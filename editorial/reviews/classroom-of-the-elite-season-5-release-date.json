@@ -1,0 +1,34 @@
+{
+  "intent": "Find Season 5 first-half 2027 release window, interpret two-part Year 2 second-semester structure, watch official teaser and distinguish old Season 4 schedules.",
+  "keyword": "Classroom of the Elite season 5 release date",
+  "verifiedOn": "2026-11-24",
+  "editorialWords": 1250,
+  "sources": [
+    "https://you-zitsu.com/news.html",
+    "https://you-zitsu.com/onair.html",
+    "https://you-zitsu.com/story.html",
+    "https://www.youtube.com/watch?v=HGjA4D5IKPI",
+    "https://www.penguinrandomhouse.com/books/725441/classroom-of-the-elite-year-2-light-novel-vol-5-by-syougo-kinugasa-illustrated-by-tomoseshunsaku/paperback/"
+  ],
+  "limits": [
+    "2027 is stated for first half only. Exact date, episode count, second-half schedule and international streaming not established by reviewed Season 5 notice. On-air page schedules belong to Season 4. Book context is not a confirmed adaptation endpoint."
+  ],
+  "cover": {
+    "path": "/assets/images/covers/classroom-elite-season-5-original.webp",
+    "imageUrl": "https://aninextup.com/assets/article-covers/classroom-of-the-elite-season-5-release-date.png",
+    "sourceUrl": "https://aninextup.com/editorial-policy",
+    "credit": "Original editorial artwork by AniNextUp",
+    "sha256": "3d63c454d0e6af9455a102ef8993cd0aaee387a7da286614ac5142ef7d101e3a",
+    "verification": "Original generated school-strategy illustration with chessboard; no official character likeness, poster composition, logo or screenshot."
+  },
+  "video": {
+    "path": "/assets/images/covers/classroom-elite-season-5-original.webp",
+    "imageUrl": "https://aninextup.com/assets/article-covers/classroom-of-the-elite-season-5-release-date.png",
+    "sourceUrl": "https://you-zitsu.com/news.html",
+    "credit": "Original editorial artwork by AniNextUp",
+    "sha256": "3d63c454d0e6af9455a102ef8993cd0aaee387a7da286614ac5142ef7d101e3a",
+    "verification": "The November 22 production announcement links this exact teaser visual movie; original editorial thumbnail used.",
+    "status": "available",
+    "youtubeId": "HGjA4D5IKPI"
+  }
+}
