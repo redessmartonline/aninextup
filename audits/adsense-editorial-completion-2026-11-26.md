@@ -39,3 +39,10 @@ Primary sources rechecked for the substantive updates:
 
 Policy reference:
 - https://support.google.com/publisherpolicies/answer/11190248
+
+## Production verification
+
+- Implementation commit `5e0830df0a1faeab6b4aa728f0a26639aecb8044` deployed successfully in run `45851708192`. All production activation, content, newsletter and comment checks passed.
+- All 161 article URLs returned HTTP 200 after deployment, each with exactly one generated cover and no unexpected loaded image, embedded media, stale image-credit block or direct image/movie/archive/torrent link detected. Zero findings in that defined scan.
+- Normal URLs serve the published IjiHaji PV and all four cast members. Dr. STONE has one Season 5 question and no archived title graphic.
+- Corrected an outdated discovery-test exception that still required two dub guides to use old headings; the approved wording remains KEEP WATCHING / Related releases across the catalog. Prepared discovery tests and refreshed workflow `45851947845` pass.
