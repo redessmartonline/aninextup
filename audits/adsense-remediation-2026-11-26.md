@@ -32,3 +32,12 @@ Official policy references:
 - https://support.google.com/publisherpolicies/answer/10402772
 - https://support.google.com/publisherpolicies/answer/11190248
 - https://support.google.com/publisherpolicies/answer/11112688
+
+## Production verification completed
+
+- Implementation commit: `7f6d7d797e5dbabc493af2a3358bbb24193af92e`.
+- GitHub deployment run `45843363254` completed successfully, including activation, production-content comparison, newsletter and comment checks.
+- A post-deployment HTTP scan fetched all 161 article URLs successfully (HTTP 200). Every page has exactly one generated cover, with no embedded media, stale image-credit paragraph, unsupported loaded image or direct image/movie/archive/torrent link detected. Zero findings in this defined scan.
+- Normal, non-query URLs also serve the new editorial policy and corrected Demons’ Crest Friday-cadence answer. Both outdated cadence statements are absent.
+- A retired Firefly Wedding source-image URL returns HTTP 404.
+- The AdSense review request has not been submitted. Production validation does not remove the rights and editorial limitations recorded above.
