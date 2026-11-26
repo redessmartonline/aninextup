@@ -45,14 +45,10 @@ for(const name of ['where-to-watch.html','today.html','this-week.html']){
 for(const name of fs.readdirSync('articles').filter(n=>n.endsWith('.html'))){
   const html=fs.readFileSync('articles/'+name,'utf8');
   assert.equal((html.match(/class="related-releases"/g)||[]).length,1,`${name}: related releases count`);
-  const curated = ['one-piece-elbaph-arc-english-dub-october-2026.html','reincarnated-as-a-sword-season-2-english-dub-release-date.html'].includes(name);
-  if(curated){
-    assert(html.includes('MORE ANIME NEWS')&&html.includes('Related stories'),`${name}: missing curated related heading`);
-    assert.equal((html.match(/class="mini related-card"/g)||[]).length,3,`${name}: expected three curated story cards`);
-    assert(!html.includes('KEEP WATCHING'),`${name}: legacy related kicker remains`);
-  }else{
-    assert(html.includes('KEEP WATCHING')&&html.includes('Related releases'),`${name}: missing related headings`);
-  }
+  // The approved section wording is uniform across every article, including
+  // the two older dub guides that once used separate curated-story labels.
+  assert(html.includes('KEEP WATCHING')&&html.includes('Related releases'),`${name}: missing related headings`);
+  assert.equal((html.match(/class="mini related-card"/g)||[]).length,3,`${name}: expected three related cards`);
   assert(html.includes('class="editorial-details"'),`${name}: missing editorial details`);
   const sections=html.match(/<section class="related-releases"[\s\S]*?<\/section>/g)||[];
   for(const section of sections)for(const link of section.matchAll(/href="([^"]+)"/g)){
