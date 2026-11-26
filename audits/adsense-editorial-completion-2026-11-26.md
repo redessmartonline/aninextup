@@ -46,3 +46,7 @@ Policy reference:
 - All 161 article URLs returned HTTP 200 after deployment, each with exactly one generated cover and no unexpected loaded image, embedded media, stale image-credit block or direct image/movie/archive/torrent link detected. Zero findings in that defined scan.
 - Normal URLs serve the published IjiHaji PV and all four cast members. Dr. STONE has one Season 5 question and no archived title graphic.
 - Corrected an outdated discovery-test exception that still required two dub guides to use old headings; the approved wording remains KEEP WATCHING / Related releases across the catalog. Prepared discovery tests and refreshed workflow `45851947845` pass.
+
+## AdSense account re-review submitted
+
+On November 26, 2026, after the completed deployment and live checks, opened the authenticated AdSense panel for aninextup.com. The account showed the same two reported rejection reasons. Checked the correction acknowledgement and submitted Request review. The interface changed to its completed onboarding state; Sites then explicitly displayed **Se solicitó la revisión** for aninextup.com. This verifies submission, not approval. No payment details, terms, account permissions or unrelated site settings were changed.
