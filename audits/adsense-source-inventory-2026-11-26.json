@@ -1,0 +1,2990 @@
+{
+  "date": "2026-11-26",
+  "articles": 161,
+  "scope": "Complete source link inventory and public-build media checks; targeted copy corrections. Not a legal clearance or complete factual re-verification.",
+  "directMovieArchiveTorrentLinks": [],
+  "domains": {
+    "a.storyblok.com": 1,
+    "about.netflix.com": 19,
+    "about.webtoon.com": 1,
+    "akane-banashi.com": 6,
+    "akazukin-anime.com": 1,
+    "amayonotsuki.jp": 3,
+    "animationid.com": 5,
+    "anime.charisma-house.com": 3,
+    "anime.kagurabachi.jp": 5,
+    "anime.prisma-illya.jp": 3,
+    "anime.shangrilafrontier.com": 6,
+    "animecorner.me": 2,
+    "animefrontier.com": 4,
+    "animestore.docomo.ne.jp": 3,
+    "animetv-jp.net": 1,
+    "animeuknews.net": 1,
+    "aninextup.com": 14,
+    "aoashi-pr.com": 4,
+    "aonohako-anime.com": 2,
+    "apps.apple.com": 1,
+    "bclover.jp": 5,
+    "beebom.com": 2,
+    "bleach-anime.com": 4,
+    "bless-anime.com": 3,
+    "blog.playstation.com": 1,
+    "bloxinformer.com": 2,
+    "bluerights.jp": 1,
+    "bocchi.rocks": 2,
+    "bokusuki.com": 2,
+    "bokuyaba-anime-movie.com": 1,
+    "bokuyaba-anime.com": 2,
+    "booklove-anime.jp": 1,
+    "books.shueisha.co.jp": 1,
+    "boukensha-license-anime.com": 2,
+    "bousyoku-anime.com": 1,
+    "chaofilm.co.uk": 1,
+    "charisma-house.com": 1,
+    "chiharasan-anime.com": 2,
+    "chiramune.com": 9,
+    "comic-earthstar.com": 1,
+    "comic-walker.com": 2,
+    "corporate.goodsmile.com": 2,
+    "daiseijo-anime.com": 1,
+    "darksummoner.deregula.com": 1,
+    "delicious-in-dungeon.com": 3,
+    "demonscrest-anime.com": 8,
+    "dena.com": 1,
+    "dengeki-daisy.com": 2,
+    "diaace.com": 2,
+    "digitalpr.jp": 1,
+    "disneyplus.disney.co.jp": 1,
+    "dr-stone.jp": 2,
+    "dragonball-super.com": 1,
+    "e-comi.shogakukan.co.jp": 2,
+    "eiga.com": 1,
+    "eigakan.org": 1,
+    "eleceed-anime.com": 4,
+    "en.dragon-ball-official.com": 1,
+    "en.gundam-official.com": 7,
+    "en.help.roblox.com": 2,
+    "frieren-anime.jp": 4,
+    "games.roblox.com": 1,
+    "gattaishin.com": 2,
+    "gkids.com": 1,
+    "global.manga-up.com": 1,
+    "granitewaves.com": 1,
+    "granitewaves.ryuu.com": 1,
+    "group.kadokawa.co.jp": 1,
+    "gundam-official.com": 2,
+    "heart-company.co.jp": 1,
+    "help.crunchyroll.com": 1,
+    "help.netflix.com": 1,
+    "hiragihouse-anime.com": 1,
+    "hirayasumi-anime.jp": 7,
+    "honeyworks.jp": 1,
+    "horemajo-anime.com": 5,
+    "hotaru-anime.com": 1,
+    "houtaidoumei.com": 3,
+    "hyouken-anime.com": 3,
+    "i0.wp.com": 1,
+    "ijihaji-anime.com": 3,
+    "inoriminase.com": 1,
+    "isshikisan-anime.com": 7,
+    "iwami-takashi.bfan.link": 1,
+    "j-novel.club": 6,
+    "jfdb.jp": 1,
+    "kabenukebug-anime.com": 2,
+    "kakunaru-anime.com": 2,
+    "kaze-tsugu.com": 3,
+    "kids.lego.com": 4,
+    "kinioto-anime.com": 2,
+    "kisscomic.com": 1,
+    "kmanga.kodansha.com": 4,
+    "kodansha.us": 18,
+    "korinojoheki-pr.com": 1,
+    "kusuriyanohitorigoto.jp": 15,
+    "kyoranreijo-pr.com": 2,
+    "license.kadokawa.co.jp": 1,
+    "livepocket.jp": 1,
+    "magazine.jp.square-enix.com": 2,
+    "magazine.yanmaga.jp": 1,
+    "mahoyo-movie.com": 2,
+    "manga.line.me": 1,
+    "mangabox.ink": 1,
+    "mangaplaza.com": 2,
+    "mashle.pw": 4,
+    "medalist-pr.com": 4,
+    "media.netflix.com": 4,
+    "mercedes-anime.com": 6,
+    "miabyss.com": 6,
+    "minami-ke-5.com": 1,
+    "monaxmedaka.com": 2,
+    "movie-gtq123.com": 4,
+    "murcielago-anime.com": 2,
+    "my.worldacg.com": 1,
+    "nabetama.asmik-ace.co.jp": 2,
+    "namidaame-anime.com": 2,
+    "nanatsuya-shinobu-anime.com": 1,
+    "naruto-official.com": 3,
+    "natalie.mu": 1,
+    "nekokeibishitsu-anime.com": 3,
+    "netflix.com": 1,
+    "newgamescout.com": 1,
+    "news.animationdigitalnetwork.com": 2,
+    "news.aniplex.co.jp": 4,
+    "news.hidive.com": 9,
+    "news.ponycanyon.co.jp": 3,
+    "noasenpai-anime.com": 1,
+    "novema.jp": 1,
+    "one-piece.com": 3,
+    "onepeacebooks.com": 1,
+    "onepunchman-anime.net": 4,
+    "otasukebu.com": 4,
+    "otonaprecure2023.com": 1,
+    "otosaba-anime.com": 3,
+    "over-lap.co.jp": 1,
+    "pentowappa-anime.com": 3,
+    "play.google.com": 1,
+    "playdarkmachine.com": 1,
+    "pocket.shonenmagazine.com": 2,
+    "poptopic.com.au": 1,
+    "powerupgaming.co.uk": 1,
+    "prensa.disney.es": 1,
+    "press.cdprojektred.com": 1,
+    "press.disneyplus.com": 1,
+    "press.pokemon.com": 4,
+    "prisma-illya.jp": 1,
+    "progameguides.com": 2,
+    "prtimes.jp": 21,
+    "psyren-anime-global.com": 3,
+    "psyren-anime.com": 3,
+    "rakuen-tsuiho-r.com": 4,
+    "ranma-pr.com": 5,
+    "rayearth-anime.com": 5,
+    "robloxden.com": 1,
+    "rocodes.gg": 1,
+    "romelia-senki.com": 4,
+    "s.mxtv.jp": 1,
+    "sasapi-anime.com": 10,
+    "sekamajo-anime.com": 1,
+    "sekiro-anime.jp": 5,
+    "sevenseasentertainment.com": 13,
+    "sg.portal-pokemon.com": 4,
+    "sh-anime.shochiku.co.jp": 5,
+    "shin-ei-animation.jp": 1,
+    "shogakukan-comic.jp": 1,
+    "shonenjumpplus.com": 1,
+    "shueisha-dena-projects.com": 1,
+    "skip-and-loafer.com": 1,
+    "squareenixmangaandbooks.square-enix-games.com": 1,
+    "sss-revival.com": 3,
+    "storage.googleapis.com": 1,
+    "suikoden-anime.com": 3,
+    "support.google.com": 1,
+    "t.me": 26,
+    "tanmoshi-anime.jp": 5,
+    "tapas.io": 1,
+    "techwiser.com": 1,
+    "tengobu-anime.com": 4,
+    "tenseielf.asmik-ace.co.jp": 7,
+    "the-vermilion-mask.com": 3,
+    "titan-comics.com": 1,
+    "toaru-project.com": 6,
+    "toei-animation-usa.com": 1,
+    "togame.io": 2,
+    "tokyo-revengers-anime.com": 3,
+    "tokyopop.com": 1,
+    "toratsugumi.jp": 2,
+    "tryhardguides.com": 1,
+    "tsubasabunko.jp": 1,
+    "twinengine.jp": 3,
+    "twitter.com": 26,
+    "us.oricon-group.com": 1,
+    "v-storage.jp": 2,
+    "vacancybee.com": 1,
+    "vampirex-anime.com": 1,
+    "vertexforce.jp": 3,
+    "wa.me": 26,
+    "watakon-anime.com": 3,
+    "welshandshedar-anime.com": 2,
+    "www.aikatsu.net": 3,
+    "www.akitashoten.co.jp": 1,
+    "www.alpha-manga.com": 1,
+    "www.amayonotsuki.jp": 1,
+    "www.amazon.co.jp": 1,
+    "www.amcglobalmedia.com": 1,
+    "www.animatetimes.com": 1,
+    "www.aniplex.co.jp": 11,
+    "www.anitrendz.com": 1,
+    "www.annecyfestival.com": 2,
+    "www.asmik-ace.co.jp": 1,
+    "www.at-x.com": 1,
+    "www.bousyoku-anime.com": 1,
+    "www.bs11.jp": 1,
+    "www.crossinfworld.com": 1,
+    "www.crunchyroll.com": 93,
+    "www.cyberpunk.net": 1,
+    "www.destructoid.com": 1,
+    "www.disney.co.jp": 1,
+    "www.dreamland-anime.com": 2,
+    "www.ebookrenta.com": 1,
+    "www.ellipseanimation.com": 1,
+    "www.facebook.com": 26,
+    "www.famitsu.com": 1,
+    "www.francetvpro.fr": 1,
+    "www.fujitv.co.jp": 3,
+    "www.fujitv.com": 2,
+    "www.fwinc.co.jp": 1,
+    "www.game.guide": 1,
+    "www.gamesradar.com": 1,
+    "www.graniph.com": 3,
+    "www.hachette.co.nz": 1,
+    "www.hidive.com": 1,
+    "www.hulu.com": 1,
+    "www.independentcinemaoffice.org.uk": 1,
+    "www.instagram.com": 1,
+    "www.isekai-munchkin.com": 6,
+    "www.iseleve.com": 4,
+    "www.jumpfesta.com": 4,
+    "www.kadokawa.co.jp": 6,
+    "www.khara.co.jp": 2,
+    "www.kodansha.co.jp": 3,
+    "www.kojimaproductions.jp": 3,
+    "www.konami.com": 1,
+    "www.lego.com": 3,
+    "www.lovelive-anime.jp": 4,
+    "www.maebashi-witches.com": 5,
+    "www.mangabox.me": 1,
+    "www.mrguider.org": 2,
+    "www.murcielago-anime.com": 4,
+    "www.netflix.com": 13,
+    "www.nhk-character.com": 8,
+    "www.nogizaka46.com": 1,
+    "www.nps.gov": 1,
+    "www.nues-exorcist.com": 4,
+    "www.onepeacebooks.com": 2,
+    "www.penguinrandomhouse.com": 3,
+    "www.pockettactics.com": 1,
+    "www.pokemon.co.jp": 1,
+    "www.pokemon.com": 2,
+    "www.ppi.co.jp": 2,
+    "www.prnewswire.com": 2,
+    "www.production-ig.co.jp": 1,
+    "www.reddit.com": 26,
+    "www.roblox.com": 6,
+    "www.ryuu.com": 1,
+    "www.shinnoseijo-anime.com": 5,
+    "www.shueisha.co.jp": 1,
+    "www.sonymusic.co.jp": 2,
+    "www.sonymusic.com": 1,
+    "www.soudouki.com": 1,
+    "www.sudachi-anime.com": 2,
+    "www.supercheats.com": 1,
+    "www.tankchair-anime.com": 5,
+    "www.tbs.co.jp": 9,
+    "www.termsfeed.com": 149,
+    "www.thebrickpost.com": 1,
+    "www.theouterhaven.net": 1,
+    "www.tiktok.com": 1,
+    "www.tms-e.co.jp": 1,
+    "www.tobooks.jp": 2,
+    "www.toei-anim.co.jp": 1,
+    "www.toei-animation.com": 4,
+    "www.toho.co.jp": 1,
+    "www.tristone.co.jp": 1,
+    "www.tv-asahi.co.jp": 1,
+    "www.tv-tokyo.co.jp": 6,
+    "www.ufotable.com": 2,
+    "www.universal-music.co.jp": 5,
+    "www.usmarshals.gov": 1,
+    "www.vap.co.jp": 6,
+    "www.viz.com": 14,
+    "www.votoms-gh.com": 5,
+    "www.webtoons.com": 1,
+    "www.witstudio.co.jp": 1,
+    "www.youtube.com": 142,
+    "www.yte.co.jp": 1,
+    "x.com": 9,
+    "yamato-r2199.jp": 1,
+    "yanmaga.jp": 1,
+    "yenpress.com": 8,
+    "you-zitsu.com": 3,
+    "zero-believers-anime.com": 2,
+    "zom-ore.com": 1,
+    "zommasu.com": 4
+  },
+  "records": [
+    {
+      "article": "a-certain-dark-item-release-date",
+      "editorialWords": 1234,
+      "outboundLinks": [
+        "https://aninextup.com/assets/images/generated/a-certain-dark-item-release-date.webp",
+        "https://s.mxtv.jp/anime/toaru-item/",
+        "https://toaru-project.com/item/",
+        "https://toaru-project.com/item/news/",
+        "https://toaru-project.com/item/onair/",
+        "https://toaru-project.com/item/staffcast/index.html",
+        "https://toaru-project.com/item/story/",
+        "https://toaru-project.com/item/story/01.html",
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=NNHxQJgZdbQ",
+        "https://www.youtube.com/watch?v=bf6XcU3uL9I"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "a-pen-handcuffs-common-law-marriage-release-date",
+      "editorialWords": 1230,
+      "outboundLinks": [
+        "https://aninextup.com/editorial-policy",
+        "https://inoriminase.com/discography/2445/",
+        "https://pentowappa-anime.com/",
+        "https://pentowappa-anime.com/#onair",
+        "https://pentowappa-anime.com/news/",
+        "https://www.hachette.co.nz/tank-gasuyama-shinichi-sawaragi/a-pen-handcuffs-and-a-common-law-marriage-vol-1",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=pLuS4_5FziQ",
+        "https://yenpress.com/titles/9798855417913-a-pen-handcuffs-and-a-common-law-marriage-vol-1"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "ace-of-diamond-second-season",
+      "editorialWords": 1218,
+      "outboundLinks": [
+        "https://diaace.com/",
+        "https://diaace.com/onair/",
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll?lid=0ojihzvhs258",
+        "https://www.termsfeed.com/",
+        "https://www.tv-tokyo.co.jp/anime/diaace2_2nd/",
+        "https://www.tv-tokyo.co.jp/anime/diaace2_2nd/news/index.html",
+        "https://www.tv-tokyo.co.jp/information/202603/5560.html",
+        "https://www.youtube.com/watch?v=kLbI4teuPTc"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "aikatsu-stars-hoshiboshi-no-progress-release-date",
+      "editorialWords": 1144,
+      "outboundLinks": [
+        "https://prtimes.jp/main/html/rd/p/000000181.000120737.html",
+        "https://www.aikatsu.net/aikatsustars_movie_progress/",
+        "https://www.aikatsu.net/portal/anniversary_stars/",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=8g68u8qd87c"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "akane-banashi-season-2-release-date",
+      "editorialWords": 1201,
+      "outboundLinks": [
+        "https://akane-banashi.com/",
+        "https://akane-banashi.com/news/?id=69874",
+        "https://akane-banashi.com/news/?id=70656",
+        "https://akane-banashi.com/news/?id=71285",
+        "https://akane-banashi.com/onair/",
+        "https://www.viz.com/akane-banashi",
+        "https://www.youtube.com/watch?v=XKi4oNgOTiA"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "anime-crusaders-x-codes",
+      "editorialWords": 1221,
+      "outboundLinks": [
+        "https://aninextup.com/editorial-policy",
+        "https://bloxinformer.com/wikis/anime-crusaders/codes/",
+        "https://newgamescout.com/anime-crusaders-x",
+        "https://robloxden.com/game-codes/anime-crusaders",
+        "https://togame.io/b/code-anime-crusader/",
+        "https://www.roblox.com/games/107573139811370/Anime-Crusaders-X",
+        "https://www.supercheats.com/anime-crusaders-x-codes",
+        "https://www.termsfeed.com/"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "anime-crusaders-x-tier-list",
+      "editorialWords": 1207,
+      "outboundLinks": [
+        "https://aninextup.com/editorial-policy",
+        "https://powerupgaming.co.uk/2026/11/17/anime-crusaders-x-tier-list-best-units-ranked/",
+        "https://togame.io/b/anime-crusader-x-tier-list/",
+        "https://vacancybee.com/anime-crusaders-x-tier-list/",
+        "https://www.mrguider.org/articles/anime-crusaders-tier-list-best-units/",
+        "https://www.roblox.com/games/107573139811370/Anime-Crusaders-X",
+        "https://www.termsfeed.com/"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "anime-expeditions-codes",
+      "editorialWords": 1346,
+      "outboundLinks": [
+        "https://beebom.com/anime-expeditions-codes/",
+        "https://bloxinformer.com/wikis/anime-expeditions/codes/",
+        "https://tryhardguides.com/anime-expeditions-codes/",
+        "https://www.destructoid.com/anime-expeditions-codes/",
+        "https://www.gamesradar.com/games/strategy/anime-expeditions-codes/",
+        "https://www.mrguider.org/roblox/anime-expeditions-codes/",
+        "https://www.roblox.com/games/84515722934860/Anime-Expeditions"
+      ],
+      "reviewRecord": false,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "anime-frontier-2026-crunchyroll-premieres-schedule",
+      "editorialWords": 1338,
+      "outboundLinks": [
+        "https://animefrontier.com/",
+        "https://animefrontier.com/about/faqs/",
+        "https://animefrontier.com/programming/highlights/",
+        "https://news.hidive.com/2026/11/10/new-movie-made-in-abyss-awakening-mystery-comes-to-hidive",
+        "https://t.me/share/url?url=https%3A%2F%2Faninextup.com%2Farticles%2Fanime-frontier-2026-crunchyroll-premieres-schedule&text=Anime+Frontier+2026+Crunchyroll+Premieres%3A+Schedule%2C+Rooms+%26+What+to+Watch",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Faninextup.com%2Farticles%2Fanime-frontier-2026-crunchyroll-premieres-schedule&text=Anime+Frontier+2026+Crunchyroll+Premieres%3A+Schedule%2C+Rooms+%26+What+to+Watch",
+        "https://wa.me/?text=Anime+Frontier+2026+Crunchyroll+Premieres%3A+Schedule%2C+Rooms+%26+What+to+Watch+https%3A%2F%2Faninextup.com%2Farticles%2Fanime-frontier-2026-crunchyroll-premieres-schedule",
+        "https://www.crunchyroll.com/news/announcements/2026/11/11/anime-frontier-2026-crunchyroll-programming-schedule",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faninextup.com%2Farticles%2Fanime-frontier-2026-crunchyroll-premieres-schedule",
+        "https://www.reddit.com/submit?url=https%3A%2F%2Faninextup.com%2Farticles%2Fanime-frontier-2026-crunchyroll-premieres-schedule&title=Anime+Frontier+2026+Crunchyroll+Premieres%3A+Schedule%2C+Rooms+%26+What+to+Watch",
+        "https://www.termsfeed.com/",
+        "https://x.com/AnimeFrontierTX/status/2000325232209400145"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "anime-mysterious-codes-october-2026",
+      "editorialWords": 1207,
+      "outboundLinks": [
+        "https://beebom.com/anime-mysterious-codes/",
+        "https://en.help.roblox.com/hc/en-us/articles/203313380-Keep-Your-Account-Safe",
+        "https://en.help.roblox.com/hc/en-us/articles/204262550-Free-Robux-or-Subscription-Generators",
+        "https://progameguides.com/roblox/anime-mysterious-codes/",
+        "https://www.pockettactics.com/anime-mysterious-codes",
+        "https://www.roblox.com/communities/388331120/Anime-Mysterious",
+        "https://www.roblox.com/games/117949143041402/Anime-Mysterious",
+        "https://www.termsfeed.com/"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "anime-news-october-2026",
+      "editorialWords": 930,
+      "outboundLinks": [
+        "https://about.netflix.com/en/news/romance-anime-lineup-october",
+        "https://eleceed-anime.com/news/2027%E5%B9%B44%E6%9C%88%E6%94%BE%E9%80%81%E6%B1%BA%E5%AE%9A%EF%BC%81/",
+        "https://kyoranreijo-pr.com/",
+        "https://news.hidive.com/2026/9/21/get-ready-for-the-fall-2026-simulcast-season-on-hidive",
+        "https://psyren-anime.com/on-air",
+        "https://watakon-anime.com/news/post-90",
+        "https://www.crunchyroll.com/pl/news/announcements/2026/10/2/psyren-anime-release-date-crunchyroll",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=9QyiEgv33z4"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "anime-releasing-december-2026",
+      "editorialWords": 1484,
+      "outboundLinks": [
+        "https://kusuriyanohitorigoto.jp/movie/assets/img/top/kv.jpg",
+        "https://kusuriyanohitorigoto.jp/news/2520/",
+        "https://prtimes.jp/main/html/rd/p/000002308.000000607.html",
+        "https://tenseielf.asmik-ace.co.jp/onair/",
+        "https://twinengine.jp/news/21168",
+        "https://www.crunchyroll.com/news/announcements/2026/10/8/the-apothecary-diaries-the-late-ladys-treasure-anime-film-crunchyroll-worldwide-release/",
+        "https://www.disney.co.jp/shopping/itemnews/20260820_01",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=dipjaCmYris"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "anime-releasing-january-2027",
+      "editorialWords": 1677,
+      "outboundLinks": [
+        "https://about.netflix.com/en/news/sakamoto-days-season-2-returns-january-2027",
+        "https://akane-banashi.com/news/?id=70656",
+        "https://anime.shangrilafrontier.com/topics/32/",
+        "https://chiharasan-anime.com/",
+        "https://en.gundam-official.com/seed/freedom/news/item.php?id=u41ricmmmttp4p014dosmk9p",
+        "https://gundam-official.com/seed/freedom/news/item.php?id=u41ricmmmttp4p014dosmk9p",
+        "https://hirayasumi-anime.jp/",
+        "https://kakunaru-anime.com/",
+        "https://mashle.pw/news/?id=70740",
+        "https://murcielago-anime.com/news/index00060000.html",
+        "https://onepunchman-anime.net/news/archives/7808",
+        "https://sekiro-anime.jp/tv/",
+        "https://sss-revival.com/",
+        "https://www.aikatsu.net/aikatsustars_movie_progress/",
+        "https://www.aniplex.co.jp/lineup/kinioto/news/detail/?id=71451",
+        "https://www.lovelive-anime.jp/hasunosora/onair/",
+        "https://www.netflix.com/tudum/articles/sakamoto-days-season-2-release-date-news",
+        "https://www.termsfeed.com/",
+        "https://www.vap.co.jp/the-fable-anime/news/20261014.html",
+        "https://www.youtube.com/watch?v=Ld4PMbghy78"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "anime-releasing-november-2026",
+      "editorialWords": 1373,
+      "outboundLinks": [
+        "https://about.netflix.com/ja/news/anime-nyc-2026",
+        "https://rakuen-tsuiho-r.com/news/?article_id=71476",
+        "https://www.aniplex.co.jp/lineup/mahoyo-movie/news/detail/?id=71584",
+        "https://www.sonymusic.co.jp/artist/Hashimero/info/585680",
+        "https://www.tbs.co.jp/anime/takopi_project/news/news20260817.html",
+        "https://www.termsfeed.com/",
+        "https://www.ufotable.com/news/article/3055/",
+        "https://www.universal-music.co.jp/soala/news/2026-10-02/",
+        "https://www.votoms-gh.com/news/detail.php?id=23579",
+        "https://www.votoms-gh.com/news/detail.php?id=26612",
+        "https://www.youtube.com/watch?v=we-eaYBtUDE"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "anime-vs-anime-codes",
+      "editorialWords": 1485,
+      "outboundLinks": [
+        "https://games.roblox.com/v1/games?universeIds=10768371135",
+        "https://progameguides.com/roblox/anime-vs-anime-codes/",
+        "https://rocodes.gg/codes/anime-vs-anime",
+        "https://techwiser.com/roblox-anime-vs-anime-codes/",
+        "https://www.game.guide/roblox-codes/anime-vs-anime",
+        "https://www.roblox.com/games/80007766855741/Anime-vs-Anime",
+        "https://www.termsfeed.com/"
+      ],
+      "reviewRecord": false,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "aoashi-season-2",
+      "editorialWords": 895,
+      "outboundLinks": [
+        "https://aoashi-pr.com/",
+        "https://aoashi-pr.com/news/572/",
+        "https://aoashi-pr.com/onair/",
+        "https://aoashi-pr.com/wp/wp-content/themes/aoashi-honban-theme-2/img/season2/ogp.jpg",
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=FwaN0d9U2gI"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "aoharu-once-more-anime-release-date",
+      "editorialWords": 1253,
+      "outboundLinks": [
+        "https://animationid.com/aoharuoncemore/",
+        "https://animationid.com/post-3993/",
+        "https://animationid.com/post-3995/",
+        "https://livepocket.jp/e/cvquw",
+        "https://prtimes.jp/main/html/rd/p/000001831.000007785.html",
+        "https://t.me/share/url?url=https%3A%2F%2Faninextup.com%2Farticles%2Faoharu-once-more-anime-release-date&text=Aoharu+Once+More+Anime+Release+Date%2C+Teaser+%26+Where+to+Watch",
+        "https://tokyopop.com/products/9781427888174_aoharu-once-more",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Faninextup.com%2Farticles%2Faoharu-once-more-anime-release-date&text=Aoharu+Once+More+Anime+Release+Date%2C+Teaser+%26+Where+to+Watch",
+        "https://wa.me/?text=Aoharu+Once+More+Anime+Release+Date%2C+Teaser+%26+Where+to+Watch+https%3A%2F%2Faninextup.com%2Farticles%2Faoharu-once-more-anime-release-date",
+        "https://www.ebookrenta.com/renta/sc/frm/item/155703/",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faninextup.com%2Farticles%2Faoharu-once-more-anime-release-date",
+        "https://www.penguinrandomhouse.com/books/833340/aoharu-once-more-by-toworu-miyata/",
+        "https://www.reddit.com/submit?url=https%3A%2F%2Faninextup.com%2Farticles%2Faoharu-once-more-anime-release-date&title=Aoharu+Once+More+Anime+Release+Date%2C+Teaser+%26+Where+to+Watch",
+        "https://www.termsfeed.com/",
+        "https://www.tv-tokyo.co.jp/anime/aoharuoncemore/",
+        "https://www.youtube.com/watch?v=zydSyuyy0q8"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "apothecary-diaries-movie",
+      "editorialWords": 1214,
+      "outboundLinks": [
+        "https://kusuriyanohitorigoto.jp//movie/ticket/",
+        "https://kusuriyanohitorigoto.jp/movie/",
+        "https://kusuriyanohitorigoto.jp/movie/staffcast/",
+        "https://kusuriyanohitorigoto.jp/news/2520/",
+        "https://kusuriyanohitorigoto.jp/news/3114/",
+        "https://kusuriyanohitorigoto.jp/news/3119/",
+        "https://kusuriyanohitorigoto.jp/news/3125/",
+        "https://www.crunchyroll.com/es/news/announcements/2026/10/8/crunchyroll-apothecary-diaries-the-late-ladys-cines",
+        "https://www.termsfeed.com/",
+        "https://www.toho.co.jp/movie/lineup/",
+        "https://www.youtube.com/watch?v=dipjaCmYris"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "apothecary-diaries-season-3",
+      "editorialWords": 1629,
+      "outboundLinks": [
+        "https://animecorner.me/the-apothecary-diaries-season-3-reveals-new-trailer-visual-opening-theme-by-yorushika-october-2-premiere/",
+        "https://j-novel.club/series/the-apothecary-diaries",
+        "https://kusuriyanohitorigoto.jp/",
+        "https://kusuriyanohitorigoto.jp/news/2623/",
+        "https://kusuriyanohitorigoto.jp/season3/introduction/",
+        "https://kusuriyanohitorigoto.jp/season3/onair/",
+        "https://kusuriyanohitorigoto.jp/season3/staffcast/",
+        "https://squareenixmangaandbooks.square-enix-games.com/en-us/series/the-apothecary-diaries",
+        "https://t.me/share/url?url=https%3A%2F%2Faninextup.com%2Farticles%2Fapothecary-diaries-season-3&text=The+Apothecary+Diaries+Season+3%3A+Schedule%2C+Dub+%26+Streaming",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Faninextup.com%2Farticles%2Fapothecary-diaries-season-3&text=The+Apothecary+Diaries+Season+3%3A+Schedule%2C+Dub+%26+Streaming",
+        "https://wa.me/?text=The+Apothecary+Diaries+Season+3%3A+Schedule%2C+Dub+%26+Streaming+https%3A%2F%2Faninextup.com%2Farticles%2Fapothecary-diaries-season-3",
+        "https://www.crunchyroll.com/ko/news/announcements/2026/6/3/the-apothecary-diaries-season-3-gachiakuta-season-2-anime-stream-crunchyroll",
+        "https://www.crunchyroll.com/news/announcements/2026/10/15/the-apothecary-diaries-season-3-anime-english-dub-release-date-cast-crew",
+        "https://www.crunchyroll.com/news/announcements/2026/10/8/the-apothecary-diaries-the-late-ladys-treasure-anime-film-crunchyroll-worldwide-release/",
+        "https://www.crunchyroll.com/series/G3KHEVDJ7/the-apothecary-diaries",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faninextup.com%2Farticles%2Fapothecary-diaries-season-3",
+        "https://www.reddit.com/submit?url=https%3A%2F%2Faninextup.com%2Farticles%2Fapothecary-diaries-season-3&title=The+Apothecary+Diaries+Season+3%3A+Schedule%2C+Dub+%26+Streaming",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=9rProUQlD-I",
+        "https://www.youtube.com/watch?v=iv_aQ-wfCdM"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "ascendance-of-a-bookworm-part-4",
+      "editorialWords": 1314,
+      "outboundLinks": [
+        "https://booklove-anime.jp/data/images/news/1l5w6i05i3oakw4jk4yvw4wdkcqekg.jpg",
+        "https://j-novel.club/series/ascendance-of-a-bookworm",
+        "https://j-novel.club/series/ascendance-of-a-bookworm?buy=volume-21",
+        "https://www.crunchyroll.com/es/news/latest/2026/10/3/ascendance-of-a-bookworm-parte-4-anime-anuncio",
+        "https://www.termsfeed.com/",
+        "https://www.witstudio.co.jp/news/post-45"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "bass-x-machina-release-date",
+      "editorialWords": 1327,
+      "outboundLinks": [
+        "https://about.netflix.com/en/news/netflix-unveils-upcoming-anime-slate-out-of-annecy-festival",
+        "https://www.netflix.com/title/81088875",
+        "https://www.netflix.com/tudum/articles/adult-animated-shows-on-netflix",
+        "https://www.nps.gov/articles/000/bass-reeves-site-bulletin.htm",
+        "https://www.termsfeed.com/",
+        "https://www.usmarshals.gov/es/node/2161",
+        "https://www.youtube.com/watch?v=jjr5mf9i42Q"
+      ],
+      "reviewRecord": false,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "because-i-the-true-saint-was-banished-anime-january-2027",
+      "editorialWords": 909,
+      "outboundLinks": [
+        "https://v-storage.jp/anime/etc-anime/287795/",
+        "https://www.shinnoseijo-anime.com/",
+        "https://www.shinnoseijo-anime.com/#books",
+        "https://www.shinnoseijo-anime.com/#introduction",
+        "https://www.shinnoseijo-anime.com/#staffcast",
+        "https://www.shinnoseijo-anime.com/news/detail.php?id=25837",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=AgwEj6-rVdw"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "berserk-of-gluttony-season-2",
+      "editorialWords": 1219,
+      "outboundLinks": [
+        "https://bousyoku-anime.com/news/144/",
+        "https://sevenseasentertainment.com/series/berserk-of-gluttony-light-novel/",
+        "https://www.bousyoku-anime.com/",
+        "https://www.crunchyroll.com/es/news/latest/2026/4/27/berserk-of-gluttony-temporada-2-anuncio",
+        "https://www.crunchyroll.com/hi/news/announcements/2026/10/8/berserk-of-gluttony-season-2-the-boxer-anime-crunchyroll-new-york-comic-con-2026-announcements",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=BVz1EyrHILk"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "black-clover-season-2",
+      "editorialWords": 1184,
+      "outboundLinks": [
+        "https://bclover.jp/",
+        "https://bclover.jp/music/",
+        "https://bclover.jp/onair/",
+        "https://bclover.jp/staffcast/",
+        "https://bclover.jp/story/index.php",
+        "https://www.crunchyroll.com/news/announcements/2026/10/17/black-clover-season-2-anime-english-dub-release-date-cast-crew",
+        "https://www.crunchyroll.com/news/announcements/2026/10/2/black-clover-season-2-anime-release-date-crunchyroll",
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=9QyiEgv33z4"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "bleach-thousand-year-blood-war-graniph-collection-october-2026",
+      "editorialWords": 1208,
+      "outboundLinks": [
+        "https://bleach-anime.com/news/?id=71436",
+        "https://digitalpr.jp/r/145804",
+        "https://www.graniph.com/collection/collection_01419",
+        "https://www.graniph.com/feature/20261014_free",
+        "https://www.graniph.com/item-detail/101002608100",
+        "https://www.termsfeed.com/"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "bleach-thousand-year-blood-war-the-last-pv-episodes-49-50",
+      "editorialWords": 1185,
+      "outboundLinks": [
+        "https://bleach-anime.com/news/",
+        "https://bleach-anime.com/news/?id=71493",
+        "https://bleach-anime.com/onair/",
+        "https://www.aniplex.co.jp/news/detail/?id=70661",
+        "https://www.termsfeed.com/",
+        "https://www.viz.com/blog/posts/where-to-watch-bleach-thousand-year-blood-war-part-4",
+        "https://www.youtube.com/watch?v=YnjWqcR0spM"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "bless-anime-akiharu-nakano-koki-uchiyama-january-2027",
+      "editorialWords": 1248,
+      "outboundLinks": [
+        "https://bless-anime.com/#onair",
+        "https://bless-anime.com/news/?id=71652",
+        "https://bless-anime.com/news/?id=71653",
+        "https://kodansha.us/series/bless/",
+        "https://kodansha.us/series/bless/volume-1/",
+        "https://t.me/share/url?url=https%3A%2F%2Faninextup.com%2Farticles%2Fbless-anime-akiharu-nakano-koki-uchiyama-january-2027&text=BLESS+Anime+Release+Date%2C+Crunchyroll+Streaming+%26+Manga+Guide",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Faninextup.com%2Farticles%2Fbless-anime-akiharu-nakano-koki-uchiyama-january-2027&text=BLESS+Anime+Release+Date%2C+Crunchyroll+Streaming+%26+Manga+Guide",
+        "https://wa.me/?text=BLESS+Anime+Release+Date%2C+Crunchyroll+Streaming+%26+Manga+Guide+https%3A%2F%2Faninextup.com%2Farticles%2Fbless-anime-akiharu-nakano-koki-uchiyama-january-2027",
+        "https://www.aniplex.co.jp/lineup/bless/",
+        "https://www.crunchyroll.com/es-es/news/announcements/2026/10/22/bless-anime-enero-2027-crunchyroll",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faninextup.com%2Farticles%2Fbless-anime-akiharu-nakano-koki-uchiyama-january-2027",
+        "https://www.reddit.com/submit?url=https%3A%2F%2Faninextup.com%2Farticles%2Fbless-anime-akiharu-nakano-koki-uchiyama-january-2027&title=BLESS+Anime+Release+Date%2C+Crunchyroll+Streaming+%26+Manga+Guide",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=1IcjukAV03Q",
+        "https://www.youtube.com/watch?v=JG_CIP10xAA"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "blue-box-season-2",
+      "editorialWords": 1206,
+      "outboundLinks": [
+        "https://about.netflix.com/en/news/romance-anime-lineup-october",
+        "https://about.netflix.com/news/romance-anime-lineup-october",
+        "https://aonohako-anime.com/",
+        "https://aonohako-anime.com/news/detail_260826_2.html",
+        "https://www.termsfeed.com/",
+        "https://www.viz.com/blue-box",
+        "https://www.youtube.com/watch?v=n0ugKku1fzc"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "bocchi-the-rock-starry-footprints-movie",
+      "editorialWords": 1411,
+      "outboundLinks": [
+        "https://bocchi.rocks/hoshinoashiato/",
+        "https://bocchi.rocks/tv/introduction/",
+        "https://www.aniplex.co.jp/lineup/bocchi/news/detail/?id=71600",
+        "https://www.aniplex.co.jp/lineup/bocchi/news/detail/?id=71601",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=4pYw8hZRVCM",
+        "https://yenpress.com/titles/9781975378097-bocchi-the-rock-vol-5"
+      ],
+      "reviewRecord": false,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "chao-uk-ireland-cinema-release-date",
+      "editorialWords": 1218,
+      "outboundLinks": [
+        "https://animeuknews.net/2026/11/celebrate-diverse-award-winning-anime-with-chao-only-in-cinemas-friday-4-december/",
+        "https://chaofilm.co.uk/",
+        "https://gkids.com/films/chao/",
+        "https://jfdb.jp/en/title/10311",
+        "https://t.me/share/url?url=https%3A%2F%2Faninextup.com%2Farticles%2Fchao-uk-ireland-cinema-release-date&text=ChaO+UK+%26+Ireland+Cinema+Release+Date%2C+Trailer+%26+Tickets",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Faninextup.com%2Farticles%2Fchao-uk-ireland-cinema-release-date&text=ChaO+UK+%26+Ireland+Cinema+Release+Date%2C+Trailer+%26+Tickets",
+        "https://wa.me/?text=ChaO+UK+%26+Ireland+Cinema+Release+Date%2C+Trailer+%26+Tickets+https%3A%2F%2Faninextup.com%2Farticles%2Fchao-uk-ireland-cinema-release-date",
+        "https://www.annecyfestival.com/en/archives/2025/the-festival/2025-official-selection/2025-feature-films-official/chao",
+        "https://www.annecyfestival.com/en/le-festival/2025-awards",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faninextup.com%2Farticles%2Fchao-uk-ireland-cinema-release-date",
+        "https://www.independentcinemaoffice.org.uk/advice-support/cinemas/",
+        "https://www.reddit.com/submit?url=https%3A%2F%2Faninextup.com%2Farticles%2Fchao-uk-ireland-cinema-release-date&title=ChaO+UK+%26+Ireland+Cinema+Release+Date%2C+Trailer+%26+Tickets",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=79RvjXm-EWg"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "charisma-anime-release-date",
+      "editorialWords": 1201,
+      "outboundLinks": [
+        "https://anime.charisma-house.com/",
+        "https://anime.charisma-house.com/news/66/",
+        "https://anime.charisma-house.com/news/72/",
+        "https://charisma-house.com/news/3245/",
+        "https://t.me/share/url?url=https%3A%2F%2Faninextup.com%2Farticles%2Fcharisma-anime-release-date&text=Charisma+Anime%3A+Short+Episodes+Begin+Ahead+of+January+2027+Premiere",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Faninextup.com%2Farticles%2Fcharisma-anime-release-date&text=Charisma+Anime%3A+Short+Episodes+Begin+Ahead+of+January+2027+Premiere",
+        "https://wa.me/?text=Charisma+Anime%3A+Short+Episodes+Begin+Ahead+of+January+2027+Premiere+https%3A%2F%2Faninextup.com%2Farticles%2Fcharisma-anime-release-date",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faninextup.com%2Farticles%2Fcharisma-anime-release-date",
+        "https://www.reddit.com/submit?url=https%3A%2F%2Faninextup.com%2Farticles%2Fcharisma-anime-release-date&title=Charisma+Anime%3A+Short+Episodes+Begin+Ahead+of+January+2027+Premiere",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=5JO4G4NRRx0"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "chitose-ramune-bottle-cour-2",
+      "editorialWords": 1214,
+      "outboundLinks": [
+        "https://chiramune.com/",
+        "https://chiramune.com/books/",
+        "https://chiramune.com/music/",
+        "https://chiramune.com/news/",
+        "https://chiramune.com/news/index00630000.html",
+        "https://chiramune.com/onair/",
+        "https://chiramune.com/onair/index.html",
+        "https://chiramune.com/staffcast/",
+        "https://chiramune.com/story/",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=8RHh2AyKRfY"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "classroom-of-the-elite-season-5-release-date",
+      "editorialWords": 1250,
+      "outboundLinks": [
+        "https://aninextup.com/editorial-policy",
+        "https://www.penguinrandomhouse.com/books/725441/classroom-of-the-elite-year-2-light-novel-vol-5-by-syougo-kinugasa-illustrated-by-tomoseshunsaku/paperback/",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=HGjA4D5IKPI",
+        "https://you-zitsu.com/news.html",
+        "https://you-zitsu.com/onair.html",
+        "https://you-zitsu.com/story.html"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "cosmoship-yamato-root-2199",
+      "editorialWords": 1213,
+      "outboundLinks": [
+        "https://www.kadokawa.co.jp/topics/18073/",
+        "https://www.khara.co.jp/2024/10/13/241013/",
+        "https://www.khara.co.jp/2026/10/06/261005-1/",
+        "https://www.production-ig.co.jp/hotnews/2026/100601/",
+        "https://www.termsfeed.com/",
+        "https://yamato-r2199.jp/news/"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "cyberpunk-edgerunners-2",
+      "editorialWords": 1200,
+      "outboundLinks": [
+        "https://press.cdprojektred.com/en/news/1876/edgerunners-2-update-announced-for-cyberpunk-2077",
+        "https://www.cyberpunk.net/en/edgerunners2",
+        "https://www.netflix.com/title/81054853",
+        "https://www.netflix.com/tudum/articles/cyberpunk-edgerunners-2-release-date-news",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=IBTK8PGe_Oo"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "d-anime-store-81-fall-2026-anime",
+      "editorialWords": 1205,
+      "outboundLinks": [
+        "https://animestore.docomo.ne.jp/animestore/CQ/notice-13659",
+        "https://prtimes.jp/main/html/rd/p/000000792.000005738.html",
+        "https://www.termsfeed.com/"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "dandivine-release-date",
+      "editorialWords": 1175,
+      "outboundLinks": [
+        "https://corporate.goodsmile.com/ja/news/4379/",
+        "https://gattaishin.com/dandivine/",
+        "https://gattaishin.com/dandivine/news/?id=758",
+        "https://www.sonymusic.co.jp/artist/takanorinishikawa/info/586805",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=ihJfkOT_0wU"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "dark-machine-the-animation",
+      "editorialWords": 1209,
+      "outboundLinks": [
+        "https://playdarkmachine.com/en/",
+        "https://www.crunchyroll.com/es/news/seasonal-lineup/2026/10/11/crunchyroll-calendario-semanal-otono-2026",
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+        "https://www.crunchyroll.com/series/GT00383997/dark-machine-the-animation",
+        "https://www.fujitv.co.jp/darkmachine_anime/onair/",
+        "https://www.fujitv.co.jp/fujitv/news/20251389.html",
+        "https://www.fujitv.com/animation/darkmachinetheanimation/",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=P8FfvDLyMrY"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "dark-summoner-omake-shorts-watch-order",
+      "editorialWords": 1241,
+      "outboundLinks": [
+        "https://animecorner.me/exclusive-im-dating-a-dark-summoner-omake-shorts-premieres-on-hidive-on-november-6-key-visual-and-trailer-revealed/",
+        "https://darksummoner.deregula.com/",
+        "https://news.hidive.com/2026/11/3/chibi-fun-heads-to-HIDIVE-with-i-m-dating-a-dark-summoner-omake-shorts-premiere-on-november-6",
+        "https://news.hidive.com/2026/11/3/heres-the-anime-coming-to-and-leaving-hidive-in-november-2026",
+        "https://news.hidive.com/2026/9/30/heres-the-anime-coming-to-and-leaving-hidive-in-october-2026",
+        "https://t.me/share/url?url=https%3A%2F%2Faninextup.com%2Farticles%2Fdark-summoner-omake-shorts-watch-order&text=I%E2%80%99m+Dating+a+Dark+Summoner+Omake+Shorts%3A+Watch+Order+%26+HIDIVE+Schedule",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Faninextup.com%2Farticles%2Fdark-summoner-omake-shorts-watch-order&text=I%E2%80%99m+Dating+a+Dark+Summoner+Omake+Shorts%3A+Watch+Order+%26+HIDIVE+Schedule",
+        "https://wa.me/?text=I%E2%80%99m+Dating+a+Dark+Summoner+Omake+Shorts%3A+Watch+Order+%26+HIDIVE+Schedule+https%3A%2F%2Faninextup.com%2Farticles%2Fdark-summoner-omake-shorts-watch-order",
+        "https://www.at-x.com/program/detail/?id=21752",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faninextup.com%2Farticles%2Fdark-summoner-omake-shorts-watch-order",
+        "https://www.hidive.com/search?q=Dark%20Summoner",
+        "https://www.reddit.com/submit?url=https%3A%2F%2Faninextup.com%2Farticles%2Fdark-summoner-omake-shorts-watch-order&title=I%E2%80%99m+Dating+a+Dark+Summoner+Omake+Shorts%3A+Watch+Order+%26+HIDIVE+Schedule",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=at1PXP-VYgc"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "death-stranding-isolations-anime",
+      "editorialWords": 1203,
+      "outboundLinks": [
+        "https://www.kojimaproductions.jp/en/deathstranding-animation-series-announcement",
+        "https://www.kojimaproductions.jp/en/ds_animation_project",
+        "https://www.kojimaproductions.jp/en/node/306"
+      ],
+      "reviewRecord": false,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "delicious-in-dungeon-season-2-release-date",
+      "editorialWords": 904,
+      "outboundLinks": [
+        "https://about.netflix.com/en/news/anime-expo-2026",
+        "https://delicious-in-dungeon.com/",
+        "https://delicious-in-dungeon.com/en/",
+        "https://delicious-in-dungeon.com/news.html",
+        "https://media.netflix.com/en/only-on-netflix/81564899",
+        "https://www.netflix.com/title/81564899",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=qRrXciq7-88"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "demons-crest-release-date",
+      "editorialWords": 1585,
+      "outboundLinks": [
+        "https://demonscrest-anime.com/",
+        "https://demonscrest-anime.com/music/",
+        "https://demonscrest-anime.com/news/index00050000.html",
+        "https://demonscrest-anime.com/news/index00110000.html",
+        "https://demonscrest-anime.com/news/index00130000.html",
+        "https://demonscrest-anime.com/news/index00150000.html",
+        "https://demonscrest-anime.com/staffcast/",
+        "https://demonscrest-anime.com/story/index.html",
+        "https://prtimes.jp/main/html/rd/p/000002152.000004612.html",
+        "https://www.amazon.co.jp/gp/video/detail/B0HKZDY46D",
+        "https://www.termsfeed.com/",
+        "https://www.universal-music.co.jp/soala/news/2026-10-02/",
+        "https://www.youtube.com/watch?v=Sj4Pu2qu43A"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "dengeki-daisy-anime-january-2027-trailer-cast",
+      "editorialWords": 1173,
+      "outboundLinks": [
+        "https://dengeki-daisy.com/en/",
+        "https://dengeki-daisy.com/news/?article_id=71339",
+        "https://e-comi.shogakukan.co.jp/books/091357600000d0000000",
+        "https://www.crunchyroll.com/news/latest/2026/9/19/dengeki-daisy-anime-january-2027-release-date-key-visual-main-trailer-additional-cast",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=9wIJGKQKqZY"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "detective-is-already-dead-season-2",
+      "editorialWords": 1204,
+      "outboundLinks": [
+        "https://tanmoshi-anime.jp/Season2/",
+        "https://tanmoshi-anime.jp/Season2/news/index00210000.html",
+        "https://tanmoshi-anime.jp/Season2/onair/index.html",
+        "https://tanmoshi-anime.jp/Season2/staffcast/index.html",
+        "https://tanmoshi-anime.jp/Season2/story/index.html",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=8AnNxEp733c"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "dr-stone-terraforming-anime",
+      "editorialWords": 925,
+      "outboundLinks": [
+        "https://dr-stone.jp/movie/terraforming/",
+        "https://dr-stone.jp/news/6340/",
+        "https://www.crunchyroll.com/news/latest/2026/10/10/dr-stone-terraforming-anime-announced",
+        "https://www.termsfeed.com/"
+      ],
+      "reviewRecord": false,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "dragon-ball-super-beerus",
+      "editorialWords": 1229,
+      "outboundLinks": [
+        "https://dragonball-super.com/en/",
+        "https://en.dragon-ball-official.com/news/01_4509.html",
+        "https://prensa.disney.es/noticias/dragon-ball-super%3A-beerus-llega-el-14-de-octubre-a-disney%2B",
+        "https://t.me/share/url?url=https%3A%2F%2Faninextup.com%2Farticles%2Fdragon-ball-super-beerus&text=Dragon+Ball+Super%3A+Beerus+English+Dub+Release+Date+%26+Schedule",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Faninextup.com%2Farticles%2Fdragon-ball-super-beerus&text=Dragon+Ball+Super%3A+Beerus+English+Dub+Release+Date+%26+Schedule",
+        "https://wa.me/?text=Dragon+Ball+Super%3A+Beerus+English+Dub+Release+Date+%26+Schedule+https%3A%2F%2Faninextup.com%2Farticles%2Fdragon-ball-super-beerus",
+        "https://www.crunchyroll.com/news/announcements/2026/10/5/dragon-ball-super-beerus-anime-stream-crunchyroll",
+        "https://www.crunchyroll.com/news/announcements/2026/11/5/dragon-ball-super-beerus-english-spanish-portuguese-dubs-stream-november-12",
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+        "https://www.crunchyroll.com/series/GT00389311/dragon-ball-super-beerus",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faninextup.com%2Farticles%2Fdragon-ball-super-beerus",
+        "https://www.reddit.com/submit?url=https%3A%2F%2Faninextup.com%2Farticles%2Fdragon-ball-super-beerus&title=Dragon+Ball+Super%3A+Beerus+English+Dub+Release+Date+%26+Schedule",
+        "https://www.termsfeed.com/",
+        "https://www.theouterhaven.net/dragon-ball-super-beerus-english-spanish-and-portuguese-dubs-arrive-november-12-on-crunchyroll/",
+        "https://www.youtube.com/watch?v=4QE8zlsU_D4"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "dreamland-release-date",
+      "editorialWords": 925,
+      "outboundLinks": [
+        "https://news.animationdigitalnetwork.com/fr/2026/08/27/dreamland-ou-et-quand-regarder-lanime/",
+        "https://www.dreamland-anime.com/",
+        "https://www.dreamland-anime.com/2026%E5%B9%B410%E6%9C%8817%E6%97%A5%E3%82%88%E3%82%8A%E6%94%BE%E9%80%81%E9%96%8B%E5%A7%8B%EF%BC%81/",
+        "https://www.ellipseanimation.com/production/dreamland/",
+        "https://www.termsfeed.com/",
+        "https://www.tv-asahi.co.jp/pr/sphone/20261017_04387.html",
+        "https://www.youtube.com/watch?v=OBK6DLvQJvs"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "dual-shadow-precure-villain-heroines-anime-2027",
+      "editorialWords": 893,
+      "outboundLinks": [
+        "https://otonaprecure2023.com/",
+        "https://www.famitsu.com/article/202610/92123",
+        "https://www.toei-anim.co.jp/tv/dualshadow/",
+        "https://www.youtube.com/watch?v=4H3qrB9yaJA"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "eleceed-anime-april-2027-release-date",
+      "editorialWords": 1227,
+      "outboundLinks": [
+        "https://eleceed-anime.com/",
+        "https://eleceed-anime.com/news/2027%E5%B9%B44%E6%9C%88%E6%94%BE%E9%80%81%E6%B1%BA%E5%AE%9A%EF%BC%81/",
+        "https://eleceed-anime.com/news/the-official-english-trailer-is-here/",
+        "https://www.crunchyroll.com/news/announcements/2026/8/1/shangri-la-frontier-season-3-eleceed-anime-stream-crunchyroll",
+        "https://www.termsfeed.com/",
+        "https://www.webtoons.com/en/action/eleceed/list?title_no=1571",
+        "https://www.youtube.com/watch?v=q7eT3oVvko4"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "fall-2026-anime-calendar",
+      "editorialWords": 1232,
+      "outboundLinks": [
+        "https://about.netflix.com/ja/news/anime-nyc-2026",
+        "https://disneyplus.disney.co.jp/news/2026/0727_twst-animation_s2",
+        "https://kusuriyanohitorigoto.jp/news/2520/",
+        "https://media.netflix.com/en/only-on-netflix/81088875",
+        "https://www.crunchyroll.com/es/news/seasonal-lineup/2026/10/11/crunchyroll-calendario-semanal-otono-2026",
+        "https://www.crunchyroll.com/news/announcements/2026/10/8/the-apothecary-diaries-the-late-ladys-treasure-anime-film-crunchyroll-worldwide-release/",
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=9QyiEgv33z4"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "firefly-wedding",
+      "editorialWords": 880,
+      "outboundLinks": [
+        "https://i0.wp.com/anitrendz.net/news/wp-content/uploads/2026/09/Firefly-Wedding-key-visual-1-e1788687986414.jpg?fit=850%2C480&ssl=1",
+        "https://shogakukan-comic.jp/book?isbn=9784098548484",
+        "https://www.crunchyroll.com/es-es/news/announcements/2026/10/6/firefly-wedding-anime-fecha-crunchyroll",
+        "https://www.crunchyroll.com/news/announcements/2026/10/22/firefly-wedding-anime-english-dub-release-date-cast-crew",
+        "https://www.crunchyroll.com/news/latest/2026/10/22/firefly-wedding-anime-casts-kazuyuki-okitsu-as-eishin-nitobe",
+        "https://www.crunchyroll.com/news/latest/2026/3/25/firefly-wedding-tv-anime-teaser-trailer-2nd-key-visual-lead-cast",
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+        "https://www.termsfeed.com/",
+        "https://www.viz.com/firefly-wedding",
+        "https://www.youtube.com/watch?v=kLfQNqd_NA0"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "fledgling-demon-lords-starter-shop",
+      "editorialWords": 1315,
+      "outboundLinks": [
+        "https://dena.com/jp/news/5447/",
+        "https://kmanga.kodansha.com/title/10632/episode/360375",
+        "https://storage.googleapis.com/dena-com-official-prod-gcp.appspot.com/upload/3U2IbhnGyD_TcnzPyuh_a.png",
+        "https://www.sudachi-anime.com/news/",
+        "https://www.sudachi-anime.com/news/post-8",
+        "https://www.termsfeed.com/"
+      ],
+      "reviewRecord": false,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "fool-night-release-date",
+      "editorialWords": 1218,
+      "outboundLinks": [
+        "https://about.netflix.com/en/news/for-how-much-would-you-become-a-flower-a-netflix-series-fool-night-main-trailer-key-art-debut",
+        "https://about.netflix.com/ja/news/anime-nyc-2026",
+        "https://media.netflix.com/en/only-on-netflix/81991076",
+        "https://netflix.com/foolnight",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=2Qg_AfPF2sM"
+      ],
+      "reviewRecord": false,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "frieren-season-3-release-date",
+      "editorialWords": 877,
+      "outboundLinks": [
+        "https://frieren-anime.jp/intro/",
+        "https://frieren-anime.jp/movie/",
+        "https://frieren-anime.jp/news/5417/",
+        "https://frieren-anime.jp/news/6192/",
+        "https://www.crunchyroll.com/news/latest/2026/3/27/frieren-beyond-journeys-end-season-3-anime-october-2027-premiere",
+        "https://www.termsfeed.com/",
+        "https://www.viz.com/frieren-beyond-journeys-end"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "full-clearing-another-world-zero-believers-premiere",
+      "editorialWords": 1215,
+      "outboundLinks": [
+        "https://j-novel.club/series/full-clearing-another-world-under-a-goddess-with-zero-believers",
+        "https://over-lap.co.jp/%E4%BF%A1%E8%80%85%E3%82%BC%E3%83%AD%E3%81%AE%E5%A5%B3%E7%A5%9E%E3%82%B5%E3%83%9E%E3%81%A8%E5%A7%8B%E3%82%81%E3%82%8B%E7%95%B0%E4%B8%96%E7%95%8C%E6%94%BB%E7%95%A5%2B13.%E4%B8%96%E7%95%8C%E6%9C%80%E5%BC%B7%E3%81%AE%E7%B2%BE%E9%9C%8A%E4%BD%BF%E3%81%84%E3%81%A8%E5%A5%B3%E7%A5%9E%E3%81%AE%E9%A1%98%E3%81%84%E3%80%88%E4%B8%AD%E3%80%89/product/0/9784824016010/?cat=BNK&swrd=",
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=qlMB8vSpLzc",
+        "https://zero-believers-anime.com/",
+        "https://zero-believers-anime.com/news/post-79"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "getting-shots-on-a-frying-pan-anime-release-date",
+      "editorialWords": 1222,
+      "outboundLinks": [
+        "https://comic-walker.com/detail/KC_003969_S",
+        "https://comic-walker.com/detail/KC_008545_S",
+        "https://nabetama.asmik-ace.co.jp/",
+        "https://nabetama.asmik-ace.co.jp/news/news01/",
+        "https://t.me/share/url?url=https%3A%2F%2Faninextup.com%2Farticles%2Fgetting-shots-on-a-frying-pan-anime-release-date&text=Getting+Shots+on+a+Frying+Pan+Anime+Release+Date%2C+Trailer+%26+Manga+Guide",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Faninextup.com%2Farticles%2Fgetting-shots-on-a-frying-pan-anime-release-date&text=Getting+Shots+on+a+Frying+Pan+Anime+Release+Date%2C+Trailer+%26+Manga+Guide",
+        "https://wa.me/?text=Getting+Shots+on+a+Frying+Pan+Anime+Release+Date%2C+Trailer+%26+Manga+Guide+https%3A%2F%2Faninextup.com%2Farticles%2Fgetting-shots-on-a-frying-pan-anime-release-date",
+        "https://www.asmik-ace.co.jp/news/contents/19607/",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faninextup.com%2Farticles%2Fgetting-shots-on-a-frying-pan-anime-release-date",
+        "https://www.reddit.com/submit?url=https%3A%2F%2Faninextup.com%2Farticles%2Fgetting-shots-on-a-frying-pan-anime-release-date&title=Getting+Shots+on+a+Frying+Pan+Anime+Release+Date%2C+Trailer+%26+Manga+Guide",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=fmafMZNXeHw"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "ghost-of-tsushima-legends-anime-2028",
+      "editorialWords": 1183,
+      "outboundLinks": [
+        "https://blog.playstation.com/2020/08/17/ghost-of-tsushima-legends-coming-to-ps4-fall-2020/",
+        "https://www.crunchyroll.com/news/latest/2026/10/9/ghost-of-tsushima-legends-anime-2028-release",
+        "https://www.sonymusic.com/sonymusic/crunchyroll-aniplex-sme-and-playstation-productions-to-produce-anime-ghost-of-tsushima-legends/",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=uU8slMpqDXU"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "glasses-with-a-chance-of-delinquent-anime",
+      "editorialWords": 1310,
+      "outboundLinks": [
+        "https://otasukebu.com/news/post-114",
+        "https://otasukebu.com/news/post-77",
+        "https://otasukebu.com/news/post-82",
+        "https://otasukebu.com/news/post-92",
+        "https://sevenseasentertainment.com/books/glasses-with-a-chance-of-delinquent-vol-1/",
+        "https://sevenseasentertainment.com/series/glasses-with-a-chance-of-delinquent/"
+      ],
+      "reviewRecord": false,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "granite-waves-anime",
+      "editorialWords": 1298,
+      "outboundLinks": [
+        "https://apps.apple.com/us/app/ryuu-app/id6754717708",
+        "https://granitewaves.com/",
+        "https://granitewaves.ryuu.com/",
+        "https://play.google.com/store/apps/details?id=com.ryuu.app&hl=en",
+        "https://www.instagram.com/granitewavesseries/",
+        "https://www.ryuu.com/",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=GlqBM__mVEc"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "grotesqqque-release-date",
+      "editorialWords": 1297,
+      "outboundLinks": [
+        "https://movie-gtq123.com/",
+        "https://movie-gtq123.com/news/?id=71497",
+        "https://movie-gtq123.com/news/?id=71508",
+        "https://movie-gtq123.com/news/?id=71718",
+        "https://news.aniplex.co.jp/detail.html?id=71528",
+        "https://www.aniplex.co.jp/lineup/movie-gtq123/news/",
+        "https://www.aniplex.co.jp/lineup/movie-gtq123/news/detail/?id=70747",
+        "https://www.aniplex.co.jp/lineup/movie-gtq123/news/detail/?id=71525",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=BfE9BOSmW7I"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "haru-to-gen-anime-january-4-2027",
+      "editorialWords": 898,
+      "outboundLinks": [
+        "https://animationid.com/haruandgen/",
+        "https://animationid.com/post-3893/",
+        "https://www.kadokawa.co.jp/product/322312000094/",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=DFbZN4QYhao"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "hello-witch-love-potion-release-date",
+      "editorialWords": 965,
+      "outboundLinks": [
+        "https://heart-company.co.jp/creator_producer/matsumurahayato/",
+        "https://horemajo-anime.com/",
+        "https://horemajo-anime.com/music/index.html",
+        "https://horemajo-anime.com/onair/index.html",
+        "https://horemajo-anime.com/staffcast/index.html",
+        "https://horemajo-anime.com/story/index.html",
+        "https://www.crossinfworld.com/Hello-I-am-a-Witch-and-my-Crush-Wants-me-to-Make-a-Love-Potion.html",
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+        "https://www.termsfeed.com/",
+        "https://www.tristone.co.jp/artists/reini/",
+        "https://www.youtube.com/watch?v=hGRtocAh3iw"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "hiragi-san-house-of-vampires-anime",
+      "editorialWords": 1327,
+      "outboundLinks": [
+        "https://hiragihouse-anime.com/",
+        "https://kmanga.kodansha.com/title/10015/episode/365624",
+        "https://kodansha.us/2016/01/26/miki-yoshikawa-interview-on-yamada-kun-and-the-seven-witches/",
+        "https://kodansha.us/series/a-couple-of-cuckoos/",
+        "https://kodansha.us/series/yamada-kun-and-the-seven-witches/",
+        "https://www.termsfeed.com/",
+        "https://www.tms-e.co.jp/release/anime/entry-26221.html"
+      ],
+      "reviewRecord": false,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "hirayasumi-anime-release-date",
+      "editorialWords": 1244,
+      "outboundLinks": [
+        "https://hirayasumi-anime.jp/en/",
+        "https://hirayasumi-anime.jp/news/61me3iapu/",
+        "https://hirayasumi-anime.jp/news/add-cast-01/",
+        "https://hirayasumi-anime.jp/news/ed-artist/",
+        "https://hirayasumi-anime.jp/news/mainvisual/",
+        "https://hirayasumi-anime.jp/news/rdhlz7kvk1/",
+        "https://t.me/share/url?url=https%3A%2F%2Faninextup.com%2Farticles%2Fhirayasumi-anime-release-date&text=Hirayasumi+Anime+on+Netflix%3A+January+2027+Release+Window+%26+Manga+Guide",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Faninextup.com%2Farticles%2Fhirayasumi-anime-release-date&text=Hirayasumi+Anime+on+Netflix%3A+January+2027+Release+Window+%26+Manga+Guide",
+        "https://wa.me/?text=Hirayasumi+Anime+on+Netflix%3A+January+2027+Release+Window+%26+Manga+Guide+https%3A%2F%2Faninextup.com%2Farticles%2Fhirayasumi-anime-release-date",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faninextup.com%2Farticles%2Fhirayasumi-anime-release-date",
+        "https://www.reddit.com/submit?url=https%3A%2F%2Faninextup.com%2Farticles%2Fhirayasumi-anime-release-date&title=Hirayasumi+Anime+on+Netflix%3A+January+2027+Release+Window+%26+Manga+Guide",
+        "https://www.termsfeed.com/",
+        "https://www.viz.com/blog/posts/a-first-look-at-the-hirayasumi-anime",
+        "https://www.viz.com/hirayasumi",
+        "https://www.viz.com/manga-books/manga/hirayasumi-volume-1-0/product/7855",
+        "https://www.youtube.com/watch?v=ZoVtjJsdyB4"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "horror-collector-release-date",
+      "editorialWords": 871,
+      "outboundLinks": [
+        "https://tsubasabunko.jp/product/kyofucollector/322603000812.html",
+        "https://www.nhk-character.com/chara/kyoufucollector/",
+        "https://www.nhk-character.com/chara/kyoufucollector/news/20260725_48.html",
+        "https://www.nhk-character.com/chara/kyoufucollector/news/20261009_89.html",
+        "https://www.nhk-character.com/chara/kyoufucollector/staffcast",
+        "https://www.nhk-character.com/chara/kyoufucollector/streaming",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=1igV7pmH8fA",
+        "https://x.com/nhk_animeworld/status/2100786097156719097"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "i-got-a-cheat-skill-season-2-january-2027",
+      "editorialWords": 1174,
+      "outboundLinks": [
+        "https://www.iseleve.com/",
+        "https://www.iseleve.com/news/",
+        "https://www.iseleve.com/staff-cast/2nd/",
+        "https://www.iseleve.com/story/2nd/",
+        "https://www.kadokawa.co.jp/product/video2734/",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=twGVFfRI-7s"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "i-lost-my-adventurers-license-anime-january-2027",
+      "editorialWords": 901,
+      "outboundLinks": [
+        "https://boukensha-license-anime.com/",
+        "https://boukensha-license-anime.com/news/post-84",
+        "https://global.manga-up.com/manga/25",
+        "https://natalie.mu/comic/news/654890",
+        "https://us.oricon-group.com/news/9387/",
+        "https://www.crunchyroll.com/news/latest/2026/10/15/i-lost-my-adventurers-license-but-its-fine-because-i-have-an-adorable-daughter-now-anime-january-2027-premiere-teaser-trailer-visual",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=inKTTHeuzds",
+        "https://x.com/BokenshaLicense"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "iceblade-sorcerer-ii",
+      "editorialWords": 922,
+      "outboundLinks": [
+        "https://hyouken-anime.com/",
+        "https://hyouken-anime.com/33/",
+        "https://hyouken-anime.com/wp/wp-content/themes/hyouken-theme/images/kv1.webp",
+        "https://www.crunchyroll.com/news/announcements/2026/10/24/the-iceblade-sorcerer-shall-rule-the-world-season-2-english-dub-now-streaming-on-crunchyroll",
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll?lid=0ojihzvhs258",
+        "https://www.tbs.co.jp/tv/20261015_C111.html",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=30rSarCHpmA"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "ijihaji-anime-release-date",
+      "editorialWords": 1233,
+      "outboundLinks": [
+        "https://aninextup.com/editorial-policy",
+        "https://ijihaji-anime.com/",
+        "https://ijihaji-anime.com/news/",
+        "https://ijihaji-anime.com/news/index00030000.html",
+        "https://www.animatetimes.com/news/details.php?id=1795156679",
+        "https://www.kodansha.co.jp/comic/products/0000379168",
+        "https://www.kodansha.co.jp/titles/1000045099",
+        "https://www.termsfeed.com/",
+        "https://x.com/ijihaji_anime",
+        "https://x.com/ijihaji_anime/status/2123974682743648350"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "im-looking-for-a-zombie",
+      "editorialWords": 1175,
+      "outboundLinks": [
+        "https://poptopic.com.au/wp-content/uploads/2026/09/zombie-anime-aki-new-world.jpg",
+        "https://www.kadokawa.co.jp/product/322309001169/",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=Q72YGjPWpRc",
+        "https://zommasu.com/",
+        "https://zommasu.com/movie/",
+        "https://zommasu.com/music/",
+        "https://zommasu.com/onair/"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "in-a-world-full-of-zombies-january-2027",
+      "editorialWords": 1207,
+      "outboundLinks": [
+        "https://www.fwinc.co.jp/news/114872/",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=ky1EjKvGMrA",
+        "https://zom-ore.com/"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "inherit-the-winds-anime-january-2027",
+      "editorialWords": 1189,
+      "outboundLinks": [
+        "https://kaze-tsugu.com/",
+        "https://kaze-tsugu.com/news/?id=70068",
+        "https://kaze-tsugu.com/theater/news/?id=71461",
+        "https://news.aniplex.co.jp/detail.html?id=71488",
+        "https://news.aniplex.co.jp/detail.html?id=71492",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=V4jtmbW-sqA"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "iruma-kun-irumafia-edition-release-date",
+      "editorialWords": 1431,
+      "outboundLinks": [
+        "https://kodansha.us/series/welcome-to-demon-school-iruma-kun-irumafia-edition/",
+        "https://kodansha.us/series/welcome-to-demon-school-iruma-kun-irumafia-edition/volume-1/",
+        "https://www.akitashoten.co.jp/series/12862",
+        "https://www.nhk-character.com/chara/irumafia/",
+        "https://www.nhk-character.com/chara/irumafia/news/66/",
+        "https://www.nhk-character.com/chara/irumafia/staffcast/",
+        "https://www.termsfeed.com/"
+      ],
+      "reviewRecord": false,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "jirai-girl-chihara-san-anime-january-2027",
+      "editorialWords": 909,
+      "outboundLinks": [
+        "https://chiharasan-anime.com/",
+        "https://sevenseasentertainment.com/series/are-you-a-landmine-chihara-san/",
+        "https://www.crunchyroll.com/news/latest/2025/12/25/are-you-a-jirai-girl-chihara-san-anime-announced",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=9MXzPz2cOYk"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "jump-festa-2027-schedule-dates-streaming",
+      "editorialWords": 1253,
+      "outboundLinks": [
+        "https://www.jumpfesta.com/",
+        "https://www.jumpfesta.com/guide/attention/",
+        "https://www.jumpfesta.com/stage/program/"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "kagurabachi-anime-world-tour-finale",
+      "editorialWords": 1203,
+      "outboundLinks": [
+        "https://anime.kagurabachi.jp/en/",
+        "https://anime.kagurabachi.jp/en/news/crunchyroll-simulcast/",
+        "https://anime.kagurabachi.jp/en/news/news-711/",
+        "https://anime.kagurabachi.jp/en/worldtour/",
+        "https://anime.kagurabachi.jp/worldtour/world-tour-finale/",
+        "https://www.prnewswire.com/news-releases/anime-kagurabachi-unveils-details-for-its-world-tour-part-3--finale-302905611.html",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=pC39732i1bA"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "kinioto-january-2027",
+      "editorialWords": 1219,
+      "outboundLinks": [
+        "https://aninextup.com/articles/apothecary-diaries-season-3",
+        "https://aninextup.com/calendar",
+        "https://aninextup.com/news",
+        "https://kinioto-anime.com/",
+        "https://kinioto-anime.com/news/?article_id=70767",
+        "https://www.crunchyroll.com/news/latest/2026/10/8/the-guy-she-was-interested-in-wasnt-a-guy-at-all-anime-january-8-2027-premiere-trailer",
+        "https://www.crunchyroll.com/news/latest/2026/7/3/the-guy-she-was-interested-in-wasnt-a-guy-at-all-anime-january-2027-premiere",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=kLO7KyjhGR0",
+        "https://yenpress.com/news/new-debuts-coming-in-october-2024"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "laid-off-cheat-granting-mage",
+      "editorialWords": 883,
+      "outboundLinks": [
+        "https://corporate.goodsmile.com/ja/news/4381/",
+        "https://sh-anime.shochiku.co.jp/chiifuyo-anime/",
+        "https://www.crunchyroll.com/id/news/announcements/2026/10/5/the-laid-off-cheat-granting-mage-enjoys-a-second-lease-on-life-anime-english-dub-release-date-cast-crew",
+        "https://www.crunchyroll.com/news/announcements/2026/10/5/the-laid-off-cheat-granting-mage-enjoys-a-second-lease-on-life-anime-english-dub-release-date-cast-crew",
+        "https://www.crunchyroll.com/news/announcements/2026/10/5/the-laid-off-cheat-granting-mage-enjoys-a-second-lease-on-life-english-dub-release-date",
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=GyWstaOY6qk"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "le-college-noir-season-2-trailer-october-2026",
+      "editorialWords": 1321,
+      "outboundLinks": [
+        "https://news.animationdigitalnetwork.com/fr/2026/10/13/le-college-noir-saison-2-decouvrez-la-bande-annonce-avant-son-arrivee-sur-adn/",
+        "https://www.francetvpro.fr/contenu-de-presse/77243830",
+        "https://www.termsfeed.com/",
+        "https://www.toei-animation.com/catalog/le-college-noir-lament-from-auvergne/",
+        "https://www.toei-animation.com/college-noir-season-2-trailer/",
+        "https://www.toei-animation.com/le-college-noir-2026/"
+      ],
+      "reviewRecord": false,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "live-action-firefly-wedding-tv-drama-announced-for-2027-a1ac1e86",
+      "editorialWords": 1158,
+      "outboundLinks": [
+        "https://e-comi.shogakukan.co.jp/books/098521470000d0000000",
+        "https://hotaru-anime.com/news/187/",
+        "https://www.fujitv.co.jp/fujitv/news/20261113.html",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=aIzLCFxPLCo"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "love-live-hasunosora-release-date",
+      "editorialWords": 1185,
+      "outboundLinks": [
+        "https://v-storage.jp/anime/lovelive/288785/",
+        "https://www.lovelive-anime.jp/hasunosora/cast-staff/",
+        "https://www.lovelive-anime.jp/hasunosora/onair/",
+        "https://www.lovelive-anime.jp/hasunosora/story/",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=DfOHPrvaCCs"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "made-in-abyss-awakening-mystery-release-date",
+      "editorialWords": 1327,
+      "outboundLinks": [
+        "https://animefrontier.com/",
+        "https://miabyss.com/",
+        "https://miabyss.com/movie_part1/intro.html",
+        "https://miabyss.com/movie_part1/movie.html",
+        "https://miabyss.com/movie_part1/staff.html",
+        "https://miabyss.com/news_movie/article035.html",
+        "https://miabyss.com/news_movie/article041.html",
+        "https://news.hidive.com/2026/11/10/new-movie-made-in-abyss-awakening-mystery-comes-to-hidive",
+        "https://t.me/share/url?url=https%3A%2F%2Faninextup.com%2Farticles%2Fmade-in-abyss-awakening-mystery-release-date&text=Made+in+Abyss%3A+Awakening+Mystery+Release+Date+%26+HIDIVE+Update",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Faninextup.com%2Farticles%2Fmade-in-abyss-awakening-mystery-release-date&text=Made+in+Abyss%3A+Awakening+Mystery+Release+Date+%26+HIDIVE+Update",
+        "https://wa.me/?text=Made+in+Abyss%3A+Awakening+Mystery+Release+Date+%26+HIDIVE+Update+https%3A%2F%2Faninextup.com%2Farticles%2Fmade-in-abyss-awakening-mystery-release-date",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faninextup.com%2Farticles%2Fmade-in-abyss-awakening-mystery-release-date",
+        "https://www.kadokawa.co.jp/product/video2727/",
+        "https://www.reddit.com/submit?url=https%3A%2F%2Faninextup.com%2Farticles%2Fmade-in-abyss-awakening-mystery-release-date&title=Made+in+Abyss%3A+Awakening+Mystery+Release+Date+%26+HIDIVE+Update",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=Sy7cLG6XHRY"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "maebashi-witches-emoemories-release-date",
+      "editorialWords": 1193,
+      "outboundLinks": [
+        "https://eigakan.org/theaterpage/schedule.php?t=MBWmovie",
+        "https://www.maebashi-witches.com/",
+        "https://www.maebashi-witches.com/movie/",
+        "https://www.maebashi-witches.com/news/detail.php?id=25834",
+        "https://www.maebashi-witches.com/news/detail.php?id=26581",
+        "https://www.maebashi-witches.com/staffcast/",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=txDov2HH7xM"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "magic-knight-rayearth-2026",
+      "editorialWords": 1216,
+      "outboundLinks": [
+        "https://rayearth-anime.com/",
+        "https://rayearth-anime.com/news/258/",
+        "https://rayearth-anime.com/news/259/",
+        "https://rayearth-anime.com/onair/",
+        "https://rayearth-anime.com/staffcast/",
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll?lid=0ojihzvhs258",
+        "https://www.termsfeed.com/",
+        "https://www.universal-music.co.jp/kawaguchi-yurina/news/2026-10-14/",
+        "https://www.universal-music.co.jp/toaka/news/2026-09-20/",
+        "https://www.youtube.com/watch?v=67GqhfLw3ys"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "manchuria-opium-squad-anime",
+      "editorialWords": 1209,
+      "outboundLinks": [
+        "https://kodansha.us/series/manchuria-opium-squad/",
+        "https://magazine.yanmaga.jp/c/mas/",
+        "https://news.ponycanyon.co.jp/2026/10/126491",
+        "https://www.termsfeed.com/"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "mashle-season-3-release-date",
+      "editorialWords": 899,
+      "outboundLinks": [
+        "https://books.shueisha.co.jp/info/comics/3841.html",
+        "https://mashle.pw/",
+        "https://mashle.pw/news/?id=69416",
+        "https://mashle.pw/news/?id=70740",
+        "https://www.aniplex.co.jp/lineup/mashle/",
+        "https://www.crunchyroll.com/es/news/announcements/2026/10/28/mashle-magic-and-muscles-temporada-3-enero-2027-crunchyroll",
+        "https://www.viz.com/manga-books/manga/mashle-magic-and-muscles-volume-1-0/product/6744",
+        "https://www.youtube.com/watch?v=Ak8DnZUIPSk"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "medaka-kuroiwa-season-2-release-date",
+      "editorialWords": 1248,
+      "outboundLinks": [
+        "https://monaxmedaka.com/",
+        "https://monaxmedaka.com/news/378/",
+        "https://www.crunchyroll.com/id/news/announcements/2026/11/11/medaka-kuroiwa-is-impervious-to-my-charms-season-2-anime-stream-crunchyroll",
+        "https://www.youtube.com/watch?v=OOHTPQCmfYA"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "medalist-movie-release-date",
+      "editorialWords": 1201,
+      "outboundLinks": [
+        "https://kodansha.us/product/medalist-1/",
+        "https://kodansha.us/series/medalist/",
+        "https://medalist-pr.com/",
+        "https://medalist-pr.com/news.html",
+        "https://medalist-pr.com/tv/special/s2-event-report3.html",
+        "https://medalist-pr.com/tv/special/s2-event-spe2026.html",
+        "https://www.youtube.com/watch?v=FacTE-pO9dI"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "mercedes-and-the-waning-moon-anime",
+      "editorialWords": 1456,
+      "outboundLinks": [
+        "https://j-novel.club/series/mercedes-and-the-waning-moon-the-dungeoneering-feats-of-a-discarded-vampire-aristocrat",
+        "https://j-novel.club/series/mercedes-and-the-waning-moon-the-dungeoneering-feats-of-a-discarded-vampire-aristocrat-manga",
+        "https://mercedes-anime.com/",
+        "https://mercedes-anime.com/books/",
+        "https://mercedes-anime.com/chara/",
+        "https://mercedes-anime.com/movie/",
+        "https://mercedes-anime.com/news/post-62",
+        "https://mercedes-anime.com/staffcast/",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=BeBqd3yuV9U"
+      ],
+      "reviewRecord": false,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "minami-ke-season-5-korekara-release-date-watch-order",
+      "editorialWords": 1232,
+      "outboundLinks": [
+        "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=20557",
+        "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=21422",
+        "https://minami-ke-5.com/",
+        "https://prtimes.jp/main/html/rd/p/000000164.000084062.html",
+        "https://t.me/share/url?url=https%3A%2F%2Faninextup.com%2Farticles%2Fminami-ke-season-5-korekara-release-date-watch-order&text=Minami-ke+Season+5+Release+Date%2C+Trailer+%26+Watch+Order",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Faninextup.com%2Farticles%2Fminami-ke-season-5-korekara-release-date-watch-order&text=Minami-ke+Season+5+Release+Date%2C+Trailer+%26+Watch+Order",
+        "https://wa.me/?text=Minami-ke+Season+5+Release+Date%2C+Trailer+%26+Watch+Order+https%3A%2F%2Faninextup.com%2Farticles%2Fminami-ke-season-5-korekara-release-date-watch-order",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faninextup.com%2Farticles%2Fminami-ke-season-5-korekara-release-date-watch-order",
+        "https://www.reddit.com/submit?url=https%3A%2F%2Faninextup.com%2Farticles%2Fminami-ke-season-5-korekara-release-date-watch-order&title=Minami-ke+Season+5+Release+Date%2C+Trailer+%26+Watch+Order",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=3x5HMpHPbqE",
+        "https://yanmaga.jp/columns/articles/7904"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "mobile-suit-gundam-seed-freedom-zero-release-date",
+      "editorialWords": 1185,
+      "outboundLinks": [
+        "https://en.gundam-official.com/seed/freedom/mechazero/",
+        "https://en.gundam-official.com/seed/freedom/mechazero/1/",
+        "https://en.gundam-official.com/seed/freedom/mechazero/9/",
+        "https://en.gundam-official.com/seed/freedom/news/item.php?id=u41ricmmmttp4p014dosmk9p",
+        "https://en.gundam-official.com/seed/freedom/staffcastzero/",
+        "https://en.gundam-official.com/seed/freedom/storyzero/",
+        "https://gundam-official.com/seed/freedom/news/item.php?id=u41ricmmmttp4p014dosmk9p",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=_PTSJJdqLB8"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "ms-isshiki-wants-to-know-about-love",
+      "editorialWords": 1372,
+      "outboundLinks": [
+        "https://isshikisan-anime.com/",
+        "https://isshikisan-anime.com/books/index.html",
+        "https://isshikisan-anime.com/music/index.html",
+        "https://isshikisan-anime.com/news/index00130000.html",
+        "https://isshikisan-anime.com/news/index00140000.html",
+        "https://isshikisan-anime.com/staffcast/index.html",
+        "https://isshikisan-anime.com/story/index.html",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=A86REZ-veV8",
+        "https://yenpress.com/titles/9798855430226-isshiki-san-wants-to-know-about-love-vol-1"
+      ],
+      "reviewRecord": false,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "multi-mind-mayhem-anime-release-date",
+      "editorialWords": 1288,
+      "outboundLinks": [
+        "https://aninextup.com/assets/images/generated/multi-mind-mayhem-anime-release-date.webp",
+        "https://prtimes.jp/main/html/rd/p/000000226.000004331.html",
+        "https://t.me/share/url?url=https%3A%2F%2Faninextup.com%2Farticles%2Fmulti-mind-mayhem-anime-release-date&text=Multi-Mind+Mayhem+Anime+Release+Date%3A+Episode+1+%26+2+Schedule%2C+Trailer+and+Where+to+Watch",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Faninextup.com%2Farticles%2Fmulti-mind-mayhem-anime-release-date&text=Multi-Mind+Mayhem+Anime+Release+Date%3A+Episode+1+%26+2+Schedule%2C+Trailer+and+Where+to+Watch",
+        "https://wa.me/?text=Multi-Mind+Mayhem+Anime+Release+Date%3A+Episode+1+%26+2+Schedule%2C+Trailer+and+Where+to+Watch+https%3A%2F%2Faninextup.com%2Farticles%2Fmulti-mind-mayhem-anime-release-date",
+        "https://www.alpha-manga.com/manga/552000104",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faninextup.com%2Farticles%2Fmulti-mind-mayhem-anime-release-date",
+        "https://www.onepeacebooks.com/jt/MultiMind.html",
+        "https://www.reddit.com/submit?url=https%3A%2F%2Faninextup.com%2Farticles%2Fmulti-mind-mayhem-anime-release-date&title=Multi-Mind+Mayhem+Anime+Release+Date%3A+Episode+1+%26+2+Schedule%2C+Trailer+and+Where+to+Watch",
+        "https://www.soudouki.com/onair/index.html",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=GdakXIvTowI"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "murcielago-anime-january-2027",
+      "editorialWords": 1207,
+      "outboundLinks": [
+        "https://magazine.jp.square-enix.com/yg/introduction/murcielago/",
+        "https://murcielago-anime.com/",
+        "https://www.amcglobalmedia.com/2026/07/06/acclaimed-dangerously-addictive-manga-series-murcielago-getting-the-anime-adaptation-fans-have-been-waiting-for-in-2027/",
+        "https://www.murcielago-anime.com/",
+        "https://www.murcielago-anime.com/news/index00060000.html",
+        "https://www.murcielago-anime.com/news/index00080000.html",
+        "https://www.murcielago-anime.com/news/index00090000.html",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=7VHLNvvxWfQ",
+        "https://www.youtube.com/watch?v=it8Thhkvh3I"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "my-crushs-crush-anime-release-date",
+      "editorialWords": 1311,
+      "outboundLinks": [
+        "https://bokusuki.com/",
+        "https://bokusuki.com/news/detail.php?id=1137168",
+        "https://t.me/share/url?url=https%3A%2F%2Faninextup.com%2Farticles%2Fmy-crushs-crush-anime-release-date&text=My+Crush%E2%80%99s+Crush+Anime+Release+Date%2C+Trailer+%26+English+Manga+Guide",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Faninextup.com%2Farticles%2Fmy-crushs-crush-anime-release-date&text=My+Crush%E2%80%99s+Crush+Anime+Release+Date%2C+Trailer+%26+English+Manga+Guide",
+        "https://wa.me/?text=My+Crush%E2%80%99s+Crush+Anime+Release+Date%2C+Trailer+%26+English+Manga+Guide+https%3A%2F%2Faninextup.com%2Farticles%2Fmy-crushs-crush-anime-release-date",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faninextup.com%2Farticles%2Fmy-crushs-crush-anime-release-date",
+        "https://www.reddit.com/submit?url=https%3A%2F%2Faninextup.com%2Farticles%2Fmy-crushs-crush-anime-release-date&title=My+Crush%E2%80%99s+Crush+Anime+Release+Date%2C+Trailer+%26+English+Manga+Guide",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=_iOewgdlvMM",
+        "https://yenpress.com/titles/9798855429411-my-crush-s-crush-vol-1",
+        "https://yenpress.com/titles/9798855429428-my-crush-s-crush-vol-1"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "my-death-flags-anime-release-date",
+      "editorialWords": 1234,
+      "outboundLinks": [
+        "https://mangabox.ink/special/orefura",
+        "https://onepeacebooks.com/jt/DeathFlags.html",
+        "https://prtimes.jp/main/html/rd/p/000000054.000070922.html",
+        "https://t.me/share/url?url=https%3A%2F%2Faninextup.com%2Farticles%2Fmy-death-flags-anime-release-date&text=My+Death+Flags+Show+No+Sign+of+Ending+Anime%3A+2027+Release+%26+English+Manga+Guide",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Faninextup.com%2Farticles%2Fmy-death-flags-anime-release-date&text=My+Death+Flags+Show+No+Sign+of+Ending+Anime%3A+2027+Release+%26+English+Manga+Guide",
+        "https://wa.me/?text=My+Death+Flags+Show+No+Sign+of+Ending+Anime%3A+2027+Release+%26+English+Manga+Guide+https%3A%2F%2Faninextup.com%2Farticles%2Fmy-death-flags-anime-release-date",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faninextup.com%2Farticles%2Fmy-death-flags-anime-release-date",
+        "https://www.mangabox.me/reader/127460/episodes/52977/",
+        "https://www.onepeacebooks.com/blog/?p=388",
+        "https://www.reddit.com/submit?url=https%3A%2F%2Faninextup.com%2Farticles%2Fmy-death-flags-anime-release-date&title=My+Death+Flags+Show+No+Sign+of+Ending+Anime%3A+2027+Release+%26+English+Manga+Guide",
+        "https://www.termsfeed.com/"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "my-happy-marriage-special-episodes",
+      "editorialWords": 1251,
+      "outboundLinks": [
+        "https://about.netflix.com/en/news/romance-anime-lineup-october",
+        "https://watakon-anime.com/news/post-90",
+        "https://watakon-anime.com/onair/",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=dXeAqvXkSUM"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "nanatsuya-shinobu-jewelry-box-anime-release-date",
+      "editorialWords": 1252,
+      "outboundLinks": [
+        "https://animetv-jp.net/nanatsu-ya-shinobu-and-her-jewelry-box-anime-set-for-2027/",
+        "https://kisscomic.com/c/nanatsuya/",
+        "https://kmanga.kodansha.com/title/10638/episode/360082",
+        "https://mangaplaza.com/title/0303012343/",
+        "https://nanatsuya-shinobu-anime.com/",
+        "https://news.ponycanyon.co.jp/2026/11/127721",
+        "https://t.me/share/url?url=https%3A%2F%2Faninextup.com%2Farticles%2Fnanatsuya-shinobu-jewelry-box-anime-release-date&text=Nanatsu-ya%3A+Shinobu+and+Her+Jewelry+Box+Anime+%E2%80%94+2027+Release%2C+Trailer+%26+Manga+Guide",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Faninextup.com%2Farticles%2Fnanatsuya-shinobu-jewelry-box-anime-release-date&text=Nanatsu-ya%3A+Shinobu+and+Her+Jewelry+Box+Anime+%E2%80%94+2027+Release%2C+Trailer+%26+Manga+Guide",
+        "https://wa.me/?text=Nanatsu-ya%3A+Shinobu+and+Her+Jewelry+Box+Anime+%E2%80%94+2027+Release%2C+Trailer+%26+Manga+Guide+https%3A%2F%2Faninextup.com%2Farticles%2Fnanatsuya-shinobu-jewelry-box-anime-release-date",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faninextup.com%2Farticles%2Fnanatsuya-shinobu-jewelry-box-anime-release-date",
+        "https://www.kodansha.co.jp/titles/1000020666",
+        "https://www.reddit.com/submit?url=https%3A%2F%2Faninextup.com%2Farticles%2Fnanatsuya-shinobu-jewelry-box-anime-release-date&title=Nanatsu-ya%3A+Shinobu+and+Her+Jewelry+Box+Anime+%E2%80%94+2027+Release%2C+Trailer+%26+Manga+Guide",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=91yBQCHHjZ8"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "naruto-ninku-anime",
+      "editorialWords": 1208,
+      "outboundLinks": [
+        "https://aninextup.com/calendar",
+        "https://naruto-official.com/en/news/01_2696",
+        "https://naruto-official.com/en/special/naruto-ninku?nolangsuggestion=1",
+        "https://prtimes.jp/main/html/rd/p/000002385.000002734.html",
+        "https://www.termsfeed.com/",
+        "https://www.viz.com/press-releases/v/1006772",
+        "https://www.youtube.com/watch?v=hCZi_R0MnvE"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "naruto-shadow-rising-manga",
+      "editorialWords": 1147,
+      "outboundLinks": [
+        "https://naruto-official.com/en/news/01_2696",
+        "https://www.jumpfesta.com/stage/superstage/naruto/",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=B5QJZFYQ2Qs"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "netflix-october-2026",
+      "editorialWords": 1208,
+      "outboundLinks": [
+        "https://about.netflix.com/en/news/netflix-anime-titles-revealed-mappa-15th-anniversary",
+        "https://about.netflix.com/en/news/romance-anime-lineup-october",
+        "https://about.netflix.com/ja/news/anime-nyc-2026",
+        "https://ranma-pr.com/onair/",
+        "https://www.netflix.com/tudum/articles/cyberpunk-edgerunners-2-release-date-news",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=IBTK8PGe_Oo"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "nia-liston-release-date",
+      "editorialWords": 1160,
+      "outboundLinks": [
+        "https://kyoranreijo-pr.com/",
+        "https://news.hidive.com/2026/9/30/heres-the-anime-coming-to-and-leaving-hidive-in-october-2026",
+        "https://prtimes.jp/main/html/rd/p/000001343.000050711.html",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=HKdiA5mNb_A"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "ninja-skooler-pilot-film-where-to-watch",
+      "editorialWords": 1245,
+      "outboundLinks": [
+        "https://iwami-takashi.bfan.link/Knots",
+        "https://prtimes.jp/main/html/rd/p/000000011.000141283.html",
+        "https://t.me/share/url?url=https%3A%2F%2Faninextup.com%2Farticles%2Fninja-skooler-pilot-film-where-to-watch&text=Where+to+Watch+the+NINJA+SKOOLER+Pilot+Film+Free+on+YouTube",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Faninextup.com%2Farticles%2Fninja-skooler-pilot-film-where-to-watch&text=Where+to+Watch+the+NINJA+SKOOLER+Pilot+Film+Free+on+YouTube",
+        "https://wa.me/?text=Where+to+Watch+the+NINJA+SKOOLER+Pilot+Film+Free+on+YouTube+https%3A%2F%2Faninextup.com%2Farticles%2Fninja-skooler-pilot-film-where-to-watch",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faninextup.com%2Farticles%2Fninja-skooler-pilot-film-where-to-watch",
+        "https://www.reddit.com/submit?url=https%3A%2F%2Faninextup.com%2Farticles%2Fninja-skooler-pilot-film-where-to-watch&title=Where+to+Watch+the+NINJA+SKOOLER+Pilot+Film+Free+on+YouTube",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/@bluerights_official",
+        "https://www.youtube.com/watch?v=It-5v1kgaak",
+        "https://www.youtube.com/watch?v=hfrbzeG6v2I"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "ninjago-embers-ashes-release-date-watch-order",
+      "editorialWords": 1332,
+      "outboundLinks": [
+        "https://kids.lego.com/en-us/ninjago",
+        "https://kids.lego.com/en-us/video/257fc5d988a94c5bbab38261a1454015",
+        "https://kids.lego.com/en-us/video/4ba9ee5423d5494bb8893c61cf94f4dc",
+        "https://kids.lego.com/en-us/video/bfa80ed9cc8f450b83e7a47e39392b07",
+        "https://t.me/share/url?url=https%3A%2F%2Faninextup.com%2Farticles%2Fninjago-embers-ashes-release-date-watch-order&text=NINJAGO+Anime+2027%3A+Embers+%2B+Ashes+Release+Window%2C+Trailer+and+Watch+Order",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Faninextup.com%2Farticles%2Fninjago-embers-ashes-release-date-watch-order&text=NINJAGO+Anime+2027%3A+Embers+%2B+Ashes+Release+Window%2C+Trailer+and+Watch+Order",
+        "https://wa.me/?text=NINJAGO+Anime+2027%3A+Embers+%2B+Ashes+Release+Window%2C+Trailer+and+Watch+Order+https%3A%2F%2Faninextup.com%2Farticles%2Fninjago-embers-ashes-release-date-watch-order",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faninextup.com%2Farticles%2Fninjago-embers-ashes-release-date-watch-order",
+        "https://www.lego.com/en-nz/aboutus/news/2026/september/lego-ninjago-and-futura-reveal-creative-partnership",
+        "https://www.lego.com/en-us/product/ivos-ninja-dojo-71888",
+        "https://www.lego.com/en-us/themes/ninjago/legends",
+        "https://www.reddit.com/submit?url=https%3A%2F%2Faninextup.com%2Farticles%2Fninjago-embers-ashes-release-date-watch-order&title=NINJAGO+Anime+2027%3A+Embers+%2B+Ashes+Release+Window%2C+Trailer+and+Watch+Order",
+        "https://www.termsfeed.com/",
+        "https://www.thebrickpost.com/news/watch-the-lego-ninjago-embers-ashes-teaser-trailer/",
+        "https://www.youtube.com/watch?v=9izcokE_v0k"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "no-clipping-my-way-to-supremacy-anime",
+      "editorialWords": 1442,
+      "outboundLinks": [
+        "https://kabenukebug-anime.com/",
+        "https://kabenukebug-anime.com/news/20261029_01.html",
+        "https://kmanga.kodansha.com/title/10704/episode/368028"
+      ],
+      "reviewRecord": false,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "noa-is-my-senior-anime-2027",
+      "editorialWords": 1215,
+      "outboundLinks": [
+        "https://noasenpai-anime.com/",
+        "https://www.crunchyroll.com/news/latest/2026/10/11/noa-senpai-wa-tomodachi-anime-2027-release-date-key-visual-main-cast",
+        "https://www.termsfeed.com/"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "now-that-we-draw-anime-january-2027",
+      "editorialWords": 1171,
+      "outboundLinks": [
+        "https://kakunaru-anime.com/",
+        "https://prtimes.jp/main/html/rd/p/000000173.000086721.html",
+        "https://sevenseasentertainment.com/series/now-that-we-draw/",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=u05QQa7wun4"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "nues-exorcist-anime-summer-2027",
+      "editorialWords": 1209,
+      "outboundLinks": [
+        "https://shonenjumpplus.com/episode/4856001361235899893",
+        "https://shueisha-dena-projects.com/news/hAsyWq0o",
+        "https://www.nues-exorcist.com/",
+        "https://www.nues-exorcist.com/news/post-1",
+        "https://www.nues-exorcist.com/news/post-2",
+        "https://www.nues-exorcist.com/news/post-5",
+        "https://www.shueisha.co.jp/books/items/contents.html?isbn=978-4-08-883687-4",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=OZx5W4o4KT8"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "one-piece-elbaph-arc-english-dub-october-2026",
+      "editorialWords": 1218,
+      "outboundLinks": [
+        "https://www.crunchyroll.com/news/announcements/2026/8/24/one-piece-elbaph-arc-english-dub-weekly-stream-crunchyroll-starting-october-20",
+        "https://www.crunchyroll.com/watch/GE00350806ENUS/the-long-sought-elbaph-the-big-reunion-banquet",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=YnczpEoeaDM"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "one-punch-man-season-3-part-2-january-2027",
+      "editorialWords": 1219,
+      "outboundLinks": [
+        "https://onepunchman-anime.net/goods/bd/season3_1.php",
+        "https://onepunchman-anime.net/news/",
+        "https://onepunchman-anime.net/news/archives/7808",
+        "https://www.crunchyroll.com/news/latest/2026/10/10/one-punch-man-season-3-part-2-anime-january-2027-premiere-trailer-key-art",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=VR9MRmP2GF8"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "orochi-seventh-echoes-pilot-where-to-watch",
+      "editorialWords": 1242,
+      "outboundLinks": [
+        "https://bluerights.jp/news/%E3%80%8E%E3%82%AA%E3%83%AD%E3%83%81-seventh-echoes-%E3%80%8F%E3%83%91%E3%82%A4%E3%83%AD%E3%83%83%E3%83%88%E3%83%95%E3%82%A3%E3%83%AB%E3%83%A0%E5%85%AC%E9%96%8B%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89/",
+        "https://prtimes.jp/main/html/rd/p/000000013.000141283.html",
+        "https://t.me/share/url?url=https%3A%2F%2Faninextup.com%2Farticles%2Forochi-seventh-echoes-pilot-where-to-watch&text=Where+to+Watch+OROCHI+-Seventh+Echoes-+Free%3A+Official+Pilot+%26+Movie+Release+Status",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Faninextup.com%2Farticles%2Forochi-seventh-echoes-pilot-where-to-watch&text=Where+to+Watch+OROCHI+-Seventh+Echoes-+Free%3A+Official+Pilot+%26+Movie+Release+Status",
+        "https://wa.me/?text=Where+to+Watch+OROCHI+-Seventh+Echoes-+Free%3A+Official+Pilot+%26+Movie+Release+Status+https%3A%2F%2Faninextup.com%2Farticles%2Forochi-seventh-echoes-pilot-where-to-watch",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faninextup.com%2Farticles%2Forochi-seventh-echoes-pilot-where-to-watch",
+        "https://www.reddit.com/submit?url=https%3A%2F%2Faninextup.com%2Farticles%2Forochi-seventh-echoes-pilot-where-to-watch&title=Where+to+Watch+OROCHI+-Seventh+Echoes-+Free%3A+Official+Pilot+%26+Movie+Release+Status",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=p4TQLRaQZH4"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "otherworldly-munchkin-release-date",
+      "editorialWords": 1217,
+      "outboundLinks": [
+        "https://aninextup.com/editorial-policy",
+        "https://kodansha.us/series/otherworldly-munchkin-lets-speedrun-the-dungeon-with-only-1-hp/",
+        "https://www.crunchyroll.com/news/latest/2025/9/16/otherworldly-munchkin-lets-speedrun-the-dungeon-with-only-1-hp-anime-premiere-postponed",
+        "https://www.isekai-munchkin.com/movie/",
+        "https://www.isekai-munchkin.com/news/topics.php?id=27073",
+        "https://www.isekai-munchkin.com/news/topics.php?id=27075",
+        "https://www.isekai-munchkin.com/news/topics.php?id=wp208",
+        "https://www.isekai-munchkin.com/onair/",
+        "https://www.isekai-munchkin.com/staff/",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=xQ6qdEHfIaQ"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "otome-heroines-fight-for-survival-anime",
+      "editorialWords": 1209,
+      "outboundLinks": [
+        "https://otosaba-anime.com/",
+        "https://otosaba-anime.com/news/45/",
+        "https://otosaba-anime.com/news/46/",
+        "https://www.termsfeed.com/",
+        "https://www.tobooks.jp/contents/11456",
+        "https://www.tobooks.jp/contents/22460",
+        "https://www.youtube.com/watch?v=DGPf04O404Y"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "oyatsu-shiba-where-to-watch-youtube",
+      "editorialWords": 1245,
+      "outboundLinks": [
+        "https://prtimes.jp/main/html/rd/p/000000019.000132834.html",
+        "https://t.me/share/url?url=https%3A%2F%2Faninextup.com%2Farticles%2Foyatsu-shiba-where-to-watch-youtube&text=Where+to+Watch+Oyatsu+Shiba+Free%3A+YouTube+Premiere+Time+%26+Episode+Schedule",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Faninextup.com%2Farticles%2Foyatsu-shiba-where-to-watch-youtube&text=Where+to+Watch+Oyatsu+Shiba+Free%3A+YouTube+Premiere+Time+%26+Episode+Schedule",
+        "https://wa.me/?text=Where+to+Watch+Oyatsu+Shiba+Free%3A+YouTube+Premiere+Time+%26+Episode+Schedule+https%3A%2F%2Faninextup.com%2Farticles%2Foyatsu-shiba-where-to-watch-youtube",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faninextup.com%2Farticles%2Foyatsu-shiba-where-to-watch-youtube",
+        "https://www.reddit.com/submit?url=https%3A%2F%2Faninextup.com%2Farticles%2Foyatsu-shiba-where-to-watch-youtube&title=Where+to+Watch+Oyatsu+Shiba+Free%3A+YouTube+Premiere+Time+%26+Episode+Schedule",
+        "https://www.termsfeed.com/",
+        "https://www.tiktok.com/@oyatsushiba_official",
+        "https://www.youtube.com/@oyatsushiba",
+        "https://x.com/oyatsushiba"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "paw-palaces-creditless-ending-october-2026",
+      "editorialWords": 1211,
+      "outboundLinks": [
+        "https://nekokeibishitsu-anime.com/",
+        "https://nekokeibishitsu-anime.com/news/post-136/",
+        "https://nekokeibishitsu-anime.com/news/post-163/",
+        "https://www.crunchyroll.com/news/latest/2026/10/13/paw-palaces-anime-creditless-ending-video",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=UdSboTKzsN0"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "pok-mon-horizons-anime-unseals-treasures-of-ruin-in-latest-wonder-a6b9d2d5",
+      "editorialWords": 921,
+      "outboundLinks": [
+        "https://a.storyblok.com/f/178900/1460x821/0f0acf9126/pokemon-horizons-new-visual.png/m/filters%3Aquality%2895%29format%28webp%29",
+        "https://press.pokemon.com/en-CA/Pokemon-Horizons-The-Series-to-Return-for-Fourth-Season",
+        "https://press.pokemon.com/en/releases/Pokemon-Horizons-The-Series-to-Return-for-Fourth-Season",
+        "https://sg.portal-pokemon.com/pokedex/1001/",
+        "https://sg.portal-pokemon.com/pokedex/1002/",
+        "https://sg.portal-pokemon.com/pokedex/1003/",
+        "https://sg.portal-pokemon.com/pokedex/1004/",
+        "https://www.crunchyroll.com/news/latest/2026/10/9/pokemon-horizons-anime-treasures-of-ruin-wonder-voyage-arc-trailer",
+        "https://www.pokemon.co.jp/info/2026/05/260508_a01.html",
+        "https://www.pokemon.com/us/news/pokemon-horizons-season-4-wonders-ahead-coming-to-netflix",
+        "https://www.termsfeed.com/",
+        "https://www.tv-tokyo.co.jp/anime/pocketmonster2023/",
+        "https://www.tv-tokyo.co.jp/broad_tvtokyo/program/detail/202610/27491_202610161855.html",
+        "https://www.youtube.com/watch?v=n6VZjxUNAww",
+        "https://x.com/anipoke_PR/status/2108506510271889739"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "pokemon-horizons-season-4-wonders-ahead",
+      "editorialWords": 1178,
+      "outboundLinks": [
+        "https://press.pokemon.com/en/Pokemon-Horizons-The-Series-to-Return-for-Fourth-Season",
+        "https://press.pokemon.com/es-MX/Pokemon-Horizons-The-Series-to-Return-for-Fourth-Season",
+        "https://www.pokemon.com/us/news/pokemon-horizons-season-4-wonders-ahead-coming-to-netflix",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=QwXy-HbEKmI"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "prisma-illya-finale-anime-2027",
+      "editorialWords": 904,
+      "outboundLinks": [
+        "https://anime.prisma-illya.jp/1st/",
+        "https://anime.prisma-illya.jp/finale/",
+        "https://anime.prisma-illya.jp/movie/3/",
+        "https://group.kadokawa.co.jp/information/promotional_topics/article-15272.html",
+        "https://prisma-illya.jp/portal/archives/5752",
+        "https://www.termsfeed.com/"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "psyren-release-date",
+      "editorialWords": 879,
+      "outboundLinks": [
+        "https://psyren-anime-global.com/",
+        "https://psyren-anime-global.com/movie",
+        "https://psyren-anime-global.com/staff-cast",
+        "https://psyren-anime.com/music",
+        "https://psyren-anime.com/on-air",
+        "https://www.crunchyroll.com/news/announcements/2026/10/2/psyren-anime-release-date-crunchyroll",
+        "https://www.crunchyroll.com/pl/news/announcements/2026/10/2/psyren-anime-release-date-crunchyroll",
+        "https://www.termsfeed.com/",
+        "https://www.viz.com/psyren",
+        "https://www.viz.com/shonenjump/chapters/psyren",
+        "https://www.youtube.com/watch?v=kACrcUBQY3Y"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "rainy-day-serenade-anime-release-date",
+      "editorialWords": 1221,
+      "outboundLinks": [
+        "https://namidaame-anime.com/",
+        "https://namidaame-anime.com/news/26",
+        "https://t.me/share/url?url=https%3A%2F%2Faninextup.com%2Farticles%2Frainy-day-serenade-anime-release-date&text=Rainy+Day+Serenade+Anime+Release+Date+and+English+Manga+Guide",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Faninextup.com%2Farticles%2Frainy-day-serenade-anime-release-date&text=Rainy+Day+Serenade+Anime+Release+Date+and+English+Manga+Guide",
+        "https://wa.me/?text=Rainy+Day+Serenade+Anime+Release+Date+and+English+Manga+Guide+https%3A%2F%2Faninextup.com%2Farticles%2Frainy-day-serenade-anime-release-date",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faninextup.com%2Farticles%2Frainy-day-serenade-anime-release-date",
+        "https://www.penguinrandomhouse.com/books/826316/rainy-day-serenade-omnibus-1-vol-1-2-by-haruka-kawachi/",
+        "https://www.reddit.com/submit?url=https%3A%2F%2Faninextup.com%2Farticles%2Frainy-day-serenade-anime-release-date&title=Rainy+Day+Serenade+Anime+Release+Date+and+English+Manga+Guide",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=UoP07Op8NSw"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "rakuen-tsuihou-kokoro-no-resonance",
+      "editorialWords": 1211,
+      "outboundLinks": [
+        "https://eiga.com/news/20261018/6/",
+        "https://news.aniplex.co.jp/detail.html?id=71470",
+        "https://rakuen-tsuiho-r.com/",
+        "https://rakuen-tsuiho-r.com/music/",
+        "https://rakuen-tsuiho-r.com/news/",
+        "https://www.nogizaka46.com/s/n46/news/detail/102330",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=gdqs6y-6R3g"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "ramparts-of-ice-season-2",
+      "editorialWords": 1625,
+      "outboundLinks": [
+        "https://about.netflix.com/en/news/the-ramparts-of-ice-season-2",
+        "https://korinojoheki-pr.com/",
+        "https://mangaplaza.com/genre/3/152/",
+        "https://media.netflix.com/en/only-on-netflix/82031882",
+        "https://www.tbs.co.jp/tv/20261001_BF1B.html",
+        "https://www.tbs.co.jp/tv/20261029_C2FF.html",
+        "https://www.tbs.co.jp/tv/20261105_C3F4.html",
+        "https://www.termsfeed.com/",
+        "https://www.universal-music.co.jp/thebeatgarden/news/2026-09-14/"
+      ],
+      "reviewRecord": false,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "ranma-season-3",
+      "editorialWords": 1213,
+      "outboundLinks": [
+        "https://about.netflix.com/en/news/netflix-anime-titles-revealed-mappa-15th-anniversary",
+        "https://ranma-pr.com/intro/",
+        "https://ranma-pr.com/news/2467/",
+        "https://ranma-pr.com/onair/",
+        "https://ranma-pr.com/staffcast/",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=CeUZpSuOuS4"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "reborn-space-mercenary",
+      "editorialWords": 888,
+      "outboundLinks": [
+        "https://www.crunchyroll.com/news/announcements/2026/10/2/reborn-as-a-space-mercenary-i-woke-up-piloting-the-strongest-starship-anime-english-dub-release-date",
+        "https://www.crunchyroll.com/news/announcements/2026/10/2/reborn-as-a-space-mercenary-i-woke-up-piloting-the-strongest-starship-anime-english-dub-release-date-cast-crew",
+        "https://www.crunchyroll.com/news/latest/2026/9/15/reborn-as-a-space-mercenary-anime-main-trailer-visual-additional-cast",
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=ov_3-6JOAkk"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "record-of-a-fallen-vampire-anime",
+      "editorialWords": 1170,
+      "outboundLinks": [
+        "https://vampirex-anime.com/",
+        "https://www.termsfeed.com/",
+        "https://www.viz.com/manga-books/manga/record-of-a-fallen-vampire-volume-1/product/1431",
+        "https://www.viz.com/manga-books/manga/record-of-a-fallen-vampire/all",
+        "https://www.youtube.com/watch?v=qbfo4EyFeNw"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "red-riding-hood-detective-story",
+      "editorialWords": 1206,
+      "outboundLinks": [
+        "https://akazukin-anime.com/",
+        "https://www.crunchyroll.com/news/latest/2026/10/5/red-riding-hood-a-detective-story-anime-main-trailer-key-visual-january-2027-release-date",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=dRYjeN1IDcA"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "reincarnated-as-a-sword-season-2-english-dub-release-date",
+      "editorialWords": 1208,
+      "outboundLinks": [
+        "https://news.hidive.com/2026/10/21/hidive-reveals-the-fall-2026-dub-schedule",
+        "https://news.hidive.com/2026/9/30/heres-the-anime-coming-to-and-leaving-hidive-in-october-2026",
+        "https://sevenseasentertainment.com/series/reincarnated-as-a-sword-light-novel/",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=Yt364dCCxIE"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "reincarnated-goblin",
+      "editorialWords": 1171,
+      "outboundLinks": [
+        "https://prtimes.jp/main/html/rd/p/000000153.000084062.html",
+        "https://tengobu-anime.com/",
+        "https://tengobu-anime.com/introduction/index.html",
+        "https://tengobu-anime.com/onair/index.html",
+        "https://tengobu-anime.com/staffcast/index.html",
+        "https://www.bs11.jp/anime/tengobu/",
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=ynr8tFWrK4c",
+        "https://yenpress.com/titles/9781975346041-so-what-s-wrong-with-getting-reborn-as-a-goblin-vol-1"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "returners-magic-season-2",
+      "editorialWords": 1157,
+      "outboundLinks": [
+        "https://www.aniplex.co.jp/lineup/kikansha_season2/",
+        "https://www.crunchyroll.com/news/announcements/2026/10/6/a-returners-magic-should-be-special-anime-english-dub-release-date-cast-crew",
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+        "https://www.fujitv.com/animation/areturnersmagicshouldbespecialseason2/",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=GtUa0uSlowI"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "romelia-war-chronicle",
+      "editorialWords": 1199,
+      "outboundLinks": [
+        "https://romelia-senki.com/",
+        "https://romelia-senki.com/movie/",
+        "https://romelia-senki.com/onair/",
+        "https://romelia-senki.com/staff/",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=PxXPcoo8uGM"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "sakamoto-days-season-2",
+      "editorialWords": 1206,
+      "outboundLinks": [
+        "https://about.netflix.com/en/news/sakamoto-days-season-2-returns-january-2027",
+        "https://www.netflix.com/tudum/articles/sakamoto-days-anime-adaptation-release-date-cast-photos-news",
+        "https://www.netflix.com/tudum/articles/sakamoto-days-season-2-release-date-news",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=Ld4PMbghy78"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "sasaki-and-peeps-season-2-anime-shares-creditless-opening-and-end-a03f04c7",
+      "editorialWords": 921,
+      "outboundLinks": [
+        "https://sasapi-anime.com/",
+        "https://sasapi-anime.com/images/special/visual/key_visual05.jpg",
+        "https://sasapi-anime.com/intro.html",
+        "https://sasapi-anime.com/music.html",
+        "https://sasapi-anime.com/music/ending_2nd.html",
+        "https://sasapi-anime.com/music/opening_2nd.html",
+        "https://sasapi-anime.com/onair.html",
+        "https://sasapi-anime.com/staff.html",
+        "https://www.crunchyroll.com/news/latest/2026/10/9/sasaki-and-peeps-season-2-anime-creditless-opening-ending",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=gY0hpk9E7p8"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "sasaki-and-peeps-season-2",
+      "editorialWords": 1184,
+      "outboundLinks": [
+        "https://license.kadokawa.co.jp/anime/2026fall/entry-32858.html",
+        "https://sasapi-anime.com/",
+        "https://sasapi-anime.com/onair.html",
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+        "https://www.kadokawa.co.jp/product/video2720/",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=w7UIM4myqm4"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "sekiro-no-defeat-release-date",
+      "editorialWords": 1215,
+      "outboundLinks": [
+        "https://sekiro-anime.jp/news.html#news-260925-1",
+        "https://sekiro-anime.jp/tv/",
+        "https://sekiro-anime.jp/tv/staffcast.html",
+        "https://sekiro-anime.jp/tv/story.html",
+        "https://www.crunchyroll.com/news/latest/2026/9/24/sekiro-no-defeat-anime-series-january-2027-premiere",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=q0zQNh0wSb0"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "shangri-la-frontier-season-3-release-date",
+      "editorialWords": 1200,
+      "outboundLinks": [
+        "https://anime.shangrilafrontier.com/",
+        "https://anime.shangrilafrontier.com/1st2nd/topics/2488/",
+        "https://anime.shangrilafrontier.com/onair/",
+        "https://anime.shangrilafrontier.com/staffcast/",
+        "https://anime.shangrilafrontier.com/topics/32/",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=84JvYWUOOaU"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "skip-and-loafer-season-2-release-date",
+      "editorialWords": 1267,
+      "outboundLinks": [
+        "https://sevenseasentertainment.com/series/skip-and-loafer/",
+        "https://skip-and-loafer.com/news.html",
+        "https://t.me/share/url?url=https%3A%2F%2Faninextup.com%2Farticles%2Fskip-and-loafer-season-2-release-date&text=Skip+and+Loafer+Season+2%3A+April+2027+Release+Window%2C+Trailer+%26+Where+to+Watch",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Faninextup.com%2Farticles%2Fskip-and-loafer-season-2-release-date&text=Skip+and+Loafer+Season+2%3A+April+2027+Release+Window%2C+Trailer+%26+Where+to+Watch",
+        "https://wa.me/?text=Skip+and+Loafer+Season+2%3A+April+2027+Release+Window%2C+Trailer+%26+Where+to+Watch+https%3A%2F%2Faninextup.com%2Farticles%2Fskip-and-loafer-season-2-release-date",
+        "https://www.crunchyroll.com/news/latest/2026/8/16/skip-and-loafer-season-2-anime-april-2027-premiere-teaser-trailer",
+        "https://www.crunchyroll.com/search?q=Skip%20and%20Loafer",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faninextup.com%2Farticles%2Fskip-and-loafer-season-2-release-date",
+        "https://www.reddit.com/submit?url=https%3A%2F%2Faninextup.com%2Farticles%2Fskip-and-loafer-season-2-release-date&title=Skip+and+Loafer+Season+2%3A+April+2027+Release+Window%2C+Trailer+%26+Where+to+Watch",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=Mu1bChJEm1c"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "spirit-circle-anime-release-date",
+      "editorialWords": 1258,
+      "outboundLinks": [
+        "https://sevenseasentertainment.com/books/spirit-circle-vol-1/",
+        "https://sevenseasentertainment.com/books/spirit-circle-vol-2/",
+        "https://sevenseasentertainment.com/series/spirit-circle/",
+        "https://t.me/share/url?url=https%3A%2F%2Faninextup.com%2Farticles%2Fspirit-circle-anime-release-date&text=Spirit+Circle+Anime%3A+December+2026+Release%2C+18+Episodes+%26+First+Trailer",
+        "https://twinengine.jp/news/21168",
+        "https://twinengine.jp/studios/",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Faninextup.com%2Farticles%2Fspirit-circle-anime-release-date&text=Spirit+Circle+Anime%3A+December+2026+Release%2C+18+Episodes+%26+First+Trailer",
+        "https://wa.me/?text=Spirit+Circle+Anime%3A+December+2026+Release%2C+18+Episodes+%26+First+Trailer+https%3A%2F%2Faninextup.com%2Farticles%2Fspirit-circle-anime-release-date",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faninextup.com%2Farticles%2Fspirit-circle-anime-release-date",
+        "https://www.reddit.com/submit?url=https%3A%2F%2Faninextup.com%2Farticles%2Fspirit-circle-anime-release-date&title=Spirit+Circle+Anime%3A+December+2026+Release%2C+18+Episodes+%26+First+Trailer",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=RQnO-Uj4HD8"
+      ],
+      "reviewRecord": false,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "sss-class-revival-hunter-anime-january-2027",
+      "editorialWords": 849,
+      "outboundLinks": [
+        "https://sss-revival.com/",
+        "https://sss-revival.com/news/index00030000.html",
+        "https://tapas.io/series/sss-class-revival-hunter/info",
+        "https://www.crunchyroll.com/news/latest/2026/10/11/sss-class-revival-hunter-anime-teaser-trailer-additional-cast-ending-theme-song",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=C6ecZk2mHqA",
+        "https://yenpress.com/series/sss-class-revival-hunter"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "suikoden-anime",
+      "editorialWords": 1222,
+      "outboundLinks": [
+        "https://suikoden-anime.com/",
+        "https://suikoden-anime.com/en/",
+        "https://suikoden-anime.com/onair/",
+        "https://www.konami.com/games/suikoden/en/",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=m4T9VcBD0vo"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "takopis-original-sin-movie",
+      "editorialWords": 1204,
+      "outboundLinks": [
+        "https://www.tbs.co.jp/anime/takopi_project/news/news20260818.html",
+        "https://www.tbs.co.jp/anime/takopi_project/news/news20261023.html",
+        "https://www.tbs.co.jp/anime/takopi_project/series/news/news20260817.html",
+        "https://www.tbs.co.jp/anime/takopi_project/ticket/",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=mnoR-kTU25E"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "tale-secret-saint",
+      "editorialWords": 1206,
+      "outboundLinks": [
+        "https://daiseijo-anime.com/movie/",
+        "https://sevenseasentertainment.com/series/a-tale-of-the-secret-saint-manga/",
+        "https://www.crunchyroll.com/news/latest/2026/10/5/a-tale-of-the-secret-saint-anime-creditless-opening-ending-videos",
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+        "https://www.crunchyroll.com/series/GT00371633/a-tale-of-the-secret-saint",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=9oBywQ403ZA"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "tank-chair-release-date",
+      "editorialWords": 1235,
+      "outboundLinks": [
+        "https://kodansha.us/2026/09/15/sirius-magazine-spotlight-sale/",
+        "https://kodansha.us/series/tank-chair/volume-1/",
+        "https://www.ppi.co.jp/news/ppinews20260812_tank-chair/?l=e",
+        "https://www.ppi.co.jp/works/tank-chair/",
+        "https://www.tankchair-anime.com/",
+        "https://www.tankchair-anime.com/en/caststaff.php",
+        "https://www.tankchair-anime.com/en/character.php",
+        "https://www.tankchair-anime.com/en/news-single.php?id=23647",
+        "https://www.tankchair-anime.com/en/onair.php",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=cKYDotoFHSI"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "tensei-elf-release-date",
+      "editorialWords": 1389,
+      "outboundLinks": [
+        "https://aninextup.com/editorial-policy",
+        "https://novema.jp/comic/serial/n105",
+        "https://prtimes.jp/main/html/rd/p/000002308.000000607.html",
+        "https://tenseielf.asmik-ace.co.jp/",
+        "https://tenseielf.asmik-ace.co.jp/books/",
+        "https://tenseielf.asmik-ace.co.jp/movie/",
+        "https://tenseielf.asmik-ace.co.jp/music/",
+        "https://tenseielf.asmik-ace.co.jp/onair/",
+        "https://tenseielf.asmik-ace.co.jp/staff/",
+        "https://www.crunchyroll.com/news/latest/2026/9/20/majutsu-wo-kiwamete-tabi-ni-deta-tensei-elf-moteamashita-jumyo-de-ikeru-densetsu-to-naru-anime-january-2027-release-date-first-2-minutes",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=zRvOQb5Vic8"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "the-boxer-anime-announcement",
+      "editorialWords": 1217,
+      "outboundLinks": [
+        "https://about.webtoon.com/press-release/261",
+        "https://manga.line.me/product/periodic?id=Z0000747",
+        "https://prtimes.jp/main/html/rd/p/000000531.000063705.html",
+        "https://www.crunchyroll.com/es/news/latest/2026/10/9/the-boxer-anime-anuncio-trailer-staff-seiyuus",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=Y6pedL99rcY"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "the-dangers-in-my-heart-season-3",
+      "editorialWords": 1256,
+      "outboundLinks": [
+        "https://bokuyaba-anime-movie.com/news/detail/?id=1125999",
+        "https://bokuyaba-anime.com/news/detail/?id=1137059",
+        "https://bokuyaba-anime.com/onair/",
+        "https://sevenseasentertainment.com/2026/05/06/seven-seas-licenses-the-dangers-in-my-heart-the-romantic-comedy-wont-start-manga-series/",
+        "https://sevenseasentertainment.com/series/the-dangers-in-my-heart/",
+        "https://shin-ei-animation.jp/works/movie_bokuyaba/",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=_D0hm_akpFw"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "the-fable-season-2-january-2027",
+      "editorialWords": 1204,
+      "outboundLinks": [
+        "https://kodansha.us/series/the-fable/",
+        "https://www.termsfeed.com/",
+        "https://www.vap.co.jp/the-fable-anime/",
+        "https://www.vap.co.jp/the-fable-anime/character/",
+        "https://www.vap.co.jp/the-fable-anime/news/",
+        "https://www.vap.co.jp/the-fable-anime/news/20261014.html",
+        "https://www.vap.co.jp/the-fable-anime/staffcast/",
+        "https://www.youtube.com/watch?v=VoZ43A3XE-Q"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "the-moon-on-a-rainy-night-anime",
+      "editorialWords": 902,
+      "outboundLinks": [
+        "https://amayonotsuki.jp/",
+        "https://amayonotsuki.jp/assets/img/top/kv.jpg",
+        "https://amayonotsuki.jp/news/post-36",
+        "https://kodansha.us/2024/11/15/anime-announcement-the-moon-on-a-rainy-night/",
+        "https://kodansha.us/series/the-moon-on-a-rainy-night/",
+        "https://prtimes.jp/main/html/rd/p/000006620.000001719.html",
+        "https://www.amayonotsuki.jp/",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=Q-W1E8Y9Jv0"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "the-one-later-on-anime-release-date",
+      "editorialWords": 1357,
+      "outboundLinks": [
+        "https://aninextup.com/editorial-policy",
+        "https://comic-earthstar.com/article/entry/2026/11/24/100000",
+        "https://news.ponycanyon.co.jp/2026/11/128104",
+        "https://prtimes.jp/main/html/rd/p/000000742.000101562.html",
+        "https://titan-comics.com/manga/2407-the-one-later-on/",
+        "https://www.termsfeed.com/",
+        "https://x.com/sonomono_anime"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "the-one-piece-netflix-february-2027",
+      "editorialWords": 1203,
+      "outboundLinks": [
+        "https://about.netflix.com/en/news/netflix-previews-its-animation-slate-for-2026-and-beyond",
+        "https://one-piece.com/news/80221/index.html",
+        "https://one-piece.com/news/80222/index.html",
+        "https://www.netflix.com/tudum/articles/the-one-piece-release-date",
+        "https://www.netflix.com/tudum/articles/the-one-piece-release-date?inapp=true%2F",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=3Gmo0EXHyKg"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "tokyo-revengers-war-three-titans",
+      "editorialWords": 893,
+      "outboundLinks": [
+        "https://press.disneyplus.com/news/next-on-disney-plus-october-2026",
+        "https://tokyo-revengers-anime.com/img/home/visual_10.jpg",
+        "https://tokyo-revengers-anime.com/news/archives/5125",
+        "https://tokyo-revengers-anime.com/onair/",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=veuS7n4Zks4"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "tsugumi-project-anime-release-date",
+      "editorialWords": 1216,
+      "outboundLinks": [
+        "https://kodansha.us/book/tsugumi-project/",
+        "https://kodansha.us/book/tsugumi-project/tsugumi-project-volume-1/",
+        "https://t.me/share/url?url=https%3A%2F%2Faninextup.com%2Farticles%2Ftsugumi-project-anime-release-date&text=Tsugumi+Project+Anime+Release+Date%2C+Cast+%26+English+Manga+Guide",
+        "https://toratsugumi.jp/",
+        "https://toratsugumi.jp/news/2026-11-12_01.html",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Faninextup.com%2Farticles%2Ftsugumi-project-anime-release-date&text=Tsugumi+Project+Anime+Release+Date%2C+Cast+%26+English+Manga+Guide",
+        "https://wa.me/?text=Tsugumi+Project+Anime+Release+Date%2C+Cast+%26+English+Manga+Guide+https%3A%2F%2Faninextup.com%2Farticles%2Ftsugumi-project-anime-release-date",
+        "https://www.crunchyroll.com/news/latest/2026/10/19/tsugumi-project-anime-main-cast",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faninextup.com%2Farticles%2Ftsugumi-project-anime-release-date",
+        "https://www.reddit.com/submit?url=https%3A%2F%2Faninextup.com%2Farticles%2Ftsugumi-project-anime-release-date&title=Tsugumi+Project+Anime+Release+Date%2C+Cast+%26+English+Manga+Guide",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=v79n9_MRLrk"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "vermilion-mask-release-date",
+      "editorialWords": 1206,
+      "outboundLinks": [
+        "https://prtimes.jp/main/html/rd/p/000000815.000051825.html",
+        "https://the-vermilion-mask.com/",
+        "https://the-vermilion-mask.com/en/",
+        "https://the-vermilion-mask.com/en/staff/",
+        "https://www.crunchyroll.com/es/news/seasonal-lineup/2026/9/15/otono-2026-anime-crunchyroll",
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+        "https://www.prnewswire.com/news-releases/the-mask-comes-off-in-october-the-vermilion-mask-reveals-second-main-pv-key-visual-theme-songs-and-new-cast-302875686.html",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=iX4N-Z5Hbxw"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "vertex-force-anime-release-date",
+      "editorialWords": 1233,
+      "outboundLinks": [
+        "https://vertexforce.jp/",
+        "https://vertexforce.jp/news/?id=71515",
+        "https://vertexforce.jp/onair/"
+      ],
+      "reviewRecord": false,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "votoms-gray-witch-part-1",
+      "editorialWords": 891,
+      "outboundLinks": [
+        "https://www.termsfeed.com/",
+        "https://www.votoms-gh.com/news/detail.php?id=23579",
+        "https://www.votoms-gh.com/news/detail.php?id=24091",
+        "https://www.votoms-gh.com/news/detail.php?id=26614",
+        "https://www.youtube.com/feeds/videos.xml?channel_id=UCmDLyFjSutfb1MK7F6cMVSA",
+        "https://www.youtube.com/watch?v=7NH-89IIBZ4",
+        "https://www.youtube.com/watch?v=dTUpnswZ3VU"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "walking-home-with-you-anime",
+      "editorialWords": 1210,
+      "outboundLinks": [
+        "https://prtimes.jp/main/html/rd/p/000000212.000127482.html",
+        "https://www.termsfeed.com/"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "welsh-shedar-episode-1-english-dub",
+      "editorialWords": 1338,
+      "outboundLinks": [
+        "https://my.worldacg.com/press-release/2026-11-05/ankama-animations-welsh-and-shedar-premieres-today-on-youtube/.243573",
+        "https://support.google.com/youtube/answer/13339776?hl=en",
+        "https://t.me/share/url?url=https%3A%2F%2Faninextup.com%2Farticles%2Fwelsh-shedar-episode-1-english-dub&text=Where+to+Watch+Welsh+%26+Shedar+Episode+1+Free+in+English",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Faninextup.com%2Farticles%2Fwelsh-shedar-episode-1-english-dub&text=Where+to+Watch+Welsh+%26+Shedar+Episode+1+Free+in+English",
+        "https://wa.me/?text=Where+to+Watch+Welsh+%26+Shedar+Episode+1+Free+in+English+https%3A%2F%2Faninextup.com%2Farticles%2Fwelsh-shedar-episode-1-english-dub",
+        "https://welshandshedar-anime.com/",
+        "https://welshandshedar-anime.com/10/",
+        "https://www.anitrendz.com/news/2026/10/19/welsh-shedar-anime-series-begins-streaming-on-youtube-on-november-5",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faninextup.com%2Farticles%2Fwelsh-shedar-episode-1-english-dub",
+        "https://www.reddit.com/submit?url=https%3A%2F%2Faninextup.com%2Farticles%2Fwelsh-shedar-episode-1-english-dub&title=Where+to+Watch+Welsh+%26+Shedar+Episode+1+Free+in+English",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/playlist?list=PLQQZ_5MCShus",
+        "https://www.youtube.com/watch?v=P14DA8rk7Bc",
+        "https://www.youtube.com/watch?v=Y86qpxydosM",
+        "https://x.com/ES_DOFUS/status/2118372778319482890"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "where-to-watch-one-piece",
+      "editorialWords": 1431,
+      "outboundLinks": [
+        "https://about.netflix.com/en/news/new-anime-series-the-one-piece",
+        "https://help.crunchyroll.com/hc/en-us/articles/43269213267092-Why-can-t-I-watch-certain-shows-in-my-region",
+        "https://help.netflix.com/en/node/14164",
+        "https://one-piece.com/news/78635/index.html",
+        "https://toei-animation-usa.com/press-releases/pressrelease-2-17-26.pdf",
+        "https://www.crunchyroll.com/es/series/GRMG8ZQZR/one-piece",
+        "https://www.crunchyroll.com/watch/GE00350806ENUS/the-long-sought-elbaph-the-big-reunion-banquet",
+        "https://www.hulu.com/series/one-piece-c7a08df6-d0d5-4dd3-afff-d1f90133cd4e",
+        "https://www.netflix.com/title/80107103",
+        "https://www.netflix.com/tudum/articles/what-is-one-piece?inapp=trueOs",
+        "https://www.toei-animation.com/one-piece-elbaph/",
+        "https://www.youtube.com/watch?v=YnczpEoeaDM"
+      ],
+      "reviewRecord": false,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "witch-on-the-holy-night-movie",
+      "editorialWords": 1209,
+      "outboundLinks": [
+        "https://mahoyo-movie.com/",
+        "https://mahoyo-movie.com/news/?article_id=71368",
+        "https://www.crunchyroll.com/it/news/announcements/2026/9/10/witch-on-the-holy-night-anime-uscita-mondiale-gennaio-2027",
+        "https://www.crunchyroll.com/news/announcements/2026/9/10/witch-on-the-holy-night-anime-movie-worldwide-release-january-2027",
+        "https://www.termsfeed.com/",
+        "https://www.ufotable.com/news/article/3055/",
+        "https://www.youtube.com/watch?v=k1jyM2kSBzA"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "worlds-strongest-witch",
+      "editorialWords": 1212,
+      "outboundLinks": [
+        "https://honeyworks.jp/news/11670/",
+        "https://magazine.jp.square-enix.com/sqexnovel/series/detail/sekaisaikyonomajo/",
+        "https://sekamajo-anime.com/onair/",
+        "https://www.crunchyroll.com/es/news/seasonal-lineup/2026/9/15/otono-2026-anime-crunchyroll",
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll",
+        "https://www.crunchyroll.com/news/seasonal-lineup/2026/9/15/fall-anime-2026-crunchyroll?lid=0ojihzvhs258",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=0ISyxMMLVg8",
+        "https://www.yte.co.jp/program/list/sekamajo/"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "wound-and-bandage-anime-release-date",
+      "editorialWords": 1280,
+      "outboundLinks": [
+        "https://houtaidoumei.com/",
+        "https://houtaidoumei.com/news/22/",
+        "https://houtaidoumei.com/news/37/",
+        "https://t.me/share/url?url=https%3A%2F%2Faninextup.com%2Farticles%2Fwound-and-bandage-anime-release-date&text=Wound+%26+Bandage+Anime+Release+Date%2C+Japan+Schedule+%26+Streaming",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Faninextup.com%2Farticles%2Fwound-and-bandage-anime-release-date&text=Wound+%26+Bandage+Anime+Release+Date%2C+Japan+Schedule+%26+Streaming",
+        "https://wa.me/?text=Wound+%26+Bandage+Anime+Release+Date%2C+Japan+Schedule+%26+Streaming+https%3A%2F%2Faninextup.com%2Farticles%2Fwound-and-bandage-anime-release-date",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faninextup.com%2Farticles%2Fwound-and-bandage-anime-release-date",
+        "https://www.reddit.com/submit?url=https%3A%2F%2Faninextup.com%2Farticles%2Fwound-and-bandage-anime-release-date&title=Wound+%26+Bandage+Anime+Release+Date%2C+Japan+Schedule+%26+Streaming",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=DyimnIi9nJk"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    },
+    {
+      "article": "yumeneko-connect-anime-announcement",
+      "editorialWords": 1367,
+      "outboundLinks": [
+        "https://pocket.shonenmagazine.com/title/02631",
+        "https://pocket.shonenmagazine.com/title/02631/episode/409334",
+        "https://sh-anime.shochiku.co.jp/yumeconne-anime-info/news/",
+        "https://sh-anime.shochiku.co.jp/yumeconne-anime-info/news/24/",
+        "https://sh-anime.shochiku.co.jp/yumeconne-anime-info/news/8/",
+        "https://sh-anime.shochiku.co.jp/yumeconne-anime/",
+        "https://www.termsfeed.com/",
+        "https://www.youtube.com/watch?v=LCAL2iL5vLc"
+      ],
+      "reviewRecord": true,
+      "factualReverification": "not performed in this copy edit"
+    }
+  ],
+  "copyEditedArticles": [
+    "aikatsu-stars-hoshiboshi-no-progress-release-date",
+    "anime-news-october-2026",
+    "anime-releasing-november-2026",
+    "aoashi-season-2",
+    "because-i-the-true-saint-was-banished-anime-january-2027",
+    "black-clover-season-2",
+    "bleach-thousand-year-blood-war-the-last-pv-episodes-49-50",
+    "dandivine-release-date",
+    "delicious-in-dungeon-season-2-release-date",
+    "demons-crest-release-date",
+    "dengeki-daisy-anime-january-2027-trailer-cast",
+    "dreamland-release-date",
+    "dual-shadow-precure-villain-heroines-anime-2027",
+    "firefly-wedding",
+    "frieren-season-3-release-date",
+    "ghost-of-tsushima-legends-anime-2028",
+    "haru-to-gen-anime-january-4-2027",
+    "hello-witch-love-potion-release-date",
+    "horror-collector-release-date",
+    "i-got-a-cheat-skill-season-2-january-2027",
+    "i-lost-my-adventurers-license-anime-january-2027",
+    "iceblade-sorcerer-ii",
+    "im-looking-for-a-zombie",
+    "inherit-the-winds-anime-january-2027",
+    "jirai-girl-chihara-san-anime-january-2027",
+    "laid-off-cheat-granting-mage",
+    "live-action-firefly-wedding-tv-drama-announced-for-2027-a1ac1e86",
+    "love-live-hasunosora-release-date",
+    "made-in-abyss-awakening-mystery-release-date",
+    "maebashi-witches-emoemories-release-date",
+    "mashle-season-3-release-date",
+    "mobile-suit-gundam-seed-freedom-zero-release-date",
+    "naruto-shadow-rising-manga",
+    "nia-liston-release-date",
+    "now-that-we-draw-anime-january-2027",
+    "orochi-seventh-echoes-pilot-where-to-watch",
+    "pok-mon-horizons-anime-unseals-treasures-of-ruin-in-latest-wonder-a6b9d2d5",
+    "pokemon-horizons-season-4-wonders-ahead",
+    "prisma-illya-finale-anime-2027",
+    "psyren-release-date",
+    "reborn-space-mercenary",
+    "record-of-a-fallen-vampire-anime",
+    "reincarnated-goblin",
+    "returners-magic-season-2",
+    "romelia-war-chronicle",
+    "sasaki-and-peeps-season-2-anime-shares-creditless-opening-and-end-a03f04c7",
+    "sasaki-and-peeps-season-2",
+    "shangri-la-frontier-season-3-release-date",
+    "sss-class-revival-hunter-anime-january-2027",
+    "the-moon-on-a-rainy-night-anime",
+    "the-one-piece-netflix-february-2027",
+    "tokyo-revengers-war-three-titans",
+    "votoms-gray-witch-part-1"
+  ],
+  "copyEditWordsRemoved": 8994
+}

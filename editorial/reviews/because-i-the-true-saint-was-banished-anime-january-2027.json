@@ -2,7 +2,7 @@
   "intent": "Which True Saint title should you follow?",
   "keyword": "The True Saint Was Banished Anime: January 2027 & Trailer",
   "verifiedOn": "2026-11-15",
-  "editorialWords": 1216,
+  "editorialWords": 909,
   "cover": {
     "path": "/assets/images/external/a7a27c69b44ed72413a9175d32cf3300d5da6394a53d69ce6050ce1928c21990.webp",
     "imageUrl": "https://aninextup.com/assets/images/external/a7a27c69b44ed72413a9175d32cf3300d5da6394a53d69ce6050ce1928c21990.webp",
@@ -14,5 +14,7 @@
     "status": "not-available",
     "sourceUrl": "https://www.shinnoseijo-anime.com/",
     "reason": "This edition does not embed a video player. Official previews, when listed, are linked from the article."
-  }
+  },
+  "copyEditedOn": "2026-11-26",
+  "copyEdit": "Condensed repetitive catch-up advice, retaining title-specific guidance and publisher links. Earlier factual verification date unchanged."
 }

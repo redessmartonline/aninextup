@@ -1,7 +1,7 @@
 {
   "intent": "Find where Demons’ Crest streams, its launch time and weekly release cadence.",
   "keyword": "Demons’ Crest where to watch",
-  "editorialWords": 1646,
+  "editorialWords": 1585,
   "verifiedOn": "2026-11-14",
   "sources": [
     "https://demonscrest-anime.com/",
@@ -26,5 +26,7 @@
     "channel": "Prime Video JP",
     "youtubeId": "Sj4Pu2qu43A",
     "verification": "Amazon Japan press release links this trailer ID. Standalone thumbnail reuse permission is unverified."
-  }
+  },
+  "copyEditedOn": "2026-11-26",
+  "copyEdit": "Removed technical video-upload/structured-data commentary that did not answer viewing questions; underlying factual review date unchanged."
 }

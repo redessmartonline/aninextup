@@ -6,7 +6,7 @@
     "Does the pilot have English subtitles?",
     "Who is making the film?"
   ],
-  "editorialWords": 1254,
+  "editorialWords": 1242,
   "verifiedOn": "2026-11-13",
   "sources": [
     "https://bluerights.jp/news/%E3%80%8E%E3%82%AA%E3%83%AD%E3%83%81-seventh-echoes-%E3%80%8F%E3%83%91%E3%82%A4%E3%83%AD%E3%83%83%E3%83%88%E3%83%95%E3%82%A3%E3%83%AB%E3%83%A0%E5%85%AC%E9%96%8B%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89/",
@@ -42,5 +42,7 @@
     "channel": "BLUE RIGHTS channel",
     "uploadDate": "2026-11-12T17:00:32-08:00",
     "verification": "BLUE RIGHTS links this upload. YouTube metadata confirms duration, timestamp and embeddability."
-  }
+  },
+  "copyEditedOn": "2026-11-26",
+  "copyEdit": "Removed technical video-upload/structured-data commentary that did not answer viewing questions; underlying factual review date unchanged."
 }

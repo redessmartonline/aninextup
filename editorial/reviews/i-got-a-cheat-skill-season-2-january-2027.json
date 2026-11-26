@@ -2,7 +2,7 @@
   "intent": "How to catch up without mixing the special and Season 2",
   "keyword": "I Got a Cheat Skill Season 2: January 2027 Release, Cast and Trailer",
   "verifiedOn": "2026-11-15",
-  "editorialWords": 1216,
+  "editorialWords": 1174,
   "cover": {
     "path": "/assets/images/external/542ceb63b5c8336563fd318a8b54b368889033f39a6eda6a4d366a8db243d2d0.webp",
     "imageUrl": "https://aninextup.com/assets/images/external/542ceb63b5c8336563fd318a8b54b368889033f39a6eda6a4d366a8db243d2d0.webp",
@@ -14,5 +14,7 @@
     "status": "not-available",
     "sourceUrl": "https://www.iseleve.com/",
     "reason": "This edition does not embed a video player. Official previews, when listed, are linked from the article."
-  }
+  },
+  "copyEditedOn": "2026-11-26",
+  "copyEdit": "Removed technical video-upload/structured-data commentary that did not answer viewing questions; underlying factual review date unchanged."
 }

@@ -51,6 +51,20 @@ def prepare(path):
     original = path.read_text(encoding="utf-8")
     content = original
     if path.suffix == ".html":
+        # These credits described retired third-party illustrations, not the
+        # original cover now generated for this article.
+        content = re.sub(r'<p\b[^>]*class="[^"]*\bimage-credit\b[^"]*"[^>]*>.*?</p\s*>',
+                         '', content, flags=re.I | re.S)
+        def remove_image_download(match):
+            from html import unescape
+            href = unescape(match[1])
+            if re.search(r'\.(?:avif|gif|jpe?g|png|svg|webp)(?:[/?#]|$)', href, re.I):
+                return re.sub(r'<[^>]+>', '', match[2])
+            return match[0]
+        # Keep publisher articles and legal service links; retire direct image
+        # file links for which the source archive has no reuse permission.
+        content = re.sub(r'<a\b[^>]*href="([^"]+)"[^>]*>(.*?)</a>',
+                         remove_image_download, content, flags=re.I | re.S)
         def link_to_video(match):
             video_id = re.search(r'data-youtube="([A-Za-z0-9_-]{11})"', match[0])
             if not video_id:
@@ -67,6 +81,9 @@ def prepare(path):
         )
         content = content.replace("embedded player below", "video link below")
         content = content.replace("player below", "video link below")
+        content = content.replace("is embedded below", "is linked below")
+        content = content.replace("embedded preview", "video link")
+        content = content.replace("The embedded clip", "The linked clip")
         content = content.replace("The embedded player loads only when selected.", "The link opens the video on YouTube.")
         content = VIDEO_SCHEMA.sub(remove_video_schema, content)
         # Keep links to the cited publisher pages. Replace only image-loading
@@ -148,6 +165,9 @@ def public_media_audit(files):
             parser.feed(source)
             refs = parser.urls
             embeds = parser.embeds
+            for href in re.findall(r'<a\b[^>]*href="([^"]+)"', source, re.I):
+                if re.search(r'\.(?:avif|gif|jpe?g|png|svg|webp|torrent|mp4|mkv|zip|rar)(?:[/?#]|$)', href, re.I) or href.startswith('magnet:'):
+                    findings.append(f"{relative}: unreviewed direct media/file link: {href[:220]}")
         if file.suffix in {".css", ".html"}:
             refs.extend(match.group(1).strip() for match in css_images.finditer(source)
                         if re.search(r'\.(?:svg|png|jpe?g|webp|gif|avif)(?:[?#]|$)', match.group(1).strip(), re.I))
@@ -170,6 +190,7 @@ def public_media_audit(files):
     print(f"Copyright media inventory: {pages} HTML pages, {image_references} distinct image references per file, {len(findings)} findings.")
     for finding in findings:
         print(f"Copyright media review: {finding}")
+    return findings
 
 
 def main():
@@ -177,7 +198,8 @@ def main():
     files.extend(path for path in (ROOT / "assets").iterdir() if path.suffix in {".js", ".json", ".css"})
     for path in files:
         prepare(path)
-    public_media_audit(files)
+    if public_media_audit(files):
+        raise SystemExit('Deployment blocked: unresolved public media references')
 
 
 if __name__ == "__main__":

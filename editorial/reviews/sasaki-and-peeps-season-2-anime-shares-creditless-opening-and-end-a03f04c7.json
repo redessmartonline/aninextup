@@ -2,7 +2,7 @@
   "intent": "What to listen for when you compare the two theme videos",
   "keyword": "Sasaki and Peeps Season 2 Anime Shares Creditless Opening and Ending Videos",
   "verifiedOn": "2026-11-15",
-  "editorialWords": 1230,
+  "editorialWords": 921,
   "cover": {
     "path": "/assets/images/covers/sasaki-and-peeps-season-2.jpg",
     "imageUrl": "https://aninextup.com/assets/images/covers/sasaki-and-peeps-season-2.jpg",
@@ -14,5 +14,7 @@
     "status": "not-available",
     "sourceUrl": "https://sasapi-anime.com/onair.html",
     "reason": "This edition does not embed a video player. Official previews, when listed, are linked from the article."
-  }
+  },
+  "copyEditedOn": "2026-11-26",
+  "copyEdit": "Condensed repetitive catch-up advice, retaining title-specific guidance and publisher links. Earlier factual verification date unchanged."
 }

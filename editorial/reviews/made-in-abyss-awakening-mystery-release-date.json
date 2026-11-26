@@ -6,7 +6,7 @@
     "When will HIDIVE release the film?",
     "What should I watch first?"
   ],
-  "editorialWords": 1357,
+  "editorialWords": 1327,
   "verifiedOn": "2026-11-11",
   "sources": [
     "https://news.hidive.com/2026/11/10/new-movie-made-in-abyss-awakening-mystery-comes-to-hidive",
@@ -43,5 +43,7 @@
     "youtubeId": "Sy7cLG6XHRY",
     "channel": "KADOKAWAanime",
     "verification": "Existing official Japanese Part 1 trailer, sourced to the film’s production video page."
-  }
+  },
+  "copyEditedOn": "2026-11-26",
+  "copyEdit": "Removed technical video-upload/structured-data commentary that did not answer viewing questions; underlying factual review date unchanged."
 }

@@ -51,8 +51,11 @@ def validate(path):
     errors = []
     s = path.read_text(encoding="utf-8")
     word_count = editorial_word_count(s)
-    if not 1200 <= word_count <= 2000:
-        errors.append(f"Editorial body has {word_count} words; required range is 1200–2000 (excluding menus, video controls and related articles)")
+    # This is a truncation guard, not an AdSense quality score. Requiring every
+    # short announcement to reach 1,200 words encouraged irrelevant padding.
+    # Source verification and substantive editorial review remain separate gates.
+    if word_count < 300:
+        errors.append(f"Editorial body has {word_count} words; review for truncation or incomplete coverage (minimum 300)")
     errors.extend(video_schema_errors(s))
     if re.search(r'<dt\b[^>]*>\s*Next\b[^<]*\b(?:episode|broadcast)\b', s, re.I):
         errors.append("Use a dated data-broadcast-at label for upcoming episodes or broadcasts")
