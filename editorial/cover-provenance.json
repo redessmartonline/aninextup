@@ -1,0 +1,2224 @@
+{
+  "version": 1,
+  "reviewedOn": "2026-11-26",
+  "scope": "All 161 published cover inputs; source hashes, git provenance, and visual review. Archived official-image references are excluded from the public build.",
+  "covers": {
+    "a-pen-handcuffs-common-law-marriage-release-date": {
+      "manifest": "scripts/cover-artwork/a-pen-handcuffs-common-law-marriage-release-date.json",
+      "sourceFile": "assets/images/covers/pen-handcuffs-common-law-marriage-original.webp",
+      "sourceSha256": "8c07725f8ad81cb3792216af49aea1daeeaa80bbf6c03e89165e98c7379420a3",
+      "panel": null,
+      "provenanceCommit": "5f3fed323741d2b0c2f2937258469c87ca08dfb0",
+      "commitDescription": "Publish A Pen Handcuffs and a Common-Law Marriage premiere and streaming guide with original cover",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "anime-crusaders-x-codes": {
+      "manifest": "scripts/cover-artwork/anime-crusaders-x-codes.json",
+      "sourceFile": "assets/images/covers/anime-crusaders-x-codes-original.webp",
+      "sourceSha256": "53ec30fca072cc20abd59c68df7e254f977c5828d597475794b54af7c31da08e",
+      "panel": null,
+      "provenanceCommit": "b1f390c56bf0bccd32e00ed0737d426e8815883f",
+      "commitDescription": "Publish Anime Crusaders X codes guide with original cover and source notes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "anime-crusaders-x-tier-list": {
+      "manifest": "scripts/cover-artwork/anime-crusaders-x-tier-list.json",
+      "sourceFile": "assets/images/covers/anime-crusaders-x-tier-list-original.webp",
+      "sourceSha256": "3c12cca2fb90376d37c38cc03bac76a689fd4ac727bd19c92f68355ad20c9d2a",
+      "panel": null,
+      "provenanceCommit": "a74498146d5dae9eabce00f8de86d03da0958bdd",
+      "commitDescription": "Publish the Anime Crusaders X Infinite tier list",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "anime-frontier-2026-crunchyroll-premieres-schedule": {
+      "manifest": "scripts/cover-artwork/anime-frontier-2026.json",
+      "sourceFile": "scripts/cover-artwork/anime-frontier-2026.json",
+      "sourceSha256": "d7ec4866ebaf83212e627fd83dcb6d1a6ac32bddefb193242dab98cfc6d3e161",
+      "panel": null,
+      "provenanceCommit": "6719a013df278850804aaeba89b77dddd119168e",
+      "commitDescription": "Unify the AniNextUp cover layout across the catalog",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "a-certain-dark-item-release-date": {
+      "manifest": "scripts/cover-artwork/approved.json",
+      "sourceFile": "scripts/cover-artwork/approved.json",
+      "sourceSha256": "85145d5abedda3eb787bff8e0f5aaa49d376fc43e4430e2c5a441d88ecb3d385",
+      "panel": null,
+      "provenanceCommit": "6719a013df278850804aaeba89b77dddd119168e",
+      "commitDescription": "Unify the AniNextUp cover layout across the catalog",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "orochi-seventh-echoes-pilot-where-to-watch": {
+      "manifest": "scripts/cover-artwork/batch-01-01.json",
+      "sourceFile": "scripts/cover-artwork/batch-01-01.json",
+      "sourceSha256": "57fee9d3dbee0051533c21c7ec1bc1bac6069cdaf094ba09dcda58f74741b576",
+      "panel": null,
+      "provenanceCommit": "f5c93bb8ef1c77a770f6a2cb915cb7ab7014566d",
+      "commitDescription": "Remove duplicate entries blocking the cover deployment",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "multi-mind-mayhem-anime-release-date": {
+      "manifest": "scripts/cover-artwork/batch-01-01.json",
+      "sourceFile": "scripts/cover-artwork/batch-01-01.json",
+      "sourceSha256": "7f7265720e4ded3ca20d0640d7469c655be89cd18b614497a87bffbf09bf1ff2",
+      "panel": null,
+      "provenanceCommit": "f5c93bb8ef1c77a770f6a2cb915cb7ab7014566d",
+      "commitDescription": "Remove duplicate entries blocking the cover deployment",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "getting-shots-on-a-frying-pan-anime-release-date": {
+      "manifest": "scripts/cover-artwork/batch-01-02.json",
+      "sourceFile": "scripts/cover-artwork/batch-01-02.json",
+      "sourceSha256": "e2406cd14bf1da2bd643fbcdea99c80769c06b579dd469e536d8b4fb572b8fad",
+      "panel": null,
+      "provenanceCommit": "f5c93bb8ef1c77a770f6a2cb915cb7ab7014566d",
+      "commitDescription": "Remove duplicate entries blocking the cover deployment",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "oyatsu-shiba-where-to-watch-youtube": {
+      "manifest": "scripts/cover-artwork/batch-01-02.json",
+      "sourceFile": "scripts/cover-artwork/batch-01-02.json",
+      "sourceSha256": "e4da0522e0e4371d1dfb8bc27292784ca24bd742ef0477ae0c9ad0e48f81d131",
+      "panel": null,
+      "provenanceCommit": "f5c93bb8ef1c77a770f6a2cb915cb7ab7014566d",
+      "commitDescription": "Remove duplicate entries blocking the cover deployment",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "nanatsuya-shinobu-jewelry-box-anime-release-date": {
+      "manifest": "scripts/cover-artwork/batch-01-03.json",
+      "sourceFile": "scripts/cover-artwork/batch-01-03.json",
+      "sourceSha256": "55b7a681bab5b2f69615dc6fb19c97f9d74cad848d34a36d00af553d61875c4b",
+      "panel": null,
+      "provenanceCommit": "b896fdcb2da17e6155167efdaec3d8b4b537e00a",
+      "commitDescription": "Publish the first 25 illustrated AniNextUp covers (#371)",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "aoharu-once-more-anime-release-date": {
+      "manifest": "scripts/cover-artwork/batch-01-03.json",
+      "sourceFile": "scripts/cover-artwork/batch-01-03.json",
+      "sourceSha256": "92ebd1c46c43d26a429709d278828774b9246328929ea0c88f593f833931518f",
+      "panel": null,
+      "provenanceCommit": "b896fdcb2da17e6155167efdaec3d8b4b537e00a",
+      "commitDescription": "Publish the first 25 illustrated AniNextUp covers (#371)",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "my-death-flags-anime-release-date": {
+      "manifest": "scripts/cover-artwork/batch-01-03.json",
+      "sourceFile": "scripts/cover-artwork/batch-01-03.json",
+      "sourceSha256": "5cd307f9fd98737bafee8a12c28b36ad79c3a49a6a1fd0baa8ad81f30b64836e",
+      "panel": null,
+      "provenanceCommit": "b896fdcb2da17e6155167efdaec3d8b4b537e00a",
+      "commitDescription": "Publish the first 25 illustrated AniNextUp covers (#371)",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "chao-uk-ireland-cinema-release-date": {
+      "manifest": "scripts/cover-artwork/batch-01-04.json",
+      "sourceFile": "scripts/cover-artwork/batch-01-04.json",
+      "sourceSha256": "7449b9d5bd71bcc56a6496370ee2f6dceab6e2f8d1fef402a2ce31ea31913994",
+      "panel": null,
+      "provenanceCommit": "b896fdcb2da17e6155167efdaec3d8b4b537e00a",
+      "commitDescription": "Publish the first 25 illustrated AniNextUp covers (#371)",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "my-crushs-crush-anime-release-date": {
+      "manifest": "scripts/cover-artwork/batch-01-04.json",
+      "sourceFile": "scripts/cover-artwork/batch-01-04.json",
+      "sourceSha256": "7ec388d8601b4dc49f1137d8379bef189c2ee7318b29b69c97b98e45e1e0ebd8",
+      "panel": null,
+      "provenanceCommit": "b896fdcb2da17e6155167efdaec3d8b4b537e00a",
+      "commitDescription": "Publish the first 25 illustrated AniNextUp covers (#371)",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "minami-ke-season-5-korekara-release-date-watch-order": {
+      "manifest": "scripts/cover-artwork/batch-01-04.json",
+      "sourceFile": "scripts/cover-artwork/batch-01-04.json",
+      "sourceSha256": "fe9319aa7f65566e89a95f72de793b677705c397ad834eb2cfc7c0bae2786244",
+      "panel": null,
+      "provenanceCommit": "b896fdcb2da17e6155167efdaec3d8b4b537e00a",
+      "commitDescription": "Publish the first 25 illustrated AniNextUp covers (#371)",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "ninjago-embers-ashes-release-date-watch-order": {
+      "manifest": "scripts/cover-artwork/batch-01-05.json",
+      "sourceFile": "scripts/cover-artwork/batch-01-05.json",
+      "sourceSha256": "3fbc2a22a1b81950afeb4c17e1e41657f4f37078c55863b41232adbc53f52a9b",
+      "panel": null,
+      "provenanceCommit": "b896fdcb2da17e6155167efdaec3d8b4b537e00a",
+      "commitDescription": "Publish the first 25 illustrated AniNextUp covers (#371)",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "ninja-skooler-pilot-film-where-to-watch": {
+      "manifest": "scripts/cover-artwork/batch-01-05.json",
+      "sourceFile": "scripts/cover-artwork/batch-01-05.json",
+      "sourceSha256": "3966465df51efca3d73aa68c431bd1cc0a4fc28a74cb409449c492eadd9d4042",
+      "panel": null,
+      "provenanceCommit": "b896fdcb2da17e6155167efdaec3d8b4b537e00a",
+      "commitDescription": "Publish the first 25 illustrated AniNextUp covers (#371)",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "rainy-day-serenade-anime-release-date": {
+      "manifest": "scripts/cover-artwork/batch-01-05.json",
+      "sourceFile": "scripts/cover-artwork/batch-01-05.json",
+      "sourceSha256": "556517854a98918f02b5516a30938a1b7f8150c437ceeb8a3b891be3fed399a9",
+      "panel": null,
+      "provenanceCommit": "b896fdcb2da17e6155167efdaec3d8b4b537e00a",
+      "commitDescription": "Publish the first 25 illustrated AniNextUp covers (#371)",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "the-dangers-in-my-heart-season-3": {
+      "manifest": "scripts/cover-artwork/batch-01-06.json",
+      "sourceFile": "scripts/cover-artwork/batch-01-06.json",
+      "sourceSha256": "6a234ea5b0ed8e45eafcb375479e41e965875541f59eafd7285b0879c34f4fa0",
+      "panel": null,
+      "provenanceCommit": "b896fdcb2da17e6155167efdaec3d8b4b537e00a",
+      "commitDescription": "Publish the first 25 illustrated AniNextUp covers (#371)",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "dark-summoner-omake-shorts-watch-order": {
+      "manifest": "scripts/cover-artwork/batch-01-07.json",
+      "sourceFile": "scripts/cover-artwork/batch-01-07.json",
+      "sourceSha256": "4eeac66d9dfade00483453a6d290e041355f491bf6ac4e28aa78da2dae4defea",
+      "panel": null,
+      "provenanceCommit": "b896fdcb2da17e6155167efdaec3d8b4b537e00a",
+      "commitDescription": "Publish the first 25 illustrated AniNextUp covers (#371)",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "wound-and-bandage-anime-release-date": {
+      "manifest": "scripts/cover-artwork/batch-01-07.json",
+      "sourceFile": "scripts/cover-artwork/batch-01-07.json",
+      "sourceSha256": "a354063cc7f3eb21c9653c8a42a4148c21b766678bce7d9d438b1ba2e69b7b90",
+      "panel": null,
+      "provenanceCommit": "b896fdcb2da17e6155167efdaec3d8b4b537e00a",
+      "commitDescription": "Publish the first 25 illustrated AniNextUp covers (#371)",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "welsh-shedar-episode-1-english-dub": {
+      "manifest": "scripts/cover-artwork/batch-01-08.json",
+      "sourceFile": "scripts/cover-artwork/batch-01-08.json",
+      "sourceSha256": "7b2a082b8effa596b632d6daaacd56aa24220b4c00dd332be4811e1a00d2cc2c",
+      "panel": null,
+      "provenanceCommit": "b896fdcb2da17e6155167efdaec3d8b4b537e00a",
+      "commitDescription": "Publish the first 25 illustrated AniNextUp covers (#371)",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "spirit-circle-anime-release-date": {
+      "manifest": "scripts/cover-artwork/batch-01-08.json",
+      "sourceFile": "scripts/cover-artwork/batch-01-08.json",
+      "sourceSha256": "2883c2ee0a10090f7bc7c93c02ac7273e421d99969491b02b748ce7d38877516",
+      "panel": null,
+      "provenanceCommit": "b896fdcb2da17e6155167efdaec3d8b4b537e00a",
+      "commitDescription": "Publish the first 25 illustrated AniNextUp covers (#371)",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "charisma-anime-release-date": {
+      "manifest": "scripts/cover-artwork/batch-01-09.json",
+      "sourceFile": "scripts/cover-artwork/batch-01-09.json",
+      "sourceSha256": "946a59c1fa86439ea730d68b4b3d6f3bc1b514bd690e35bfea15cf2ad5ae0210",
+      "panel": null,
+      "provenanceCommit": "b896fdcb2da17e6155167efdaec3d8b4b537e00a",
+      "commitDescription": "Publish the first 25 illustrated AniNextUp covers (#371)",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "anime-vs-anime-codes": {
+      "manifest": "scripts/cover-artwork/batch-01-09.json",
+      "sourceFile": "scripts/cover-artwork/batch-01-09.json",
+      "sourceSha256": "fdcc0d108360d07396c50afbef6238aa1bdb2fbbf9b2ba5e4ee81a1ba99f948e",
+      "panel": null,
+      "provenanceCommit": "b896fdcb2da17e6155167efdaec3d8b4b537e00a",
+      "commitDescription": "Publish the first 25 illustrated AniNextUp covers (#371)",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "bocchi-the-rock-starry-footprints-movie": {
+      "manifest": "scripts/cover-artwork/batch-01-10-0.json",
+      "sourceFile": "scripts/cover-artwork/batch-01-10-0.json",
+      "sourceSha256": "7a71cf540410b66902576208ef82827bf2505d79a038477e5782706a1097b713",
+      "panel": null,
+      "provenanceCommit": "b896fdcb2da17e6155167efdaec3d8b4b537e00a",
+      "commitDescription": "Publish the first 25 illustrated AniNextUp covers (#371)",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "iruma-kun-irumafia-edition-release-date": {
+      "manifest": "scripts/cover-artwork/batch-01-10-1.json",
+      "sourceFile": "scripts/cover-artwork/batch-01-10-1.json",
+      "sourceSha256": "6c986ab8dc97804424b06172eda43c0104ddea8a0ad208bb4fdc719655d262fe",
+      "panel": null,
+      "provenanceCommit": "b896fdcb2da17e6155167efdaec3d8b4b537e00a",
+      "commitDescription": "Publish the first 25 illustrated AniNextUp covers (#371)",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "bless-anime-akiharu-nakano-koki-uchiyama-january-2027": {
+      "manifest": "scripts/cover-artwork/batch-02-01.json",
+      "sourceFile": "scripts/cover-artwork/batch-02-01.json",
+      "sourceSha256": "c9a5ce3cb05a0d9b660684b42145a6eabd51568c32b98aa3d923e392a3c1b8e7",
+      "panel": null,
+      "provenanceCommit": "29b8a9e1a8a62fef0b4f89742a6594bf4c0fa05b",
+      "commitDescription": "Split cover artwork manifests below transfer limit (#374)",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "fool-night-release-date": {
+      "manifest": "scripts/cover-artwork/batch-02-01.json",
+      "sourceFile": "scripts/cover-artwork/batch-02-01.json",
+      "sourceSha256": "c2a6b0de551b7e354e08fd85d7a0fbbf1396cce2362f67e06b2c2c1129760ba1",
+      "panel": null,
+      "provenanceCommit": "29b8a9e1a8a62fef0b4f89742a6594bf4c0fa05b",
+      "commitDescription": "Split cover artwork manifests below transfer limit (#374)",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "vertex-force-anime-release-date": {
+      "manifest": "scripts/cover-artwork/batch-02-02.json",
+      "sourceFile": "scripts/cover-artwork/batch-02-02.json",
+      "sourceSha256": "82fdbd21fdad3bfd3701206052fdcef255d13d52fac33aa746e3327219728428",
+      "panel": null,
+      "provenanceCommit": "29b8a9e1a8a62fef0b4f89742a6594bf4c0fa05b",
+      "commitDescription": "Split cover artwork manifests below transfer limit (#374)",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "medaka-kuroiwa-season-2-release-date": {
+      "manifest": "scripts/cover-artwork/batch-02-03.json",
+      "sourceFile": "scripts/cover-artwork/batch-02-03.json",
+      "sourceSha256": "74e0e654f50c23750a91427d6ce4e6f33e71f3ddfebeb1b4a42021a32c3dda46",
+      "panel": null,
+      "provenanceCommit": "29b8a9e1a8a62fef0b4f89742a6594bf4c0fa05b",
+      "commitDescription": "Split cover artwork manifests below transfer limit (#374)",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "no-clipping-my-way-to-supremacy-anime": {
+      "manifest": "scripts/cover-artwork/batch-02-04.json",
+      "sourceFile": "scripts/cover-artwork/batch-02-04.json",
+      "sourceSha256": "66ca64abc0c2d7cc7b3aa77351263c606b50614f22fcdb5fb73a8b14dc8d79c5",
+      "panel": null,
+      "provenanceCommit": "29b8a9e1a8a62fef0b4f89742a6594bf4c0fa05b",
+      "commitDescription": "Split cover artwork manifests below transfer limit (#374)",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "glasses-with-a-chance-of-delinquent-anime": {
+      "manifest": "scripts/cover-artwork/batch-02-05.json",
+      "sourceFile": "scripts/cover-artwork/batch-02-05.json",
+      "sourceSha256": "7d99b17f44d7666a7dd37de9c32a50097bfd1f4cbd181659a4206c2f50d0fd9d",
+      "panel": null,
+      "provenanceCommit": "29b8a9e1a8a62fef0b4f89742a6594bf4c0fa05b",
+      "commitDescription": "Split cover artwork manifests below transfer limit (#374)",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "dual-shadow-precure-villain-heroines-anime-2027": {
+      "manifest": "scripts/cover-artwork/batch-02-06.json",
+      "sourceFile": "scripts/cover-artwork/batch-02-06.json",
+      "sourceSha256": "0e41e8537cb469520f4959c59dd920537ab702ebe7cfd54dab42d21d958d3b7a",
+      "panel": null,
+      "provenanceCommit": "9b5c93f243f3e711b0d80e2bbe4b3087ba8ef4a2",
+      "commitDescription": "Replace 13 article covers with original editorial artwork",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "mashle-season-3-release-date": {
+      "manifest": "scripts/cover-artwork/batch-02-07.json",
+      "sourceFile": "scripts/cover-artwork/batch-02-07.json",
+      "sourceSha256": "c296d602ee236a2078d1be0689fb705f7d4afb9b5cf777f6ffa19f9af00105d6",
+      "panel": null,
+      "provenanceCommit": "9b5c93f243f3e711b0d80e2bbe4b3087ba8ef4a2",
+      "commitDescription": "Replace 13 article covers with original editorial artwork",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "akane-banashi-season-2-release-date": {
+      "manifest": "scripts/cover-artwork/batch-02-08.json",
+      "sourceFile": "scripts/cover-artwork/batch-02-08.json",
+      "sourceSha256": "0eef970d4e2d24c00b4d533f5cf2230f9969ed1e69c82ae80b42b1eb148548c8",
+      "panel": null,
+      "provenanceCommit": "9b5c93f243f3e711b0d80e2bbe4b3087ba8ef4a2",
+      "commitDescription": "Replace 13 article covers with original editorial artwork",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "medalist-movie-release-date": {
+      "manifest": "scripts/cover-artwork/batch-02-08.json",
+      "sourceFile": "scripts/cover-artwork/batch-02-08.json",
+      "sourceSha256": "835d5ae36fc17b42fff0333dca9da2ae161281b8df301f8896de15e61b13bda6",
+      "panel": null,
+      "provenanceCommit": "9b5c93f243f3e711b0d80e2bbe4b3087ba8ef4a2",
+      "commitDescription": "Replace 13 article covers with original editorial artwork",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "ranma-season-3": {
+      "manifest": "scripts/cover-artwork/batch-02-09.json",
+      "sourceFile": "scripts/cover-artwork/batch-02-09.json",
+      "sourceSha256": "7e7cae95b7171565d6fad56a95daa7003d9ba9cd4ce8eab9039675e8c7be6876",
+      "panel": null,
+      "provenanceCommit": "9b5c93f243f3e711b0d80e2bbe4b3087ba8ef4a2",
+      "commitDescription": "Replace 13 article covers with original editorial artwork",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "haru-to-gen-anime-january-4-2027": {
+      "manifest": "scripts/cover-artwork/batch-02-10.json",
+      "sourceFile": "scripts/cover-artwork/batch-02-10.json",
+      "sourceSha256": "a6dfbdd858b15ca3c9512a7b1b683ec369567676cbc7ee93d2fadf442852aa04",
+      "panel": null,
+      "provenanceCommit": "29b8a9e1a8a62fef0b4f89742a6594bf4c0fa05b",
+      "commitDescription": "Split cover artwork manifests below transfer limit (#374)",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "dengeki-daisy-anime-january-2027-trailer-cast": {
+      "manifest": "scripts/cover-artwork/batch-02-11.json",
+      "sourceFile": "scripts/cover-artwork/batch-02-11.json",
+      "sourceSha256": "be116bbd8173796e254cfcece55b35494e983fa91481ea0fe6b57dd48ecf9f1b",
+      "panel": null,
+      "provenanceCommit": "29b8a9e1a8a62fef0b4f89742a6594bf4c0fa05b",
+      "commitDescription": "Split cover artwork manifests below transfer limit (#374)",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "shangri-la-frontier-season-3-release-date": {
+      "manifest": "scripts/cover-artwork/batch-02-13.json",
+      "sourceFile": "scripts/cover-artwork/batch-02-13.json",
+      "sourceSha256": "6fb2e09599c77472545e98f140f7ce5fd3d2396d0512f9300f714a54f6be8fd2",
+      "panel": null,
+      "provenanceCommit": "9b5c93f243f3e711b0d80e2bbe4b3087ba8ef4a2",
+      "commitDescription": "Replace 13 article covers with original editorial artwork",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "cyberpunk-edgerunners-2": {
+      "manifest": "scripts/cover-artwork/batch-02-14.json",
+      "sourceFile": "scripts/cover-artwork/batch-02-14.json",
+      "sourceSha256": "3908a913fd3efcefe4b4bed184432686edd137949f982080938dae90ddd576c1",
+      "panel": null,
+      "provenanceCommit": "6719a013df278850804aaeba89b77dddd119168e",
+      "commitDescription": "Unify the AniNextUp cover layout across the catalog",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "love-live-hasunosora-release-date": {
+      "manifest": "scripts/cover-artwork/batch-02-15.json",
+      "sourceFile": "scripts/cover-artwork/batch-02-15.json",
+      "sourceSha256": "2aeb24b67f5459e363b1a56f37e4c7954eb48884233e9c53c06facf14216e256",
+      "panel": null,
+      "provenanceCommit": "9b5c93f243f3e711b0d80e2bbe4b3087ba8ef4a2",
+      "commitDescription": "Replace 13 article covers with original editorial artwork",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "sekiro-no-defeat-release-date": {
+      "manifest": "scripts/cover-artwork/batch-02-16.json",
+      "sourceFile": "scripts/cover-artwork/batch-02-16.json",
+      "sourceSha256": "a7af1b84b46a7dda7bf9d640c669ac75829f722b5a17b8da2247795495202c75",
+      "panel": null,
+      "provenanceCommit": "29b8a9e1a8a62fef0b4f89742a6594bf4c0fa05b",
+      "commitDescription": "Split cover artwork manifests below transfer limit (#374)",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "grotesqqque-release-date": {
+      "manifest": "scripts/cover-artwork/batch-02-16.json",
+      "sourceFile": "scripts/cover-artwork/batch-02-16.json",
+      "sourceSha256": "58df8d58f39cf51e44f04df068ff7ca7c08ccbca4263b2d9a99842d6bba06440",
+      "panel": null,
+      "provenanceCommit": "29b8a9e1a8a62fef0b4f89742a6594bf4c0fa05b",
+      "commitDescription": "Split cover artwork manifests below transfer limit (#374)",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "frieren-season-3-release-date": {
+      "manifest": "scripts/cover-artwork/batch-02-17.json",
+      "sourceFile": "scripts/cover-artwork/batch-02-17.json",
+      "sourceSha256": "11e8fec9d07babac5d3aa51ee1641bc78839a6e39c5fca5226f66d53568b3816",
+      "panel": null,
+      "provenanceCommit": "9b5c93f243f3e711b0d80e2bbe4b3087ba8ef4a2",
+      "commitDescription": "Replace 13 article covers with original editorial artwork",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "delicious-in-dungeon-season-2-release-date": {
+      "manifest": "scripts/cover-artwork/batch-02-18.json",
+      "sourceFile": "scripts/cover-artwork/batch-02-18.json",
+      "sourceSha256": "7a5606019a6587eb65e5aa6c00dd02d8f3247bcd8210e64dc1a7a885d1f31a72",
+      "panel": null,
+      "provenanceCommit": "9b5c93f243f3e711b0d80e2bbe4b3087ba8ef4a2",
+      "commitDescription": "Replace 13 article covers with original editorial artwork",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "my-happy-marriage-special-episodes": {
+      "manifest": "scripts/cover-artwork/batch-02-19.json",
+      "sourceFile": "scripts/cover-artwork/batch-02-19.json",
+      "sourceSha256": "d93e7e53d2069bb2c1aeb87413bfe5fc0610cf5fe2b9ae6c6cdad16c5a601278",
+      "panel": null,
+      "provenanceCommit": "9b5c93f243f3e711b0d80e2bbe4b3087ba8ef4a2",
+      "commitDescription": "Replace 13 article covers with original editorial artwork",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "aikatsu-stars-hoshiboshi-no-progress-release-date": {
+      "manifest": "scripts/cover-artwork/batch-02-20.json",
+      "sourceFile": "scripts/cover-artwork/batch-02-20.json",
+      "sourceSha256": "844582c85dfea02164b52f3d6b5b000f38899c4a3d8b874f30494e1b87c1b6bd",
+      "panel": null,
+      "provenanceCommit": "9b5c93f243f3e711b0d80e2bbe4b3087ba8ef4a2",
+      "commitDescription": "Replace 13 article covers with original editorial artwork",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "jirai-girl-chihara-san-anime-january-2027": {
+      "manifest": "scripts/cover-artwork/batch-02-21.json",
+      "sourceFile": "scripts/cover-artwork/batch-02-21.json",
+      "sourceSha256": "bbfab682517b5ddb940cb183ef526e43c698b454a7d46212473532a70fd18071",
+      "panel": null,
+      "provenanceCommit": "f5c93bb8ef1c77a770f6a2cb915cb7ab7014566d",
+      "commitDescription": "Remove duplicate entries blocking the cover deployment",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "anime-mysterious-codes-october-2026": {
+      "manifest": "scripts/cover-artwork/batch-02-22.json",
+      "sourceFile": "scripts/cover-artwork/batch-02-22.json",
+      "sourceSha256": "3451fff7d51780df4d38253163b60cc82d43eb98055473c608d5d484de86de4f",
+      "panel": null,
+      "provenanceCommit": "29b8a9e1a8a62fef0b4f89742a6594bf4c0fa05b",
+      "commitDescription": "Split cover artwork manifests below transfer limit (#374)",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "the-one-piece-netflix-february-2027": {
+      "manifest": "scripts/cover-artwork/batch-02-23.json",
+      "sourceFile": "scripts/cover-artwork/batch-02-23.json",
+      "sourceSha256": "06b4b757b502ff0043e5b766c360ae5b765626b21ca288ca2600cae15fdf1b0d",
+      "panel": null,
+      "provenanceCommit": "9b5c93f243f3e711b0d80e2bbe4b3087ba8ef4a2",
+      "commitDescription": "Replace 13 article covers with original editorial artwork",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "sakamoto-days-season-2": {
+      "manifest": "scripts/cover-artwork/batch-02-24.json",
+      "sourceFile": "scripts/cover-artwork/batch-02-24.json",
+      "sourceSha256": "fee423ba2e1d7f92a07b2ad3ffab71d2ddc436b8c0f0f6328a235d1bb5fb0881",
+      "panel": null,
+      "provenanceCommit": "9b5c93f243f3e711b0d80e2bbe4b3087ba8ef4a2",
+      "commitDescription": "Replace 13 article covers with original editorial artwork",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "maebashi-witches-emoemories-release-date": {
+      "manifest": "scripts/cover-artwork/batch-02-25.json",
+      "sourceFile": "scripts/cover-artwork/batch-02-25.json",
+      "sourceSha256": "c69d3081bd689fa360ceb31b58dc6eebca6bb63b6dda3bb5ab2f7cf77bbfa399",
+      "panel": null,
+      "provenanceCommit": "29b8a9e1a8a62fef0b4f89742a6594bf4c0fa05b",
+      "commitDescription": "Split cover artwork manifests below transfer limit (#374)",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "made-in-abyss-awakening-mystery-release-date": {
+      "manifest": "scripts/cover-artwork/batch-02-26.json",
+      "sourceFile": "scripts/cover-artwork/batch-02-26.json",
+      "sourceSha256": "21309ee7f45e0ee27216af9f794a0337c81da3c6ab3106ee451e53ef1cbd944f",
+      "panel": null,
+      "provenanceCommit": "29b8a9e1a8a62fef0b4f89742a6594bf4c0fa05b",
+      "commitDescription": "Split cover artwork manifests below transfer limit (#374)",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "classroom-of-the-elite-season-5-release-date": {
+      "manifest": "scripts/cover-artwork/classroom-of-the-elite-season-5-release-date.json",
+      "sourceFile": "assets/images/covers/classroom-elite-season-5-original.webp",
+      "sourceSha256": "3d63c454d0e6af9455a102ef8993cd0aaee387a7da286614ac5142ef7d101e3a",
+      "panel": null,
+      "provenanceCommit": "c4d89d3667d867ead28a29e05905f8d773a5d9dd",
+      "commitDescription": "Publish Classroom of the Elite Season 5 first-half 2027 guide with official teaser and original cover",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "ace-of-diamond-second-season": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-01.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-01.webp",
+      "sourceSha256": "5316fc2cd4d0b56063ca412dee9bd4bf8a0d1d7aecdd860aa43ef5feac6dfba0",
+      "panel": [
+        1,
+        0
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "anime-expeditions-codes": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-01.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-01.webp",
+      "sourceSha256": "5316fc2cd4d0b56063ca412dee9bd4bf8a0d1d7aecdd860aa43ef5feac6dfba0",
+      "panel": [
+        0,
+        1
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "anime-news-october-2026": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-01.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-01.webp",
+      "sourceSha256": "5316fc2cd4d0b56063ca412dee9bd4bf8a0d1d7aecdd860aa43ef5feac6dfba0",
+      "panel": [
+        1,
+        1
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "anime-releasing-december-2026": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-01.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-01.webp",
+      "sourceSha256": "5316fc2cd4d0b56063ca412dee9bd4bf8a0d1d7aecdd860aa43ef5feac6dfba0",
+      "panel": [
+        0,
+        2
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "anime-releasing-january-2027": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-01.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-01.webp",
+      "sourceSha256": "5316fc2cd4d0b56063ca412dee9bd4bf8a0d1d7aecdd860aa43ef5feac6dfba0",
+      "panel": [
+        1,
+        2
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "anime-releasing-november-2026": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-01.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-01.webp",
+      "sourceSha256": "5316fc2cd4d0b56063ca412dee9bd4bf8a0d1d7aecdd860aa43ef5feac6dfba0",
+      "panel": [
+        0,
+        3
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "aoashi-season-2": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-01.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-01.webp",
+      "sourceSha256": "5316fc2cd4d0b56063ca412dee9bd4bf8a0d1d7aecdd860aa43ef5feac6dfba0",
+      "panel": [
+        1,
+        3
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "apothecary-diaries-movie": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-01.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-02.webp",
+      "sourceSha256": "78103676ea0c0e3e3b548b4fb3bfca21ee80bf3b9eb84924e9c160d44faae34b",
+      "panel": [
+        0,
+        0
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "apothecary-diaries-season-3": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-01.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-02.webp",
+      "sourceSha256": "78103676ea0c0e3e3b548b4fb3bfca21ee80bf3b9eb84924e9c160d44faae34b",
+      "panel": [
+        1,
+        0
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "ascendance-of-a-bookworm-part-4": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-01.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-02.webp",
+      "sourceSha256": "78103676ea0c0e3e3b548b4fb3bfca21ee80bf3b9eb84924e9c160d44faae34b",
+      "panel": [
+        0,
+        1
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "bass-x-machina-release-date": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-01.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-02.webp",
+      "sourceSha256": "78103676ea0c0e3e3b548b4fb3bfca21ee80bf3b9eb84924e9c160d44faae34b",
+      "panel": [
+        1,
+        1
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "because-i-the-true-saint-was-banished-anime-january-2027": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-01.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-02.webp",
+      "sourceSha256": "78103676ea0c0e3e3b548b4fb3bfca21ee80bf3b9eb84924e9c160d44faae34b",
+      "panel": [
+        0,
+        2
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "berserk-of-gluttony-season-2": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-01.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-02.webp",
+      "sourceSha256": "78103676ea0c0e3e3b548b4fb3bfca21ee80bf3b9eb84924e9c160d44faae34b",
+      "panel": [
+        1,
+        2
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "black-clover-season-2": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-01.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-02.webp",
+      "sourceSha256": "78103676ea0c0e3e3b548b4fb3bfca21ee80bf3b9eb84924e9c160d44faae34b",
+      "panel": [
+        0,
+        3
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "bleach-thousand-year-blood-war-graniph-collection-october-2026": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-01.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-02.webp",
+      "sourceSha256": "78103676ea0c0e3e3b548b4fb3bfca21ee80bf3b9eb84924e9c160d44faae34b",
+      "panel": [
+        1,
+        3
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "bleach-thousand-year-blood-war-the-last-pv-episodes-49-50": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-01.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-03.webp",
+      "sourceSha256": "e1a9fead92e6c9acb1d42261507147b461dfdd54ff7aed5d3fb1d22b09f993c8",
+      "panel": [
+        0,
+        0
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "blue-box-season-2": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-01.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-03.webp",
+      "sourceSha256": "e1a9fead92e6c9acb1d42261507147b461dfdd54ff7aed5d3fb1d22b09f993c8",
+      "panel": [
+        1,
+        0
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "chitose-ramune-bottle-cour-2": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-01.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-03.webp",
+      "sourceSha256": "e1a9fead92e6c9acb1d42261507147b461dfdd54ff7aed5d3fb1d22b09f993c8",
+      "panel": [
+        0,
+        1
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "cosmoship-yamato-root-2199": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-01.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-03.webp",
+      "sourceSha256": "e1a9fead92e6c9acb1d42261507147b461dfdd54ff7aed5d3fb1d22b09f993c8",
+      "panel": [
+        1,
+        1
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "d-anime-store-81-fall-2026-anime": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-01.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-03.webp",
+      "sourceSha256": "e1a9fead92e6c9acb1d42261507147b461dfdd54ff7aed5d3fb1d22b09f993c8",
+      "panel": [
+        0,
+        2
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "dandivine-release-date": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-01.json",
+      "sourceFile": "scripts/cover-artwork/dandivine-cinematic.webp",
+      "sourceSha256": "4e0a0ac71752562c224a06896a1463397164d66da5d7040d4eb59f2854042c2a",
+      "panel": null,
+      "provenanceCommit": "7f352e99f470d6245cb4f105f9512cd8dcbdbe36",
+      "commitDescription": "Replace the flat Dandivine cover with an original orbital hangar illustration",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "dark-machine-the-animation": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-01.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-03.webp",
+      "sourceSha256": "e1a9fead92e6c9acb1d42261507147b461dfdd54ff7aed5d3fb1d22b09f993c8",
+      "panel": [
+        1,
+        2
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "death-stranding-isolations-anime": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-01.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-03.webp",
+      "sourceSha256": "e1a9fead92e6c9acb1d42261507147b461dfdd54ff7aed5d3fb1d22b09f993c8",
+      "panel": [
+        0,
+        3
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "demons-crest-release-date": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-01.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-03.webp",
+      "sourceSha256": "e1a9fead92e6c9acb1d42261507147b461dfdd54ff7aed5d3fb1d22b09f993c8",
+      "panel": [
+        1,
+        3
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "detective-is-already-dead-season-2": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-01.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-04.webp",
+      "sourceSha256": "c6a8c9f839d6fef990529d0cb1bd6a38aa87488baa27d3326f14ab663b369f56",
+      "panel": [
+        0,
+        0
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "dr-stone-terraforming-anime": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-02.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-04.webp",
+      "sourceSha256": "c6a8c9f839d6fef990529d0cb1bd6a38aa87488baa27d3326f14ab663b369f56",
+      "panel": [
+        1,
+        0
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "dragon-ball-super-beerus": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-02.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-04.webp",
+      "sourceSha256": "c6a8c9f839d6fef990529d0cb1bd6a38aa87488baa27d3326f14ab663b369f56",
+      "panel": [
+        0,
+        1
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "dreamland-release-date": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-02.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-04.webp",
+      "sourceSha256": "c6a8c9f839d6fef990529d0cb1bd6a38aa87488baa27d3326f14ab663b369f56",
+      "panel": [
+        1,
+        1
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "eleceed-anime-april-2027-release-date": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-02.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-04.webp",
+      "sourceSha256": "c6a8c9f839d6fef990529d0cb1bd6a38aa87488baa27d3326f14ab663b369f56",
+      "panel": [
+        0,
+        2
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "fall-2026-anime-calendar": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-02.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-04.webp",
+      "sourceSha256": "c6a8c9f839d6fef990529d0cb1bd6a38aa87488baa27d3326f14ab663b369f56",
+      "panel": [
+        1,
+        2
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "firefly-wedding": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-02.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-04.webp",
+      "sourceSha256": "c6a8c9f839d6fef990529d0cb1bd6a38aa87488baa27d3326f14ab663b369f56",
+      "panel": [
+        0,
+        3
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "fledgling-demon-lords-starter-shop": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-02.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-04.webp",
+      "sourceSha256": "c6a8c9f839d6fef990529d0cb1bd6a38aa87488baa27d3326f14ab663b369f56",
+      "panel": [
+        1,
+        3
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "full-clearing-another-world-zero-believers-premiere": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-02.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-05.webp",
+      "sourceSha256": "910e4662994c65f9a8a7f86f4f2c861cd1d8b46c573097618434ffab3f7b6748",
+      "panel": [
+        0,
+        0
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "ghost-of-tsushima-legends-anime-2028": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-02.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-05.webp",
+      "sourceSha256": "910e4662994c65f9a8a7f86f4f2c861cd1d8b46c573097618434ffab3f7b6748",
+      "panel": [
+        1,
+        0
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "hello-witch-love-potion-release-date": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-02.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-05.webp",
+      "sourceSha256": "910e4662994c65f9a8a7f86f4f2c861cd1d8b46c573097618434ffab3f7b6748",
+      "panel": [
+        0,
+        1
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "hiragi-san-house-of-vampires-anime": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-02.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-05.webp",
+      "sourceSha256": "910e4662994c65f9a8a7f86f4f2c861cd1d8b46c573097618434ffab3f7b6748",
+      "panel": [
+        1,
+        1
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "hirayasumi-anime-release-date": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-02.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-05.webp",
+      "sourceSha256": "910e4662994c65f9a8a7f86f4f2c861cd1d8b46c573097618434ffab3f7b6748",
+      "panel": [
+        0,
+        2
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "horror-collector-release-date": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-02.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-05.webp",
+      "sourceSha256": "910e4662994c65f9a8a7f86f4f2c861cd1d8b46c573097618434ffab3f7b6748",
+      "panel": [
+        1,
+        2
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "i-got-a-cheat-skill-season-2-january-2027": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-02.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-05.webp",
+      "sourceSha256": "910e4662994c65f9a8a7f86f4f2c861cd1d8b46c573097618434ffab3f7b6748",
+      "panel": [
+        0,
+        3
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "i-lost-my-adventurers-license-anime-january-2027": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-02.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-05.webp",
+      "sourceSha256": "910e4662994c65f9a8a7f86f4f2c861cd1d8b46c573097618434ffab3f7b6748",
+      "panel": [
+        1,
+        3
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "iceblade-sorcerer-ii": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-02.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-06.webp",
+      "sourceSha256": "f60f2ba06581b511ebd2109fc557f50aa913d1683db6fe712ad86655a1808c0b",
+      "panel": [
+        0,
+        0
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "im-looking-for-a-zombie": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-02.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-06.webp",
+      "sourceSha256": "f60f2ba06581b511ebd2109fc557f50aa913d1683db6fe712ad86655a1808c0b",
+      "panel": [
+        1,
+        0
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "in-a-world-full-of-zombies-january-2027": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-02.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-06.webp",
+      "sourceSha256": "f60f2ba06581b511ebd2109fc557f50aa913d1683db6fe712ad86655a1808c0b",
+      "panel": [
+        0,
+        1
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "inherit-the-winds-anime-january-2027": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-02.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-06.webp",
+      "sourceSha256": "f60f2ba06581b511ebd2109fc557f50aa913d1683db6fe712ad86655a1808c0b",
+      "panel": [
+        1,
+        1
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "jump-festa-2027-schedule-dates-streaming": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-02.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-06.webp",
+      "sourceSha256": "f60f2ba06581b511ebd2109fc557f50aa913d1683db6fe712ad86655a1808c0b",
+      "panel": [
+        0,
+        2
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "kagurabachi-anime-world-tour-finale": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-02.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-06.webp",
+      "sourceSha256": "f60f2ba06581b511ebd2109fc557f50aa913d1683db6fe712ad86655a1808c0b",
+      "panel": [
+        1,
+        2
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "kinioto-january-2027": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-02.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-06.webp",
+      "sourceSha256": "f60f2ba06581b511ebd2109fc557f50aa913d1683db6fe712ad86655a1808c0b",
+      "panel": [
+        0,
+        3
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "laid-off-cheat-granting-mage": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-02.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-06.webp",
+      "sourceSha256": "f60f2ba06581b511ebd2109fc557f50aa913d1683db6fe712ad86655a1808c0b",
+      "panel": [
+        1,
+        3
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "le-college-noir-season-2-trailer-october-2026": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-02.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-07.webp",
+      "sourceSha256": "048c44fb0b0af72f478bba3cdba3b23d999ee1f80d56843daec8da70f45dbacb",
+      "panel": [
+        0,
+        0
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "live-action-firefly-wedding-tv-drama-announced-for-2027-a1ac1e86": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-02.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-07.webp",
+      "sourceSha256": "048c44fb0b0af72f478bba3cdba3b23d999ee1f80d56843daec8da70f45dbacb",
+      "panel": [
+        1,
+        0
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "magic-knight-rayearth-2026": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-03.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-07.webp",
+      "sourceSha256": "048c44fb0b0af72f478bba3cdba3b23d999ee1f80d56843daec8da70f45dbacb",
+      "panel": [
+        0,
+        1
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "manchuria-opium-squad-anime": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-03.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-07.webp",
+      "sourceSha256": "048c44fb0b0af72f478bba3cdba3b23d999ee1f80d56843daec8da70f45dbacb",
+      "panel": [
+        1,
+        1
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "mercedes-and-the-waning-moon-anime": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-03.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-07.webp",
+      "sourceSha256": "048c44fb0b0af72f478bba3cdba3b23d999ee1f80d56843daec8da70f45dbacb",
+      "panel": [
+        0,
+        2
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "mobile-suit-gundam-seed-freedom-zero-release-date": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-03.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-07.webp",
+      "sourceSha256": "048c44fb0b0af72f478bba3cdba3b23d999ee1f80d56843daec8da70f45dbacb",
+      "panel": [
+        1,
+        2
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "ms-isshiki-wants-to-know-about-love": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-03.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-07.webp",
+      "sourceSha256": "048c44fb0b0af72f478bba3cdba3b23d999ee1f80d56843daec8da70f45dbacb",
+      "panel": [
+        0,
+        3
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "murcielago-anime-january-2027": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-03.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-07.webp",
+      "sourceSha256": "048c44fb0b0af72f478bba3cdba3b23d999ee1f80d56843daec8da70f45dbacb",
+      "panel": [
+        1,
+        3
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "naruto-ninku-anime": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-03.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-08.webp",
+      "sourceSha256": "f076562eb0fcfad30038169b91911461355c7d3dbf2cc19d458bfe03c549b33d",
+      "panel": [
+        0,
+        0
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "naruto-shadow-rising-manga": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-03.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-08.webp",
+      "sourceSha256": "f076562eb0fcfad30038169b91911461355c7d3dbf2cc19d458bfe03c549b33d",
+      "panel": [
+        1,
+        0
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "netflix-october-2026": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-03.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-08.webp",
+      "sourceSha256": "f076562eb0fcfad30038169b91911461355c7d3dbf2cc19d458bfe03c549b33d",
+      "panel": [
+        0,
+        1
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "nia-liston-release-date": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-03.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-08.webp",
+      "sourceSha256": "f076562eb0fcfad30038169b91911461355c7d3dbf2cc19d458bfe03c549b33d",
+      "panel": [
+        1,
+        1
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "noa-is-my-senior-anime-2027": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-03.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-08.webp",
+      "sourceSha256": "f076562eb0fcfad30038169b91911461355c7d3dbf2cc19d458bfe03c549b33d",
+      "panel": [
+        0,
+        2
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "now-that-we-draw-anime-january-2027": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-03.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-08.webp",
+      "sourceSha256": "f076562eb0fcfad30038169b91911461355c7d3dbf2cc19d458bfe03c549b33d",
+      "panel": [
+        1,
+        2
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "nues-exorcist-anime-summer-2027": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-03.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-08.webp",
+      "sourceSha256": "f076562eb0fcfad30038169b91911461355c7d3dbf2cc19d458bfe03c549b33d",
+      "panel": [
+        0,
+        3
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "one-punch-man-season-3-part-2-january-2027": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-03.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-08.webp",
+      "sourceSha256": "f076562eb0fcfad30038169b91911461355c7d3dbf2cc19d458bfe03c549b33d",
+      "panel": [
+        1,
+        3
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "otome-heroines-fight-for-survival-anime": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-03.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-09.webp",
+      "sourceSha256": "6780b61fc5c71fe2fd3eccc7fcd2253faa8a30c0376b5022c04245dc271a7797",
+      "panel": [
+        0,
+        0
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "paw-palaces-creditless-ending-october-2026": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-03.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-09.webp",
+      "sourceSha256": "6780b61fc5c71fe2fd3eccc7fcd2253faa8a30c0376b5022c04245dc271a7797",
+      "panel": [
+        1,
+        0
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "pok-mon-horizons-anime-unseals-treasures-of-ruin-in-latest-wonder-a6b9d2d5": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-03.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-09.webp",
+      "sourceSha256": "6780b61fc5c71fe2fd3eccc7fcd2253faa8a30c0376b5022c04245dc271a7797",
+      "panel": [
+        0,
+        1
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "pokemon-horizons-season-4-wonders-ahead": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-03.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-09.webp",
+      "sourceSha256": "6780b61fc5c71fe2fd3eccc7fcd2253faa8a30c0376b5022c04245dc271a7797",
+      "panel": [
+        1,
+        1
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "psyren-release-date": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-03.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-09.webp",
+      "sourceSha256": "6780b61fc5c71fe2fd3eccc7fcd2253faa8a30c0376b5022c04245dc271a7797",
+      "panel": [
+        0,
+        2
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "rakuen-tsuihou-kokoro-no-resonance": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-03.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-09.webp",
+      "sourceSha256": "6780b61fc5c71fe2fd3eccc7fcd2253faa8a30c0376b5022c04245dc271a7797",
+      "panel": [
+        1,
+        2
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "ramparts-of-ice-season-2": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-03.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-09.webp",
+      "sourceSha256": "6780b61fc5c71fe2fd3eccc7fcd2253faa8a30c0376b5022c04245dc271a7797",
+      "panel": [
+        0,
+        3
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "reborn-space-mercenary": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-03.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-09.webp",
+      "sourceSha256": "6780b61fc5c71fe2fd3eccc7fcd2253faa8a30c0376b5022c04245dc271a7797",
+      "panel": [
+        1,
+        3
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "record-of-a-fallen-vampire-anime": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-03.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-10.webp",
+      "sourceSha256": "ed34ae6f1602f3323f8b476ad28afe730c883e35d84aea09fbd38ae66f49684d",
+      "panel": [
+        0,
+        0
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "red-riding-hood-detective-story": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-03.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-10.webp",
+      "sourceSha256": "ed34ae6f1602f3323f8b476ad28afe730c883e35d84aea09fbd38ae66f49684d",
+      "panel": [
+        1,
+        0
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "reincarnated-as-a-sword-season-2-english-dub-release-date": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-04.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-10.webp",
+      "sourceSha256": "ed34ae6f1602f3323f8b476ad28afe730c883e35d84aea09fbd38ae66f49684d",
+      "panel": [
+        0,
+        1
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "reincarnated-goblin": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-04.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-10.webp",
+      "sourceSha256": "ed34ae6f1602f3323f8b476ad28afe730c883e35d84aea09fbd38ae66f49684d",
+      "panel": [
+        1,
+        1
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "returners-magic-season-2": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-04.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-10.webp",
+      "sourceSha256": "ed34ae6f1602f3323f8b476ad28afe730c883e35d84aea09fbd38ae66f49684d",
+      "panel": [
+        0,
+        2
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "romelia-war-chronicle": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-04.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-10.webp",
+      "sourceSha256": "ed34ae6f1602f3323f8b476ad28afe730c883e35d84aea09fbd38ae66f49684d",
+      "panel": [
+        1,
+        2
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "sasaki-and-peeps-season-2-anime-shares-creditless-opening-and-end-a03f04c7": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-04.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-10.webp",
+      "sourceSha256": "ed34ae6f1602f3323f8b476ad28afe730c883e35d84aea09fbd38ae66f49684d",
+      "panel": [
+        1,
+        3
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "sasaki-and-peeps-season-2": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-04.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-10.webp",
+      "sourceSha256": "ed34ae6f1602f3323f8b476ad28afe730c883e35d84aea09fbd38ae66f49684d",
+      "panel": [
+        0,
+        3
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "sss-class-revival-hunter-anime-january-2027": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-04.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-11.webp",
+      "sourceSha256": "03f1d645b78d3796765b888e3f82ec9263eab0c16c0ef805bcd6a2a630d5b22c",
+      "panel": [
+        0,
+        0
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "suikoden-anime": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-04.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-11.webp",
+      "sourceSha256": "03f1d645b78d3796765b888e3f82ec9263eab0c16c0ef805bcd6a2a630d5b22c",
+      "panel": [
+        1,
+        0
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "takopis-original-sin-movie": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-04.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-11.webp",
+      "sourceSha256": "03f1d645b78d3796765b888e3f82ec9263eab0c16c0ef805bcd6a2a630d5b22c",
+      "panel": [
+        0,
+        1
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "tale-secret-saint": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-04.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-11.webp",
+      "sourceSha256": "03f1d645b78d3796765b888e3f82ec9263eab0c16c0ef805bcd6a2a630d5b22c",
+      "panel": [
+        1,
+        1
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "tank-chair-release-date": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-04.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-11.webp",
+      "sourceSha256": "03f1d645b78d3796765b888e3f82ec9263eab0c16c0ef805bcd6a2a630d5b22c",
+      "panel": [
+        0,
+        2
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "the-boxer-anime-announcement": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-04.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-11.webp",
+      "sourceSha256": "03f1d645b78d3796765b888e3f82ec9263eab0c16c0ef805bcd6a2a630d5b22c",
+      "panel": [
+        1,
+        2
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "the-fable-season-2-january-2027": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-04.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-11.webp",
+      "sourceSha256": "03f1d645b78d3796765b888e3f82ec9263eab0c16c0ef805bcd6a2a630d5b22c",
+      "panel": [
+        0,
+        3
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "the-moon-on-a-rainy-night-anime": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-04.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-11.webp",
+      "sourceSha256": "03f1d645b78d3796765b888e3f82ec9263eab0c16c0ef805bcd6a2a630d5b22c",
+      "panel": [
+        1,
+        3
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "tokyo-revengers-war-three-titans": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-04.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-12.webp",
+      "sourceSha256": "ebb0e1f3ac7b00fb4d0b34fd0a401fea14060fb998746e8534eb7d4acee60657",
+      "panel": [
+        0,
+        0
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "vermilion-mask-release-date": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-04.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-12.webp",
+      "sourceSha256": "ebb0e1f3ac7b00fb4d0b34fd0a401fea14060fb998746e8534eb7d4acee60657",
+      "panel": [
+        1,
+        0
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "votoms-gray-witch-part-1": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-04.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-12.webp",
+      "sourceSha256": "ebb0e1f3ac7b00fb4d0b34fd0a401fea14060fb998746e8534eb7d4acee60657",
+      "panel": [
+        0,
+        1
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "walking-home-with-you-anime": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-04.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-12.webp",
+      "sourceSha256": "ebb0e1f3ac7b00fb4d0b34fd0a401fea14060fb998746e8534eb7d4acee60657",
+      "panel": [
+        1,
+        1
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "where-to-watch-one-piece": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-04.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-12.webp",
+      "sourceSha256": "ebb0e1f3ac7b00fb4d0b34fd0a401fea14060fb998746e8534eb7d4acee60657",
+      "panel": [
+        0,
+        2
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "witch-on-the-holy-night-movie": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-04.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-12.webp",
+      "sourceSha256": "ebb0e1f3ac7b00fb4d0b34fd0a401fea14060fb998746e8534eb7d4acee60657",
+      "panel": [
+        1,
+        2
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "worlds-strongest-witch": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-04.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-12.webp",
+      "sourceSha256": "ebb0e1f3ac7b00fb4d0b34fd0a401fea14060fb998746e8534eb7d4acee60657",
+      "panel": [
+        0,
+        3
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "yumeneko-connect-anime-announcement": {
+      "manifest": "scripts/cover-artwork/editorial-scenes-04.json",
+      "sourceFile": "scripts/cover-artwork/cinematic-scenes-12.webp",
+      "sourceSha256": "ebb0e1f3ac7b00fb4d0b34fd0a401fea14060fb998746e8534eb7d4acee60657",
+      "panel": [
+        1,
+        3
+      ],
+      "provenanceCommit": "25ac1da0a5228e5a411b282f58006c1a51e85f7d",
+      "commitDescription": "Replace flat AniNextUp article artwork with cinematic scenes",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "ijihaji-anime-release-date": {
+      "manifest": "scripts/cover-artwork/ijihaji-anime-release-date.json",
+      "sourceFile": "assets/images/covers/ijihaji-original.webp",
+      "sourceSha256": "c67591a03b2cea228a1c9f32228a3d43c706c0e71366744b3599e4ad3cd59145",
+      "panel": null,
+      "provenanceCommit": "64be57dd3a4603874d0b50938ab063822de4f26c",
+      "commitDescription": "Publish IjiHaji 2027 anime guide with verified first cast reveal and original lightweight artwork",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "otherworldly-munchkin-release-date": {
+      "manifest": "scripts/cover-artwork/otherworldly-munchkin-release-date.json",
+      "sourceFile": "assets/images/covers/otherworldly-munchkin-release-date-original.webp",
+      "sourceSha256": "da91ab4a2e01c2eedbef59e18611c475f81bc8614497d43672c8b587736b2639",
+      "panel": null,
+      "provenanceCommit": "155382c4dc14281a5f3865713066cbb2724336fb",
+      "commitDescription": "Publish Otherworldly Munchkin new release date and viewing guide",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "granite-waves-anime": {
+      "manifest": "scripts/cover-artwork/popular-news-original-illustrations.json",
+      "sourceFile": "scripts/cover-artwork/granite-waves-anime.png",
+      "sourceSha256": "4d9a52b2134cca30031bc80a6b2fb1f0ec96ca1a70f23a9c3cab4c05ad61592d",
+      "panel": null,
+      "provenanceCommit": "fc36a2b98adfdea8a8db3e22ac81ce8f81a7d705",
+      "commitDescription": "Add original illustrations for AniNextUp Popular News (#415)",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "prisma-illya-finale-anime-2027": {
+      "manifest": "scripts/cover-artwork/popular-news-original-illustrations.json",
+      "sourceFile": "scripts/cover-artwork/prisma-illya-finale-anime-2027.png",
+      "sourceSha256": "3bbdae3c458b72342dc1f2c1e87aca03964f8a17fc4edcacfbb9d7cb7aa68e38",
+      "panel": null,
+      "provenanceCommit": "fc36a2b98adfdea8a8db3e22ac81ce8f81a7d705",
+      "commitDescription": "Add original illustrations for AniNextUp Popular News (#415)",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "one-piece-elbaph-arc-english-dub-october-2026": {
+      "manifest": "scripts/cover-artwork/popular-news-original-illustrations.json",
+      "sourceFile": "scripts/cover-artwork/one-piece-elbaph-arc-english-dub-october-2026.png",
+      "sourceSha256": "dd156fb056200f24ed112d3756432b49f91f33a64754ffb5d1a7d70686b02ab2",
+      "panel": null,
+      "provenanceCommit": "fc36a2b98adfdea8a8db3e22ac81ce8f81a7d705",
+      "commitDescription": "Add original illustrations for AniNextUp Popular News (#415)",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "skip-and-loafer-season-2-release-date": {
+      "manifest": "scripts/cover-artwork/skip-and-loafer-season-2-release-date.json",
+      "sourceFile": "scripts/cover-artwork/skip-and-loafer-season-2-release-date.json",
+      "sourceSha256": "50607127e417e4cfedc5b77c0c0c2ccd33edafa631dcadb405b3671059628370",
+      "panel": null,
+      "provenanceCommit": "9b5c93f243f3e711b0d80e2bbe4b3087ba8ef4a2",
+      "commitDescription": "Replace 13 article covers with original editorial artwork",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "tensei-elf-release-date": {
+      "manifest": "scripts/cover-artwork/tensei-elf-release-date.json",
+      "sourceFile": "assets/images/covers/tensei-elf-release-date-original.webp",
+      "sourceSha256": "487416b98dba91b58f1c2c3a7e13e07b8cfca0139c5b9acdd8a7741cba44e9fe",
+      "panel": null,
+      "provenanceCommit": "203ec72fb974fe770dc4d8d2e11ff8ec09966edf",
+      "commitDescription": "Publish Tensei Elf early streaming and January TV premiere guide",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "the-one-later-on-anime-release-date": {
+      "manifest": "scripts/cover-artwork/the-one-later-on-anime-release-date.json",
+      "sourceFile": "assets/images/covers/the-one-later-on-original.webp",
+      "sourceSha256": "3d61453c82b2f3e322f9e20b21e9726e038c67b6ba263936d9f5110e6a9bd6af",
+      "panel": null,
+      "provenanceCommit": "ab5a977626813e68b02179ae9d9215fbba1f1547",
+      "commitDescription": "Publish The One Later On 2027 anime guide with verified cast, English manga and original cover",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    },
+    "tsugumi-project-anime-release-date": {
+      "manifest": "scripts/cover-artwork/tsugumi-project.json",
+      "sourceFile": "scripts/cover-artwork/tsugumi-project.png",
+      "sourceSha256": "5df659b5661cdb08eb774c998d516969fdc9cd73c5c748a836f95de1afa73ac8",
+      "panel": null,
+      "provenanceCommit": "638a83e8ecf5d06ebf26e0043d9f2b4cd4068d2a",
+      "commitDescription": "Add original cover art for the Tsugumi Project guide",
+      "origin": "project-editorial-artwork",
+      "visualReviewOn": "2026-11-26",
+      "visualReview": "Reviewed in the complete contact sheets. No third-party watermark or official logo identified. Illustration is editorial, not a production still.",
+      "rightsScope": "Project history records this as original illustration. This record establishes source identity and project history; it is not a third-party copyright license or a legal determination."
+    }
+  }
+}

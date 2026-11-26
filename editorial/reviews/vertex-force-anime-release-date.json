@@ -1,0 +1,32 @@
+{
+  "intent": "Distinguish confirmed production, format, date and viewing availability without unsupported assumptions.",
+  "keyword": "VERTEX FORCE: Release Date, Streaming &amp; Official Trailer",
+  "verifiedOn": "2026-11-26",
+  "reviewScope": "Copy and media-input review; compiled production uses the separately audited original cover registry.",
+  "factualVerifiedOn": "2026-10-30",
+  "editorialWords": 1239,
+  "sources": [
+    "https://vertexforce.jp/"
+  ],
+  "limits": [
+    "Source identity and output policy checked; no license for archived third-party imagery is asserted. Original illustration substituted in the source hero and preview.",
+    "No fresh factual or playback check is claimed; the official homepage was inaccessible to web retrieval. Existing dated release information retained."
+  ],
+  "cover": {
+    "path": "/assets/images/covers/vertex-force-anime-release-date-review-source.webp",
+    "imageUrl": "https://aninextup.com/assets/article-covers/vertex-force-anime-release-date.png",
+    "sourceUrl": "https://aninextup.com/editorial-policy",
+    "credit": "Original editorial artwork from the project cover manifest",
+    "sha256": "5659e16294d549e1a68b64a8659d0360d32d8f62b034db66d43968b7566ceb5c",
+    "verification": "Derived from the existing project-created cover input, whose identity and history are recorded in editorial/cover-provenance.json. Not an official promotional visual."
+  },
+  "video": {
+    "status": "available",
+    "youtubeId": "7ph13UeZOtM",
+    "sourceUrl": "https://vertexforce.jp/",
+    "path": "/assets/images/covers/vertex-force-anime-release-date-review-source.webp",
+    "imageUrl": "https://aninextup.com/assets/article-covers/vertex-force-anime-release-date.png",
+    "sha256": "5659e16294d549e1a68b64a8659d0360d32d8f62b034db66d43968b7566ceb5c",
+    "verification": "Video reference retained from the existing source page; production publishes only an external link with no copied thumbnail or video player."
+  }
+}

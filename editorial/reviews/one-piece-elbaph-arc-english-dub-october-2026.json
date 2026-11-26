@@ -2,7 +2,7 @@
   "intent": "How to find episode 1156 with the English audio",
   "keyword": "ONE PIECE: Elbaph Arc English Dub Release Date and Crunchyroll Schedule",
   "verifiedOn": "2026-11-15",
-  "editorialWords": 1218,
+  "editorialWords": 856,
   "cover": {
     "path": "/assets/images/external/7030a714c355d627d5ed8b098ee8b83fd181382b87a19d5984a3b61f1f2ae70e.webp",
     "imageUrl": "https://aninextup.com/assets/images/external/7030a714c355d627d5ed8b098ee8b83fd181382b87a19d5984a3b61f1f2ae70e.webp",
@@ -14,5 +14,7 @@
     "status": "not-available",
     "sourceUrl": "https://www.crunchyroll.com/news/announcements/2026/8/24/one-piece-elbaph-arc-english-dub-weekly-stream-crunchyroll-starting-october-20",
     "reason": "This edition does not embed a video player. Official previews, when listed, are linked from the article."
-  }
+  },
+  "copyEditedOn": "2026-11-26",
+  "copyEdit": "Condensed repetitive appended advice to title-specific guidance; prior factual review date retained."
 }

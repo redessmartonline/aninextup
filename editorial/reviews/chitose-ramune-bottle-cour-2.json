@@ -2,7 +2,7 @@
   "intent": "How far back you need to go before Cour 2",
   "keyword": "Chitose Is in the Ramune Bottle Cour 2 Release Date & Time",
   "verifiedOn": "2026-11-15",
-  "editorialWords": 1214,
+  "editorialWords": 1034,
   "cover": {
     "path": "/assets/images/external/b9c8c933e8decca8a0c65033171bacafc43b27f76c2de80e048900896f45881f.webp",
     "imageUrl": "https://aninextup.com/assets/images/external/b9c8c933e8decca8a0c65033171bacafc43b27f76c2de80e048900896f45881f.webp",
@@ -14,5 +14,7 @@
     "status": "not-available",
     "sourceUrl": "https://chiramune.com/",
     "reason": "This edition does not embed a video player. Official previews, when listed, are linked from the article."
-  }
+  },
+  "copyEditedOn": "2026-11-26",
+  "copyEdit": "Condensed repetitive appended advice to title-specific guidance; prior factual review date retained."
 }

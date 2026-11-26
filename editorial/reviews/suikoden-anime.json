@@ -2,7 +2,7 @@
   "intent": "Can you start with the anime if you have never played Suikoden?",
   "keyword": "Suikoden: The Anime — Schedule, Cast, Trailer and Game Guide",
   "verifiedOn": "2026-11-15",
-  "editorialWords": 1222,
+  "editorialWords": 1048,
   "cover": {
     "path": "/assets/images/suikoden-anime.jpg",
     "imageUrl": "https://aninextup.com/assets/images/suikoden-anime.jpg",
@@ -14,5 +14,7 @@
     "status": "not-available",
     "sourceUrl": "https://suikoden-anime.com/",
     "reason": "This edition does not embed a video player. Official previews, when listed, are linked from the article."
-  }
+  },
+  "copyEditedOn": "2026-11-26",
+  "copyEdit": "Condensed repetitive appended advice to title-specific guidance; prior factual review date retained."
 }

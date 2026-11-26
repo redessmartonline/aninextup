@@ -1,0 +1,31 @@
+{
+  "intent": "Distinguish confirmed production, format, date and viewing availability without unsupported assumptions.",
+  "keyword": "Dr. STONE TERRAFORMING: Story, Trailer and Release Status",
+  "verifiedOn": "2026-11-26",
+  "reviewScope": "Copy and media-input review; compiled production uses the separately audited original cover registry.",
+  "factualVerifiedOn": "2026-11-26",
+  "editorialWords": 924,
+  "sources": [
+    "https://dr-stone.jp/news/6340/"
+  ],
+  "limits": [
+    "Source identity and output policy checked; no license for archived third-party imagery is asserted. Original illustration substituted in the source hero and preview."
+  ],
+  "cover": {
+    "path": "/assets/images/covers/dr-stone-terraforming-anime-review-source.webp",
+    "imageUrl": "https://aninextup.com/assets/article-covers/dr-stone-terraforming-anime.png",
+    "sourceUrl": "https://aninextup.com/editorial-policy",
+    "credit": "Original editorial artwork from the project cover manifest",
+    "sha256": "644b1b10b758b910dce2e0a0d002ae86f34f31ab7cb7b62ff78f842e77bcba35",
+    "verification": "Derived from the existing project-created cover input, whose identity and history are recorded in editorial/cover-provenance.json. Not an official promotional visual."
+  },
+  "video": {
+    "status": "available",
+    "youtubeId": "-Vk8vSnnmnY",
+    "sourceUrl": "https://dr-stone.jp/news/6340/",
+    "path": "/assets/images/covers/dr-stone-terraforming-anime-review-source.webp",
+    "imageUrl": "https://aninextup.com/assets/article-covers/dr-stone-terraforming-anime.png",
+    "sha256": "644b1b10b758b910dce2e0a0d002ae86f34f31ab7cb7b62ff78f842e77bcba35",
+    "verification": "Video reference retained from the existing source page; production publishes only an external link with no copied thumbnail or video player."
+  }
+}

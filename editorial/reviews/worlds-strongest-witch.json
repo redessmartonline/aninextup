@@ -2,7 +2,7 @@
   "intent": "How to judge Lorna's Internet skill from the first episode",
   "keyword": "The World's Strongest Witch Release Date, Time & Where to Watch",
   "verifiedOn": "2026-11-15",
-  "editorialWords": 1212,
+  "editorialWords": 885,
   "cover": {
     "path": "/assets/images/external/5b403fec023ba3effa5fcc0f861c8bed1523be1bc512c5ccb746a92029f7251b.webp",
     "imageUrl": "https://aninextup.com/assets/images/external/5b403fec023ba3effa5fcc0f861c8bed1523be1bc512c5ccb746a92029f7251b.webp",
@@ -14,5 +14,7 @@
     "status": "not-available",
     "sourceUrl": "https://www.yte.co.jp/program/list/sekamajo/",
     "reason": "This edition does not embed a video player. Official previews, when listed, are linked from the article."
-  }
+  },
+  "copyEditedOn": "2026-11-26",
+  "copyEdit": "Condensed repetitive appended advice to title-specific guidance; prior factual review date retained."
 }

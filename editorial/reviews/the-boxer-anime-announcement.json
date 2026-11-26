@@ -2,7 +2,7 @@
   "intent": "Should you read the webtoon or wait for the anime?",
   "keyword": "The Boxer Anime: Release Date, Cast, Studios & Teaser",
   "verifiedOn": "2026-11-15",
-  "editorialWords": 1217,
+  "editorialWords": 882,
   "cover": {
     "path": "/assets/images/external/5f0f18fadb4aea8a4f186612b0a889f6631bec52e71aac3b961f406e8fe0863a.webp",
     "imageUrl": "https://aninextup.com/assets/images/external/5f0f18fadb4aea8a4f186612b0a889f6631bec52e71aac3b961f406e8fe0863a.webp",
@@ -14,5 +14,7 @@
     "status": "not-available",
     "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000531.000063705.html",
     "reason": "This edition does not embed a video player. Official previews, when listed, are linked from the article."
-  }
+  },
+  "copyEditedOn": "2026-11-26",
+  "copyEdit": "Condensed repetitive appended advice to title-specific guidance; prior factual review date retained."
 }

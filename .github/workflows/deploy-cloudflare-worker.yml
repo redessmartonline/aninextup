@@ -45,6 +45,7 @@ on:
       - "editorial/reviews/**"
       - "scripts/prerender_discovery.js"
       - "editorial/genre-tags.json"
+      - "editorial/cover-provenance.json"
       - "scripts/build_calendar.js"
       - "tests/calendar-expanded.test.cjs"
       - "tests/test_weekly_episode_expiry.cjs"

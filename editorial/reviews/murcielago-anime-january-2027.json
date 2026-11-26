@@ -2,7 +2,7 @@
   "intent": "How to use the HIDIVE territory announcement",
   "keyword": "MURCIÉLAGO Anime: January 2027, Cast & Where to Watch",
   "verifiedOn": "2026-11-15",
-  "editorialWords": 1207,
+  "editorialWords": 924,
   "cover": {
     "path": "/assets/images/news/murcielago-anime-january-2027-official.webp",
     "imageUrl": "https://aninextup.com/assets/images/news/murcielago-anime-january-2027-official.webp",
@@ -14,5 +14,7 @@
     "status": "not-available",
     "sourceUrl": "https://murcielago-anime.com/",
     "reason": "This edition does not embed a video player. Official previews, when listed, are linked from the article."
-  }
+  },
+  "copyEditedOn": "2026-11-26",
+  "copyEdit": "Condensed repetitive appended advice to title-specific guidance; prior factual review date retained."
 }

@@ -2,7 +2,7 @@
   "intent": "Choose between the film and the television version",
   "keyword": "Sekiro: No Defeat Release Date: January 2027, Episodes & Trailer",
   "verifiedOn": "2026-11-15",
-  "editorialWords": 1215,
+  "editorialWords": 977,
   "cover": {
     "path": "/assets/images/sekiro-no-defeat-official-visual.webp",
     "imageUrl": "https://aninextup.com/assets/images/sekiro-no-defeat-official-visual.webp",
@@ -14,5 +14,7 @@
     "status": "not-available",
     "sourceUrl": "https://sekiro-anime.jp/news.html#news-260925-1",
     "reason": "This edition does not embed a video player. Official previews, when listed, are linked from the article."
-  }
+  },
+  "copyEditedOn": "2026-11-26",
+  "copyEdit": "Condensed repetitive appended advice to title-specific guidance; prior factual review date retained."
 }

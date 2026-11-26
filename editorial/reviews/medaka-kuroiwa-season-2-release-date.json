@@ -14,5 +14,7 @@
     "status": "not-available",
     "sourceUrl": "https://monaxmedaka.com/",
     "reason": "This edition does not embed a video player. Official previews, when listed, are linked from the article."
-  }
+  },
+  "copyEditedOn": "2026-11-26",
+  "copyEdit": "Removed duplicated internal HTTP/search-service commentary; preserved the dated source check and regional playback limitation."
 }

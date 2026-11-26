@@ -18,6 +18,43 @@ FONT = Path("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf")
 ORIGIN = "https://aninextup.com"
 
 
+def verify_artwork_provenance(pages, artwork, root=ROOT):
+    """Require a dated review and unchanged source for every published cover.
+
+    Source identity and project history are evidence, not a copyright license.
+    This prevents an unchecked replacement from silently entering the build.
+    """
+    registry = json.loads((root / 'editorial/cover-provenance.json').read_text())['covers']
+    for page in pages:
+        slug = page.stem
+        entry = artwork.get(slug)
+        record = registry.get(slug)
+        if not entry or not record:
+            raise ValueError(f'Missing artwork provenance review: {slug}')
+        if 'file' in entry:
+            source = (root / 'scripts/cover-artwork' / entry['file']).resolve()
+            data = source.read_bytes()
+        elif 'image' in entry:
+            source = root / record['manifest']
+            data = b64decode(entry['image'], validate=True)
+        else:
+            raise ValueError(f'Unreviewed artwork input type: {slug}')
+        creation = record.get('generationRecord', {})
+        has_creation_record = (isinstance(creation, dict) and
+                               creation.get('tool') == 'image_gen' and
+                               bool(creation.get('prompt')) and
+                               bool(creation.get('generatedOn')))
+        if (not source.is_relative_to(root) or
+                source.relative_to(root).as_posix() != record.get('sourceFile') or
+                sha256(data).hexdigest() != record.get('sourceSha256') or
+                entry.get('panel') != record.get('panel') or
+                record.get('origin') != 'project-editorial-artwork' or
+                not (re.fullmatch(r'[0-9a-f]{40}', record.get('provenanceCommit', ''))
+                     or has_creation_record) or
+                not re.fullmatch(r'\d{4}-\d{2}-\d{2}', record.get('visualReviewOn', ''))):
+            raise ValueError(f'Artwork differs from its provenance review: {slug}')
+
+
 def title_lines(title, font, width):
     lines = [""]
     for word in title.split():
@@ -159,6 +196,7 @@ def main():
         if artwork.keys() & batch.keys():
             raise ValueError(f"Duplicate cover artwork in {manifest}")
         artwork.update(batch)
+    verify_artwork_provenance(pages, artwork)
     covers = {page.stem: build(page, artwork) for page in pages}
     # Static discovery cards and article recommendations share the same artwork.
     def replace_card(match):

@@ -2,7 +2,7 @@
   "intent": "Do you need to watch the first Edgerunners to follow this story?",
   "keyword": "Cyberpunk: Edgerunners 2 Is Out on Netflix: Episodes & Trailer",
   "verifiedOn": "2026-11-15",
-  "editorialWords": 1200,
+  "editorialWords": 965,
   "cover": {
     "path": "/assets/images/external/c4f2cc6d5f8ac21faebf17af4b85809180c1e79110339e92e9d4848a2cfce055.webp",
     "imageUrl": "https://aninextup.com/assets/images/external/c4f2cc6d5f8ac21faebf17af4b85809180c1e79110339e92e9d4848a2cfce055.webp",
@@ -14,5 +14,7 @@
     "status": "not-available",
     "sourceUrl": "https://www.netflix.com/tudum/articles/cyberpunk-edgerunners-2-release-date-news",
     "reason": "This edition does not embed a video player. Official previews, when listed, are linked from the article."
-  }
+  },
+  "copyEditedOn": "2026-11-26",
+  "copyEdit": "Condensed repetitive appended advice to title-specific guidance; prior factual review date retained."
 }

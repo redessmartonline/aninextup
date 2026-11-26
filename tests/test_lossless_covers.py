@@ -91,5 +91,31 @@ assert.strictEqual(image.src,'/assets/images/anime-image-fallback.svg');
         self.assertEqual(data['items'][0]['cover'],'/assets/article-covers/guide.webp')
         self.assertEqual(data['url'],'/articles/guide')
 
+    def test_cover_provenance_rejects_changed_or_missing_source_review(self):
+        from build_public_article_covers import verify_artwork_provenance
+        import json
+        from hashlib import sha256
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root/'editorial').mkdir()
+            assets = root/'scripts/cover-artwork'
+            assets.mkdir(parents=True)
+            source = assets/'original.webp'
+            source.write_bytes(b'original project illustration')
+            record = {'sourceFile':'scripts/cover-artwork/original.webp',
+                      'sourceSha256':sha256(source.read_bytes()).hexdigest(),
+                      'panel':None, 'origin':'project-editorial-artwork',
+                      'provenanceCommit':'a'*40, 'visualReviewOn':'2026-11-26'}
+            registry = root/'editorial/cover-provenance.json'
+            registry.write_text(json.dumps({'covers':{'guide':record}}))
+            artwork = {'guide':{'file':'original.webp'}}
+            verify_artwork_provenance([root/'guide.html'], artwork, root)
+            source.write_bytes(b'unreviewed replacement')
+            with self.assertRaisesRegex(ValueError, 'differs'):
+                verify_artwork_provenance([root/'guide.html'], artwork, root)
+            registry.write_text(json.dumps({'covers':{}}))
+            with self.assertRaisesRegex(ValueError, 'Missing'):
+                verify_artwork_provenance([root/'guide.html'], artwork, root)
+
 
 if __name__=='__main__':unittest.main()
