@@ -1,5 +1,5 @@
 window.ANINEXTUP_DATA={
-updated:"2026-11-24",
+updated:"2026-11-26",
 site:{timezone:"America/Santo_Domingo",season:"Fall 2026"},
 anime:[
 {id:"the-one-later-on-anime-release-date",image:"/assets/images/covers/the-one-later-on-original.webp",title:"The One. Later On… Anime: 2027 Release, Cast & Streaming Status",date:null,dateLabel:"2027 · exact date TBA",platform:"TV anime; streaming TBA",article:"articles/the-one-later-on-anime-release-date",newsCategory:"new-anime",category:"Fantasy Adventure",status:"tba"},
