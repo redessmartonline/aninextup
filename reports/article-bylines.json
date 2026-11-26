@@ -1,13 +1,19 @@
 {
-  "articles": 152,
-  "changed": 0,
-  "standardized": 152,
+  "articles": 161,
+  "changed": 1,
+  "standardized": 161,
   "unresolved": [],
   "records": [
     {
       "status": "ok",
       "published": "2026-10-04",
       "path": "articles/a-certain-dark-item-release-date.html",
+      "changed": false
+    },
+    {
+      "status": "ok",
+      "published": "2026-11-21",
+      "path": "articles/a-pen-handcuffs-common-law-marriage-release-date.html",
       "changed": false
     },
     {
@@ -26,6 +32,18 @@
       "status": "ok",
       "published": "2026-10-27",
       "path": "articles/akane-banashi-season-2-release-date.html",
+      "changed": false
+    },
+    {
+      "status": "ok",
+      "published": "2026-11-17",
+      "path": "articles/anime-crusaders-x-codes.html",
+      "changed": false
+    },
+    {
+      "status": "ok",
+      "published": "2026-11-17",
+      "path": "articles/anime-crusaders-x-tier-list.html",
       "changed": false
     },
     {
@@ -176,6 +194,12 @@
       "status": "ok",
       "published": "2026-10-04",
       "path": "articles/chitose-ramune-bottle-cour-2.html",
+      "changed": false
+    },
+    {
+      "status": "ok",
+      "published": "2026-11-24",
+      "path": "articles/classroom-of-the-elite-season-5-release-date.html",
       "changed": false
     },
     {
@@ -386,6 +410,12 @@
       "status": "ok",
       "published": "2026-10-04",
       "path": "articles/iceblade-sorcerer-ii.html",
+      "changed": false
+    },
+    {
+      "status": "ok",
+      "published": "2026-11-21",
+      "path": "articles/ijihaji-anime-release-date.html",
       "changed": false
     },
     {
@@ -642,6 +672,12 @@
     },
     {
       "status": "ok",
+      "published": "2026-11-18",
+      "path": "articles/otherworldly-munchkin-release-date.html",
+      "changed": false
+    },
+    {
+      "status": "ok",
       "published": "2026-10-06",
       "path": "articles/otome-heroines-fight-for-survival-anime.html",
       "changed": false
@@ -780,6 +816,12 @@
     },
     {
       "status": "ok",
+      "published": "2026-11-16",
+      "path": "articles/skip-and-loafer-season-2-release-date.html",
+      "changed": true
+    },
+    {
+      "status": "ok",
       "published": "2026-11-05",
       "path": "articles/spirit-circle-anime-release-date.html",
       "changed": false
@@ -816,6 +858,12 @@
     },
     {
       "status": "ok",
+      "published": "2026-11-19",
+      "path": "articles/tensei-elf-release-date.html",
+      "changed": false
+    },
+    {
+      "status": "ok",
       "published": "2026-10-13",
       "path": "articles/the-boxer-anime-announcement.html",
       "changed": false
@@ -836,6 +884,12 @@
       "status": "ok",
       "published": "2026-10-07",
       "path": "articles/the-moon-on-a-rainy-night-anime.html",
+      "changed": false
+    },
+    {
+      "status": "ok",
+      "published": "2026-11-24",
+      "path": "articles/the-one-later-on-anime-release-date.html",
       "changed": false
     },
     {
